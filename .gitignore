@@ -1,0 +1,20 @@
+# Maven / Java build output
+target/
+*.class
+*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Python (generator)
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
