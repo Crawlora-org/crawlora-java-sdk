@@ -7,11 +7,11 @@ on:
 
 permissions:
   contents: read
+  packages: write # GitHub Packages (Maven registry)
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: maven-central
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -47,7 +47,22 @@ jobs:
           git diff --exit-code
       - name: Test
         run: mvn -B test
+      # GitHub Packages works with the built-in GITHUB_TOKEN — no external
+      # account needed. The central-publishing plugin is confined to the
+      # `release` profile, so a plain `deploy` only targets GitHub Packages.
+      - name: Publish to GitHub Packages
+        run: >
+          mvn -B -DskipTests deploy
+          -s .github/settings.xml
+          -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/Crawlora-org/crawlora-java-sdk
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Maven Central publication is opt-in: provide the MAVEN_CENTRAL_* and
+      # MAVEN_GPG_* secrets, then set repository variable PUBLISH_CENTRAL=true.
+      # Until then this step is skipped so the release stays green.
       - name: Publish to Maven Central
+        if: ${{ vars.PUBLISH_CENTRAL == 'true' }}
         run: mvn -B -P release -DskipTests deploy
         env:
           MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
