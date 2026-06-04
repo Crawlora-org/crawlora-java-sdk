@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0-sdk.2
+
+- Packaging: expand the Maven `<description>` for a richer package listing, set
+  the project URL to https://crawlora.net/, and fix the `<scm>` URLs to point at
+  the `Crawlora-org` GitHub organization. No client or API changes.
+
 ## 1.5.0-sdk.1
 
 - Initial release of the Crawlora Java SDK, published to Maven Central under the

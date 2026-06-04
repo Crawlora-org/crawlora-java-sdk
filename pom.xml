@@ -6,12 +6,12 @@
 
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-sdk</artifactId>
-  <version>1.5.0-sdk.1</version>
+  <version>1.5.0-sdk.2</version>
   <packaging>jar</packaging>
 
   <name>Crawlora Java SDK</name>
-  <description>Java SDK for the Crawlora web-scraping API.</description>
-  <url>https://crawlora.net</url>
+  <description>Official Java SDK for the Crawlora web-scraping API: a typed, dependency-free client (built on java.net.http) covering every public endpoint with grouped and dynamic operation calls, API-key and JWT auth, automatic retries with exponential backoff and Retry-After, numeric and cursor pagination, before/after middleware hooks, and client-side rate limiting.</description>
+  <url>https://crawlora.net/</url>
 
   <licenses>
     <license>
@@ -30,9 +30,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/crawlora/crawlora-java-sdk.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/crawlora/crawlora-java-sdk.git</developerConnection>
-    <url>https://github.com/crawlora/crawlora-java-sdk</url>
+    <connection>scm:git:https://github.com/Crawlora-org/crawlora-java-sdk.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/Crawlora-org/crawlora-java-sdk.git</developerConnection>
+    <url>https://github.com/Crawlora-org/crawlora-java-sdk</url>
   </scm>
 
   <properties>
