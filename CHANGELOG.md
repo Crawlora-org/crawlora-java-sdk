@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0-sdk.1
+
+- Added the **Reddit** platform (`client.reddit()`: `search`, `post`,
+  `comments`, `subredditPosts`) and the **Brand** platform (`client.brand()`:
+  `retrieve`), plus Yahoo Finance `client.yahooFinance().lookup`. Regenerated
+  from the public API contract.
+
 ## 1.5.0-sdk.3
 
 - Uniform group access: every group is now a first-class typed accessor on the

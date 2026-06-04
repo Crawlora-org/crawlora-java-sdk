@@ -44,6 +44,7 @@ public final class OperationId {
     public static final String BING_SEARCH = "bing-search";
     public static final String BING_SUGGEST = "bing-suggest";
     public static final String BING_VIDEOS = "bing-videos";
+    public static final String BRAND_RETRIEVE = "brand-retrieve";
     public static final String BRAVE_IMAGES = "brave-images";
     public static final String BRAVE_NEWS = "brave-news";
     public static final String BRAVE_SEARCH = "brave-search";
@@ -170,6 +171,10 @@ public final class OperationId {
     public static final String PRODUCT_HUNT_PRODUCT = "producthunt-product";
     public static final String PRODUCT_HUNT_REVIEWS = "producthunt-reviews";
     public static final String PRODUCT_HUNT_SEARCH = "producthunt-search";
+    public static final String REDDIT_COMMENTS = "reddit-comments";
+    public static final String REDDIT_POST = "reddit-post";
+    public static final String REDDIT_SEARCH = "reddit-search";
+    public static final String REDDIT_SUBREDDIT_POSTS = "reddit-subreddit-posts";
     public static final String REFERRALS_CLICK = "referrals-click";
     public static final String REFERRALS_ME = "referrals-me";
     public static final String REFERRALS_ME_EVENTS = "referrals-me-events";
@@ -290,6 +295,7 @@ public final class OperationId {
     public static final String YAHOO_FINANCE_DOWNLOAD = "yahoo-finance-download";
     public static final String YAHOO_FINANCE_INDUSTRIES = "yahoo-finance-industries";
     public static final String YAHOO_FINANCE_INDUSTRY = "yahoo-finance-industry";
+    public static final String YAHOO_FINANCE_LOOKUP = "yahoo-finance-lookup";
     public static final String YAHOO_FINANCE_MARKET_STATUS = "yahoo-finance-market-status";
     public static final String YAHOO_FINANCE_MARKET_SUMMARY = "yahoo-finance-market-summary";
     public static final String YAHOO_FINANCE_SCREENER = "yahoo-finance-screener";

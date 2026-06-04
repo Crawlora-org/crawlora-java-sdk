@@ -2,7 +2,7 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `330`
+Total operations: `336`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -41,6 +41,7 @@ Total operations: `330`
 | bing | `bing.search` | `bing-search` | `GET /bing/search` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingSearchResponse` |  |
 | bing | `bing.suggest` | `bing-suggest` | `GET /bing/suggest` | `q` (query String required)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingSuggestResponse` |  |
 | bing | `bing.videos` | `bing-videos` | `GET /bing/videos` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingVideosResponse` |  |
+| brand | `brand.retrieve` | `brand-retrieve` | `GET /brand/retrieve` | `domain` (query String required)<br>`force_language` (query String)<br>`maxSpeed` (query Boolean)<br>`maxAgeMs` (query Integer)<br>`timeoutMS` (query Integer) | `ApiKeyAuth` | `BrandRetrieveResponse` |  |
 | brave | `brave.images` | `brave-images` | `GET /brave/images` | `q` (query String required)<br>`offset` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BraveImagesResponse` |  |
 | brave | `brave.news` | `brave-news` | `GET /brave/news` | `q` (query String required)<br>`offset` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`time_range` (query String)<br>`date_from` (query String)<br>`date_to` (query String) | `ApiKeyAuth` | `BraveNewsResponse` |  |
 | brave | `brave.search` | `brave-search` | `GET /brave/search` | `q` (query String required)<br>`offset` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`time_range` (query String)<br>`date_from` (query String)<br>`date_to` (query String) | `ApiKeyAuth` | `BraveSearchResponse` |  |
@@ -167,6 +168,10 @@ Total operations: `330`
 | productHunt | `productHunt.makers` | `producthunt-makers` | `GET /producthunt/product/{id}/makers` | `id` (path String required)<br>`cursor` (query String) | `ApiKeyAuth` | `ProductHuntMakersResponse` |  |
 | productHunt | `productHunt.reviews` | `producthunt-reviews` | `GET /producthunt/product/{id}/reviews` | `id` (path String required) | `ApiKeyAuth` | `ProductHuntReviewsResponse` |  |
 | productHunt | `productHunt.search` | `producthunt-search` | `GET /producthunt/search` | `query` (query String required)<br>`type` (query String)<br>`page` (query Integer)<br>`featured` (query Boolean)<br>`topics` (query String) | `ApiKeyAuth` | `ProductHuntSearchResponse` |  |
+| reddit | `reddit.comments` | `reddit-comments` | `GET /reddit/comments/{id}` | `id` (path String required)<br>`sort` (query String)<br>`limit` (query Integer)<br>`depth` (query Integer) | `ApiKeyAuth` | `RedditCommentsResponse` |  |
+| reddit | `reddit.post` | `reddit-post` | `GET /reddit/post/{id}` | `id` (path String required) | `ApiKeyAuth` | `RedditPostResponse` |  |
+| reddit | `reddit.search` | `reddit-search` | `GET /reddit/search` | `q` (query String required)<br>`subreddit` (query String)<br>`sort` (query String)<br>`time` (query String)<br>`limit` (query Integer)<br>`after` (query String) | `ApiKeyAuth` | `RedditSearchResponse` |  |
+| reddit | `reddit.subredditPosts` | `reddit-subreddit-posts` | `GET /reddit/subreddit/{subreddit}/posts` | `subreddit` (path String required)<br>`sort` (query String)<br>`time` (query String)<br>`limit` (query Integer)<br>`after` (query String) | `ApiKeyAuth` | `RedditSubredditPostsResponse` |  |
 | referrals | `referrals.click` | `referrals-click` | `POST /referrals/click` | `request` (body String required) | none | `ReferralsClickResponse` |  |
 | referrals | `referrals.me` | `referrals-me` | `GET /referrals/me` | none | `JWTAuth` | `ReferralsMeResponse` |  |
 | referrals | `referrals.meEvents` | `referrals-me-events` | `GET /referrals/me/events` | `limit` (query Integer) | `JWTAuth` | `ReferralsMeEventsResponse` |  |
@@ -274,10 +279,10 @@ Total operations: `330`
 | trustpilot | `trustpilot.categories` | `trustpilot-categories` | `GET /trustpilot/categories` | none | `ApiKeyAuth` | `TrustpilotCategoriesResponse` |  |
 | trustpilot | `trustpilot.categorySearch` | `trustpilot-category-search` | `GET /trustpilot/categories/search` | `q` (query String required)<br>`country` (query String)<br>`locale` (query String)<br>`size` (query Integer) | `ApiKeyAuth` | `TrustpilotCategorySearchResponse` |  |
 | trustpilot | `trustpilot.category` | `trustpilot-category` | `GET /trustpilot/category/{slug}` | `slug` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TrustpilotCategoryResponse` |  |
-| usage | `usage.meEndpoints` | `usage-me-endpoints` | `GET /usage/me/endpoints` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `JWTAuth` | `UsageMeEndpointsResponse` |  |
-| usage | `usage.meOverview` | `usage-me-overview` | `GET /usage/me/overview` | `range` (query String)<br>`from` (query String)<br>`to` (query String) | `JWTAuth` | `UsageMeOverviewResponse` |  |
-| usage | `usage.meRecentIps` | `usage-me-recent-ips` | `GET /usage/me/recent-ips` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `JWTAuth` | `UsageMeRecentIpsResponse` |  |
-| usage | `usage.meTimeseries` | `usage-me-timeseries` | `GET /usage/me/timeseries` | `range` (query String)<br>`bucket` (query String)<br>`endpoint` (query String)<br>`from` (query String)<br>`to` (query String) | `JWTAuth` | `UsageMeTimeseriesResponse` |  |
+| usage | `usage.meEndpoints` | `usage-me-endpoints` | `GET /usage/me/endpoints` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeEndpointsResponse` |  |
+| usage | `usage.meOverview` | `usage-me-overview` | `GET /usage/me/overview` | `range` (query String)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeOverviewResponse` |  |
+| usage | `usage.meRecentIps` | `usage-me-recent-ips` | `GET /usage/me/recent-ips` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeRecentIpsResponse` |  |
+| usage | `usage.meTimeseries` | `usage-me-timeseries` | `GET /usage/me/timeseries` | `range` (query String)<br>`bucket` (query String)<br>`endpoint` (query String)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeTimeseriesResponse` |  |
 | user | `user.me` | `user-me` | `GET /user/me` | none | `JWTAuth` | `UserMeResponse` |  |
 | user | `user.meApiKeys` | `user-me-api-keys` | `GET /user/me/api-keys` | none | `JWTAuth` | `UserMeApiKeysResponse` |  |
 | user | `user.meApiKeysRotate` | `user-me-api-keys-rotate` | `POST /user/me/api-keys/rotate` | none | `JWTAuth` | `UserMeApiKeysRotateResponse` |  |
@@ -287,6 +292,7 @@ Total operations: `330`
 | yahooFinance | `yahooFinance.download` | `yahoo-finance-download` | `POST /yahoo-finance/download` | `request` (body String required) | `ApiKeyAuth` | `YahooFinanceDownloadResponse` |  |
 | yahooFinance | `yahooFinance.industries` | `yahoo-finance-industries` | `GET /yahoo-finance/industries` | none | `ApiKeyAuth` | `YahooFinanceIndustriesResponse` |  |
 | yahooFinance | `yahooFinance.industry` | `yahoo-finance-industry` | `GET /yahoo-finance/industries/{key}` | `key` (path String required) | `ApiKeyAuth` | `YahooFinanceIndustryResponse` |  |
+| yahooFinance | `yahooFinance.lookup` | `yahoo-finance-lookup` | `GET /yahoo-finance/lookup` | `query` (query String required)<br>`type` (query String)<br>`count` (query Integer)<br>`start` (query Integer) | `ApiKeyAuth` | `YahooFinanceLookupResponse` |  |
 | yahooFinance | `yahooFinance.marketStatus` | `yahoo-finance-market-status` | `GET /yahoo-finance/market/{market}/status` | `market` (path String required) | `ApiKeyAuth` | `YahooFinanceMarketStatusResponse` |  |
 | yahooFinance | `yahooFinance.marketSummary` | `yahoo-finance-market-summary` | `GET /yahoo-finance/market/{market}/summary` | `market` (path String required) | `ApiKeyAuth` | `YahooFinanceMarketSummaryResponse` |  |
 | yahooFinance | `yahooFinance.screenerCustom` | `yahoo-finance-screener-custom` | `POST /yahoo-finance/screener` | `request` (body String required) | `ApiKeyAuth` | `YahooFinanceScreenerCustomResponse` |  |

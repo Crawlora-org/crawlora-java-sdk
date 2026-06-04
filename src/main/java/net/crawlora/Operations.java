@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 330;
+    public static final int OPERATION_COUNT = 336;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -563,6 +563,23 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("brand-retrieve", new Operation(
+            "brand-retrieve",
+            "GET",
+            "/brand/retrieve",
+            List.of(),
+            List.of(
+            new QueryParam("domain", true, "string", List.of()),
+            new QueryParam("force_language", false, "string", List.of()),
+            new QueryParam("maxSpeed", false, "boolean", List.of()),
+            new QueryParam("maxAgeMs", false, "integer", List.of()),
+            new QueryParam("timeoutMS", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("brave-images", new Operation(
             "brave-images",
             "GET",
@@ -925,6 +942,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations1(Map<String, Operation> m) {
         m.put("coingecko-treasuries", new Operation(
             "coingecko-treasuries",
             "GET",
@@ -941,9 +961,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations1(Map<String, Operation> m) {
         m.put("coingecko-trending", new Operation(
             "coingecko-trending",
             "GET",
@@ -1784,6 +1801,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("googleplay-similar", new Operation(
             "googleplay-similar",
             "GET",
@@ -1801,9 +1821,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("googleplay-suggest", new Operation(
             "googleplay-suggest",
             "GET",
@@ -2399,6 +2416,67 @@ public final class Operations {
             List.of(),
             false,
             List.of()));
+        m.put("reddit-comments", new Operation(
+            "reddit-comments",
+            "GET",
+            "/reddit/comments/{id}",
+            List.of("id"),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("confidence", "top", "new", "controversial", "old", "qa")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("depth", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-post", new Operation(
+            "reddit-post",
+            "GET",
+            "/reddit/post/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-search", new Operation(
+            "reddit-search",
+            "GET",
+            "/reddit/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("subreddit", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "hot", "new", "top", "comments")),
+            new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-posts", new Operation(
+            "reddit-subreddit-posts",
+            "GET",
+            "/reddit/subreddit/{subreddit}/posts",
+            List.of("subreddit"),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising")),
+            new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("referrals-click", new Operation(
             "referrals-click",
             "POST",
@@ -2587,6 +2665,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("shop-app-shop-locations", new Operation(
             "shop-app-shop-locations",
             "GET",
@@ -2656,9 +2737,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("shopify-collections", new Operation(
             "shopify-collections",
             "GET",
@@ -3524,6 +3602,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("tiktok-challenge-list", new Operation(
             "tiktok-challenge-list",
             "GET",
@@ -3594,9 +3675,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("tiktok-profile", new Operation(
             "tiktok-profile",
             "GET",
@@ -4049,7 +4127,7 @@ public final class Operations {
             List.of(),
             null,
             false,
-            List.of("JWTAuth"),
+            List.of("ApiKeyAuth"),
             false,
             List.of()));
         m.put("usage-me-overview", new Operation(
@@ -4064,7 +4142,7 @@ public final class Operations {
             List.of(),
             null,
             false,
-            List.of("JWTAuth"),
+            List.of("ApiKeyAuth"),
             false,
             List.of()));
         m.put("usage-me-recent-ips", new Operation(
@@ -4080,7 +4158,7 @@ public final class Operations {
             List.of(),
             null,
             false,
-            List.of("JWTAuth"),
+            List.of("ApiKeyAuth"),
             false,
             List.of()));
         m.put("usage-me-timeseries", new Operation(
@@ -4097,7 +4175,7 @@ public final class Operations {
             List.of(),
             null,
             false,
-            List.of("JWTAuth"),
+            List.of("ApiKeyAuth"),
             false,
             List.of()));
         m.put("user-me", new Operation(
@@ -4214,6 +4292,22 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("yahoo-finance-lookup", new Operation(
+            "yahoo-finance-lookup",
+            "GET",
+            "/yahoo-finance/lookup",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("all", "equity", "etf", "mutualfund", "index", "future", "currency", "cryptocurrency")),
+            new QueryParam("count", false, "integer", List.of()),
+            new QueryParam("start", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("start")));
         m.put("yahoo-finance-market-status", new Operation(
             "yahoo-finance-market-status",
             "GET",
@@ -4380,6 +4474,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-earnings", new Operation(
             "yahoo-finance-ticker-earnings",
             "GET",
@@ -4466,9 +4563,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-holders", new Operation(
             "yahoo-finance-ticker-holders",
             "GET",
@@ -4934,6 +5028,11 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("retrieve", "brand-retrieve");
+            g.put("brand", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("images", "brave-images");
             group.put("news", "brave-news");
             group.put("search", "brave-search");
@@ -5108,6 +5207,14 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("comments", "reddit-comments");
+            group.put("post", "reddit-post");
+            group.put("search", "reddit-search");
+            group.put("subredditPosts", "reddit-subreddit-posts");
+            g.put("reddit", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("click", "referrals-click");
             group.put("me", "referrals-me");
             group.put("meEvents", "referrals-me-events");
@@ -5272,6 +5379,7 @@ public final class Operations {
             group.put("download", "yahoo-finance-download");
             group.put("industries", "yahoo-finance-industries");
             group.put("industry", "yahoo-finance-industry");
+            group.put("lookup", "yahoo-finance-lookup");
             group.put("marketStatus", "yahoo-finance-market-status");
             group.put("marketSummary", "yahoo-finance-market-summary");
             group.put("screenerCustom", "yahoo-finance-screener-custom");

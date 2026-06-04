@@ -16,7 +16,7 @@ artifacts:
     client's dynamic ``request``.
   - ``docs/operations.md`` -- the shared operations table.
 
-There are 330 operations, so we deliberately do NOT emit a distinct compiled
+There are hundreds of operations, so we deliberately do NOT emit a distinct compiled
 record per operation. Metadata is modeled with the hand-written plain classes in
 ``net.crawlora`` (Operation, QueryParam, FormParam); the generated file just
 populates them.

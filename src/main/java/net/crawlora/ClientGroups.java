@@ -59,6 +59,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "brand" operation group.
+     * @return a new {@link BrandGroup} bound to this client
+     */
+    public BrandGroup brand() {
+        return new BrandGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "brave" operation group.
      * @return a new {@link BraveGroup} bound to this client
      */
@@ -152,6 +160,14 @@ public abstract class ClientGroups {
      */
     public ProductHuntGroup productHunt() {
         return new ProductHuntGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "reddit" operation group.
+     * @return a new {@link RedditGroup} bound to this client
+     */
+    public RedditGroup reddit() {
+        return new RedditGroup((CrawloraClient) this);
     }
 
     /**

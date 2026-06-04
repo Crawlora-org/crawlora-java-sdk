@@ -17,6 +17,15 @@ CrawloraClient.builder().jwtToken("eyJ…").build();
 Both fall back to environment variables: `CRAWLORA_API_KEY` and
 `CRAWLORA_BASE_URL`.
 
+## Reddit and Brand
+
+Newer platforms are grouped like every other endpoint:
+
+```java
+Object posts = client.reddit().search(Map.of("q", "java", "subreddit", "programming"));
+Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
+```
+
 ## Retries and Retry-After
 
 ```java

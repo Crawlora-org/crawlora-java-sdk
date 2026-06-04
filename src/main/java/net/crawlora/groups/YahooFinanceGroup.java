@@ -147,6 +147,28 @@ public final class YahooFinanceGroup {
     }
 
     /**
+     * yahoo-finance-lookup (GET /yahoo-finance/lookup).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object lookup(Map<String, Object> params) {
+        return lookup(params, null);
+    }
+
+    /**
+     * yahoo-finance-lookup (GET /yahoo-finance/lookup). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object lookup(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-finance-lookup", params);
+        return client.request("yahoo-finance-lookup", params, options);
+    }
+
+    /**
      * yahoo-finance-market-status (GET /yahoo-finance/market/{market}/status).
      *
      * @param params operation parameters
