@@ -22,13 +22,19 @@ public final class ShopAppGroup {
      * shop-app-analysis (GET /shop-app/analysis).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object analysis(Map<String, Object> params) {
         return analysis(params, null);
     }
 
-    /** shop-app-analysis with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-analysis (GET /shop-app/analysis). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object analysis(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-analysis", params);
         return client.request("shop-app-analysis", params, options);
@@ -38,19 +44,29 @@ public final class ShopAppGroup {
      * shop-app-categories (GET /shop-app/categories).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categories(Map<String, Object> params) {
         return categories(params, null);
     }
 
-    /** shop-app-categories with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-categories (GET /shop-app/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-categories", params);
         return client.request("shop-app-categories", params, options);
     }
 
-    /** shop-app-categories with no parameters. */
+    /**
+     * shop-app-categories (GET /shop-app/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories() {
         return categories(Map.of(), null);
     }
@@ -59,13 +75,19 @@ public final class ShopAppGroup {
      * shop-app-product (GET /shop-app/products/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object product(Map<String, Object> params) {
         return product(params, null);
     }
 
-    /** shop-app-product with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product (GET /shop-app/products/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object product(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product", params);
         return client.request("shop-app-product", params, options);
@@ -75,13 +97,19 @@ public final class ShopAppGroup {
      * shop-app-product-related (GET /shop-app/products/{id}/related).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productRelated(Map<String, Object> params) {
         return productRelated(params, null);
     }
 
-    /** shop-app-product-related with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product-related (GET /shop-app/products/{id}/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productRelated(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product-related", params);
         return client.request("shop-app-product-related", params, options);
@@ -91,13 +119,19 @@ public final class ShopAppGroup {
      * shop-app-product-reviews (GET /shop-app/products/{id}/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productReviews(Map<String, Object> params) {
         return productReviews(params, null);
     }
 
-    /** shop-app-product-reviews with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product-reviews (GET /shop-app/products/{id}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product-reviews", params);
         return client.request("shop-app-product-reviews", params, options);
@@ -107,13 +141,19 @@ public final class ShopAppGroup {
      * shop-app-product-shop (GET /shop-app/products/{id}/shop).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productShop(Map<String, Object> params) {
         return productShop(params, null);
     }
 
-    /** shop-app-product-shop with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product-shop (GET /shop-app/products/{id}/shop). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productShop(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product-shop", params);
         return client.request("shop-app-product-shop", params, options);
@@ -123,13 +163,19 @@ public final class ShopAppGroup {
      * shop-app-product-variant (GET /shop-app/products/{id}/variant).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productVariant(Map<String, Object> params) {
         return productVariant(params, null);
     }
 
-    /** shop-app-product-variant with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product-variant (GET /shop-app/products/{id}/variant). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productVariant(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product-variant", params);
         return client.request("shop-app-product-variant", params, options);
@@ -139,13 +185,19 @@ public final class ShopAppGroup {
      * shop-app-product-variants (GET /shop-app/products/{id}/variants).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productVariants(Map<String, Object> params) {
         return productVariants(params, null);
     }
 
-    /** shop-app-product-variants with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-product-variants (GET /shop-app/products/{id}/variants). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productVariants(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-product-variants", params);
         return client.request("shop-app-product-variants", params, options);
@@ -155,13 +207,19 @@ public final class ShopAppGroup {
      * shop-app-search (GET /shop-app/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** shop-app-search with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-search (GET /shop-app/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-search", params);
         return client.request("shop-app-search", params, options);
@@ -171,13 +229,19 @@ public final class ShopAppGroup {
      * shop-app-shop (GET /shop-app/shops/{handle}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object shop(Map<String, Object> params) {
         return shop(params, null);
     }
 
-    /** shop-app-shop with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-shop (GET /shop-app/shops/{handle}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object shop(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-shop", params);
         return client.request("shop-app-shop", params, options);
@@ -187,13 +251,19 @@ public final class ShopAppGroup {
      * shop-app-collection-products (GET /shop-app/shops/{handle}/collections/{collection_id}/products).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object collectionProducts(Map<String, Object> params) {
         return collectionProducts(params, null);
     }
 
-    /** shop-app-collection-products with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-collection-products (GET /shop-app/shops/{handle}/collections/{collection_id}/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object collectionProducts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-collection-products", params);
         return client.request("shop-app-collection-products", params, options);
@@ -203,13 +273,19 @@ public final class ShopAppGroup {
      * shop-app-shop-locations (GET /shop-app/shops/{handle}/locations).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object shopLocations(Map<String, Object> params) {
         return shopLocations(params, null);
     }
 
-    /** shop-app-shop-locations with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-shop-locations (GET /shop-app/shops/{handle}/locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object shopLocations(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-shop-locations", params);
         return client.request("shop-app-shop-locations", params, options);
@@ -219,13 +295,19 @@ public final class ShopAppGroup {
      * shop-app-shop-products (GET /shop-app/shops/{handle}/products).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object shopProducts(Map<String, Object> params) {
         return shopProducts(params, null);
     }
 
-    /** shop-app-shop-products with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-shop-products (GET /shop-app/shops/{handle}/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object shopProducts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-shop-products", params);
         return client.request("shop-app-shop-products", params, options);
@@ -235,13 +317,19 @@ public final class ShopAppGroup {
      * shop-app-shop-reviews (GET /shop-app/shops/{handle}/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object shopReviews(Map<String, Object> params) {
         return shopReviews(params, null);
     }
 
-    /** shop-app-shop-reviews with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-shop-reviews (GET /shop-app/shops/{handle}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object shopReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-shop-reviews", params);
         return client.request("shop-app-shop-reviews", params, options);
@@ -251,13 +339,19 @@ public final class ShopAppGroup {
      * shop-app-shop-typeahead (GET /shop-app/shops/{handle}/typeahead).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object shopTypeahead(Map<String, Object> params) {
         return shopTypeahead(params, null);
     }
 
-    /** shop-app-shop-typeahead with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-shop-typeahead (GET /shop-app/shops/{handle}/typeahead). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object shopTypeahead(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-shop-typeahead", params);
         return client.request("shop-app-shop-typeahead", params, options);
@@ -267,13 +361,19 @@ public final class ShopAppGroup {
      * shop-app-suggestions (GET /shop-app/suggestions).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggestions(Map<String, Object> params) {
         return suggestions(params, null);
     }
 
-    /** shop-app-suggestions with explicit {@link RequestOptions}. */
+    /**
+     * shop-app-suggestions (GET /shop-app/suggestions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggestions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shop-app-suggestions", params);
         return client.request("shop-app-suggestions", params, options);

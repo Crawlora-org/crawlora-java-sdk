@@ -22,13 +22,19 @@ public final class YoutubeGroup {
      * youtube-captions (GET /youtube/captions/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object captions(Map<String, Object> params) {
         return captions(params, null);
     }
 
-    /** youtube-captions with explicit {@link RequestOptions}. */
+    /**
+     * youtube-captions (GET /youtube/captions/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object captions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-captions", params);
         return client.request("youtube-captions", params, options);
@@ -38,13 +44,19 @@ public final class YoutubeGroup {
      * youtube-channel-playlists (GET /youtube/channel/{id}/playlists).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object channelPlaylists(Map<String, Object> params) {
         return channelPlaylists(params, null);
     }
 
-    /** youtube-channel-playlists with explicit {@link RequestOptions}. */
+    /**
+     * youtube-channel-playlists (GET /youtube/channel/{id}/playlists). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object channelPlaylists(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-channel-playlists", params);
         return client.request("youtube-channel-playlists", params, options);
@@ -54,13 +66,19 @@ public final class YoutubeGroup {
      * youtube-channel-search (GET /youtube/channel/{id}/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object channelSearch(Map<String, Object> params) {
         return channelSearch(params, null);
     }
 
-    /** youtube-channel-search with explicit {@link RequestOptions}. */
+    /**
+     * youtube-channel-search (GET /youtube/channel/{id}/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object channelSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-channel-search", params);
         return client.request("youtube-channel-search", params, options);
@@ -70,13 +88,19 @@ public final class YoutubeGroup {
      * youtube-channel-shorts (GET /youtube/channel/{id}/shorts).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object channelShorts(Map<String, Object> params) {
         return channelShorts(params, null);
     }
 
-    /** youtube-channel-shorts with explicit {@link RequestOptions}. */
+    /**
+     * youtube-channel-shorts (GET /youtube/channel/{id}/shorts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object channelShorts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-channel-shorts", params);
         return client.request("youtube-channel-shorts", params, options);
@@ -86,13 +110,19 @@ public final class YoutubeGroup {
      * youtube-channel-videos (GET /youtube/channel/{id}/videos).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object channelVideos(Map<String, Object> params) {
         return channelVideos(params, null);
     }
 
-    /** youtube-channel-videos with explicit {@link RequestOptions}. */
+    /**
+     * youtube-channel-videos (GET /youtube/channel/{id}/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object channelVideos(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-channel-videos", params);
         return client.request("youtube-channel-videos", params, options);
@@ -102,13 +132,19 @@ public final class YoutubeGroup {
      * youtube-comments (GET /youtube/comments/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object comments(Map<String, Object> params) {
         return comments(params, null);
     }
 
-    /** youtube-comments with explicit {@link RequestOptions}. */
+    /**
+     * youtube-comments (GET /youtube/comments/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object comments(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-comments", params);
         return client.request("youtube-comments", params, options);
@@ -118,13 +154,19 @@ public final class YoutubeGroup {
      * youtube-playlist (GET /youtube/playlist/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object playlist(Map<String, Object> params) {
         return playlist(params, null);
     }
 
-    /** youtube-playlist with explicit {@link RequestOptions}. */
+    /**
+     * youtube-playlist (GET /youtube/playlist/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object playlist(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-playlist", params);
         return client.request("youtube-playlist", params, options);
@@ -134,13 +176,19 @@ public final class YoutubeGroup {
      * youtube-profile (GET /youtube/profile/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profile(Map<String, Object> params) {
         return profile(params, null);
     }
 
-    /** youtube-profile with explicit {@link RequestOptions}. */
+    /**
+     * youtube-profile (GET /youtube/profile/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-profile", params);
         return client.request("youtube-profile", params, options);
@@ -150,19 +198,29 @@ public final class YoutubeGroup {
      * youtube-search (GET /youtube/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** youtube-search with explicit {@link RequestOptions}. */
+    /**
+     * youtube-search (GET /youtube/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-search", params);
         return client.request("youtube-search", params, options);
     }
 
-    /** youtube-search with no parameters. */
+    /**
+     * youtube-search (GET /youtube/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search() {
         return search(Map.of(), null);
     }
@@ -171,13 +229,19 @@ public final class YoutubeGroup {
      * youtube-tag (GET /youtube/tag/{tag}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tag(Map<String, Object> params) {
         return tag(params, null);
     }
 
-    /** youtube-tag with explicit {@link RequestOptions}. */
+    /**
+     * youtube-tag (GET /youtube/tag/{tag}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tag(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-tag", params);
         return client.request("youtube-tag", params, options);
@@ -188,13 +252,19 @@ public final class YoutubeGroup {
      * Supports text response mode.
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object transcript(Map<String, Object> params) {
         return transcript(params, null);
     }
 
-    /** youtube-transcript with explicit {@link RequestOptions}. */
+    /**
+     * youtube-transcript (GET /youtube/transcript/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object transcript(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-transcript", params);
         return client.request("youtube-transcript", params, options);
@@ -204,13 +274,19 @@ public final class YoutubeGroup {
      * youtube-transcript-languages (GET /youtube/transcript/{id}/languages).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object transcriptLanguages(Map<String, Object> params) {
         return transcriptLanguages(params, null);
     }
 
-    /** youtube-transcript-languages with explicit {@link RequestOptions}. */
+    /**
+     * youtube-transcript-languages (GET /youtube/transcript/{id}/languages). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object transcriptLanguages(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-transcript-languages", params);
         return client.request("youtube-transcript-languages", params, options);
@@ -220,13 +296,19 @@ public final class YoutubeGroup {
      * youtube-video (GET /youtube/video/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object video(Map<String, Object> params) {
         return video(params, null);
     }
 
-    /** youtube-video with explicit {@link RequestOptions}. */
+    /**
+     * youtube-video (GET /youtube/video/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object video(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("youtube-video", params);
         return client.request("youtube-video", params, options);

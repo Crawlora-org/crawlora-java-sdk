@@ -22,19 +22,29 @@ public final class UsageGroup {
      * usage-me-endpoints (GET /usage/me/endpoints).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meEndpoints(Map<String, Object> params) {
         return meEndpoints(params, null);
     }
 
-    /** usage-me-endpoints with explicit {@link RequestOptions}. */
+    /**
+     * usage-me-endpoints (GET /usage/me/endpoints). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEndpoints(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("usage-me-endpoints", params);
         return client.request("usage-me-endpoints", params, options);
     }
 
-    /** usage-me-endpoints with no parameters. */
+    /**
+     * usage-me-endpoints (GET /usage/me/endpoints). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEndpoints() {
         return meEndpoints(Map.of(), null);
     }
@@ -43,19 +53,29 @@ public final class UsageGroup {
      * usage-me-overview (GET /usage/me/overview).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meOverview(Map<String, Object> params) {
         return meOverview(params, null);
     }
 
-    /** usage-me-overview with explicit {@link RequestOptions}. */
+    /**
+     * usage-me-overview (GET /usage/me/overview). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meOverview(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("usage-me-overview", params);
         return client.request("usage-me-overview", params, options);
     }
 
-    /** usage-me-overview with no parameters. */
+    /**
+     * usage-me-overview (GET /usage/me/overview). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meOverview() {
         return meOverview(Map.of(), null);
     }
@@ -64,19 +84,29 @@ public final class UsageGroup {
      * usage-me-recent-ips (GET /usage/me/recent-ips).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meRecentIps(Map<String, Object> params) {
         return meRecentIps(params, null);
     }
 
-    /** usage-me-recent-ips with explicit {@link RequestOptions}. */
+    /**
+     * usage-me-recent-ips (GET /usage/me/recent-ips). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meRecentIps(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("usage-me-recent-ips", params);
         return client.request("usage-me-recent-ips", params, options);
     }
 
-    /** usage-me-recent-ips with no parameters. */
+    /**
+     * usage-me-recent-ips (GET /usage/me/recent-ips). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meRecentIps() {
         return meRecentIps(Map.of(), null);
     }
@@ -85,19 +115,29 @@ public final class UsageGroup {
      * usage-me-timeseries (GET /usage/me/timeseries).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meTimeseries(Map<String, Object> params) {
         return meTimeseries(params, null);
     }
 
-    /** usage-me-timeseries with explicit {@link RequestOptions}. */
+    /**
+     * usage-me-timeseries (GET /usage/me/timeseries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meTimeseries(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("usage-me-timeseries", params);
         return client.request("usage-me-timeseries", params, options);
     }
 
-    /** usage-me-timeseries with no parameters. */
+    /**
+     * usage-me-timeseries (GET /usage/me/timeseries). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meTimeseries() {
         return meTimeseries(Map.of(), null);
     }

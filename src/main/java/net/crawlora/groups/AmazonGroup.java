@@ -22,13 +22,19 @@ public final class AmazonGroup {
      * amazon-product (GET /amazon/product/{asin}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object product(Map<String, Object> params) {
         return product(params, null);
     }
 
-    /** amazon-product with explicit {@link RequestOptions}. */
+    /**
+     * amazon-product (GET /amazon/product/{asin}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object product(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("amazon-product", params);
         return client.request("amazon-product", params, options);
@@ -38,13 +44,19 @@ public final class AmazonGroup {
      * amazon-search (GET /amazon/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** amazon-search with explicit {@link RequestOptions}. */
+    /**
+     * amazon-search (GET /amazon/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("amazon-search", params);
         return client.request("amazon-search", params, options);
@@ -54,13 +66,19 @@ public final class AmazonGroup {
      * amazon-suggest (GET /amazon/suggest/{keyword}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** amazon-suggest with explicit {@link RequestOptions}. */
+    /**
+     * amazon-suggest (GET /amazon/suggest/{keyword}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("amazon-suggest", params);
         return client.request("amazon-suggest", params, options);

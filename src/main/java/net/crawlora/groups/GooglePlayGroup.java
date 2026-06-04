@@ -22,13 +22,19 @@ public final class GooglePlayGroup {
      * googleplay-app (GET /googleplay/app).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object app(Map<String, Object> params) {
         return app(params, null);
     }
 
-    /** googleplay-app with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-app (GET /googleplay/app). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object app(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-app", params);
         return client.request("googleplay-app", params, options);
@@ -38,19 +44,29 @@ public final class GooglePlayGroup {
      * googleplay-categories (GET /googleplay/categories).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categories(Map<String, Object> params) {
         return categories(params, null);
     }
 
-    /** googleplay-categories with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-categories (GET /googleplay/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-categories", params);
         return client.request("googleplay-categories", params, options);
     }
 
-    /** googleplay-categories with no parameters. */
+    /**
+     * googleplay-categories (GET /googleplay/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories() {
         return categories(Map.of(), null);
     }
@@ -59,13 +75,19 @@ public final class GooglePlayGroup {
      * googleplay-datasafety (GET /googleplay/datasafety).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object datasafety(Map<String, Object> params) {
         return datasafety(params, null);
     }
 
-    /** googleplay-datasafety with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-datasafety (GET /googleplay/datasafety). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object datasafety(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-datasafety", params);
         return client.request("googleplay-datasafety", params, options);
@@ -75,13 +97,19 @@ public final class GooglePlayGroup {
      * googleplay-developer (GET /googleplay/developer/{dev_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object developer(Map<String, Object> params) {
         return developer(params, null);
     }
 
-    /** googleplay-developer with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-developer (GET /googleplay/developer/{dev_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object developer(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-developer", params);
         return client.request("googleplay-developer", params, options);
@@ -91,19 +119,29 @@ public final class GooglePlayGroup {
      * googleplay-list (GET /googleplay/list).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object list(Map<String, Object> params) {
         return list(params, null);
     }
 
-    /** googleplay-list with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-list (GET /googleplay/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-list", params);
         return client.request("googleplay-list", params, options);
     }
 
-    /** googleplay-list with no parameters. */
+    /**
+     * googleplay-list (GET /googleplay/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list() {
         return list(Map.of(), null);
     }
@@ -112,13 +150,19 @@ public final class GooglePlayGroup {
      * googleplay-permissions (GET /googleplay/permissions).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object permissions(Map<String, Object> params) {
         return permissions(params, null);
     }
 
-    /** googleplay-permissions with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-permissions (GET /googleplay/permissions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object permissions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-permissions", params);
         return client.request("googleplay-permissions", params, options);
@@ -128,13 +172,19 @@ public final class GooglePlayGroup {
      * googleplay-reviews (GET /googleplay/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object reviews(Map<String, Object> params) {
         return reviews(params, null);
     }
 
-    /** googleplay-reviews with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-reviews (GET /googleplay/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-reviews", params);
         return client.request("googleplay-reviews", params, options);
@@ -144,13 +194,19 @@ public final class GooglePlayGroup {
      * googleplay-search (GET /googleplay/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** googleplay-search with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-search (GET /googleplay/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-search", params);
         return client.request("googleplay-search", params, options);
@@ -160,13 +216,19 @@ public final class GooglePlayGroup {
      * googleplay-similar (GET /googleplay/similar).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object similar(Map<String, Object> params) {
         return similar(params, null);
     }
 
-    /** googleplay-similar with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-similar (GET /googleplay/similar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object similar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-similar", params);
         return client.request("googleplay-similar", params, options);
@@ -176,13 +238,19 @@ public final class GooglePlayGroup {
      * googleplay-suggest (GET /googleplay/suggest/{term}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** googleplay-suggest with explicit {@link RequestOptions}. */
+    /**
+     * googleplay-suggest (GET /googleplay/suggest/{term}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googleplay-suggest", params);
         return client.request("googleplay-suggest", params, options);

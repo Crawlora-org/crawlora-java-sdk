@@ -22,13 +22,19 @@ public final class InstagramGroup {
      * instagram-post (GET /instagram/post/{id}/{post_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object post(Map<String, Object> params) {
         return post(params, null);
     }
 
-    /** instagram-post with explicit {@link RequestOptions}. */
+    /**
+     * instagram-post (GET /instagram/post/{id}/{post_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object post(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("instagram-post", params);
         return client.request("instagram-post", params, options);
@@ -38,13 +44,19 @@ public final class InstagramGroup {
      * instagram-profile (GET /instagram/profile/{username}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profile(Map<String, Object> params) {
         return profile(params, null);
     }
 
-    /** instagram-profile with explicit {@link RequestOptions}. */
+    /**
+     * instagram-profile (GET /instagram/profile/{username}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("instagram-profile", params);
         return client.request("instagram-profile", params, options);
@@ -54,13 +66,19 @@ public final class InstagramGroup {
      * instagram-reels (GET /instagram/reels/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object reels(Map<String, Object> params) {
         return reels(params, null);
     }
 
-    /** instagram-reels with explicit {@link RequestOptions}. */
+    /**
+     * instagram-reels (GET /instagram/reels/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reels(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("instagram-reels", params);
         return client.request("instagram-reels", params, options);

@@ -206,9 +206,68 @@ class CrawloraClientTest {
         CrawloraClient c = CrawloraClient.builder().apiKey("k").transport(transport)
                 .requestId(true).build();
         c.bing().search(params("q", "x"));
-        String id = transport.calls.get(0).headers.get("x-request-id");
+        String id = headerCi(transport.calls.get(0).headers, "x-request-id");
         assertNotNull(id);
         assertFalse(id.isEmpty());
+    }
+
+    @Test
+    void uniformGroupAccessorsResolve() {
+        CrawloraClient c = CrawloraClient.builder().apiKey("k")
+                .transport(new RecordingTransport(new ArrayList<>())).build();
+        // Every group is a first-class typed accessor on the client, not just bing().
+        assertInstanceOf(BingGroup.class, c.bing());
+        assertInstanceOf(net.crawlora.groups.GoogleGroup.class, c.google());
+        assertInstanceOf(net.crawlora.groups.YoutubeGroup.class, c.youtube());
+        assertInstanceOf(net.crawlora.groups.AppStoreGroup.class, c.appStore());
+    }
+
+    @Test
+    void closeIsAutoCloseableAndClosesTransport() {
+        boolean[] closed = {false};
+        class ClosableTransport implements Transport, AutoCloseable {
+            @Override
+            public TransportResponse call(String m, String u, Map<String, String> h, byte[] b, double t) {
+                return RecordingTransport.ok("{}");
+            }
+
+            @Override
+            public void close() {
+                closed[0] = true;
+            }
+        }
+        try (CrawloraClient c = CrawloraClient.builder().apiKey("k").transport(new ClosableTransport()).build()) {
+            c.bing().search(params("q", "x"));
+        }
+        assertTrue(closed[0], "close() should delegate to an AutoCloseable transport");
+    }
+
+    @Test
+    void rateLimiterCapsConcurrency() throws Exception {
+        java.util.concurrent.atomic.AtomicInteger active = new java.util.concurrent.atomic.AtomicInteger();
+        java.util.concurrent.atomic.AtomicInteger peak = new java.util.concurrent.atomic.AtomicInteger();
+        Transport slow = (method, url, headers, body, timeout) -> {
+            int now = active.incrementAndGet();
+            peak.accumulateAndGet(now, Math::max);
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException ignored) {
+                Thread.currentThread().interrupt();
+            }
+            active.decrementAndGet();
+            return RecordingTransport.ok("[]");
+        };
+        CrawloraClient c = CrawloraClient.builder().apiKey("k").transport(slow).maxConcurrency(2).build();
+        List<Thread> threads = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            Thread th = new Thread(() -> c.bing().search(params("q", "x")));
+            threads.add(th);
+            th.start();
+        }
+        for (Thread th : threads) {
+            th.join();
+        }
+        assertTrue(peak.get() <= 2, "max in-flight exceeded the concurrency cap: " + peak.get());
     }
 
     @Test
@@ -352,5 +411,15 @@ class CrawloraClientTest {
             p.put(operation.bodyParam, Map.of("stub", true));
         }
         return p;
+    }
+
+    /** Case-insensitive header lookup for assertions. */
+    private static String headerCi(Map<String, String> headers, String name) {
+        for (Map.Entry<String, String> e : headers.entrySet()) {
+            if (e.getKey().equalsIgnoreCase(name)) {
+                return e.getValue();
+            }
+        }
+        return null;
     }
 }

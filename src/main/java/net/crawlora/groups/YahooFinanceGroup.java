@@ -22,19 +22,29 @@ public final class YahooFinanceGroup {
      * yahoo-finance-calendars (GET /yahoo-finance/calendars).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object calendars(Map<String, Object> params) {
         return calendars(params, null);
     }
 
-    /** yahoo-finance-calendars with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-calendars (GET /yahoo-finance/calendars). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object calendars(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-calendars", params);
         return client.request("yahoo-finance-calendars", params, options);
     }
 
-    /** yahoo-finance-calendars with no parameters. */
+    /**
+     * yahoo-finance-calendars (GET /yahoo-finance/calendars). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object calendars() {
         return calendars(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-calendar (GET /yahoo-finance/calendars/{type}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object calendar(Map<String, Object> params) {
         return calendar(params, null);
     }
 
-    /** yahoo-finance-calendar with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-calendar (GET /yahoo-finance/calendars/{type}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object calendar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-calendar", params);
         return client.request("yahoo-finance-calendar", params, options);
@@ -59,13 +75,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-download (POST /yahoo-finance/download).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object download(Map<String, Object> params) {
         return download(params, null);
     }
 
-    /** yahoo-finance-download with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-download (POST /yahoo-finance/download). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object download(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-download", params);
         return client.request("yahoo-finance-download", params, options);
@@ -75,19 +97,29 @@ public final class YahooFinanceGroup {
      * yahoo-finance-industries (GET /yahoo-finance/industries).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object industries(Map<String, Object> params) {
         return industries(params, null);
     }
 
-    /** yahoo-finance-industries with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-industries (GET /yahoo-finance/industries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object industries(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-industries", params);
         return client.request("yahoo-finance-industries", params, options);
     }
 
-    /** yahoo-finance-industries with no parameters. */
+    /**
+     * yahoo-finance-industries (GET /yahoo-finance/industries). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object industries() {
         return industries(Map.of(), null);
     }
@@ -96,13 +128,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-industry (GET /yahoo-finance/industries/{key}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object industry(Map<String, Object> params) {
         return industry(params, null);
     }
 
-    /** yahoo-finance-industry with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-industry (GET /yahoo-finance/industries/{key}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object industry(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-industry", params);
         return client.request("yahoo-finance-industry", params, options);
@@ -112,13 +150,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-market-status (GET /yahoo-finance/market/{market}/status).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object marketStatus(Map<String, Object> params) {
         return marketStatus(params, null);
     }
 
-    /** yahoo-finance-market-status with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-market-status (GET /yahoo-finance/market/{market}/status). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object marketStatus(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-market-status", params);
         return client.request("yahoo-finance-market-status", params, options);
@@ -128,13 +172,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-market-summary (GET /yahoo-finance/market/{market}/summary).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object marketSummary(Map<String, Object> params) {
         return marketSummary(params, null);
     }
 
-    /** yahoo-finance-market-summary with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-market-summary (GET /yahoo-finance/market/{market}/summary). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object marketSummary(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-market-summary", params);
         return client.request("yahoo-finance-market-summary", params, options);
@@ -144,13 +194,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-screener-custom (POST /yahoo-finance/screener).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object screenerCustom(Map<String, Object> params) {
         return screenerCustom(params, null);
     }
 
-    /** yahoo-finance-screener-custom with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-screener-custom (POST /yahoo-finance/screener). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object screenerCustom(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-screener-custom", params);
         return client.request("yahoo-finance-screener-custom", params, options);
@@ -160,13 +216,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-screener (GET /yahoo-finance/screener/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object screener(Map<String, Object> params) {
         return screener(params, null);
     }
 
-    /** yahoo-finance-screener with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-screener (GET /yahoo-finance/screener/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object screener(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-screener", params);
         return client.request("yahoo-finance-screener", params, options);
@@ -176,19 +238,29 @@ public final class YahooFinanceGroup {
      * yahoo-finance-screeners (GET /yahoo-finance/screeners).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object screeners(Map<String, Object> params) {
         return screeners(params, null);
     }
 
-    /** yahoo-finance-screeners with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-screeners (GET /yahoo-finance/screeners). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object screeners(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-screeners", params);
         return client.request("yahoo-finance-screeners", params, options);
     }
 
-    /** yahoo-finance-screeners with no parameters. */
+    /**
+     * yahoo-finance-screeners (GET /yahoo-finance/screeners). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object screeners() {
         return screeners(Map.of(), null);
     }
@@ -197,13 +269,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-search (GET /yahoo-finance/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** yahoo-finance-search with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-search (GET /yahoo-finance/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-search", params);
         return client.request("yahoo-finance-search", params, options);
@@ -213,19 +291,29 @@ public final class YahooFinanceGroup {
      * yahoo-finance-sectors (GET /yahoo-finance/sectors).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object sectors(Map<String, Object> params) {
         return sectors(params, null);
     }
 
-    /** yahoo-finance-sectors with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-sectors (GET /yahoo-finance/sectors). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object sectors(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-sectors", params);
         return client.request("yahoo-finance-sectors", params, options);
     }
 
-    /** yahoo-finance-sectors with no parameters. */
+    /**
+     * yahoo-finance-sectors (GET /yahoo-finance/sectors). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object sectors() {
         return sectors(Map.of(), null);
     }
@@ -234,13 +322,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-sector (GET /yahoo-finance/sectors/{key}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object sector(Map<String, Object> params) {
         return sector(params, null);
     }
 
-    /** yahoo-finance-sector with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-sector (GET /yahoo-finance/sectors/{key}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object sector(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-sector", params);
         return client.request("yahoo-finance-sector", params, options);
@@ -250,13 +344,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-actions (GET /yahoo-finance/ticker/{symbol}/actions).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerActions(Map<String, Object> params) {
         return tickerActions(params, null);
     }
 
-    /** yahoo-finance-ticker-actions with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-actions (GET /yahoo-finance/ticker/{symbol}/actions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerActions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-actions", params);
         return client.request("yahoo-finance-ticker-actions", params, options);
@@ -266,13 +366,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-analysts (GET /yahoo-finance/ticker/{symbol}/analysts).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerAnalysts(Map<String, Object> params) {
         return tickerAnalysts(params, null);
     }
 
-    /** yahoo-finance-ticker-analysts with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-analysts (GET /yahoo-finance/ticker/{symbol}/analysts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerAnalysts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-analysts", params);
         return client.request("yahoo-finance-ticker-analysts", params, options);
@@ -282,13 +388,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-calendar (GET /yahoo-finance/ticker/{symbol}/calendar).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerCalendar(Map<String, Object> params) {
         return tickerCalendar(params, null);
     }
 
-    /** yahoo-finance-ticker-calendar with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-calendar (GET /yahoo-finance/ticker/{symbol}/calendar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerCalendar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-calendar", params);
         return client.request("yahoo-finance-ticker-calendar", params, options);
@@ -298,13 +410,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-capital-gains (GET /yahoo-finance/ticker/{symbol}/capital-gains).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerCapitalGains(Map<String, Object> params) {
         return tickerCapitalGains(params, null);
     }
 
-    /** yahoo-finance-ticker-capital-gains with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-capital-gains (GET /yahoo-finance/ticker/{symbol}/capital-gains). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerCapitalGains(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-capital-gains", params);
         return client.request("yahoo-finance-ticker-capital-gains", params, options);
@@ -314,13 +432,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-dividends (GET /yahoo-finance/ticker/{symbol}/dividends).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerDividends(Map<String, Object> params) {
         return tickerDividends(params, null);
     }
 
-    /** yahoo-finance-ticker-dividends with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-dividends (GET /yahoo-finance/ticker/{symbol}/dividends). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerDividends(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-dividends", params);
         return client.request("yahoo-finance-ticker-dividends", params, options);
@@ -330,13 +454,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-earnings (GET /yahoo-finance/ticker/{symbol}/earnings).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerEarnings(Map<String, Object> params) {
         return tickerEarnings(params, null);
     }
 
-    /** yahoo-finance-ticker-earnings with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-earnings (GET /yahoo-finance/ticker/{symbol}/earnings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerEarnings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-earnings", params);
         return client.request("yahoo-finance-ticker-earnings", params, options);
@@ -346,13 +476,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-earnings-dates (GET /yahoo-finance/ticker/{symbol}/earnings-dates).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerEarningsDates(Map<String, Object> params) {
         return tickerEarningsDates(params, null);
     }
 
-    /** yahoo-finance-ticker-earnings-dates with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-earnings-dates (GET /yahoo-finance/ticker/{symbol}/earnings-dates). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerEarningsDates(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-earnings-dates", params);
         return client.request("yahoo-finance-ticker-earnings-dates", params, options);
@@ -362,13 +498,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-financials (GET /yahoo-finance/ticker/{symbol}/financials).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerFinancials(Map<String, Object> params) {
         return tickerFinancials(params, null);
     }
 
-    /** yahoo-finance-ticker-financials with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-financials (GET /yahoo-finance/ticker/{symbol}/financials). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerFinancials(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-financials", params);
         return client.request("yahoo-finance-ticker-financials", params, options);
@@ -378,13 +520,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-funds (GET /yahoo-finance/ticker/{symbol}/funds).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerFunds(Map<String, Object> params) {
         return tickerFunds(params, null);
     }
 
-    /** yahoo-finance-ticker-funds with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-funds (GET /yahoo-finance/ticker/{symbol}/funds). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerFunds(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-funds", params);
         return client.request("yahoo-finance-ticker-funds", params, options);
@@ -394,13 +542,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-history (GET /yahoo-finance/ticker/{symbol}/history).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerHistory(Map<String, Object> params) {
         return tickerHistory(params, null);
     }
 
-    /** yahoo-finance-ticker-history with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-history (GET /yahoo-finance/ticker/{symbol}/history). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerHistory(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-history", params);
         return client.request("yahoo-finance-ticker-history", params, options);
@@ -410,13 +564,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-history-metadata (GET /yahoo-finance/ticker/{symbol}/history-metadata).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerHistoryMetadata(Map<String, Object> params) {
         return tickerHistoryMetadata(params, null);
     }
 
-    /** yahoo-finance-ticker-history-metadata with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-history-metadata (GET /yahoo-finance/ticker/{symbol}/history-metadata). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerHistoryMetadata(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-history-metadata", params);
         return client.request("yahoo-finance-ticker-history-metadata", params, options);
@@ -426,13 +586,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-holders (GET /yahoo-finance/ticker/{symbol}/holders).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerHolders(Map<String, Object> params) {
         return tickerHolders(params, null);
     }
 
-    /** yahoo-finance-ticker-holders with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-holders (GET /yahoo-finance/ticker/{symbol}/holders). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerHolders(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-holders", params);
         return client.request("yahoo-finance-ticker-holders", params, options);
@@ -442,13 +608,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-info (GET /yahoo-finance/ticker/{symbol}/info).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerInfo(Map<String, Object> params) {
         return tickerInfo(params, null);
     }
 
-    /** yahoo-finance-ticker-info with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-info (GET /yahoo-finance/ticker/{symbol}/info). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerInfo(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-info", params);
         return client.request("yahoo-finance-ticker-info", params, options);
@@ -458,13 +630,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-isin (GET /yahoo-finance/ticker/{symbol}/isin).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerIsin(Map<String, Object> params) {
         return tickerIsin(params, null);
     }
 
-    /** yahoo-finance-ticker-isin with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-isin (GET /yahoo-finance/ticker/{symbol}/isin). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerIsin(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-isin", params);
         return client.request("yahoo-finance-ticker-isin", params, options);
@@ -474,13 +652,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-news (GET /yahoo-finance/ticker/{symbol}/news).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerNews(Map<String, Object> params) {
         return tickerNews(params, null);
     }
 
-    /** yahoo-finance-ticker-news with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-news (GET /yahoo-finance/ticker/{symbol}/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerNews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-news", params);
         return client.request("yahoo-finance-ticker-news", params, options);
@@ -490,13 +674,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-options (GET /yahoo-finance/ticker/{symbol}/options).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerOptions(Map<String, Object> params) {
         return tickerOptions(params, null);
     }
 
-    /** yahoo-finance-ticker-options with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-options (GET /yahoo-finance/ticker/{symbol}/options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerOptions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-options", params);
         return client.request("yahoo-finance-ticker-options", params, options);
@@ -506,13 +696,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-options-expiration (GET /yahoo-finance/ticker/{symbol}/options/{expiration}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerOptionsExpiration(Map<String, Object> params) {
         return tickerOptionsExpiration(params, null);
     }
 
-    /** yahoo-finance-ticker-options-expiration with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-options-expiration (GET /yahoo-finance/ticker/{symbol}/options/{expiration}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerOptionsExpiration(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-options-expiration", params);
         return client.request("yahoo-finance-ticker-options-expiration", params, options);
@@ -522,13 +718,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-quote (GET /yahoo-finance/ticker/{symbol}/quote).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerQuote(Map<String, Object> params) {
         return tickerQuote(params, null);
     }
 
-    /** yahoo-finance-ticker-quote with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-quote (GET /yahoo-finance/ticker/{symbol}/quote). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerQuote(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-quote", params);
         return client.request("yahoo-finance-ticker-quote", params, options);
@@ -538,13 +740,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-sec-filings (GET /yahoo-finance/ticker/{symbol}/sec-filings).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerSecFilings(Map<String, Object> params) {
         return tickerSecFilings(params, null);
     }
 
-    /** yahoo-finance-ticker-sec-filings with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-sec-filings (GET /yahoo-finance/ticker/{symbol}/sec-filings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerSecFilings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-sec-filings", params);
         return client.request("yahoo-finance-ticker-sec-filings", params, options);
@@ -554,13 +762,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-shares (GET /yahoo-finance/ticker/{symbol}/shares).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerShares(Map<String, Object> params) {
         return tickerShares(params, null);
     }
 
-    /** yahoo-finance-ticker-shares with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-shares (GET /yahoo-finance/ticker/{symbol}/shares). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerShares(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-shares", params);
         return client.request("yahoo-finance-ticker-shares", params, options);
@@ -570,13 +784,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-shares-full (GET /yahoo-finance/ticker/{symbol}/shares-full).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerSharesFull(Map<String, Object> params) {
         return tickerSharesFull(params, null);
     }
 
-    /** yahoo-finance-ticker-shares-full with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-shares-full (GET /yahoo-finance/ticker/{symbol}/shares-full). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerSharesFull(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-shares-full", params);
         return client.request("yahoo-finance-ticker-shares-full", params, options);
@@ -586,13 +806,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-splits (GET /yahoo-finance/ticker/{symbol}/splits).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerSplits(Map<String, Object> params) {
         return tickerSplits(params, null);
     }
 
-    /** yahoo-finance-ticker-splits with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-splits (GET /yahoo-finance/ticker/{symbol}/splits). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerSplits(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-splits", params);
         return client.request("yahoo-finance-ticker-splits", params, options);
@@ -602,13 +828,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-sustainability (GET /yahoo-finance/ticker/{symbol}/sustainability).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerSustainability(Map<String, Object> params) {
         return tickerSustainability(params, null);
     }
 
-    /** yahoo-finance-ticker-sustainability with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-sustainability (GET /yahoo-finance/ticker/{symbol}/sustainability). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerSustainability(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-sustainability", params);
         return client.request("yahoo-finance-ticker-sustainability", params, options);
@@ -618,13 +850,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-ticker-valuation (GET /yahoo-finance/ticker/{symbol}/valuation).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tickerValuation(Map<String, Object> params) {
         return tickerValuation(params, null);
     }
 
-    /** yahoo-finance-ticker-valuation with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-ticker-valuation (GET /yahoo-finance/ticker/{symbol}/valuation). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tickerValuation(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-ticker-valuation", params);
         return client.request("yahoo-finance-ticker-valuation", params, options);
@@ -634,13 +872,19 @@ public final class YahooFinanceGroup {
      * yahoo-finance-trending (GET /yahoo-finance/trending/{region}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trending(Map<String, Object> params) {
         return trending(params, null);
     }
 
-    /** yahoo-finance-trending with explicit {@link RequestOptions}. */
+    /**
+     * yahoo-finance-trending (GET /yahoo-finance/trending/{region}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trending(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-finance-trending", params);
         return client.request("yahoo-finance-trending", params, options);

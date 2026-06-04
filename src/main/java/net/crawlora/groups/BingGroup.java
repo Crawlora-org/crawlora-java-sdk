@@ -22,13 +22,19 @@ public final class BingGroup {
      * bing-images (GET /bing/images).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object images(Map<String, Object> params) {
         return images(params, null);
     }
 
-    /** bing-images with explicit {@link RequestOptions}. */
+    /**
+     * bing-images (GET /bing/images). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object images(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bing-images", params);
         return client.request("bing-images", params, options);
@@ -38,13 +44,19 @@ public final class BingGroup {
      * bing-news (GET /bing/news).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object news(Map<String, Object> params) {
         return news(params, null);
     }
 
-    /** bing-news with explicit {@link RequestOptions}. */
+    /**
+     * bing-news (GET /bing/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object news(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bing-news", params);
         return client.request("bing-news", params, options);
@@ -54,13 +66,19 @@ public final class BingGroup {
      * bing-search (GET /bing/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** bing-search with explicit {@link RequestOptions}. */
+    /**
+     * bing-search (GET /bing/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bing-search", params);
         return client.request("bing-search", params, options);
@@ -70,13 +88,19 @@ public final class BingGroup {
      * bing-suggest (GET /bing/suggest).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** bing-suggest with explicit {@link RequestOptions}. */
+    /**
+     * bing-suggest (GET /bing/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bing-suggest", params);
         return client.request("bing-suggest", params, options);
@@ -86,13 +110,19 @@ public final class BingGroup {
      * bing-videos (GET /bing/videos).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object videos(Map<String, Object> params) {
         return videos(params, null);
     }
 
-    /** bing-videos with explicit {@link RequestOptions}. */
+    /**
+     * bing-videos (GET /bing/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object videos(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bing-videos", params);
         return client.request("bing-videos", params, options);

@@ -22,19 +22,29 @@ public final class MetaGroup {
      * ping (GET /ping).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ping(Map<String, Object> params) {
         return ping(params, null);
     }
 
-    /** ping with explicit {@link RequestOptions}. */
+    /**
+     * ping (GET /ping). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ping(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ping", params);
         return client.request("ping", params, options);
     }
 
-    /** ping with no parameters. */
+    /**
+     * ping (GET /ping). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ping() {
         return ping(Map.of(), null);
     }
@@ -43,19 +53,29 @@ public final class MetaGroup {
      * ready (GET /ready).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ready(Map<String, Object> params) {
         return ready(params, null);
     }
 
-    /** ready with explicit {@link RequestOptions}. */
+    /**
+     * ready (GET /ready). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ready(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ready", params);
         return client.request("ready", params, options);
     }
 
-    /** ready with no parameters. */
+    /**
+     * ready (GET /ready). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ready() {
         return ready(Map.of(), null);
     }

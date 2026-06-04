@@ -22,19 +22,29 @@ public final class TiktokGroup {
      * tiktok-category (GET /tiktok/category).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object category(Map<String, Object> params) {
         return category(params, null);
     }
 
-    /** tiktok-category with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-category (GET /tiktok/category). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object category(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-category", params);
         return client.request("tiktok-category", params, options);
     }
 
-    /** tiktok-category with no parameters. */
+    /**
+     * tiktok-category (GET /tiktok/category). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object category() {
         return category(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class TiktokGroup {
      * tiktok-video-comments (GET /tiktok/comments).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object videoComments(Map<String, Object> params) {
         return videoComments(params, null);
     }
 
-    /** tiktok-video-comments with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-video-comments (GET /tiktok/comments). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object videoComments(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-video-comments", params);
         return client.request("tiktok-video-comments", params, options);
@@ -59,13 +75,19 @@ public final class TiktokGroup {
      * tiktok-explore (GET /tiktok/explore/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object explore(Map<String, Object> params) {
         return explore(params, null);
     }
 
-    /** tiktok-explore with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-explore (GET /tiktok/explore/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object explore(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-explore", params);
         return client.request("tiktok-explore", params, options);
@@ -75,13 +97,19 @@ public final class TiktokGroup {
      * tiktok-challenge (GET /tiktok/hashtag/{name}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object challenge(Map<String, Object> params) {
         return challenge(params, null);
     }
 
-    /** tiktok-challenge with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-challenge (GET /tiktok/hashtag/{name}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object challenge(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-challenge", params);
         return client.request("tiktok-challenge", params, options);
@@ -91,13 +119,19 @@ public final class TiktokGroup {
      * tiktok-challenge-list (GET /tiktok/hashtags).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object challengeList(Map<String, Object> params) {
         return challengeList(params, null);
     }
 
-    /** tiktok-challenge-list with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-challenge-list (GET /tiktok/hashtags). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object challengeList(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-challenge-list", params);
         return client.request("tiktok-challenge-list", params, options);
@@ -107,19 +141,29 @@ public final class TiktokGroup {
      * tiktok-popular-trend-country-industry-meta (GET /tiktok/popular-trend/country-industry-meta).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object popularTrendCountryIndustryMeta(Map<String, Object> params) {
         return popularTrendCountryIndustryMeta(params, null);
     }
 
-    /** tiktok-popular-trend-country-industry-meta with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-popular-trend-country-industry-meta (GET /tiktok/popular-trend/country-industry-meta). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularTrendCountryIndustryMeta(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-popular-trend-country-industry-meta", params);
         return client.request("tiktok-popular-trend-country-industry-meta", params, options);
     }
 
-    /** tiktok-popular-trend-country-industry-meta with no parameters. */
+    /**
+     * tiktok-popular-trend-country-industry-meta (GET /tiktok/popular-trend/country-industry-meta). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularTrendCountryIndustryMeta() {
         return popularTrendCountryIndustryMeta(Map.of(), null);
     }
@@ -128,19 +172,29 @@ public final class TiktokGroup {
      * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object popularTrendCreator(Map<String, Object> params) {
         return popularTrendCreator(params, null);
     }
 
-    /** tiktok-popular-trend-creator with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularTrendCreator(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-popular-trend-creator", params);
         return client.request("tiktok-popular-trend-creator", params, options);
     }
 
-    /** tiktok-popular-trend-creator with no parameters. */
+    /**
+     * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularTrendCreator() {
         return popularTrendCreator(Map.of(), null);
     }
@@ -149,13 +203,19 @@ public final class TiktokGroup {
      * tiktok-post (GET /tiktok/post/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object post(Map<String, Object> params) {
         return post(params, null);
     }
 
-    /** tiktok-post with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-post (GET /tiktok/post/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object post(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-post", params);
         return client.request("tiktok-post", params, options);
@@ -165,13 +225,19 @@ public final class TiktokGroup {
      * tiktok-profile-post (GET /tiktok/posts).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profilePost(Map<String, Object> params) {
         return profilePost(params, null);
     }
 
-    /** tiktok-profile-post with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-profile-post (GET /tiktok/posts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profilePost(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-profile-post", params);
         return client.request("tiktok-profile-post", params, options);
@@ -181,13 +247,19 @@ public final class TiktokGroup {
      * tiktok-profile (GET /tiktok/profile/{handler}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profile(Map<String, Object> params) {
         return profile(params, null);
     }
 
-    /** tiktok-profile with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-profile (GET /tiktok/profile/{handler}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-profile", params);
         return client.request("tiktok-profile", params, options);
@@ -197,13 +269,19 @@ public final class TiktokGroup {
      * tiktok-search (GET /tiktok/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** tiktok-search with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-search (GET /tiktok/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-search", params);
         return client.request("tiktok-search", params, options);
@@ -213,13 +291,19 @@ public final class TiktokGroup {
      * tiktok-search-hashtag (GET /tiktok/search/hashtag).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object searchHashtag(Map<String, Object> params) {
         return searchHashtag(params, null);
     }
 
-    /** tiktok-search-hashtag with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-search-hashtag (GET /tiktok/search/hashtag). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object searchHashtag(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-search-hashtag", params);
         return client.request("tiktok-search-hashtag", params, options);
@@ -229,13 +313,19 @@ public final class TiktokGroup {
      * tiktok-search-user (GET /tiktok/search/user).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object searchUser(Map<String, Object> params) {
         return searchUser(params, null);
     }
 
-    /** tiktok-search-user with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-search-user (GET /tiktok/search/user). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object searchUser(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-search-user", params);
         return client.request("tiktok-search-user", params, options);
@@ -245,13 +335,19 @@ public final class TiktokGroup {
      * tiktok-top-ads-analysis (GET /tiktok/top-ads/analysis).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsAnalysis(Map<String, Object> params) {
         return topAdsAnalysis(params, null);
     }
 
-    /** tiktok-top-ads-analysis with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-analysis (GET /tiktok/top-ads/analysis). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsAnalysis(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-analysis", params);
         return client.request("tiktok-top-ads-analysis", params, options);
@@ -261,13 +357,19 @@ public final class TiktokGroup {
      * tiktok-top-ads-detail (GET /tiktok/top-ads/detail).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsDetail(Map<String, Object> params) {
         return topAdsDetail(params, null);
     }
 
-    /** tiktok-top-ads-detail with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-detail (GET /tiktok/top-ads/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsDetail(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-detail", params);
         return client.request("tiktok-top-ads-detail", params, options);
@@ -277,19 +379,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-filters (GET /tiktok/top-ads/filters).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsFilters(Map<String, Object> params) {
         return topAdsFilters(params, null);
     }
 
-    /** tiktok-top-ads-filters with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-filters (GET /tiktok/top-ads/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsFilters(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-filters", params);
         return client.request("tiktok-top-ads-filters", params, options);
     }
 
-    /** tiktok-top-ads-filters with no parameters. */
+    /**
+     * tiktok-top-ads-filters (GET /tiktok/top-ads/filters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsFilters() {
         return topAdsFilters(Map.of(), null);
     }
@@ -298,19 +410,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-list (GET /tiktok/top-ads/list).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsList(Map<String, Object> params) {
         return topAdsList(params, null);
     }
 
-    /** tiktok-top-ads-list with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-list (GET /tiktok/top-ads/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsList(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-list", params);
         return client.request("tiktok-top-ads-list", params, options);
     }
 
-    /** tiktok-top-ads-list with no parameters. */
+    /**
+     * tiktok-top-ads-list (GET /tiktok/top-ads/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsList() {
         return topAdsList(Map.of(), null);
     }
@@ -319,19 +441,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-location-info (GET /tiktok/top-ads/location-info).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsLocationInfo(Map<String, Object> params) {
         return topAdsLocationInfo(params, null);
     }
 
-    /** tiktok-top-ads-location-info with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-location-info (GET /tiktok/top-ads/location-info). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsLocationInfo(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-location-info", params);
         return client.request("tiktok-top-ads-location-info", params, options);
     }
 
-    /** tiktok-top-ads-location-info with no parameters. */
+    /**
+     * tiktok-top-ads-location-info (GET /tiktok/top-ads/location-info). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsLocationInfo() {
         return topAdsLocationInfo(Map.of(), null);
     }
@@ -340,19 +472,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-locations (GET /tiktok/top-ads/locations).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsLocations(Map<String, Object> params) {
         return topAdsLocations(params, null);
     }
 
-    /** tiktok-top-ads-locations with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-locations (GET /tiktok/top-ads/locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsLocations(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-locations", params);
         return client.request("tiktok-top-ads-locations", params, options);
     }
 
-    /** tiktok-top-ads-locations with no parameters. */
+    /**
+     * tiktok-top-ads-locations (GET /tiktok/top-ads/locations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsLocations() {
         return topAdsLocations(Map.of(), null);
     }
@@ -361,13 +503,19 @@ public final class TiktokGroup {
      * tiktok-top-ads-recommend (GET /tiktok/top-ads/recommend).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsRecommend(Map<String, Object> params) {
         return topAdsRecommend(params, null);
     }
 
-    /** tiktok-top-ads-recommend with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-recommend (GET /tiktok/top-ads/recommend). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsRecommend(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-recommend", params);
         return client.request("tiktok-top-ads-recommend", params, options);
@@ -377,19 +525,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-safety (GET /tiktok/top-ads/safety).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsSafety(Map<String, Object> params) {
         return topAdsSafety(params, null);
     }
 
-    /** tiktok-top-ads-safety with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-safety (GET /tiktok/top-ads/safety). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSafety(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-safety", params);
         return client.request("tiktok-top-ads-safety", params, options);
     }
 
-    /** tiktok-top-ads-safety with no parameters. */
+    /**
+     * tiktok-top-ads-safety (GET /tiktok/top-ads/safety). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSafety() {
         return topAdsSafety(Map.of(), null);
     }
@@ -398,19 +556,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-spotlight (GET /tiktok/top-ads/spotlight).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsSpotlight(Map<String, Object> params) {
         return topAdsSpotlight(params, null);
     }
 
-    /** tiktok-top-ads-spotlight with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-spotlight (GET /tiktok/top-ads/spotlight). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSpotlight(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-spotlight", params);
         return client.request("tiktok-top-ads-spotlight", params, options);
     }
 
-    /** tiktok-top-ads-spotlight with no parameters. */
+    /**
+     * tiktok-top-ads-spotlight (GET /tiktok/top-ads/spotlight). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSpotlight() {
         return topAdsSpotlight(Map.of(), null);
     }
@@ -419,19 +587,29 @@ public final class TiktokGroup {
      * tiktok-top-ads-suggestions (GET /tiktok/top-ads/suggestions).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object topAdsSuggestions(Map<String, Object> params) {
         return topAdsSuggestions(params, null);
     }
 
-    /** tiktok-top-ads-suggestions with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-top-ads-suggestions (GET /tiktok/top-ads/suggestions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSuggestions(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-top-ads-suggestions", params);
         return client.request("tiktok-top-ads-suggestions", params, options);
     }
 
-    /** tiktok-top-ads-suggestions with no parameters. */
+    /**
+     * tiktok-top-ads-suggestions (GET /tiktok/top-ads/suggestions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object topAdsSuggestions() {
         return topAdsSuggestions(Map.of(), null);
     }
@@ -440,19 +618,29 @@ public final class TiktokGroup {
      * tiktok-trending (GET /tiktok/trending).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trending(Map<String, Object> params) {
         return trending(params, null);
     }
 
-    /** tiktok-trending with explicit {@link RequestOptions}. */
+    /**
+     * tiktok-trending (GET /tiktok/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trending(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-trending", params);
         return client.request("tiktok-trending", params, options);
     }
 
-    /** tiktok-trending with no parameters. */
+    /**
+     * tiktok-trending (GET /tiktok/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trending() {
         return trending(Map.of(), null);
     }

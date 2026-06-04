@@ -22,13 +22,19 @@ public final class ReferralsGroup {
      * referrals-click (POST /referrals/click).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object click(Map<String, Object> params) {
         return click(params, null);
     }
 
-    /** referrals-click with explicit {@link RequestOptions}. */
+    /**
+     * referrals-click (POST /referrals/click). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object click(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("referrals-click", params);
         return client.request("referrals-click", params, options);
@@ -38,19 +44,29 @@ public final class ReferralsGroup {
      * referrals-me (GET /referrals/me).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object me(Map<String, Object> params) {
         return me(params, null);
     }
 
-    /** referrals-me with explicit {@link RequestOptions}. */
+    /**
+     * referrals-me (GET /referrals/me). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("referrals-me", params);
         return client.request("referrals-me", params, options);
     }
 
-    /** referrals-me with no parameters. */
+    /**
+     * referrals-me (GET /referrals/me). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me() {
         return me(Map.of(), null);
     }
@@ -59,19 +75,29 @@ public final class ReferralsGroup {
      * referrals-me-events (GET /referrals/me/events).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meEvents(Map<String, Object> params) {
         return meEvents(params, null);
     }
 
-    /** referrals-me-events with explicit {@link RequestOptions}. */
+    /**
+     * referrals-me-events (GET /referrals/me/events). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEvents(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("referrals-me-events", params);
         return client.request("referrals-me-events", params, options);
     }
 
-    /** referrals-me-events with no parameters. */
+    /**
+     * referrals-me-events (GET /referrals/me/events). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEvents() {
         return meEvents(Map.of(), null);
     }

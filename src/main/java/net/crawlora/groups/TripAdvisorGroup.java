@@ -22,13 +22,19 @@ public final class TripAdvisorGroup {
      * tripadvisor-autocomplete (GET /tripadvisor/autocomplete).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorAutocomplete(Map<String, Object> params) {
         return tripadvisorAutocomplete(params, null);
     }
 
-    /** tripadvisor-autocomplete with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-autocomplete (GET /tripadvisor/autocomplete). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorAutocomplete(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-autocomplete", params);
         return client.request("tripadvisor-autocomplete", params, options);
@@ -38,19 +44,29 @@ public final class TripAdvisorGroup {
      * tripadvisor-enums (GET /tripadvisor/enums).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorEnums(Map<String, Object> params) {
         return tripadvisorEnums(params, null);
     }
 
-    /** tripadvisor-enums with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-enums (GET /tripadvisor/enums). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorEnums(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-enums", params);
         return client.request("tripadvisor-enums", params, options);
     }
 
-    /** tripadvisor-enums with no parameters. */
+    /**
+     * tripadvisor-enums (GET /tripadvisor/enums). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorEnums() {
         return tripadvisorEnums(Map.of(), null);
     }
@@ -59,13 +75,19 @@ public final class TripAdvisorGroup {
      * tripadvisor-hotels (GET /tripadvisor/hotels).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorHotels(Map<String, Object> params) {
         return tripadvisorHotels(params, null);
     }
 
-    /** tripadvisor-hotels with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-hotels (GET /tripadvisor/hotels). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorHotels(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-hotels", params);
         return client.request("tripadvisor-hotels", params, options);
@@ -75,19 +97,29 @@ public final class TripAdvisorGroup {
      * tripadvisor-place (GET /tripadvisor/place).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorPlace(Map<String, Object> params) {
         return tripadvisorPlace(params, null);
     }
 
-    /** tripadvisor-place with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-place (GET /tripadvisor/place). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorPlace(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-place", params);
         return client.request("tripadvisor-place", params, options);
     }
 
-    /** tripadvisor-place with no parameters. */
+    /**
+     * tripadvisor-place (GET /tripadvisor/place). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorPlace() {
         return tripadvisorPlace(Map.of(), null);
     }
@@ -96,19 +128,29 @@ public final class TripAdvisorGroup {
      * tripadvisor-reviews (GET /tripadvisor/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorReviews(Map<String, Object> params) {
         return tripadvisorReviews(params, null);
     }
 
-    /** tripadvisor-reviews with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-reviews (GET /tripadvisor/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-reviews", params);
         return client.request("tripadvisor-reviews", params, options);
     }
 
-    /** tripadvisor-reviews with no parameters. */
+    /**
+     * tripadvisor-reviews (GET /tripadvisor/reviews). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorReviews() {
         return tripadvisorReviews(Map.of(), null);
     }
@@ -117,13 +159,19 @@ public final class TripAdvisorGroup {
      * tripadvisor-search (GET /tripadvisor/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tripadvisorSearch(Map<String, Object> params) {
         return tripadvisorSearch(params, null);
     }
 
-    /** tripadvisor-search with explicit {@link RequestOptions}. */
+    /**
+     * tripadvisor-search (GET /tripadvisor/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tripadvisorSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tripadvisor-search", params);
         return client.request("tripadvisor-search", params, options);

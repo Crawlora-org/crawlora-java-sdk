@@ -14,7 +14,7 @@ import java.util.Map;
  * client is reused across calls so HTTP/1.1 keep-alive and HTTP/2 connections
  * are pooled. No third-party HTTP dependency is required.
  */
-public final class DefaultTransport implements Transport {
+public final class DefaultTransport implements Transport, AutoCloseable {
     private final HttpClient httpClient;
 
     public DefaultTransport() {
@@ -23,6 +23,21 @@ public final class DefaultTransport implements Transport {
 
     public DefaultTransport(HttpClient httpClient) {
         this.httpClient = httpClient;
+    }
+
+    /**
+     * Release the underlying {@link HttpClient} when the runtime supports it
+     * (JDK 21+ makes {@code HttpClient} {@link AutoCloseable}); a no-op on JDK 17.
+     */
+    @Override
+    public void close() {
+        if (httpClient instanceof AutoCloseable closeable) {
+            try {
+                closeable.close();
+            } catch (Exception ignored) {
+                // best-effort cleanup
+            }
+        }
     }
 
     @Override

@@ -24,14 +24,14 @@ Maven:
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-sdk</artifactId>
-  <version>1.5.0-sdk.2</version>
+  <version>1.5.0-sdk.3</version>
 </dependency>
 ```
 
 Gradle:
 
 ```groovy
-implementation "net.crawlora:crawlora-sdk:1.5.0-sdk.2"
+implementation "net.crawlora:crawlora-sdk:1.5.0-sdk.3"
 ```
 
 ## Quick start
@@ -58,17 +58,30 @@ Responses are returned as plain Java values: `Map<String,Object>`,
 
 ## Calling operations
 
-Grouped helpers map directly to the API (`client.<group>().<method>(params)`).
-The `bing()` accessor is built in; reach any other group with a typed group
-class or the dynamic accessor:
+Every group is a first-class typed accessor on the client
+(`client.<group>().<method>(params)`):
+
+```java
+client.google().search(Map.of("q", "crawlora", "country", "US"));
+client.youtube().video(Map.of("id", "dQw4w9WgXcQ"));
+client.appStore().search(Map.of("term", "weather"));
+```
+
+You can still construct a group directly or dispatch dynamically by name:
 
 ```java
 import net.crawlora.groups.YoutubeGroup;
 
 new YoutubeGroup(client).video(Map.of("id", "dQw4w9WgXcQ"));
+client.groupOf("google").call("search", Map.of("q", "crawlora"));
+```
 
-// Dynamic, by group name + method name:
-client.groupOf("google").call("search", Map.of("q", "crawlora", "country", "US"));
+`CrawloraClient` is `AutoCloseable`, so it works with try-with-resources:
+
+```java
+try (CrawloraClient client = CrawloraClient.builder().apiKey(System.getenv("CRAWLORA_API_KEY")).build()) {
+    client.bing().search(Map.of("q", "web scraping"));
+}
 ```
 
 Or call any operation dynamically by its id:

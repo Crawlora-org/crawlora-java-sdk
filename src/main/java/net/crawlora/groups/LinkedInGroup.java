@@ -22,13 +22,19 @@ public final class LinkedInGroup {
      * linkedin-company (GET /linkedin/company/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object linkedinCompany(Map<String, Object> params) {
         return linkedinCompany(params, null);
     }
 
-    /** linkedin-company with explicit {@link RequestOptions}. */
+    /**
+     * linkedin-company (GET /linkedin/company/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object linkedinCompany(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("linkedin-company", params);
         return client.request("linkedin-company", params, options);
@@ -38,13 +44,19 @@ public final class LinkedInGroup {
      * linkedin-product (GET /linkedin/product/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object linkedinProduct(Map<String, Object> params) {
         return linkedinProduct(params, null);
     }
 
-    /** linkedin-product with explicit {@link RequestOptions}. */
+    /**
+     * linkedin-product (GET /linkedin/product/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object linkedinProduct(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("linkedin-product", params);
         return client.request("linkedin-product", params, options);
@@ -54,13 +66,19 @@ public final class LinkedInGroup {
      * linkedin-showcase (GET /linkedin/showcase/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object linkedinShowcase(Map<String, Object> params) {
         return linkedinShowcase(params, null);
     }
 
-    /** linkedin-showcase with explicit {@link RequestOptions}. */
+    /**
+     * linkedin-showcase (GET /linkedin/showcase/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object linkedinShowcase(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("linkedin-showcase", params);
         return client.request("linkedin-showcase", params, options);

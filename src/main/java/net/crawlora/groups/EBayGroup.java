@@ -22,13 +22,19 @@ public final class EBayGroup {
      * ebay-item (GET /ebay/item/{item_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebayItem(Map<String, Object> params) {
         return ebayItem(params, null);
     }
 
-    /** ebay-item with explicit {@link RequestOptions}. */
+    /**
+     * ebay-item (GET /ebay/item/{item_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebayItem(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-item", params);
         return client.request("ebay-item", params, options);
@@ -38,13 +44,19 @@ public final class EBayGroup {
      * ebay-search (POST /ebay/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebaySearch(Map<String, Object> params) {
         return ebaySearch(params, null);
     }
 
-    /** ebay-search with explicit {@link RequestOptions}. */
+    /**
+     * ebay-search (POST /ebay/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebaySearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-search", params);
         return client.request("ebay-search", params, options);
@@ -54,13 +66,19 @@ public final class EBayGroup {
      * ebay-seller (GET /ebay/seller/{seller}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebaySeller(Map<String, Object> params) {
         return ebaySeller(params, null);
     }
 
-    /** ebay-seller with explicit {@link RequestOptions}. */
+    /**
+     * ebay-seller (GET /ebay/seller/{seller}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebaySeller(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-seller", params);
         return client.request("ebay-seller", params, options);
@@ -70,13 +88,19 @@ public final class EBayGroup {
      * ebay-seller-about (GET /ebay/seller/{seller}/about).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebaySellerAbout(Map<String, Object> params) {
         return ebaySellerAbout(params, null);
     }
 
-    /** ebay-seller-about with explicit {@link RequestOptions}. */
+    /**
+     * ebay-seller-about (GET /ebay/seller/{seller}/about). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebaySellerAbout(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-seller-about", params);
         return client.request("ebay-seller-about", params, options);
@@ -86,13 +110,19 @@ public final class EBayGroup {
      * ebay-seller-feedback (GET /ebay/seller/{seller}/feedback).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebaySellerFeedback(Map<String, Object> params) {
         return ebaySellerFeedback(params, null);
     }
 
-    /** ebay-seller-feedback with explicit {@link RequestOptions}. */
+    /**
+     * ebay-seller-feedback (GET /ebay/seller/{seller}/feedback). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebaySellerFeedback(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-seller-feedback", params);
         return client.request("ebay-seller-feedback", params, options);
@@ -102,13 +132,19 @@ public final class EBayGroup {
      * ebay-seller-shop (GET /ebay/seller/{seller}/shop).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ebaySellerShop(Map<String, Object> params) {
         return ebaySellerShop(params, null);
     }
 
-    /** ebay-seller-shop with explicit {@link RequestOptions}. */
+    /**
+     * ebay-seller-shop (GET /ebay/seller/{seller}/shop). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ebaySellerShop(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ebay-seller-shop", params);
         return client.request("ebay-seller-shop", params, options);

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.5.0-sdk.3
+
+- Uniform group access: every group is now a first-class typed accessor on the
+  client (`client.google()`, `client.youtube()`, …), not just `client.bing()`.
+- `CrawloraClient` implements `AutoCloseable` (try-with-resources); the default
+  transport's `HttpClient` is released on JDK 21+.
+- Cleaner artifact: generated group methods carry full Javadoc (the release
+  javadoc build is now warning-free); `x-request-id` is written as
+  `X-Request-Id`. No breaking API changes.
+
 ## 1.5.0-sdk.2
 
 - First publication to **Maven Central** (`net.crawlora:crawlora-sdk`),

@@ -276,16 +276,16 @@ def render_group(group_name, methods, model):
         meta = model.meta[operation_id]
         has_required = meta["has_required_params"]
         note = meta.get("note") or ""
-        doc = [
-            "    /**",
-            f"     * {operation_id} ({meta['method']} {meta['path']}).",
-        ]
+        summary = f"{operation_id} ({meta['method']} {meta['path']})."
+        result_doc = "the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode"
+
+        doc = ["    /**", f"     * {summary}"]
         if note:
             doc.append(f"     * {note}")
         doc.extend([
             "     *",
             "     * @param params operation parameters",
-            "     * @return the parsed response",
+            f"     * @return {result_doc}",
             "     */",
         ])
         lines.extend(doc)
@@ -293,14 +293,28 @@ def render_group(group_name, methods, model):
         lines.append(f"        return {method_name}(params, null);")
         lines.append("    }")
         lines.append("")
-        lines.append(f"    /** {operation_id} with explicit {{@link RequestOptions}}. */")
+        lines.extend([
+            "    /**",
+            f"     * {summary} with explicit request options.",
+            "     *",
+            "     * @param params operation parameters",
+            "     * @param options per-request options, or {@code null} for defaults",
+            f"     * @return {result_doc}",
+            "     */",
+        ])
         lines.append(f"    public Object {method_name}(Map<String, Object> params, RequestOptions options) {{")
         lines.append(f"        OperationGroup.checkParams({java_string(operation_id)}, params);")
         lines.append(f"        return client.request({java_string(operation_id)}, params, options);")
         lines.append("    }")
         lines.append("")
         if not has_required:
-            lines.append(f"    /** {operation_id} with no parameters. */")
+            lines.extend([
+                "    /**",
+                f"     * {summary} with no parameters.",
+                "     *",
+                f"     * @return {result_doc}",
+                "     */",
+            ])
             lines.append(f"    public Object {method_name}() {{")
             lines.append(f"        return {method_name}(Map.of(), null);")
             lines.append("    }")
@@ -310,10 +324,47 @@ def render_group(group_name, methods, model):
     return klass, "\n".join(lines)
 
 
+def render_client_groups(model):
+    """Generated base class that gives CrawloraClient a typed accessor per group
+    (client.bing(), client.google(), …), so every group is first-class."""
+    lines = [
+        "package net.crawlora;",
+        "",
+        GENERATED_NOTE,
+        "",
+        "import net.crawlora.groups.*;",
+        "",
+        "/**",
+        " * Generated base class providing {@link CrawloraClient} a typed accessor for",
+        " * every operation group, e.g. {@code client.bing().search(params)} or",
+        " * {@code client.google().search(params)}.",
+        " */",
+        "public abstract class ClientGroups {",
+    ]
+    for group_name in model.groups:
+        klass = _group_class_name(group_name)
+        lines.extend([
+            "    /**",
+            f"     * Typed accessor for the {java_string(group_name)} operation group.",
+            f"     * @return a new {{@link {klass}}} bound to this client",
+            "     */",
+            f"    public {klass} {group_name}() {{",
+            f"        return new {klass}((CrawloraClient) this);",
+            "    }",
+            "",
+        ])
+    lines.append("}")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def main():
     if not SPEC_PATH.exists():
         raise SystemExit(f"public OpenAPI spec not found: {SPEC_PATH}")
-    spec = json.loads(SPEC_PATH.read_text())
+    try:
+        spec = json.loads(SPEC_PATH.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"failed to read OpenAPI spec {SPEC_PATH}: {exc}")
     (ROOT / "openapi").mkdir(exist_ok=True)
     target_spec = ROOT / "openapi" / "public.json"
     if SPEC_PATH.resolve() != target_spec.resolve():
@@ -325,6 +376,7 @@ def main():
     base.mkdir(parents=True, exist_ok=True)
     (base / "Operations.java").write_text(render_operations(model))
     (base / "OperationId.java").write_text(render_operation_ids(model))
+    (base / "ClientGroups.java").write_text(render_client_groups(model))
 
     groups_dir = base / "groups"
     groups_dir.mkdir(exist_ok=True)

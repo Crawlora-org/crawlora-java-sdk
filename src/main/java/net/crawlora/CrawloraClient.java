@@ -32,7 +32,7 @@ import net.crawlora.groups.*;
  *
  * <p>Construct via {@link #builder()}.
  */
-public final class CrawloraClient {
+public final class CrawloraClient extends ClientGroups implements AutoCloseable {
     public static final String DEFAULT_BASE_URL = "https://api.crawlora.net/api/v1";
     public static final double DEFAULT_MAX_RETRY_DELAY = 30.0;
     public static final Set<Integer> DEFAULT_RETRY_STATUSES = Set.of(408, 409, 425, 429);
@@ -121,9 +121,8 @@ public final class CrawloraClient {
         return groupRegistry.computeIfAbsent(name, n -> new OperationGroup(this, Operations.GROUPS.get(n)));
     }
 
-    public BingGroup bing() {
-        return new BingGroup(this);
-    }
+    // Typed per-group accessors (client.bing(), client.google(), …) are inherited
+    // from the generated ClientGroups base class.
 
     /** Generic accessor: returns a dynamic group backed by the named group's operations. */
     public OperationGroup groupOf(String name) {
@@ -131,6 +130,23 @@ public final class CrawloraClient {
             throw new IllegalArgumentException("unknown Crawlora group: " + name);
         }
         return group(name);
+    }
+
+    /**
+     * Release any resources held by the transport (e.g. a pooled HTTP client),
+     * enabling try-with-resources. The default transport has nothing to close on
+     * JDK 17; custom transports that hold resources are closed if they are
+     * {@link AutoCloseable}.
+     */
+    @Override
+    public void close() {
+        if (transport instanceof AutoCloseable closeable) {
+            try {
+                closeable.close();
+            } catch (Exception ignored) {
+                // best-effort cleanup
+            }
+        }
     }
 
     // ---- dynamic dispatch --------------------------------------------------
@@ -735,7 +751,7 @@ public final class CrawloraClient {
             return existing;
         }
         String requestId = UUID.randomUUID().toString().replace("-", "");
-        headers.put("x-request-id", requestId);
+        headers.put("X-Request-Id", requestId);
         return requestId;
     }
 

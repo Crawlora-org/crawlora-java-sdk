@@ -22,19 +22,29 @@ public final class CoinGeckoGroup {
      * coingecko-categories (GET /coingecko/categories).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categories(Map<String, Object> params) {
         return categories(params, null);
     }
 
-    /** coingecko-categories with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-categories (GET /coingecko/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-categories", params);
         return client.request("coingecko-categories", params, options);
     }
 
-    /** coingecko-categories with no parameters. */
+    /**
+     * coingecko-categories (GET /coingecko/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories() {
         return categories(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class CoinGeckoGroup {
      * coingecko-category-coins (GET /coingecko/category/{slug}/coins).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categoryCoins(Map<String, Object> params) {
         return categoryCoins(params, null);
     }
 
-    /** coingecko-category-coins with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-category-coins (GET /coingecko/category/{slug}/coins). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categoryCoins(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-category-coins", params);
         return client.request("coingecko-category-coins", params, options);
@@ -59,19 +75,29 @@ public final class CoinGeckoGroup {
      * coingecko-chains (GET /coingecko/chains).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object chains(Map<String, Object> params) {
         return chains(params, null);
     }
 
-    /** coingecko-chains with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-chains (GET /coingecko/chains). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object chains(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-chains", params);
         return client.request("coingecko-chains", params, options);
     }
 
-    /** coingecko-chains with no parameters. */
+    /**
+     * coingecko-chains (GET /coingecko/chains). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object chains() {
         return chains(Map.of(), null);
     }
@@ -80,13 +106,19 @@ public final class CoinGeckoGroup {
      * coingecko-chain (GET /coingecko/chains/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object chain(Map<String, Object> params) {
         return chain(params, null);
     }
 
-    /** coingecko-chain with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-chain (GET /coingecko/chains/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object chain(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-chain", params);
         return client.request("coingecko-chain", params, options);
@@ -96,13 +128,19 @@ public final class CoinGeckoGroup {
      * coingecko-coin (GET /coingecko/coin/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object coin(Map<String, Object> params) {
         return coin(params, null);
     }
 
-    /** coingecko-coin with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-coin (GET /coingecko/coin/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object coin(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-coin", params);
         return client.request("coingecko-coin", params, options);
@@ -112,13 +150,19 @@ public final class CoinGeckoGroup {
      * coingecko-coin-analysis (GET /coingecko/coin/{id}/analysis).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object coinAnalysis(Map<String, Object> params) {
         return coinAnalysis(params, null);
     }
 
-    /** coingecko-coin-analysis with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-coin-analysis (GET /coingecko/coin/{id}/analysis). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object coinAnalysis(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-coin-analysis", params);
         return client.request("coingecko-coin-analysis", params, options);
@@ -128,13 +172,19 @@ public final class CoinGeckoGroup {
      * coingecko-exchange (GET /coingecko/exchange/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object exchange(Map<String, Object> params) {
         return exchange(params, null);
     }
 
-    /** coingecko-exchange with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-exchange (GET /coingecko/exchange/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object exchange(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-exchange", params);
         return client.request("coingecko-exchange", params, options);
@@ -144,19 +194,29 @@ public final class CoinGeckoGroup {
      * coingecko-exchanges (GET /coingecko/exchanges).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object exchanges(Map<String, Object> params) {
         return exchanges(params, null);
     }
 
-    /** coingecko-exchanges with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-exchanges (GET /coingecko/exchanges). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object exchanges(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-exchanges", params);
         return client.request("coingecko-exchanges", params, options);
     }
 
-    /** coingecko-exchanges with no parameters. */
+    /**
+     * coingecko-exchanges (GET /coingecko/exchanges). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object exchanges() {
         return exchanges(Map.of(), null);
     }
@@ -165,19 +225,29 @@ public final class CoinGeckoGroup {
      * coingecko-gainers-losers (GET /coingecko/gainers-losers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object gainersLosers(Map<String, Object> params) {
         return gainersLosers(params, null);
     }
 
-    /** coingecko-gainers-losers with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-gainers-losers (GET /coingecko/gainers-losers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object gainersLosers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-gainers-losers", params);
         return client.request("coingecko-gainers-losers", params, options);
     }
 
-    /** coingecko-gainers-losers with no parameters. */
+    /**
+     * coingecko-gainers-losers (GET /coingecko/gainers-losers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object gainersLosers() {
         return gainersLosers(Map.of(), null);
     }
@@ -186,19 +256,29 @@ public final class CoinGeckoGroup {
      * coingecko-global (GET /coingecko/global).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object global(Map<String, Object> params) {
         return global(params, null);
     }
 
-    /** coingecko-global with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-global (GET /coingecko/global). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object global(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-global", params);
         return client.request("coingecko-global", params, options);
     }
 
-    /** coingecko-global with no parameters. */
+    /**
+     * coingecko-global (GET /coingecko/global). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object global() {
         return global(Map.of(), null);
     }
@@ -207,19 +287,29 @@ public final class CoinGeckoGroup {
      * coingecko-global-charts (GET /coingecko/global/charts).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object globalCharts(Map<String, Object> params) {
         return globalCharts(params, null);
     }
 
-    /** coingecko-global-charts with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-global-charts (GET /coingecko/global/charts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object globalCharts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-global-charts", params);
         return client.request("coingecko-global-charts", params, options);
     }
 
-    /** coingecko-global-charts with no parameters. */
+    /**
+     * coingecko-global-charts (GET /coingecko/global/charts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object globalCharts() {
         return globalCharts(Map.of(), null);
     }
@@ -228,19 +318,29 @@ public final class CoinGeckoGroup {
      * coingecko-learn-articles (GET /coingecko/learn/articles).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object learnArticles(Map<String, Object> params) {
         return learnArticles(params, null);
     }
 
-    /** coingecko-learn-articles with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-learn-articles (GET /coingecko/learn/articles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object learnArticles(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-learn-articles", params);
         return client.request("coingecko-learn-articles", params, options);
     }
 
-    /** coingecko-learn-articles with no parameters. */
+    /**
+     * coingecko-learn-articles (GET /coingecko/learn/articles). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object learnArticles() {
         return learnArticles(Map.of(), null);
     }
@@ -249,19 +349,29 @@ public final class CoinGeckoGroup {
      * coingecko-markets (GET /coingecko/markets).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object markets(Map<String, Object> params) {
         return markets(params, null);
     }
 
-    /** coingecko-markets with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-markets (GET /coingecko/markets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object markets(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-markets", params);
         return client.request("coingecko-markets", params, options);
     }
 
-    /** coingecko-markets with no parameters. */
+    /**
+     * coingecko-markets (GET /coingecko/markets). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object markets() {
         return markets(Map.of(), null);
     }
@@ -270,19 +380,29 @@ public final class CoinGeckoGroup {
      * coingecko-new-coins (GET /coingecko/new-coins).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object newCoins(Map<String, Object> params) {
         return newCoins(params, null);
     }
 
-    /** coingecko-new-coins with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-new-coins (GET /coingecko/new-coins). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object newCoins(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-new-coins", params);
         return client.request("coingecko-new-coins", params, options);
     }
 
-    /** coingecko-new-coins with no parameters. */
+    /**
+     * coingecko-new-coins (GET /coingecko/new-coins). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object newCoins() {
         return newCoins(Map.of(), null);
     }
@@ -291,19 +411,29 @@ public final class CoinGeckoGroup {
      * coingecko-news (GET /coingecko/news).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object news(Map<String, Object> params) {
         return news(params, null);
     }
 
-    /** coingecko-news with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-news (GET /coingecko/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object news(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-news", params);
         return client.request("coingecko-news", params, options);
     }
 
-    /** coingecko-news with no parameters. */
+    /**
+     * coingecko-news (GET /coingecko/news). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object news() {
         return news(Map.of(), null);
     }
@@ -312,13 +442,19 @@ public final class CoinGeckoGroup {
      * coingecko-nft-category (GET /coingecko/nft/category/{slug}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object nftCategory(Map<String, Object> params) {
         return nftCategory(params, null);
     }
 
-    /** coingecko-nft-category with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-nft-category (GET /coingecko/nft/category/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object nftCategory(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-nft-category", params);
         return client.request("coingecko-nft-category", params, options);
@@ -328,19 +464,29 @@ public final class CoinGeckoGroup {
      * coingecko-nfts (GET /coingecko/nfts).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object nfts(Map<String, Object> params) {
         return nfts(params, null);
     }
 
-    /** coingecko-nfts with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-nfts (GET /coingecko/nfts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object nfts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-nfts", params);
         return client.request("coingecko-nfts", params, options);
     }
 
-    /** coingecko-nfts with no parameters. */
+    /**
+     * coingecko-nfts (GET /coingecko/nfts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object nfts() {
         return nfts(Map.of(), null);
     }
@@ -349,13 +495,19 @@ public final class CoinGeckoGroup {
      * coingecko-search (GET /coingecko/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** coingecko-search with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-search (GET /coingecko/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-search", params);
         return client.request("coingecko-search", params, options);
@@ -365,19 +517,29 @@ public final class CoinGeckoGroup {
      * coingecko-token-unlocks (GET /coingecko/token-unlocks).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tokenUnlocks(Map<String, Object> params) {
         return tokenUnlocks(params, null);
     }
 
-    /** coingecko-token-unlocks with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-token-unlocks (GET /coingecko/token-unlocks). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tokenUnlocks(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-token-unlocks", params);
         return client.request("coingecko-token-unlocks", params, options);
     }
 
-    /** coingecko-token-unlocks with no parameters. */
+    /**
+     * coingecko-token-unlocks (GET /coingecko/token-unlocks). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tokenUnlocks() {
         return tokenUnlocks(Map.of(), null);
     }
@@ -386,19 +548,29 @@ public final class CoinGeckoGroup {
      * coingecko-treasuries (GET /coingecko/treasuries).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object treasuries(Map<String, Object> params) {
         return treasuries(params, null);
     }
 
-    /** coingecko-treasuries with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-treasuries (GET /coingecko/treasuries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object treasuries(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-treasuries", params);
         return client.request("coingecko-treasuries", params, options);
     }
 
-    /** coingecko-treasuries with no parameters. */
+    /**
+     * coingecko-treasuries (GET /coingecko/treasuries). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object treasuries() {
         return treasuries(Map.of(), null);
     }
@@ -407,19 +579,29 @@ public final class CoinGeckoGroup {
      * coingecko-trending (GET /coingecko/trending).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trending(Map<String, Object> params) {
         return trending(params, null);
     }
 
-    /** coingecko-trending with explicit {@link RequestOptions}. */
+    /**
+     * coingecko-trending (GET /coingecko/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trending(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("coingecko-trending", params);
         return client.request("coingecko-trending", params, options);
     }
 
-    /** coingecko-trending with no parameters. */
+    /**
+     * coingecko-trending (GET /coingecko/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trending() {
         return trending(Map.of(), null);
     }

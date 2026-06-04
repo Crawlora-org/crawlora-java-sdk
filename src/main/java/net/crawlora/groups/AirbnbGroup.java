@@ -22,13 +22,19 @@ public final class AirbnbGroup {
      * airbnb-room (GET /airbnb/room/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object room(Map<String, Object> params) {
         return room(params, null);
     }
 
-    /** airbnb-room with explicit {@link RequestOptions}. */
+    /**
+     * airbnb-room (GET /airbnb/room/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object room(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("airbnb-room", params);
         return client.request("airbnb-room", params, options);
@@ -38,13 +44,19 @@ public final class AirbnbGroup {
      * airbnb-room-calendar (GET /airbnb/room/{id}/calendar).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object roomCalendar(Map<String, Object> params) {
         return roomCalendar(params, null);
     }
 
-    /** airbnb-room-calendar with explicit {@link RequestOptions}. */
+    /**
+     * airbnb-room-calendar (GET /airbnb/room/{id}/calendar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object roomCalendar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("airbnb-room-calendar", params);
         return client.request("airbnb-room-calendar", params, options);
@@ -54,13 +66,19 @@ public final class AirbnbGroup {
      * airbnb-room-reviews (GET /airbnb/room/{id}/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object roomReviews(Map<String, Object> params) {
         return roomReviews(params, null);
     }
 
-    /** airbnb-room-reviews with explicit {@link RequestOptions}. */
+    /**
+     * airbnb-room-reviews (GET /airbnb/room/{id}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object roomReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("airbnb-room-reviews", params);
         return client.request("airbnb-room-reviews", params, options);
@@ -70,13 +88,19 @@ public final class AirbnbGroup {
      * airbnb-search (GET /airbnb/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** airbnb-search with explicit {@link RequestOptions}. */
+    /**
+     * airbnb-search (GET /airbnb/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("airbnb-search", params);
         return client.request("airbnb-search", params, options);

@@ -22,19 +22,29 @@ public final class DatasetsGroup {
      * datasets-list (GET /datasets).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object list(Map<String, Object> params) {
         return list(params, null);
     }
 
-    /** datasets-list with explicit {@link RequestOptions}. */
+    /**
+     * datasets-list (GET /datasets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-list", params);
         return client.request("datasets-list", params, options);
     }
 
-    /** datasets-list with no parameters. */
+    /**
+     * datasets-list (GET /datasets). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list() {
         return list(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class DatasetsGroup {
      * datasets-google-map-businesses-facets (GET /datasets/google-map-businesses/facets).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object googleMapBusinessesFacets(Map<String, Object> params) {
         return googleMapBusinessesFacets(params, null);
     }
 
-    /** datasets-google-map-businesses-facets with explicit {@link RequestOptions}. */
+    /**
+     * datasets-google-map-businesses-facets (GET /datasets/google-map-businesses/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object googleMapBusinessesFacets(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-google-map-businesses-facets", params);
         return client.request("datasets-google-map-businesses-facets", params, options);
@@ -59,13 +75,19 @@ public final class DatasetsGroup {
      * datasets-google-map-businesses-item (GET /datasets/google-map-businesses/items/{place_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object googleMapBusinessesItem(Map<String, Object> params) {
         return googleMapBusinessesItem(params, null);
     }
 
-    /** datasets-google-map-businesses-item with explicit {@link RequestOptions}. */
+    /**
+     * datasets-google-map-businesses-item (GET /datasets/google-map-businesses/items/{place_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object googleMapBusinessesItem(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-google-map-businesses-item", params);
         return client.request("datasets-google-map-businesses-item", params, options);
@@ -75,13 +97,19 @@ public final class DatasetsGroup {
      * datasets-google-map-businesses-nearby (GET /datasets/google-map-businesses/nearby).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object googleMapBusinessesNearby(Map<String, Object> params) {
         return googleMapBusinessesNearby(params, null);
     }
 
-    /** datasets-google-map-businesses-nearby with explicit {@link RequestOptions}. */
+    /**
+     * datasets-google-map-businesses-nearby (GET /datasets/google-map-businesses/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object googleMapBusinessesNearby(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-google-map-businesses-nearby", params);
         return client.request("datasets-google-map-businesses-nearby", params, options);
@@ -91,19 +119,29 @@ public final class DatasetsGroup {
      * datasets-google-map-businesses-search (GET /datasets/google-map-businesses/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object googleMapBusinessesSearch(Map<String, Object> params) {
         return googleMapBusinessesSearch(params, null);
     }
 
-    /** datasets-google-map-businesses-search with explicit {@link RequestOptions}. */
+    /**
+     * datasets-google-map-businesses-search (GET /datasets/google-map-businesses/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object googleMapBusinessesSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-google-map-businesses-search", params);
         return client.request("datasets-google-map-businesses-search", params, options);
     }
 
-    /** datasets-google-map-businesses-search with no parameters. */
+    /**
+     * datasets-google-map-businesses-search (GET /datasets/google-map-businesses/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object googleMapBusinessesSearch() {
         return googleMapBusinessesSearch(Map.of(), null);
     }

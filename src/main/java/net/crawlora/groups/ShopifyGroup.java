@@ -22,13 +22,19 @@ public final class ShopifyGroup {
      * shopify-collections (GET /shopify/collections).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object collections(Map<String, Object> params) {
         return collections(params, null);
     }
 
-    /** shopify-collections with explicit {@link RequestOptions}. */
+    /**
+     * shopify-collections (GET /shopify/collections). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object collections(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-collections", params);
         return client.request("shopify-collections", params, options);
@@ -38,13 +44,19 @@ public final class ShopifyGroup {
      * shopify-collection-products (GET /shopify/collections/{handle}/products).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object collectionProducts(Map<String, Object> params) {
         return collectionProducts(params, null);
     }
 
-    /** shopify-collection-products with explicit {@link RequestOptions}. */
+    /**
+     * shopify-collection-products (GET /shopify/collections/{handle}/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object collectionProducts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-collection-products", params);
         return client.request("shopify-collection-products", params, options);
@@ -54,13 +66,19 @@ public final class ShopifyGroup {
      * shopify-pages (GET /shopify/pages).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object pages(Map<String, Object> params) {
         return pages(params, null);
     }
 
-    /** shopify-pages with explicit {@link RequestOptions}. */
+    /**
+     * shopify-pages (GET /shopify/pages). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object pages(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-pages", params);
         return client.request("shopify-pages", params, options);
@@ -70,13 +88,19 @@ public final class ShopifyGroup {
      * shopify-page (GET /shopify/pages/{handle}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object page(Map<String, Object> params) {
         return page(params, null);
     }
 
-    /** shopify-page with explicit {@link RequestOptions}. */
+    /**
+     * shopify-page (GET /shopify/pages/{handle}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object page(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-page", params);
         return client.request("shopify-page", params, options);
@@ -86,13 +110,19 @@ public final class ShopifyGroup {
      * shopify-products (GET /shopify/products).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object products(Map<String, Object> params) {
         return products(params, null);
     }
 
-    /** shopify-products with explicit {@link RequestOptions}. */
+    /**
+     * shopify-products (GET /shopify/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object products(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-products", params);
         return client.request("shopify-products", params, options);
@@ -102,13 +132,19 @@ public final class ShopifyGroup {
      * shopify-product (GET /shopify/products/{handle}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object product(Map<String, Object> params) {
         return product(params, null);
     }
 
-    /** shopify-product with explicit {@link RequestOptions}. */
+    /**
+     * shopify-product (GET /shopify/products/{handle}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object product(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-product", params);
         return client.request("shopify-product", params, options);
@@ -118,13 +154,19 @@ public final class ShopifyGroup {
      * shopify-product-recommendations (GET /shopify/products/{handle}/recommendations).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productRecommendations(Map<String, Object> params) {
         return productRecommendations(params, null);
     }
 
-    /** shopify-product-recommendations with explicit {@link RequestOptions}. */
+    /**
+     * shopify-product-recommendations (GET /shopify/products/{handle}/recommendations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object productRecommendations(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-product-recommendations", params);
         return client.request("shopify-product-recommendations", params, options);
@@ -134,13 +176,19 @@ public final class ShopifyGroup {
      * shopify-search-suggest (GET /shopify/search/suggest).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object searchSuggest(Map<String, Object> params) {
         return searchSuggest(params, null);
     }
 
-    /** shopify-search-suggest with explicit {@link RequestOptions}. */
+    /**
+     * shopify-search-suggest (GET /shopify/search/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object searchSuggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-search-suggest", params);
         return client.request("shopify-search-suggest", params, options);
@@ -150,13 +198,19 @@ public final class ShopifyGroup {
      * shopify-sitemap-urls (GET /shopify/sitemap/urls).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object sitemapUrls(Map<String, Object> params) {
         return sitemapUrls(params, null);
     }
 
-    /** shopify-sitemap-urls with explicit {@link RequestOptions}. */
+    /**
+     * shopify-sitemap-urls (GET /shopify/sitemap/urls). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object sitemapUrls(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-sitemap-urls", params);
         return client.request("shopify-sitemap-urls", params, options);
@@ -166,13 +220,19 @@ public final class ShopifyGroup {
      * shopify-sitemaps (GET /shopify/sitemaps).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object sitemaps(Map<String, Object> params) {
         return sitemaps(params, null);
     }
 
-    /** shopify-sitemaps with explicit {@link RequestOptions}. */
+    /**
+     * shopify-sitemaps (GET /shopify/sitemaps). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object sitemaps(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-sitemaps", params);
         return client.request("shopify-sitemaps", params, options);
@@ -182,13 +242,19 @@ public final class ShopifyGroup {
      * shopify-store (GET /shopify/store).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object store(Map<String, Object> params) {
         return store(params, null);
     }
 
-    /** shopify-store with explicit {@link RequestOptions}. */
+    /**
+     * shopify-store (GET /shopify/store). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object store(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shopify-store", params);
         return client.request("shopify-store", params, options);

@@ -22,13 +22,19 @@ public final class TrustpilotGroup {
      * trustpilot-business-search (GET /trustpilot/business-units/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object businessSearch(Map<String, Object> params) {
         return businessSearch(params, null);
     }
 
-    /** trustpilot-business-search with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-business-search (GET /trustpilot/business-units/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object businessSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-business-search", params);
         return client.request("trustpilot-business-search", params, options);
@@ -38,13 +44,19 @@ public final class TrustpilotGroup {
      * trustpilot-business (GET /trustpilot/business/{slug}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object business(Map<String, Object> params) {
         return business(params, null);
     }
 
-    /** trustpilot-business with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-business (GET /trustpilot/business/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object business(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-business", params);
         return client.request("trustpilot-business", params, options);
@@ -54,13 +66,19 @@ public final class TrustpilotGroup {
      * trustpilot-business-related (GET /trustpilot/business/{slug}/related).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object businessRelated(Map<String, Object> params) {
         return businessRelated(params, null);
     }
 
-    /** trustpilot-business-related with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-business-related (GET /trustpilot/business/{slug}/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object businessRelated(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-business-related", params);
         return client.request("trustpilot-business-related", params, options);
@@ -70,13 +88,19 @@ public final class TrustpilotGroup {
      * trustpilot-business-reviews (GET /trustpilot/business/{slug}/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object businessReviews(Map<String, Object> params) {
         return businessReviews(params, null);
     }
 
-    /** trustpilot-business-reviews with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-business-reviews (GET /trustpilot/business/{slug}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object businessReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-business-reviews", params);
         return client.request("trustpilot-business-reviews", params, options);
@@ -86,19 +110,29 @@ public final class TrustpilotGroup {
      * trustpilot-categories (GET /trustpilot/categories).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categories(Map<String, Object> params) {
         return categories(params, null);
     }
 
-    /** trustpilot-categories with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-categories (GET /trustpilot/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-categories", params);
         return client.request("trustpilot-categories", params, options);
     }
 
-    /** trustpilot-categories with no parameters. */
+    /**
+     * trustpilot-categories (GET /trustpilot/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categories() {
         return categories(Map.of(), null);
     }
@@ -107,13 +141,19 @@ public final class TrustpilotGroup {
      * trustpilot-category-search (GET /trustpilot/categories/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categorySearch(Map<String, Object> params) {
         return categorySearch(params, null);
     }
 
-    /** trustpilot-category-search with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-category-search (GET /trustpilot/categories/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categorySearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-category-search", params);
         return client.request("trustpilot-category-search", params, options);
@@ -123,13 +163,19 @@ public final class TrustpilotGroup {
      * trustpilot-category (GET /trustpilot/category/{slug}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object category(Map<String, Object> params) {
         return category(params, null);
     }
 
-    /** trustpilot-category with explicit {@link RequestOptions}. */
+    /**
+     * trustpilot-category (GET /trustpilot/category/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object category(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("trustpilot-category", params);
         return client.request("trustpilot-category", params, options);

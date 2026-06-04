@@ -22,13 +22,19 @@ public final class ProductHuntGroup {
      * producthunt-category (GET /producthunt/category/{slug}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object category(Map<String, Object> params) {
         return category(params, null);
     }
 
-    /** producthunt-category with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-category (GET /producthunt/category/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object category(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-category", params);
         return client.request("producthunt-category", params, options);
@@ -38,13 +44,19 @@ public final class ProductHuntGroup {
      * producthunt-category-products (GET /producthunt/category/{slug}/products).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categoryProducts(Map<String, Object> params) {
         return categoryProducts(params, null);
     }
 
-    /** producthunt-category-products with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-category-products (GET /producthunt/category/{slug}/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object categoryProducts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-category-products", params);
         return client.request("producthunt-category-products", params, options);
@@ -54,19 +66,29 @@ public final class ProductHuntGroup {
      * producthunt-leaderboard (GET /producthunt/leaderboard).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object leaderboard(Map<String, Object> params) {
         return leaderboard(params, null);
     }
 
-    /** producthunt-leaderboard with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-leaderboard (GET /producthunt/leaderboard). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object leaderboard(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-leaderboard", params);
         return client.request("producthunt-leaderboard", params, options);
     }
 
-    /** producthunt-leaderboard with no parameters. */
+    /**
+     * producthunt-leaderboard (GET /producthunt/leaderboard). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object leaderboard() {
         return leaderboard(Map.of(), null);
     }
@@ -75,13 +97,19 @@ public final class ProductHuntGroup {
      * producthunt-product (GET /producthunt/product/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object product(Map<String, Object> params) {
         return product(params, null);
     }
 
-    /** producthunt-product with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-product (GET /producthunt/product/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object product(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-product", params);
         return client.request("producthunt-product", params, options);
@@ -91,13 +119,19 @@ public final class ProductHuntGroup {
      * producthunt-about (GET /producthunt/product/{id}/about).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object about(Map<String, Object> params) {
         return about(params, null);
     }
 
-    /** producthunt-about with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-about (GET /producthunt/product/{id}/about). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object about(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-about", params);
         return client.request("producthunt-about", params, options);
@@ -107,13 +141,19 @@ public final class ProductHuntGroup {
      * producthunt-alternatives (GET /producthunt/product/{id}/alternatives).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object alternatives(Map<String, Object> params) {
         return alternatives(params, null);
     }
 
-    /** producthunt-alternatives with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-alternatives (GET /producthunt/product/{id}/alternatives). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object alternatives(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-alternatives", params);
         return client.request("producthunt-alternatives", params, options);
@@ -123,13 +163,19 @@ public final class ProductHuntGroup {
      * producthunt-customers (GET /producthunt/product/{id}/customers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object customers(Map<String, Object> params) {
         return customers(params, null);
     }
 
-    /** producthunt-customers with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-customers (GET /producthunt/product/{id}/customers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object customers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-customers", params);
         return client.request("producthunt-customers", params, options);
@@ -139,13 +185,19 @@ public final class ProductHuntGroup {
      * producthunt-launches (GET /producthunt/product/{id}/launches).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object launches(Map<String, Object> params) {
         return launches(params, null);
     }
 
-    /** producthunt-launches with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-launches (GET /producthunt/product/{id}/launches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object launches(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-launches", params);
         return client.request("producthunt-launches", params, options);
@@ -155,13 +207,19 @@ public final class ProductHuntGroup {
      * producthunt-makers (GET /producthunt/product/{id}/makers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object makers(Map<String, Object> params) {
         return makers(params, null);
     }
 
-    /** producthunt-makers with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-makers (GET /producthunt/product/{id}/makers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object makers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-makers", params);
         return client.request("producthunt-makers", params, options);
@@ -171,13 +229,19 @@ public final class ProductHuntGroup {
      * producthunt-reviews (GET /producthunt/product/{id}/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object reviews(Map<String, Object> params) {
         return reviews(params, null);
     }
 
-    /** producthunt-reviews with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-reviews (GET /producthunt/product/{id}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-reviews", params);
         return client.request("producthunt-reviews", params, options);
@@ -187,13 +251,19 @@ public final class ProductHuntGroup {
      * producthunt-search (GET /producthunt/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** producthunt-search with explicit {@link RequestOptions}. */
+    /**
+     * producthunt-search (GET /producthunt/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("producthunt-search", params);
         return client.request("producthunt-search", params, options);

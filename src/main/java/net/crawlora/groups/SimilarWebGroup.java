@@ -22,13 +22,19 @@ public final class SimilarWebGroup {
      * similarweb-search (GET /similarweb/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** similarweb-search with explicit {@link RequestOptions}. */
+    /**
+     * similarweb-search (GET /similarweb/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("similarweb-search", params);
         return client.request("similarweb-search", params, options);
@@ -38,13 +44,19 @@ public final class SimilarWebGroup {
      * similarweb-web (GET /similarweb/web/{domain}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object web(Map<String, Object> params) {
         return web(params, null);
     }
 
-    /** similarweb-web with explicit {@link RequestOptions}. */
+    /**
+     * similarweb-web (GET /similarweb/web/{domain}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object web(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("similarweb-web", params);
         return client.request("similarweb-web", params, options);

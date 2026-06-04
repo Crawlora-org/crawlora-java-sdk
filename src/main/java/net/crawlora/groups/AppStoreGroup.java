@@ -22,19 +22,29 @@ public final class AppStoreGroup {
      * appstore-app (GET /appstore/app).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object app(Map<String, Object> params) {
         return app(params, null);
     }
 
-    /** appstore-app with explicit {@link RequestOptions}. */
+    /**
+     * appstore-app (GET /appstore/app). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object app(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-app", params);
         return client.request("appstore-app", params, options);
     }
 
-    /** appstore-app with no parameters. */
+    /**
+     * appstore-app (GET /appstore/app). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object app() {
         return app(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class AppStoreGroup {
      * appstore-developer (GET /appstore/developer/{dev_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object developer(Map<String, Object> params) {
         return developer(params, null);
     }
 
-    /** appstore-developer with explicit {@link RequestOptions}. */
+    /**
+     * appstore-developer (GET /appstore/developer/{dev_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object developer(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-developer", params);
         return client.request("appstore-developer", params, options);
@@ -59,19 +75,29 @@ public final class AppStoreGroup {
      * appstore-list (GET /appstore/list).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object list(Map<String, Object> params) {
         return list(params, null);
     }
 
-    /** appstore-list with explicit {@link RequestOptions}. */
+    /**
+     * appstore-list (GET /appstore/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-list", params);
         return client.request("appstore-list", params, options);
     }
 
-    /** appstore-list with no parameters. */
+    /**
+     * appstore-list (GET /appstore/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object list() {
         return list(Map.of(), null);
     }
@@ -80,13 +106,19 @@ public final class AppStoreGroup {
      * appstore-privacy (GET /appstore/privacy/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object privacy(Map<String, Object> params) {
         return privacy(params, null);
     }
 
-    /** appstore-privacy with explicit {@link RequestOptions}. */
+    /**
+     * appstore-privacy (GET /appstore/privacy/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object privacy(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-privacy", params);
         return client.request("appstore-privacy", params, options);
@@ -96,19 +128,29 @@ public final class AppStoreGroup {
      * appstore-ratings (GET /appstore/ratings).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object ratings(Map<String, Object> params) {
         return ratings(params, null);
     }
 
-    /** appstore-ratings with explicit {@link RequestOptions}. */
+    /**
+     * appstore-ratings (GET /appstore/ratings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ratings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-ratings", params);
         return client.request("appstore-ratings", params, options);
     }
 
-    /** appstore-ratings with no parameters. */
+    /**
+     * appstore-ratings (GET /appstore/ratings). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object ratings() {
         return ratings(Map.of(), null);
     }
@@ -117,19 +159,29 @@ public final class AppStoreGroup {
      * appstore-reviews (GET /appstore/reviews).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object reviews(Map<String, Object> params) {
         return reviews(params, null);
     }
 
-    /** appstore-reviews with explicit {@link RequestOptions}. */
+    /**
+     * appstore-reviews (GET /appstore/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-reviews", params);
         return client.request("appstore-reviews", params, options);
     }
 
-    /** appstore-reviews with no parameters. */
+    /**
+     * appstore-reviews (GET /appstore/reviews). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reviews() {
         return reviews(Map.of(), null);
     }
@@ -138,13 +190,19 @@ public final class AppStoreGroup {
      * appstore-search (GET /appstore/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** appstore-search with explicit {@link RequestOptions}. */
+    /**
+     * appstore-search (GET /appstore/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-search", params);
         return client.request("appstore-search", params, options);
@@ -154,19 +212,29 @@ public final class AppStoreGroup {
      * appstore-similar (GET /appstore/similar).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object similar(Map<String, Object> params) {
         return similar(params, null);
     }
 
-    /** appstore-similar with explicit {@link RequestOptions}. */
+    /**
+     * appstore-similar (GET /appstore/similar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object similar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-similar", params);
         return client.request("appstore-similar", params, options);
     }
 
-    /** appstore-similar with no parameters. */
+    /**
+     * appstore-similar (GET /appstore/similar). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object similar() {
         return similar(Map.of(), null);
     }
@@ -175,13 +243,19 @@ public final class AppStoreGroup {
      * appstore-suggest (GET /appstore/suggest/{term}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** appstore-suggest with explicit {@link RequestOptions}. */
+    /**
+     * appstore-suggest (GET /appstore/suggest/{term}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-suggest", params);
         return client.request("appstore-suggest", params, options);
@@ -191,13 +265,19 @@ public final class AppStoreGroup {
      * appstore-version-history (GET /appstore/version-history/{id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object versionHistory(Map<String, Object> params) {
         return versionHistory(params, null);
     }
 
-    /** appstore-version-history with explicit {@link RequestOptions}. */
+    /**
+     * appstore-version-history (GET /appstore/version-history/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object versionHistory(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("appstore-version-history", params);
         return client.request("appstore-version-history", params, options);

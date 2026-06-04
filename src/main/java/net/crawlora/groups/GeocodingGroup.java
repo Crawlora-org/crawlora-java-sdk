@@ -22,13 +22,19 @@ public final class GeocodingGroup {
      * geocoding-lookup (GET /geocoding/lookup).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object lookup(Map<String, Object> params) {
         return lookup(params, null);
     }
 
-    /** geocoding-lookup with explicit {@link RequestOptions}. */
+    /**
+     * geocoding-lookup (GET /geocoding/lookup). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object lookup(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("geocoding-lookup", params);
         return client.request("geocoding-lookup", params, options);
@@ -38,13 +44,19 @@ public final class GeocodingGroup {
      * geocoding-reverse (GET /geocoding/reverse).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object reverse(Map<String, Object> params) {
         return reverse(params, null);
     }
 
-    /** geocoding-reverse with explicit {@link RequestOptions}. */
+    /**
+     * geocoding-reverse (GET /geocoding/reverse). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object reverse(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("geocoding-reverse", params);
         return client.request("geocoding-reverse", params, options);
@@ -54,19 +66,29 @@ public final class GeocodingGroup {
      * geocoding-search (GET /geocoding/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** geocoding-search with explicit {@link RequestOptions}. */
+    /**
+     * geocoding-search (GET /geocoding/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("geocoding-search", params);
         return client.request("geocoding-search", params, options);
     }
 
-    /** geocoding-search with no parameters. */
+    /**
+     * geocoding-search (GET /geocoding/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search() {
         return search(Map.of(), null);
     }

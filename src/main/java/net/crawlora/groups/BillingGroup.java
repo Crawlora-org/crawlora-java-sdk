@@ -22,19 +22,29 @@ public final class BillingGroup {
      * billing-me (GET /billing/me).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object me(Map<String, Object> params) {
         return me(params, null);
     }
 
-    /** billing-me with explicit {@link RequestOptions}. */
+    /**
+     * billing-me (GET /billing/me). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me", params);
         return client.request("billing-me", params, options);
     }
 
-    /** billing-me with no parameters. */
+    /**
+     * billing-me (GET /billing/me). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me() {
         return me(Map.of(), null);
     }
@@ -43,13 +53,19 @@ public final class BillingGroup {
      * billing-me-checkout (POST /billing/me/checkout).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meCheckout(Map<String, Object> params) {
         return meCheckout(params, null);
     }
 
-    /** billing-me-checkout with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-checkout (POST /billing/me/checkout). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meCheckout(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-checkout", params);
         return client.request("billing-me-checkout", params, options);
@@ -59,19 +75,29 @@ public final class BillingGroup {
      * billing-me-events (GET /billing/me/events).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meEvents(Map<String, Object> params) {
         return meEvents(params, null);
     }
 
-    /** billing-me-events with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-events (GET /billing/me/events). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEvents(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-events", params);
         return client.request("billing-me-events", params, options);
     }
 
-    /** billing-me-events with no parameters. */
+    /**
+     * billing-me-events (GET /billing/me/events). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meEvents() {
         return meEvents(Map.of(), null);
     }
@@ -80,19 +106,29 @@ public final class BillingGroup {
      * billing-me-periods (GET /billing/me/periods).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mePeriods(Map<String, Object> params) {
         return mePeriods(params, null);
     }
 
-    /** billing-me-periods with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-periods (GET /billing/me/periods). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePeriods(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-periods", params);
         return client.request("billing-me-periods", params, options);
     }
 
-    /** billing-me-periods with no parameters. */
+    /**
+     * billing-me-periods (GET /billing/me/periods). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePeriods() {
         return mePeriods(Map.of(), null);
     }
@@ -101,13 +137,19 @@ public final class BillingGroup {
      * billing-me-period (GET /billing/me/periods/{period_key}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mePeriod(Map<String, Object> params) {
         return mePeriod(params, null);
     }
 
-    /** billing-me-period with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-period (GET /billing/me/periods/{period_key}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePeriod(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-period", params);
         return client.request("billing-me-period", params, options);
@@ -117,13 +159,19 @@ public final class BillingGroup {
      * billing-me-period-statement (GET /billing/me/periods/{period_key}/statement).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mePeriodStatement(Map<String, Object> params) {
         return mePeriodStatement(params, null);
     }
 
-    /** billing-me-period-statement with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-period-statement (GET /billing/me/periods/{period_key}/statement). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePeriodStatement(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-period-statement", params);
         return client.request("billing-me-period-statement", params, options);
@@ -133,13 +181,19 @@ public final class BillingGroup {
      * billing-me-period-statement-download (GET /billing/me/periods/{period_key}/statement/download).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mePeriodStatementDownload(Map<String, Object> params) {
         return mePeriodStatementDownload(params, null);
     }
 
-    /** billing-me-period-statement-download with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-period-statement-download (GET /billing/me/periods/{period_key}/statement/download). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePeriodStatementDownload(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-period-statement-download", params);
         return client.request("billing-me-period-statement-download", params, options);
@@ -149,13 +203,19 @@ public final class BillingGroup {
      * billing-me-portal (POST /billing/me/portal).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mePortal(Map<String, Object> params) {
         return mePortal(params, null);
     }
 
-    /** billing-me-portal with explicit {@link RequestOptions}. */
+    /**
+     * billing-me-portal (POST /billing/me/portal). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mePortal(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("billing-me-portal", params);
         return client.request("billing-me-portal", params, options);

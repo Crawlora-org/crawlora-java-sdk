@@ -22,13 +22,19 @@ public final class BraveGroup {
      * brave-images (GET /brave/images).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object images(Map<String, Object> params) {
         return images(params, null);
     }
 
-    /** brave-images with explicit {@link RequestOptions}. */
+    /**
+     * brave-images (GET /brave/images). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object images(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("brave-images", params);
         return client.request("brave-images", params, options);
@@ -38,13 +44,19 @@ public final class BraveGroup {
      * brave-news (GET /brave/news).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object news(Map<String, Object> params) {
         return news(params, null);
     }
 
-    /** brave-news with explicit {@link RequestOptions}. */
+    /**
+     * brave-news (GET /brave/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object news(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("brave-news", params);
         return client.request("brave-news", params, options);
@@ -54,13 +66,19 @@ public final class BraveGroup {
      * brave-search (GET /brave/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** brave-search with explicit {@link RequestOptions}. */
+    /**
+     * brave-search (GET /brave/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("brave-search", params);
         return client.request("brave-search", params, options);
@@ -70,13 +88,19 @@ public final class BraveGroup {
      * brave-suggest (GET /brave/suggest).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** brave-suggest with explicit {@link RequestOptions}. */
+    /**
+     * brave-suggest (GET /brave/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("brave-suggest", params);
         return client.request("brave-suggest", params, options);
@@ -86,13 +110,19 @@ public final class BraveGroup {
      * brave-videos (GET /brave/videos).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object videos(Map<String, Object> params) {
         return videos(params, null);
     }
 
-    /** brave-videos with explicit {@link RequestOptions}. */
+    /**
+     * brave-videos (GET /brave/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object videos(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("brave-videos", params);
         return client.request("brave-videos", params, options);

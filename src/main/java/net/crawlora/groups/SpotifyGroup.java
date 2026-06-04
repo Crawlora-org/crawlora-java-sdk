@@ -22,19 +22,29 @@ public final class SpotifyGroup {
      * spotify-album (GET /spotify/album).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object album(Map<String, Object> params) {
         return album(params, null);
     }
 
-    /** spotify-album with explicit {@link RequestOptions}. */
+    /**
+     * spotify-album (GET /spotify/album). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object album(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-album", params);
         return client.request("spotify-album", params, options);
     }
 
-    /** spotify-album with no parameters. */
+    /**
+     * spotify-album (GET /spotify/album). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object album() {
         return album(Map.of(), null);
     }
@@ -43,19 +53,29 @@ public final class SpotifyGroup {
      * spotify-album-tracks (GET /spotify/album/tracks).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object albumTracks(Map<String, Object> params) {
         return albumTracks(params, null);
     }
 
-    /** spotify-album-tracks with explicit {@link RequestOptions}. */
+    /**
+     * spotify-album-tracks (GET /spotify/album/tracks). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object albumTracks(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-album-tracks", params);
         return client.request("spotify-album-tracks", params, options);
     }
 
-    /** spotify-album-tracks with no parameters. */
+    /**
+     * spotify-album-tracks (GET /spotify/album/tracks). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object albumTracks() {
         return albumTracks(Map.of(), null);
     }
@@ -64,13 +84,19 @@ public final class SpotifyGroup {
      * spotify-albums-search (GET /spotify/albums/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object albumsSearch(Map<String, Object> params) {
         return albumsSearch(params, null);
     }
 
-    /** spotify-albums-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-albums-search (GET /spotify/albums/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object albumsSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-albums-search", params);
         return client.request("spotify-albums-search", params, options);
@@ -80,19 +106,29 @@ public final class SpotifyGroup {
      * spotify-artist (GET /spotify/artist).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object artist(Map<String, Object> params) {
         return artist(params, null);
     }
 
-    /** spotify-artist with explicit {@link RequestOptions}. */
+    /**
+     * spotify-artist (GET /spotify/artist). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artist(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-artist", params);
         return client.request("spotify-artist", params, options);
     }
 
-    /** spotify-artist with no parameters. */
+    /**
+     * spotify-artist (GET /spotify/artist). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artist() {
         return artist(Map.of(), null);
     }
@@ -101,19 +137,29 @@ public final class SpotifyGroup {
      * spotify-artist-albums (GET /spotify/artist/albums).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object artistAlbums(Map<String, Object> params) {
         return artistAlbums(params, null);
     }
 
-    /** spotify-artist-albums with explicit {@link RequestOptions}. */
+    /**
+     * spotify-artist-albums (GET /spotify/artist/albums). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistAlbums(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-artist-albums", params);
         return client.request("spotify-artist-albums", params, options);
     }
 
-    /** spotify-artist-albums with no parameters. */
+    /**
+     * spotify-artist-albums (GET /spotify/artist/albums). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistAlbums() {
         return artistAlbums(Map.of(), null);
     }
@@ -122,19 +168,29 @@ public final class SpotifyGroup {
      * spotify-artist-playlists (GET /spotify/artist/playlists).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object artistPlaylists(Map<String, Object> params) {
         return artistPlaylists(params, null);
     }
 
-    /** spotify-artist-playlists with explicit {@link RequestOptions}. */
+    /**
+     * spotify-artist-playlists (GET /spotify/artist/playlists). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistPlaylists(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-artist-playlists", params);
         return client.request("spotify-artist-playlists", params, options);
     }
 
-    /** spotify-artist-playlists with no parameters. */
+    /**
+     * spotify-artist-playlists (GET /spotify/artist/playlists). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistPlaylists() {
         return artistPlaylists(Map.of(), null);
     }
@@ -143,19 +199,29 @@ public final class SpotifyGroup {
      * spotify-artist-related (GET /spotify/artist/related).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object artistRelated(Map<String, Object> params) {
         return artistRelated(params, null);
     }
 
-    /** spotify-artist-related with explicit {@link RequestOptions}. */
+    /**
+     * spotify-artist-related (GET /spotify/artist/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistRelated(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-artist-related", params);
         return client.request("spotify-artist-related", params, options);
     }
 
-    /** spotify-artist-related with no parameters. */
+    /**
+     * spotify-artist-related (GET /spotify/artist/related). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistRelated() {
         return artistRelated(Map.of(), null);
     }
@@ -164,13 +230,19 @@ public final class SpotifyGroup {
      * spotify-artists-search (GET /spotify/artists/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object artistsSearch(Map<String, Object> params) {
         return artistsSearch(params, null);
     }
 
-    /** spotify-artists-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-artists-search (GET /spotify/artists/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object artistsSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-artists-search", params);
         return client.request("spotify-artists-search", params, options);
@@ -180,19 +252,29 @@ public final class SpotifyGroup {
      * spotify-audiobook (GET /spotify/audiobook).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object audiobook(Map<String, Object> params) {
         return audiobook(params, null);
     }
 
-    /** spotify-audiobook with explicit {@link RequestOptions}. */
+    /**
+     * spotify-audiobook (GET /spotify/audiobook). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object audiobook(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-audiobook", params);
         return client.request("spotify-audiobook", params, options);
     }
 
-    /** spotify-audiobook with no parameters. */
+    /**
+     * spotify-audiobook (GET /spotify/audiobook). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object audiobook() {
         return audiobook(Map.of(), null);
     }
@@ -201,19 +283,29 @@ public final class SpotifyGroup {
      * spotify-audiobook-chapters (GET /spotify/audiobook/chapters).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object audiobookChapters(Map<String, Object> params) {
         return audiobookChapters(params, null);
     }
 
-    /** spotify-audiobook-chapters with explicit {@link RequestOptions}. */
+    /**
+     * spotify-audiobook-chapters (GET /spotify/audiobook/chapters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object audiobookChapters(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-audiobook-chapters", params);
         return client.request("spotify-audiobook-chapters", params, options);
     }
 
-    /** spotify-audiobook-chapters with no parameters. */
+    /**
+     * spotify-audiobook-chapters (GET /spotify/audiobook/chapters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object audiobookChapters() {
         return audiobookChapters(Map.of(), null);
     }
@@ -222,13 +314,19 @@ public final class SpotifyGroup {
      * spotify-audiobooks-search (GET /spotify/audiobooks/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object audiobooksSearch(Map<String, Object> params) {
         return audiobooksSearch(params, null);
     }
 
-    /** spotify-audiobooks-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-audiobooks-search (GET /spotify/audiobooks/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object audiobooksSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-audiobooks-search", params);
         return client.request("spotify-audiobooks-search", params, options);
@@ -238,19 +336,29 @@ public final class SpotifyGroup {
      * spotify-chapter (GET /spotify/chapter).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object chapter(Map<String, Object> params) {
         return chapter(params, null);
     }
 
-    /** spotify-chapter with explicit {@link RequestOptions}. */
+    /**
+     * spotify-chapter (GET /spotify/chapter). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object chapter(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-chapter", params);
         return client.request("spotify-chapter", params, options);
     }
 
-    /** spotify-chapter with no parameters. */
+    /**
+     * spotify-chapter (GET /spotify/chapter). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object chapter() {
         return chapter(Map.of(), null);
     }
@@ -259,13 +367,19 @@ public final class SpotifyGroup {
      * spotify-episodes-search (GET /spotify/episodes/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object episodesSearch(Map<String, Object> params) {
         return episodesSearch(params, null);
     }
 
-    /** spotify-episodes-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-episodes-search (GET /spotify/episodes/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object episodesSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-episodes-search", params);
         return client.request("spotify-episodes-search", params, options);
@@ -275,19 +389,29 @@ public final class SpotifyGroup {
      * spotify-featured-charts-by-country (GET /spotify/featured-charts-by-country).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object featuredChartsByCountry(Map<String, Object> params) {
         return featuredChartsByCountry(params, null);
     }
 
-    /** spotify-featured-charts-by-country with explicit {@link RequestOptions}. */
+    /**
+     * spotify-featured-charts-by-country (GET /spotify/featured-charts-by-country). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object featuredChartsByCountry(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-featured-charts-by-country", params);
         return client.request("spotify-featured-charts-by-country", params, options);
     }
 
-    /** spotify-featured-charts-by-country with no parameters. */
+    /**
+     * spotify-featured-charts-by-country (GET /spotify/featured-charts-by-country). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object featuredChartsByCountry() {
         return featuredChartsByCountry(Map.of(), null);
     }
@@ -296,19 +420,29 @@ public final class SpotifyGroup {
      * spotify-genre (GET /spotify/genre).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object genre(Map<String, Object> params) {
         return genre(params, null);
     }
 
-    /** spotify-genre with explicit {@link RequestOptions}. */
+    /**
+     * spotify-genre (GET /spotify/genre). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object genre(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-genre", params);
         return client.request("spotify-genre", params, options);
     }
 
-    /** spotify-genre with no parameters. */
+    /**
+     * spotify-genre (GET /spotify/genre). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object genre() {
         return genre(Map.of(), null);
     }
@@ -317,19 +451,29 @@ public final class SpotifyGroup {
      * spotify-home (GET /spotify/home).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object home(Map<String, Object> params) {
         return home(params, null);
     }
 
-    /** spotify-home with explicit {@link RequestOptions}. */
+    /**
+     * spotify-home (GET /spotify/home). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object home(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-home", params);
         return client.request("spotify-home", params, options);
     }
 
-    /** spotify-home with no parameters. */
+    /**
+     * spotify-home (GET /spotify/home). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object home() {
         return home(Map.of(), null);
     }
@@ -338,19 +482,29 @@ public final class SpotifyGroup {
      * spotify-playlist (GET /spotify/playlist).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object playlist(Map<String, Object> params) {
         return playlist(params, null);
     }
 
-    /** spotify-playlist with explicit {@link RequestOptions}. */
+    /**
+     * spotify-playlist (GET /spotify/playlist). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object playlist(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-playlist", params);
         return client.request("spotify-playlist", params, options);
     }
 
-    /** spotify-playlist with no parameters. */
+    /**
+     * spotify-playlist (GET /spotify/playlist). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object playlist() {
         return playlist(Map.of(), null);
     }
@@ -359,13 +513,19 @@ public final class SpotifyGroup {
      * spotify-playlists-search (GET /spotify/playlists/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object playlistsSearch(Map<String, Object> params) {
         return playlistsSearch(params, null);
     }
 
-    /** spotify-playlists-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-playlists-search (GET /spotify/playlists/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object playlistsSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-playlists-search", params);
         return client.request("spotify-playlists-search", params, options);
@@ -375,19 +535,29 @@ public final class SpotifyGroup {
      * spotify-popular-by-country (GET /spotify/popular-by-country).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object popularByCountry(Map<String, Object> params) {
         return popularByCountry(params, null);
     }
 
-    /** spotify-popular-by-country with explicit {@link RequestOptions}. */
+    /**
+     * spotify-popular-by-country (GET /spotify/popular-by-country). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularByCountry(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-popular-by-country", params);
         return client.request("spotify-popular-by-country", params, options);
     }
 
-    /** spotify-popular-by-country with no parameters. */
+    /**
+     * spotify-popular-by-country (GET /spotify/popular-by-country). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object popularByCountry() {
         return popularByCountry(Map.of(), null);
     }
@@ -396,19 +566,29 @@ public final class SpotifyGroup {
      * spotify-profile (GET /spotify/profile).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profile(Map<String, Object> params) {
         return profile(params, null);
     }
 
-    /** spotify-profile with explicit {@link RequestOptions}. */
+    /**
+     * spotify-profile (GET /spotify/profile). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-profile", params);
         return client.request("spotify-profile", params, options);
     }
 
-    /** spotify-profile with no parameters. */
+    /**
+     * spotify-profile (GET /spotify/profile). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profile() {
         return profile(Map.of(), null);
     }
@@ -417,19 +597,29 @@ public final class SpotifyGroup {
      * spotify-profile-followers (GET /spotify/profile/followers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profileFollowers(Map<String, Object> params) {
         return profileFollowers(params, null);
     }
 
-    /** spotify-profile-followers with explicit {@link RequestOptions}. */
+    /**
+     * spotify-profile-followers (GET /spotify/profile/followers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profileFollowers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-profile-followers", params);
         return client.request("spotify-profile-followers", params, options);
     }
 
-    /** spotify-profile-followers with no parameters. */
+    /**
+     * spotify-profile-followers (GET /spotify/profile/followers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profileFollowers() {
         return profileFollowers(Map.of(), null);
     }
@@ -438,19 +628,29 @@ public final class SpotifyGroup {
      * spotify-profile-playlists (GET /spotify/profile/playlists).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profilePlaylists(Map<String, Object> params) {
         return profilePlaylists(params, null);
     }
 
-    /** spotify-profile-playlists with explicit {@link RequestOptions}. */
+    /**
+     * spotify-profile-playlists (GET /spotify/profile/playlists). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profilePlaylists(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-profile-playlists", params);
         return client.request("spotify-profile-playlists", params, options);
     }
 
-    /** spotify-profile-playlists with no parameters. */
+    /**
+     * spotify-profile-playlists (GET /spotify/profile/playlists). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profilePlaylists() {
         return profilePlaylists(Map.of(), null);
     }
@@ -459,13 +659,19 @@ public final class SpotifyGroup {
      * spotify-profiles-search (GET /spotify/profiles/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object profilesSearch(Map<String, Object> params) {
         return profilesSearch(params, null);
     }
 
-    /** spotify-profiles-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-profiles-search (GET /spotify/profiles/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object profilesSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-profiles-search", params);
         return client.request("spotify-profiles-search", params, options);
@@ -475,13 +681,19 @@ public final class SpotifyGroup {
      * spotify-search (GET /spotify/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** spotify-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-search (GET /spotify/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-search", params);
         return client.request("spotify-search", params, options);
@@ -491,19 +703,29 @@ public final class SpotifyGroup {
      * spotify-section (GET /spotify/section).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object section(Map<String, Object> params) {
         return section(params, null);
     }
 
-    /** spotify-section with explicit {@link RequestOptions}. */
+    /**
+     * spotify-section (GET /spotify/section). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object section(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-section", params);
         return client.request("spotify-section", params, options);
     }
 
-    /** spotify-section with no parameters. */
+    /**
+     * spotify-section (GET /spotify/section). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object section() {
         return section(Map.of(), null);
     }
@@ -512,13 +734,19 @@ public final class SpotifyGroup {
      * spotify-shows-search (GET /spotify/shows/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object showsSearch(Map<String, Object> params) {
         return showsSearch(params, null);
     }
 
-    /** spotify-shows-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-shows-search (GET /spotify/shows/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object showsSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-shows-search", params);
         return client.request("spotify-shows-search", params, options);
@@ -528,19 +756,29 @@ public final class SpotifyGroup {
      * spotify-track (GET /spotify/track).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object track(Map<String, Object> params) {
         return track(params, null);
     }
 
-    /** spotify-track with explicit {@link RequestOptions}. */
+    /**
+     * spotify-track (GET /spotify/track). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object track(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-track", params);
         return client.request("spotify-track", params, options);
     }
 
-    /** spotify-track with no parameters. */
+    /**
+     * spotify-track (GET /spotify/track). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object track() {
         return track(Map.of(), null);
     }
@@ -549,19 +787,29 @@ public final class SpotifyGroup {
      * spotify-track-recommended (GET /spotify/track/recommended).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trackRecommended(Map<String, Object> params) {
         return trackRecommended(params, null);
     }
 
-    /** spotify-track-recommended with explicit {@link RequestOptions}. */
+    /**
+     * spotify-track-recommended (GET /spotify/track/recommended). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trackRecommended(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-track-recommended", params);
         return client.request("spotify-track-recommended", params, options);
     }
 
-    /** spotify-track-recommended with no parameters. */
+    /**
+     * spotify-track-recommended (GET /spotify/track/recommended). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trackRecommended() {
         return trackRecommended(Map.of(), null);
     }
@@ -570,19 +818,29 @@ public final class SpotifyGroup {
      * spotify-track-similar-albums (GET /spotify/track/similar-albums).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trackSimilarAlbums(Map<String, Object> params) {
         return trackSimilarAlbums(params, null);
     }
 
-    /** spotify-track-similar-albums with explicit {@link RequestOptions}. */
+    /**
+     * spotify-track-similar-albums (GET /spotify/track/similar-albums). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trackSimilarAlbums(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-track-similar-albums", params);
         return client.request("spotify-track-similar-albums", params, options);
     }
 
-    /** spotify-track-similar-albums with no parameters. */
+    /**
+     * spotify-track-similar-albums (GET /spotify/track/similar-albums). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trackSimilarAlbums() {
         return trackSimilarAlbums(Map.of(), null);
     }
@@ -591,13 +849,19 @@ public final class SpotifyGroup {
      * spotify-tracks-search (GET /spotify/tracks/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object tracksSearch(Map<String, Object> params) {
         return tracksSearch(params, null);
     }
 
-    /** spotify-tracks-search with explicit {@link RequestOptions}. */
+    /**
+     * spotify-tracks-search (GET /spotify/tracks/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object tracksSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("spotify-tracks-search", params);
         return client.request("spotify-tracks-search", params, options);

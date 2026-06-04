@@ -22,19 +22,29 @@ public final class JustWatchGroup {
      * justwatch-age-certifications (GET /justwatch/age-certifications).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchAgeCertifications(Map<String, Object> params) {
         return justwatchAgeCertifications(params, null);
     }
 
-    /** justwatch-age-certifications with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-age-certifications (GET /justwatch/age-certifications). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchAgeCertifications(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-age-certifications", params);
         return client.request("justwatch-age-certifications", params, options);
     }
 
-    /** justwatch-age-certifications with no parameters. */
+    /**
+     * justwatch-age-certifications (GET /justwatch/age-certifications). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchAgeCertifications() {
         return justwatchAgeCertifications(Map.of(), null);
     }
@@ -43,19 +53,29 @@ public final class JustWatchGroup {
      * justwatch-discover (GET /justwatch/discover).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchDiscover(Map<String, Object> params) {
         return justwatchDiscover(params, null);
     }
 
-    /** justwatch-discover with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-discover (GET /justwatch/discover). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchDiscover(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-discover", params);
         return client.request("justwatch-discover", params, options);
     }
 
-    /** justwatch-discover with no parameters. */
+    /**
+     * justwatch-discover (GET /justwatch/discover). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchDiscover() {
         return justwatchDiscover(Map.of(), null);
     }
@@ -64,13 +84,19 @@ public final class JustWatchGroup {
      * justwatch-episode-by-id (GET /justwatch/episode/by-id).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchEpisodeById(Map<String, Object> params) {
         return justwatchEpisodeById(params, null);
     }
 
-    /** justwatch-episode-by-id with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-episode-by-id (GET /justwatch/episode/by-id). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchEpisodeById(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-episode-by-id", params);
         return client.request("justwatch-episode-by-id", params, options);
@@ -80,13 +106,19 @@ public final class JustWatchGroup {
      * justwatch-episode-offers (GET /justwatch/episode/offers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchEpisodeOffers(Map<String, Object> params) {
         return justwatchEpisodeOffers(params, null);
     }
 
-    /** justwatch-episode-offers with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-episode-offers (GET /justwatch/episode/offers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchEpisodeOffers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-episode-offers", params);
         return client.request("justwatch-episode-offers", params, options);
@@ -96,13 +128,19 @@ public final class JustWatchGroup {
      * justwatch-genre-titles (GET /justwatch/genre/titles).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchGenreTitles(Map<String, Object> params) {
         return justwatchGenreTitles(params, null);
     }
 
-    /** justwatch-genre-titles with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-genre-titles (GET /justwatch/genre/titles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchGenreTitles(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-genre-titles", params);
         return client.request("justwatch-genre-titles", params, options);
@@ -112,19 +150,29 @@ public final class JustWatchGroup {
      * justwatch-genres (GET /justwatch/genres).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchGenres(Map<String, Object> params) {
         return justwatchGenres(params, null);
     }
 
-    /** justwatch-genres with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-genres (GET /justwatch/genres). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchGenres(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-genres", params);
         return client.request("justwatch-genres", params, options);
     }
 
-    /** justwatch-genres with no parameters. */
+    /**
+     * justwatch-genres (GET /justwatch/genres). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchGenres() {
         return justwatchGenres(Map.of(), null);
     }
@@ -133,13 +181,19 @@ public final class JustWatchGroup {
      * justwatch-monetization-titles (GET /justwatch/monetization/titles).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchMonetizationTitles(Map<String, Object> params) {
         return justwatchMonetizationTitles(params, null);
     }
 
-    /** justwatch-monetization-titles with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-monetization-titles (GET /justwatch/monetization/titles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchMonetizationTitles(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-monetization-titles", params);
         return client.request("justwatch-monetization-titles", params, options);
@@ -149,19 +203,29 @@ public final class JustWatchGroup {
      * justwatch-new (GET /justwatch/new).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchNew(Map<String, Object> params) {
         return justwatchNew(params, null);
     }
 
-    /** justwatch-new with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-new (GET /justwatch/new). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchNew(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-new", params);
         return client.request("justwatch-new", params, options);
     }
 
-    /** justwatch-new with no parameters. */
+    /**
+     * justwatch-new (GET /justwatch/new). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchNew() {
         return justwatchNew(Map.of(), null);
     }
@@ -170,19 +234,29 @@ public final class JustWatchGroup {
      * justwatch-popular (GET /justwatch/popular).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchPopular(Map<String, Object> params) {
         return justwatchPopular(params, null);
     }
 
-    /** justwatch-popular with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-popular (GET /justwatch/popular). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchPopular(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-popular", params);
         return client.request("justwatch-popular", params, options);
     }
 
-    /** justwatch-popular with no parameters. */
+    /**
+     * justwatch-popular (GET /justwatch/popular). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchPopular() {
         return justwatchPopular(Map.of(), null);
     }
@@ -191,13 +265,19 @@ public final class JustWatchGroup {
      * justwatch-provider-titles (GET /justwatch/provider/titles).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchProviderTitles(Map<String, Object> params) {
         return justwatchProviderTitles(params, null);
     }
 
-    /** justwatch-provider-titles with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-provider-titles (GET /justwatch/provider/titles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchProviderTitles(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-provider-titles", params);
         return client.request("justwatch-provider-titles", params, options);
@@ -207,19 +287,29 @@ public final class JustWatchGroup {
      * justwatch-providers (GET /justwatch/providers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchProviders(Map<String, Object> params) {
         return justwatchProviders(params, null);
     }
 
-    /** justwatch-providers with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-providers (GET /justwatch/providers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchProviders(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-providers", params);
         return client.request("justwatch-providers", params, options);
     }
 
-    /** justwatch-providers with no parameters. */
+    /**
+     * justwatch-providers (GET /justwatch/providers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchProviders() {
         return justwatchProviders(Map.of(), null);
     }
@@ -228,13 +318,19 @@ public final class JustWatchGroup {
      * justwatch-search (GET /justwatch/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchSearch(Map<String, Object> params) {
         return justwatchSearch(params, null);
     }
 
-    /** justwatch-search with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-search (GET /justwatch/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-search", params);
         return client.request("justwatch-search", params, options);
@@ -244,13 +340,19 @@ public final class JustWatchGroup {
      * justwatch-season-by-id (GET /justwatch/season/by-id).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchSeasonById(Map<String, Object> params) {
         return justwatchSeasonById(params, null);
     }
 
-    /** justwatch-season-by-id with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-season-by-id (GET /justwatch/season/by-id). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchSeasonById(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-season-by-id", params);
         return client.request("justwatch-season-by-id", params, options);
@@ -260,13 +362,19 @@ public final class JustWatchGroup {
      * justwatch-season-episodes (GET /justwatch/season/episodes).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchSeasonEpisodes(Map<String, Object> params) {
         return justwatchSeasonEpisodes(params, null);
     }
 
-    /** justwatch-season-episodes with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-season-episodes (GET /justwatch/season/episodes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchSeasonEpisodes(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-season-episodes", params);
         return client.request("justwatch-season-episodes", params, options);
@@ -276,13 +384,19 @@ public final class JustWatchGroup {
      * justwatch-show-seasons (GET /justwatch/show/seasons).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchShowSeasons(Map<String, Object> params) {
         return justwatchShowSeasons(params, null);
     }
 
-    /** justwatch-show-seasons with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-show-seasons (GET /justwatch/show/seasons). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchShowSeasons(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-show-seasons", params);
         return client.request("justwatch-show-seasons", params, options);
@@ -292,19 +406,29 @@ public final class JustWatchGroup {
      * justwatch-title (GET /justwatch/title).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitle(Map<String, Object> params) {
         return justwatchTitle(params, null);
     }
 
-    /** justwatch-title with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title (GET /justwatch/title). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitle(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title", params);
         return client.request("justwatch-title", params, options);
     }
 
-    /** justwatch-title with no parameters. */
+    /**
+     * justwatch-title (GET /justwatch/title). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitle() {
         return justwatchTitle(Map.of(), null);
     }
@@ -313,19 +437,29 @@ public final class JustWatchGroup {
      * justwatch-title-analysis (GET /justwatch/title/analysis).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitleAnalysis(Map<String, Object> params) {
         return justwatchTitleAnalysis(params, null);
     }
 
-    /** justwatch-title-analysis with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title-analysis (GET /justwatch/title/analysis). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleAnalysis(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title-analysis", params);
         return client.request("justwatch-title-analysis", params, options);
     }
 
-    /** justwatch-title-analysis with no parameters. */
+    /**
+     * justwatch-title-analysis (GET /justwatch/title/analysis). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleAnalysis() {
         return justwatchTitleAnalysis(Map.of(), null);
     }
@@ -334,13 +468,19 @@ public final class JustWatchGroup {
      * justwatch-title-by-id (GET /justwatch/title/by-id).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitleById(Map<String, Object> params) {
         return justwatchTitleById(params, null);
     }
 
-    /** justwatch-title-by-id with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title-by-id (GET /justwatch/title/by-id). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleById(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title-by-id", params);
         return client.request("justwatch-title-by-id", params, options);
@@ -350,13 +490,19 @@ public final class JustWatchGroup {
      * justwatch-title-media (GET /justwatch/title/media).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitleMedia(Map<String, Object> params) {
         return justwatchTitleMedia(params, null);
     }
 
-    /** justwatch-title-media with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title-media (GET /justwatch/title/media). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleMedia(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title-media", params);
         return client.request("justwatch-title-media", params, options);
@@ -366,13 +512,19 @@ public final class JustWatchGroup {
      * justwatch-title-offers (GET /justwatch/title/offers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitleOffers(Map<String, Object> params) {
         return justwatchTitleOffers(params, null);
     }
 
-    /** justwatch-title-offers with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title-offers (GET /justwatch/title/offers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleOffers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title-offers", params);
         return client.request("justwatch-title-offers", params, options);
@@ -382,13 +534,19 @@ public final class JustWatchGroup {
      * justwatch-title-similar (GET /justwatch/title/similar).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object justwatchTitleSimilar(Map<String, Object> params) {
         return justwatchTitleSimilar(params, null);
     }
 
-    /** justwatch-title-similar with explicit {@link RequestOptions}. */
+    /**
+     * justwatch-title-similar (GET /justwatch/title/similar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object justwatchTitleSimilar(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("justwatch-title-similar", params);
         return client.request("justwatch-title-similar", params, options);

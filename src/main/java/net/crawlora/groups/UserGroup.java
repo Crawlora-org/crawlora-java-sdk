@@ -22,19 +22,29 @@ public final class UserGroup {
      * user-me (GET /user/me).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object me(Map<String, Object> params) {
         return me(params, null);
     }
 
-    /** user-me with explicit {@link RequestOptions}. */
+    /**
+     * user-me (GET /user/me). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("user-me", params);
         return client.request("user-me", params, options);
     }
 
-    /** user-me with no parameters. */
+    /**
+     * user-me (GET /user/me). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object me() {
         return me(Map.of(), null);
     }
@@ -43,19 +53,29 @@ public final class UserGroup {
      * user-me-api-keys (GET /user/me/api-keys).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meApiKeys(Map<String, Object> params) {
         return meApiKeys(params, null);
     }
 
-    /** user-me-api-keys with explicit {@link RequestOptions}. */
+    /**
+     * user-me-api-keys (GET /user/me/api-keys). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meApiKeys(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("user-me-api-keys", params);
         return client.request("user-me-api-keys", params, options);
     }
 
-    /** user-me-api-keys with no parameters. */
+    /**
+     * user-me-api-keys (GET /user/me/api-keys). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meApiKeys() {
         return meApiKeys(Map.of(), null);
     }
@@ -64,19 +84,29 @@ public final class UserGroup {
      * user-me-api-keys-rotate (POST /user/me/api-keys/rotate).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meApiKeysRotate(Map<String, Object> params) {
         return meApiKeysRotate(params, null);
     }
 
-    /** user-me-api-keys-rotate with explicit {@link RequestOptions}. */
+    /**
+     * user-me-api-keys-rotate (POST /user/me/api-keys/rotate). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meApiKeysRotate(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("user-me-api-keys-rotate", params);
         return client.request("user-me-api-keys-rotate", params, options);
     }
 
-    /** user-me-api-keys-rotate with no parameters. */
+    /**
+     * user-me-api-keys-rotate (POST /user/me/api-keys/rotate). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meApiKeysRotate() {
         return meApiKeysRotate(Map.of(), null);
     }
@@ -85,13 +115,19 @@ public final class UserGroup {
      * user-me-api-keys-reveal (POST /user/me/api-keys/{id}/reveal).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object meApiKeysReveal(Map<String, Object> params) {
         return meApiKeysReveal(params, null);
     }
 
-    /** user-me-api-keys-reveal with explicit {@link RequestOptions}. */
+    /**
+     * user-me-api-keys-reveal (POST /user/me/api-keys/{id}/reveal). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object meApiKeysReveal(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("user-me-api-keys-reveal", params);
         return client.request("user-me-api-keys-reveal", params, options);

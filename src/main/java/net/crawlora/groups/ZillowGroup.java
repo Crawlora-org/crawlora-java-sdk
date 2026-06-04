@@ -22,13 +22,19 @@ public final class ZillowGroup {
      * zillow-autocomplete (GET /zillow/autocomplete).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object autocomplete(Map<String, Object> params) {
         return autocomplete(params, null);
     }
 
-    /** zillow-autocomplete with explicit {@link RequestOptions}. */
+    /**
+     * zillow-autocomplete (GET /zillow/autocomplete). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object autocomplete(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("zillow-autocomplete", params);
         return client.request("zillow-autocomplete", params, options);
@@ -38,13 +44,19 @@ public final class ZillowGroup {
      * zillow-property (GET /zillow/property/{zpid}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object property(Map<String, Object> params) {
         return property(params, null);
     }
 
-    /** zillow-property with explicit {@link RequestOptions}. */
+    /**
+     * zillow-property (GET /zillow/property/{zpid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object property(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("zillow-property", params);
         return client.request("zillow-property", params, options);
@@ -54,13 +66,19 @@ public final class ZillowGroup {
      * zillow-search (GET /zillow/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** zillow-search with explicit {@link RequestOptions}. */
+    /**
+     * zillow-search (GET /zillow/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("zillow-search", params);
         return client.request("zillow-search", params, options);

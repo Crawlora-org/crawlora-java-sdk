@@ -22,13 +22,19 @@ public final class GoogleGroup {
      * google-finance-analyst-articles (GET /google/finance/analyst-articles/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeAnalystArticles(Map<String, Object> params) {
         return financeAnalystArticles(params, null);
     }
 
-    /** google-finance-analyst-articles with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-analyst-articles (GET /google/finance/analyst-articles/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeAnalystArticles(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-analyst-articles", params);
         return client.request("google-finance-analyst-articles", params, options);
@@ -38,13 +44,19 @@ public final class GoogleGroup {
      * google-finance-chart (GET /google/finance/chart/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeChart(Map<String, Object> params) {
         return financeChart(params, null);
     }
 
-    /** google-finance-chart with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-chart (GET /google/finance/chart/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeChart(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-chart", params);
         return client.request("google-finance-chart", params, options);
@@ -54,13 +66,19 @@ public final class GoogleGroup {
      * google-finance-classification (GET /google/finance/classification/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeClassification(Map<String, Object> params) {
         return financeClassification(params, null);
     }
 
-    /** google-finance-classification with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-classification (GET /google/finance/classification/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeClassification(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-classification", params);
         return client.request("google-finance-classification", params, options);
@@ -70,13 +88,19 @@ public final class GoogleGroup {
      * google-finance-company (GET /google/finance/company/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeCompany(Map<String, Object> params) {
         return financeCompany(params, null);
     }
 
-    /** google-finance-company with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-company (GET /google/finance/company/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeCompany(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-company", params);
         return client.request("google-finance-company", params, options);
@@ -86,13 +110,19 @@ public final class GoogleGroup {
      * google-finance-context (GET /google/finance/context).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeContext(Map<String, Object> params) {
         return financeContext(params, null);
     }
 
-    /** google-finance-context with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-context (GET /google/finance/context). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeContext(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-context", params);
         return client.request("google-finance-context", params, options);
@@ -102,13 +132,19 @@ public final class GoogleGroup {
      * google-finance-financials (GET /google/finance/financials/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeFinancials(Map<String, Object> params) {
         return financeFinancials(params, null);
     }
 
-    /** google-finance-financials with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-financials (GET /google/finance/financials/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeFinancials(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-financials", params);
         return client.request("google-finance-financials", params, options);
@@ -118,13 +154,19 @@ public final class GoogleGroup {
      * google-finance-markets-category-news (GET /google/finance/markets/categories/{category}/news).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsCategoryNews(Map<String, Object> params) {
         return financeMarketsCategoryNews(params, null);
     }
 
-    /** google-finance-markets-category-news with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-category-news (GET /google/finance/markets/categories/{category}/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsCategoryNews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-category-news", params);
         return client.request("google-finance-markets-category-news", params, options);
@@ -134,13 +176,19 @@ public final class GoogleGroup {
      * google-finance-markets-category-stocks (GET /google/finance/markets/categories/{category}/stocks).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsCategoryStocks(Map<String, Object> params) {
         return financeMarketsCategoryStocks(params, null);
     }
 
-    /** google-finance-markets-category-stocks with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-category-stocks (GET /google/finance/markets/categories/{category}/stocks). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsCategoryStocks(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-category-stocks", params);
         return client.request("google-finance-markets-category-stocks", params, options);
@@ -150,19 +198,29 @@ public final class GoogleGroup {
      * google-finance-markets-earnings (GET /google/finance/markets/earnings).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsEarnings(Map<String, Object> params) {
         return financeMarketsEarnings(params, null);
     }
 
-    /** google-finance-markets-earnings with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-earnings (GET /google/finance/markets/earnings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsEarnings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-earnings", params);
         return client.request("google-finance-markets-earnings", params, options);
     }
 
-    /** google-finance-markets-earnings with no parameters. */
+    /**
+     * google-finance-markets-earnings (GET /google/finance/markets/earnings). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsEarnings() {
         return financeMarketsEarnings(Map.of(), null);
     }
@@ -171,19 +229,29 @@ public final class GoogleGroup {
      * google-finance-markets-featured (GET /google/finance/markets/featured).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsFeatured(Map<String, Object> params) {
         return financeMarketsFeatured(params, null);
     }
 
-    /** google-finance-markets-featured with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-featured (GET /google/finance/markets/featured). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsFeatured(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-featured", params);
         return client.request("google-finance-markets-featured", params, options);
     }
 
-    /** google-finance-markets-featured with no parameters. */
+    /**
+     * google-finance-markets-featured (GET /google/finance/markets/featured). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsFeatured() {
         return financeMarketsFeatured(Map.of(), null);
     }
@@ -192,19 +260,29 @@ public final class GoogleGroup {
      * google-finance-markets-headline (GET /google/finance/markets/headline).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsHeadline(Map<String, Object> params) {
         return financeMarketsHeadline(params, null);
     }
 
-    /** google-finance-markets-headline with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-headline (GET /google/finance/markets/headline). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsHeadline(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-headline", params);
         return client.request("google-finance-markets-headline", params, options);
     }
 
-    /** google-finance-markets-headline with no parameters. */
+    /**
+     * google-finance-markets-headline (GET /google/finance/markets/headline). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsHeadline() {
         return financeMarketsHeadline(Map.of(), null);
     }
@@ -213,19 +291,29 @@ public final class GoogleGroup {
      * google-finance-markets-indices (GET /google/finance/markets/indices).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsIndices(Map<String, Object> params) {
         return financeMarketsIndices(params, null);
     }
 
-    /** google-finance-markets-indices with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-indices (GET /google/finance/markets/indices). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsIndices(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-indices", params);
         return client.request("google-finance-markets-indices", params, options);
     }
 
-    /** google-finance-markets-indices with no parameters. */
+    /**
+     * google-finance-markets-indices (GET /google/finance/markets/indices). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsIndices() {
         return financeMarketsIndices(Map.of(), null);
     }
@@ -234,19 +322,29 @@ public final class GoogleGroup {
      * google-finance-markets-movers (GET /google/finance/markets/movers).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsMovers(Map<String, Object> params) {
         return financeMarketsMovers(params, null);
     }
 
-    /** google-finance-markets-movers with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-movers (GET /google/finance/markets/movers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsMovers(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-movers", params);
         return client.request("google-finance-markets-movers", params, options);
     }
 
-    /** google-finance-markets-movers with no parameters. */
+    /**
+     * google-finance-markets-movers (GET /google/finance/markets/movers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsMovers() {
         return financeMarketsMovers(Map.of(), null);
     }
@@ -255,19 +353,29 @@ public final class GoogleGroup {
      * google-finance-markets-top (GET /google/finance/markets/top).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsTop(Map<String, Object> params) {
         return financeMarketsTop(params, null);
     }
 
-    /** google-finance-markets-top with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-top (GET /google/finance/markets/top). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsTop(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-top", params);
         return client.request("google-finance-markets-top", params, options);
     }
 
-    /** google-finance-markets-top with no parameters. */
+    /**
+     * google-finance-markets-top (GET /google/finance/markets/top). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsTop() {
         return financeMarketsTop(Map.of(), null);
     }
@@ -276,19 +384,29 @@ public final class GoogleGroup {
      * google-finance-markets-trending (GET /google/finance/markets/trending).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeMarketsTrending(Map<String, Object> params) {
         return financeMarketsTrending(params, null);
     }
 
-    /** google-finance-markets-trending with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-markets-trending (GET /google/finance/markets/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsTrending(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-markets-trending", params);
         return client.request("google-finance-markets-trending", params, options);
     }
 
-    /** google-finance-markets-trending with no parameters. */
+    /**
+     * google-finance-markets-trending (GET /google/finance/markets/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeMarketsTrending() {
         return financeMarketsTrending(Map.of(), null);
     }
@@ -297,13 +415,19 @@ public final class GoogleGroup {
      * google-finance-news (GET /google/finance/news/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeNews(Map<String, Object> params) {
         return financeNews(params, null);
     }
 
-    /** google-finance-news with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-news (GET /google/finance/news/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeNews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-news", params);
         return client.request("google-finance-news", params, options);
@@ -313,13 +437,19 @@ public final class GoogleGroup {
      * google-finance-quote (GET /google/finance/quote/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeQuote(Map<String, Object> params) {
         return financeQuote(params, null);
     }
 
-    /** google-finance-quote with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-quote (GET /google/finance/quote/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeQuote(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-quote", params);
         return client.request("google-finance-quote", params, options);
@@ -329,13 +459,19 @@ public final class GoogleGroup {
      * google-finance-related (GET /google/finance/related/{quote}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeRelated(Map<String, Object> params) {
         return financeRelated(params, null);
     }
 
-    /** google-finance-related with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-related (GET /google/finance/related/{quote}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeRelated(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-related", params);
         return client.request("google-finance-related", params, options);
@@ -345,13 +481,19 @@ public final class GoogleGroup {
      * google-finance-search (GET /google/finance/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeSearch(Map<String, Object> params) {
         return financeSearch(params, null);
     }
 
-    /** google-finance-search with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-search (GET /google/finance/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-search", params);
         return client.request("google-finance-search", params, options);
@@ -361,13 +503,19 @@ public final class GoogleGroup {
      * google-finance-ticker (GET /google/finance/ticker/{ticker}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object financeTicker(Map<String, Object> params) {
         return financeTicker(params, null);
     }
 
-    /** google-finance-ticker with explicit {@link RequestOptions}. */
+    /**
+     * google-finance-ticker (GET /google/finance/ticker/{ticker}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object financeTicker(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-finance-ticker", params);
         return client.request("google-finance-ticker", params, options);
@@ -377,13 +525,19 @@ public final class GoogleGroup {
      * google-jobs (POST /google/jobs).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object jobs(Map<String, Object> params) {
         return jobs(params, null);
     }
 
-    /** google-jobs with explicit {@link RequestOptions}. */
+    /**
+     * google-jobs (POST /google/jobs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object jobs(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-jobs", params);
         return client.request("google-jobs", params, options);
@@ -393,13 +547,19 @@ public final class GoogleGroup {
      * google-map-place (GET /google/map/place/{place_id}).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mapPlace(Map<String, Object> params) {
         return mapPlace(params, null);
     }
 
-    /** google-map-place with explicit {@link RequestOptions}. */
+    /**
+     * google-map-place (GET /google/map/place/{place_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mapPlace(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-map-place", params);
         return client.request("google-map-place", params, options);
@@ -409,13 +569,19 @@ public final class GoogleGroup {
      * google-map-search (POST /google/map/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object mapSearch(Map<String, Object> params) {
         return mapSearch(params, null);
     }
 
-    /** google-map-search with explicit {@link RequestOptions}. */
+    /**
+     * google-map-search (POST /google/map/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object mapSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-map-search", params);
         return client.request("google-map-search", params, options);
@@ -425,13 +591,19 @@ public final class GoogleGroup {
      * google-search (POST /google/search).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params) {
         return search(params, null);
     }
 
-    /** google-search with explicit {@link RequestOptions}. */
+    /**
+     * google-search (POST /google/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-search", params);
         return client.request("google-search", params, options);
@@ -441,13 +613,19 @@ public final class GoogleGroup {
      * google-suggest (GET /google/suggest).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params) {
         return suggest(params, null);
     }
 
-    /** google-suggest with explicit {@link RequestOptions}. */
+    /**
+     * google-suggest (GET /google/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-suggest", params);
         return client.request("google-suggest", params, options);
@@ -457,19 +635,29 @@ public final class GoogleGroup {
      * google-trends-categories (GET /google/trends/categories).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsCategories(Map<String, Object> params) {
         return trendsCategories(params, null);
     }
 
-    /** google-trends-categories with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-categories (GET /google/trends/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsCategories(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-categories", params);
         return client.request("google-trends-categories", params, options);
     }
 
-    /** google-trends-categories with no parameters. */
+    /**
+     * google-trends-categories (GET /google/trends/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsCategories() {
         return trendsCategories(Map.of(), null);
     }
@@ -478,19 +666,29 @@ public final class GoogleGroup {
      * google-trends-enums (GET /google/trends/enums).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsEnums(Map<String, Object> params) {
         return trendsEnums(params, null);
     }
 
-    /** google-trends-enums with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-enums (GET /google/trends/enums). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsEnums(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-enums", params);
         return client.request("google-trends-enums", params, options);
     }
 
-    /** google-trends-enums with no parameters. */
+    /**
+     * google-trends-enums (GET /google/trends/enums). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsEnums() {
         return trendsEnums(Map.of(), null);
     }
@@ -499,13 +697,19 @@ public final class GoogleGroup {
      * google-trends-explore (POST /google/trends/explore).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExplore(Map<String, Object> params) {
         return trendsExplore(params, null);
     }
 
-    /** google-trends-explore with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore (POST /google/trends/explore). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExplore(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore", params);
         return client.request("google-trends-explore", params, options);
@@ -515,13 +719,19 @@ public final class GoogleGroup {
      * google-trends-explore-interest-by-region (POST /google/trends/explore/interest-by-region).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExploreInterestByRegion(Map<String, Object> params) {
         return trendsExploreInterestByRegion(params, null);
     }
 
-    /** google-trends-explore-interest-by-region with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore-interest-by-region (POST /google/trends/explore/interest-by-region). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExploreInterestByRegion(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore-interest-by-region", params);
         return client.request("google-trends-explore-interest-by-region", params, options);
@@ -531,13 +741,19 @@ public final class GoogleGroup {
      * google-trends-explore-interest-over-time (POST /google/trends/explore/interest-over-time).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExploreInterestOverTime(Map<String, Object> params) {
         return trendsExploreInterestOverTime(params, null);
     }
 
-    /** google-trends-explore-interest-over-time with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore-interest-over-time (POST /google/trends/explore/interest-over-time). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExploreInterestOverTime(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore-interest-over-time", params);
         return client.request("google-trends-explore-interest-over-time", params, options);
@@ -547,13 +763,19 @@ public final class GoogleGroup {
      * google-trends-explore-related-topics (POST /google/trends/explore/related-topics).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExploreRelatedTopics(Map<String, Object> params) {
         return trendsExploreRelatedTopics(params, null);
     }
 
-    /** google-trends-explore-related-topics with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore-related-topics (POST /google/trends/explore/related-topics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExploreRelatedTopics(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore-related-topics", params);
         return client.request("google-trends-explore-related-topics", params, options);
@@ -563,13 +785,19 @@ public final class GoogleGroup {
      * google-trends-explore-rising-queries (POST /google/trends/explore/rising-queries).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExploreRisingQueries(Map<String, Object> params) {
         return trendsExploreRisingQueries(params, null);
     }
 
-    /** google-trends-explore-rising-queries with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore-rising-queries (POST /google/trends/explore/rising-queries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExploreRisingQueries(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore-rising-queries", params);
         return client.request("google-trends-explore-rising-queries", params, options);
@@ -579,13 +807,19 @@ public final class GoogleGroup {
      * google-trends-explore-top-queries (POST /google/trends/explore/top-queries).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsExploreTopQueries(Map<String, Object> params) {
         return trendsExploreTopQueries(params, null);
     }
 
-    /** google-trends-explore-top-queries with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-explore-top-queries (POST /google/trends/explore/top-queries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsExploreTopQueries(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-explore-top-queries", params);
         return client.request("google-trends-explore-top-queries", params, options);
@@ -595,19 +829,29 @@ public final class GoogleGroup {
      * google-trends-locations (GET /google/trends/locations).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsLocations(Map<String, Object> params) {
         return trendsLocations(params, null);
     }
 
-    /** google-trends-locations with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-locations (GET /google/trends/locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsLocations(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-locations", params);
         return client.request("google-trends-locations", params, options);
     }
 
-    /** google-trends-locations with no parameters. */
+    /**
+     * google-trends-locations (GET /google/trends/locations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsLocations() {
         return trendsLocations(Map.of(), null);
     }
@@ -616,19 +860,29 @@ public final class GoogleGroup {
      * google-trends-trending (GET /google/trends/trending).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsTrending(Map<String, Object> params) {
         return trendsTrending(params, null);
     }
 
-    /** google-trends-trending with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-trending (GET /google/trends/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsTrending(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-trending", params);
         return client.request("google-trends-trending", params, options);
     }
 
-    /** google-trends-trending with no parameters. */
+    /**
+     * google-trends-trending (GET /google/trends/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsTrending() {
         return trendsTrending(Map.of(), null);
     }
@@ -637,13 +891,19 @@ public final class GoogleGroup {
      * google-trends-trending-detail (POST /google/trends/trending/detail).
      *
      * @param params operation parameters
-     * @return the parsed response
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object trendsTrendingDetail(Map<String, Object> params) {
         return trendsTrendingDetail(params, null);
     }
 
-    /** google-trends-trending-detail with explicit {@link RequestOptions}. */
+    /**
+     * google-trends-trending-detail (POST /google/trends/trending/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
     public Object trendsTrendingDetail(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-trending-detail", params);
         return client.request("google-trends-trending-detail", params, options);
