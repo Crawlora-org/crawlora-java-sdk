@@ -1,5 +1,8 @@
 # Crawlora Java SDK
 
+[![Maven Central](https://img.shields.io/maven-central/v/net.crawlora/crawlora-sdk?label=Maven%20Central)](https://central.sonatype.com/artifact/net.crawlora/crawlora-sdk)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Java client for the public [Crawlora](https://crawlora.net) web-scraping API. It
 wraps every public endpoint with generated grouped helpers and a dynamic call
 interface, plus retries, pagination, middleware hooks, and client-side rate
@@ -12,6 +15,8 @@ JDK's `java.net.http.HttpClient` with a hand-written JSON parser).
 - Operation reference: [`docs/operations.md`](docs/operations.md) · recipes: [`docs/recipes.md`](docs/recipes.md)
 
 ## Install
+
+Published to [Maven Central](https://central.sonatype.com/artifact/net.crawlora/crawlora-sdk) under the `net.crawlora` namespace — no extra repository configuration needed.
 
 Maven:
 

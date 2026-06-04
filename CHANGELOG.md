@@ -2,7 +2,8 @@
 
 ## 1.5.0-sdk.1
 
-- Initial release of the Crawlora Java SDK.
+- Initial release of the Crawlora Java SDK, published to Maven Central under the
+  `net.crawlora` namespace (GPG-signed artifacts).
 - Generated grouped helpers (`client.bing().search(params)`, plus a typed
   `<Group>Group` class per group and a dynamic `client.groupOf(name).call(...)`)
   and dynamic `request`/`operation` calls for every public operation, generated
