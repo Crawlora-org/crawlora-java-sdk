@@ -24,14 +24,14 @@ Maven:
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-sdk</artifactId>
-  <version>1.5.0-sdk.1</version>
+  <version>1.5.0-sdk.2</version>
 </dependency>
 ```
 
 Gradle:
 
 ```groovy
-implementation "net.crawlora:crawlora-sdk:1.5.0-sdk.1"
+implementation "net.crawlora:crawlora-sdk:1.5.0-sdk.2"
 ```
 
 ## Quick start

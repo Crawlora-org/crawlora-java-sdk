@@ -2,14 +2,16 @@
 
 ## 1.5.0-sdk.2
 
+- First publication to **Maven Central** (`net.crawlora:crawlora-sdk`),
+  GPG-signed with sources and javadoc jars; also on GitHub Packages.
 - Packaging: expand the Maven `<description>` for a richer package listing, set
   the project URL to https://crawlora.net/, and fix the `<scm>` URLs to point at
   the `Crawlora-org` GitHub organization. No client or API changes.
 
 ## 1.5.0-sdk.1
 
-- Initial release of the Crawlora Java SDK, published to Maven Central under the
-  `net.crawlora` namespace (GPG-signed artifacts).
+- Initial release of the Crawlora Java SDK in the `net.crawlora` namespace
+  (published to GitHub Packages; Maven Central publication followed in sdk.2).
 - Generated grouped helpers (`client.bing().search(params)`, plus a typed
   `<Group>Group` class per group and a dynamic `client.groupOf(name).call(...)`)
   and dynamic `request`/`operation` calls for every public operation, generated
