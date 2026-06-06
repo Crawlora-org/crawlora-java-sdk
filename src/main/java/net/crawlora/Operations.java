@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 336;
+    public static final int OPERATION_COUNT = 338;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -1501,6 +1501,23 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("google-news", new Operation(
+            "google-news",
+            "GET",
+            "/google/news",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("count", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("google-search", new Operation(
             "google-search",
             "POST",
@@ -1670,6 +1687,23 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("google-videos", new Operation(
+            "google-videos",
+            "GET",
+            "/google/videos",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("count", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("googleplay-app", new Operation(
             "googleplay-app",
             "GET",
@@ -1764,6 +1798,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("googleplay-reviews", new Operation(
             "googleplay-reviews",
             "GET",
@@ -1801,9 +1838,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("googleplay-similar", new Operation(
             "googleplay-similar",
             "GET",
@@ -2638,6 +2672,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("shop-app-shop", new Operation(
             "shop-app-shop",
             "GET",
@@ -2665,9 +2702,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("shop-app-shop-locations", new Operation(
             "shop-app-shop-locations",
             "GET",
@@ -3578,6 +3612,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("tiktok-explore", new Operation(
             "tiktok-explore",
             "GET",
@@ -3602,9 +3639,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("tiktok-challenge-list", new Operation(
             "tiktok-challenge-list",
             "GET",
@@ -4450,6 +4484,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-capital-gains", new Operation(
             "yahoo-finance-ticker-capital-gains",
             "GET",
@@ -4474,9 +4511,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-earnings", new Operation(
             "yahoo-finance-ticker-earnings",
             "GET",
@@ -5116,6 +5150,7 @@ public final class Operations {
             group.put("jobs", "google-jobs");
             group.put("mapPlace", "google-map-place");
             group.put("mapSearch", "google-map-search");
+            group.put("news", "google-news");
             group.put("search", "google-search");
             group.put("suggest", "google-suggest");
             group.put("trendsCategories", "google-trends-categories");
@@ -5129,6 +5164,7 @@ public final class Operations {
             group.put("trendsLocations", "google-trends-locations");
             group.put("trendsTrending", "google-trends-trending");
             group.put("trendsTrendingDetail", "google-trends-trending-detail");
+            group.put("videos", "google-videos");
             g.put("google", Map.copyOf(group));
         }
         {

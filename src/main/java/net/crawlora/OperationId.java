@@ -108,6 +108,7 @@ public final class OperationId {
     public static final String GOOGLE_JOBS = "google-jobs";
     public static final String GOOGLE_MAP_PLACE = "google-map-place";
     public static final String GOOGLE_MAP_SEARCH = "google-map-search";
+    public static final String GOOGLE_NEWS = "google-news";
     public static final String GOOGLE_PLAY_APP = "googleplay-app";
     public static final String GOOGLE_PLAY_CATEGORIES = "googleplay-categories";
     public static final String GOOGLE_PLAY_DATASAFETY = "googleplay-datasafety";
@@ -131,6 +132,7 @@ public final class OperationId {
     public static final String GOOGLE_TRENDS_LOCATIONS = "google-trends-locations";
     public static final String GOOGLE_TRENDS_TRENDING = "google-trends-trending";
     public static final String GOOGLE_TRENDS_TRENDING_DETAIL = "google-trends-trending-detail";
+    public static final String GOOGLE_VIDEOS = "google-videos";
     public static final String INSTAGRAM_POST = "instagram-post";
     public static final String INSTAGRAM_PROFILE = "instagram-profile";
     public static final String INSTAGRAM_REELS = "instagram-reels";

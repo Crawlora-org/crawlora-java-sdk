@@ -588,6 +588,28 @@ public final class GoogleGroup {
     }
 
     /**
+     * google-news (GET /google/news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params) {
+        return news(params, null);
+    }
+
+    /**
+     * google-news (GET /google/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("google-news", params);
+        return client.request("google-news", params, options);
+    }
+
+    /**
      * google-search (POST /google/search).
      *
      * @param params operation parameters
@@ -907,6 +929,28 @@ public final class GoogleGroup {
     public Object trendsTrendingDetail(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("google-trends-trending-detail", params);
         return client.request("google-trends-trending-detail", params, options);
+    }
+
+    /**
+     * google-videos (GET /google/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params) {
+        return videos(params, null);
+    }
+
+    /**
+     * google-videos (GET /google/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("google-videos", params);
+        return client.request("google-videos", params, options);
     }
 
 }
