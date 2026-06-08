@@ -59,6 +59,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "boxOfficeMojo" operation group.
+     * @return a new {@link BoxOfficeMojoGroup} bound to this client
+     */
+    public BoxOfficeMojoGroup boxOfficeMojo() {
+        return new BoxOfficeMojoGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "brand" operation group.
      * @return a new {@link BrandGroup} bound to this client
      */
@@ -123,6 +131,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "imdb" operation group.
+     * @return a new {@link ImdbGroup} bound to this client
+     */
+    public ImdbGroup imdb() {
+        return new ImdbGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "instagram" operation group.
      * @return a new {@link InstagramGroup} bound to this client
      */
@@ -139,6 +155,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "kalshi" operation group.
+     * @return a new {@link KalshiGroup} bound to this client
+     */
+    public KalshiGroup kalshi() {
+        return new KalshiGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "linkedIn" operation group.
      * @return a new {@link LinkedInGroup} bound to this client
      */
@@ -147,11 +171,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "metaculus" operation group.
+     * @return a new {@link MetaculusGroup} bound to this client
+     */
+    public MetaculusGroup metaculus() {
+        return new MetaculusGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "meta" operation group.
      * @return a new {@link MetaGroup} bound to this client
      */
     public MetaGroup meta() {
         return new MetaGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "polymarket" operation group.
+     * @return a new {@link PolymarketGroup} bound to this client
+     */
+    public PolymarketGroup polymarket() {
+        return new PolymarketGroup((CrawloraClient) this);
     }
 
     /**
@@ -176,6 +216,14 @@ public abstract class ClientGroups {
      */
     public ReferralsGroup referrals() {
         return new ReferralsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "rottenTomatoes" operation group.
+     * @return a new {@link RottenTomatoesGroup} bound to this client
+     */
+    public RottenTomatoesGroup rottenTomatoes() {
+        return new RottenTomatoesGroup((CrawloraClient) this);
     }
 
     /**
