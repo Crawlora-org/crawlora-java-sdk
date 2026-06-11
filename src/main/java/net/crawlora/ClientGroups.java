@@ -91,6 +91,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "web" operation group.
+     * @return a new {@link WebGroup} bound to this client
+     */
+    public WebGroup web() {
+        return new WebGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "datasets" operation group.
      * @return a new {@link DatasetsGroup} bound to this client
      */
@@ -208,6 +216,14 @@ public abstract class ClientGroups {
      */
     public RedditGroup reddit() {
         return new RedditGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "redfin" operation group.
+     * @return a new {@link RedfinGroup} bound to this client
+     */
+    public RedfinGroup redfin() {
+        return new RedfinGroup((CrawloraClient) this);
     }
 
     /**

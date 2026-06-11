@@ -321,6 +321,11 @@ public final class OperationId {
     public static final String REDDIT_TRENDS = "reddit-trends";
     public static final String REDDIT_USER_COMMENTS = "reddit-user-comments";
     public static final String REDDIT_USER_POSTS = "reddit-user-posts";
+    public static final String REDFIN_ESTIMATE = "redfin-estimate";
+    public static final String REDFIN_PROPERTY = "redfin-property";
+    public static final String REDFIN_REGION_TRENDS = "redfin-region-trends";
+    public static final String REDFIN_SEARCH = "redfin-search";
+    public static final String REDFIN_SIMILAR = "redfin-similar";
     public static final String REFERRALS_CLICK = "referrals-click";
     public static final String REFERRALS_ME = "referrals-me";
     public static final String REFERRALS_ME_EVENTS = "referrals-me-events";
@@ -445,6 +450,9 @@ public final class OperationId {
     public static final String USER_ME_API_KEYS = "user-me-api-keys";
     public static final String USER_ME_API_KEYS_REVEAL = "user-me-api-keys-reveal";
     public static final String USER_ME_API_KEYS_ROTATE = "user-me-api-keys-rotate";
+    public static final String WEB_ANTIBOT_CHECK = "antibot-check";
+    public static final String WEB_CONTACT = "contact";
+    public static final String WEB_SCRAPE = "web-scrape";
     public static final String YAHOO_FINANCE_CALENDAR = "yahoo-finance-calendar";
     public static final String YAHOO_FINANCE_CALENDARS = "yahoo-finance-calendars";
     public static final String YAHOO_FINANCE_DOWNLOAD = "yahoo-finance-download";
