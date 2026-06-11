@@ -50,7 +50,13 @@ jobs:
       # GitHub Packages works with the built-in GITHUB_TOKEN — no external
       # account needed. The central-publishing plugin is confined to the
       # `release` profile, so a plain `deploy` only targets GitHub Packages.
+      # Best-effort/secondary mirror: GitHub Packages rejects re-deploying an
+      # existing release version (409), which would otherwise block a re-run /
+      # workflow_dispatch from ever reaching the canonical Maven Central step.
+      # continue-on-error keeps the release (and Central publish) green on those
+      # re-runs; a genuinely new version still publishes here on the first run.
       - name: Publish to GitHub Packages
+        continue-on-error: true
         run: >
           mvn -B -DskipTests deploy
           -s .github/settings.xml
