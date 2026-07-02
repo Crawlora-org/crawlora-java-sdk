@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 525;
+    public static final int OPERATION_COUNT = 529;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -1290,6 +1290,83 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("datasets-airbnb-markets-facets", new Operation(
+            "datasets-airbnb-markets-facets",
+            "GET",
+            "/datasets/airbnb-markets/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("superhost", false, "boolean", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_review_count", false, "integer", List.of()),
+            new QueryParam("active_since", false, "string", List.of()),
+            new QueryParam("min_listings", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-airbnb-markets-item", new Operation(
+            "datasets-airbnb-markets-item",
+            "GET",
+            "/datasets/airbnb-markets/items/{country}",
+            List.of("country"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-airbnb-markets-nearby", new Operation(
+            "datasets-airbnb-markets-nearby",
+            "GET",
+            "/datasets/airbnb-markets/nearby",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("radius_m", true, "integer", List.of()),
+            new QueryParam("precision", false, "integer", List.of()),
+            new QueryParam("min_listings", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("superhost", false, "boolean", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("active_since", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-airbnb-markets-search", new Operation(
+            "datasets-airbnb-markets-search",
+            "GET",
+            "/datasets/airbnb-markets/search",
+            List.of(),
+            List.of(
+            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("superhost", false, "boolean", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_review_count", false, "integer", List.of()),
+            new QueryParam("active_since", false, "string", List.of()),
+            new QueryParam("min_listings", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("datasets-apps-charts-search", new Operation(
             "datasets-apps-charts-search",
             "GET",
@@ -1856,6 +1933,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("github-search-users", new Operation(
             "github-search-users",
             "GET",
@@ -1913,9 +1993,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("github-user-events", new Operation(
             "github-user-events",
             "GET",
@@ -2683,6 +2760,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("imdb-title-awards", new Operation(
             "imdb-title-awards",
             "GET",
@@ -2741,9 +2821,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("imdb-title-filming-locations", new Operation(
             "imdb-title-filming-locations",
             "GET",
@@ -3563,6 +3640,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("linkedin-product", new Operation(
             "linkedin-product",
             "GET",
@@ -3614,9 +3694,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("metaculus-project-questions", new Operation(
             "metaculus-project-questions",
             "GET",
@@ -4405,6 +4482,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-related-tags", new Operation(
             "polymarket-related-tags",
             "GET",
@@ -4472,9 +4552,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-teams-by-partner", new Operation(
             "polymarket-teams-by-partner",
             "GET",
@@ -5276,6 +5353,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("shop-app-categories", new Operation(
             "shop-app-categories",
             "GET",
@@ -5327,9 +5407,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("shop-app-product-shop", new Operation(
             "shop-app-product-shop",
             "GET",
@@ -6200,6 +6277,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("spotify-section", new Operation(
             "spotify-section",
             "GET",
@@ -6260,9 +6340,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("spotify-track-similar-albums", new Operation(
             "spotify-track-similar-albums",
             "GET",
@@ -7086,6 +7163,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("start")));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-market-status", new Operation(
             "yahoo-finance-market-status",
             "GET",
@@ -7138,9 +7218,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-screeners", new Operation(
             "yahoo-finance-screeners",
             "GET",
@@ -7878,6 +7955,10 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("list", "datasets-list");
+            group.put("airbnbMarketsFacets", "datasets-airbnb-markets-facets");
+            group.put("airbnbMarketsItem", "datasets-airbnb-markets-item");
+            group.put("airbnbMarketsNearby", "datasets-airbnb-markets-nearby");
+            group.put("airbnbMarketsSearch", "datasets-airbnb-markets-search");
             group.put("appsChartsSearch", "datasets-apps-charts-search");
             group.put("appsReviewsSearch", "datasets-apps-reviews-search");
             group.put("appsSearch", "datasets-apps-search");
