@@ -50,6 +50,103 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-airbnb-markets-facets (GET /datasets/airbnb-markets/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsFacets(Map<String, Object> params) {
+        return airbnbMarketsFacets(params, null);
+    }
+
+    /**
+     * datasets-airbnb-markets-facets (GET /datasets/airbnb-markets/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-markets-facets", params);
+        return client.request("datasets-airbnb-markets-facets", params, options);
+    }
+
+    /**
+     * datasets-airbnb-markets-item (GET /datasets/airbnb-markets/items/{country}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsItem(Map<String, Object> params) {
+        return airbnbMarketsItem(params, null);
+    }
+
+    /**
+     * datasets-airbnb-markets-item (GET /datasets/airbnb-markets/items/{country}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-markets-item", params);
+        return client.request("datasets-airbnb-markets-item", params, options);
+    }
+
+    /**
+     * datasets-airbnb-markets-nearby (GET /datasets/airbnb-markets/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsNearby(Map<String, Object> params) {
+        return airbnbMarketsNearby(params, null);
+    }
+
+    /**
+     * datasets-airbnb-markets-nearby (GET /datasets/airbnb-markets/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-markets-nearby", params);
+        return client.request("datasets-airbnb-markets-nearby", params, options);
+    }
+
+    /**
+     * datasets-airbnb-markets-search (GET /datasets/airbnb-markets/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsSearch(Map<String, Object> params) {
+        return airbnbMarketsSearch(params, null);
+    }
+
+    /**
+     * datasets-airbnb-markets-search (GET /datasets/airbnb-markets/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-markets-search", params);
+        return client.request("datasets-airbnb-markets-search", params, options);
+    }
+
+    /**
+     * datasets-airbnb-markets-search (GET /datasets/airbnb-markets/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbMarketsSearch() {
+        return airbnbMarketsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-apps-charts-search (GET /datasets/apps-charts/search).
      *
      * @param params operation parameters

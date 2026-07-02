@@ -92,6 +92,10 @@ public final class OperationId {
     public static final String COIN_GECKO_TOKEN_UNLOCKS = "coingecko-token-unlocks";
     public static final String COIN_GECKO_TREASURIES = "coingecko-treasuries";
     public static final String COIN_GECKO_TRENDING = "coingecko-trending";
+    public static final String DATASETS_AIRBNB_MARKETS_FACETS = "datasets-airbnb-markets-facets";
+    public static final String DATASETS_AIRBNB_MARKETS_ITEM = "datasets-airbnb-markets-item";
+    public static final String DATASETS_AIRBNB_MARKETS_NEARBY = "datasets-airbnb-markets-nearby";
+    public static final String DATASETS_AIRBNB_MARKETS_SEARCH = "datasets-airbnb-markets-search";
     public static final String DATASETS_APPS_CHARTS_SEARCH = "datasets-apps-charts-search";
     public static final String DATASETS_APPS_REVIEWS_SEARCH = "datasets-apps-reviews-search";
     public static final String DATASETS_APPS_SEARCH = "datasets-apps-search";
