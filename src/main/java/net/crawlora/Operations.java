@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 499;
+    public static final int OPERATION_COUNT = 525;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -1290,6 +1290,208 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("datasets-apps-charts-search", new Operation(
+            "datasets-apps-charts-search",
+            "GET",
+            "/datasets/apps-charts/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("chart_type", false, "string", List.of()),
+            new QueryParam("collection", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("app_id", false, "string", List.of()),
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-apps-reviews-search", new Operation(
+            "datasets-apps-reviews-search",
+            "GET",
+            "/datasets/apps-reviews/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("app_id", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("min_score", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-apps-search", new Operation(
+            "datasets-apps-search",
+            "GET",
+            "/datasets/apps/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("developer", false, "string", List.of()),
+            new QueryParam("free", false, "boolean", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_reviews", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-creators-search", new Operation(
+            "datasets-creators-search",
+            "GET",
+            "/datasets/creators/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("handle", false, "string", List.of()),
+            new QueryParam("niche", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("verified", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("has_email", false, "boolean", List.of()),
+            new QueryParam("include_inactive", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-github-users-facets", new Operation(
+            "datasets-github-users-facets",
+            "GET",
+            "/datasets/github-users/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("login", false, "string", List.of()),
+            new QueryParam("company", false, "string", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("country_code", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of()),
+            new QueryParam("domain", false, "string", List.of()),
+            new QueryParam("has_email", false, "boolean", List.of()),
+            new QueryParam("has_twitter", false, "boolean", List.of()),
+            new QueryParam("has_blog", false, "boolean", List.of()),
+            new QueryParam("reachable", false, "boolean", List.of()),
+            new QueryParam("active_90d", false, "boolean", List.of()),
+            new QueryParam("hireable", false, "boolean", List.of()),
+            new QueryParam("is_org", false, "boolean", List.of()),
+            new QueryParam("is_bot", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("max_followers", false, "integer", List.of()),
+            new QueryParam("min_repos", false, "integer", List.of()),
+            new QueryParam("min_rank_score", false, "integer", List.of()),
+            new QueryParam("min_account_age_years", false, "number", List.of()),
+            new QueryParam("max_account_age_years", false, "number", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of()),
+            new QueryParam("radius_m", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-github-users-item", new Operation(
+            "datasets-github-users-item",
+            "GET",
+            "/datasets/github-users/items/{login}",
+            List.of("login"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-github-users-nearby", new Operation(
+            "datasets-github-users-nearby",
+            "GET",
+            "/datasets/github-users/nearby",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("radius_m", true, "integer", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("reachable", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-github-users-search", new Operation(
+            "datasets-github-users-search",
+            "GET",
+            "/datasets/github-users/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("login", false, "string", List.of()),
+            new QueryParam("company", false, "string", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("country_code", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of()),
+            new QueryParam("domain", false, "string", List.of()),
+            new QueryParam("has_email", false, "boolean", List.of()),
+            new QueryParam("has_twitter", false, "boolean", List.of()),
+            new QueryParam("has_blog", false, "boolean", List.of()),
+            new QueryParam("reachable", false, "boolean", List.of()),
+            new QueryParam("active_90d", false, "boolean", List.of()),
+            new QueryParam("hireable", false, "boolean", List.of()),
+            new QueryParam("is_org", false, "boolean", List.of()),
+            new QueryParam("is_bot", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("max_followers", false, "integer", List.of()),
+            new QueryParam("min_repos", false, "integer", List.of()),
+            new QueryParam("min_rank_score", false, "integer", List.of()),
+            new QueryParam("min_account_age_years", false, "number", List.of()),
+            new QueryParam("max_account_age_years", false, "number", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of()),
+            new QueryParam("radius_m", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("datasets-google-map-businesses-facets", new Operation(
             "datasets-google-map-businesses-facets",
             "GET",
@@ -1526,6 +1728,236 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("github-org", new Operation(
+            "github-org",
+            "GET",
+            "/github/org/{org}",
+            List.of("org"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-org-repos", new Operation(
+            "github-org-repos",
+            "GET",
+            "/github/org/{org}/repos",
+            List.of("org"),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("created", "updated", "pushed", "full_name")),
+            new QueryParam("direction", false, "string", List.of("asc", "desc")),
+            new QueryParam("type", false, "string", List.of("all", "public", "forks", "sources", "member")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-repo", new Operation(
+            "github-repo",
+            "GET",
+            "/github/repo/{owner}/{repo}",
+            List.of("owner", "repo"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-repo-contributors", new Operation(
+            "github-repo-contributors",
+            "GET",
+            "/github/repo/{owner}/{repo}/contributors",
+            List.of("owner", "repo"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-repo-forks", new Operation(
+            "github-repo-forks",
+            "GET",
+            "/github/repo/{owner}/{repo}/forks",
+            List.of("owner", "repo"),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("newest", "oldest", "stargazers", "watchers")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-repo-languages", new Operation(
+            "github-repo-languages",
+            "GET",
+            "/github/repo/{owner}/{repo}/languages",
+            List.of("owner", "repo"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-repo-releases", new Operation(
+            "github-repo-releases",
+            "GET",
+            "/github/repo/{owner}/{repo}/releases",
+            List.of("owner", "repo"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-repo-stargazers", new Operation(
+            "github-repo-stargazers",
+            "GET",
+            "/github/repo/{owner}/{repo}/stargazers",
+            List.of("owner", "repo"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-search-repositories", new Operation(
+            "github-search-repositories",
+            "GET",
+            "/github/search/repositories",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("stars", "forks", "help-wanted-issues", "updated")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-search-users", new Operation(
+            "github-search-users",
+            "GET",
+            "/github/search/users",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("followers", "repositories", "joined")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-trending", new Operation(
+            "github-trending",
+            "GET",
+            "/github/trending",
+            List.of(),
+            List.of(
+            new QueryParam("language", false, "string", List.of()),
+            new QueryParam("since", false, "string", List.of("daily", "weekly", "monthly"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-trending-developers", new Operation(
+            "github-trending-developers",
+            "GET",
+            "/github/trending/developers",
+            List.of(),
+            List.of(
+            new QueryParam("language", false, "string", List.of()),
+            new QueryParam("since", false, "string", List.of("daily", "weekly", "monthly"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-user", new Operation(
+            "github-user",
+            "GET",
+            "/github/user/{username}",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
+        m.put("github-user-events", new Operation(
+            "github-user-events",
+            "GET",
+            "/github/user/{username}/events",
+            List.of("username"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("github-user-pinned", new Operation(
+            "github-user-pinned",
+            "GET",
+            "/github/user/{username}/pinned",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("github-user-repos", new Operation(
+            "github-user-repos",
+            "GET",
+            "/github/user/{username}/repos",
+            List.of("username"),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("created", "updated", "pushed", "full_name")),
+            new QueryParam("direction", false, "string", List.of("asc", "desc")),
+            new QueryParam("type", false, "string", List.of("all", "owner", "member")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("google-finance-analyst-articles", new Operation(
             "google-finance-analyst-articles",
@@ -1792,9 +2224,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("google-map-place", new Operation(
             "google-map-place",
             "GET",
@@ -2312,6 +2741,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("imdb-title-filming-locations", new Operation(
             "imdb-title-filming-locations",
             "GET",
@@ -2663,9 +3095,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("justwatch-search", new Operation(
             "justwatch-search",
             "GET",
@@ -3185,6 +3614,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("metaculus-project-questions", new Operation(
             "metaculus-project-questions",
             "GET",
@@ -3525,9 +3957,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("polymarket-games", new Operation(
             "polymarket-games",
             "GET",
@@ -4043,6 +4472,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-teams-by-partner", new Operation(
             "polymarket-teams-by-partner",
             "GET",
@@ -4366,9 +4798,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("producthunt-reviews", new Operation(
             "producthunt-reviews",
             "GET",
@@ -4418,7 +4847,8 @@ public final class Operations {
             List.of(
             new QueryParam("sort", false, "string", List.of("confidence", "top", "new", "controversial", "old", "qa")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("depth", false, "integer", List.of())),
+            new QueryParam("depth", false, "integer", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4434,7 +4864,8 @@ public final class Operations {
             new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4446,7 +4877,8 @@ public final class Operations {
             "GET",
             "/reddit/post/{id}",
             List.of("id"),
-            List.of(),
+            List.of(
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4464,7 +4896,8 @@ public final class Operations {
             new QueryParam("sort", false, "string", List.of("relevance", "hot", "new", "top", "comments")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4477,7 +4910,8 @@ public final class Operations {
             "/reddit/subreddit/{subreddit}/about",
             List.of("subreddit"),
             List.of(
-            new QueryParam("limit", false, "integer", List.of())),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4491,7 +4925,8 @@ public final class Operations {
             List.of("subreddit"),
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4507,7 +4942,8 @@ public final class Operations {
             new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4524,7 +4960,8 @@ public final class Operations {
             new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4540,7 +4977,8 @@ public final class Operations {
             new QueryParam("sort", false, "string", List.of("hot", "new", "rising", "top")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4554,7 +4992,8 @@ public final class Operations {
             List.of("username"),
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4568,7 +5007,8 @@ public final class Operations {
             List.of("username"),
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("after", false, "string", List.of())),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("with_scores", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -4887,6 +5327,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("shop-app-product-shop", new Operation(
             "shop-app-product-shop",
             "GET",
@@ -5222,9 +5665,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("spotify-podcasts-categories", new Operation(
             "spotify-podcasts-categories",
             "GET",
@@ -5820,6 +6260,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("spotify-track-similar-albums", new Operation(
             "spotify-track-similar-albums",
             "GET",
@@ -5932,23 +6375,6 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
-            List.of()));
-        m.put("tiktok-popular-trend-creator", new Operation(
-            "tiktok-popular-trend-creator",
-            "GET",
-            "/tiktok/popular-trend/creator",
-            List.of(),
-            List.of(
-            new QueryParam("page", false, "integer", List.of()),
-            new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("sort_by", false, "string", List.of("follower", "engagement", "avg_views")),
-            new QueryParam("creator_country", false, "string", List.of()),
-            new QueryParam("audience_count", false, "integer", List.of("1", "2", "3", "4"))),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            true,
             List.of()));
         m.put("tiktok-post", new Operation(
             "tiktok-post",
@@ -6164,9 +6590,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("tiktok-top-ads-suggestions", new Operation(
             "tiktok-top-ads-suggestions",
             "GET",
@@ -6543,6 +6966,44 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("x-post", new Operation(
+            "x-post",
+            "GET",
+            "/x/post/{id}",
+            List.of("id"),
+            List.of(
+            new QueryParam("username", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("x-profile", new Operation(
+            "x-profile",
+            "GET",
+            "/x/profile/{username}",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("x-profile-posts", new Operation(
+            "x-profile-posts",
+            "GET",
+            "/x/profile/{username}/posts",
+            List.of("username"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("yahoo-finance-calendars", new Operation(
             "yahoo-finance-calendars",
             "GET",
@@ -6677,6 +7138,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-screeners", new Operation(
             "yahoo-finance-screeners",
             "GET",
@@ -7013,9 +7477,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-sustainability", new Operation(
             "yahoo-finance-ticker-sustainability",
             "GET",
@@ -7417,6 +7878,14 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("list", "datasets-list");
+            group.put("appsChartsSearch", "datasets-apps-charts-search");
+            group.put("appsReviewsSearch", "datasets-apps-reviews-search");
+            group.put("appsSearch", "datasets-apps-search");
+            group.put("creatorsSearch", "datasets-creators-search");
+            group.put("githubUsersFacets", "datasets-github-users-facets");
+            group.put("githubUsersItem", "datasets-github-users-item");
+            group.put("githubUsersNearby", "datasets-github-users-nearby");
+            group.put("githubUsersSearch", "datasets-github-users-search");
             group.put("googleMapBusinessesFacets", "datasets-google-map-businesses-facets");
             group.put("googleMapBusinessesItem", "datasets-google-map-businesses-item");
             group.put("googleMapBusinessesNearby", "datasets-google-map-businesses-nearby");
@@ -7439,6 +7908,26 @@ public final class Operations {
             group.put("reverse", "geocoding-reverse");
             group.put("search", "geocoding-search");
             g.put("geocoding", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("githubOrg", "github-org");
+            group.put("githubOrgRepos", "github-org-repos");
+            group.put("githubRepo", "github-repo");
+            group.put("githubRepoContributors", "github-repo-contributors");
+            group.put("githubRepoForks", "github-repo-forks");
+            group.put("githubRepoLanguages", "github-repo-languages");
+            group.put("githubRepoReleases", "github-repo-releases");
+            group.put("githubRepoStargazers", "github-repo-stargazers");
+            group.put("githubSearchRepositories", "github-search-repositories");
+            group.put("githubSearchUsers", "github-search-users");
+            group.put("githubTrending", "github-trending");
+            group.put("githubTrendingDevelopers", "github-trending-developers");
+            group.put("githubUser", "github-user");
+            group.put("githubUserEvents", "github-user-events");
+            group.put("githubUserPinned", "github-user-pinned");
+            group.put("githubUserRepos", "github-user-repos");
+            g.put("gitHub", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -7827,7 +8316,6 @@ public final class Operations {
             group.put("challenge", "tiktok-challenge");
             group.put("challengeList", "tiktok-challenge-list");
             group.put("popularTrendCountryIndustryMeta", "tiktok-popular-trend-country-industry-meta");
-            group.put("popularTrendCreator", "tiktok-popular-trend-creator");
             group.put("post", "tiktok-post");
             group.put("profilePost", "tiktok-profile-post");
             group.put("profile", "tiktok-profile");
@@ -7883,6 +8371,13 @@ public final class Operations {
             group.put("meApiKeysRotate", "user-me-api-keys-rotate");
             group.put("meApiKeysReveal", "user-me-api-keys-reveal");
             g.put("user", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("post", "x-post");
+            group.put("profile", "x-profile");
+            group.put("profilePosts", "x-profile-posts");
+            g.put("x", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();

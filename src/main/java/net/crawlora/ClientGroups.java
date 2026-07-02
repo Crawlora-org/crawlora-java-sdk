@@ -123,6 +123,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "gitHub" operation group.
+     * @return a new {@link GitHubGroup} bound to this client
+     */
+    public GitHubGroup gitHub() {
+        return new GitHubGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "google" operation group.
      * @return a new {@link GoogleGroup} bound to this client
      */
@@ -320,6 +328,14 @@ public abstract class ClientGroups {
      */
     public UserGroup user() {
         return new UserGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "x" operation group.
+     * @return a new {@link XGroup} bound to this client
+     */
+    public XGroup x() {
+        return new XGroup((CrawloraClient) this);
     }
 
     /**

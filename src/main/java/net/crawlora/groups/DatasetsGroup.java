@@ -50,6 +50,227 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-apps-charts-search (GET /datasets/apps-charts/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsSearch(Map<String, Object> params) {
+        return appsChartsSearch(params, null);
+    }
+
+    /**
+     * datasets-apps-charts-search (GET /datasets/apps-charts/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-charts-search", params);
+        return client.request("datasets-apps-charts-search", params, options);
+    }
+
+    /**
+     * datasets-apps-charts-search (GET /datasets/apps-charts/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsSearch() {
+        return appsChartsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-apps-reviews-search (GET /datasets/apps-reviews/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsSearch(Map<String, Object> params) {
+        return appsReviewsSearch(params, null);
+    }
+
+    /**
+     * datasets-apps-reviews-search (GET /datasets/apps-reviews/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-reviews-search", params);
+        return client.request("datasets-apps-reviews-search", params, options);
+    }
+
+    /**
+     * datasets-apps-reviews-search (GET /datasets/apps-reviews/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsSearch() {
+        return appsReviewsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-apps-search (GET /datasets/apps/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsSearch(Map<String, Object> params) {
+        return appsSearch(params, null);
+    }
+
+    /**
+     * datasets-apps-search (GET /datasets/apps/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-search", params);
+        return client.request("datasets-apps-search", params, options);
+    }
+
+    /**
+     * datasets-apps-search (GET /datasets/apps/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsSearch() {
+        return appsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-creators-search (GET /datasets/creators/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsSearch(Map<String, Object> params) {
+        return creatorsSearch(params, null);
+    }
+
+    /**
+     * datasets-creators-search (GET /datasets/creators/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-creators-search", params);
+        return client.request("datasets-creators-search", params, options);
+    }
+
+    /**
+     * datasets-creators-search (GET /datasets/creators/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsSearch() {
+        return creatorsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-github-users-facets (GET /datasets/github-users/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersFacets(Map<String, Object> params) {
+        return githubUsersFacets(params, null);
+    }
+
+    /**
+     * datasets-github-users-facets (GET /datasets/github-users/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-github-users-facets", params);
+        return client.request("datasets-github-users-facets", params, options);
+    }
+
+    /**
+     * datasets-github-users-item (GET /datasets/github-users/items/{login}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersItem(Map<String, Object> params) {
+        return githubUsersItem(params, null);
+    }
+
+    /**
+     * datasets-github-users-item (GET /datasets/github-users/items/{login}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-github-users-item", params);
+        return client.request("datasets-github-users-item", params, options);
+    }
+
+    /**
+     * datasets-github-users-nearby (GET /datasets/github-users/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersNearby(Map<String, Object> params) {
+        return githubUsersNearby(params, null);
+    }
+
+    /**
+     * datasets-github-users-nearby (GET /datasets/github-users/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-github-users-nearby", params);
+        return client.request("datasets-github-users-nearby", params, options);
+    }
+
+    /**
+     * datasets-github-users-search (GET /datasets/github-users/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersSearch(Map<String, Object> params) {
+        return githubUsersSearch(params, null);
+    }
+
+    /**
+     * datasets-github-users-search (GET /datasets/github-users/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-github-users-search", params);
+        return client.request("datasets-github-users-search", params, options);
+    }
+
+    /**
+     * datasets-github-users-search (GET /datasets/github-users/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUsersSearch() {
+        return githubUsersSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-google-map-businesses-facets (GET /datasets/google-map-businesses/facets).
      *
      * @param params operation parameters

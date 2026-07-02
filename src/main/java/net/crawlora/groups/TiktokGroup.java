@@ -169,37 +169,6 @@ public final class TiktokGroup {
     }
 
     /**
-     * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object popularTrendCreator(Map<String, Object> params) {
-        return popularTrendCreator(params, null);
-    }
-
-    /**
-     * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object popularTrendCreator(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("tiktok-popular-trend-creator", params);
-        return client.request("tiktok-popular-trend-creator", params, options);
-    }
-
-    /**
-     * tiktok-popular-trend-creator (GET /tiktok/popular-trend/creator). with no parameters.
-     *
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object popularTrendCreator() {
-        return popularTrendCreator(Map.of(), null);
-    }
-
-    /**
      * tiktok-post (GET /tiktok/post/{id}).
      *
      * @param params operation parameters
