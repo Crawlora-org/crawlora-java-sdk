@@ -26,6 +26,16 @@ Object posts = client.reddit().search(Map.of("q", "java", "subreddit", "programm
 Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 ```
 
+## Airbnb Host Profiles
+
+Look up a public Airbnb host, then page through their listings and guest reviews.
+
+```java
+Object host = client.airbnb().host(Map.of("id", "65056940"));
+Object listings = client.airbnb().hostListings(Map.of("id", "65056940", "page", 1));
+Object reviews = client.airbnb().hostReviews(Map.of("id", "65056940", "page", 1));
+```
+
 ## Retries and Retry-After
 
 ```java

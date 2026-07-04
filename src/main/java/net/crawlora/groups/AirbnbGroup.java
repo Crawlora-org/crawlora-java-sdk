@@ -19,6 +19,72 @@ public final class AirbnbGroup {
     }
 
     /**
+     * airbnb-host (GET /airbnb/host/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object host(Map<String, Object> params) {
+        return host(params, null);
+    }
+
+    /**
+     * airbnb-host (GET /airbnb/host/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object host(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("airbnb-host", params);
+        return client.request("airbnb-host", params, options);
+    }
+
+    /**
+     * airbnb-host-listings (GET /airbnb/host/{id}/listings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hostListings(Map<String, Object> params) {
+        return hostListings(params, null);
+    }
+
+    /**
+     * airbnb-host-listings (GET /airbnb/host/{id}/listings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hostListings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("airbnb-host-listings", params);
+        return client.request("airbnb-host-listings", params, options);
+    }
+
+    /**
+     * airbnb-host-reviews (GET /airbnb/host/{id}/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hostReviews(Map<String, Object> params) {
+        return hostReviews(params, null);
+    }
+
+    /**
+     * airbnb-host-reviews (GET /airbnb/host/{id}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hostReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("airbnb-host-reviews", params);
+        return client.request("airbnb-host-reviews", params, options);
+    }
+
+    /**
      * airbnb-room (GET /airbnb/room/{id}).
      *
      * @param params operation parameters
