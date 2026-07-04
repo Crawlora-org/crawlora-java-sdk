@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 529;
+    public static final int OPERATION_COUNT = 532;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -38,6 +38,44 @@ public final class Operations {
     }
 
     private static void putOperations0(Map<String, Operation> m) {
+        m.put("airbnb-host", new Operation(
+            "airbnb-host",
+            "GET",
+            "/airbnb/host/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("airbnb-host-listings", new Operation(
+            "airbnb-host-listings",
+            "GET",
+            "/airbnb/host/{id}/listings",
+            List.of("id"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("airbnb-host-reviews", new Operation(
+            "airbnb-host-reviews",
+            "GET",
+            "/airbnb/host/{id}/reviews",
+            List.of("id"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("airbnb-room", new Operation(
             "airbnb-room",
             "GET",
@@ -871,6 +909,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations1(Map<String, Operation> m) {
         m.put("brave-images", new Operation(
             "brave-images",
             "GET",
@@ -927,9 +968,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations1(Map<String, Operation> m) {
         m.put("brave-suggest", new Operation(
             "brave-suggest",
             "GET",
@@ -1587,6 +1625,7 @@ public final class Operations {
             new QueryParam("min_review_count", false, "integer", List.of()),
             new QueryParam("has_website", false, "boolean", List.of()),
             new QueryParam("has_phone", false, "boolean", List.of()),
+            new QueryParam("has_geo", false, "boolean", List.of()),
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
@@ -1646,6 +1685,7 @@ public final class Operations {
             new QueryParam("min_review_count", false, "integer", List.of()),
             new QueryParam("has_website", false, "boolean", List.of()),
             new QueryParam("has_phone", false, "boolean", List.of()),
+            new QueryParam("has_geo", false, "boolean", List.of()),
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
@@ -1888,6 +1928,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("github-repo-releases", new Operation(
             "github-repo-releases",
             "GET",
@@ -1933,9 +1976,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("github-search-users", new Operation(
             "github-search-users",
             "GET",
@@ -2718,6 +2758,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("imdb-name-credits", new Operation(
             "imdb-name-credits",
             "GET",
@@ -2760,9 +2803,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("imdb-title-awards", new Operation(
             "imdb-title-awards",
             "GET",
@@ -3599,6 +3639,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("kalshi-series-detail", new Operation(
             "kalshi-series-detail",
             "GET",
@@ -3640,9 +3683,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("linkedin-product", new Operation(
             "linkedin-product",
             "GET",
@@ -4438,6 +4478,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-related-tags-by-slug", new Operation(
             "polymarket-related-tags-by-slug",
             "GET",
@@ -4482,9 +4525,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-related-tags", new Operation(
             "polymarket-related-tags",
             "GET",
@@ -5308,6 +5348,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("rottentomatoes-season", new Operation(
             "rottentomatoes-season",
             "GET",
@@ -5353,9 +5396,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("shop-app-categories", new Operation(
             "shop-app-categories",
             "GET",
@@ -6216,6 +6256,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("spotify-profile-playlists", new Operation(
             "spotify-profile-playlists",
             "GET",
@@ -6277,9 +6320,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("spotify-section", new Operation(
             "spotify-section",
             "GET",
@@ -7123,6 +7163,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-industries", new Operation(
             "yahoo-finance-industries",
             "GET",
@@ -7163,9 +7206,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("start")));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("yahoo-finance-market-status", new Operation(
             "yahoo-finance-market-status",
             "GET",
@@ -7824,6 +7864,9 @@ public final class Operations {
         Map<String, Map<String, String>> g = new LinkedHashMap<>();
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("host", "airbnb-host");
+            group.put("hostListings", "airbnb-host-listings");
+            group.put("hostReviews", "airbnb-host-reviews");
             group.put("room", "airbnb-room");
             group.put("roomCalendar", "airbnb-room-calendar");
             group.put("roomReviews", "airbnb-room-reviews");

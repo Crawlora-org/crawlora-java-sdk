@@ -9,6 +9,9 @@ package net.crawlora;
 public final class OperationId {
     private OperationId() {}
 
+    public static final String AIRBNB_HOST = "airbnb-host";
+    public static final String AIRBNB_HOST_LISTINGS = "airbnb-host-listings";
+    public static final String AIRBNB_HOST_REVIEWS = "airbnb-host-reviews";
     public static final String AIRBNB_ROOM = "airbnb-room";
     public static final String AIRBNB_ROOM_CALENDAR = "airbnb-room-calendar";
     public static final String AIRBNB_ROOM_REVIEWS = "airbnb-room-reviews";
