@@ -464,4 +464,207 @@ public final class DatasetsGroup {
         return googleMapBusinessesSearch(Map.of(), null);
     }
 
+    /**
+     * datasets-producthunt-makers-facets (GET /datasets/producthunt-makers/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersFacets(Map<String, Object> params) {
+        return producthuntMakersFacets(params, null);
+    }
+
+    /**
+     * datasets-producthunt-makers-facets (GET /datasets/producthunt-makers/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-makers-facets", params);
+        return client.request("datasets-producthunt-makers-facets", params, options);
+    }
+
+    /**
+     * datasets-producthunt-makers-item (GET /datasets/producthunt-makers/items/{username}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersItem(Map<String, Object> params) {
+        return producthuntMakersItem(params, null);
+    }
+
+    /**
+     * datasets-producthunt-makers-item (GET /datasets/producthunt-makers/items/{username}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-makers-item", params);
+        return client.request("datasets-producthunt-makers-item", params, options);
+    }
+
+    /**
+     * datasets-producthunt-makers-search (GET /datasets/producthunt-makers/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersSearch(Map<String, Object> params) {
+        return producthuntMakersSearch(params, null);
+    }
+
+    /**
+     * datasets-producthunt-makers-search (GET /datasets/producthunt-makers/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-makers-search", params);
+        return client.request("datasets-producthunt-makers-search", params, options);
+    }
+
+    /**
+     * datasets-producthunt-makers-search (GET /datasets/producthunt-makers/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntMakersSearch() {
+        return producthuntMakersSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-producthunt-products-facets (GET /datasets/producthunt-products/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsFacets(Map<String, Object> params) {
+        return producthuntProductsFacets(params, null);
+    }
+
+    /**
+     * datasets-producthunt-products-facets (GET /datasets/producthunt-products/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-products-facets", params);
+        return client.request("datasets-producthunt-products-facets", params, options);
+    }
+
+    /**
+     * datasets-producthunt-products-item (GET /datasets/producthunt-products/items/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsItem(Map<String, Object> params) {
+        return producthuntProductsItem(params, null);
+    }
+
+    /**
+     * datasets-producthunt-products-item (GET /datasets/producthunt-products/items/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-products-item", params);
+        return client.request("datasets-producthunt-products-item", params, options);
+    }
+
+    /**
+     * datasets-producthunt-products-search (GET /datasets/producthunt-products/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsSearch(Map<String, Object> params) {
+        return producthuntProductsSearch(params, null);
+    }
+
+    /**
+     * datasets-producthunt-products-search (GET /datasets/producthunt-products/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-products-search", params);
+        return client.request("datasets-producthunt-products-search", params, options);
+    }
+
+    /**
+     * datasets-producthunt-products-search (GET /datasets/producthunt-products/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntProductsSearch() {
+        return producthuntProductsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-producthunt-trends-facets (GET /datasets/producthunt-trends/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntTrendsFacets(Map<String, Object> params) {
+        return producthuntTrendsFacets(params, null);
+    }
+
+    /**
+     * datasets-producthunt-trends-facets (GET /datasets/producthunt-trends/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntTrendsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-trends-facets", params);
+        return client.request("datasets-producthunt-trends-facets", params, options);
+    }
+
+    /**
+     * datasets-producthunt-trends-search (GET /datasets/producthunt-trends/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntTrendsSearch(Map<String, Object> params) {
+        return producthuntTrendsSearch(params, null);
+    }
+
+    /**
+     * datasets-producthunt-trends-search (GET /datasets/producthunt-trends/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntTrendsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-producthunt-trends-search", params);
+        return client.request("datasets-producthunt-trends-search", params, options);
+    }
+
+    /**
+     * datasets-producthunt-trends-search (GET /datasets/producthunt-trends/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object producthuntTrendsSearch() {
+        return producthuntTrendsSearch(Map.of(), null);
+    }
+
 }

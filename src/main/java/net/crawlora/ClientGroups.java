@@ -83,6 +83,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "chromeWebStore" operation group.
+     * @return a new {@link ChromeWebStoreGroup} bound to this client
+     */
+    public ChromeWebStoreGroup chromeWebStore() {
+        return new ChromeWebStoreGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "coinGecko" operation group.
      * @return a new {@link CoinGeckoGroup} bound to this client
      */
@@ -112,6 +120,14 @@ public abstract class ClientGroups {
      */
     public EBayGroup eBay() {
         return new EBayGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "espn" operation group.
+     * @return a new {@link EspnGroup} bound to this client
+     */
+    public EspnGroup espn() {
+        return new EspnGroup((CrawloraClient) this);
     }
 
     /**
