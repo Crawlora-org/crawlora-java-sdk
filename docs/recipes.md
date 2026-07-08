@@ -36,6 +36,18 @@ Object listings = client.airbnb().hostListings(Map.of("id", "65056940", "page", 
 Object reviews = client.airbnb().hostReviews(Map.of("id", "65056940", "page", 1));
 ```
 
+## TrustMRR Verified Startup Revenues
+
+Browse verified startup revenues and the acquisition marketplace on TrustMRR: the marketplace snapshot, the revenue leaderboard, startup detail, and categories.
+
+```java
+Object deals = client.trustMrr().trustmrrMarketplace(Map.of());
+Object board = client.trustMrr().trustmrrLeaderboard(Map.of("metric", "mrr"));
+Object startup = client.trustMrr().trustmrrStartup(Map.of("slug", "stan"));
+Object cats = client.trustMrr().trustmrrCategories(Map.of());
+Object saas = client.trustMrr().trustmrrCategory(Map.of("slug", "saas"));
+```
+
 ## Retries and Retry-After
 
 ```java

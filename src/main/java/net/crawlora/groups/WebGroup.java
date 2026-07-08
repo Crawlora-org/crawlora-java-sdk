@@ -84,4 +84,26 @@ public final class WebGroup {
         return client.request("web-scrape", params, options);
     }
 
+    /**
+     * web-techstack (POST /web/techstack).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstack(Map<String, Object> params) {
+        return techstack(params, null);
+    }
+
+    /**
+     * web-techstack (POST /web/techstack). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstack(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("web-techstack", params);
+        return client.request("web-techstack", params, options);
+    }
+
 }
