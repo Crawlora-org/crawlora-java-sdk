@@ -125,6 +125,28 @@ public final class ChromeWebStoreGroup {
     }
 
     /**
+     * chromewebstore-developer (GET /chromewebstore/developer).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstoreDeveloper(Map<String, Object> params) {
+        return chromewebstoreDeveloper(params, null);
+    }
+
+    /**
+     * chromewebstore-developer (GET /chromewebstore/developer). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstoreDeveloper(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chromewebstore-developer", params);
+        return client.request("chromewebstore-developer", params, options);
+    }
+
+    /**
      * chromewebstore-item (GET /chromewebstore/item).
      *
      * @param params operation parameters
@@ -144,6 +166,50 @@ public final class ChromeWebStoreGroup {
     public Object chromewebstoreItem(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("chromewebstore-item", params);
         return client.request("chromewebstore-item", params, options);
+    }
+
+    /**
+     * chromewebstore-permissions (GET /chromewebstore/permissions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstorePermissions(Map<String, Object> params) {
+        return chromewebstorePermissions(params, null);
+    }
+
+    /**
+     * chromewebstore-permissions (GET /chromewebstore/permissions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstorePermissions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chromewebstore-permissions", params);
+        return client.request("chromewebstore-permissions", params, options);
+    }
+
+    /**
+     * chromewebstore-privacy (GET /chromewebstore/privacy).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstorePrivacy(Map<String, Object> params) {
+        return chromewebstorePrivacy(params, null);
+    }
+
+    /**
+     * chromewebstore-privacy (GET /chromewebstore/privacy). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromewebstorePrivacy(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chromewebstore-privacy", params);
+        return client.request("chromewebstore-privacy", params, options);
     }
 
     /**
