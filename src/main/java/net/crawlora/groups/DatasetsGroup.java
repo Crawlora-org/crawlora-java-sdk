@@ -667,4 +667,154 @@ public final class DatasetsGroup {
         return producthuntTrendsSearch(Map.of(), null);
     }
 
+    /**
+     * datasets-techstack-facets (GET /datasets/techstack/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackFacets(Map<String, Object> params) {
+        return techstackFacets(params, null);
+    }
+
+    /**
+     * datasets-techstack-facets (GET /datasets/techstack/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-techstack-facets", params);
+        return client.request("datasets-techstack-facets", params, options);
+    }
+
+    /**
+     * datasets-techstack-item (GET /datasets/techstack/items/{domain}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackItem(Map<String, Object> params) {
+        return techstackItem(params, null);
+    }
+
+    /**
+     * datasets-techstack-item (GET /datasets/techstack/items/{domain}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-techstack-item", params);
+        return client.request("datasets-techstack-item", params, options);
+    }
+
+    /**
+     * datasets-techstack-search (GET /datasets/techstack/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackSearch(Map<String, Object> params) {
+        return techstackSearch(params, null);
+    }
+
+    /**
+     * datasets-techstack-search (GET /datasets/techstack/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-techstack-search", params);
+        return client.request("datasets-techstack-search", params, options);
+    }
+
+    /**
+     * datasets-techstack-search (GET /datasets/techstack/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object techstackSearch() {
+        return techstackSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-trustmrr-facets (GET /datasets/trustmrr/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrFacets(Map<String, Object> params) {
+        return trustmrrFacets(params, null);
+    }
+
+    /**
+     * datasets-trustmrr-facets (GET /datasets/trustmrr/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-trustmrr-facets", params);
+        return client.request("datasets-trustmrr-facets", params, options);
+    }
+
+    /**
+     * datasets-trustmrr-item (GET /datasets/trustmrr/items/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrItem(Map<String, Object> params) {
+        return trustmrrItem(params, null);
+    }
+
+    /**
+     * datasets-trustmrr-item (GET /datasets/trustmrr/items/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-trustmrr-item", params);
+        return client.request("datasets-trustmrr-item", params, options);
+    }
+
+    /**
+     * datasets-trustmrr-search (GET /datasets/trustmrr/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrSearch(Map<String, Object> params) {
+        return trustmrrSearch(params, null);
+    }
+
+    /**
+     * datasets-trustmrr-search (GET /datasets/trustmrr/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-trustmrr-search", params);
+        return client.request("datasets-trustmrr-search", params, options);
+    }
+
+    /**
+     * datasets-trustmrr-search (GET /datasets/trustmrr/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrSearch() {
+        return trustmrrSearch(Map.of(), null);
+    }
+
 }

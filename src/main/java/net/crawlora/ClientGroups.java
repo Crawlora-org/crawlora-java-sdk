@@ -219,6 +219,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "pitchBook" operation group.
+     * @return a new {@link PitchBookGroup} bound to this client
+     */
+    public PitchBookGroup pitchBook() {
+        return new PitchBookGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "polymarket" operation group.
      * @return a new {@link PolymarketGroup} bound to this client
      */
@@ -267,6 +275,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "secEdgar" operation group.
+     * @return a new {@link SecEdgarGroup} bound to this client
+     */
+    public SecEdgarGroup secEdgar() {
+        return new SecEdgarGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "shopApp" operation group.
      * @return a new {@link ShopAppGroup} bound to this client
      */
@@ -288,6 +304,14 @@ public abstract class ClientGroups {
      */
     public SimilarWebGroup similarWeb() {
         return new SimilarWebGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "sofaScore" operation group.
+     * @return a new {@link SofaScoreGroup} bound to this client
+     */
+    public SofaScoreGroup sofaScore() {
+        return new SofaScoreGroup((CrawloraClient) this);
     }
 
     /**
@@ -320,6 +344,14 @@ public abstract class ClientGroups {
      */
     public TripAdvisorGroup tripAdvisor() {
         return new TripAdvisorGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "trustMrr" operation group.
+     * @return a new {@link TrustMrrGroup} bound to this client
+     */
+    public TrustMrrGroup trustMrr() {
+        return new TrustMrrGroup((CrawloraClient) this);
     }
 
     /**
