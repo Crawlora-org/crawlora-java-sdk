@@ -2,7 +2,7 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `603`
+Total operations: `625`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -164,7 +164,6 @@ Total operations: `603`
 | gitHub | `gitHub.githubRepoForks` | `github-repo-forks` | `GET /github/repo/{owner}/{repo}/forks` | `owner` (path String required)<br>`repo` (path String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubRepoForksResponse` |  |
 | gitHub | `gitHub.githubRepoLanguages` | `github-repo-languages` | `GET /github/repo/{owner}/{repo}/languages` | `owner` (path String required)<br>`repo` (path String required) | `ApiKeyAuth` | `GitHubGithubRepoLanguagesResponse` |  |
 | gitHub | `gitHub.githubRepoReleases` | `github-repo-releases` | `GET /github/repo/{owner}/{repo}/releases` | `owner` (path String required)<br>`repo` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubRepoReleasesResponse` |  |
-| gitHub | `gitHub.githubRepoStargazers` | `github-repo-stargazers` | `GET /github/repo/{owner}/{repo}/stargazers` | `owner` (path String required)<br>`repo` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubRepoStargazersResponse` |  |
 | gitHub | `gitHub.githubSearchRepositories` | `github-search-repositories` | `GET /github/search/repositories` | `q` (query String required)<br>`sort` (query String)<br>`order` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubSearchRepositoriesResponse` |  |
 | gitHub | `gitHub.githubSearchUsers` | `github-search-users` | `GET /github/search/users` | `q` (query String required)<br>`sort` (query String)<br>`order` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubSearchUsersResponse` |  |
 | gitHub | `gitHub.githubTrending` | `github-trending` | `GET /github/trending` | `language` (query String)<br>`since` (query String) | `ApiKeyAuth` | `GitHubGithubTrendingResponse` |  |
@@ -243,6 +242,17 @@ Total operations: `603`
 | instagram | `instagram.post` | `instagram-post` | `GET /instagram/post/{id}/{post_id}` | `id` (path String required)<br>`post_id` (path String required) | `ApiKeyAuth` | `InstagramPostResponse` |  |
 | instagram | `instagram.profile` | `instagram-profile` | `GET /instagram/profile/{username}` | `username` (path String required) | `ApiKeyAuth` | `InstagramProfileResponse` |  |
 | instagram | `instagram.reels` | `instagram-reels` | `GET /instagram/reels/{id}` | `id` (path String required)<br>`max_id` (query String) | `ApiKeyAuth` | `InstagramReelsResponse` |  |
+| jobs | `jobs.ashbyBoard` | `jobs-ashby-board` | `GET /jobs/ashby/board` | `org` (query String required)<br>`include_compensation` (query Boolean) | `ApiKeyAuth` | `JobsAshbyBoardResponse` |  |
+| jobs | `jobs.companySearch` | `jobs-company-search` | `GET /jobs/company-search` | `slug` (query String required) | `ApiKeyAuth` | `JobsCompanySearchResponse` |  |
+| jobs | `jobs.greenhouseBoard` | `jobs-greenhouse-board` | `GET /jobs/greenhouse/board` | `token` (query String required)<br>`content` (query Boolean) | `ApiKeyAuth` | `JobsGreenhouseBoardResponse` |  |
+| jobs | `jobs.greenhouseJob` | `jobs-greenhouse-job` | `GET /jobs/greenhouse/job` | `token` (query String required)<br>`id` (query String required) | `ApiKeyAuth` | `JobsGreenhouseJobResponse` |  |
+| jobs | `jobs.hiringSignals` | `jobs-hiring-signals` | `GET /jobs/hiring-signals` | `provider` (query String required)<br>`token` (query String)<br>`company` (query String)<br>`org` (query String)<br>`tenant` (query String)<br>`datacenter` (query String)<br>`site` (query String) | `ApiKeyAuth` | `JobsHiringSignalsResponse` |  |
+| jobs | `jobs.leverPosting` | `jobs-lever-posting` | `GET /jobs/lever/posting` | `company` (query String required)<br>`id` (query String required) | `ApiKeyAuth` | `JobsLeverPostingResponse` |  |
+| jobs | `jobs.leverPostings` | `jobs-lever-postings` | `GET /jobs/lever/postings` | `company` (query String required)<br>`department` (query String)<br>`location` (query String)<br>`remote` (query Boolean) | `ApiKeyAuth` | `JobsLeverPostingsResponse` |  |
+| jobs | `jobs.smartrecruitersPosting` | `jobs-smartrecruiters-posting` | `GET /jobs/smartrecruiters/posting` | `company` (query String required)<br>`id` (query String required) | `ApiKeyAuth` | `JobsSmartrecruitersPostingResponse` |  |
+| jobs | `jobs.smartrecruitersPostings` | `jobs-smartrecruiters-postings` | `GET /jobs/smartrecruiters/postings` | `company` (query String required)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `JobsSmartrecruitersPostingsResponse` |  |
+| jobs | `jobs.workdayBoard` | `jobs-workday-board` | `GET /jobs/workday/board` | `tenant` (query String required)<br>`datacenter` (query String required)<br>`site` (query String required)<br>`search` (query String)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `JobsWorkdayBoardResponse` |  |
+| jobs | `jobs.workdayJob` | `jobs-workday-job` | `GET /jobs/workday/job` | `tenant` (query String required)<br>`datacenter` (query String required)<br>`site` (query String required)<br>`path` (query String required) | `ApiKeyAuth` | `JobsWorkdayJobResponse` |  |
 | justWatch | `justWatch.justwatchAgeCertifications` | `justwatch-age-certifications` | `GET /justwatch/age-certifications` | `country` (query String) | `ApiKeyAuth` | `JustWatchJustwatchAgeCertificationsResponse` |  |
 | justWatch | `justWatch.justwatchDiscover` | `justwatch-discover` | `GET /justwatch/discover` | `country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String)<br>`genres` (query String)<br>`providers` (query String)<br>`monetization_types` (query String)<br>`year_min` (query Integer)<br>`year_max` (query Integer) | `ApiKeyAuth` | `JustWatchJustwatchDiscoverResponse` |  |
 | justWatch | `justWatch.justwatchEpisodeById` | `justwatch-episode-by-id` | `GET /justwatch/episode/by-id` | `id` (query String required)<br>`country` (query String)<br>`language` (query String) | `ApiKeyAuth` | `JustWatchJustwatchEpisodeByIdResponse` |  |
@@ -408,7 +418,7 @@ Total operations: `603`
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSearch` | `rottentomatoes-search` | `GET /rottentomatoes/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSearchResponse` |  |
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSeason` | `rottentomatoes-season` | `GET /rottentomatoes/season` | `path` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSeasonResponse` |  |
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSeries` | `rottentomatoes-series` | `GET /rottentomatoes/series` | `path` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSeriesResponse` |  |
-| secEdgar | `secEdgar.secCompanyIntelligence` | `sec-company-intelligence` | `GET /sec/company/intelligence` | `cik` (query String)<br>`ticker` (query String) | `ApiKeyAuth` | `SecEdgarSecCompanyIntelligenceResponse` |  |
+| secEdgar | `secEdgar.secCompanyIntelligence` | `sec-company-intelligence` | `GET /sec/company/intelligence` | `cik` (query String)<br>`ticker` (query String)<br>`enrich` (query String)<br>`ats` (query String)<br>`careers_slug` (query String)<br>`tenant` (query String)<br>`datacenter` (query String)<br>`site` (query String) | `ApiKeyAuth` | `SecEdgarSecCompanyIntelligenceResponse` |  |
 | secEdgar | `secEdgar.secCompanySearch` | `sec-company-search` | `GET /sec/company/search` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySearchResponse` |  |
 | secEdgar | `secEdgar.secCompanySubmissions` | `sec-company-submissions` | `GET /sec/company/submissions` | `cik` (query String)<br>`ticker` (query String)<br>`form` (query String)<br>`from` (query String)<br>`to` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySubmissionsResponse` |  |
 | secEdgar | `secEdgar.secFiling` | `sec-filing` | `GET /sec/filing` | `cik` (query String)<br>`ticker` (query String)<br>`accession` (query String required) | `ApiKeyAuth` | `SecEdgarSecFilingResponse` |  |
@@ -500,6 +510,18 @@ Total operations: `603`
 | spotify | `spotify.trackRecommended` | `spotify-track-recommended` | `GET /spotify/track/recommended` | `uri` (query String)<br>`id` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SpotifyTrackRecommendedResponse` |  |
 | spotify | `spotify.trackSimilarAlbums` | `spotify-track-similar-albums` | `GET /spotify/track/similar-albums` | `uri` (query String)<br>`id` (query String)<br>`limit` (query Integer)<br>`albums_only` (query Boolean) | `ApiKeyAuth` | `SpotifyTrackSimilarAlbumsResponse` |  |
 | spotify | `spotify.tracksSearch` | `spotify-tracks-search` | `GET /spotify/tracks/search` | `q` (query String required)<br>`offset` (query Integer)<br>`limit` (query Integer)<br>`number_of_top_results` (query Integer)<br>`include_audiobooks` (query Boolean)<br>`include_pre_releases` (query Boolean)<br>`include_album_pre_releases` (query Boolean)<br>`include_authors` (query Boolean)<br>`include_episode_content_ratings_v2` (query Boolean) | `ApiKeyAuth` | `SpotifyTracksSearchResponse` |  |
+| steam | `steam.achievements` | `steam-achievements` | `GET /steam/achievements` | `appid` (query String required) | `ApiKeyAuth` | `SteamAchievementsResponse` |  |
+| steam | `steam.app` | `steam-app` | `GET /steam/app` | `appid` (query String required)<br>`cc` (query String)<br>`l` (query String)<br>`filters` (query String) | `ApiKeyAuth` | `SteamAppResponse` |  |
+| steam | `steam.featured` | `steam-featured` | `GET /steam/featured` | `cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `SteamFeaturedResponse` |  |
+| steam | `steam.featuredCategories` | `steam-featured-categories` | `GET /steam/featured-categories` | `cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `SteamFeaturedCategoriesResponse` |  |
+| steam | `steam.news` | `steam-news` | `GET /steam/news` | `appid` (query String required)<br>`count` (query Integer)<br>`maxlength` (query Integer) | `ApiKeyAuth` | `SteamNewsResponse` |  |
+| steam | `steam.package_` | `steam-package` | `GET /steam/package` | `packageid` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `SteamPackageResponse` |  |
+| steam | `steam.players` | `steam-players` | `GET /steam/players` | `appid` (query String required) | `ApiKeyAuth` | `SteamPlayersResponse` |  |
+| steam | `steam.reviews` | `steam-reviews` | `GET /steam/reviews` | `appid` (query String required)<br>`filter` (query String)<br>`language` (query String)<br>`review_type` (query String)<br>`purchase_type` (query String)<br>`day_range` (query Integer)<br>`num_per_page` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `SteamReviewsResponse` |  |
+| steam | `steam.reviewsHistogram` | `steam-reviews-histogram` | `GET /steam/reviews/histogram` | `appid` (query String required)<br>`language` (query String) | `ApiKeyAuth` | `SteamReviewsHistogramResponse` |  |
+| steam | `steam.search` | `steam-search` | `GET /steam/search` | `term` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `SteamSearchResponse` |  |
+| steam | `steam.searchResults` | `steam-search-results` | `GET /steam/search/results` | `term` (query String required)<br>`start` (query Integer)<br>`count` (query Integer)<br>`sort_by` (query String)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `SteamSearchResultsResponse` |  |
+| steam | `steam.steamspy` | `steam-steamspy` | `GET /steam/steamspy` | `appid` (query String required) | `ApiKeyAuth` | `SteamSteamspyResponse` |  |
 | tiktok | `tiktok.category` | `tiktok-category` | `GET /tiktok/category` | none | `ApiKeyAuth` | `TiktokCategoryResponse` |  |
 | tiktok | `tiktok.videoComments` | `tiktok-video-comments` | `GET /tiktok/comments` | `aweme_id` (query String required)<br>`cursor` (query Integer) | `ApiKeyAuth` | `TiktokVideoCommentsResponse` |  |
 | tiktok | `tiktok.explore` | `tiktok-explore` | `GET /tiktok/explore/{id}` | `id` (path Integer required) | `ApiKeyAuth` | `TiktokExploreResponse` |  |

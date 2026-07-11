@@ -179,6 +179,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "jobs" operation group.
+     * @return a new {@link JobsGroup} bound to this client
+     */
+    public JobsGroup jobs() {
+        return new JobsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "justWatch" operation group.
      * @return a new {@link JustWatchGroup} bound to this client
      */
@@ -328,6 +336,14 @@ public abstract class ClientGroups {
      */
     public SpotifyGroup spotify() {
         return new SpotifyGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "steam" operation group.
+     * @return a new {@link SteamGroup} bound to this client
+     */
+    public SteamGroup steam() {
+        return new SteamGroup((CrawloraClient) this);
     }
 
     /**

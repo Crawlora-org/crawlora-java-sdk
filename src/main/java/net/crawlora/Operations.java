@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 603;
+    public static final int OPERATION_COUNT = 625;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -2562,20 +2562,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-        m.put("github-repo-stargazers", new Operation(
-            "github-repo-stargazers",
-            "GET",
-            "/github/repo/{owner}/{repo}/stargazers",
-            List.of("owner", "repo"),
-            List.of(
-            new QueryParam("page", false, "integer", List.of()),
-            new QueryParam("per_page", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            true,
-            List.of()));
         m.put("github-search-repositories", new Operation(
             "github-search-repositories",
             "GET",
@@ -2883,9 +2869,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("google-finance-news", new Operation(
             "google-finance-news",
             "GET",
@@ -2899,6 +2882,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("google-finance-quote", new Operation(
             "google-finance-quote",
             "GET",
@@ -3656,6 +3642,176 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("jobs-ashby-board", new Operation(
+            "jobs-ashby-board",
+            "GET",
+            "/jobs/ashby/board",
+            List.of(),
+            List.of(
+            new QueryParam("org", true, "string", List.of()),
+            new QueryParam("include_compensation", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-company-search", new Operation(
+            "jobs-company-search",
+            "GET",
+            "/jobs/company-search",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-greenhouse-board", new Operation(
+            "jobs-greenhouse-board",
+            "GET",
+            "/jobs/greenhouse/board",
+            List.of(),
+            List.of(
+            new QueryParam("token", true, "string", List.of()),
+            new QueryParam("content", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-greenhouse-job", new Operation(
+            "jobs-greenhouse-job",
+            "GET",
+            "/jobs/greenhouse/job",
+            List.of(),
+            List.of(
+            new QueryParam("token", true, "string", List.of()),
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-hiring-signals", new Operation(
+            "jobs-hiring-signals",
+            "GET",
+            "/jobs/hiring-signals",
+            List.of(),
+            List.of(
+            new QueryParam("provider", true, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters")),
+            new QueryParam("token", false, "string", List.of()),
+            new QueryParam("company", false, "string", List.of()),
+            new QueryParam("org", false, "string", List.of()),
+            new QueryParam("tenant", false, "string", List.of()),
+            new QueryParam("datacenter", false, "string", List.of()),
+            new QueryParam("site", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-lever-posting", new Operation(
+            "jobs-lever-posting",
+            "GET",
+            "/jobs/lever/posting",
+            List.of(),
+            List.of(
+            new QueryParam("company", true, "string", List.of()),
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
+        m.put("jobs-lever-postings", new Operation(
+            "jobs-lever-postings",
+            "GET",
+            "/jobs/lever/postings",
+            List.of(),
+            List.of(
+            new QueryParam("company", true, "string", List.of()),
+            new QueryParam("department", false, "string", List.of()),
+            new QueryParam("location", false, "string", List.of()),
+            new QueryParam("remote", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-smartrecruiters-posting", new Operation(
+            "jobs-smartrecruiters-posting",
+            "GET",
+            "/jobs/smartrecruiters/posting",
+            List.of(),
+            List.of(
+            new QueryParam("company", true, "string", List.of()),
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("jobs-smartrecruiters-postings", new Operation(
+            "jobs-smartrecruiters-postings",
+            "GET",
+            "/jobs/smartrecruiters/postings",
+            List.of(),
+            List.of(
+            new QueryParam("company", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("jobs-workday-board", new Operation(
+            "jobs-workday-board",
+            "GET",
+            "/jobs/workday/board",
+            List.of(),
+            List.of(
+            new QueryParam("tenant", true, "string", List.of()),
+            new QueryParam("datacenter", true, "string", List.of()),
+            new QueryParam("site", true, "string", List.of()),
+            new QueryParam("search", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("jobs-workday-job", new Operation(
+            "jobs-workday-job",
+            "GET",
+            "/jobs/workday/job",
+            List.of(),
+            List.of(
+            new QueryParam("tenant", true, "string", List.of()),
+            new QueryParam("datacenter", true, "string", List.of()),
+            new QueryParam("site", true, "string", List.of()),
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("justwatch-age-certifications", new Operation(
             "justwatch-age-certifications",
             "GET",
@@ -3737,9 +3893,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("justwatch-genres", new Operation(
             "justwatch-genres",
             "GET",
@@ -4455,6 +4608,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("metaculus-tournament-questions", new Operation(
             "metaculus-tournament-questions",
             "GET",
@@ -4601,9 +4757,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("polymarket-data-follows-counts", new Operation(
             "polymarket-data-follows-counts",
             "GET",
@@ -5313,6 +5466,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("polymarket-token-orderbook", new Operation(
             "polymarket-token-orderbook",
             "GET",
@@ -5442,9 +5598,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("producthunt-category", new Operation(
             "producthunt-category",
             "GET",
@@ -6035,7 +6188,13 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("cik", false, "string", List.of()),
-            new QueryParam("ticker", false, "string", List.of())),
+            new QueryParam("ticker", false, "string", List.of()),
+            new QueryParam("enrich", false, "string", List.of("market", "news", "hiring")),
+            new QueryParam("ats", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters")),
+            new QueryParam("careers_slug", false, "string", List.of()),
+            new QueryParam("tenant", false, "string", List.of()),
+            new QueryParam("datacenter", false, "string", List.of()),
+            new QueryParam("site", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -6186,6 +6345,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("shop-app-analysis", new Operation(
             "shop-app-analysis",
             "GET",
@@ -6322,9 +6484,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("shop-app-collection-products", new Operation(
             "shop-app-collection-products",
             "GET",
@@ -7051,6 +7210,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("spotify-audiobook", new Operation(
             "spotify-audiobook",
             "GET",
@@ -7219,9 +7381,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("spotify-popular-by-country", new Operation(
             "spotify-popular-by-country",
             "GET",
@@ -7427,6 +7586,186 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("steam-achievements", new Operation(
+            "steam-achievements",
+            "GET",
+            "/steam/achievements",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-app", new Operation(
+            "steam-app",
+            "GET",
+            "/steam/app",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of()),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of()),
+            new QueryParam("filters", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-featured", new Operation(
+            "steam-featured",
+            "GET",
+            "/steam/featured",
+            List.of(),
+            List.of(
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-featured-categories", new Operation(
+            "steam-featured-categories",
+            "GET",
+            "/steam/featured-categories",
+            List.of(),
+            List.of(
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-news", new Operation(
+            "steam-news",
+            "GET",
+            "/steam/news",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of()),
+            new QueryParam("count", false, "integer", List.of()),
+            new QueryParam("maxlength", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-package", new Operation(
+            "steam-package",
+            "GET",
+            "/steam/package",
+            List.of(),
+            List.of(
+            new QueryParam("packageid", true, "string", List.of()),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-players", new Operation(
+            "steam-players",
+            "GET",
+            "/steam/players",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-reviews", new Operation(
+            "steam-reviews",
+            "GET",
+            "/steam/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of()),
+            new QueryParam("filter", false, "string", List.of("recent", "updated", "all")),
+            new QueryParam("language", false, "string", List.of()),
+            new QueryParam("review_type", false, "string", List.of("all", "positive", "negative")),
+            new QueryParam("purchase_type", false, "string", List.of("all", "steam", "non_steam_purchase")),
+            new QueryParam("day_range", false, "integer", List.of()),
+            new QueryParam("num_per_page", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("steam-reviews-histogram", new Operation(
+            "steam-reviews-histogram",
+            "GET",
+            "/steam/reviews/histogram",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of()),
+            new QueryParam("language", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-search", new Operation(
+            "steam-search",
+            "GET",
+            "/steam/search",
+            List.of(),
+            List.of(
+            new QueryParam("term", true, "string", List.of()),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("steam-search-results", new Operation(
+            "steam-search-results",
+            "GET",
+            "/steam/search/results",
+            List.of(),
+            List.of(
+            new QueryParam("term", true, "string", List.of()),
+            new QueryParam("start", false, "integer", List.of()),
+            new QueryParam("count", false, "integer", List.of()),
+            new QueryParam("sort_by", false, "string", List.of("Relevance", "Released_DESC", "Name_ASC", "Price_ASC", "Price_DESC", "Reviews_DESC")),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("start")));
+        m.put("steam-steamspy", new Operation(
+            "steam-steamspy",
+            "GET",
+            "/steam/steamspy",
+            List.of(),
+            List.of(
+            new QueryParam("appid", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("tiktok-category", new Operation(
             "tiktok-category",
@@ -7801,6 +8140,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("tripadvisor-place", new Operation(
             "tripadvisor-place",
             "GET",
@@ -8133,9 +8475,6 @@ public final class Operations {
             List.of("JWTAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("user-me-api-keys", new Operation(
             "user-me-api-keys",
             "GET",
@@ -8630,6 +8969,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-options-expiration", new Operation(
             "yahoo-finance-ticker-options-expiration",
             "GET",
@@ -8919,9 +9261,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("zillow-autocomplete", new Operation(
             "zillow-autocomplete",
             "GET",
@@ -9199,7 +9538,6 @@ public final class Operations {
             group.put("githubRepoForks", "github-repo-forks");
             group.put("githubRepoLanguages", "github-repo-languages");
             group.put("githubRepoReleases", "github-repo-releases");
-            group.put("githubRepoStargazers", "github-repo-stargazers");
             group.put("githubSearchRepositories", "github-search-repositories");
             group.put("githubSearchUsers", "github-search-users");
             group.put("githubTrending", "github-trending");
@@ -9295,6 +9633,21 @@ public final class Operations {
             group.put("profile", "instagram-profile");
             group.put("reels", "instagram-reels");
             g.put("instagram", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("ashbyBoard", "jobs-ashby-board");
+            group.put("companySearch", "jobs-company-search");
+            group.put("greenhouseBoard", "jobs-greenhouse-board");
+            group.put("greenhouseJob", "jobs-greenhouse-job");
+            group.put("hiringSignals", "jobs-hiring-signals");
+            group.put("leverPosting", "jobs-lever-posting");
+            group.put("leverPostings", "jobs-lever-postings");
+            group.put("smartrecruitersPosting", "jobs-smartrecruiters-posting");
+            group.put("smartrecruitersPostings", "jobs-smartrecruiters-postings");
+            group.put("workdayBoard", "jobs-workday-board");
+            group.put("workdayJob", "jobs-workday-job");
+            g.put("jobs", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -9628,6 +9981,22 @@ public final class Operations {
             group.put("trackSimilarAlbums", "spotify-track-similar-albums");
             group.put("tracksSearch", "spotify-tracks-search");
             g.put("spotify", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("achievements", "steam-achievements");
+            group.put("app", "steam-app");
+            group.put("featured", "steam-featured");
+            group.put("featuredCategories", "steam-featured-categories");
+            group.put("news", "steam-news");
+            group.put("package_", "steam-package");
+            group.put("players", "steam-players");
+            group.put("reviews", "steam-reviews");
+            group.put("reviewsHistogram", "steam-reviews-histogram");
+            group.put("search", "steam-search");
+            group.put("searchResults", "steam-search-results");
+            group.put("steamspy", "steam-steamspy");
+            g.put("steam", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
