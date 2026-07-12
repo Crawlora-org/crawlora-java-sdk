@@ -63,6 +63,152 @@ public final class SteamGroup {
     }
 
     /**
+     * steam-category (GET /steam/category/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object category(Map<String, Object> params) {
+        return category(params, null);
+    }
+
+    /**
+     * steam-category (GET /steam/category/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object category(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-category", params);
+        return client.request("steam-category", params, options);
+    }
+
+    /**
+     * steam-charts-concurrent (GET /steam/charts/concurrent).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsConcurrent(Map<String, Object> params) {
+        return chartsConcurrent(params, null);
+    }
+
+    /**
+     * steam-charts-concurrent (GET /steam/charts/concurrent). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsConcurrent(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-charts-concurrent", params);
+        return client.request("steam-charts-concurrent", params, options);
+    }
+
+    /**
+     * steam-charts-concurrent (GET /steam/charts/concurrent). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsConcurrent() {
+        return chartsConcurrent(Map.of(), null);
+    }
+
+    /**
+     * steam-charts-most-played (GET /steam/charts/most-played).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsMostPlayed(Map<String, Object> params) {
+        return chartsMostPlayed(params, null);
+    }
+
+    /**
+     * steam-charts-most-played (GET /steam/charts/most-played). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsMostPlayed(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-charts-most-played", params);
+        return client.request("steam-charts-most-played", params, options);
+    }
+
+    /**
+     * steam-charts-most-played (GET /steam/charts/most-played). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsMostPlayed() {
+        return chartsMostPlayed(Map.of(), null);
+    }
+
+    /**
+     * steam-charts-top-releases (GET /steam/charts/top-releases).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsTopReleases(Map<String, Object> params) {
+        return chartsTopReleases(params, null);
+    }
+
+    /**
+     * steam-charts-top-releases (GET /steam/charts/top-releases). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsTopReleases(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-charts-top-releases", params);
+        return client.request("steam-charts-top-releases", params, options);
+    }
+
+    /**
+     * steam-charts-top-releases (GET /steam/charts/top-releases). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsTopReleases() {
+        return chartsTopReleases(Map.of(), null);
+    }
+
+    /**
+     * steam-community-recommendations (GET /steam/community-recommendations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object communityRecommendations(Map<String, Object> params) {
+        return communityRecommendations(params, null);
+    }
+
+    /**
+     * steam-community-recommendations (GET /steam/community-recommendations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object communityRecommendations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-community-recommendations", params);
+        return client.request("steam-community-recommendations", params, options);
+    }
+
+    /**
+     * steam-community-recommendations (GET /steam/community-recommendations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object communityRecommendations() {
+        return communityRecommendations(Map.of(), null);
+    }
+
+    /**
      * steam-featured (GET /steam/featured).
      *
      * @param params operation parameters
@@ -122,6 +268,28 @@ public final class SteamGroup {
      */
     public Object featuredCategories() {
         return featuredCategories(Map.of(), null);
+    }
+
+    /**
+     * steam-items (GET /steam/items).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object items(Map<String, Object> params) {
+        return items(params, null);
+    }
+
+    /**
+     * steam-items (GET /steam/items). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object items(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-items", params);
+        return client.request("steam-items", params, options);
     }
 
     /**
@@ -298,6 +466,99 @@ public final class SteamGroup {
     public Object steamspy(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("steam-steamspy", params);
         return client.request("steam-steamspy", params, options);
+    }
+
+    /**
+     * steam-tags (GET /steam/tags).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tags(Map<String, Object> params) {
+        return tags(params, null);
+    }
+
+    /**
+     * steam-tags (GET /steam/tags). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tags(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-tags", params);
+        return client.request("steam-tags", params, options);
+    }
+
+    /**
+     * steam-tags (GET /steam/tags). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tags() {
+        return tags(Map.of(), null);
+    }
+
+    /**
+     * steam-tags-list (GET /steam/tags/list).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tagsList(Map<String, Object> params) {
+        return tagsList(params, null);
+    }
+
+    /**
+     * steam-tags-list (GET /steam/tags/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tagsList(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-tags-list", params);
+        return client.request("steam-tags-list", params, options);
+    }
+
+    /**
+     * steam-tags-list (GET /steam/tags/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tagsList() {
+        return tagsList(Map.of(), null);
+    }
+
+    /**
+     * steam-top-sellers (GET /steam/top-sellers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topSellers(Map<String, Object> params) {
+        return topSellers(params, null);
+    }
+
+    /**
+     * steam-top-sellers (GET /steam/top-sellers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topSellers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("steam-top-sellers", params);
+        return client.request("steam-top-sellers", params, options);
+    }
+
+    /**
+     * steam-top-sellers (GET /steam/top-sellers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topSellers() {
+        return topSellers(Map.of(), null);
     }
 
 }
