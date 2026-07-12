@@ -465,6 +465,156 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-housing-markets-facets (GET /datasets/housing-markets/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsFacets(Map<String, Object> params) {
+        return housingMarketsFacets(params, null);
+    }
+
+    /**
+     * datasets-housing-markets-facets (GET /datasets/housing-markets/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-housing-markets-facets", params);
+        return client.request("datasets-housing-markets-facets", params, options);
+    }
+
+    /**
+     * datasets-housing-markets-item (GET /datasets/housing-markets/items/{region_type}/{table_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsItem(Map<String, Object> params) {
+        return housingMarketsItem(params, null);
+    }
+
+    /**
+     * datasets-housing-markets-item (GET /datasets/housing-markets/items/{region_type}/{table_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-housing-markets-item", params);
+        return client.request("datasets-housing-markets-item", params, options);
+    }
+
+    /**
+     * datasets-housing-markets-search (GET /datasets/housing-markets/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsSearch(Map<String, Object> params) {
+        return housingMarketsSearch(params, null);
+    }
+
+    /**
+     * datasets-housing-markets-search (GET /datasets/housing-markets/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-housing-markets-search", params);
+        return client.request("datasets-housing-markets-search", params, options);
+    }
+
+    /**
+     * datasets-housing-markets-search (GET /datasets/housing-markets/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object housingMarketsSearch() {
+        return housingMarketsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-playstation-games-facets (GET /datasets/playstation-games/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesFacets(Map<String, Object> params) {
+        return playstationGamesFacets(params, null);
+    }
+
+    /**
+     * datasets-playstation-games-facets (GET /datasets/playstation-games/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-playstation-games-facets", params);
+        return client.request("datasets-playstation-games-facets", params, options);
+    }
+
+    /**
+     * datasets-playstation-games-item (GET /datasets/playstation-games/items/{product_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesItem(Map<String, Object> params) {
+        return playstationGamesItem(params, null);
+    }
+
+    /**
+     * datasets-playstation-games-item (GET /datasets/playstation-games/items/{product_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-playstation-games-item", params);
+        return client.request("datasets-playstation-games-item", params, options);
+    }
+
+    /**
+     * datasets-playstation-games-search (GET /datasets/playstation-games/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesSearch(Map<String, Object> params) {
+        return playstationGamesSearch(params, null);
+    }
+
+    /**
+     * datasets-playstation-games-search (GET /datasets/playstation-games/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-playstation-games-search", params);
+        return client.request("datasets-playstation-games-search", params, options);
+    }
+
+    /**
+     * datasets-playstation-games-search (GET /datasets/playstation-games/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationGamesSearch() {
+        return playstationGamesSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-producthunt-makers-facets (GET /datasets/producthunt-makers/facets).
      *
      * @param params operation parameters
@@ -665,6 +815,267 @@ public final class DatasetsGroup {
      */
     public Object producthuntTrendsSearch() {
         return producthuntTrendsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-achievements-search (GET /datasets/steam-achievements/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsSearch(Map<String, Object> params) {
+        return steamAchievementsSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-achievements-search (GET /datasets/steam-achievements/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-achievements-search", params);
+        return client.request("datasets-steam-achievements-search", params, options);
+    }
+
+    /**
+     * datasets-steam-achievements-search (GET /datasets/steam-achievements/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsSearch() {
+        return steamAchievementsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-charts-search (GET /datasets/steam-charts/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsSearch(Map<String, Object> params) {
+        return steamChartsSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-charts-search (GET /datasets/steam-charts/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-charts-search", params);
+        return client.request("datasets-steam-charts-search", params, options);
+    }
+
+    /**
+     * datasets-steam-charts-search (GET /datasets/steam-charts/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsSearch() {
+        return steamChartsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-games-facets (GET /datasets/steam-games/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesFacets(Map<String, Object> params) {
+        return steamGamesFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-games-facets (GET /datasets/steam-games/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-games-facets", params);
+        return client.request("datasets-steam-games-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-games-item (GET /datasets/steam-games/items/{appid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesItem(Map<String, Object> params) {
+        return steamGamesItem(params, null);
+    }
+
+    /**
+     * datasets-steam-games-item (GET /datasets/steam-games/items/{appid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-games-item", params);
+        return client.request("datasets-steam-games-item", params, options);
+    }
+
+    /**
+     * datasets-steam-games-search (GET /datasets/steam-games/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesSearch(Map<String, Object> params) {
+        return steamGamesSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-games-search (GET /datasets/steam-games/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-games-search", params);
+        return client.request("datasets-steam-games-search", params, options);
+    }
+
+    /**
+     * datasets-steam-games-search (GET /datasets/steam-games/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamGamesSearch() {
+        return steamGamesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-news-search (GET /datasets/steam-news/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsSearch(Map<String, Object> params) {
+        return steamNewsSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-news-search (GET /datasets/steam-news/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-news-search", params);
+        return client.request("datasets-steam-news-search", params, options);
+    }
+
+    /**
+     * datasets-steam-news-search (GET /datasets/steam-news/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsSearch() {
+        return steamNewsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-playercounts-search (GET /datasets/steam-playercounts/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsSearch(Map<String, Object> params) {
+        return steamPlayercountsSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-playercounts-search (GET /datasets/steam-playercounts/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-playercounts-search", params);
+        return client.request("datasets-steam-playercounts-search", params, options);
+    }
+
+    /**
+     * datasets-steam-playercounts-search (GET /datasets/steam-playercounts/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsSearch() {
+        return steamPlayercountsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-prices-search (GET /datasets/steam-prices/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesSearch(Map<String, Object> params) {
+        return steamPricesSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-prices-search (GET /datasets/steam-prices/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-prices-search", params);
+        return client.request("datasets-steam-prices-search", params, options);
+    }
+
+    /**
+     * datasets-steam-prices-search (GET /datasets/steam-prices/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesSearch() {
+        return steamPricesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-reviews-search (GET /datasets/steam-reviews/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsSearch(Map<String, Object> params) {
+        return steamReviewsSearch(params, null);
+    }
+
+    /**
+     * datasets-steam-reviews-search (GET /datasets/steam-reviews/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-reviews-search", params);
+        return client.request("datasets-steam-reviews-search", params, options);
+    }
+
+    /**
+     * datasets-steam-reviews-search (GET /datasets/steam-reviews/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsSearch() {
+        return steamReviewsSearch(Map.of(), null);
     }
 
     /**

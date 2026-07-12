@@ -235,6 +235,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "playStation" operation group.
+     * @return a new {@link PlayStationGroup} bound to this client
+     */
+    public PlayStationGroup playStation() {
+        return new PlayStationGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "polymarket" operation group.
      * @return a new {@link PolymarketGroup} bound to this client
      */

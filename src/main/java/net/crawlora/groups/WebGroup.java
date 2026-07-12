@@ -63,6 +63,28 @@ public final class WebGroup {
     }
 
     /**
+     * extract (POST /extract).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object extract(Map<String, Object> params) {
+        return extract(params, null);
+    }
+
+    /**
+     * extract (POST /extract). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object extract(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("extract", params);
+        return client.request("extract", params, options);
+    }
+
+    /**
      * web-scrape (POST /web/scrape).
      *
      * @param params operation parameters
