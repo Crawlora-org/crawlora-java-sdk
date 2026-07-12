@@ -115,6 +115,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "discogs" operation group.
+     * @return a new {@link DiscogsGroup} bound to this client
+     */
+    public DiscogsGroup discogs() {
+        return new DiscogsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "eBay" operation group.
      * @return a new {@link EBayGroup} bound to this client
      */
@@ -144,6 +152,14 @@ public abstract class ClientGroups {
      */
     public GitHubGroup gitHub() {
         return new GitHubGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "goodreads" operation group.
+     * @return a new {@link GoodreadsGroup} bound to this client
+     */
+    public GoodreadsGroup goodreads() {
+        return new GoodreadsGroup((CrawloraClient) this);
     }
 
     /**
@@ -179,6 +195,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "jobs" operation group.
+     * @return a new {@link JobsGroup} bound to this client
+     */
+    public JobsGroup jobs() {
+        return new JobsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "justWatch" operation group.
      * @return a new {@link JustWatchGroup} bound to this client
      */
@@ -192,6 +216,14 @@ public abstract class ClientGroups {
      */
     public KalshiGroup kalshi() {
         return new KalshiGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "letterboxd" operation group.
+     * @return a new {@link LetterboxdGroup} bound to this client
+     */
+    public LetterboxdGroup letterboxd() {
+        return new LetterboxdGroup((CrawloraClient) this);
     }
 
     /**
@@ -216,6 +248,22 @@ public abstract class ClientGroups {
      */
     public MetaGroup meta() {
         return new MetaGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "pitchBook" operation group.
+     * @return a new {@link PitchBookGroup} bound to this client
+     */
+    public PitchBookGroup pitchBook() {
+        return new PitchBookGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "playStation" operation group.
+     * @return a new {@link PlayStationGroup} bound to this client
+     */
+    public PlayStationGroup playStation() {
+        return new PlayStationGroup((CrawloraClient) this);
     }
 
     /**
@@ -267,6 +315,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "secEdgar" operation group.
+     * @return a new {@link SecEdgarGroup} bound to this client
+     */
+    public SecEdgarGroup secEdgar() {
+        return new SecEdgarGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "shopApp" operation group.
      * @return a new {@link ShopAppGroup} bound to this client
      */
@@ -291,6 +347,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "sofaScore" operation group.
+     * @return a new {@link SofaScoreGroup} bound to this client
+     */
+    public SofaScoreGroup sofaScore() {
+        return new SofaScoreGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "spotifyPodcasts" operation group.
      * @return a new {@link SpotifyPodcastsGroup} bound to this client
      */
@@ -307,6 +371,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "steam" operation group.
+     * @return a new {@link SteamGroup} bound to this client
+     */
+    public SteamGroup steam() {
+        return new SteamGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "tiktok" operation group.
      * @return a new {@link TiktokGroup} bound to this client
      */
@@ -315,11 +387,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "tmdb" operation group.
+     * @return a new {@link TmdbGroup} bound to this client
+     */
+    public TmdbGroup tmdb() {
+        return new TmdbGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "tripAdvisor" operation group.
      * @return a new {@link TripAdvisorGroup} bound to this client
      */
     public TripAdvisorGroup tripAdvisor() {
         return new TripAdvisorGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "trustMrr" operation group.
+     * @return a new {@link TrustMrrGroup} bound to this client
+     */
+    public TrustMrrGroup trustMrr() {
+        return new TrustMrrGroup((CrawloraClient) this);
     }
 
     /**

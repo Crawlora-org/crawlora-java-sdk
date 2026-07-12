@@ -173,28 +173,6 @@ public final class GitHubGroup {
     }
 
     /**
-     * github-repo-stargazers (GET /github/repo/{owner}/{repo}/stargazers).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object githubRepoStargazers(Map<String, Object> params) {
-        return githubRepoStargazers(params, null);
-    }
-
-    /**
-     * github-repo-stargazers (GET /github/repo/{owner}/{repo}/stargazers). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object githubRepoStargazers(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("github-repo-stargazers", params);
-        return client.request("github-repo-stargazers", params, options);
-    }
-
-    /**
      * github-search-repositories (GET /github/search/repositories).
      *
      * @param params operation parameters
