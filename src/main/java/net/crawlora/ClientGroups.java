@@ -115,6 +115,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "discogs" operation group.
+     * @return a new {@link DiscogsGroup} bound to this client
+     */
+    public DiscogsGroup discogs() {
+        return new DiscogsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "eBay" operation group.
      * @return a new {@link EBayGroup} bound to this client
      */
@@ -144,6 +152,14 @@ public abstract class ClientGroups {
      */
     public GitHubGroup gitHub() {
         return new GitHubGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "goodreads" operation group.
+     * @return a new {@link GoodreadsGroup} bound to this client
+     */
+    public GoodreadsGroup goodreads() {
+        return new GoodreadsGroup((CrawloraClient) this);
     }
 
     /**
@@ -200,6 +216,14 @@ public abstract class ClientGroups {
      */
     public KalshiGroup kalshi() {
         return new KalshiGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "letterboxd" operation group.
+     * @return a new {@link LetterboxdGroup} bound to this client
+     */
+    public LetterboxdGroup letterboxd() {
+        return new LetterboxdGroup((CrawloraClient) this);
     }
 
     /**
@@ -360,6 +384,14 @@ public abstract class ClientGroups {
      */
     public TiktokGroup tiktok() {
         return new TiktokGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "tmdb" operation group.
+     * @return a new {@link TmdbGroup} bound to this client
+     */
+    public TmdbGroup tmdb() {
+        return new TmdbGroup((CrawloraClient) this);
     }
 
     /**
