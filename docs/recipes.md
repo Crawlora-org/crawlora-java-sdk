@@ -28,8 +28,17 @@ Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 
 ## Software, Reviews, And Market Datasets
 
+Build a Chrome extension competitive-intelligence view without downloading the
+whole catalog: create a high-adoption shortlist, load chart-ready market
+metrics, watch movers, and audit permission changes or one item's history.
+
 ```java
-Object extensions = client.datasets().chromeExtensionsSearch(Map.of("q", "productivity", "min_users", 10000));
+Object extensions = client.datasets().chromeExtensionsSearch(Map.of("q", "productivity", "min_users", 10000, "sort", "users_desc", "page_size", 20));
+Object metrics = client.datasets().chromeExtensionsMetrics(Map.of("days", 30, "limit", 10));
+Object movers = client.datasets().chromeExtensionsTrending(Map.of("item_type", "extension", "page_size", 20));
+Object permissionChanges = client.datasets().chromeExtensionsChanges(Map.of("change_type", "permissions", "limit", 25));
+Object history = client.datasets().chromeExtensionsHistory(Map.of("id", "fjgncogppolhfdpijihbpfmeohpaadpc", "limit", 90));
+
 Object cities = client.datasets().numbeoCitiesSearch(Map.of("country", "Portugal", "sort", "quality_of_life_desc"));
 Object software = client.capterra().search(Map.of("q", "project management"));
 Object games = client.metacritic().browse(Map.of("type", "game", "sort", "score"));
