@@ -19,6 +19,15 @@ public final class OperationId {
     public static final String AMAZON_PRODUCT = "amazon-product";
     public static final String AMAZON_SEARCH = "amazon-search";
     public static final String AMAZON_SUGGEST = "amazon-suggest";
+    public static final String ANIME_AIRING_SCHEDULE = "anime-airing-schedule";
+    public static final String ANIME_CHARACTER = "anime-character";
+    public static final String ANIME_CHARACTER_SEARCH = "anime-character-search";
+    public static final String ANIME_RANKINGS = "anime-rankings";
+    public static final String ANIME_SEARCH = "anime-search";
+    public static final String ANIME_TITLE = "anime-title";
+    public static final String ANIME_TITLE_CHARACTERS = "anime-title-characters";
+    public static final String ANIME_TITLE_RECOMMENDATIONS = "anime-title-recommendations";
+    public static final String ANIME_TITLE_STAFF = "anime-title-staff";
     public static final String APP_STORE_APP = "appstore-app";
     public static final String APP_STORE_DEVELOPER = "appstore-developer";
     public static final String APP_STORE_LIST = "appstore-list";
@@ -333,6 +342,9 @@ public final class OperationId {
     public static final String LINKED_IN_LINKEDIN_COMPANY = "linkedin-company";
     public static final String LINKED_IN_LINKEDIN_PRODUCT = "linkedin-product";
     public static final String LINKED_IN_LINKEDIN_SHOWCASE = "linkedin-showcase";
+    public static final String MANGA_RANKINGS = "manga-rankings";
+    public static final String MANGA_SEARCH = "manga-search";
+    public static final String MANGA_TITLE = "manga-title";
     public static final String META_PING = "ping";
     public static final String META_READY = "ready";
     public static final String METACULUS_CATEGORY_QUESTIONS = "metaculus-category-questions";

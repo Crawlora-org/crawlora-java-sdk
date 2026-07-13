@@ -27,6 +27,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "anime" operation group.
+     * @return a new {@link AnimeGroup} bound to this client
+     */
+    public AnimeGroup anime() {
+        return new AnimeGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "applePodcasts" operation group.
      * @return a new {@link ApplePodcastsGroup} bound to this client
      */
@@ -232,6 +240,14 @@ public abstract class ClientGroups {
      */
     public LinkedInGroup linkedIn() {
         return new LinkedInGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "manga" operation group.
+     * @return a new {@link MangaGroup} bound to this client
+     */
+    public MangaGroup manga() {
+        return new MangaGroup((CrawloraClient) this);
     }
 
     /**
