@@ -26,6 +26,15 @@ Object posts = client.reddit().search(Map.of("q", "java", "subreddit", "programm
 Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 ```
 
+## Software, Reviews, And Market Datasets
+
+```java
+Object extensions = client.datasets().chromeExtensionsSearch(Map.of("q", "productivity", "min_users", 10000));
+Object cities = client.datasets().numbeoCitiesSearch(Map.of("country", "Portugal", "sort", "quality_of_life_desc"));
+Object software = client.capterra().search(Map.of("q", "project management"));
+Object games = client.metacritic().browse(Map.of("type", "game", "sort", "score"));
+```
+
 ## Airbnb Host Profiles
 
 Look up a public Airbnb host, then page through their listings and guest reviews.

@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 697;
+    public static final int OPERATION_COUNT = 737;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -37,6 +37,7 @@ public final class Operations {
         putOperations9(m);
         putOperations10(m);
         putOperations11(m);
+        putOperations12(m);
         return Map.copyOf(m);
     }
 
@@ -262,7 +263,8 @@ public final class Operations {
             "GET",
             "/anime/title/{id}",
             List.of("id"),
-            List.of(),
+            List.of(
+            new QueryParam("mal", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -1138,6 +1140,46 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("capterra-product", new Operation(
+            "capterra-product",
+            "GET",
+            "/capterra/product",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("capterra-reviews", new Operation(
+            "capterra-reviews",
+            "GET",
+            "/capterra/product/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("capterra-search", new Operation(
+            "capterra-search",
+            "GET",
+            "/capterra/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("chromewebstore-categories", new Operation(
             "chromewebstore-categories",
             "GET",
@@ -1792,6 +1834,143 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("datasets-chrome-extensions-changes", new Operation(
+            "datasets-chrome-extensions-changes",
+            "GET",
+            "/datasets/chrome-extensions/changes",
+            List.of(),
+            List.of(
+            new QueryParam("change_type", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
+        m.put("datasets-chrome-extensions-facets", new Operation(
+            "datasets-chrome-extensions-facets",
+            "GET",
+            "/datasets/chrome-extensions/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("developer", false, "string", List.of()),
+            new QueryParam("permission", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("collects_data", false, "boolean", List.of()),
+            new QueryParam("has_broad_host_access", false, "boolean", List.of()),
+            new QueryParam("min_users", false, "integer", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_rating_count", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-chrome-extensions-history", new Operation(
+            "datasets-chrome-extensions-history",
+            "GET",
+            "/datasets/chrome-extensions/history/{id}",
+            List.of("id"),
+            List.of(
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-chrome-extensions-item", new Operation(
+            "datasets-chrome-extensions-item",
+            "GET",
+            "/datasets/chrome-extensions/items/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-chrome-extensions-metrics", new Operation(
+            "datasets-chrome-extensions-metrics",
+            "GET",
+            "/datasets/chrome-extensions/metrics",
+            List.of(),
+            List.of(
+            new QueryParam("days", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-chrome-extensions-search", new Operation(
+            "datasets-chrome-extensions-search",
+            "GET",
+            "/datasets/chrome-extensions/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("developer", false, "string", List.of()),
+            new QueryParam("permission", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("collects_data", false, "boolean", List.of()),
+            new QueryParam("has_broad_host_access", false, "boolean", List.of()),
+            new QueryParam("min_users", false, "integer", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_rating_count", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-chrome-extensions-trending", new Operation(
+            "datasets-chrome-extensions-trending",
+            "GET",
+            "/datasets/chrome-extensions/trending",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("developer", false, "string", List.of()),
+            new QueryParam("permission", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("collects_data", false, "boolean", List.of()),
+            new QueryParam("has_broad_host_access", false, "boolean", List.of()),
+            new QueryParam("min_users", false, "integer", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("min_rating_count", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("datasets-creators-search", new Operation(
             "datasets-creators-search",
             "GET",
@@ -1888,9 +2067,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("datasets-github-users-search", new Operation(
             "datasets-github-users-search",
             "GET",
@@ -2100,6 +2276,155 @@ public final class Operations {
             new QueryParam("min_inventory", false, "integer", List.of()),
             new QueryParam("max_inventory", false, "integer", List.of()),
             new QueryParam("min_homes_sold", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-journalists-facets", new Operation(
+            "datasets-journalists-facets",
+            "GET",
+            "/datasets/journalists/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("outlet", false, "string", List.of()),
+            new QueryParam("vertical", false, "string", List.of()),
+            new QueryParam("topic", false, "string", List.of()),
+            new QueryParam("contact_type", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-journalists-item", new Operation(
+            "datasets-journalists-item",
+            "GET",
+            "/datasets/journalists/items/{outlet}/{slug}",
+            List.of("outlet", "slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-journalists-search", new Operation(
+            "datasets-journalists-search",
+            "GET",
+            "/datasets/journalists/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("outlet", false, "string", List.of()),
+            new QueryParam("vertical", false, "string", List.of()),
+            new QueryParam("topic", false, "string", List.of()),
+            new QueryParam("contact_type", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-numbeo-cities-facets", new Operation(
+            "datasets-numbeo-cities-facets",
+            "GET",
+            "/datasets/numbeo-cities/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("min_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("max_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("min_quality_of_life_index", false, "number", List.of()),
+            new QueryParam("min_crime_index", false, "number", List.of()),
+            new QueryParam("max_crime_index", false, "number", List.of()),
+            new QueryParam("min_safety_index", false, "number", List.of()),
+            new QueryParam("min_health_care_index", false, "number", List.of()),
+            new QueryParam("max_pollution_index", false, "number", List.of()),
+            new QueryParam("max_traffic_index", false, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-numbeo-cities-item", new Operation(
+            "datasets-numbeo-cities-item",
+            "GET",
+            "/datasets/numbeo-cities/items/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-numbeo-cities-search", new Operation(
+            "datasets-numbeo-cities-search",
+            "GET",
+            "/datasets/numbeo-cities/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("min_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("max_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("min_quality_of_life_index", false, "number", List.of()),
+            new QueryParam("min_crime_index", false, "number", List.of()),
+            new QueryParam("max_crime_index", false, "number", List.of()),
+            new QueryParam("min_safety_index", false, "number", List.of()),
+            new QueryParam("min_health_care_index", false, "number", List.of()),
+            new QueryParam("max_pollution_index", false, "number", List.of()),
+            new QueryParam("max_traffic_index", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-numbeo-countries-item", new Operation(
+            "datasets-numbeo-countries-item",
+            "GET",
+            "/datasets/numbeo-countries/items/{country}",
+            List.of("country"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-numbeo-countries-search", new Operation(
+            "datasets-numbeo-countries-search",
+            "GET",
+            "/datasets/numbeo-countries/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("min_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("max_cost_of_living_index", false, "number", List.of()),
+            new QueryParam("min_quality_of_life_index", false, "number", List.of()),
+            new QueryParam("min_crime_index", false, "number", List.of()),
+            new QueryParam("max_crime_index", false, "number", List.of()),
+            new QueryParam("min_safety_index", false, "number", List.of()),
+            new QueryParam("min_health_care_index", false, "number", List.of()),
+            new QueryParam("max_pollution_index", false, "number", List.of()),
+            new QueryParam("max_traffic_index", false, "number", List.of()),
             new QueryParam("sort", false, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
@@ -2638,6 +2963,21 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("datasets-trustmrr-history", new Operation(
+            "datasets-trustmrr-history",
+            "GET",
+            "/datasets/trustmrr/history/{slug}",
+            List.of("slug"),
+            List.of(
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("datasets-trustmrr-item", new Operation(
             "datasets-trustmrr-item",
             "GET",
@@ -2776,6 +3116,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("discogs-search", new Operation(
             "discogs-search",
             "GET",
@@ -3050,9 +3393,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("geocoding-search", new Operation(
             "geocoding-search",
             "GET",
@@ -3608,6 +3948,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("google-finance-ticker", new Operation(
             "google-finance-ticker",
             "GET",
@@ -3860,9 +4203,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("googleplay-app", new Operation(
             "googleplay-app",
             "GET",
@@ -4464,6 +4804,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("jobs-workday-board", new Operation(
             "jobs-workday-board",
             "GET",
@@ -4761,9 +5104,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("justwatch-title-by-id", new Operation(
             "justwatch-title-by-id",
             "GET",
@@ -5313,12 +5653,159 @@ public final class Operations {
             "GET",
             "/manga/title/{id}",
             List.of("id"),
+            List.of(
+            new QueryParam("mal", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metacritic-browse", new Operation(
+            "metacritic-browse",
+            "GET",
+            "/metacritic/browse",
+            List.of(),
+            List.of(
+            new QueryParam("type", true, "string", List.of("game", "movie", "tv")),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("score", "popularity", "release_date", "oldest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-game", new Operation(
+            "metacritic-game",
+            "GET",
+            "/metacritic/game/{slug}",
+            List.of("slug"),
             List.of(),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
+        m.put("metacritic-game-critic-reviews", new Operation(
+            "metacritic-game-critic-reviews",
+            "GET",
+            "/metacritic/game/{slug}/critic-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "publication"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-game-user-reviews", new Operation(
+            "metacritic-game-user-reviews",
+            "GET",
+            "/metacritic/game/{slug}/user-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "helpful"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-movie", new Operation(
+            "metacritic-movie",
+            "GET",
+            "/metacritic/movie/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metacritic-movie-critic-reviews", new Operation(
+            "metacritic-movie-critic-reviews",
+            "GET",
+            "/metacritic/movie/{slug}/critic-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "publication"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-movie-user-reviews", new Operation(
+            "metacritic-movie-user-reviews",
+            "GET",
+            "/metacritic/movie/{slug}/user-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "helpful"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-tv", new Operation(
+            "metacritic-tv",
+            "GET",
+            "/metacritic/tv/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metacritic-tv-critic-reviews", new Operation(
+            "metacritic-tv-critic-reviews",
+            "GET",
+            "/metacritic/tv/{slug}/critic-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "publication"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("metacritic-tv-user-reviews", new Operation(
+            "metacritic-tv-user-reviews",
+            "GET",
+            "/metacritic/tv/{slug}/user-reviews",
+            List.of("slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "score", "helpful"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("metaculus-category-questions", new Operation(
             "metaculus-category-questions",
@@ -5458,6 +5945,112 @@ public final class Operations {
             List.of("slug"),
             List.of(
             new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-cost-of-living-city", new Operation(
+            "numbeo-cost-of-living-city",
+            "GET",
+            "/numbeo/cost-of-living/city/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-cost-of-living-country", new Operation(
+            "numbeo-cost-of-living-country",
+            "GET",
+            "/numbeo/cost-of-living/country",
+            List.of(),
+            List.of(
+            new QueryParam("country", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-cost-of-living-rankings", new Operation(
+            "numbeo-cost-of-living-rankings",
+            "GET",
+            "/numbeo/cost-of-living/rankings",
+            List.of(),
+            List.of(
+            new QueryParam("scope", false, "string", List.of("current", "historical")),
+            new QueryParam("period", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-cost-of-living-rankings-by-country", new Operation(
+            "numbeo-cost-of-living-rankings-by-country",
+            "GET",
+            "/numbeo/cost-of-living/rankings-by-country",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-indices-city", new Operation(
+            "numbeo-indices-city",
+            "GET",
+            "/numbeo/indices/city/{slug}",
+            List.of("slug"),
+            List.of(
+            new QueryParam("index", true, "string", List.of("quality-of-life", "crime", "health-care", "pollution", "traffic", "property-investment"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-indices-country", new Operation(
+            "numbeo-indices-country",
+            "GET",
+            "/numbeo/indices/country",
+            List.of(),
+            List.of(
+            new QueryParam("country", true, "string", List.of()),
+            new QueryParam("index", true, "string", List.of("quality-of-life", "crime", "health-care", "pollution", "traffic", "property-investment"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-indices-rankings", new Operation(
+            "numbeo-indices-rankings",
+            "GET",
+            "/numbeo/indices/rankings",
+            List.of(),
+            List.of(
+            new QueryParam("index", true, "string", List.of("quality-of-life", "crime", "health-care", "pollution", "traffic", "property-investment")),
+            new QueryParam("scope", false, "string", List.of("current", "historical")),
+            new QueryParam("period", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("numbeo-indices-rankings-by-country", new Operation(
+            "numbeo-indices-rankings-by-country",
+            "GET",
+            "/numbeo/indices/rankings-by-country",
+            List.of(),
+            List.of(
+            new QueryParam("index", true, "string", List.of("quality-of-life", "crime", "health-care", "pollution", "traffic", "property-investment"))),
             List.of(),
             null,
             false,
@@ -5607,9 +6200,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("playstation-product", new Operation(
             "playstation-product",
             "GET",
@@ -5959,6 +6549,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("polymarket-market-detail-by-slug", new Operation(
             "polymarket-market-detail-by-slug",
             "GET",
@@ -6470,9 +7063,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("polymarket-token-spread", new Operation(
             "polymarket-token-spread",
             "GET",
@@ -6796,6 +7386,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("reddit-subreddit-about", new Operation(
             "reddit-subreddit-about",
             "GET",
@@ -7350,9 +7943,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("shop-app-product-related", new Operation(
             "shop-app-product-related",
             "GET",
@@ -7676,6 +8266,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("shopify-store", new Operation(
             "shopify-store",
             "GET",
@@ -8224,9 +8817,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("spotify-chapter", new Operation(
             "spotify-chapter",
             "GET",
@@ -8613,6 +9203,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("steam-charts-most-played", new Operation(
             "steam-charts-most-played",
             "GET",
@@ -9157,9 +9750,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("tiktok-top-ads-spotlight", new Operation(
             "tiktok-top-ads-spotlight",
             "GET",
@@ -9508,6 +10098,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("trustpilot-business", new Operation(
             "trustpilot-business",
             "GET",
@@ -9704,6 +10297,45 @@ public final class Operations {
             false,
             List.of("JWTAuth"),
             false,
+            List.of()));
+        m.put("walmart-product", new Operation(
+            "walmart-product",
+            "GET",
+            "/walmart/product/{item_id}",
+            List.of("item_id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walmart-product-reviews", new Operation(
+            "walmart-product-reviews",
+            "GET",
+            "/walmart/product/{item_id}/reviews",
+            List.of("item_id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walmart-search", new Operation(
+            "walmart-search",
+            "GET",
+            "/walmart/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("best_match", "price_low", "price_high", "best_seller", "new_arrivals", "rating_high"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("web-scrape", new Operation(
             "web-scrape",
@@ -10003,9 +10635,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-dividends", new Operation(
             "yahoo-finance-ticker-dividends",
             "GET",
@@ -10264,6 +10893,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("yahoo-finance-trending", new Operation(
             "yahoo-finance-trending",
             "GET",
@@ -10624,6 +11256,13 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("product", "capterra-product");
+            group.put("reviews", "capterra-reviews");
+            group.put("search", "capterra-search");
+            g.put("capterra", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("chromewebstoreCategories", "chromewebstore-categories");
             group.put("chromewebstoreCategory", "chromewebstore-category");
             group.put("chromewebstoreCharts", "chromewebstore-charts");
@@ -10682,6 +11321,13 @@ public final class Operations {
             group.put("appsChartsSearch", "datasets-apps-charts-search");
             group.put("appsReviewsSearch", "datasets-apps-reviews-search");
             group.put("appsSearch", "datasets-apps-search");
+            group.put("chromeExtensionsChanges", "datasets-chrome-extensions-changes");
+            group.put("chromeExtensionsFacets", "datasets-chrome-extensions-facets");
+            group.put("chromeExtensionsHistory", "datasets-chrome-extensions-history");
+            group.put("chromeExtensionsItem", "datasets-chrome-extensions-item");
+            group.put("chromeExtensionsMetrics", "datasets-chrome-extensions-metrics");
+            group.put("chromeExtensionsSearch", "datasets-chrome-extensions-search");
+            group.put("chromeExtensionsTrending", "datasets-chrome-extensions-trending");
             group.put("creatorsSearch", "datasets-creators-search");
             group.put("githubUsersFacets", "datasets-github-users-facets");
             group.put("githubUsersItem", "datasets-github-users-item");
@@ -10694,6 +11340,14 @@ public final class Operations {
             group.put("housingMarketsFacets", "datasets-housing-markets-facets");
             group.put("housingMarketsItem", "datasets-housing-markets-item");
             group.put("housingMarketsSearch", "datasets-housing-markets-search");
+            group.put("journalistsFacets", "datasets-journalists-facets");
+            group.put("journalistsItem", "datasets-journalists-item");
+            group.put("journalistsSearch", "datasets-journalists-search");
+            group.put("numbeoCitiesFacets", "datasets-numbeo-cities-facets");
+            group.put("numbeoCitiesItem", "datasets-numbeo-cities-item");
+            group.put("numbeoCitiesSearch", "datasets-numbeo-cities-search");
+            group.put("numbeoCountriesItem", "datasets-numbeo-countries-item");
+            group.put("numbeoCountriesSearch", "datasets-numbeo-countries-search");
             group.put("playstationGamesFacets", "datasets-playstation-games-facets");
             group.put("playstationGamesItem", "datasets-playstation-games-item");
             group.put("playstationGamesSearch", "datasets-playstation-games-search");
@@ -10718,6 +11372,7 @@ public final class Operations {
             group.put("techstackItem", "datasets-techstack-item");
             group.put("techstackSearch", "datasets-techstack-search");
             group.put("trustmrrFacets", "datasets-trustmrr-facets");
+            group.put("trustmrrHistory", "datasets-trustmrr-history");
             group.put("trustmrrItem", "datasets-trustmrr-item");
             group.put("trustmrrSearch", "datasets-trustmrr-search");
             g.put("datasets", Map.copyOf(group));
@@ -10971,6 +11626,20 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("browse", "metacritic-browse");
+            group.put("game", "metacritic-game");
+            group.put("gameCriticReviews", "metacritic-game-critic-reviews");
+            group.put("gameUserReviews", "metacritic-game-user-reviews");
+            group.put("movie", "metacritic-movie");
+            group.put("movieCriticReviews", "metacritic-movie-critic-reviews");
+            group.put("movieUserReviews", "metacritic-movie-user-reviews");
+            group.put("tv", "metacritic-tv");
+            group.put("tvCriticReviews", "metacritic-tv-critic-reviews");
+            group.put("tvUserReviews", "metacritic-tv-user-reviews");
+            g.put("metacritic", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("categoryQuestions", "metaculus-category-questions");
             group.put("commentsFeed", "metaculus-comments-feed");
             group.put("projectQuestions", "metaculus-project-questions");
@@ -10983,6 +11652,18 @@ public final class Operations {
             group.put("topComments", "metaculus-top-comments");
             group.put("tournamentQuestions", "metaculus-tournament-questions");
             g.put("metaculus", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("costOfLivingCity", "numbeo-cost-of-living-city");
+            group.put("costOfLivingCountry", "numbeo-cost-of-living-country");
+            group.put("costOfLivingRankings", "numbeo-cost-of-living-rankings");
+            group.put("costOfLivingRankingsByCountry", "numbeo-cost-of-living-rankings-by-country");
+            group.put("indicesCity", "numbeo-indices-city");
+            group.put("indicesCountry", "numbeo-indices-country");
+            group.put("indicesRankings", "numbeo-indices-rankings");
+            group.put("indicesRankingsByCountry", "numbeo-indices-rankings-by-country");
+            g.put("numbeo", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -11366,6 +12047,13 @@ public final class Operations {
             group.put("meApiKeysRotate", "user-me-api-keys-rotate");
             group.put("meApiKeysReveal", "user-me-api-keys-reveal");
             g.put("user", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("product", "walmart-product");
+            group.put("productReviews", "walmart-product-reviews");
+            group.put("search", "walmart-search");
+            g.put("walmart", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();

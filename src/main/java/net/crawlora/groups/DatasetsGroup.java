@@ -240,6 +240,196 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-chrome-extensions-changes (GET /datasets/chrome-extensions/changes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsChanges(Map<String, Object> params) {
+        return chromeExtensionsChanges(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-changes (GET /datasets/chrome-extensions/changes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsChanges(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-changes", params);
+        return client.request("datasets-chrome-extensions-changes", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-changes (GET /datasets/chrome-extensions/changes). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsChanges() {
+        return chromeExtensionsChanges(Map.of(), null);
+    }
+
+    /**
+     * datasets-chrome-extensions-facets (GET /datasets/chrome-extensions/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsFacets(Map<String, Object> params) {
+        return chromeExtensionsFacets(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-facets (GET /datasets/chrome-extensions/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-facets", params);
+        return client.request("datasets-chrome-extensions-facets", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-history (GET /datasets/chrome-extensions/history/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsHistory(Map<String, Object> params) {
+        return chromeExtensionsHistory(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-history (GET /datasets/chrome-extensions/history/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsHistory(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-history", params);
+        return client.request("datasets-chrome-extensions-history", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-item (GET /datasets/chrome-extensions/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsItem(Map<String, Object> params) {
+        return chromeExtensionsItem(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-item (GET /datasets/chrome-extensions/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-item", params);
+        return client.request("datasets-chrome-extensions-item", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-metrics (GET /datasets/chrome-extensions/metrics).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsMetrics(Map<String, Object> params) {
+        return chromeExtensionsMetrics(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-metrics (GET /datasets/chrome-extensions/metrics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsMetrics(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-metrics", params);
+        return client.request("datasets-chrome-extensions-metrics", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-metrics (GET /datasets/chrome-extensions/metrics). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsMetrics() {
+        return chromeExtensionsMetrics(Map.of(), null);
+    }
+
+    /**
+     * datasets-chrome-extensions-search (GET /datasets/chrome-extensions/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsSearch(Map<String, Object> params) {
+        return chromeExtensionsSearch(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-search (GET /datasets/chrome-extensions/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-search", params);
+        return client.request("datasets-chrome-extensions-search", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-search (GET /datasets/chrome-extensions/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsSearch() {
+        return chromeExtensionsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-chrome-extensions-trending (GET /datasets/chrome-extensions/trending).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsTrending(Map<String, Object> params) {
+        return chromeExtensionsTrending(params, null);
+    }
+
+    /**
+     * datasets-chrome-extensions-trending (GET /datasets/chrome-extensions/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsTrending(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-chrome-extensions-trending", params);
+        return client.request("datasets-chrome-extensions-trending", params, options);
+    }
+
+    /**
+     * datasets-chrome-extensions-trending (GET /datasets/chrome-extensions/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chromeExtensionsTrending() {
+        return chromeExtensionsTrending(Map.of(), null);
+    }
+
+    /**
      * datasets-creators-search (GET /datasets/creators/search).
      *
      * @param params operation parameters
@@ -537,6 +727,209 @@ public final class DatasetsGroup {
      */
     public Object housingMarketsSearch() {
         return housingMarketsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-journalists-facets (GET /datasets/journalists/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsFacets(Map<String, Object> params) {
+        return journalistsFacets(params, null);
+    }
+
+    /**
+     * datasets-journalists-facets (GET /datasets/journalists/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-journalists-facets", params);
+        return client.request("datasets-journalists-facets", params, options);
+    }
+
+    /**
+     * datasets-journalists-item (GET /datasets/journalists/items/{outlet}/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsItem(Map<String, Object> params) {
+        return journalistsItem(params, null);
+    }
+
+    /**
+     * datasets-journalists-item (GET /datasets/journalists/items/{outlet}/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-journalists-item", params);
+        return client.request("datasets-journalists-item", params, options);
+    }
+
+    /**
+     * datasets-journalists-search (GET /datasets/journalists/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsSearch(Map<String, Object> params) {
+        return journalistsSearch(params, null);
+    }
+
+    /**
+     * datasets-journalists-search (GET /datasets/journalists/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-journalists-search", params);
+        return client.request("datasets-journalists-search", params, options);
+    }
+
+    /**
+     * datasets-journalists-search (GET /datasets/journalists/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object journalistsSearch() {
+        return journalistsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-numbeo-cities-facets (GET /datasets/numbeo-cities/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesFacets(Map<String, Object> params) {
+        return numbeoCitiesFacets(params, null);
+    }
+
+    /**
+     * datasets-numbeo-cities-facets (GET /datasets/numbeo-cities/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-numbeo-cities-facets", params);
+        return client.request("datasets-numbeo-cities-facets", params, options);
+    }
+
+    /**
+     * datasets-numbeo-cities-item (GET /datasets/numbeo-cities/items/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesItem(Map<String, Object> params) {
+        return numbeoCitiesItem(params, null);
+    }
+
+    /**
+     * datasets-numbeo-cities-item (GET /datasets/numbeo-cities/items/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-numbeo-cities-item", params);
+        return client.request("datasets-numbeo-cities-item", params, options);
+    }
+
+    /**
+     * datasets-numbeo-cities-search (GET /datasets/numbeo-cities/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesSearch(Map<String, Object> params) {
+        return numbeoCitiesSearch(params, null);
+    }
+
+    /**
+     * datasets-numbeo-cities-search (GET /datasets/numbeo-cities/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-numbeo-cities-search", params);
+        return client.request("datasets-numbeo-cities-search", params, options);
+    }
+
+    /**
+     * datasets-numbeo-cities-search (GET /datasets/numbeo-cities/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCitiesSearch() {
+        return numbeoCitiesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-numbeo-countries-item (GET /datasets/numbeo-countries/items/{country}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCountriesItem(Map<String, Object> params) {
+        return numbeoCountriesItem(params, null);
+    }
+
+    /**
+     * datasets-numbeo-countries-item (GET /datasets/numbeo-countries/items/{country}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCountriesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-numbeo-countries-item", params);
+        return client.request("datasets-numbeo-countries-item", params, options);
+    }
+
+    /**
+     * datasets-numbeo-countries-search (GET /datasets/numbeo-countries/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCountriesSearch(Map<String, Object> params) {
+        return numbeoCountriesSearch(params, null);
+    }
+
+    /**
+     * datasets-numbeo-countries-search (GET /datasets/numbeo-countries/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCountriesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-numbeo-countries-search", params);
+        return client.request("datasets-numbeo-countries-search", params, options);
+    }
+
+    /**
+     * datasets-numbeo-countries-search (GET /datasets/numbeo-countries/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object numbeoCountriesSearch() {
+        return numbeoCountriesSearch(Map.of(), null);
     }
 
     /**
@@ -1173,6 +1566,28 @@ public final class DatasetsGroup {
     public Object trustmrrFacets(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-trustmrr-facets", params);
         return client.request("datasets-trustmrr-facets", params, options);
+    }
+
+    /**
+     * datasets-trustmrr-history (GET /datasets/trustmrr/history/{slug}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrHistory(Map<String, Object> params) {
+        return trustmrrHistory(params, null);
+    }
+
+    /**
+     * datasets-trustmrr-history (GET /datasets/trustmrr/history/{slug}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trustmrrHistory(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-trustmrr-history", params);
+        return client.request("datasets-trustmrr-history", params, options);
     }
 
     /**

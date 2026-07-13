@@ -91,6 +91,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "capterra" operation group.
+     * @return a new {@link CapterraGroup} bound to this client
+     */
+    public CapterraGroup capterra() {
+        return new CapterraGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "chromeWebStore" operation group.
      * @return a new {@link ChromeWebStoreGroup} bound to this client
      */
@@ -251,11 +259,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "metacritic" operation group.
+     * @return a new {@link MetacriticGroup} bound to this client
+     */
+    public MetacriticGroup metacritic() {
+        return new MetacriticGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "metaculus" operation group.
      * @return a new {@link MetaculusGroup} bound to this client
      */
     public MetaculusGroup metaculus() {
         return new MetaculusGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "numbeo" operation group.
+     * @return a new {@link NumbeoGroup} bound to this client
+     */
+    public NumbeoGroup numbeo() {
+        return new NumbeoGroup((CrawloraClient) this);
     }
 
     /**
@@ -448,6 +472,14 @@ public abstract class ClientGroups {
      */
     public UserGroup user() {
         return new UserGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "walmart" operation group.
+     * @return a new {@link WalmartGroup} bound to this client
+     */
+    public WalmartGroup walmart() {
+        return new WalmartGroup((CrawloraClient) this);
     }
 
     /**
