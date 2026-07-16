@@ -323,6 +323,50 @@ public final class GitHubGroup {
     }
 
     /**
+     * github-user-followers (GET /github/user/{username}/followers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUserFollowers(Map<String, Object> params) {
+        return githubUserFollowers(params, null);
+    }
+
+    /**
+     * github-user-followers (GET /github/user/{username}/followers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUserFollowers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("github-user-followers", params);
+        return client.request("github-user-followers", params, options);
+    }
+
+    /**
+     * github-user-following (GET /github/user/{username}/following).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUserFollowing(Map<String, Object> params) {
+        return githubUserFollowing(params, null);
+    }
+
+    /**
+     * github-user-following (GET /github/user/{username}/following). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object githubUserFollowing(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("github-user-following", params);
+        return client.request("github-user-following", params, options);
+    }
+
+    /**
      * github-user-pinned (GET /github/user/{username}/pinned).
      *
      * @param params operation parameters

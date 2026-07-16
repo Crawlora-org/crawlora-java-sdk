@@ -173,6 +173,160 @@ public final class JobsGroup {
     }
 
     /**
+     * jobs-oracle-board (GET /jobs/oracle/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oracleBoard(Map<String, Object> params) {
+        return oracleBoard(params, null);
+    }
+
+    /**
+     * jobs-oracle-board (GET /jobs/oracle/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oracleBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-oracle-board", params);
+        return client.request("jobs-oracle-board", params, options);
+    }
+
+    /**
+     * jobs-oracle-job (GET /jobs/oracle/job).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oracleJob(Map<String, Object> params) {
+        return oracleJob(params, null);
+    }
+
+    /**
+     * jobs-oracle-job (GET /jobs/oracle/job). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oracleJob(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-oracle-job", params);
+        return client.request("jobs-oracle-job", params, options);
+    }
+
+    /**
+     * jobs-personio-feed (GET /jobs/personio/feed).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object personioFeed(Map<String, Object> params) {
+        return personioFeed(params, null);
+    }
+
+    /**
+     * jobs-personio-feed (GET /jobs/personio/feed). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object personioFeed(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-personio-feed", params);
+        return client.request("jobs-personio-feed", params, options);
+    }
+
+    /**
+     * jobs-recruitee-offer (GET /jobs/recruitee/offer).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object recruiteeOffer(Map<String, Object> params) {
+        return recruiteeOffer(params, null);
+    }
+
+    /**
+     * jobs-recruitee-offer (GET /jobs/recruitee/offer). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object recruiteeOffer(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-recruitee-offer", params);
+        return client.request("jobs-recruitee-offer", params, options);
+    }
+
+    /**
+     * jobs-recruitee-offers (GET /jobs/recruitee/offers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object recruiteeOffers(Map<String, Object> params) {
+        return recruiteeOffers(params, null);
+    }
+
+    /**
+     * jobs-recruitee-offers (GET /jobs/recruitee/offers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object recruiteeOffers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-recruitee-offers", params);
+        return client.request("jobs-recruitee-offers", params, options);
+    }
+
+    /**
+     * jobs-rippling-board (GET /jobs/rippling/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ripplingBoard(Map<String, Object> params) {
+        return ripplingBoard(params, null);
+    }
+
+    /**
+     * jobs-rippling-board (GET /jobs/rippling/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ripplingBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-rippling-board", params);
+        return client.request("jobs-rippling-board", params, options);
+    }
+
+    /**
+     * jobs-rippling-job (GET /jobs/rippling/job).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ripplingJob(Map<String, Object> params) {
+        return ripplingJob(params, null);
+    }
+
+    /**
+     * jobs-rippling-job (GET /jobs/rippling/job). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ripplingJob(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-rippling-job", params);
+        return client.request("jobs-rippling-job", params, options);
+    }
+
+    /**
      * jobs-smartrecruiters-posting (GET /jobs/smartrecruiters/posting).
      *
      * @param params operation parameters
@@ -214,6 +368,94 @@ public final class JobsGroup {
     public Object smartrecruitersPostings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("jobs-smartrecruiters-postings", params);
         return client.request("jobs-smartrecruiters-postings", params, options);
+    }
+
+    /**
+     * jobs-teamtailor-jobs (GET /jobs/teamtailor/jobs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamtailorJobs(Map<String, Object> params) {
+        return teamtailorJobs(params, null);
+    }
+
+    /**
+     * jobs-teamtailor-jobs (GET /jobs/teamtailor/jobs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamtailorJobs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-teamtailor-jobs", params);
+        return client.request("jobs-teamtailor-jobs", params, options);
+    }
+
+    /**
+     * jobs-ukg-board (GET /jobs/ukg/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ukgBoard(Map<String, Object> params) {
+        return ukgBoard(params, null);
+    }
+
+    /**
+     * jobs-ukg-board (GET /jobs/ukg/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ukgBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-ukg-board", params);
+        return client.request("jobs-ukg-board", params, options);
+    }
+
+    /**
+     * jobs-workable-posting (GET /jobs/workable/posting).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object workablePosting(Map<String, Object> params) {
+        return workablePosting(params, null);
+    }
+
+    /**
+     * jobs-workable-posting (GET /jobs/workable/posting). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object workablePosting(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-workable-posting", params);
+        return client.request("jobs-workable-posting", params, options);
+    }
+
+    /**
+     * jobs-workable-postings (GET /jobs/workable/postings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object workablePostings(Map<String, Object> params) {
+        return workablePostings(params, null);
+    }
+
+    /**
+     * jobs-workable-postings (GET /jobs/workable/postings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object workablePostings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-workable-postings", params);
+        return client.request("jobs-workable-postings", params, options);
     }
 
     /**

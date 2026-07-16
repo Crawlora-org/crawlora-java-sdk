@@ -730,6 +730,121 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-jobs-companies (GET /datasets/jobs/companies).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsCompanies(Map<String, Object> params) {
+        return jobsCompanies(params, null);
+    }
+
+    /**
+     * datasets-jobs-companies (GET /datasets/jobs/companies). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsCompanies(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-companies", params);
+        return client.request("datasets-jobs-companies", params, options);
+    }
+
+    /**
+     * datasets-jobs-companies (GET /datasets/jobs/companies). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsCompanies() {
+        return jobsCompanies(Map.of(), null);
+    }
+
+    /**
+     * datasets-jobs-facets (GET /datasets/jobs/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsFacets(Map<String, Object> params) {
+        return jobsFacets(params, null);
+    }
+
+    /**
+     * datasets-jobs-facets (GET /datasets/jobs/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-facets", params);
+        return client.request("datasets-jobs-facets", params, options);
+    }
+
+    /**
+     * datasets-jobs-facets (GET /datasets/jobs/facets). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsFacets() {
+        return jobsFacets(Map.of(), null);
+    }
+
+    /**
+     * datasets-jobs-item (GET /datasets/jobs/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsItem(Map<String, Object> params) {
+        return jobsItem(params, null);
+    }
+
+    /**
+     * datasets-jobs-item (GET /datasets/jobs/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-item", params);
+        return client.request("datasets-jobs-item", params, options);
+    }
+
+    /**
+     * datasets-jobs-search (GET /datasets/jobs/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsSearch(Map<String, Object> params) {
+        return jobsSearch(params, null);
+    }
+
+    /**
+     * datasets-jobs-search (GET /datasets/jobs/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-search", params);
+        return client.request("datasets-jobs-search", params, options);
+    }
+
+    /**
+     * datasets-jobs-search (GET /datasets/jobs/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsSearch() {
+        return jobsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-journalists-facets (GET /datasets/journalists/facets).
      *
      * @param params operation parameters
@@ -1211,6 +1326,178 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-sec-companies-facets (GET /datasets/sec-companies/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesFacets(Map<String, Object> params) {
+        return secCompaniesFacets(params, null);
+    }
+
+    /**
+     * datasets-sec-companies-facets (GET /datasets/sec-companies/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-companies-facets", params);
+        return client.request("datasets-sec-companies-facets", params, options);
+    }
+
+    /**
+     * datasets-sec-companies-financials (GET /datasets/sec-companies/financials/{cik}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesFinancials(Map<String, Object> params) {
+        return secCompaniesFinancials(params, null);
+    }
+
+    /**
+     * datasets-sec-companies-financials (GET /datasets/sec-companies/financials/{cik}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesFinancials(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-companies-financials", params);
+        return client.request("datasets-sec-companies-financials", params, options);
+    }
+
+    /**
+     * datasets-sec-companies-insider (GET /datasets/sec-companies/insider/{cik}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesInsider(Map<String, Object> params) {
+        return secCompaniesInsider(params, null);
+    }
+
+    /**
+     * datasets-sec-companies-insider (GET /datasets/sec-companies/insider/{cik}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesInsider(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-companies-insider", params);
+        return client.request("datasets-sec-companies-insider", params, options);
+    }
+
+    /**
+     * datasets-sec-companies-item (GET /datasets/sec-companies/items/{cik}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesItem(Map<String, Object> params) {
+        return secCompaniesItem(params, null);
+    }
+
+    /**
+     * datasets-sec-companies-item (GET /datasets/sec-companies/items/{cik}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-companies-item", params);
+        return client.request("datasets-sec-companies-item", params, options);
+    }
+
+    /**
+     * datasets-sec-companies-search (GET /datasets/sec-companies/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesSearch(Map<String, Object> params) {
+        return secCompaniesSearch(params, null);
+    }
+
+    /**
+     * datasets-sec-companies-search (GET /datasets/sec-companies/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-companies-search", params);
+        return client.request("datasets-sec-companies-search", params, options);
+    }
+
+    /**
+     * datasets-sec-companies-search (GET /datasets/sec-companies/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secCompaniesSearch() {
+        return secCompaniesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-sec-institutional-positions-facets (GET /datasets/sec-institutional-positions/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secInstitutionalPositionsFacets(Map<String, Object> params) {
+        return secInstitutionalPositionsFacets(params, null);
+    }
+
+    /**
+     * datasets-sec-institutional-positions-facets (GET /datasets/sec-institutional-positions/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secInstitutionalPositionsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-institutional-positions-facets", params);
+        return client.request("datasets-sec-institutional-positions-facets", params, options);
+    }
+
+    /**
+     * datasets-sec-institutional-positions-search (GET /datasets/sec-institutional-positions/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secInstitutionalPositionsSearch(Map<String, Object> params) {
+        return secInstitutionalPositionsSearch(params, null);
+    }
+
+    /**
+     * datasets-sec-institutional-positions-search (GET /datasets/sec-institutional-positions/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secInstitutionalPositionsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-sec-institutional-positions-search", params);
+        return client.request("datasets-sec-institutional-positions-search", params, options);
+    }
+
+    /**
+     * datasets-sec-institutional-positions-search (GET /datasets/sec-institutional-positions/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object secInstitutionalPositionsSearch() {
+        return secInstitutionalPositionsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-steam-achievements-search (GET /datasets/steam-achievements/search).
      *
      * @param params operation parameters
@@ -1641,6 +1928,81 @@ public final class DatasetsGroup {
      */
     public Object trustmrrSearch() {
         return trustmrrSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-x-users-facets (GET /datasets/x-users/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersFacets(Map<String, Object> params) {
+        return xUsersFacets(params, null);
+    }
+
+    /**
+     * datasets-x-users-facets (GET /datasets/x-users/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-x-users-facets", params);
+        return client.request("datasets-x-users-facets", params, options);
+    }
+
+    /**
+     * datasets-x-users-item (GET /datasets/x-users/items/{username}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersItem(Map<String, Object> params) {
+        return xUsersItem(params, null);
+    }
+
+    /**
+     * datasets-x-users-item (GET /datasets/x-users/items/{username}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-x-users-item", params);
+        return client.request("datasets-x-users-item", params, options);
+    }
+
+    /**
+     * datasets-x-users-search (GET /datasets/x-users/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersSearch(Map<String, Object> params) {
+        return xUsersSearch(params, null);
+    }
+
+    /**
+     * datasets-x-users-search (GET /datasets/x-users/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-x-users-search", params);
+        return client.request("datasets-x-users-search", params, options);
+    }
+
+    /**
+     * datasets-x-users-search (GET /datasets/x-users/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object xUsersSearch() {
+        return xUsersSearch(Map.of(), null);
     }
 
 }

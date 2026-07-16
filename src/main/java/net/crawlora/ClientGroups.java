@@ -419,6 +419,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "tcdb" operation group.
+     * @return a new {@link TcdbGroup} bound to this client
+     */
+    public TcdbGroup tcdb() {
+        return new TcdbGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "tiktok" operation group.
      * @return a new {@link TiktokGroup} bound to this client
      */
