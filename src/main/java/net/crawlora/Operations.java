@@ -2296,7 +2296,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of()),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold")),
             new QueryParam("status", false, "string", List.of()),
             new QueryParam("min_open_roles", false, "integer", List.of()),
             new QueryParam("sort", false, "string", List.of()),
@@ -2354,7 +2354,7 @@ public final class Operations {
             new QueryParam("lat", true, "number", List.of()),
             new QueryParam("lon", true, "number", List.of()),
             new QueryParam("radius_km", false, "number", List.of()),
-            new QueryParam("provider", false, "string", List.of()),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold")),
             new QueryParam("include_closed", false, "boolean", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
@@ -2372,7 +2372,7 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("company", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of()),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold")),
             new QueryParam("department", false, "string", List.of()),
             new QueryParam("location", false, "string", List.of()),
             new QueryParam("employment_type", false, "string", List.of()),
