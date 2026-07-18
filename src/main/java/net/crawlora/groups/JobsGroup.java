@@ -63,6 +63,50 @@ public final class JobsGroup {
     }
 
     /**
+     * jobs-eightfold-board (GET /jobs/eightfold/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eightfoldBoard(Map<String, Object> params) {
+        return eightfoldBoard(params, null);
+    }
+
+    /**
+     * jobs-eightfold-board (GET /jobs/eightfold/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eightfoldBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-eightfold-board", params);
+        return client.request("jobs-eightfold-board", params, options);
+    }
+
+    /**
+     * jobs-eightfold-job (GET /jobs/eightfold/job).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eightfoldJob(Map<String, Object> params) {
+        return eightfoldJob(params, null);
+    }
+
+    /**
+     * jobs-eightfold-job (GET /jobs/eightfold/job). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eightfoldJob(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-eightfold-job", params);
+        return client.request("jobs-eightfold-job", params, options);
+    }
+
+    /**
      * jobs-greenhouse-board (GET /jobs/greenhouse/board).
      *
      * @param params operation parameters
@@ -126,6 +170,50 @@ public final class JobsGroup {
     public Object hiringSignals(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("jobs-hiring-signals", params);
         return client.request("jobs-hiring-signals", params, options);
+    }
+
+    /**
+     * jobs-icims-board (GET /jobs/icims/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object icimsBoard(Map<String, Object> params) {
+        return icimsBoard(params, null);
+    }
+
+    /**
+     * jobs-icims-board (GET /jobs/icims/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object icimsBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-icims-board", params);
+        return client.request("jobs-icims-board", params, options);
+    }
+
+    /**
+     * jobs-icims-job (GET /jobs/icims/job).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object icimsJob(Map<String, Object> params) {
+        return icimsJob(params, null);
+    }
+
+    /**
+     * jobs-icims-job (GET /jobs/icims/job). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object icimsJob(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-icims-job", params);
+        return client.request("jobs-icims-job", params, options);
     }
 
     /**

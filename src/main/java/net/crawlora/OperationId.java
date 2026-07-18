@@ -146,8 +146,10 @@ public final class OperationId {
     public static final String DATASETS_HOUSING_MARKETS_ITEM = "datasets-housing-markets-item";
     public static final String DATASETS_HOUSING_MARKETS_SEARCH = "datasets-housing-markets-search";
     public static final String DATASETS_JOBS_COMPANIES = "datasets-jobs-companies";
+    public static final String DATASETS_JOBS_COMPANY_ITEM = "datasets-jobs-company-item";
     public static final String DATASETS_JOBS_FACETS = "datasets-jobs-facets";
     public static final String DATASETS_JOBS_ITEM = "datasets-jobs-item";
+    public static final String DATASETS_JOBS_NEARBY = "datasets-jobs-nearby";
     public static final String DATASETS_JOBS_SEARCH = "datasets-jobs-search";
     public static final String DATASETS_JOURNALISTS_FACETS = "datasets-journalists-facets";
     public static final String DATASETS_JOURNALISTS_ITEM = "datasets-journalists-item";
@@ -315,9 +317,13 @@ public final class OperationId {
     public static final String INSTAGRAM_REELS = "instagram-reels";
     public static final String JOBS_ASHBY_BOARD = "jobs-ashby-board";
     public static final String JOBS_COMPANY_SEARCH = "jobs-company-search";
+    public static final String JOBS_EIGHTFOLD_BOARD = "jobs-eightfold-board";
+    public static final String JOBS_EIGHTFOLD_JOB = "jobs-eightfold-job";
     public static final String JOBS_GREENHOUSE_BOARD = "jobs-greenhouse-board";
     public static final String JOBS_GREENHOUSE_JOB = "jobs-greenhouse-job";
     public static final String JOBS_HIRING_SIGNALS = "jobs-hiring-signals";
+    public static final String JOBS_ICIMS_BOARD = "jobs-icims-board";
+    public static final String JOBS_ICIMS_JOB = "jobs-icims-job";
     public static final String JOBS_LEVER_POSTING = "jobs-lever-posting";
     public static final String JOBS_LEVER_POSTINGS = "jobs-lever-postings";
     public static final String JOBS_ORACLE_BOARD = "jobs-oracle-board";
