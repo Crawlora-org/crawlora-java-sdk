@@ -41,6 +41,28 @@ public final class ThreadsGroup {
     }
 
     /**
+     * threads-post-replies (GET /threads/post/{username}/{code}/replies).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postReplies(Map<String, Object> params) {
+        return postReplies(params, null);
+    }
+
+    /**
+     * threads-post-replies (GET /threads/post/{username}/{code}/replies). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postReplies(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("threads-post-replies", params);
+        return client.request("threads-post-replies", params, options);
+    }
+
+    /**
      * threads-profile (GET /threads/profile/{username}).
      *
      * @param params operation parameters
@@ -60,6 +82,50 @@ public final class ThreadsGroup {
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("threads-profile", params);
         return client.request("threads-profile", params, options);
+    }
+
+    /**
+     * threads-profile-posts (GET /threads/profile/{username}/posts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object profilePosts(Map<String, Object> params) {
+        return profilePosts(params, null);
+    }
+
+    /**
+     * threads-profile-posts (GET /threads/profile/{username}/posts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object profilePosts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("threads-profile-posts", params);
+        return client.request("threads-profile-posts", params, options);
+    }
+
+    /**
+     * threads-search (GET /threads/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params) {
+        return search(params, null);
+    }
+
+    /**
+     * threads-search (GET /threads/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("threads-search", params);
+        return client.request("threads-search", params, options);
     }
 
 }

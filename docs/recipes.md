@@ -31,6 +31,9 @@ Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 ```java
 Object profile = client.threads().profile(Map.of("username", "zuck"));
 Object post = client.threads().post(Map.of("username", "zuck", "code", "DakyAavlKLZ"));
+Object results = client.threads().search(Map.of("q", "openai"));
+Object posts = client.threads().profilePosts(Map.of("username", "zuck"));
+Object replies = client.threads().postReplies(Map.of("username", "zuck", "code", "DakyAavlKLZ"));
 ```
 
 ## Software, Reviews, And Market Datasets
