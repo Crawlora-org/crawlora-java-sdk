@@ -668,6 +668,8 @@ public final class OperationId {
     public static final String TCDB_TAGGED = "tcdb-tagged";
     public static final String TCDB_TEAM = "tcdb-team";
     public static final String TCDB_TOP_SETS = "tcdb-top-sets";
+    public static final String THREADS_POST = "threads-post";
+    public static final String THREADS_PROFILE = "threads-profile";
     public static final String TIKTOK_CATEGORY = "tiktok-category";
     public static final String TIKTOK_CHALLENGE = "tiktok-challenge";
     public static final String TIKTOK_CHALLENGE_LIST = "tiktok-challenge-list";

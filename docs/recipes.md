@@ -26,6 +26,13 @@ Object posts = client.reddit().search(Map.of("q", "java", "subreddit", "programm
 Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 ```
 
+## Threads Public Lookups
+
+```java
+Object profile = client.threads().profile(Map.of("username", "zuck"));
+Object post = client.threads().post(Map.of("username", "zuck", "code", "DakyAavlKLZ"));
+```
+
 ## Software, Reviews, And Market Datasets
 
 Build a Chrome extension competitive-intelligence view without downloading the

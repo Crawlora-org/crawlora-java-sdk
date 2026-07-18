@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 782;
+    public static final int OPERATION_COUNT = 784;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -10229,6 +10229,30 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("threads-post", new Operation(
+            "threads-post",
+            "GET",
+            "/threads/post/{username}/{code}",
+            List.of("username", "code"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("threads-profile", new Operation(
+            "threads-profile",
+            "GET",
+            "/threads/profile/{username}",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("tiktok-category", new Operation(
             "tiktok-category",
             "GET",
@@ -11038,6 +11062,9 @@ public final class Operations {
             List.of("JWTAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("user-me-api-keys-reveal", new Operation(
             "user-me-api-keys-reveal",
             "POST",
@@ -11062,9 +11089,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("walmart-product-reviews", new Operation(
             "walmart-product-reviews",
             "GET",
@@ -11827,6 +11851,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("youtube-video", new Operation(
             "youtube-video",
             "GET",
@@ -11854,9 +11881,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("zillow-property", new Operation(
             "zillow-property",
             "GET",
@@ -12766,6 +12790,12 @@ public final class Operations {
             group.put("team", "tcdb-team");
             group.put("topSets", "tcdb-top-sets");
             g.put("tcdb", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("post", "threads-post");
+            group.put("profile", "threads-profile");
+            g.put("threads", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();

@@ -427,6 +427,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "threads" operation group.
+     * @return a new {@link ThreadsGroup} bound to this client
+     */
+    public ThreadsGroup threads() {
+        return new ThreadsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "tiktok" operation group.
      * @return a new {@link TiktokGroup} bound to this client
      */
