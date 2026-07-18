@@ -761,6 +761,28 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-jobs-company-item (GET /datasets/jobs/companies/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsCompanyItem(Map<String, Object> params) {
+        return jobsCompanyItem(params, null);
+    }
+
+    /**
+     * datasets-jobs-company-item (GET /datasets/jobs/companies/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsCompanyItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-company-item", params);
+        return client.request("datasets-jobs-company-item", params, options);
+    }
+
+    /**
      * datasets-jobs-facets (GET /datasets/jobs/facets).
      *
      * @param params operation parameters
@@ -811,6 +833,28 @@ public final class DatasetsGroup {
     public Object jobsItem(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("datasets-jobs-item", params);
         return client.request("datasets-jobs-item", params, options);
+    }
+
+    /**
+     * datasets-jobs-nearby (GET /datasets/jobs/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsNearby(Map<String, Object> params) {
+        return jobsNearby(params, null);
+    }
+
+    /**
+     * datasets-jobs-nearby (GET /datasets/jobs/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object jobsNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-jobs-nearby", params);
+        return client.request("datasets-jobs-nearby", params, options);
     }
 
     /**
