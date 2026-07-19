@@ -36,6 +36,16 @@ Object posts = client.threads().profilePosts(Map.of("username", "zuck"));
 Object replies = client.threads().postReplies(Map.of("username", "zuck", "code", "DakyAavlKLZ"));
 ```
 
+## Box Office Mojo Dataset
+
+Search theatrical box-office records, fetch one title, and facet the same filter set.
+
+```java
+Object titles = client.datasets().boxofficemojoSearch(Map.of("q", "avatar", "sort", "worldwide_desc"));
+Object avatar = client.datasets().boxofficemojoItem(Map.of("title_id", "tt0499549"));
+Object years = client.datasets().boxofficemojoFacets(Map.of("facet", "years_active", "gross_band", "over_1b"));
+```
+
 ## Software, Reviews, And Market Datasets
 
 Build a Chrome extension competitive-intelligence view without downloading the

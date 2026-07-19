@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 787;
+    public static final int OPERATION_COUNT = 790;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -1835,6 +1835,81 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("datasets-boxofficemojo-facets", new Operation(
+            "datasets-boxofficemojo-facets",
+            "GET",
+            "/datasets/boxofficemojo/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("title_id", false, "string", List.of()),
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("lifetime_year", false, "integer", List.of()),
+            new QueryParam("gross_band", false, "string", List.of()),
+            new QueryParam("franchise", false, "string", List.of()),
+            new QueryParam("brand", false, "string", List.of()),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("in_lifetime_top_1000", false, "boolean", List.of()),
+            new QueryParam("min_worldwide", false, "integer", List.of()),
+            new QueryParam("max_worldwide", false, "integer", List.of()),
+            new QueryParam("min_domestic", false, "integer", List.of()),
+            new QueryParam("min_foreign_share", false, "number", List.of()),
+            new QueryParam("max_domestic_share", false, "number", List.of()),
+            new QueryParam("hydrated", false, "boolean", List.of()),
+            new QueryParam("is_billion_dollar", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
+        m.put("datasets-boxofficemojo-item", new Operation(
+            "datasets-boxofficemojo-item",
+            "GET",
+            "/datasets/boxofficemojo/items/{title_id}",
+            List.of("title_id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-boxofficemojo-search", new Operation(
+            "datasets-boxofficemojo-search",
+            "GET",
+            "/datasets/boxofficemojo/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("title_id", false, "string", List.of()),
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("lifetime_year", false, "integer", List.of()),
+            new QueryParam("gross_band", false, "string", List.of()),
+            new QueryParam("franchise", false, "string", List.of()),
+            new QueryParam("brand", false, "string", List.of()),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("in_lifetime_top_1000", false, "boolean", List.of()),
+            new QueryParam("hydrated", false, "boolean", List.of()),
+            new QueryParam("is_billion_dollar", false, "boolean", List.of()),
+            new QueryParam("min_worldwide", false, "integer", List.of()),
+            new QueryParam("max_worldwide", false, "integer", List.of()),
+            new QueryParam("min_domestic", false, "integer", List.of()),
+            new QueryParam("min_foreign_share", false, "number", List.of()),
+            new QueryParam("max_domestic_share", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("datasets-chrome-extensions-changes", new Operation(
             "datasets-chrome-extensions-changes",
             "GET",
@@ -1849,9 +1924,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("datasets-chrome-extensions-facets", new Operation(
             "datasets-chrome-extensions-facets",
             "GET",
@@ -3069,6 +3141,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-steam-prices-search", new Operation(
             "datasets-steam-prices-search",
             "GET",
@@ -3135,9 +3210,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-techstack-item", new Operation(
             "datasets-techstack-item",
             "GET",
@@ -4013,6 +4085,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("goodreads-list", new Operation(
             "goodreads-list",
             "GET",
@@ -4052,9 +4127,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("google-finance-chart", new Operation(
             "google-finance-chart",
             "GET",
@@ -4839,6 +4911,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("imdb-title-goofs", new Operation(
             "imdb-title-goofs",
             "GET",
@@ -4881,9 +4956,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("imdb-title-public-facts-analysis", new Operation(
             "imdb-title-public-facts-analysis",
             "GET",
@@ -5749,6 +5821,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("kalshi-event-history", new Operation(
             "kalshi-event-history",
             "GET",
@@ -5799,9 +5874,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("kalshi-multivariate-events", new Operation(
             "kalshi-multivariate-events",
             "GET",
@@ -6587,6 +6659,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("numbeo-indices-country", new Operation(
             "numbeo-indices-country",
             "GET",
@@ -6629,9 +6704,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("ping", new Operation(
             "ping",
             "GET",
@@ -7451,6 +7523,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("polymarket-tag", new Operation(
             "polymarket-tag",
             "GET",
@@ -7495,9 +7570,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("polymarket-tags", new Operation(
             "polymarket-tags",
             "GET",
@@ -8309,6 +8381,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("sec-company-intelligence", new Operation(
             "sec-company-intelligence",
             "GET",
@@ -8361,9 +8436,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("sec-filing", new Operation(
             "sec-filing",
             "GET",
@@ -9181,6 +9253,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("spotify-podcasts-show-episodes", new Operation(
             "spotify-podcasts-show-episodes",
             "GET",
@@ -9226,9 +9301,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("spotify-album-tracks", new Operation(
             "spotify-album-tracks",
             "GET",
@@ -10148,6 +10220,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("tcdb-set", new Operation(
             "tcdb-set",
             "GET",
@@ -10197,9 +10272,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("tcdb-team", new Operation(
             "tcdb-team",
             "GET",
@@ -11016,6 +11088,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("usage-me-overview", new Operation(
             "usage-me-overview",
             "GET",
@@ -11064,9 +11139,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("user-me", new Operation(
             "user-me",
             "GET",
@@ -11801,6 +11873,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("youtube-playlist", new Operation(
             "youtube-playlist",
             "GET",
@@ -11847,9 +11922,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("youtube-tag", new Operation(
             "youtube-tag",
             "GET",
@@ -12138,6 +12210,9 @@ public final class Operations {
             group.put("appsChartsSearch", "datasets-apps-charts-search");
             group.put("appsReviewsSearch", "datasets-apps-reviews-search");
             group.put("appsSearch", "datasets-apps-search");
+            group.put("boxofficemojoFacets", "datasets-boxofficemojo-facets");
+            group.put("boxofficemojoItem", "datasets-boxofficemojo-item");
+            group.put("boxofficemojoSearch", "datasets-boxofficemojo-search");
             group.put("chromeExtensionsChanges", "datasets-chrome-extensions-changes");
             group.put("chromeExtensionsFacets", "datasets-chrome-extensions-facets");
             group.put("chromeExtensionsHistory", "datasets-chrome-extensions-history");

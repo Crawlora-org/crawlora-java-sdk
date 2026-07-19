@@ -240,6 +240,81 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-boxofficemojo-facets (GET /datasets/boxofficemojo/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoFacets(Map<String, Object> params) {
+        return boxofficemojoFacets(params, null);
+    }
+
+    /**
+     * datasets-boxofficemojo-facets (GET /datasets/boxofficemojo/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-boxofficemojo-facets", params);
+        return client.request("datasets-boxofficemojo-facets", params, options);
+    }
+
+    /**
+     * datasets-boxofficemojo-item (GET /datasets/boxofficemojo/items/{title_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoItem(Map<String, Object> params) {
+        return boxofficemojoItem(params, null);
+    }
+
+    /**
+     * datasets-boxofficemojo-item (GET /datasets/boxofficemojo/items/{title_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-boxofficemojo-item", params);
+        return client.request("datasets-boxofficemojo-item", params, options);
+    }
+
+    /**
+     * datasets-boxofficemojo-search (GET /datasets/boxofficemojo/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoSearch(Map<String, Object> params) {
+        return boxofficemojoSearch(params, null);
+    }
+
+    /**
+     * datasets-boxofficemojo-search (GET /datasets/boxofficemojo/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-boxofficemojo-search", params);
+        return client.request("datasets-boxofficemojo-search", params, options);
+    }
+
+    /**
+     * datasets-boxofficemojo-search (GET /datasets/boxofficemojo/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object boxofficemojoSearch() {
+        return boxofficemojoSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-chrome-extensions-changes (GET /datasets/chrome-extensions/changes).
      *
      * @param params operation parameters
