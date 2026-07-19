@@ -126,6 +126,9 @@ public final class OperationId {
     public static final String DATASETS_APPS_CHARTS_SEARCH = "datasets-apps-charts-search";
     public static final String DATASETS_APPS_REVIEWS_SEARCH = "datasets-apps-reviews-search";
     public static final String DATASETS_APPS_SEARCH = "datasets-apps-search";
+    public static final String DATASETS_BOXOFFICEMOJO_FACETS = "datasets-boxofficemojo-facets";
+    public static final String DATASETS_BOXOFFICEMOJO_ITEM = "datasets-boxofficemojo-item";
+    public static final String DATASETS_BOXOFFICEMOJO_SEARCH = "datasets-boxofficemojo-search";
     public static final String DATASETS_CHROME_EXTENSIONS_CHANGES = "datasets-chrome-extensions-changes";
     public static final String DATASETS_CHROME_EXTENSIONS_FACETS = "datasets-chrome-extensions-facets";
     public static final String DATASETS_CHROME_EXTENSIONS_HISTORY = "datasets-chrome-extensions-history";
