@@ -633,6 +633,156 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-goodreads-authors-facets (GET /datasets/goodreads-authors/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsFacets(Map<String, Object> params) {
+        return goodreadsAuthorsFacets(params, null);
+    }
+
+    /**
+     * datasets-goodreads-authors-facets (GET /datasets/goodreads-authors/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-authors-facets", params);
+        return client.request("datasets-goodreads-authors-facets", params, options);
+    }
+
+    /**
+     * datasets-goodreads-authors-item (GET /datasets/goodreads-authors/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsItem(Map<String, Object> params) {
+        return goodreadsAuthorsItem(params, null);
+    }
+
+    /**
+     * datasets-goodreads-authors-item (GET /datasets/goodreads-authors/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-authors-item", params);
+        return client.request("datasets-goodreads-authors-item", params, options);
+    }
+
+    /**
+     * datasets-goodreads-authors-search (GET /datasets/goodreads-authors/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsSearch(Map<String, Object> params) {
+        return goodreadsAuthorsSearch(params, null);
+    }
+
+    /**
+     * datasets-goodreads-authors-search (GET /datasets/goodreads-authors/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-authors-search", params);
+        return client.request("datasets-goodreads-authors-search", params, options);
+    }
+
+    /**
+     * datasets-goodreads-authors-search (GET /datasets/goodreads-authors/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsAuthorsSearch() {
+        return goodreadsAuthorsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-goodreads-books-facets (GET /datasets/goodreads-books/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksFacets(Map<String, Object> params) {
+        return goodreadsBooksFacets(params, null);
+    }
+
+    /**
+     * datasets-goodreads-books-facets (GET /datasets/goodreads-books/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-books-facets", params);
+        return client.request("datasets-goodreads-books-facets", params, options);
+    }
+
+    /**
+     * datasets-goodreads-books-item (GET /datasets/goodreads-books/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksItem(Map<String, Object> params) {
+        return goodreadsBooksItem(params, null);
+    }
+
+    /**
+     * datasets-goodreads-books-item (GET /datasets/goodreads-books/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-books-item", params);
+        return client.request("datasets-goodreads-books-item", params, options);
+    }
+
+    /**
+     * datasets-goodreads-books-search (GET /datasets/goodreads-books/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksSearch(Map<String, Object> params) {
+        return goodreadsBooksSearch(params, null);
+    }
+
+    /**
+     * datasets-goodreads-books-search (GET /datasets/goodreads-books/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-goodreads-books-search", params);
+        return client.request("datasets-goodreads-books-search", params, options);
+    }
+
+    /**
+     * datasets-goodreads-books-search (GET /datasets/goodreads-books/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object goodreadsBooksSearch() {
+        return goodreadsBooksSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-google-map-businesses-facets (GET /datasets/google-map-businesses/facets).
      *
      * @param params operation parameters
@@ -1164,6 +1314,381 @@ public final class DatasetsGroup {
      */
     public Object numbeoCountriesSearch() {
         return numbeoCountriesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-facets (GET /datasets/pitchbook-advisors/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsFacets(Map<String, Object> params) {
+        return pitchbookAdvisorsFacets(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-facets (GET /datasets/pitchbook-advisors/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-advisors-facets", params);
+        return client.request("datasets-pitchbook-advisors-facets", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-item (GET /datasets/pitchbook-advisors/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsItem(Map<String, Object> params) {
+        return pitchbookAdvisorsItem(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-item (GET /datasets/pitchbook-advisors/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-advisors-item", params);
+        return client.request("datasets-pitchbook-advisors-item", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-search (GET /datasets/pitchbook-advisors/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsSearch(Map<String, Object> params) {
+        return pitchbookAdvisorsSearch(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-search (GET /datasets/pitchbook-advisors/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-advisors-search", params);
+        return client.request("datasets-pitchbook-advisors-search", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-advisors-search (GET /datasets/pitchbook-advisors/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisorsSearch() {
+        return pitchbookAdvisorsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-pitchbook-companies-facets (GET /datasets/pitchbook-companies/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesFacets(Map<String, Object> params) {
+        return pitchbookCompaniesFacets(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-companies-facets (GET /datasets/pitchbook-companies/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-companies-facets", params);
+        return client.request("datasets-pitchbook-companies-facets", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-companies-item (GET /datasets/pitchbook-companies/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesItem(Map<String, Object> params) {
+        return pitchbookCompaniesItem(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-companies-item (GET /datasets/pitchbook-companies/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-companies-item", params);
+        return client.request("datasets-pitchbook-companies-item", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-companies-search (GET /datasets/pitchbook-companies/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesSearch(Map<String, Object> params) {
+        return pitchbookCompaniesSearch(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-companies-search (GET /datasets/pitchbook-companies/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-companies-search", params);
+        return client.request("datasets-pitchbook-companies-search", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-companies-search (GET /datasets/pitchbook-companies/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookCompaniesSearch() {
+        return pitchbookCompaniesSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-pitchbook-funds-facets (GET /datasets/pitchbook-funds/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsFacets(Map<String, Object> params) {
+        return pitchbookFundsFacets(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-funds-facets (GET /datasets/pitchbook-funds/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-funds-facets", params);
+        return client.request("datasets-pitchbook-funds-facets", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-funds-item (GET /datasets/pitchbook-funds/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsItem(Map<String, Object> params) {
+        return pitchbookFundsItem(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-funds-item (GET /datasets/pitchbook-funds/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-funds-item", params);
+        return client.request("datasets-pitchbook-funds-item", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-funds-search (GET /datasets/pitchbook-funds/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsSearch(Map<String, Object> params) {
+        return pitchbookFundsSearch(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-funds-search (GET /datasets/pitchbook-funds/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-funds-search", params);
+        return client.request("datasets-pitchbook-funds-search", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-funds-search (GET /datasets/pitchbook-funds/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookFundsSearch() {
+        return pitchbookFundsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-pitchbook-investors-facets (GET /datasets/pitchbook-investors/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsFacets(Map<String, Object> params) {
+        return pitchbookInvestorsFacets(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-investors-facets (GET /datasets/pitchbook-investors/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-investors-facets", params);
+        return client.request("datasets-pitchbook-investors-facets", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-investors-item (GET /datasets/pitchbook-investors/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsItem(Map<String, Object> params) {
+        return pitchbookInvestorsItem(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-investors-item (GET /datasets/pitchbook-investors/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-investors-item", params);
+        return client.request("datasets-pitchbook-investors-item", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-investors-search (GET /datasets/pitchbook-investors/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsSearch(Map<String, Object> params) {
+        return pitchbookInvestorsSearch(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-investors-search (GET /datasets/pitchbook-investors/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-investors-search", params);
+        return client.request("datasets-pitchbook-investors-search", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-investors-search (GET /datasets/pitchbook-investors/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookInvestorsSearch() {
+        return pitchbookInvestorsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-facets (GET /datasets/pitchbook-limited-partners/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersFacets(Map<String, Object> params) {
+        return pitchbookLimitedPartnersFacets(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-facets (GET /datasets/pitchbook-limited-partners/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-limited-partners-facets", params);
+        return client.request("datasets-pitchbook-limited-partners-facets", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-item (GET /datasets/pitchbook-limited-partners/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersItem(Map<String, Object> params) {
+        return pitchbookLimitedPartnersItem(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-item (GET /datasets/pitchbook-limited-partners/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-limited-partners-item", params);
+        return client.request("datasets-pitchbook-limited-partners-item", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-search (GET /datasets/pitchbook-limited-partners/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersSearch(Map<String, Object> params) {
+        return pitchbookLimitedPartnersSearch(params, null);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-search (GET /datasets/pitchbook-limited-partners/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-pitchbook-limited-partners-search", params);
+        return client.request("datasets-pitchbook-limited-partners-search", params, options);
+    }
+
+    /**
+     * datasets-pitchbook-limited-partners-search (GET /datasets/pitchbook-limited-partners/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartnersSearch() {
+        return pitchbookLimitedPartnersSearch(Map.of(), null);
     }
 
     /**

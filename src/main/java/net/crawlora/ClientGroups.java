@@ -35,6 +35,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "appleBooks" operation group.
+     * @return a new {@link AppleBooksGroup} bound to this client
+     */
+    public AppleBooksGroup appleBooks() {
+        return new AppleBooksGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "applePodcasts" operation group.
      * @return a new {@link ApplePodcastsGroup} bound to this client
      */
@@ -472,6 +480,14 @@ public abstract class ClientGroups {
      */
     public TrustpilotGroup trustpilot() {
         return new TrustpilotGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "uberEats" operation group.
+     * @return a new {@link UberEatsGroup} bound to this client
+     */
+    public UberEatsGroup uberEats() {
+        return new UberEatsGroup((CrawloraClient) this);
     }
 
     /**

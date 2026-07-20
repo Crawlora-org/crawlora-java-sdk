@@ -107,6 +107,28 @@ public final class JobsGroup {
     }
 
     /**
+     * jobs-gem-board (GET /jobs/gem/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gemBoard(Map<String, Object> params) {
+        return gemBoard(params, null);
+    }
+
+    /**
+     * jobs-gem-board (GET /jobs/gem/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gemBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-gem-board", params);
+        return client.request("jobs-gem-board", params, options);
+    }
+
+    /**
      * jobs-greenhouse-board (GET /jobs/greenhouse/board).
      *
      * @param params operation parameters
@@ -324,6 +346,28 @@ public final class JobsGroup {
     public Object personioFeed(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("jobs-personio-feed", params);
         return client.request("jobs-personio-feed", params, options);
+    }
+
+    /**
+     * jobs-pinpoint-board (GET /jobs/pinpoint/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pinpointBoard(Map<String, Object> params) {
+        return pinpointBoard(params, null);
+    }
+
+    /**
+     * jobs-pinpoint-board (GET /jobs/pinpoint/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pinpointBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-pinpoint-board", params);
+        return client.request("jobs-pinpoint-board", params, options);
     }
 
     /**

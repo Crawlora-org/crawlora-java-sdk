@@ -566,6 +566,50 @@ public final class GoogleGroup {
     }
 
     /**
+     * google-map-place-photos (GET /google/map/place/{place_id}/photos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mapPlacePhotos(Map<String, Object> params) {
+        return mapPlacePhotos(params, null);
+    }
+
+    /**
+     * google-map-place-photos (GET /google/map/place/{place_id}/photos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mapPlacePhotos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("google-map-place-photos", params);
+        return client.request("google-map-place-photos", params, options);
+    }
+
+    /**
+     * google-map-place-reviews (GET /google/map/place/{place_id}/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mapPlaceReviews(Map<String, Object> params) {
+        return mapPlaceReviews(params, null);
+    }
+
+    /**
+     * google-map-place-reviews (GET /google/map/place/{place_id}/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mapPlaceReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("google-map-place-reviews", params);
+        return client.request("google-map-place-reviews", params, options);
+    }
+
+    /**
      * google-map-search (POST /google/map/search).
      *
      * @param params operation parameters

@@ -19,6 +19,37 @@ public final class PitchBookGroup {
     }
 
     /**
+     * pitchbook-advisor (GET /pitchbook/advisor).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisor(Map<String, Object> params) {
+        return pitchbookAdvisor(params, null);
+    }
+
+    /**
+     * pitchbook-advisor (GET /pitchbook/advisor). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisor(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("pitchbook-advisor", params);
+        return client.request("pitchbook-advisor", params, options);
+    }
+
+    /**
+     * pitchbook-advisor (GET /pitchbook/advisor). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookAdvisor() {
+        return pitchbookAdvisor(Map.of(), null);
+    }
+
+    /**
      * pitchbook-company (GET /pitchbook/company).
      *
      * @param params operation parameters
@@ -109,6 +140,37 @@ public final class PitchBookGroup {
      */
     public Object pitchbookInvestor() {
         return pitchbookInvestor(Map.of(), null);
+    }
+
+    /**
+     * pitchbook-limited-partner (GET /pitchbook/limited-partner).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartner(Map<String, Object> params) {
+        return pitchbookLimitedPartner(params, null);
+    }
+
+    /**
+     * pitchbook-limited-partner (GET /pitchbook/limited-partner). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartner(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("pitchbook-limited-partner", params);
+        return client.request("pitchbook-limited-partner", params, options);
+    }
+
+    /**
+     * pitchbook-limited-partner (GET /pitchbook/limited-partner). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pitchbookLimitedPartner() {
+        return pitchbookLimitedPartner(Map.of(), null);
     }
 
 }

@@ -63,6 +63,28 @@ public final class GoodreadsGroup {
     }
 
     /**
+     * goodreads-author-quotes (GET /goodreads/author/{id}/quotes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object authorQuotes(Map<String, Object> params) {
+        return authorQuotes(params, null);
+    }
+
+    /**
+     * goodreads-author-quotes (GET /goodreads/author/{id}/quotes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object authorQuotes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("goodreads-author-quotes", params);
+        return client.request("goodreads-author-quotes", params, options);
+    }
+
+    /**
      * goodreads-book (GET /goodreads/book/{id}).
      *
      * @param params operation parameters
@@ -82,6 +104,28 @@ public final class GoodreadsGroup {
     public Object book(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("goodreads-book", params);
         return client.request("goodreads-book", params, options);
+    }
+
+    /**
+     * goodreads-book-editions (GET /goodreads/book/{id}/editions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bookEditions(Map<String, Object> params) {
+        return bookEditions(params, null);
+    }
+
+    /**
+     * goodreads-book-editions (GET /goodreads/book/{id}/editions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bookEditions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("goodreads-book-editions", params);
+        return client.request("goodreads-book-editions", params, options);
     }
 
     /**
@@ -107,6 +151,28 @@ public final class GoodreadsGroup {
     }
 
     /**
+     * goodreads-genre (GET /goodreads/genre/{name}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genre(Map<String, Object> params) {
+        return genre(params, null);
+    }
+
+    /**
+     * goodreads-genre (GET /goodreads/genre/{name}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genre(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("goodreads-genre", params);
+        return client.request("goodreads-genre", params, options);
+    }
+
+    /**
      * goodreads-list (GET /goodreads/list/{id}).
      *
      * @param params operation parameters
@@ -126,6 +192,37 @@ public final class GoodreadsGroup {
     public Object list(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("goodreads-list", params);
         return client.request("goodreads-list", params, options);
+    }
+
+    /**
+     * goodreads-lists (GET /goodreads/lists).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object lists(Map<String, Object> params) {
+        return lists(params, null);
+    }
+
+    /**
+     * goodreads-lists (GET /goodreads/lists). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object lists(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("goodreads-lists", params);
+        return client.request("goodreads-lists", params, options);
+    }
+
+    /**
+     * goodreads-lists (GET /goodreads/lists). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object lists() {
+        return lists(Map.of(), null);
     }
 
     /**
