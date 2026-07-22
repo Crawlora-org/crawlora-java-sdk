@@ -6,7 +6,7 @@
 
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-sdk</artifactId>
-  <version>1.24.0-sdk.1</version>
+  <version>1.25.0-sdk.1</version>
   <packaging>jar</packaging>
 
   <name>Crawlora Java SDK</name>

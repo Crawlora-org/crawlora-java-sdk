@@ -50,6 +50,37 @@ public final class ApplePodcastsGroup {
     }
 
     /**
+     * apple-podcasts-charts-rankings (GET /apple-podcasts/charts/rankings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsRankings(Map<String, Object> params) {
+        return chartsRankings(params, null);
+    }
+
+    /**
+     * apple-podcasts-charts-rankings (GET /apple-podcasts/charts/rankings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsRankings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-podcasts-charts-rankings", params);
+        return client.request("apple-podcasts-charts-rankings", params, options);
+    }
+
+    /**
+     * apple-podcasts-charts-rankings (GET /apple-podcasts/charts/rankings). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsRankings() {
+        return chartsRankings(Map.of(), null);
+    }
+
+    /**
      * apple-podcasts-episodes-search (GET /apple-podcasts/episodes/search).
      *
      * @param params operation parameters
@@ -69,6 +100,37 @@ public final class ApplePodcastsGroup {
     public Object episodesSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("apple-podcasts-episodes-search", params);
         return client.request("apple-podcasts-episodes-search", params, options);
+    }
+
+    /**
+     * apple-podcasts-new (GET /apple-podcasts/new).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object new_(Map<String, Object> params) {
+        return new_(params, null);
+    }
+
+    /**
+     * apple-podcasts-new (GET /apple-podcasts/new). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object new_(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-podcasts-new", params);
+        return client.request("apple-podcasts-new", params, options);
+    }
+
+    /**
+     * apple-podcasts-new (GET /apple-podcasts/new). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object new_() {
+        return new_(Map.of(), null);
     }
 
     /**
@@ -135,6 +197,28 @@ public final class ApplePodcastsGroup {
     public Object showEpisodes(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("apple-podcasts-show-episodes", params);
         return client.request("apple-podcasts-show-episodes", params, options);
+    }
+
+    /**
+     * apple-podcasts-show-related (GET /apple-podcasts/show/{id}/related).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object showRelated(Map<String, Object> params) {
+        return showRelated(params, null);
+    }
+
+    /**
+     * apple-podcasts-show-related (GET /apple-podcasts/show/{id}/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object showRelated(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-podcasts-show-related", params);
+        return client.request("apple-podcasts-show-related", params, options);
     }
 
 }

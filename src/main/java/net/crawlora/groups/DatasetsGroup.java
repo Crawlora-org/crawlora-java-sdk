@@ -147,6 +147,81 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-apple-podcasts-shows-facets (GET /datasets/apple-podcasts-shows/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsFacets(Map<String, Object> params) {
+        return applePodcastsShowsFacets(params, null);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-facets (GET /datasets/apple-podcasts-shows/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-podcasts-shows-facets", params);
+        return client.request("datasets-apple-podcasts-shows-facets", params, options);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-item (GET /datasets/apple-podcasts-shows/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsItem(Map<String, Object> params) {
+        return applePodcastsShowsItem(params, null);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-item (GET /datasets/apple-podcasts-shows/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-podcasts-shows-item", params);
+        return client.request("datasets-apple-podcasts-shows-item", params, options);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-search (GET /datasets/apple-podcasts-shows/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsSearch(Map<String, Object> params) {
+        return applePodcastsShowsSearch(params, null);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-search (GET /datasets/apple-podcasts-shows/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-podcasts-shows-search", params);
+        return client.request("datasets-apple-podcasts-shows-search", params, options);
+    }
+
+    /**
+     * datasets-apple-podcasts-shows-search (GET /datasets/apple-podcasts-shows/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object applePodcastsShowsSearch() {
+        return applePodcastsShowsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-apps-charts-search (GET /datasets/apps-charts/search).
      *
      * @param params operation parameters

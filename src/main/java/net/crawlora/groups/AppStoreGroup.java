@@ -72,6 +72,50 @@ public final class AppStoreGroup {
     }
 
     /**
+     * appstore-editorial (GET /appstore/editorial).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorial(Map<String, Object> params) {
+        return editorial(params, null);
+    }
+
+    /**
+     * appstore-editorial (GET /appstore/editorial). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorial(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("appstore-editorial", params);
+        return client.request("appstore-editorial", params, options);
+    }
+
+    /**
+     * appstore-editorial-category (GET /appstore/editorial/category).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorialCategory(Map<String, Object> params) {
+        return editorialCategory(params, null);
+    }
+
+    /**
+     * appstore-editorial-category (GET /appstore/editorial/category). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorialCategory(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("appstore-editorial-category", params);
+        return client.request("appstore-editorial-category", params, options);
+    }
+
+    /**
      * appstore-list (GET /appstore/list).
      *
      * @param params operation parameters

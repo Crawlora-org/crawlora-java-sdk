@@ -427,14 +427,6 @@ public abstract class ClientGroups {
     }
 
     /**
-     * Typed accessor for the "tcdb" operation group.
-     * @return a new {@link TcdbGroup} bound to this client
-     */
-    public TcdbGroup tcdb() {
-        return new TcdbGroup((CrawloraClient) this);
-    }
-
-    /**
      * Typed accessor for the "threads" operation group.
      * @return a new {@link ThreadsGroup} bound to this client
      */

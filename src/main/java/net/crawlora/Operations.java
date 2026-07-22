@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 836;
+    public static final int OPERATION_COUNT = 832;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -229,12 +229,12 @@ public final class Operations {
             "/anime/rankings",
             List.of(),
             List.of(
-            new QueryParam("sort", false, "string", List.of()),
-            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("TRENDING_DESC", "POPULARITY_DESC", "SCORE_DESC", "FAVOURITES_DESC", "START_DATE_DESC", "UPDATED_AT_DESC")),
+            new QueryParam("season", false, "string", List.of("WINTER", "SPRING", "SUMMER", "FALL")),
             new QueryParam("season_year", false, "integer", List.of()),
-            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("format", false, "string", List.of("TV", "TV_SHORT", "MOVIE", "SPECIAL", "OVA", "ONA", "MUSIC")),
             new QueryParam("genre", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("FINISHED", "RELEASING", "NOT_YET_RELEASED", "CANCELLED", "HIATUS")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("per_page", false, "integer", List.of())),
             List.of(),
@@ -250,7 +250,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("SEARCH_MATCH", "POPULARITY_DESC", "SCORE_DESC", "TRENDING_DESC", "FAVOURITES_DESC", "START_DATE_DESC")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("per_page", false, "integer", List.of())),
             List.of(),
@@ -366,12 +366,14 @@ public final class Operations {
             List.of("id"),
             List.of(
             new QueryParam("country", false, "string", List.of()),
-            new QueryParam("lang", false, "string", List.of())),
+            new QueryParam("lang", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("apple-books-audiobook-similar", new Operation(
             "apple-books-audiobook-similar",
@@ -422,12 +424,14 @@ public final class Operations {
             List.of("id"),
             List.of(
             new QueryParam("country", false, "string", List.of()),
-            new QueryParam("lang", false, "string", List.of())),
+            new QueryParam("lang", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("apple-books-book-similar", new Operation(
             "apple-books-book-similar",
@@ -449,7 +453,7 @@ public final class Operations {
             "/apple-books/charts",
             List.of(),
             List.of(
-            new QueryParam("collection", false, "string", List.of()),
+            new QueryParam("collection", false, "string", List.of("top-free", "top-paid")),
             new QueryParam("genre", false, "integer", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
@@ -506,6 +510,23 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("apple-podcasts-charts-rankings", new Operation(
+            "apple-podcasts-charts-rankings",
+            "GET",
+            "/apple-podcasts/charts/rankings",
+            List.of(),
+            List.of(
+            new QueryParam("chart", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of()),
+            new QueryParam("genre", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("apple-podcasts-episodes-search", new Operation(
             "apple-podcasts-episodes-search",
             "GET",
@@ -522,6 +543,19 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("apple-podcasts-new", new Operation(
+            "apple-podcasts-new",
+            "GET",
+            "/apple-podcasts/new",
+            List.of(),
+            List.of(
+            new QueryParam("country", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("apple-podcasts-search", new Operation(
             "apple-podcasts-search",
@@ -569,6 +603,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("apple-podcasts-show-related", new Operation(
+            "apple-podcasts-show-related",
+            "GET",
+            "/apple-podcasts/show/{id}/related",
+            List.of("id"),
+            List.of(
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("appstore-app", new Operation(
             "appstore-app",
             "GET",
@@ -579,7 +627,8 @@ public final class Operations {
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of()),
-            new QueryParam("ratings", false, "boolean", List.of())),
+            new QueryParam("ratings", false, "boolean", List.of()),
+            new QueryParam("platforms", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -592,6 +641,38 @@ public final class Operations {
             "/appstore/developer/{dev_id}",
             List.of("dev_id"),
             List.of(
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("appstore-editorial", new Operation(
+            "appstore-editorial",
+            "GET",
+            "/appstore/editorial",
+            List.of(),
+            List.of(
+            new QueryParam("device", true, "string", List.of("iphone", "ipad", "mac", "vision", "watch", "tv")),
+            new QueryParam("section", false, "string", List.of("main", "arcade")),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("appstore-editorial-category", new Operation(
+            "appstore-editorial-category",
+            "GET",
+            "/appstore/editorial/category",
+            List.of(),
+            List.of(
+            new QueryParam("device", true, "string", List.of("iphone", "ipad", "mac", "vision", "watch", "tv")),
+            new QueryParam("category_id", true, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of())),
             List.of(),
@@ -677,7 +758,8 @@ public final class Operations {
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of()),
-            new QueryParam("ids_only", false, "boolean", List.of())),
+            new QueryParam("ids_only", false, "boolean", List.of()),
+            new QueryParam("platform", false, "string", List.of("phone", "pad", "mac"))),
             List.of(),
             null,
             false,
@@ -850,6 +932,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations1(Map<String, Operation> m) {
         m.put("bing-news", new Operation(
             "bing-news",
             "GET",
@@ -935,9 +1020,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations1(Map<String, Operation> m) {
         m.put("boxofficemojo-brands", new Operation(
             "boxofficemojo-brands",
             "GET",
@@ -1757,6 +1839,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("coingecko-news", new Operation(
             "coingecko-news",
             "GET",
@@ -1827,9 +1912,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("coingecko-treasuries", new Operation(
             "coingecko-treasuries",
             "GET",
@@ -1890,8 +1972,8 @@ public final class Operations {
             "/datasets/airbnb-markets/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
-            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("country", "market", "currency", "superhost", "guest_favorite", "rating_band", "review_band", "admin1", "locality", "room_type", "property_type", "amenities")),
+            new QueryParam("group_by", false, "string", List.of("country", "market", "admin1", "locality", "room_type", "property_type")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("market", false, "string", List.of()),
             new QueryParam("superhost", false, "boolean", List.of()),
@@ -1945,7 +2027,7 @@ public final class Operations {
             "/datasets/airbnb-markets/search",
             List.of(),
             List.of(
-            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("group_by", false, "string", List.of("country", "market", "admin1", "locality", "room_type", "property_type")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("market", false, "string", List.of()),
             new QueryParam("superhost", false, "boolean", List.of()),
@@ -1954,7 +2036,61 @@ public final class Operations {
             new QueryParam("min_review_count", false, "integer", List.of()),
             new QueryParam("active_since", false, "string", List.of()),
             new QueryParam("min_listings", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("listings_desc", "superhost_pct_desc", "rating_desc", "key_asc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-apple-podcasts-shows-facets", new Operation(
+            "datasets-apple-podcasts-shows-facets",
+            "GET",
+            "/datasets/apple-podcasts-shows/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of("genre", "genre_id", "country", "content_advisory_rating", "run_id")),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("genre_id", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("explicitness", false, "string", List.of()),
+            new QueryParam("run_id", false, "string", List.of()),
+            new QueryParam("min_track_count", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-apple-podcasts-shows-item", new Operation(
+            "datasets-apple-podcasts-shows-item",
+            "GET",
+            "/datasets/apple-podcasts-shows/items/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-apple-podcasts-shows-search", new Operation(
+            "datasets-apple-podcasts-shows-search",
+            "GET",
+            "/datasets/apple-podcasts-shows/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("genre_id", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("explicitness", false, "string", List.of()),
+            new QueryParam("run_id", false, "string", List.of()),
+            new QueryParam("min_track_count", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "popularity", "track_count_desc", "release_desc", "title_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -1970,14 +2106,15 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("store", false, "string", List.of()),
-            new QueryParam("chart_type", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of("ios", "android")),
+            new QueryParam("chart_type", false, "string", List.of("top_free", "top_paid", "top_grossing", "new")),
+            new QueryParam("platform", false, "string", List.of()),
             new QueryParam("collection", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("date", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("rank", "rank_desc", "date_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -1993,11 +2130,11 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of("ios", "android")),
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("min_score", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("recent", "score_desc", "score_asc", "helpful_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2013,14 +2150,15 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of("ios", "android", "both")),
+            new QueryParam("platforms", false, "array", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("developer", false, "string", List.of()),
             new QueryParam("free", false, "boolean", List.of()),
             new QueryParam("min_rating", false, "number", List.of()),
             new QueryParam("min_reviews", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rating_desc", "reviews_desc", "installs_desc", "updated_at_desc", "popularity_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2035,7 +2173,7 @@ public final class Operations {
             "/datasets/boxofficemojo/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("gross_band", "years_active", "lifetime_year", "franchise_names", "brand_names", "genre_names", "hydrated", "is_billion_dollar", "in_lifetime_top_1000_ww")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("title_id", false, "string", List.of()),
             new QueryParam("year", false, "integer", List.of()),
@@ -2080,7 +2218,7 @@ public final class Operations {
             new QueryParam("title_id", false, "string", List.of()),
             new QueryParam("year", false, "integer", List.of()),
             new QueryParam("lifetime_year", false, "integer", List.of()),
-            new QueryParam("gross_band", false, "string", List.of()),
+            new QueryParam("gross_band", false, "string", List.of("under_50m", "50_100m", "100_250m", "250_500m", "500m_1b", "over_1b")),
             new QueryParam("franchise", false, "string", List.of()),
             new QueryParam("brand", false, "string", List.of()),
             new QueryParam("genre", false, "string", List.of()),
@@ -2092,7 +2230,7 @@ public final class Operations {
             new QueryParam("min_domestic", false, "integer", List.of()),
             new QueryParam("min_foreign_share", false, "number", List.of()),
             new QueryParam("max_domestic_share", false, "number", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "worldwide_desc", "domestic_desc", "peak_worldwide_desc", "lifetime_rank_asc", "year_desc", "year_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2107,7 +2245,7 @@ public final class Operations {
             "/datasets/chrome-extensions/changes",
             List.of(),
             List.of(
-            new QueryParam("change_type", false, "string", List.of()),
+            new QueryParam("change_type", false, "string", List.of("users", "rating", "rating_count", "version", "developer", "permissions", "privacy", "status")),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
@@ -2121,21 +2259,21 @@ public final class Operations {
             "/datasets/chrome-extensions/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("item_type", "category", "developer", "developer_email", "manifest_version", "permission", "status", "collects_data", "has_broad_host_access")),
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of("extension", "theme", "app", "unknown")),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("developer", false, "string", List.of()),
             new QueryParam("developer_email", false, "string", List.of()),
             new QueryParam("permission", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
-            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("status", false, "string", List.of("active", "removed")),
+            new QueryParam("manifest_version", false, "integer", List.of("2", "3")),
             new QueryParam("collects_data", false, "boolean", List.of()),
             new QueryParam("has_broad_host_access", false, "boolean", List.of()),
             new QueryParam("min_users", false, "integer", List.of()),
             new QueryParam("min_rating", false, "number", List.of()),
             new QueryParam("min_rating_count", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of())),
+            new QueryParam("sort", false, "string", List.of("relevance", "users_desc", "rating_desc", "reviews_desc", "updated_desc", "trending_desc"))),
             List.of(),
             null,
             false,
@@ -2175,7 +2313,7 @@ public final class Operations {
             "/datasets/chrome-extensions/metrics",
             List.of(),
             List.of(
-            new QueryParam("days", false, "integer", List.of()),
+            new QueryParam("days", false, "integer", List.of("7", "30", "90")),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
@@ -2190,19 +2328,19 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of("extension", "theme", "app", "unknown")),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("developer", false, "string", List.of()),
             new QueryParam("developer_email", false, "string", List.of()),
             new QueryParam("permission", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
-            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("status", false, "string", List.of("active", "removed")),
+            new QueryParam("manifest_version", false, "integer", List.of("2", "3")),
             new QueryParam("collects_data", false, "boolean", List.of()),
             new QueryParam("has_broad_host_access", false, "boolean", List.of()),
             new QueryParam("min_users", false, "integer", List.of()),
             new QueryParam("min_rating", false, "number", List.of()),
             new QueryParam("min_rating_count", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "users_desc", "rating_desc", "reviews_desc", "updated_desc", "trending_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2218,13 +2356,13 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of("extension", "theme", "app", "unknown")),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("developer", false, "string", List.of()),
             new QueryParam("developer_email", false, "string", List.of()),
             new QueryParam("permission", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
-            new QueryParam("manifest_version", false, "integer", List.of()),
+            new QueryParam("status", false, "string", List.of("active", "removed")),
+            new QueryParam("manifest_version", false, "integer", List.of("2", "3")),
             new QueryParam("collects_data", false, "boolean", List.of()),
             new QueryParam("has_broad_host_access", false, "boolean", List.of()),
             new QueryParam("min_users", false, "integer", List.of()),
@@ -2252,7 +2390,7 @@ public final class Operations {
             new QueryParam("min_followers", false, "integer", List.of()),
             new QueryParam("has_email", false, "boolean", List.of()),
             new QueryParam("include_inactive", false, "boolean", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("followers_desc", "engagement_desc", "likes_desc", "relevance")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2267,11 +2405,11 @@ public final class Operations {
             "/datasets/github-users/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("influence_tier", "type", "country", "country_code", "state", "city", "domains", "company", "reachable", "has_email", "has_twitter", "has_blog", "active_90d", "hireable", "is_org", "is_bot", "is_suspected_automation")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("login", false, "string", List.of()),
             new QueryParam("company", false, "string", List.of()),
-            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of("nano", "micro", "mid", "macro", "mega")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("country_code", false, "string", List.of()),
             new QueryParam("state", false, "string", List.of()),
@@ -2295,7 +2433,7 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of())),
+            new QueryParam("sort", false, "string", List.of("relevance", "rank_score_desc", "followers_desc", "account_age_desc", "account_age_asc", "distance_asc"))),
             List.of(),
             null,
             false,
@@ -2323,7 +2461,7 @@ public final class Operations {
             new QueryParam("lat", true, "number", List.of()),
             new QueryParam("lon", true, "number", List.of()),
             new QueryParam("radius_m", true, "integer", List.of()),
-            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of("nano", "micro", "mid", "macro", "mega")),
             new QueryParam("reachable", false, "boolean", List.of()),
             new QueryParam("min_followers", false, "integer", List.of()),
             new QueryParam("page", false, "integer", List.of()),
@@ -2343,7 +2481,7 @@ public final class Operations {
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("login", false, "string", List.of()),
             new QueryParam("company", false, "string", List.of()),
-            new QueryParam("influence_tier", false, "string", List.of()),
+            new QueryParam("influence_tier", false, "string", List.of("nano", "micro", "mid", "macro", "mega")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("country_code", false, "string", List.of()),
             new QueryParam("state", false, "string", List.of()),
@@ -2367,7 +2505,7 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rank_score_desc", "followers_desc", "account_age_desc", "account_age_asc", "distance_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2382,7 +2520,7 @@ public final class Operations {
             "/datasets/goodreads-authors/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("genres", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("name", false, "string", List.of()),
             new QueryParam("genre", false, "string", List.of()),
@@ -2419,7 +2557,7 @@ public final class Operations {
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("min_rating", false, "number", List.of()),
             new QueryParam("min_ratings_count", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rating_desc", "reviews_desc", "name_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2434,7 +2572,7 @@ public final class Operations {
             "/datasets/goodreads-books/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("genres", "format", "language", "publisher", "primary_author", "primary_author_id", "series_name", "publication_year", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("genre", false, "string", List.of()),
             new QueryParam("format", false, "string", List.of()),
@@ -2493,7 +2631,7 @@ public final class Operations {
             new QueryParam("max_pages", false, "integer", List.of()),
             new QueryParam("min_publication_year", false, "integer", List.of()),
             new QueryParam("max_publication_year", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rating_desc", "reviews_desc", "publication_desc", "publication_asc", "pages_desc", "pages_asc", "title_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2508,7 +2646,7 @@ public final class Operations {
             "/datasets/google-map-businesses/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("category", "country", "state", "county", "city", "town", "website_status")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
@@ -2524,7 +2662,7 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of())),
+            new QueryParam("sort", false, "string", List.of("relevance", "updated_at_desc", "rating_desc", "review_count_desc", "distance_asc"))),
             List.of(),
             null,
             false,
@@ -2584,7 +2722,7 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lon", false, "number", List.of()),
             new QueryParam("radius_m", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "updated_at_desc", "rating_desc", "review_count_desc", "distance_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2599,9 +2737,9 @@ public final class Operations {
             "/datasets/housing-markets/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("region_type", "state_code", "property_type", "parent_metro", "parent_metro_code", "income_vintage", "is_latest", "period_begin")),
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("region_type", false, "string", List.of()),
+            new QueryParam("region_type", false, "string", List.of("national", "metro", "county", "city", "zip")),
             new QueryParam("state_code", false, "string", List.of()),
             new QueryParam("property_type", false, "string", List.of()),
             new QueryParam("parent_metro_code", false, "string", List.of()),
@@ -2649,7 +2787,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("region_type", false, "string", List.of()),
+            new QueryParam("region_type", false, "string", List.of("national", "metro", "county", "city", "zip")),
             new QueryParam("state_code", false, "string", List.of()),
             new QueryParam("property_type", false, "string", List.of()),
             new QueryParam("parent_metro_code", false, "string", List.of()),
@@ -2669,7 +2807,7 @@ public final class Operations {
             new QueryParam("min_inventory", false, "integer", List.of()),
             new QueryParam("max_inventory", false, "integer", List.of()),
             new QueryParam("min_homes_sold", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "price_desc", "price_asc", "list_price_desc", "list_price_asc", "price_to_income_desc", "price_to_income_asc", "salary_to_buy_desc", "salary_to_buy_asc", "dom_asc", "dom_desc", "inventory_desc", "homes_sold_desc", "period_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2686,9 +2824,9 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint")),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("active", "empty", "gone", "blocked", "pending", "invalid")),
             new QueryParam("min_open_roles", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("open_desc", "company_asc", "crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2764,13 +2902,17 @@ public final class Operations {
             new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint")),
             new QueryParam("department", false, "string", List.of()),
             new QueryParam("location", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
             new QueryParam("employment_type", false, "string", List.of()),
             new QueryParam("remote", false, "boolean", List.of()),
+            new QueryParam("workplace_type", false, "string", List.of("onsite", "hybrid", "remote")),
             new QueryParam("include_closed", false, "boolean", List.of()),
             new QueryParam("min_salary", false, "number", List.of()),
             new QueryParam("max_salary", false, "number", List.of()),
             new QueryParam("salary_currency", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "posted_desc", "company_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2785,12 +2927,12 @@ public final class Operations {
             "/datasets/journalists/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("outlet", "vertical", "topic", "contact_type")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("outlet", false, "string", List.of()),
-            new QueryParam("vertical", false, "string", List.of()),
+            new QueryParam("vertical", false, "string", List.of("tech", "crypto", "marketing", "consumer_tech", "consumer_policy", "cybersecurity", "health", "gaming", "climate", "business", "entertainment", "sports", "legal", "science", "politics", "real_estate", "automotive", "travel", "food", "education", "design", "film_tv", "fashion", "music", "personal_finance", "tech_independent", "culture_independent", "local_news", "construction", "banking", "retail", "aerospace_defense", "energy", "agriculture", "local_business")),
             new QueryParam("topic", false, "string", List.of()),
-            new QueryParam("contact_type", false, "string", List.of())),
+            new QueryParam("contact_type", false, "string", List.of("email", "social", "none"))),
             List.of(),
             null,
             false,
@@ -2817,10 +2959,10 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("outlet", false, "string", List.of()),
-            new QueryParam("vertical", false, "string", List.of()),
+            new QueryParam("vertical", false, "string", List.of("tech", "crypto", "marketing", "consumer_tech", "consumer_policy", "cybersecurity", "health", "gaming", "climate", "business", "entertainment", "sports", "legal", "science", "politics", "real_estate", "automotive", "travel", "food", "education", "design", "film_tv", "fashion", "music", "personal_finance", "tech_independent", "culture_independent", "local_news", "construction", "banking", "retail", "aerospace_defense", "energy", "agriculture", "local_business")),
             new QueryParam("topic", false, "string", List.of()),
-            new QueryParam("contact_type", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("contact_type", false, "string", List.of("email", "social", "none")),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "outlet_asc", "crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2835,7 +2977,7 @@ public final class Operations {
             "/datasets/numbeo-cities/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("country")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("min_cost_of_living_index", false, "number", List.of()),
@@ -2882,7 +3024,7 @@ public final class Operations {
             new QueryParam("min_health_care_index", false, "number", List.of()),
             new QueryParam("max_pollution_index", false, "number", List.of()),
             new QueryParam("max_traffic_index", false, "number", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("name_asc", "cost_of_living_asc", "cost_of_living_desc", "quality_of_life_desc", "safety_desc", "crime_asc", "health_care_desc", "pollution_asc", "traffic_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2903,6 +3045,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-numbeo-countries-search", new Operation(
             "datasets-numbeo-countries-search",
             "GET",
@@ -2919,7 +3064,7 @@ public final class Operations {
             new QueryParam("min_health_care_index", false, "number", List.of()),
             new QueryParam("max_pollution_index", false, "number", List.of()),
             new QueryParam("max_traffic_index", false, "number", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("name_asc", "cost_of_living_asc", "cost_of_living_desc", "quality_of_life_desc", "safety_desc", "crime_asc", "health_care_desc", "pollution_asc", "traffic_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2934,7 +3079,7 @@ public final class Operations {
             "/datasets/pitchbook-advisors/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("service_type", "hq_country", "hq_state", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("service_type", false, "string", List.of()),
             new QueryParam("hq_country", false, "string", List.of()),
@@ -2973,7 +3118,7 @@ public final class Operations {
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("min_year_founded", false, "integer", List.of()),
             new QueryParam("max_year_founded", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "year_founded_desc", "recently_crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -2988,7 +3133,7 @@ public final class Operations {
             "/datasets/pitchbook-companies/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("status", "primary_industry", "financing_status", "ownership_status", "hq_country", "hq_state", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("status", false, "string", List.of()),
             new QueryParam("primary_industry", false, "string", List.of()),
@@ -3035,7 +3180,7 @@ public final class Operations {
             new QueryParam("min_year_founded", false, "integer", List.of()),
             new QueryParam("max_year_founded", false, "integer", List.of()),
             new QueryParam("min_investor_count", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "year_founded_desc", "investor_count_desc", "recently_crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3050,7 +3195,7 @@ public final class Operations {
             "/datasets/pitchbook-funds/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("fund_strategy", "fund_status", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("fund_strategy", false, "string", List.of()),
             new QueryParam("fund_status", false, "string", List.of()),
@@ -3063,9 +3208,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-pitchbook-funds-item", new Operation(
             "datasets-pitchbook-funds-item",
             "GET",
@@ -3090,7 +3232,7 @@ public final class Operations {
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("min_vintage_year", false, "integer", List.of()),
             new QueryParam("max_vintage_year", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "vintage_desc", "recently_crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3105,7 +3247,7 @@ public final class Operations {
             "/datasets/pitchbook-investors/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("status", "investor_type", "hq_country", "hq_state", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("status", false, "string", List.of()),
             new QueryParam("investor_type", false, "string", List.of()),
@@ -3146,7 +3288,7 @@ public final class Operations {
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("min_portfolio_count", false, "integer", List.of()),
             new QueryParam("min_exits_count", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "portfolio_count_desc", "recently_crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3161,7 +3303,7 @@ public final class Operations {
             "/datasets/pitchbook-limited-partners/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("institution_type", "hq_country", "hq_state", "run_id")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("institution_type", false, "string", List.of()),
             new QueryParam("hq_country", false, "string", List.of()),
@@ -3200,7 +3342,7 @@ public final class Operations {
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("min_year_founded", false, "integer", List.of()),
             new QueryParam("max_year_founded", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "year_founded_desc", "recently_crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3215,7 +3357,7 @@ public final class Operations {
             "/datasets/playstation-games/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("publisher", "classification", "genres", "platforms", "content_rating_authority", "content_descriptors", "price_tier", "service_branding", "region", "release_year", "run_id", "is_free", "is_addon", "is_tied_to_subscription", "coming_soon")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("publisher", false, "string", List.of()),
             new QueryParam("classification", false, "string", List.of()),
@@ -3223,7 +3365,7 @@ public final class Operations {
             new QueryParam("platform", false, "string", List.of()),
             new QueryParam("content_rating", false, "string", List.of()),
             new QueryParam("content_descriptor", false, "string", List.of()),
-            new QueryParam("price_tier", false, "string", List.of()),
+            new QueryParam("price_tier", false, "string", List.of("free", "under_5", "5_to_10", "10_to_20", "20_to_40", "40_to_60", "60_plus")),
             new QueryParam("branding", false, "string", List.of()),
             new QueryParam("region", false, "string", List.of()),
             new QueryParam("concept_id", false, "string", List.of()),
@@ -3272,7 +3414,7 @@ public final class Operations {
             new QueryParam("platform", false, "string", List.of()),
             new QueryParam("content_rating", false, "string", List.of()),
             new QueryParam("content_descriptor", false, "string", List.of()),
-            new QueryParam("price_tier", false, "string", List.of()),
+            new QueryParam("price_tier", false, "string", List.of("free", "under_5", "5_to_10", "10_to_20", "20_to_40", "40_to_60", "60_plus")),
             new QueryParam("branding", false, "string", List.of()),
             new QueryParam("region", false, "string", List.of()),
             new QueryParam("concept_id", false, "string", List.of()),
@@ -3290,7 +3432,7 @@ public final class Operations {
             new QueryParam("min_discount_pct", false, "integer", List.of()),
             new QueryParam("min_release_year", false, "integer", List.of()),
             new QueryParam("max_release_year", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rating_desc", "reviews_desc", "price_asc", "price_desc", "discount_desc", "release_desc", "release_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3305,7 +3447,7 @@ public final class Operations {
             "/datasets/producthunt-makers/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("topic", "product_count_band")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("min_products", false, "integer", List.of()),
@@ -3338,7 +3480,7 @@ public final class Operations {
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("min_products", false, "integer", List.of()),
             new QueryParam("min_total_votes", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("total_votes_desc", "product_count_desc", "followers_desc", "relevance")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3353,7 +3495,7 @@ public final class Operations {
             "/datasets/producthunt-products/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("topic", "launch_year", "pricing_type", "product_state")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("maker", false, "string", List.of()),
@@ -3398,7 +3540,7 @@ public final class Operations {
             new QueryParam("pricing_type", false, "string", List.of()),
             new QueryParam("has_website", false, "boolean", List.of()),
             new QueryParam("is_online", false, "boolean", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "votes_desc", "launched_desc", "launched_asc", "rating_desc", "best_rank_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3413,8 +3555,8 @@ public final class Operations {
             "/datasets/producthunt-trends/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
-            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("topic", "launch_year")),
+            new QueryParam("group_by", false, "string", List.of("topic_month", "topic_year", "topic")),
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("launched_after", false, "string", List.of()),
             new QueryParam("launched_before", false, "string", List.of()),
@@ -3432,13 +3574,13 @@ public final class Operations {
             "/datasets/producthunt-trends/search",
             List.of(),
             List.of(
-            new QueryParam("group_by", false, "string", List.of()),
+            new QueryParam("group_by", false, "string", List.of("topic_month", "topic_year", "topic")),
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("launched_after", false, "string", List.of()),
             new QueryParam("launched_before", false, "string", List.of()),
             new QueryParam("min_votes", false, "integer", List.of()),
             new QueryParam("min_launches", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("period_desc", "period_asc", "launch_count_desc", "sum_votes_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3453,7 +3595,7 @@ public final class Operations {
             "/datasets/sec-companies/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("sic", "sic_description", "exchange", "state_of_incorporation", "entity_type", "reporting_currency", "revenue_band", "forms_filed")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("ticker", false, "string", List.of()),
             new QueryParam("sic", false, "string", List.of()),
@@ -3476,8 +3618,8 @@ public final class Operations {
             "/datasets/sec-companies/financials/{cik}",
             List.of("cik"),
             List.of(
-            new QueryParam("statement", false, "string", List.of()),
-            new QueryParam("period", false, "string", List.of()),
+            new QueryParam("statement", false, "string", List.of("income", "balance", "cash_flow")),
+            new QueryParam("period", false, "string", List.of("annual", "quarterly")),
             new QueryParam("from", false, "integer", List.of()),
             new QueryParam("to", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
@@ -3537,7 +3679,7 @@ public final class Operations {
             new QueryParam("min_total_assets", false, "number", List.of()),
             new QueryParam("form_filed", false, "string", List.of()),
             new QueryParam("min_insider_txn_count_90d", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "revenue_desc", "net_income_desc", "filing_recent_desc", "insider_activity_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3552,7 +3694,7 @@ public final class Operations {
             "/datasets/sec-institutional-positions/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("manager", "issuer")),
             new QueryParam("manager_cik", false, "string", List.of()),
             new QueryParam("issuer_name", false, "string", List.of()),
             new QueryParam("cusip", false, "string", List.of())),
@@ -3571,7 +3713,7 @@ public final class Operations {
             new QueryParam("manager_cik", false, "string", List.of()),
             new QueryParam("issuer_name", false, "string", List.of()),
             new QueryParam("cusip", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("value_desc", "value_asc", "shares_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3587,7 +3729,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("app_id", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("percent_desc", "percent_asc", "rank_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3603,11 +3745,11 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("chart", false, "string", List.of()),
+            new QueryParam("chart", false, "string", List.of("most_played", "concurrent", "top_sellers")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("date", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("rank", "rank_desc", "date_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3622,7 +3764,7 @@ public final class Operations {
             "/datasets/steam-games/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("type", "developer", "publisher", "genres", "categories", "tags", "primary_tag", "price_tier", "review_tier", "owners_bucket", "release_year", "run_id", "is_free", "coming_soon", "platform_windows", "platform_mac", "platform_linux")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("type", false, "string", List.of()),
             new QueryParam("developer", false, "string", List.of()),
@@ -3630,8 +3772,8 @@ public final class Operations {
             new QueryParam("genre", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("tag", false, "string", List.of()),
-            new QueryParam("price_tier", false, "string", List.of()),
-            new QueryParam("review_tier", false, "string", List.of()),
+            new QueryParam("price_tier", false, "string", List.of("free", "under5", "5to15", "15to30", "30to60", "over60")),
+            new QueryParam("review_tier", false, "string", List.of("overwhelmingly_positive", "very_positive", "positive", "mostly_positive", "mixed", "mostly_negative", "negative", "very_negative", "overwhelmingly_negative", "insufficient")),
             new QueryParam("owners_bucket", false, "string", List.of()),
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("is_free", false, "boolean", List.of()),
@@ -3680,8 +3822,8 @@ public final class Operations {
             new QueryParam("genre", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("tag", false, "string", List.of()),
-            new QueryParam("price_tier", false, "string", List.of()),
-            new QueryParam("review_tier", false, "string", List.of()),
+            new QueryParam("price_tier", false, "string", List.of("free", "under5", "5to15", "15to30", "30to60", "over60")),
+            new QueryParam("review_tier", false, "string", List.of("overwhelmingly_positive", "very_positive", "positive", "mostly_positive", "mixed", "mostly_negative", "negative", "very_negative", "overwhelmingly_negative", "insufficient")),
             new QueryParam("owners_bucket", false, "string", List.of()),
             new QueryParam("run_id", false, "string", List.of()),
             new QueryParam("is_free", false, "boolean", List.of()),
@@ -3699,7 +3841,7 @@ public final class Operations {
             new QueryParam("min_ccu", false, "integer", List.of()),
             new QueryParam("min_release_year", false, "integer", List.of()),
             new QueryParam("max_release_year", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "owners_desc", "reviews_desc", "review_score_desc", "ccu_desc", "metacritic_desc", "price_asc", "price_desc", "release_desc", "release_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3716,7 +3858,7 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("app_id", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("date_desc", "date_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3733,7 +3875,7 @@ public final class Operations {
             List.of(
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("date", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("date_desc", "date_asc", "players_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3750,7 +3892,7 @@ public final class Operations {
             List.of(
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("date", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("date_desc", "date_asc", "price_asc", "price_desc", "discount_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3769,7 +3911,7 @@ public final class Operations {
             new QueryParam("app_id", false, "string", List.of()),
             new QueryParam("language", false, "string", List.of()),
             new QueryParam("voted_up", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("votes_desc", "weighted_desc", "date_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3784,7 +3926,7 @@ public final class Operations {
             "/datasets/techstack/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("technology", "category", "cms", "ecommerce", "cdn", "web_server", "server_language", "analytics", "tld", "render_tier", "seed_source")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("technology", false, "array", List.of()),
             new QueryParam("any_of", false, "array", List.of()),
@@ -3796,7 +3938,7 @@ public final class Operations {
             new QueryParam("web_server", false, "string", List.of()),
             new QueryParam("server_language", false, "string", List.of()),
             new QueryParam("tld", false, "string", List.of()),
-            new QueryParam("render_tier", false, "string", List.of()),
+            new QueryParam("render_tier", false, "string", List.of("http", "browser")),
             new QueryParam("seed_source", false, "string", List.of()),
             new QueryParam("has_captcha", false, "boolean", List.of()),
             new QueryParam("reachable", false, "boolean", List.of()),
@@ -3837,13 +3979,13 @@ public final class Operations {
             new QueryParam("web_server", false, "string", List.of()),
             new QueryParam("server_language", false, "string", List.of()),
             new QueryParam("tld", false, "string", List.of()),
-            new QueryParam("render_tier", false, "string", List.of()),
+            new QueryParam("render_tier", false, "string", List.of("http", "browser")),
             new QueryParam("seed_source", false, "string", List.of()),
             new QueryParam("has_captcha", false, "boolean", List.of()),
             new QueryParam("reachable", false, "boolean", List.of()),
             new QueryParam("min_tech_count", false, "integer", List.of()),
             new QueryParam("run_id", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "rank_asc", "tech_count_desc", "domain_asc", "crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3858,7 +4000,7 @@ public final class Operations {
             "/datasets/trustmrr/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("category", "country", "payment_provider", "target_audience", "business_type", "tech", "channels", "listing_tier", "status", "on_sale", "is_sponsored", "tags")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("country", false, "string", List.of()),
@@ -3914,7 +4056,7 @@ public final class Operations {
             new QueryParam("tech", false, "string", List.of()),
             new QueryParam("channel", false, "string", List.of()),
             new QueryParam("listing_tier", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("active", "removed")),
             new QueryParam("on_sale", false, "boolean", List.of()),
             new QueryParam("is_sponsored", false, "boolean", List.of()),
             new QueryParam("min_mrr", false, "number", List.of()),
@@ -3927,7 +4069,7 @@ public final class Operations {
             new QueryParam("min_asking_price", false, "number", List.of()),
             new QueryParam("max_asking_price", false, "number", List.of()),
             new QueryParam("min_ahrefs_dr", false, "integer", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "mrr_desc", "revenue_desc", "revenue_30d_desc", "traffic_desc", "growth_desc", "deal_score_desc", "price_asc", "price_desc", "multiple_asc", "founded_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -3942,7 +4084,7 @@ public final class Operations {
             "/datasets/x-users/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of()),
+            new QueryParam("facet", true, "string", List.of("is_blue_verified", "has_bio", "has_external_url", "source_tier")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("username", false, "string", List.of()),
             new QueryParam("source_tier", false, "string", List.of()),
@@ -3957,7 +4099,7 @@ public final class Operations {
             new QueryParam("created_before", false, "string", List.of()),
             new QueryParam("crawled_after", false, "string", List.of()),
             new QueryParam("crawled_before", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of())),
+            new QueryParam("sort", false, "string", List.of("relevance", "followers_desc", "followers_asc", "crawled_at_desc", "crawled_at_asc", "created_at_desc", "created_at_asc"))),
             List.of(),
             null,
             false,
@@ -3996,7 +4138,7 @@ public final class Operations {
             new QueryParam("created_before", false, "string", List.of()),
             new QueryParam("crawled_after", false, "string", List.of()),
             new QueryParam("crawled_before", false, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "followers_desc", "followers_asc", "crawled_at_desc", "crawled_at_asc", "created_at_desc", "created_at_asc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -4093,6 +4235,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("discogs-search", new Operation(
             "discogs-search",
             "GET",
@@ -4199,9 +4344,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("espn-game-summary", new Operation(
             "espn-game-summary",
             "GET",
@@ -4926,6 +5068,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-finance-markets-top", new Operation(
             "google-finance-markets-top",
             "GET",
@@ -5028,9 +5173,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-map-place", new Operation(
             "google-map-place",
             "GET",
@@ -5349,7 +5491,7 @@ public final class Operations {
             "/googleplay/list",
             List.of(),
             List.of(
-            new QueryParam("collection", false, "string", List.of()),
+            new QueryParam("collection", false, "string", List.of("TOP_FREE", "TOP_PAID", "GROSSING", "NEW_FREE", "NEW_PAID")),
             new QueryParam("category", false, "string", List.of()),
             new QueryParam("age", false, "string", List.of()),
             new QueryParam("num", false, "integer", List.of()),
@@ -5385,7 +5527,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("app_id", true, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("helpfulness", "newest", "rating")),
             new QueryParam("num", false, "integer", List.of()),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of()),
@@ -5408,7 +5550,7 @@ public final class Operations {
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of()),
             new QueryParam("full_detail", false, "boolean", List.of()),
-            new QueryParam("price", false, "string", List.of())),
+            new QueryParam("price", false, "string", List.of("all", "free", "paid"))),
             List.of(),
             null,
             false,
@@ -5766,6 +5908,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("jobs-company-search", new Operation(
             "jobs-company-search",
             "GET",
@@ -5892,9 +6037,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("jobs-icims-job", new Operation(
             "jobs-icims-job",
             "GET",
@@ -6686,6 +6828,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-market", new Operation(
             "kalshi-market",
             "GET",
@@ -6801,9 +6946,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-trades", new Operation(
             "kalshi-trades",
             "GET",
@@ -6970,10 +7112,10 @@ public final class Operations {
             "/manga/rankings",
             List.of(),
             List.of(
-            new QueryParam("sort", false, "string", List.of()),
-            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("TRENDING_DESC", "POPULARITY_DESC", "SCORE_DESC", "FAVOURITES_DESC", "START_DATE_DESC", "UPDATED_AT_DESC")),
+            new QueryParam("format", false, "string", List.of("MANGA", "NOVEL", "ONE_SHOT")),
             new QueryParam("genre", false, "string", List.of()),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("FINISHED", "RELEASING", "NOT_YET_RELEASED", "CANCELLED", "HIATUS")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("per_page", false, "integer", List.of())),
             List.of(),
@@ -6989,7 +7131,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of()),
-            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("SEARCH_MATCH", "POPULARITY_DESC", "SCORE_DESC", "TRENDING_DESC", "FAVOURITES_DESC", "START_DATE_DESC")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("per_page", false, "integer", List.of())),
             List.of(),
@@ -7517,6 +7659,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("playstation-concept", new Operation(
             "playstation-concept",
             "GET",
@@ -7637,9 +7782,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("polymarket-dashboard-macro", new Operation(
             "polymarket-dashboard-macro",
             "GET",
@@ -8385,6 +8527,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-token-midpoint", new Operation(
             "polymarket-token-midpoint",
             "GET",
@@ -8486,9 +8631,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-tokens-spreads", new Operation(
             "polymarket-tokens-spreads",
             "POST",
@@ -8920,7 +9062,7 @@ public final class Operations {
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("region_id", false, "integer", List.of()),
             new QueryParam("region_type", false, "integer", List.of()),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("for_sale", "sold")),
             new QueryParam("min_price", false, "integer", List.of()),
             new QueryParam("max_price", false, "integer", List.of()),
             new QueryParam("min_beds", false, "integer", List.of()),
@@ -9262,6 +9404,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("sec-institutional-holdings", new Operation(
             "sec-institutional-holdings",
             "GET",
@@ -9369,9 +9514,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("shop-app-product-variants", new Operation(
             "shop-app-product-variants",
             "GET",
@@ -9907,8 +10049,8 @@ public final class Operations {
             "/spotify-podcasts/charts",
             List.of(),
             List.of(
-            new QueryParam("chart", false, "string", List.of()),
-            new QueryParam("region", false, "string", List.of()),
+            new QueryParam("chart", false, "string", List.of("top-podcasts", "top-episodes", "trending", "arts", "business", "comedy", "education", "fiction", "health-fitness", "history", "leisure", "music", "news", "religion-spirituality", "science", "society-culture", "sports", "technology", "true-crime", "tv-film")),
+            new QueryParam("region", false, "string", List.of("ar", "au", "at", "br", "ca", "cl", "co", "dk", "fi", "fr", "de", "in", "id", "ie", "it", "jp", "mx", "nz", "no", "ph", "pl", "es", "se", "nl", "gb", "us")),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
@@ -10088,8 +10230,8 @@ public final class Operations {
             List.of(
             new QueryParam("uri", false, "string", List.of()),
             new QueryParam("id", false, "string", List.of()),
-            new QueryParam("type", false, "string", List.of()),
-            new QueryParam("order", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("album", "single", "compilation", "appears_on", "all")),
+            new QueryParam("order", false, "string", List.of("date_desc", "date_asc", "name_asc", "name_desc")),
             new QueryParam("offset", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
@@ -10126,6 +10268,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-artists-search", new Operation(
             "spotify-artists-search",
             "GET",
@@ -10228,7 +10373,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("country_code", false, "string", List.of()),
-            new QueryParam("content_id", false, "string", List.of())),
+            new QueryParam("content_id", false, "string", List.of("CHARTS", "POPULAR_ALBUMS", "POPULAR_ARTISTS", "TRENDING_SONGS"))),
             List.of(),
             null,
             false,
@@ -10253,9 +10398,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-home", new Operation(
             "spotify-home",
             "GET",
@@ -10849,186 +10991,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-        m.put("tcdb-birthdays", new Operation(
-            "tcdb-birthdays",
-            "GET",
-            "/tcdb/birthdays",
-            List.of(),
-            List.of(
-            new QueryParam("month", true, "integer", List.of()),
-            new QueryParam("day", true, "integer", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-card", new Operation(
-            "tcdb-card",
-            "GET",
-            "/tcdb/card",
-            List.of(),
-            List.of(
-            new QueryParam("set_id", false, "string", List.of()),
-            new QueryParam("card_id", false, "string", List.of()),
-            new QueryParam("path", false, "string", List.of()),
-            new QueryParam("url", false, "string", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-card-of-the-day", new Operation(
-            "tcdb-card-of-the-day",
-            "GET",
-            "/tcdb/card-of-the-day",
-            List.of(),
-            List.of(
-            new QueryParam("page", false, "integer", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            true,
-            List.of()));
-        m.put("tcdb-companies", new Operation(
-            "tcdb-companies",
-            "GET",
-            "/tcdb/companies",
-            List.of(),
-            List.of(
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-person", new Operation(
-            "tcdb-person",
-            "GET",
-            "/tcdb/person",
-            List.of(),
-            List.of(
-            new QueryParam("id", false, "string", List.of()),
-            new QueryParam("path", false, "string", List.of()),
-            new QueryParam("url", false, "string", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-releases", new Operation(
-            "tcdb-releases",
-            "GET",
-            "/tcdb/releases",
-            List.of(),
-            List.of(
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-search", new Operation(
-            "tcdb-search",
-            "GET",
-            "/tcdb/search",
-            List.of(),
-            List.of(
-            new QueryParam("q", true, "string", List.of()),
-            new QueryParam("category", false, "string", List.of("Baseball", "Basketball", "Boxing", "Cricket", "Football", "Gaming", "Golf", "Hockey", "Misc Sports", "MMA", "Multi-Sport", "Non-Sport", "Racing", "Soccer", "Tennis", "Wrestling")),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-set", new Operation(
-            "tcdb-set",
-            "GET",
-            "/tcdb/set",
-            List.of(),
-            List.of(
-            new QueryParam("id", false, "string", List.of()),
-            new QueryParam("path", false, "string", List.of()),
-            new QueryParam("url", false, "string", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-sets", new Operation(
-            "tcdb-sets",
-            "GET",
-            "/tcdb/sets",
-            List.of(),
-            List.of(
-            new QueryParam("sport", true, "string", List.of("Baseball", "Basketball", "Boxing", "Cricket", "Football", "Gaming", "Golf", "Hockey", "Misc Sports", "MMA", "Multi-Sport", "Non-Sport", "Racing", "Soccer", "Tennis", "Wrestling")),
-            new QueryParam("year", true, "string", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-tagged", new Operation(
-            "tcdb-tagged",
-            "GET",
-            "/tcdb/tagged",
-            List.of(),
-            List.of(
-            new QueryParam("id", false, "string", List.of()),
-            new QueryParam("path", false, "string", List.of()),
-            new QueryParam("url", false, "string", List.of()),
-            new QueryParam("sport", false, "string", List.of("Baseball", "Basketball", "Boxing", "Cricket", "Football", "Gaming", "Golf", "Hockey", "Misc Sports", "MMA", "Multi-Sport", "Non-Sport", "Racing", "Soccer", "Tennis", "Wrestling")),
-            new QueryParam("page", false, "integer", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            true,
-            List.of()));
-        m.put("tcdb-team", new Operation(
-            "tcdb-team",
-            "GET",
-            "/tcdb/team",
-            List.of(),
-            List.of(
-            new QueryParam("id", false, "string", List.of()),
-            new QueryParam("path", false, "string", List.of()),
-            new QueryParam("url", false, "string", List.of()),
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
-        m.put("tcdb-top-sets", new Operation(
-            "tcdb-top-sets",
-            "GET",
-            "/tcdb/top-sets",
-            List.of(),
-            List.of(
-            new QueryParam("limit", false, "integer", List.of())),
-            List.of(),
-            null,
-            false,
-            List.of("ApiKeyAuth"),
-            false,
-            List.of()));
         m.put("threads-post", new Operation(
             "threads-post",
             "GET",
@@ -11179,9 +11141,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("tiktok-profile-post", new Operation(
             "tiktok-profile-post",
             "GET",
@@ -11239,6 +11198,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("tiktok-search-user", new Operation(
             "tiktok-search-user",
             "GET",
@@ -12045,9 +12007,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("x-profile-posts", new Operation(
             "x-profile-posts",
             "GET",
@@ -12103,6 +12062,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("yahoo-finance-industries", new Operation(
             "yahoo-finance-industries",
             "GET",
@@ -12341,8 +12303,8 @@ public final class Operations {
             "/yahoo-finance/ticker/{symbol}/financials",
             List.of("symbol"),
             List.of(
-            new QueryParam("statement", false, "string", List.of()),
-            new QueryParam("period", false, "string", List.of())),
+            new QueryParam("statement", false, "string", List.of("income", "income-statement", "balance-sheet", "balance", "cash-flow", "cashflow")),
+            new QueryParam("period", false, "string", List.of("annual", "quarterly", "trailing"))),
             List.of(),
             null,
             false,
@@ -12754,7 +12716,7 @@ public final class Operations {
             List.of(
             new QueryParam("query", true, "string", List.of()),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("status", false, "string", List.of())),
+            new QueryParam("status", false, "string", List.of("for_sale", "sale", "for-sale", "for_rent", "rent", "for-rent", "sold"))),
             List.of(),
             null,
             false,
@@ -12781,7 +12743,7 @@ public final class Operations {
             List.of(
             new QueryParam("location", true, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
-            new QueryParam("status", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("for_sale", "sale", "for-sale", "for_rent", "rent", "for-rent", "sold")),
             new QueryParam("region_id", false, "integer", List.of()),
             new QueryParam("region_type", false, "integer", List.of()),
             new QueryParam("west", false, "number", List.of()),
@@ -12849,16 +12811,21 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("charts", "apple-podcasts-charts");
+            group.put("chartsRankings", "apple-podcasts-charts-rankings");
             group.put("episodesSearch", "apple-podcasts-episodes-search");
+            group.put("new_", "apple-podcasts-new");
             group.put("search", "apple-podcasts-search");
             group.put("show", "apple-podcasts-show");
             group.put("showEpisodes", "apple-podcasts-show-episodes");
+            group.put("showRelated", "apple-podcasts-show-related");
             g.put("applePodcasts", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("app", "appstore-app");
             group.put("developer", "appstore-developer");
+            group.put("editorial", "appstore-editorial");
+            group.put("editorialCategory", "appstore-editorial-category");
             group.put("list", "appstore-list");
             group.put("privacy", "appstore-privacy");
             group.put("ratings", "appstore-ratings");
@@ -12993,6 +12960,9 @@ public final class Operations {
             group.put("airbnbMarketsItem", "datasets-airbnb-markets-item");
             group.put("airbnbMarketsNearby", "datasets-airbnb-markets-nearby");
             group.put("airbnbMarketsSearch", "datasets-airbnb-markets-search");
+            group.put("applePodcastsShowsFacets", "datasets-apple-podcasts-shows-facets");
+            group.put("applePodcastsShowsItem", "datasets-apple-podcasts-shows-item");
+            group.put("applePodcastsShowsSearch", "datasets-apple-podcasts-shows-search");
             group.put("appsChartsSearch", "datasets-apps-charts-search");
             group.put("appsReviewsSearch", "datasets-apps-reviews-search");
             group.put("appsSearch", "datasets-apps-search");
@@ -13704,22 +13674,6 @@ public final class Operations {
             group.put("tagsList", "steam-tags-list");
             group.put("topSellers", "steam-top-sellers");
             g.put("steam", Map.copyOf(group));
-        }
-        {
-            Map<String, String> group = new LinkedHashMap<>();
-            group.put("birthdays", "tcdb-birthdays");
-            group.put("card", "tcdb-card");
-            group.put("cardOfTheDay", "tcdb-card-of-the-day");
-            group.put("companies", "tcdb-companies");
-            group.put("person", "tcdb-person");
-            group.put("releases", "tcdb-releases");
-            group.put("search", "tcdb-search");
-            group.put("set", "tcdb-set");
-            group.put("sets", "tcdb-sets");
-            group.put("tagged", "tcdb-tagged");
-            group.put("team", "tcdb-team");
-            group.put("topSets", "tcdb-top-sets");
-            g.put("tcdb", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
