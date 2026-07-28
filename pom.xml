@@ -11,7 +11,7 @@
 
   <name>Crawlora Java SDK</name>
   <description>Official Java SDK for the Crawlora web-scraping API: a typed, dependency-free client (built on java.net.http) covering every public endpoint with grouped and dynamic operation calls, API-key and JWT auth, automatic retries with exponential backoff and Retry-After, numeric and cursor pagination, before/after middleware hooks, and client-side rate limiting.</description>
-  <url>https://crawlora.net/</url>
+  <url>https://crawlora.net/?utm_source=maven&amp;utm_medium=referral&amp;utm_campaign=crawlora-java-sdk</url>
 
   <licenses>
     <license>
