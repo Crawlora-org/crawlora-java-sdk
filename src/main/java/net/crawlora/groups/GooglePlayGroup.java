@@ -169,6 +169,28 @@ public final class GooglePlayGroup {
     }
 
     /**
+     * googleplay-ratings (GET /googleplay/ratings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ratings(Map<String, Object> params) {
+        return ratings(params, null);
+    }
+
+    /**
+     * googleplay-ratings (GET /googleplay/ratings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ratings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("googleplay-ratings", params);
+        return client.request("googleplay-ratings", params, options);
+    }
+
+    /**
      * googleplay-reviews (GET /googleplay/reviews).
      *
      * @param params operation parameters

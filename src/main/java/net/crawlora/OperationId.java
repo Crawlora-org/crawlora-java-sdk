@@ -174,6 +174,9 @@ public final class OperationId {
     public static final String DATASETS_HOUSING_MARKETS_FACETS = "datasets-housing-markets-facets";
     public static final String DATASETS_HOUSING_MARKETS_ITEM = "datasets-housing-markets-item";
     public static final String DATASETS_HOUSING_MARKETS_SEARCH = "datasets-housing-markets-search";
+    public static final String DATASETS_INSTAGRAM_USERS_FACETS = "datasets-instagram-users-facets";
+    public static final String DATASETS_INSTAGRAM_USERS_ITEM = "datasets-instagram-users-item";
+    public static final String DATASETS_INSTAGRAM_USERS_SEARCH = "datasets-instagram-users-search";
     public static final String DATASETS_JOBS_COMPANIES = "datasets-jobs-companies";
     public static final String DATASETS_JOBS_COMPANY_ITEM = "datasets-jobs-company-item";
     public static final String DATASETS_JOBS_FACETS = "datasets-jobs-facets";
@@ -215,6 +218,7 @@ public final class OperationId {
     public static final String DATASETS_PRODUCTHUNT_PRODUCTS_SEARCH = "datasets-producthunt-products-search";
     public static final String DATASETS_PRODUCTHUNT_TRENDS_FACETS = "datasets-producthunt-trends-facets";
     public static final String DATASETS_PRODUCTHUNT_TRENDS_SEARCH = "datasets-producthunt-trends-search";
+    public static final String DATASETS_REDDIT_TRENDING_SEARCH = "datasets-reddit-trending-search";
     public static final String DATASETS_SEC_COMPANIES_FACETS = "datasets-sec-companies-facets";
     public static final String DATASETS_SEC_COMPANIES_FINANCIALS = "datasets-sec-companies-financials";
     public static final String DATASETS_SEC_COMPANIES_INSIDER = "datasets-sec-companies-insider";
@@ -325,6 +329,7 @@ public final class OperationId {
     public static final String GOOGLE_PLAY_DEVELOPER = "googleplay-developer";
     public static final String GOOGLE_PLAY_LIST = "googleplay-list";
     public static final String GOOGLE_PLAY_PERMISSIONS = "googleplay-permissions";
+    public static final String GOOGLE_PLAY_RATINGS = "googleplay-ratings";
     public static final String GOOGLE_PLAY_REVIEWS = "googleplay-reviews";
     public static final String GOOGLE_PLAY_SEARCH = "googleplay-search";
     public static final String GOOGLE_PLAY_SIMILAR = "googleplay-similar";
