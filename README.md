@@ -3,7 +3,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/net.crawlora/crawlora-sdk?label=Maven%20Central)](https://central.sonatype.com/artifact/net.crawlora/crawlora-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Java client for the public [Crawlora](https://crawlora.net) web-scraping API. It
+Java client for the public [Crawlora](https://crawlora.net?utm_source=github&utm_medium=referral&utm_campaign=crawlora-java-sdk) web-scraping API. It
 wraps every public endpoint with generated grouped helpers and a dynamic call
 interface, plus retries, pagination, middleware hooks, and client-side rate
 limiting. The published artifact has **no runtime dependencies** (built on the
