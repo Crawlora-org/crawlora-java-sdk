@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 832;
+    public static final int OPERATION_COUNT = 837;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -2816,6 +2816,81 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("datasets-instagram-users-facets", new Operation(
+            "datasets-instagram-users-facets",
+            "GET",
+            "/datasets/instagram-users/facets",
+            List.of(),
+            List.of(
+            new QueryParam("facet", true, "string", List.of("is_verified", "is_business_account", "has_bio", "has_external_url", "category_name", "source_tier")),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("username", false, "string", List.of()),
+            new QueryParam("category_name", false, "string", List.of()),
+            new QueryParam("source_tier", false, "string", List.of()),
+            new QueryParam("is_verified", false, "boolean", List.of()),
+            new QueryParam("is_business_account", false, "boolean", List.of()),
+            new QueryParam("has_bio", false, "boolean", List.of()),
+            new QueryParam("has_external_url", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("max_followers", false, "integer", List.of()),
+            new QueryParam("min_ratio", false, "number", List.of()),
+            new QueryParam("max_ratio", false, "number", List.of()),
+            new QueryParam("created_after", false, "string", List.of()),
+            new QueryParam("created_before", false, "string", List.of()),
+            new QueryParam("crawled_after", false, "string", List.of()),
+            new QueryParam("crawled_before", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "followers_desc", "followers_asc", "crawled_at_desc", "crawled_at_asc", "created_at_desc", "created_at_asc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-instagram-users-item", new Operation(
+            "datasets-instagram-users-item",
+            "GET",
+            "/datasets/instagram-users/items/{username}",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("datasets-instagram-users-search", new Operation(
+            "datasets-instagram-users-search",
+            "GET",
+            "/datasets/instagram-users/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("username", false, "string", List.of()),
+            new QueryParam("category_name", false, "string", List.of()),
+            new QueryParam("source_tier", false, "string", List.of()),
+            new QueryParam("is_verified", false, "boolean", List.of()),
+            new QueryParam("is_business_account", false, "boolean", List.of()),
+            new QueryParam("has_bio", false, "boolean", List.of()),
+            new QueryParam("has_external_url", false, "boolean", List.of()),
+            new QueryParam("min_followers", false, "integer", List.of()),
+            new QueryParam("max_followers", false, "integer", List.of()),
+            new QueryParam("min_ratio", false, "number", List.of()),
+            new QueryParam("max_ratio", false, "number", List.of()),
+            new QueryParam("created_after", false, "string", List.of()),
+            new QueryParam("created_before", false, "string", List.of()),
+            new QueryParam("crawled_after", false, "string", List.of()),
+            new QueryParam("crawled_before", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "followers_desc", "followers_asc", "crawled_at_desc", "crawled_at_asc", "created_at_desc", "created_at_asc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("datasets-jobs-companies", new Operation(
             "datasets-jobs-companies",
             "GET",
@@ -2995,6 +3070,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-numbeo-cities-item", new Operation(
             "datasets-numbeo-cities-item",
             "GET",
@@ -3045,9 +3123,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("datasets-numbeo-countries-search", new Operation(
             "datasets-numbeo-countries-search",
             "GET",
@@ -3581,6 +3656,24 @@ public final class Operations {
             new QueryParam("min_votes", false, "integer", List.of()),
             new QueryParam("min_launches", false, "integer", List.of()),
             new QueryParam("sort", false, "string", List.of("period_desc", "period_asc", "launch_count_desc", "sum_votes_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("datasets-reddit-trending-search", new Operation(
+            "datasets-reddit-trending-search",
+            "GET",
+            "/datasets/reddit-trending/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("subreddit", false, "string", List.of()),
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("rank", "date_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -4185,6 +4278,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("discogs-label", new Operation(
             "discogs-label",
             "GET",
@@ -4235,9 +4331,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("discogs-search", new Operation(
             "discogs-search",
             "GET",
@@ -5017,6 +5110,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-finance-markets-featured", new Operation(
             "google-finance-markets-featured",
             "GET",
@@ -5068,9 +5164,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-finance-markets-top", new Operation(
             "google-finance-markets-top",
             "GET",
@@ -5493,6 +5586,7 @@ public final class Operations {
             List.of(
             new QueryParam("collection", false, "string", List.of("TOP_FREE", "TOP_PAID", "GROSSING", "NEW_FREE", "NEW_PAID")),
             new QueryParam("category", false, "string", List.of()),
+            new QueryParam("device", false, "string", List.of("phone", "tablet", "tv", "chromebook", "watch", "xr", "car")),
             new QueryParam("age", false, "string", List.of()),
             new QueryParam("num", false, "integer", List.of()),
             new QueryParam("country", false, "string", List.of()),
@@ -5514,6 +5608,21 @@ public final class Operations {
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("lang", false, "string", List.of()),
             new QueryParam("short", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("googleplay-ratings", new Operation(
+            "googleplay-ratings",
+            "GET",
+            "/googleplay/ratings",
+            List.of(),
+            List.of(
+            new QueryParam("app_id", true, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -5843,6 +5952,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("imdb-title-trivia", new Operation(
             "imdb-title-trivia",
             "GET",
@@ -5908,9 +6020,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("jobs-company-search", new Operation(
             "jobs-company-search",
             "GET",
@@ -6754,6 +6863,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-historical-cutoff", new Operation(
             "kalshi-historical-cutoff",
             "GET",
@@ -6828,9 +6940,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-market", new Operation(
             "kalshi-market",
             "GET",
@@ -7586,6 +7695,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("pitchbook-fund", new Operation(
             "pitchbook-fund",
             "GET",
@@ -7659,9 +7771,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("playstation-concept", new Operation(
             "playstation-concept",
             "GET",
@@ -8457,6 +8566,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-teams", new Operation(
             "polymarket-teams",
             "GET",
@@ -8527,9 +8639,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-token-midpoint", new Operation(
             "polymarket-token-midpoint",
             "GET",
@@ -8853,7 +8962,8 @@ public final class Operations {
             List.of(
             new QueryParam("sort", false, "string", List.of("confidence", "top", "new", "controversial", "old", "qa")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("depth", false, "integer", List.of())),
+            new QueryParam("depth", false, "integer", List.of()),
+            new QueryParam("include_metrics", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -8881,7 +8991,8 @@ public final class Operations {
             "GET",
             "/reddit/post/{id}",
             List.of("id"),
-            List.of(),
+            List.of(
+            new QueryParam("include_metrics", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -9321,6 +9432,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("sec-filing-sections", new Operation(
             "sec-filing-sections",
             "GET",
@@ -9404,9 +9518,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("sec-institutional-holdings", new Operation(
             "sec-institutional-holdings",
             "GET",
@@ -10187,6 +10298,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-albums-search", new Operation(
             "spotify-albums-search",
             "GET",
@@ -10268,9 +10382,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-artists-search", new Operation(
             "spotify-artists-search",
             "GET",
@@ -11129,6 +11240,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("tiktok-post", new Operation(
             "tiktok-post",
             "GET",
@@ -11198,9 +11312,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("tiktok-search-user", new Operation(
             "tiktok-search-user",
             "GET",
@@ -11995,6 +12106,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("x-profile", new Operation(
             "x-profile",
             "GET",
@@ -12062,9 +12176,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("yahoo-finance-industries", new Operation(
             "yahoo-finance-industries",
             "GET",
@@ -12994,6 +13105,9 @@ public final class Operations {
             group.put("housingMarketsFacets", "datasets-housing-markets-facets");
             group.put("housingMarketsItem", "datasets-housing-markets-item");
             group.put("housingMarketsSearch", "datasets-housing-markets-search");
+            group.put("instagramUsersFacets", "datasets-instagram-users-facets");
+            group.put("instagramUsersItem", "datasets-instagram-users-item");
+            group.put("instagramUsersSearch", "datasets-instagram-users-search");
             group.put("jobsCompanies", "datasets-jobs-companies");
             group.put("jobsCompanyItem", "datasets-jobs-company-item");
             group.put("jobsFacets", "datasets-jobs-facets");
@@ -13034,6 +13148,7 @@ public final class Operations {
             group.put("producthuntProductsSearch", "datasets-producthunt-products-search");
             group.put("producthuntTrendsFacets", "datasets-producthunt-trends-facets");
             group.put("producthuntTrendsSearch", "datasets-producthunt-trends-search");
+            group.put("redditTrendingSearch", "datasets-reddit-trending-search");
             group.put("secCompaniesFacets", "datasets-sec-companies-facets");
             group.put("secCompaniesFinancials", "datasets-sec-companies-financials");
             group.put("secCompaniesInsider", "datasets-sec-companies-insider");
@@ -13190,6 +13305,7 @@ public final class Operations {
             group.put("developer", "googleplay-developer");
             group.put("list", "googleplay-list");
             group.put("permissions", "googleplay-permissions");
+            group.put("ratings", "googleplay-ratings");
             group.put("reviews", "googleplay-reviews");
             group.put("search", "googleplay-search");
             group.put("similar", "googleplay-similar");

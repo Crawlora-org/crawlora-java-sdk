@@ -23,8 +23,13 @@ Newer platforms are grouped like every other endpoint:
 
 ```java
 Object posts = client.reddit().search(Map.of("q", "java", "subreddit", "programming"));
+Object postWithMetrics = client.reddit().post(Map.of("id", "1v8hy3q", "include_metrics", true));
+Object commentsWithMetrics = client.reddit().comments(Map.of("id", "1v8hy3q", "include_metrics", true, "limit", 25));
 Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 ```
+
+Omit `include_metrics` for the 1-credit feed mode. Set it to `true` for the
+3-credit anonymous HTML mode with public post and comment engagement metrics.
 
 ## Threads Public Lookups
 

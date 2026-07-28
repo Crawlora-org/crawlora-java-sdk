@@ -1030,6 +1030,81 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-instagram-users-facets (GET /datasets/instagram-users/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersFacets(Map<String, Object> params) {
+        return instagramUsersFacets(params, null);
+    }
+
+    /**
+     * datasets-instagram-users-facets (GET /datasets/instagram-users/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-instagram-users-facets", params);
+        return client.request("datasets-instagram-users-facets", params, options);
+    }
+
+    /**
+     * datasets-instagram-users-item (GET /datasets/instagram-users/items/{username}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersItem(Map<String, Object> params) {
+        return instagramUsersItem(params, null);
+    }
+
+    /**
+     * datasets-instagram-users-item (GET /datasets/instagram-users/items/{username}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-instagram-users-item", params);
+        return client.request("datasets-instagram-users-item", params, options);
+    }
+
+    /**
+     * datasets-instagram-users-search (GET /datasets/instagram-users/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersSearch(Map<String, Object> params) {
+        return instagramUsersSearch(params, null);
+    }
+
+    /**
+     * datasets-instagram-users-search (GET /datasets/instagram-users/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-instagram-users-search", params);
+        return client.request("datasets-instagram-users-search", params, options);
+    }
+
+    /**
+     * datasets-instagram-users-search (GET /datasets/instagram-users/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object instagramUsersSearch() {
+        return instagramUsersSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-jobs-companies (GET /datasets/jobs/companies).
      *
      * @param params operation parameters
@@ -2042,6 +2117,37 @@ public final class DatasetsGroup {
      */
     public Object producthuntTrendsSearch() {
         return producthuntTrendsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-reddit-trending-search (GET /datasets/reddit-trending/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingSearch(Map<String, Object> params) {
+        return redditTrendingSearch(params, null);
+    }
+
+    /**
+     * datasets-reddit-trending-search (GET /datasets/reddit-trending/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-reddit-trending-search", params);
+        return client.request("datasets-reddit-trending-search", params, options);
+    }
+
+    /**
+     * datasets-reddit-trending-search (GET /datasets/reddit-trending/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingSearch() {
+        return redditTrendingSearch(Map.of(), null);
     }
 
     /**
