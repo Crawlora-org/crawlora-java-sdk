@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 848;
+    public static final int OPERATION_COUNT = 849;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -2958,9 +2958,10 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
             new QueryParam("status", false, "string", List.of("active", "empty", "gone", "blocked", "pending", "invalid")),
             new QueryParam("min_open_roles", false, "integer", List.of()),
+            new QueryParam("sponsors_visa", false, "boolean", List.of()),
             new QueryParam("sort", false, "string", List.of("open_desc", "company_asc", "crawled_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
@@ -3016,7 +3017,7 @@ public final class Operations {
             new QueryParam("lat", true, "number", List.of()),
             new QueryParam("lon", true, "number", List.of()),
             new QueryParam("radius_km", false, "number", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
             new QueryParam("include_closed", false, "boolean", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
@@ -3034,7 +3035,7 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("company", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
             new QueryParam("department", false, "string", List.of()),
             new QueryParam("location", false, "string", List.of()),
             new QueryParam("city", false, "string", List.of()),
@@ -4629,6 +4630,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("facebook-page", new Operation(
+            "facebook-page",
+            "GET",
+            "/facebook/{page}",
+            List.of("page"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("geocoding-lookup", new Operation(
             "geocoding-lookup",
             "GET",
@@ -5111,6 +5124,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-finance-classification", new Operation(
             "google-finance-classification",
             "GET",
@@ -5123,9 +5139,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("google-finance-company", new Operation(
             "google-finance-company",
             "GET",
@@ -5941,6 +5954,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("imdb-title-keywords", new Operation(
             "imdb-title-keywords",
             "GET",
@@ -5955,9 +5971,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("imdb-title-parental-guide", new Operation(
             "imdb-title-parental-guide",
             "GET",
@@ -6851,6 +6864,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-event", new Operation(
             "kalshi-event",
             "GET",
@@ -6863,9 +6879,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("kalshi-event-history", new Operation(
             "kalshi-event-history",
             "GET",
@@ -7695,6 +7708,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("numbeo-cost-of-living-country", new Operation(
             "numbeo-cost-of-living-country",
             "GET",
@@ -7708,9 +7724,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("numbeo-cost-of-living-rankings", new Operation(
             "numbeo-cost-of-living-rankings",
             "GET",
@@ -8555,6 +8568,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-spotlights-keyset", new Operation(
             "polymarket-spotlights-keyset",
             "GET",
@@ -8572,9 +8588,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-spotlight", new Operation(
             "polymarket-spotlight",
             "GET",
@@ -9412,6 +9425,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("rottentomatoes-movie", new Operation(
             "rottentomatoes-movie",
             "GET",
@@ -9426,9 +9442,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("rottentomatoes-movie-reviews", new Operation(
             "rottentomatoes-movie-reviews",
             "GET",
@@ -10270,6 +10283,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-podcasts-categories", new Operation(
             "spotify-podcasts-categories",
             "GET",
@@ -10288,9 +10304,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("spotify-podcasts-charts", new Operation(
             "spotify-podcasts-charts",
             "GET",
@@ -11249,6 +11262,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("tesla-jobs-list", new Operation(
             "tesla-jobs-list",
             "GET",
@@ -11265,9 +11281,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("threads-post", new Operation(
             "threads-post",
             "GET",
@@ -12112,6 +12125,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("usage-me-recent-ips", new Operation(
             "usage-me-recent-ips",
             "GET",
@@ -12128,9 +12144,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("usage-me-timeseries", new Operation(
             "usage-me-timeseries",
             "GET",
@@ -12895,6 +12908,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations14(Map<String, Operation> m) {
         m.put("youtube-profile", new Operation(
             "youtube-profile",
             "GET",
@@ -12907,9 +12923,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations14(Map<String, Operation> m) {
         m.put("youtube-search", new Operation(
             "youtube-search",
             "GET",
@@ -13388,6 +13401,11 @@ public final class Operations {
             group.put("teamRoster", "espn-team-roster");
             group.put("teams", "espn-teams");
             g.put("espn", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("page", "facebook-page");
+            g.put("facebook", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();

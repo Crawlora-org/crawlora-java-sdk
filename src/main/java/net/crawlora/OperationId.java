@@ -271,6 +271,7 @@ public final class OperationId {
     public static final String ESPN_TEAM = "espn-team";
     public static final String ESPN_TEAM_ROSTER = "espn-team-roster";
     public static final String ESPN_TEAMS = "espn-teams";
+    public static final String FACEBOOK_PAGE = "facebook-page";
     public static final String GEOCODING_LOOKUP = "geocoding-lookup";
     public static final String GEOCODING_REVERSE = "geocoding-reverse";
     public static final String GEOCODING_SEARCH = "geocoding-search";
