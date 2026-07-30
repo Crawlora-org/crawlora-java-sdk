@@ -31,6 +31,18 @@ Object brand = client.brand().retrieve(Map.of("domain", "stripe.com"));
 Omit `include_metrics` for the 1-credit feed mode. Set it to `true` for the
 3-credit anonymous HTML mode with public post and comment engagement metrics.
 
+## Company Job Searches
+
+Search public job listings directly from employer career sites:
+
+```java
+Object amazon = client.amazonJobs().search(Map.of("q", "software engineer", "country", "US"));
+Object apple = client.appleJobs().search(Map.of("q", "machine learning", "location", "United States"));
+Object google = client.googleJobs().search(Map.of("q", "data scientist", "location", "Singapore"));
+Object meta = client.metaJobs().search(Map.of("q", "product manager", "is_remote_only", true));
+Object tesla = client.teslaJobs().list(Map.of("query", "manufacturing", "location", "Texas"));
+```
+
 ## Threads Public Lookups
 
 ```java
