@@ -16,6 +16,8 @@ public final class OperationId {
     public static final String AIRBNB_ROOM_CALENDAR = "airbnb-room-calendar";
     public static final String AIRBNB_ROOM_REVIEWS = "airbnb-room-reviews";
     public static final String AIRBNB_SEARCH = "airbnb-search";
+    public static final String AMAZON_JOBS_JOB = "amazon-jobs-job";
+    public static final String AMAZON_JOBS_SEARCH = "amazon-jobs-search";
     public static final String AMAZON_PRODUCT = "amazon-product";
     public static final String AMAZON_SEARCH = "amazon-search";
     public static final String AMAZON_SUGGEST = "amazon-suggest";
@@ -52,6 +54,8 @@ public final class OperationId {
     public static final String APPLE_BOOKS_CHARTS = "apple-books-charts";
     public static final String APPLE_BOOKS_SEARCH = "apple-books-search";
     public static final String APPLE_BOOKS_SERIES = "apple-books-series";
+    public static final String APPLE_JOBS_JOB = "apple-jobs-job";
+    public static final String APPLE_JOBS_SEARCH = "apple-jobs-search";
     public static final String APPLE_PODCASTS_CHARTS = "apple-podcasts-charts";
     public static final String APPLE_PODCASTS_CHARTS_RANKINGS = "apple-podcasts-charts-rankings";
     public static final String APPLE_PODCASTS_EPISODES_SEARCH = "apple-podcasts-episodes-search";
@@ -318,6 +322,8 @@ public final class OperationId {
     public static final String GOOGLE_FINANCE_SEARCH = "google-finance-search";
     public static final String GOOGLE_FINANCE_TICKER = "google-finance-ticker";
     public static final String GOOGLE_JOBS = "google-jobs";
+    public static final String GOOGLE_JOBS_JOB = "google-jobs-job";
+    public static final String GOOGLE_JOBS_SEARCH = "google-jobs-search";
     public static final String GOOGLE_MAP_PLACE = "google-map-place";
     public static final String GOOGLE_MAP_PLACE_PHOTOS = "google-map-place-photos";
     public static final String GOOGLE_MAP_PLACE_REVIEWS = "google-map-place-reviews";
@@ -454,6 +460,9 @@ public final class OperationId {
     public static final String MANGA_RANKINGS = "manga-rankings";
     public static final String MANGA_SEARCH = "manga-search";
     public static final String MANGA_TITLE = "manga-title";
+    public static final String META_JOBS_JOB = "meta-jobs-job";
+    public static final String META_JOBS_LIST = "meta-jobs-list";
+    public static final String META_JOBS_SEARCH = "meta-jobs-search";
     public static final String META_PING = "ping";
     public static final String META_READY = "ready";
     public static final String METACRITIC_BROWSE = "metacritic-browse";
@@ -715,6 +724,8 @@ public final class OperationId {
     public static final String STEAM_TAGS = "steam-tags";
     public static final String STEAM_TAGS_LIST = "steam-tags-list";
     public static final String STEAM_TOP_SELLERS = "steam-top-sellers";
+    public static final String TESLA_JOBS_JOB = "tesla-jobs-job";
+    public static final String TESLA_JOBS_LIST = "tesla-jobs-list";
     public static final String THREADS_POST = "threads-post";
     public static final String THREADS_POST_REPLIES = "threads-post-replies";
     public static final String THREADS_PROFILE = "threads-profile";

@@ -19,6 +19,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "amazonJobs" operation group.
+     * @return a new {@link AmazonJobsGroup} bound to this client
+     */
+    public AmazonJobsGroup amazonJobs() {
+        return new AmazonJobsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "amazon" operation group.
      * @return a new {@link AmazonGroup} bound to this client
      */
@@ -40,6 +48,14 @@ public abstract class ClientGroups {
      */
     public AppleBooksGroup appleBooks() {
         return new AppleBooksGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "appleJobs" operation group.
+     * @return a new {@link AppleJobsGroup} bound to this client
+     */
+    public AppleJobsGroup appleJobs() {
+        return new AppleJobsGroup((CrawloraClient) this);
     }
 
     /**
@@ -187,6 +203,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "googleJobs" operation group.
+     * @return a new {@link GoogleJobsGroup} bound to this client
+     */
+    public GoogleJobsGroup googleJobs() {
+        return new GoogleJobsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "google" operation group.
      * @return a new {@link GoogleGroup} bound to this client
      */
@@ -264,6 +288,14 @@ public abstract class ClientGroups {
      */
     public MangaGroup manga() {
         return new MangaGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "metaJobs" operation group.
+     * @return a new {@link MetaJobsGroup} bound to this client
+     */
+    public MetaJobsGroup metaJobs() {
+        return new MetaJobsGroup((CrawloraClient) this);
     }
 
     /**
@@ -424,6 +456,14 @@ public abstract class ClientGroups {
      */
     public SteamGroup steam() {
         return new SteamGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "teslaJobs" operation group.
+     * @return a new {@link TeslaJobsGroup} bound to this client
+     */
+    public TeslaJobsGroup teslaJobs() {
+        return new TeslaJobsGroup((CrawloraClient) this);
     }
 
     /**
