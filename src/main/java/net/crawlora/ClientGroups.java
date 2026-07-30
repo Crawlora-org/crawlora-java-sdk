@@ -179,6 +179,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "facebook" operation group.
+     * @return a new {@link FacebookGroup} bound to this client
+     */
+    public FacebookGroup facebook() {
+        return new FacebookGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "geocoding" operation group.
      * @return a new {@link GeocodingGroup} bound to this client
      */
