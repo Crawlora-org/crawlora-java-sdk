@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 881;
+    public static final int OPERATION_COUNT = 882;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -12134,12 +12134,24 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("category", false, "string", List.of("popular", "top_rated", "now_playing", "upcoming")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("sort_by", false, "string", List.of("popularity.desc", "popularity.asc", "vote_average.desc", "vote_average.asc", "primary_release_date.desc", "primary_release_date.asc", "title.asc", "title.desc")),
+            new QueryParam("with_genres", false, "string", List.of()),
+            new QueryParam("original_language", false, "string", List.of()),
+            new QueryParam("date_from", false, "string", List.of()),
+            new QueryParam("date_to", false, "string", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("max_rating", false, "number", List.of()),
+            new QueryParam("min_votes", false, "integer", List.of()),
+            new QueryParam("min_runtime", false, "integer", List.of()),
+            new QueryParam("max_runtime", false, "integer", List.of()),
+            new QueryParam("include_adult", false, "boolean", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("tmdb-movie", new Operation(
             "tmdb-movie",
@@ -12152,6 +12164,20 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("tmdb-person-list", new Operation(
+            "tmdb-person-list",
+            "GET",
+            "/tmdb/person/list",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("tmdb-person", new Operation(
             "tmdb-person",
@@ -12174,12 +12200,13 @@ public final class Operations {
             List.of(
             new QueryParam("query", true, "string", List.of()),
             new QueryParam("type", false, "string", List.of("movie", "tv", "person")),
+            new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("tmdb-tv-list", new Operation(
             "tmdb-tv-list",
@@ -12188,12 +12215,24 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("category", false, "string", List.of("popular", "top_rated", "airing_today", "on_the_air")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("sort_by", false, "string", List.of("popularity.desc", "popularity.asc", "vote_average.desc", "vote_average.asc", "first_air_date.desc", "first_air_date.asc", "name.asc", "name.desc")),
+            new QueryParam("with_genres", false, "string", List.of()),
+            new QueryParam("original_language", false, "string", List.of()),
+            new QueryParam("date_from", false, "string", List.of()),
+            new QueryParam("date_to", false, "string", List.of()),
+            new QueryParam("min_rating", false, "number", List.of()),
+            new QueryParam("max_rating", false, "number", List.of()),
+            new QueryParam("min_votes", false, "integer", List.of()),
+            new QueryParam("min_runtime", false, "integer", List.of()),
+            new QueryParam("max_runtime", false, "integer", List.of()),
+            new QueryParam("include_adult", false, "boolean", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("tmdb-tv", new Operation(
             "tmdb-tv",
@@ -12951,6 +12990,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations14(Map<String, Operation> m) {
         m.put("yahoo-finance-sector", new Operation(
             "yahoo-finance-sector",
             "GET",
@@ -12963,9 +13005,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations14(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-actions", new Operation(
             "yahoo-finance-ticker-actions",
             "GET",
@@ -14555,6 +14594,7 @@ public final class Operations {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("movieList", "tmdb-movie-list");
             group.put("movie", "tmdb-movie");
+            group.put("personList", "tmdb-person-list");
             group.put("person", "tmdb-person");
             group.put("search", "tmdb-search");
             group.put("tvList", "tmdb-tv-list");

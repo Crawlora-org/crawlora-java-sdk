@@ -72,6 +72,37 @@ public final class TmdbGroup {
     }
 
     /**
+     * tmdb-person-list (GET /tmdb/person/list).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object personList(Map<String, Object> params) {
+        return personList(params, null);
+    }
+
+    /**
+     * tmdb-person-list (GET /tmdb/person/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object personList(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tmdb-person-list", params);
+        return client.request("tmdb-person-list", params, options);
+    }
+
+    /**
+     * tmdb-person-list (GET /tmdb/person/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object personList() {
+        return personList(Map.of(), null);
+    }
+
+    /**
      * tmdb-person (GET /tmdb/person/{id}).
      *
      * @param params operation parameters
