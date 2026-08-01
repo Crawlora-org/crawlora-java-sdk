@@ -72,6 +72,50 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-creative-center-hashtags (GET /tiktok/creative-center/hashtags).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creativeCenterHashtags(Map<String, Object> params) {
+        return creativeCenterHashtags(params, null);
+    }
+
+    /**
+     * tiktok-creative-center-hashtags (GET /tiktok/creative-center/hashtags). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creativeCenterHashtags(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-creative-center-hashtags", params);
+        return client.request("tiktok-creative-center-hashtags", params, options);
+    }
+
+    /**
+     * tiktok-creative-center-videos (GET /tiktok/creative-center/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creativeCenterVideos(Map<String, Object> params) {
+        return creativeCenterVideos(params, null);
+    }
+
+    /**
+     * tiktok-creative-center-videos (GET /tiktok/creative-center/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creativeCenterVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-creative-center-videos", params);
+        return client.request("tiktok-creative-center-videos", params, options);
+    }
+
+    /**
      * tiktok-explore (GET /tiktok/explore/{id}).
      *
      * @param params operation parameters

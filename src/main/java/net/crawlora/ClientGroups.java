@@ -323,6 +323,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "mlb" operation group.
+     * @return a new {@link MlbGroup} bound to this client
+     */
+    public MlbGroup mlb() {
+        return new MlbGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "numbeo" operation group.
      * @return a new {@link NumbeoGroup} bound to this client
      */
@@ -467,6 +475,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "target" operation group.
+     * @return a new {@link TargetGroup} bound to this client
+     */
+    public TargetGroup target() {
+        return new TargetGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "teslaJobs" operation group.
      * @return a new {@link TeslaJobsGroup} bound to this client
      */
@@ -480,6 +496,14 @@ public abstract class ClientGroups {
      */
     public ThreadsGroup threads() {
         return new ThreadsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "ticketmaster" operation group.
+     * @return a new {@link TicketmasterGroup} bound to this client
+     */
+    public TicketmasterGroup ticketmaster() {
+        return new TicketmasterGroup((CrawloraClient) this);
     }
 
     /**

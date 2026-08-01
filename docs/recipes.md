@@ -128,6 +128,14 @@ CrawloraClient.builder()
 `Retry-After` (seconds or HTTP-date) is always honored, capped at
 `maxRetryDelay`.
 
+## Ticketmaster, MLB, And Target
+
+```java
+Object events = client.request("ticketmaster-search-events", Map.of("keyword", "jazz", "page", 1));
+Object schedule = client.request("mlb-schedule", Map.of("date", "2026-08-01"));
+Object filters = client.request("target-filter-options", Map.of("category_id", "5xt1a"));
+```
+
 ## Hooks
 
 ```java
