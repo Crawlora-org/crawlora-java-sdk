@@ -2,7 +2,7 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `882`
+Total operations: `890`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -258,6 +258,11 @@ Total operations: `882`
 | discogs | `discogs.master` | `discogs-master` | `GET /discogs/master/{id}` | `id` (path String required) | `ApiKeyAuth` | `DiscogsMasterResponse` |  |
 | discogs | `discogs.release` | `discogs-release` | `GET /discogs/release/{id}` | `id` (path String required) | `ApiKeyAuth` | `DiscogsReleaseResponse` |  |
 | discogs | `discogs.search` | `discogs-search` | `GET /discogs/search` | `q` (query String required)<br>`type` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `DiscogsSearchResponse` |  |
+| doorDash | `doorDash.doordashSearch` | `doordash-search` | `GET /doordash/search` | `query` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`tag` (query String)<br>`dashPassOnly` (query Boolean)<br>`asapOnly` (query Boolean)<br>`pickupOnly` (query Boolean)<br>`maxDistanceMiles` (query Double) | `ApiKeyAuth` | `DoorDashDoordashSearchResponse` |  |
+| doorDash | `doorDash.doordashSearchAutocomplete` | `doordash-search-autocomplete` | `GET /doordash/search/autocomplete` | `query` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `DoorDashDoordashSearchAutocompleteResponse` |  |
+| doorDash | `doorDash.doordashSearchFilters` | `doordash-search-filters` | `GET /doordash/search/filters` | `latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `DoorDashDoordashSearchFiltersResponse` |  |
+| doorDash | `doorDash.doordashStore` | `doordash-store` | `GET /doordash/store/{store_id}` | `store_id` (path String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `DoorDashDoordashStoreResponse` |  |
+| doorDash | `doorDash.doordashStoreMenu` | `doordash-store-menu` | `GET /doordash/store/{store_id}/menu` | `store_id` (path String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `DoorDashDoordashStoreMenuResponse` |  |
 | eBay | `eBay.ebayItem` | `ebay-item` | `GET /ebay/item/{item_id}` | `item_id` (path String required) | `ApiKeyAuth` | `EBayEbayItemResponse` |  |
 | eBay | `eBay.ebaySearch` | `ebay-search` | `POST /ebay/search` | `option` (body String required) | `ApiKeyAuth` | `EBayEbaySearchResponse` |  |
 | eBay | `eBay.ebaySeller` | `ebay-seller` | `GET /ebay/seller/{seller}` | `seller` (path String required) | `ApiKeyAuth` | `EBayEbaySellerResponse` |  |
@@ -361,6 +366,7 @@ Total operations: `882`
 | imdb | `imdb.nameAwards` | `imdb-name-awards` | `GET /imdb/name/awards` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameAwardsResponse` |  |
 | imdb | `imdb.nameCredits` | `imdb-name-credits` | `GET /imdb/name/credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameCreditsResponse` |  |
 | imdb | `imdb.search` | `imdb-search` | `GET /imdb/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbSearchResponse` |  |
+| imdb | `imdb.searchTitle` | `imdb-search-title` | `GET /imdb/search/title` | `title` (query String)<br>`title_type` (query String)<br>`genres` (query String)<br>`release_date_from` (query String)<br>`release_date_to` (query String)<br>`min_user_rating` (query Double)<br>`max_user_rating` (query Double)<br>`min_votes` (query Integer)<br>`max_votes` (query Integer)<br>`min_popularity` (query Integer)<br>`max_popularity` (query Integer)<br>`min_runtime` (query Integer)<br>`max_runtime` (query Integer)<br>`groups` (query String)<br>`keywords` (query String)<br>`companies` (query String)<br>`certificates` (query String)<br>`colors` (query String)<br>`countries` (query String)<br>`languages` (query String)<br>`sound_mixes` (query String)<br>`role` (query String)<br>`characters` (query String)<br>`plot` (query String)<br>`include_adult` (query Boolean)<br>`sort` (query String)<br>`sort_order` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbSearchTitleResponse` |  |
 | imdb | `imdb.title` | `imdb-title` | `GET /imdb/title` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleResponse` |  |
 | imdb | `imdb.titleAwards` | `imdb-title-awards` | `GET /imdb/title/awards` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleAwardsResponse` |  |
 | imdb | `imdb.titleCompanyCredits` | `imdb-title-company-credits` | `GET /imdb/title/company-credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleCompanyCreditsResponse` |  |
@@ -816,8 +822,10 @@ Total operations: `882`
 | trustpilot | `trustpilot.categories` | `trustpilot-categories` | `GET /trustpilot/categories` | none | `ApiKeyAuth` | `TrustpilotCategoriesResponse` |  |
 | trustpilot | `trustpilot.categorySearch` | `trustpilot-category-search` | `GET /trustpilot/categories/search` | `q` (query String required)<br>`country` (query String)<br>`locale` (query String)<br>`size` (query Integer) | `ApiKeyAuth` | `TrustpilotCategorySearchResponse` |  |
 | trustpilot | `trustpilot.category` | `trustpilot-category` | `GET /trustpilot/category/{slug}` | `slug` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TrustpilotCategoryResponse` |  |
+| uberEats | `uberEats.ubereatsFeed` | `ubereats-feed` | `GET /ubereats/feed` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `UberEatsUbereatsFeedResponse` |  |
 | uberEats | `uberEats.ubereatsSearch` | `ubereats-search` | `GET /ubereats/search` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`query` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `UberEatsUbereatsSearchResponse` |  |
 | uberEats | `uberEats.ubereatsStore` | `ubereats-store` | `GET /ubereats/store/{store_id}` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreResponse` |  |
+| uberEats | `uberEats.ubereatsStoreMenu` | `ubereats-store-menu` | `GET /ubereats/store/{store_id}/menu` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreMenuResponse` |  |
 | uberEats | `uberEats.ubereatsStoreReviews` | `ubereats-store-reviews` | `GET /ubereats/store/{store_id}/reviews` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreReviewsResponse` |  |
 | usage | `usage.meEndpoints` | `usage-me-endpoints` | `GET /usage/me/endpoints` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeEndpointsResponse` |  |
 | usage | `usage.meOverview` | `usage-me-overview` | `GET /usage/me/overview` | `range` (query String)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeOverviewResponse` |  |

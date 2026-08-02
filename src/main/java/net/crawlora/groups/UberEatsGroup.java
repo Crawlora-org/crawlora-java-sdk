@@ -19,6 +19,28 @@ public final class UberEatsGroup {
     }
 
     /**
+     * ubereats-feed (GET /ubereats/feed).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ubereatsFeed(Map<String, Object> params) {
+        return ubereatsFeed(params, null);
+    }
+
+    /**
+     * ubereats-feed (GET /ubereats/feed). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ubereatsFeed(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ubereats-feed", params);
+        return client.request("ubereats-feed", params, options);
+    }
+
+    /**
      * ubereats-search (GET /ubereats/search).
      *
      * @param params operation parameters
@@ -60,6 +82,28 @@ public final class UberEatsGroup {
     public Object ubereatsStore(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ubereats-store", params);
         return client.request("ubereats-store", params, options);
+    }
+
+    /**
+     * ubereats-store-menu (GET /ubereats/store/{store_id}/menu).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ubereatsStoreMenu(Map<String, Object> params) {
+        return ubereatsStoreMenu(params, null);
+    }
+
+    /**
+     * ubereats-store-menu (GET /ubereats/store/{store_id}/menu). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ubereatsStoreMenu(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ubereats-store-menu", params);
+        return client.request("ubereats-store-menu", params, options);
     }
 
     /**

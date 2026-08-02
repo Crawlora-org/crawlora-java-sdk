@@ -134,6 +134,37 @@ public final class ImdbGroup {
     }
 
     /**
+     * imdb-search-title (GET /imdb/search/title).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchTitle(Map<String, Object> params) {
+        return searchTitle(params, null);
+    }
+
+    /**
+     * imdb-search-title (GET /imdb/search/title). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchTitle(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-search-title", params);
+        return client.request("imdb-search-title", params, options);
+    }
+
+    /**
+     * imdb-search-title (GET /imdb/search/title). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchTitle() {
+        return searchTitle(Map.of(), null);
+    }
+
+    /**
      * imdb-title (GET /imdb/title).
      *
      * @param params operation parameters

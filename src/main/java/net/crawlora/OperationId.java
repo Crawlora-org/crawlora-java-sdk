@@ -256,6 +256,11 @@ public final class OperationId {
     public static final String DISCOGS_MASTER = "discogs-master";
     public static final String DISCOGS_RELEASE = "discogs-release";
     public static final String DISCOGS_SEARCH = "discogs-search";
+    public static final String DOOR_DASH_DOORDASH_SEARCH = "doordash-search";
+    public static final String DOOR_DASH_DOORDASH_SEARCH_AUTOCOMPLETE = "doordash-search-autocomplete";
+    public static final String DOOR_DASH_DOORDASH_SEARCH_FILTERS = "doordash-search-filters";
+    public static final String DOOR_DASH_DOORDASH_STORE = "doordash-store";
+    public static final String DOOR_DASH_DOORDASH_STORE_MENU = "doordash-store-menu";
     public static final String EBAY_EBAY_ITEM = "ebay-item";
     public static final String EBAY_EBAY_SEARCH = "ebay-search";
     public static final String EBAY_EBAY_SELLER = "ebay-seller";
@@ -359,6 +364,7 @@ public final class OperationId {
     public static final String IMDB_NAME_AWARDS = "imdb-name-awards";
     public static final String IMDB_NAME_CREDITS = "imdb-name-credits";
     public static final String IMDB_SEARCH = "imdb-search";
+    public static final String IMDB_SEARCH_TITLE = "imdb-search-title";
     public static final String IMDB_TITLE = "imdb-title";
     public static final String IMDB_TITLE_AWARDS = "imdb-title-awards";
     public static final String IMDB_TITLE_COMPANY_CREDITS = "imdb-title-company-credits";
@@ -814,8 +820,10 @@ public final class OperationId {
     public static final String TRUSTPILOT_CATEGORIES = "trustpilot-categories";
     public static final String TRUSTPILOT_CATEGORY = "trustpilot-category";
     public static final String TRUSTPILOT_CATEGORY_SEARCH = "trustpilot-category-search";
+    public static final String UBER_EATS_UBEREATS_FEED = "ubereats-feed";
     public static final String UBER_EATS_UBEREATS_SEARCH = "ubereats-search";
     public static final String UBER_EATS_UBEREATS_STORE = "ubereats-store";
+    public static final String UBER_EATS_UBEREATS_STORE_MENU = "ubereats-store-menu";
     public static final String UBER_EATS_UBEREATS_STORE_REVIEWS = "ubereats-store-reviews";
     public static final String USAGE_ME_ENDPOINTS = "usage-me-endpoints";
     public static final String USAGE_ME_OVERVIEW = "usage-me-overview";

@@ -163,6 +163,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "doorDash" operation group.
+     * @return a new {@link DoorDashGroup} bound to this client
+     */
+    public DoorDashGroup doorDash() {
+        return new DoorDashGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "eBay" operation group.
      * @return a new {@link EBayGroup} bound to this client
      */
