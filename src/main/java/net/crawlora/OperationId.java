@@ -256,11 +256,16 @@ public final class OperationId {
     public static final String DISCOGS_MASTER = "discogs-master";
     public static final String DISCOGS_RELEASE = "discogs-release";
     public static final String DISCOGS_SEARCH = "discogs-search";
+    public static final String DOOR_DASH_DOORDASH_FEED = "doordash-feed";
     public static final String DOOR_DASH_DOORDASH_SEARCH = "doordash-search";
     public static final String DOOR_DASH_DOORDASH_SEARCH_AUTOCOMPLETE = "doordash-search-autocomplete";
     public static final String DOOR_DASH_DOORDASH_SEARCH_FILTERS = "doordash-search-filters";
+    public static final String DOOR_DASH_DOORDASH_SEARCH_ITEMS = "doordash-search-items";
     public static final String DOOR_DASH_DOORDASH_STORE = "doordash-store";
+    public static final String DOOR_DASH_DOORDASH_STORE_FULFILLMENT = "doordash-store-fulfillment";
+    public static final String DOOR_DASH_DOORDASH_STORE_ITEM = "doordash-store-item";
     public static final String DOOR_DASH_DOORDASH_STORE_MENU = "doordash-store-menu";
+    public static final String DOOR_DASH_DOORDASH_STORE_REVIEWS = "doordash-store-reviews";
     public static final String EBAY_EBAY_ITEM = "ebay-item";
     public static final String EBAY_EBAY_SEARCH = "ebay-search";
     public static final String EBAY_EBAY_SELLER = "ebay-seller";

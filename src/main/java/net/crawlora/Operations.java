@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 890;
+    public static final int OPERATION_COUNT = 895;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -4409,6 +4409,22 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("doordash-feed", new Operation(
+            "doordash-feed",
+            "GET",
+            "/doordash/feed",
+            List.of(),
+            List.of(
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("doordash-search", new Operation(
             "doordash-search",
             "GET",
@@ -4458,6 +4474,21 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("doordash-search-items", new Operation(
+            "doordash-search-items",
+            "GET",
+            "/doordash/search/items",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("doordash-store", new Operation(
             "doordash-store",
             "GET",
@@ -4472,10 +4503,52 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("doordash-store-fulfillment", new Operation(
+            "doordash-store-fulfillment",
+            "GET",
+            "/doordash/store/{store_id}/fulfillment",
+            List.of("store_id"),
+            List.of(
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("doordash-store-item", new Operation(
+            "doordash-store-item",
+            "GET",
+            "/doordash/store/{store_id}/item/{item_id}",
+            List.of("store_id", "item_id"),
+            List.of(
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("doordash-store-menu", new Operation(
             "doordash-store-menu",
             "GET",
             "/doordash/store/{store_id}/menu",
+            List.of("store_id"),
+            List.of(
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("doordash-store-reviews", new Operation(
+            "doordash-store-reviews",
+            "GET",
+            "/doordash/store/{store_id}/reviews",
             List.of("store_id"),
             List.of(
             new QueryParam("latitude", true, "number", List.of()),
@@ -5072,6 +5145,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("goodreads-book-editions", new Operation(
             "goodreads-book-editions",
             "GET",
@@ -5135,9 +5211,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("goodreads-search", new Operation(
             "goodreads-search",
             "GET",
@@ -5890,6 +5963,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("imdb-name-awards", new Operation(
             "imdb-name-awards",
             "GET",
@@ -5986,9 +6062,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("imdb-title-awards", new Operation(
             "imdb-title-awards",
             "GET",
@@ -6819,6 +6892,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("justwatch-providers", new Operation(
             "justwatch-providers",
             "GET",
@@ -6893,9 +6969,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("justwatch-title", new Operation(
             "justwatch-title",
             "GET",
@@ -7683,6 +7756,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("metaculus-comments-feed", new Operation(
             "metaculus-comments-feed",
             "GET",
@@ -7748,9 +7824,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("metaculus-question-metadata", new Operation(
             "metaculus-question-metadata",
             "GET",
@@ -8536,6 +8609,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-leaderboard", new Operation(
             "polymarket-leaderboard",
             "GET",
@@ -8614,9 +8690,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("polymarket-market-detail-by-slug", new Operation(
             "polymarket-market-detail-by-slug",
             "GET",
@@ -9378,6 +9451,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("ready", new Operation(
             "ready",
             "GET",
@@ -9453,9 +9529,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("reddit-subreddit-about", new Operation(
             "reddit-subreddit-about",
             "GET",
@@ -10261,6 +10334,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("shopify-product", new Operation(
             "shopify-product",
             "GET",
@@ -10333,9 +10409,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("shopify-store", new Operation(
             "shopify-store",
             "GET",
@@ -11186,6 +11259,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("spotify-tracks-search", new Operation(
             "spotify-tracks-search",
             "GET",
@@ -11270,9 +11346,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("steam-charts-most-played", new Operation(
             "steam-charts-most-played",
             "GET",
@@ -12070,6 +12143,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("tiktok-search-user", new Operation(
             "tiktok-search-user",
             "GET",
@@ -12149,9 +12225,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("tiktok-top-ads-location-info", new Operation(
             "tiktok-top-ads-location-info",
             "GET",
@@ -12959,6 +13032,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations14(Map<String, Operation> m) {
         m.put("yahoo-finance-calendars", new Operation(
             "yahoo-finance-calendars",
             "GET",
@@ -13025,9 +13101,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations14(Map<String, Operation> m) {
         m.put("yahoo-finance-lookup", new Operation(
             "yahoo-finance-lookup",
             "GET",
@@ -14030,11 +14103,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("doordashFeed", "doordash-feed");
             group.put("doordashSearch", "doordash-search");
             group.put("doordashSearchAutocomplete", "doordash-search-autocomplete");
             group.put("doordashSearchFilters", "doordash-search-filters");
+            group.put("doordashSearchItems", "doordash-search-items");
             group.put("doordashStore", "doordash-store");
+            group.put("doordashStoreFulfillment", "doordash-store-fulfillment");
+            group.put("doordashStoreItem", "doordash-store-item");
             group.put("doordashStoreMenu", "doordash-store-menu");
+            group.put("doordashStoreReviews", "doordash-store-reviews");
             g.put("doorDash", Map.copyOf(group));
         }
         {
