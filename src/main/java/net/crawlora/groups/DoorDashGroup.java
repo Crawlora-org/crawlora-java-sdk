@@ -19,6 +19,28 @@ public final class DoorDashGroup {
     }
 
     /**
+     * doordash-explore (GET /doordash/explore).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashExplore(Map<String, Object> params) {
+        return doordashExplore(params, null);
+    }
+
+    /**
+     * doordash-explore (GET /doordash/explore). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashExplore(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("doordash-explore", params);
+        return client.request("doordash-explore", params, options);
+    }
+
+    /**
      * doordash-feed (GET /doordash/feed).
      *
      * @param params operation parameters
@@ -170,6 +192,28 @@ public final class DoorDashGroup {
     public Object doordashStoreFulfillment(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("doordash-store-fulfillment", params);
         return client.request("doordash-store-fulfillment", params, options);
+    }
+
+    /**
+     * doordash-store-info (GET /doordash/store/{store_id}/info).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoreInfo(Map<String, Object> params) {
+        return doordashStoreInfo(params, null);
+    }
+
+    /**
+     * doordash-store-info (GET /doordash/store/{store_id}/info). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoreInfo(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("doordash-store-info", params);
+        return client.request("doordash-store-info", params, options);
     }
 
     /**

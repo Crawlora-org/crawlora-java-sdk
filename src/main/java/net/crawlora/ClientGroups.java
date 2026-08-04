@@ -75,6 +75,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "autotrader" operation group.
+     * @return a new {@link AutotraderGroup} bound to this client
+     */
+    public AutotraderGroup autotrader() {
+        return new AutotraderGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "billing" operation group.
      * @return a new {@link BillingGroup} bound to this client
      */
@@ -88,6 +96,14 @@ public abstract class ClientGroups {
      */
     public BingGroup bing() {
         return new BingGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "booking" operation group.
+     * @return a new {@link BookingGroup} bound to this client
+     */
+    public BookingGroup booking() {
+        return new BookingGroup((CrawloraClient) this);
     }
 
     /**
@@ -187,6 +203,22 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "etsy" operation group.
+     * @return a new {@link EtsyGroup} bound to this client
+     */
+    public EtsyGroup etsy() {
+        return new EtsyGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "expedia" operation group.
+     * @return a new {@link ExpediaGroup} bound to this client
+     */
+    public ExpediaGroup expedia() {
+        return new ExpediaGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "facebook" operation group.
      * @return a new {@link FacebookGroup} bound to this client
      */
@@ -248,6 +280,22 @@ public abstract class ClientGroups {
      */
     public ImdbGroup imdb() {
         return new ImdbGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "importYeti" operation group.
+     * @return a new {@link ImportYetiGroup} bound to this client
+     */
+    public ImportYetiGroup importYeti() {
+        return new ImportYetiGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "indeed" operation group.
+     * @return a new {@link IndeedGroup} bound to this client
+     */
+    public IndeedGroup indeed() {
+        return new IndeedGroup((CrawloraClient) this);
     }
 
     /**
@@ -344,6 +392,14 @@ public abstract class ClientGroups {
      */
     public NumbeoGroup numbeo() {
         return new NumbeoGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "openTable" operation group.
+     * @return a new {@link OpenTableGroup} bound to this client
+     */
+    public OpenTableGroup openTable() {
+        return new OpenTableGroup((CrawloraClient) this);
     }
 
     /**
@@ -603,11 +659,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "yelp" operation group.
+     * @return a new {@link YelpGroup} bound to this client
+     */
+    public YelpGroup yelp() {
+        return new YelpGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "youtube" operation group.
      * @return a new {@link YoutubeGroup} bound to this client
      */
     public YoutubeGroup youtube() {
         return new YoutubeGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "zalando" operation group.
+     * @return a new {@link ZalandoGroup} bound to this client
+     */
+    public ZalandoGroup zalando() {
+        return new ZalandoGroup((CrawloraClient) this);
     }
 
     /**

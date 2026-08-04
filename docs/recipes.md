@@ -198,3 +198,11 @@ Transport fake = (method, url, headers, body, timeout) ->
 
 CrawloraClient client = CrawloraClient.builder().transport(fake).build();
 ```
+
+## Etsy
+
+```java
+Object results = client.etsy().search(Map.of("q", "handmade mug"));
+Object listing = client.etsy().listing(Map.of("id", "4474501681"));
+Object shop = client.etsy().shop(Map.of("id", "gaguatelier"));
+```
