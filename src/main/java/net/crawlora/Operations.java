@@ -2558,8 +2558,12 @@ public final class Operations {
             List.of(
             new QueryParam("chamber", false, "string", List.of("house", "senate")),
             new QueryParam("member", false, "string", List.of()),
+            new QueryParam("first_name", false, "string", List.of()),
+            new QueryParam("last_name", false, "string", List.of()),
             new QueryParam("ticker", false, "string", List.of()),
             new QueryParam("state", false, "string", List.of()),
+            new QueryParam("senator_state", false, "string", List.of()),
+            new QueryParam("candidate_state", false, "string", List.of()),
             new QueryParam("district", false, "string", List.of()),
             new QueryParam("filer_type", false, "string", List.of()),
             new QueryParam("election_year", false, "string", List.of()),
