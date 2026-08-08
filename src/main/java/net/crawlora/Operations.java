@@ -2567,12 +2567,13 @@ public final class Operations {
             new QueryParam("from", false, "string", List.of()),
             new QueryParam("to", false, "string", List.of()),
             new QueryParam("sort", false, "string", List.of("name_asc", "name_desc", "office_asc", "office_desc", "filing_year_asc", "filing_year_desc")),
+            new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("contact", new Operation(
             "contact",
