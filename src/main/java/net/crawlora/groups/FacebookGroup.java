@@ -19,50 +19,6 @@ public final class FacebookGroup {
     }
 
     /**
-     * facebook-group (GET /facebook/groups/{group}).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object group(Map<String, Object> params) {
-        return group(params, null);
-    }
-
-    /**
-     * facebook-group (GET /facebook/groups/{group}). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object group(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("facebook-group", params);
-        return client.request("facebook-group", params, options);
-    }
-
-    /**
-     * facebook-marketplace-item (GET /facebook/marketplace/item/{id}).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object marketplaceItem(Map<String, Object> params) {
-        return marketplaceItem(params, null);
-    }
-
-    /**
-     * facebook-marketplace-item (GET /facebook/marketplace/item/{id}). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object marketplaceItem(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("facebook-marketplace-item", params);
-        return client.request("facebook-marketplace-item", params, options);
-    }
-
-    /**
      * facebook-marketplace-search (GET /facebook/marketplace/search).
      *
      * @param params operation parameters
