@@ -2,7 +2,7 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `1041`
+Total operations: `1176`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -80,6 +80,7 @@ Total operations: `1041`
 | billing | `billing.mePeriodStatement` | `billing-me-period-statement` | `GET /billing/me/periods/{period_key}/statement` | `period_key` (path String required)<br>`include_events` (query Boolean)<br>`event_limit` (query Integer) | `ApiKeyAuth` | `BillingMePeriodStatementResponse` |  |
 | billing | `billing.mePeriodStatementDownload` | `billing-me-period-statement-download` | `GET /billing/me/periods/{period_key}/statement/download` | `period_key` (path String required) | `ApiKeyAuth` | `BillingMePeriodStatementDownloadResponse` |  |
 | billing | `billing.mePortal` | `billing-me-portal` | `POST /billing/me/portal` | `request` (body String required) | `ApiKeyAuth` | `BillingMePortalResponse` |  |
+| billing | `billing.meRejections` | `billing-me-rejections` | `GET /billing/me/rejections` | none | `ApiKeyAuth` | `BillingMeRejectionsResponse` |  |
 | bing | `bing.images` | `bing-images` | `GET /bing/images` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingImagesResponse` |  |
 | bing | `bing.news` | `bing-news` | `GET /bing/news` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingNewsResponse` |  |
 | bing | `bing.search` | `bing-search` | `GET /bing/search` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingSearchResponse` |  |
@@ -323,6 +324,10 @@ Total operations: `1041`
 | duckDuckGoSearch | `duckDuckGoSearch.duckduckgoShopping` | `duckduckgo-shopping` | `GET /duckduckgo/shopping` | `q` (query String required)<br>`region` (query String) | `ApiKeyAuth` | `DuckDuckGoSearchDuckduckgoShoppingResponse` |  |
 | duckDuckGoSearch | `duckDuckGoSearch.duckduckgoVideo` | `duckduckgo-video` | `GET /duckduckgo/video` | `q` (query String required)<br>`page` (query Integer)<br>`region` (query String) | `ApiKeyAuth` | `DuckDuckGoSearchDuckduckgoVideoResponse` |  |
 | eBay | `eBay.ebayItem` | `ebay-item` | `GET /ebay/item/{item_id}` | `item_id` (path String required) | `ApiKeyAuth` | `EBayEbayItemResponse` |  |
+| eBay | `eBay.ebayLiveStreams` | `ebay-live-streams` | `GET /ebay/live/streams` | `category` (query String)<br>`request_number` (query Integer)<br>`session_id` (query String) | `ApiKeyAuth` | `EBayEbayLiveStreamsResponse` |  |
+| eBay | `eBay.ebayLiveStreamsBatch` | `ebay-live-streams-batch` | `GET /ebay/live/streams/batch` | `ids` (query String required) | `ApiKeyAuth` | `EBayEbayLiveStreamsBatchResponse` |  |
+| eBay | `eBay.ebayLiveStream` | `ebay-live-stream` | `GET /ebay/live/streams/{id}` | `id` (path String required) | `ApiKeyAuth` | `EBayEbayLiveStreamResponse` |  |
+| eBay | `eBay.ebayLiveStreamItems` | `ebay-live-stream-items` | `GET /ebay/live/streams/{id}/items` | `id` (path String required) | `ApiKeyAuth` | `EBayEbayLiveStreamItemsResponse` |  |
 | eBay | `eBay.ebaySearch` | `ebay-search` | `POST /ebay/search` | `option` (body String required) | `ApiKeyAuth` | `EBayEbaySearchResponse` |  |
 | eBay | `eBay.ebaySeller` | `ebay-seller` | `GET /ebay/seller/{seller}` | `seller` (path String required) | `ApiKeyAuth` | `EBayEbaySellerResponse` |  |
 | eBay | `eBay.ebaySellerAbout` | `ebay-seller-about` | `GET /ebay/seller/{seller}/about` | `seller` (path String required) | `ApiKeyAuth` | `EBayEbaySellerAboutResponse` |  |
@@ -439,6 +444,11 @@ Total operations: `1041`
 | googlePlay | `googlePlay.search` | `googleplay-search` | `GET /googleplay/search` | `term` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`full_detail` (query Boolean)<br>`price` (query String) | `ApiKeyAuth` | `GooglePlaySearchResponse` |  |
 | googlePlay | `googlePlay.similar` | `googleplay-similar` | `GET /googleplay/similar` | `app_id` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`full_detail` (query Boolean) | `ApiKeyAuth` | `GooglePlaySimilarResponse` |  |
 | googlePlay | `googlePlay.suggest` | `googleplay-suggest` | `GET /googleplay/suggest/{term}` | `term` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `GooglePlaySuggestResponse` |  |
+| hM | `hM.hmCategories` | `hm-categories` | `GET /hm/categories` | `department` (query String) | `ApiKeyAuth` | `HMHmCategoriesResponse` |  |
+| hM | `hM.hmListing` | `hm-listing` | `GET /hm/listing` | `category_id` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String)<br>`is_new` (query Boolean) | `ApiKeyAuth` | `HMHmListingResponse` |  |
+| hM | `hM.hmProduct` | `hm-product` | `GET /hm/product/{product_id}` | `product_id` (path String required) | `ApiKeyAuth` | `HMHmProductResponse` |  |
+| hM | `hM.hmSearch` | `hm-search` | `GET /hm/search` | `query` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `HMHmSearchResponse` |  |
+| hM | `hM.hmStores` | `hm-stores` | `GET /hm/stores` | `search` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_meters` (query Integer) | `ApiKeyAuth` | `HMHmStoresResponse` |  |
 | imdb | `imdb.name` | `imdb-name` | `GET /imdb/name` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameResponse` |  |
 | imdb | `imdb.nameAwards` | `imdb-name-awards` | `GET /imdb/name/awards` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameAwardsResponse` |  |
 | imdb | `imdb.nameCredits` | `imdb-name-credits` | `GET /imdb/name/credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameCreditsResponse` |  |
@@ -543,6 +553,10 @@ Total operations: `1041`
 | kalshi | `kalshi.series` | `kalshi-series` | `GET /kalshi/series` | `limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `KalshiSeriesResponse` |  |
 | kalshi | `kalshi.seriesDetail` | `kalshi-series-detail` | `GET /kalshi/series/{series_ticker}` | `series_ticker` (path String required) | `ApiKeyAuth` | `KalshiSeriesDetailResponse` |  |
 | kalshi | `kalshi.trades` | `kalshi-trades` | `GET /kalshi/trades` | `limit` (query Integer)<br>`cursor` (query String)<br>`ticker` (query String)<br>`min_ts` (query Integer)<br>`max_ts` (query Integer) | `ApiKeyAuth` | `KalshiTradesResponse` |  |
+| kohlS | `kohlS.kohlsCategory` | `kohls-category` | `GET /kohls/category` | `category` (query String required) | `ApiKeyAuth` | `KohlSKohlsCategoryResponse` |  |
+| kohlS | `kohlS.kohlsProductReviews` | `kohls-product-reviews` | `GET /kohls/product/reviews` | `web_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `KohlSKohlsProductReviewsResponse` |  |
+| kohlS | `kohlS.kohlsStores` | `kohls-stores` | `GET /kohls/stores` | `search` (query String required) | `ApiKeyAuth` | `KohlSKohlsStoresResponse` |  |
+| kohlS | `kohlS.kohlsSuggest` | `kohls-suggest` | `GET /kohls/suggest` | `query` (query String required) | `ApiKeyAuth` | `KohlSKohlsSuggestResponse` |  |
 | letterboxd | `letterboxd.film` | `letterboxd-film` | `GET /letterboxd/film/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `LetterboxdFilmResponse` |  |
 | letterboxd | `letterboxd.filmRatingHistogram` | `letterboxd-film-rating-histogram` | `GET /letterboxd/film/{slug}/rating-histogram` | `slug` (path String required) | `ApiKeyAuth` | `LetterboxdFilmRatingHistogramResponse` |  |
 | letterboxd | `letterboxd.filmReviews` | `letterboxd-film-reviews` | `GET /letterboxd/film/{slug}/reviews` | `slug` (path String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `LetterboxdFilmReviewsResponse` |  |
@@ -554,6 +568,14 @@ Total operations: `1041`
 | linkedIn | `linkedIn.linkedinCompany` | `linkedin-company` | `GET /linkedin/company/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinCompanyResponse` |  |
 | linkedIn | `linkedIn.linkedinProduct` | `linkedin-product` | `GET /linkedin/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinProductResponse` |  |
 | linkedIn | `linkedIn.linkedinShowcase` | `linkedin-showcase` | `GET /linkedin/showcase/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinShowcaseResponse` |  |
+| lululemon | `lululemon.categories` | `lululemon-categories` | `GET /lululemon/categories` | `section` (query String) | `ApiKeyAuth` | `LululemonCategoriesResponse` |  |
+| lululemon | `lululemon.category` | `lululemon-category` | `GET /lululemon/category` | `category` (query String required)<br>`cdp_hash` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `LululemonCategoryResponse` |  |
+| lululemon | `lululemon.outfit` | `lululemon-outfit` | `GET /lululemon/outfit` | `unified_id` (query String required)<br>`color_code` (query String required) | `ApiKeyAuth` | `LululemonOutfitResponse` |  |
+| lululemon | `lululemon.product` | `lululemon-product` | `GET /lululemon/product/{product_id}` | `product_id` (path String required) | `ApiKeyAuth` | `LululemonProductResponse` |  |
+| lululemon | `lululemon.stores` | `lululemon-stores` | `GET /lululemon/stores` | `country` (query String)<br>`state` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_miles` (query Double) | `ApiKeyAuth` | `LululemonStoresResponse` |  |
+| macyS | `macyS.macysProductReviews` | `macys-product-reviews` | `GET /macys/product/reviews` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `MacySMacysProductReviewsResponse` |  |
+| macyS | `macyS.macysProduct` | `macys-product` | `GET /macys/product/{productId}` | `productId` (path String required) | `ApiKeyAuth` | `MacySMacysProductResponse` |  |
+| macyS | `macyS.macysSuggest` | `macys-suggest` | `GET /macys/suggest` | `query` (query String required) | `ApiKeyAuth` | `MacySMacysSuggestResponse` |  |
 | manga | `manga.rankings` | `manga-rankings` | `GET /manga/rankings` | `sort` (query String)<br>`format` (query String)<br>`genre` (query String)<br>`status` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `MangaRankingsResponse` |  |
 | manga | `manga.search` | `manga-search` | `GET /manga/search` | `query` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `MangaSearchResponse` |  |
 | manga | `manga.title` | `manga-title` | `GET /manga/title/{id}` | `id` (path String required)<br>`mal` (query Boolean) | `ApiKeyAuth` | `MangaTitleResponse` |  |
@@ -598,6 +620,12 @@ Total operations: `1041`
 | mlb | `mlb.teamStats` | `mlb-team-stats` | `GET /mlb/team-stats` | `team_id` (query String required)<br>`season` (query Integer)<br>`group` (query String required) | `ApiKeyAuth` | `MlbTeamStatsResponse` |  |
 | mlb | `mlb.teams` | `mlb-teams` | `GET /mlb/teams` | `season` (query Integer) | `ApiKeyAuth` | `MlbTeamsResponse` |  |
 | mlb | `mlb.transactions` | `mlb-transactions` | `GET /mlb/transactions` | `start_date` (query String required)<br>`end_date` (query String required)<br>`team_id` (query String)<br>`player_id` (query String) | `ApiKeyAuth` | `MlbTransactionsResponse` |  |
+| nike | `nike.categories` | `nike-categories` | `GET /nike/categories` | none | `ApiKeyAuth` | `NikeCategoriesResponse` |  |
+| nike | `nike.product` | `nike-product` | `GET /nike/product` | `slug` (query String required)<br>`style_color` (query String required) | `ApiKeyAuth` | `NikeProductResponse` |  |
+| nike | `nike.productReviews` | `nike-product-reviews` | `GET /nike/product/reviews` | `slug` (query String required)<br>`style_color` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `NikeProductReviewsResponse` |  |
+| nike | `nike.search` | `nike-search` | `GET /nike/search` | `keyword` (query String)<br>`category` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `NikeSearchResponse` |  |
+| nike | `nike.stores` | `nike-stores` | `GET /nike/stores` | `lat` (query Double required)<br>`lng` (query Double required)<br>`radius_miles` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `NikeStoresResponse` |  |
+| nike | `nike.suggest` | `nike-suggest` | `GET /nike/suggest` | `query` (query String required) | `ApiKeyAuth` | `NikeSuggestResponse` |  |
 | numbeo | `numbeo.costOfLivingCity` | `numbeo-cost-of-living-city` | `GET /numbeo/cost-of-living/city/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `NumbeoCostOfLivingCityResponse` |  |
 | numbeo | `numbeo.costOfLivingCountry` | `numbeo-cost-of-living-country` | `GET /numbeo/cost-of-living/country` | `country` (query String required) | `ApiKeyAuth` | `NumbeoCostOfLivingCountryResponse` |  |
 | numbeo | `numbeo.costOfLivingRankings` | `numbeo-cost-of-living-rankings` | `GET /numbeo/cost-of-living/rankings` | `scope` (query String)<br>`period` (query String) | `ApiKeyAuth` | `NumbeoCostOfLivingRankingsResponse` |  |
@@ -606,6 +634,13 @@ Total operations: `1041`
 | numbeo | `numbeo.indicesCountry` | `numbeo-indices-country` | `GET /numbeo/indices/country` | `country` (query String required)<br>`index` (query String required) | `ApiKeyAuth` | `NumbeoIndicesCountryResponse` |  |
 | numbeo | `numbeo.indicesRankings` | `numbeo-indices-rankings` | `GET /numbeo/indices/rankings` | `index` (query String required)<br>`scope` (query String)<br>`period` (query String) | `ApiKeyAuth` | `NumbeoIndicesRankingsResponse` |  |
 | numbeo | `numbeo.indicesRankingsByCountry` | `numbeo-indices-rankings-by-country` | `GET /numbeo/indices/rankings-by-country` | `index` (query String required) | `ApiKeyAuth` | `NumbeoIndicesRankingsByCountryResponse` |  |
+| oldNavy | `oldNavy.oldnavyCategories` | `oldnavy-categories` | `GET /oldnavy/categories` | `brand` (query String)<br>`cid` (query String) | `ApiKeyAuth` | `OldNavyOldnavyCategoriesResponse` |  |
+| oldNavy | `oldNavy.oldnavyCategory` | `oldnavy-category` | `GET /oldnavy/category` | `cid` (query String required)<br>`brand` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `OldNavyOldnavyCategoryResponse` |  |
+| oldNavy | `oldNavy.oldnavyProduct` | `oldnavy-product` | `GET /oldnavy/product` | `pid` (query String required)<br>`brand` (query String) | `ApiKeyAuth` | `OldNavyOldnavyProductResponse` |  |
+| oldNavy | `oldNavy.oldnavyProductAvailability` | `oldnavy-product-availability` | `GET /oldnavy/product/availability` | `pid` (query String required)<br>`brand` (query String)<br>`store_id` (query String)<br>`zip` (query String)<br>`lat` (query Double)<br>`lng` (query Double) | `ApiKeyAuth` | `OldNavyOldnavyProductAvailabilityResponse` |  |
+| oldNavy | `oldNavy.oldnavyProductReviews` | `oldnavy-product-reviews` | `GET /oldnavy/product/reviews` | `pid` (query String required)<br>`brand` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `OldNavyOldnavyProductReviewsResponse` |  |
+| oldNavy | `oldNavy.oldnavySearch` | `oldnavy-search` | `GET /oldnavy/search` | `keyword` (query String required)<br>`brand` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `OldNavyOldnavySearchResponse` |  |
+| oldNavy | `oldNavy.oldnavyStores` | `oldnavy-stores` | `GET /oldnavy/stores` | `search` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`brand` (query String) | `ApiKeyAuth` | `OldNavyOldnavyStoresResponse` |  |
 | openTable | `openTable.opentableRestaurant` | `opentable-restaurant` | `GET /opentable/restaurant` | `restaurant_id` (query String required)<br>`date_time` (query String)<br>`party_size` (query Integer) | `ApiKeyAuth` | `OpenTableOpentableRestaurantResponse` |  |
 | openTable | `openTable.opentableRestaurantMenus` | `opentable-restaurant-menus` | `GET /opentable/restaurant/menus` | `restaurant_id` (query String required) | `ApiKeyAuth` | `OpenTableOpentableRestaurantMenusResponse` |  |
 | openTable | `openTable.opentableRestaurantReviews` | `opentable-restaurant-reviews` | `GET /opentable/restaurant/reviews` | `restaurant_id` (query String required)<br>`page` (query Integer)<br>`size` (query Integer) | `ApiKeyAuth` | `OpenTableOpentableRestaurantReviewsResponse` |  |
@@ -632,7 +667,7 @@ Total operations: `1041`
 | playStation | `playStation.playstationLatest` | `playstation-latest` | `GET /playstation/latest` | `cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationLatestResponse` |  |
 | playStation | `playStation.playstationPage` | `playstation-page` | `GET /playstation/page` | `alias` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationPageResponse` |  |
 | playStation | `playStation.playstationProduct` | `playstation-product` | `GET /playstation/product` | `id` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationProductResponse` |  |
-| playStation | `playStation.playstationSearch` | `playstation-search` | `GET /playstation/search` | `term` (query String required)<br>`page` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationSearchResponse` |  |
+| playStation | `playStation.playstationSearch` | `playstation-search` | `GET /playstation/search` | `term` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationSearchResponse` |  |
 | polymarket | `polymarket.activityTrades` | `polymarket-activity-trades` | `GET /polymarket/activity/trades` | `limit` (query Integer)<br>`offset` (query Integer)<br>`taker_only` (query String)<br>`filter_type` (query String)<br>`filter_amount` (query String)<br>`event_id` (query String)<br>`market` (query String) | `ApiKeyAuth` | `PolymarketActivityTradesResponse` |  |
 | polymarket | `polymarket.clobMarket` | `polymarket-clob-market` | `GET /polymarket/clob/market/{condition_id}` | `condition_id` (path String required) | `ApiKeyAuth` | `PolymarketClobMarketResponse` |  |
 | polymarket | `polymarket.dashboardMacro` | `polymarket-dashboard-macro` | `GET /polymarket/dashboards/macro` | `limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `PolymarketDashboardMacroResponse` |  |
@@ -745,6 +780,11 @@ Total operations: `1041`
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSearch` | `rottentomatoes-search` | `GET /rottentomatoes/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSearchResponse` |  |
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSeason` | `rottentomatoes-season` | `GET /rottentomatoes/season` | `path` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSeasonResponse` |  |
 | rottenTomatoes | `rottenTomatoes.rottentomatoesSeries` | `rottentomatoes-series` | `GET /rottentomatoes/series` | `path` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RottenTomatoesRottentomatoesSeriesResponse` |  |
+| samSClub | `samSClub.samsclubCategory` | `samsclub-category` | `GET /samsclub/category` | `id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SamSclubSamsclubCategoryResponse` |  |
+| samSClub | `samSClub.samsclubContent` | `samsclub-content` | `GET /samsclub/content/{id}` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubContentResponse` |  |
+| samSClub | `samSClub.samsclubDepartments` | `samsclub-departments` | `GET /samsclub/departments` | none | `ApiKeyAuth` | `SamSclubSamsclubDepartmentsResponse` |  |
+| samSClub | `samSClub.samsclubProduct` | `samsclub-product` | `GET /samsclub/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubProductResponse` |  |
+| samSClub | `samSClub.samsclubProductRelated` | `samsclub-product-related` | `GET /samsclub/product/{id}/related` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubProductRelatedResponse` |  |
 | secEdgar | `secEdgar.secCompanyIntelligence` | `sec-company-intelligence` | `GET /sec/company/intelligence` | `cik` (query String)<br>`ticker` (query String)<br>`enrich` (query String)<br>`ats` (query String)<br>`careers_slug` (query String)<br>`tenant` (query String)<br>`datacenter` (query String)<br>`site` (query String) | `ApiKeyAuth` | `SecEdgarSecCompanyIntelligenceResponse` |  |
 | secEdgar | `secEdgar.secCompanySearch` | `sec-company-search` | `GET /sec/company/search` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySearchResponse` |  |
 | secEdgar | `secEdgar.secCompanySubmissions` | `sec-company-submissions` | `GET /sec/company/submissions` | `cik` (query String)<br>`ticker` (query String)<br>`form` (query String)<br>`from` (query String)<br>`to` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySubmissionsResponse` |  |
@@ -799,6 +839,11 @@ Total operations: `1041`
 | sofaScore | `sofaScore.sofascoreTeamEvents` | `sofascore-team-events` | `GET /sofascore/team-events` | `id` (query String required)<br>`direction` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SofaScoreSofascoreTeamEventsResponse` |  |
 | sofaScore | `sofaScore.sofascoreTeamPlayers` | `sofascore-team-players` | `GET /sofascore/team-players` | `id` (query String required) | `ApiKeyAuth` | `SofaScoreSofascoreTeamPlayersResponse` |  |
 | sofaScore | `sofaScore.sofascoreTournamentSeasons` | `sofascore-tournament-seasons` | `GET /sofascore/tournament-seasons` | `id` (query String required) | `ApiKeyAuth` | `SofaScoreSofascoreTournamentSeasonsResponse` |  |
+| soundCloud | `soundCloud.soundcloudPlaylist` | `soundcloud-playlist` | `GET /soundcloud/playlist` | `url` (query String required) | `ApiKeyAuth` | `SoundCloudSoundcloudPlaylistResponse` |  |
+| soundCloud | `soundCloud.soundcloudProfile` | `soundcloud-profile` | `GET /soundcloud/profile` | `url` (query String required) | `ApiKeyAuth` | `SoundCloudSoundcloudProfileResponse` |  |
+| soundCloud | `soundCloud.soundcloudSearch` | `soundcloud-search` | `GET /soundcloud/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SoundCloudSoundcloudSearchResponse` |  |
+| soundCloud | `soundCloud.soundcloudTrack` | `soundcloud-track` | `GET /soundcloud/track` | `url` (query String required) | `ApiKeyAuth` | `SoundCloudSoundcloudTrackResponse` |  |
+| soundCloud | `soundCloud.soundcloudUserTracks` | `soundcloud-user-tracks` | `GET /soundcloud/user-tracks` | `url` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SoundCloudSoundcloudUserTracksResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.categories` | `spotify-podcasts-categories` | `GET /spotify-podcasts/categories` | `uri` (query String)<br>`page_offset` (query Integer)<br>`page_limit` (query Integer)<br>`section_offset` (query Integer)<br>`section_limit` (query Integer)<br>`include_episode_content_ratings_v2` (query Boolean) | `ApiKeyAuth` | `SpotifyPodcastsCategoriesResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.charts` | `spotify-podcasts-charts` | `GET /spotify-podcasts/charts` | `chart` (query String)<br>`region` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SpotifyPodcastsChartsResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.episode` | `spotify-podcasts-episode` | `GET /spotify-podcasts/episode` | `uri` (query String)<br>`id` (query String) | `ApiKeyAuth` | `SpotifyPodcastsEpisodeResponse` |  |
@@ -946,11 +991,28 @@ Total operations: `1041`
 | trustpilot | `trustpilot.categories` | `trustpilot-categories` | `GET /trustpilot/categories` | none | `ApiKeyAuth` | `TrustpilotCategoriesResponse` |  |
 | trustpilot | `trustpilot.categorySearch` | `trustpilot-category-search` | `GET /trustpilot/categories/search` | `q` (query String required)<br>`country` (query String)<br>`locale` (query String)<br>`size` (query Integer) | `ApiKeyAuth` | `TrustpilotCategorySearchResponse` |  |
 | trustpilot | `trustpilot.category` | `trustpilot-category` | `GET /trustpilot/category/{slug}` | `slug` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TrustpilotCategoryResponse` |  |
+| twitch | `twitch.channel` | `twitch-channel` | `GET /twitch/channel` | `login` (query String required) | `ApiKeyAuth` | `TwitchChannelResponse` |  |
+| twitch | `twitch.clips` | `twitch-clips` | `GET /twitch/clips` | `login` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `TwitchClipsResponse` |  |
+| twitch | `twitch.schedule` | `twitch-schedule` | `GET /twitch/schedule` | `channel` (query String required)<br>`weeks` (query Integer) | `ApiKeyAuth` | `TwitchScheduleResponse` |  |
+| twitch | `twitch.search` | `twitch-search` | `GET /twitch/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `TwitchSearchResponse` |  |
+| twitch | `twitch.streams` | `twitch-streams` | `GET /twitch/streams` | `game` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `TwitchStreamsResponse` |  |
+| twitch | `twitch.team` | `twitch-team` | `GET /twitch/team` | `team` (query String required) | `ApiKeyAuth` | `TwitchTeamResponse` |  |
+| twitch | `twitch.topGames` | `twitch-top-games` | `GET /twitch/top-games` | `limit` (query Integer) | `ApiKeyAuth` | `TwitchTopGamesResponse` |  |
+| twitch | `twitch.videos` | `twitch-videos` | `GET /twitch/videos` | `login` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `TwitchVideosResponse` |  |
+| twitch | `twitch.vodComments` | `twitch-vod-comments` | `GET /twitch/vod-comments` | `video` (query String required)<br>`offset` (query Integer) | `ApiKeyAuth` | `TwitchVodCommentsResponse` |  |
 | uberEats | `uberEats.ubereatsFeed` | `ubereats-feed` | `GET /ubereats/feed` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `UberEatsUbereatsFeedResponse` |  |
 | uberEats | `uberEats.ubereatsSearch` | `ubereats-search` | `GET /ubereats/search` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`query` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `UberEatsUbereatsSearchResponse` |  |
 | uberEats | `uberEats.ubereatsStore` | `ubereats-store` | `GET /ubereats/store/{store_id}` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreResponse` |  |
 | uberEats | `uberEats.ubereatsStoreMenu` | `ubereats-store-menu` | `GET /ubereats/store/{store_id}/menu` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreMenuResponse` |  |
 | uberEats | `uberEats.ubereatsStoreReviews` | `ubereats-store-reviews` | `GET /ubereats/store/{store_id}/reviews` | `store_id` (path String required) | `ApiKeyAuth` | `UberEatsUbereatsStoreReviewsResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaCategories` | `ulta-categories` | `GET /ulta/categories` | `department` (query String) | `ApiKeyAuth` | `UltaBeautyUltaCategoriesResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaCategory` | `ulta-category` | `GET /ulta/category` | `category` (query String required)<br>`filter` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `UltaBeautyUltaCategoryResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaProductQuestions` | `ulta-product-questions` | `GET /ulta/product/questions` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `UltaBeautyUltaProductQuestionsResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaProductReviews` | `ulta-product-reviews` | `GET /ulta/product/reviews` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `UltaBeautyUltaProductReviewsResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaProduct` | `ulta-product` | `GET /ulta/product/{productId}` | `productId` (path String required)<br>`sku` (query String) | `ApiKeyAuth` | `UltaBeautyUltaProductResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaSearch` | `ulta-search` | `GET /ulta/search` | `query` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `UltaBeautyUltaSearchResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaStores` | `ulta-stores` | `GET /ulta/stores` | `search` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_meters` (query Integer) | `ApiKeyAuth` | `UltaBeautyUltaStoresResponse` |  |
+| ultaBeauty | `ultaBeauty.ultaSuggest` | `ulta-suggest` | `GET /ulta/suggest` | `query` (query String required) | `ApiKeyAuth` | `UltaBeautyUltaSuggestResponse` |  |
 | upwork | `upwork.freelancer` | `upwork-freelancer` | `GET /upwork/freelancer/{id}` | `id` (path String required) | `ApiKeyAuth` | `UpworkFreelancerResponse` |  |
 | upwork | `upwork.job` | `upwork-job` | `GET /upwork/job/{id}` | `id` (path String required) | `ApiKeyAuth` | `UpworkJobResponse` |  |
 | upwork | `upwork.search` | `upwork-search` | `GET /upwork/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `UpworkSearchResponse` |  |
@@ -962,6 +1024,9 @@ Total operations: `1041`
 | user | `user.meApiKeys` | `user-me-api-keys` | `GET /user/me/api-keys` | none | `JWTAuth` | `UserMeApiKeysResponse` |  |
 | user | `user.meApiKeysRotate` | `user-me-api-keys-rotate` | `POST /user/me/api-keys/rotate` | none | `JWTAuth` | `UserMeApiKeysRotateResponse` |  |
 | user | `user.meApiKeysReveal` | `user-me-api-keys-reveal` | `POST /user/me/api-keys/{id}/reveal` | `id` (path String required) | `JWTAuth` | `UserMeApiKeysRevealResponse` |  |
+| accountDeletion | `accountDeletion.cancel` | `account-deletion-cancel` | `DELETE /user/me/deletion-request` | none | `JWTAuth` | `AccountDeletionCancelResponse` |  |
+| accountDeletion | `accountDeletion.myRequest` | `account-deletion-my-request` | `GET /user/me/deletion-request` | none | `JWTAuth` | `AccountDeletionMyRequestResponse` |  |
+| accountDeletion | `accountDeletion.request` | `account-deletion-request` | `POST /user/me/deletion-request` | `request` (body String) | `JWTAuth` | `AccountDeletionRequestResponse` |  |
 | vinted | `vinted.brand` | `vinted-brand` | `GET /vinted/brand` | `id` (query String required)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`order` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VintedBrandResponse` |  |
 | vinted | `vinted.brands` | `vinted-brands` | `GET /vinted/brands` | none | `ApiKeyAuth` | `VintedBrandsResponse` |  |
 | vinted | `vinted.catalog` | `vinted-catalog` | `GET /vinted/catalog` | `search_text` (query String required)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`order` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VintedCatalogResponse` |  |
@@ -972,12 +1037,27 @@ Total operations: `1041`
 | walmart | `walmart.product` | `walmart-product` | `GET /walmart/product/{item_id}` | `item_id` (path String required) | `ApiKeyAuth` | `WalmartProductResponse` |  |
 | walmart | `walmart.productReviews` | `walmart-product-reviews` | `GET /walmart/product/{item_id}/reviews` | `item_id` (path String required) | `ApiKeyAuth` | `WalmartProductReviewsResponse` |  |
 | walmart | `walmart.search` | `walmart-search` | `GET /walmart/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `WalmartSearchResponse` |  |
+| wayfair | `wayfair.categories` | `wayfair-categories` | `GET /wayfair/categories` | `q` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `WayfairCategoriesResponse` |  |
+| wayfair | `wayfair.category` | `wayfair-category` | `GET /wayfair/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `WayfairCategoryResponse` |  |
+| wayfair | `wayfair.product` | `wayfair-product` | `GET /wayfair/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `WayfairProductResponse` |  |
 | whatnot | `whatnot.browse` | `whatnot-browse` | `GET /whatnot/browse` | `category` (query String required) | `ApiKeyAuth` | `WhatnotBrowseResponse` |  |
 | whatnot | `whatnot.categories` | `whatnot-categories` | `GET /whatnot/categories` | none | `ApiKeyAuth` | `WhatnotCategoriesResponse` |  |
 | whatnot | `whatnot.live` | `whatnot-live` | `GET /whatnot/live/{id}` | `id` (path String required) | `ApiKeyAuth` | `WhatnotLiveResponse` |  |
+| wish | `wish.categories` | `wish-categories` | `GET /wish/categories` | none | `ApiKeyAuth` | `WishCategoriesResponse` |  |
+| wish | `wish.product` | `wish-product` | `GET /wish/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `WishProductResponse` |  |
+| wish | `wish.productRelated` | `wish-product-related` | `GET /wish/product/{id}/related` | `id` (path String required)<br>`count` (query Integer) | `ApiKeyAuth` | `WishProductRelatedResponse` |  |
+| wish | `wish.productReviews` | `wish-product-reviews` | `GET /wish/product/{id}/reviews` | `id` (path String required)<br>`count` (query Integer) | `ApiKeyAuth` | `WishProductReviewsResponse` |  |
+| wish | `wish.search` | `wish-search` | `GET /wish/search` | `query` (query String required)<br>`count` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `WishSearchResponse` |  |
+| wish | `wish.suggest` | `wish-suggest` | `GET /wish/suggest` | `query` (query String required) | `ApiKeyAuth` | `WishSuggestResponse` |  |
 | x | `x.post` | `x-post` | `GET /x/post/{id}` | `id` (path String required)<br>`username` (query String) | `ApiKeyAuth` | `XPostResponse` |  |
 | x | `x.profile` | `x-profile` | `GET /x/profile/{username}` | `username` (path String required) | `ApiKeyAuth` | `XProfileResponse` |  |
 | x | `x.profilePosts` | `x-profile-posts` | `GET /x/profile/{username}/posts` | `username` (path String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `XProfilePostsResponse` |  |
+| yahooAutos | `yahooAutos.article` | `yahoo-autos-article` | `GET /yahoo-autos/article` | `url` (query String required) | `ApiKeyAuth` | `YahooAutosArticleResponse` |  |
+| yahooAutos | `yahooAutos.category` | `yahoo-autos-category` | `GET /yahoo-autos/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooAutosCategoryResponse` |  |
+| yahooAutos | `yahooAutos.home` | `yahoo-autos-home` | `GET /yahoo-autos/home` | none | `ApiKeyAuth` | `YahooAutosHomeResponse` |  |
+| yahooEntertainment | `yahooEntertainment.article` | `yahoo-entertainment-article` | `GET /yahoo-entertainment/article` | `url` (query String required) | `ApiKeyAuth` | `YahooEntertainmentArticleResponse` |  |
+| yahooEntertainment | `yahooEntertainment.category` | `yahoo-entertainment-category` | `GET /yahoo-entertainment/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooEntertainmentCategoryResponse` |  |
+| yahooEntertainment | `yahooEntertainment.home` | `yahoo-entertainment-home` | `GET /yahoo-entertainment/home` | none | `ApiKeyAuth` | `YahooEntertainmentHomeResponse` |  |
 | yahooFinance | `yahooFinance.calendars` | `yahoo-finance-calendars` | `GET /yahoo-finance/calendars` | none | `ApiKeyAuth` | `YahooFinanceCalendarsResponse` |  |
 | yahooFinance | `yahooFinance.calendar` | `yahoo-finance-calendar` | `GET /yahoo-finance/calendars/{type}` | `type` (path String required)<br>`start` (query String)<br>`end` (query String)<br>`limit` (query Integer)<br>`offset` (query Integer)<br>`market_cap` (query Double)<br>`filter_most_active` (query Boolean) | `ApiKeyAuth` | `YahooFinanceCalendarResponse` |  |
 | yahooFinance | `yahooFinance.download` | `yahoo-finance-download` | `POST /yahoo-finance/download` | `request` (body String required) | `ApiKeyAuth` | `YahooFinanceDownloadResponse` |  |
@@ -1017,7 +1097,51 @@ Total operations: `1041`
 | yahooFinance | `yahooFinance.tickerSustainability` | `yahoo-finance-ticker-sustainability` | `GET /yahoo-finance/ticker/{symbol}/sustainability` | `symbol` (path String required) | `ApiKeyAuth` | `YahooFinanceTickerSustainabilityResponse` |  |
 | yahooFinance | `yahooFinance.tickerValuation` | `yahoo-finance-ticker-valuation` | `GET /yahoo-finance/ticker/{symbol}/valuation` | `symbol` (path String required) | `ApiKeyAuth` | `YahooFinanceTickerValuationResponse` |  |
 | yahooFinance | `yahooFinance.trending` | `yahoo-finance-trending` | `GET /yahoo-finance/trending/{region}` | `region` (path String required)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooFinanceTrendingResponse` |  |
-| yahooSearch | `yahooSearch.call` | `yahoo-search` | `GET /yahoo-search/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooSearchCallResponse` |  |
+| yahooHealth | `yahooHealth.article` | `yahoo-health-article` | `GET /yahoo-health/article` | `url` (query String required) | `ApiKeyAuth` | `YahooHealthArticleResponse` |  |
+| yahooHealth | `yahooHealth.category` | `yahoo-health-category` | `GET /yahoo-health/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooHealthCategoryResponse` |  |
+| yahooHealth | `yahooHealth.home` | `yahoo-health-home` | `GET /yahoo-health/home` | none | `ApiKeyAuth` | `YahooHealthHomeResponse` |  |
+| yahooLife | `yahooLife.article` | `yahoo-life-article` | `GET /yahoo-life/article` | `url` (query String required) | `ApiKeyAuth` | `YahooLifeArticleResponse` |  |
+| yahooLife | `yahooLife.home` | `yahoo-life-home` | `GET /yahoo-life/home` | none | `ApiKeyAuth` | `YahooLifeHomeResponse` |  |
+| yahooNews | `yahooNews.article` | `yahoo-news-article` | `GET /yahoo-news/article` | `url` (query String required) | `ApiKeyAuth` | `YahooNewsArticleResponse` |  |
+| yahooNews | `yahooNews.category` | `yahoo-news-category` | `GET /yahoo-news/category` | `category` (query String required) | `ApiKeyAuth` | `YahooNewsCategoryResponse` |  |
+| yahooNews | `yahooNews.comments` | `yahoo-news-comments` | `GET /yahoo-news/comments` | `content_id` (query String required)<br>`sort` (query String)<br>`cursor` (query String)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsCommentsResponse` |  |
+| yahooNews | `yahooNews.commentReplies` | `yahoo-news-comment-replies` | `GET /yahoo-news/comments/replies` | `content_id` (query String required)<br>`comment_id` (query String required)<br>`sort` (query String)<br>`cursor` (query String)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsCommentRepliesResponse` |  |
+| yahooNews | `yahooNews.home` | `yahoo-news-home` | `GET /yahoo-news/home` | none | `ApiKeyAuth` | `YahooNewsHomeResponse` |  |
+| yahooNews | `yahooNews.suggest` | `yahoo-news-suggest` | `GET /yahoo-news/suggest` | `q` (query String required)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsSuggestResponse` |  |
+| yahooSearch | `yahooSearch.images` | `yahoo-search-images` | `GET /yahoo-search/images` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchImagesResponse` |  |
+| yahooSearch | `yahooSearch.local` | `yahoo-search-local` | `GET /yahoo-search/local` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchLocalResponse` |  |
+| yahooSearch | `yahooSearch.news` | `yahoo-search-news` | `GET /yahoo-search/news` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchNewsResponse` |  |
+| yahooSearch | `yahooSearch.call` | `yahoo-search` | `GET /yahoo-search/search` | `q` (query String required)<br>`page` (query Integer)<br>`time_range` (query String) | `ApiKeyAuth` | `YahooSearchCallResponse` |  |
+| yahooSearch | `yahooSearch.suggest` | `yahoo-search-suggest` | `GET /yahoo-search/suggest` | `q` (query String required)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooSearchSuggestResponse` |  |
+| yahooSearch | `yahooSearch.videos` | `yahoo-search-videos` | `GET /yahoo-search/videos` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchVideosResponse` |  |
+| yahooShopping | `yahooShopping.article` | `yahoo-shopping-article` | `GET /yahoo-shopping/article` | `url` (query String required) | `ApiKeyAuth` | `YahooShoppingArticleResponse` |  |
+| yahooShopping | `yahooShopping.category` | `yahoo-shopping-category` | `GET /yahoo-shopping/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooShoppingCategoryResponse` |  |
+| yahooShopping | `yahooShopping.home` | `yahoo-shopping-home` | `GET /yahoo-shopping/home` | none | `ApiKeyAuth` | `YahooShoppingHomeResponse` |  |
+| yahooShopping | `yahooShopping.shoppingList` | `yahoo-shopping-shopping-list` | `GET /yahoo-shopping/shopping-list` | `list` (query String required) | `ApiKeyAuth` | `YahooShoppingShoppingListResponse` |  |
+| yahooShopping | `yahooShopping.shoppingLists` | `yahoo-shopping-shopping-lists` | `GET /yahoo-shopping/shopping-lists` | none | `ApiKeyAuth` | `YahooShoppingShoppingListsResponse` |  |
+| yahooShopping | `yahooShopping.store` | `yahoo-shopping-store` | `GET /yahoo-shopping/store` | `store` (query String required) | `ApiKeyAuth` | `YahooShoppingStoreResponse` |  |
+| yahooShopping | `yahooShopping.stores` | `yahoo-shopping-stores` | `GET /yahoo-shopping/stores` | none | `ApiKeyAuth` | `YahooShoppingStoresResponse` |  |
+| yahooSports | `yahooSports.game` | `yahoo-sports-game` | `GET /yahoo-sports/game` | `league` (query String required)<br>`game` (query String required) | `ApiKeyAuth` | `YahooSportsGameResponse` |  |
+| yahooSports | `yahooSports.golfLeaderboard` | `yahoo-sports-golf-leaderboard` | `GET /yahoo-sports/golf-leaderboard` | `tournament` (query String required)<br>`season` (query Integer) | `ApiKeyAuth` | `YahooSportsGolfLeaderboardResponse` |  |
+| yahooSports | `yahooSports.golfSchedule` | `yahoo-sports-golf-schedule` | `GET /yahoo-sports/golf-schedule` | `tour` (query String required)<br>`season` (query Integer) | `ApiKeyAuth` | `YahooSportsGolfScheduleResponse` |  |
+| yahooSports | `yahooSports.mmaFightCard` | `yahoo-sports-mma-fight-card` | `GET /yahoo-sports/mma-fight-card` | none | `ApiKeyAuth` | `YahooSportsMmaFightCardResponse` |  |
+| yahooSports | `yahooSports.mmaSchedule` | `yahoo-sports-mma-schedule` | `GET /yahoo-sports/mma-schedule` | none | `ApiKeyAuth` | `YahooSportsMmaScheduleResponse` |  |
+| yahooSports | `yahooSports.motorsportsRace` | `yahoo-sports-motorsports-race` | `GET /yahoo-sports/motorsports-race` | `series` (query String required)<br>`race` (query String required) | `ApiKeyAuth` | `YahooSportsMotorsportsRaceResponse` |  |
+| yahooSports | `yahooSports.motorsportsSchedule` | `yahoo-sports-motorsports-schedule` | `GET /yahoo-sports/motorsports-schedule` | `series` (query String required)<br>`season` (query Integer) | `ApiKeyAuth` | `YahooSportsMotorsportsScheduleResponse` |  |
+| yahooSports | `yahooSports.news` | `yahoo-sports-news` | `GET /yahoo-sports/news` | `league` (query String required) | `ApiKeyAuth` | `YahooSportsNewsResponse` |  |
+| yahooSports | `yahooSports.olympicsMedals` | `yahoo-sports-olympics-medals` | `GET /yahoo-sports/olympics-medals` | none | `ApiKeyAuth` | `YahooSportsOlympicsMedalsResponse` |  |
+| yahooSports | `yahooSports.player` | `yahoo-sports-player` | `GET /yahoo-sports/player` | `league` (query String required)<br>`player` (query String required) | `ApiKeyAuth` | `YahooSportsPlayerResponse` |  |
+| yahooSports | `yahooSports.scoreboard` | `yahoo-sports-scoreboard` | `GET /yahoo-sports/scoreboard` | `league` (query String required)<br>`date` (query String) | `ApiKeyAuth` | `YahooSportsScoreboardResponse` |  |
+| yahooSports | `yahooSports.standings` | `yahoo-sports-standings` | `GET /yahoo-sports/standings` | `league` (query String required) | `ApiKeyAuth` | `YahooSportsStandingsResponse` |  |
+| yahooSports | `yahooSports.team` | `yahoo-sports-team` | `GET /yahoo-sports/team` | `league` (query String required)<br>`team` (query String required) | `ApiKeyAuth` | `YahooSportsTeamResponse` |  |
+| yahooSports | `yahooSports.teamRoster` | `yahoo-sports-team-roster` | `GET /yahoo-sports/team-roster` | `league` (query String required)<br>`team` (query String required) | `ApiKeyAuth` | `YahooSportsTeamRosterResponse` |  |
+| yahooSports | `yahooSports.teamSchedule` | `yahoo-sports-team-schedule` | `GET /yahoo-sports/team-schedule` | `league` (query String required)<br>`team` (query String required) | `ApiKeyAuth` | `YahooSportsTeamScheduleResponse` |  |
+| yahooSports | `yahooSports.tennisRankings` | `yahoo-sports-tennis-rankings` | `GET /yahoo-sports/tennis-rankings` | `type` (query String required) | `ApiKeyAuth` | `YahooSportsTennisRankingsResponse` |  |
+| yahooSports | `yahooSports.tennisSchedule` | `yahoo-sports-tennis-schedule` | `GET /yahoo-sports/tennis-schedule` | none | `ApiKeyAuth` | `YahooSportsTennisScheduleResponse` |  |
+| yahooSports | `yahooSports.tennisScoreboard` | `yahoo-sports-tennis-scoreboard` | `GET /yahoo-sports/tennis-scoreboard` | none | `ApiKeyAuth` | `YahooSportsTennisScoreboardResponse` |  |
+| yahooTech | `yahooTech.article` | `yahoo-tech-article` | `GET /yahoo-tech/article` | `url` (query String required) | `ApiKeyAuth` | `YahooTechArticleResponse` |  |
+| yahooTech | `yahooTech.category` | `yahoo-tech-category` | `GET /yahoo-tech/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooTechCategoryResponse` |  |
+| yahooTech | `yahooTech.home` | `yahoo-tech-home` | `GET /yahoo-tech/home` | none | `ApiKeyAuth` | `YahooTechHomeResponse` |  |
 | yelp | `yelp.business` | `yelp-business` | `GET /yelp/business/{id}` | `id` (path String required) | `ApiKeyAuth` | `YelpBusinessResponse` |  |
 | yelp | `yelp.businessMenu` | `yelp-business-menu` | `GET /yelp/business/{id}/menu` | `id` (path String required) | `ApiKeyAuth` | `YelpBusinessMenuResponse` |  |
 | yelp | `yelp.businessPhotos` | `yelp-business-photos` | `GET /yelp/business/{id}/photos` | `id` (path String required)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `YelpBusinessPhotosResponse` |  |
@@ -1044,6 +1168,17 @@ Total operations: `1041`
 | zalando | `zalando.product` | `zalando-product` | `GET /zalando/product` | `sku` (query String required)<br>`market` (query String required) | `ApiKeyAuth` | `ZalandoProductResponse` |  |
 | zalando | `zalando.search` | `zalando-search` | `GET /zalando/search` | `q` (query String required)<br>`market` (query String required) | `ApiKeyAuth` | `ZalandoSearchResponse` |  |
 | zalando | `zalando.suggest` | `zalando-suggest` | `GET /zalando/suggest` | `q` (query String required)<br>`market` (query String required) | `ApiKeyAuth` | `ZalandoSuggestResponse` |  |
+| zappos | `zappos.brand` | `zappos-brand` | `GET /zappos/brand` | `brand` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ZapposBrandResponse` |  |
+| zappos | `zappos.brands` | `zappos-brands` | `GET /zappos/brands` | `q` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `ZapposBrandsResponse` |  |
+| zappos | `zappos.product` | `zappos-product` | `GET /zappos/product/{productId}` | `productId` (path String required)<br>`colorId` (query String) | `ApiKeyAuth` | `ZapposProductResponse` |  |
+| zappos | `zappos.search` | `zappos-search` | `GET /zappos/search` | `term` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ZapposSearchResponse` |  |
+| zappos | `zappos.suggest` | `zappos-suggest` | `GET /zappos/suggest` | `query` (query String required) | `ApiKeyAuth` | `ZapposSuggestResponse` |  |
+| zara | `zara.categories` | `zara-categories` | `GET /zara/categories` | none | `ApiKeyAuth` | `ZaraCategoriesResponse` |  |
+| zara | `zara.categoryProducts` | `zara-category-products` | `GET /zara/category/{categoryId}/products` | `categoryId` (path String required) | `ApiKeyAuth` | `ZaraCategoryProductsResponse` |  |
+| zara | `zara.product` | `zara-product` | `GET /zara/product/{productId}` | `productId` (path String required) | `ApiKeyAuth` | `ZaraProductResponse` |  |
+| zara | `zara.search` | `zara-search` | `GET /zara/search` | `query` (query String required)<br>`section` (query String required)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ZaraSearchResponse` |  |
+| zara | `zara.stores` | `zara-stores` | `GET /zara/stores` | `lat` (query Double required)<br>`lng` (query Double required)<br>`radius` (query Integer)<br>`pickup_only` (query Boolean)<br>`donation_only` (query Boolean) | `ApiKeyAuth` | `ZaraStoresResponse` |  |
+| zara | `zara.suggest` | `zara-suggest` | `GET /zara/suggest` | `query` (query String required) | `ApiKeyAuth` | `ZaraSuggestResponse` |  |
 | zillow | `zillow.autocomplete` | `zillow-autocomplete` | `GET /zillow/autocomplete` | `query` (query String required)<br>`limit` (query Integer)<br>`status` (query String) | `ApiKeyAuth` | `ZillowAutocompleteResponse` |  |
 | zillow | `zillow.property` | `zillow-property` | `GET /zillow/property/{zpid}` | `zpid` (path String required) | `ApiKeyAuth` | `ZillowPropertyResponse` |  |
 | zillow | `zillow.search` | `zillow-search` | `GET /zillow/search` | `location` (query String required)<br>`page` (query Integer)<br>`status` (query String)<br>`region_id` (query Integer)<br>`region_type` (query Integer)<br>`west` (query Double)<br>`east` (query Double)<br>`south` (query Double)<br>`north` (query Double) | `ApiKeyAuth` | `ZillowSearchResponse` |  |

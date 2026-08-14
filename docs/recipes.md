@@ -206,3 +206,11 @@ Object results = client.etsy().search(Map.of("q", "handmade mug"));
 Object listing = client.etsy().listing(Map.of("id", "4474501681"));
 Object shop = client.etsy().shop(Map.of("id", "gaguatelier"));
 ```
+
+## Twitch And SoundCloud
+
+```java
+Object channel = client.twitch().channel(Map.of("login", "caedrel"));
+Object streams = client.twitch().streams(Map.of("game", "league-of-legends", "limit", 20));
+Object track = client.soundCloud().soundcloudTrack(Map.of("url", "https://soundcloud.com/artist/track-name"));
+```

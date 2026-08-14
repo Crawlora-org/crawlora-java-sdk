@@ -19,6 +19,72 @@ public final class YahooSearchGroup {
     }
 
     /**
+     * yahoo-search-images (GET /yahoo-search/images).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object images(Map<String, Object> params) {
+        return images(params, null);
+    }
+
+    /**
+     * yahoo-search-images (GET /yahoo-search/images). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object images(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-search-images", params);
+        return client.request("yahoo-search-images", params, options);
+    }
+
+    /**
+     * yahoo-search-local (GET /yahoo-search/local).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object local(Map<String, Object> params) {
+        return local(params, null);
+    }
+
+    /**
+     * yahoo-search-local (GET /yahoo-search/local). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object local(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-search-local", params);
+        return client.request("yahoo-search-local", params, options);
+    }
+
+    /**
+     * yahoo-search-news (GET /yahoo-search/news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params) {
+        return news(params, null);
+    }
+
+    /**
+     * yahoo-search-news (GET /yahoo-search/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-search-news", params);
+        return client.request("yahoo-search-news", params, options);
+    }
+
+    /**
      * yahoo-search (GET /yahoo-search/search).
      *
      * @param params operation parameters
@@ -38,6 +104,50 @@ public final class YahooSearchGroup {
     public Object call(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-search", params);
         return client.request("yahoo-search", params, options);
+    }
+
+    /**
+     * yahoo-search-suggest (GET /yahoo-search/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params) {
+        return suggest(params, null);
+    }
+
+    /**
+     * yahoo-search-suggest (GET /yahoo-search/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-search-suggest", params);
+        return client.request("yahoo-search-suggest", params, options);
+    }
+
+    /**
+     * yahoo-search-videos (GET /yahoo-search/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params) {
+        return videos(params, null);
+    }
+
+    /**
+     * yahoo-search-videos (GET /yahoo-search/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-search-videos", params);
+        return client.request("yahoo-search-videos", params, options);
     }
 
 }

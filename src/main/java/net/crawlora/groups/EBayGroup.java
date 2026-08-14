@@ -41,6 +41,103 @@ public final class EBayGroup {
     }
 
     /**
+     * ebay-live-streams (GET /ebay/live/streams).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreams(Map<String, Object> params) {
+        return ebayLiveStreams(params, null);
+    }
+
+    /**
+     * ebay-live-streams (GET /ebay/live/streams). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreams(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ebay-live-streams", params);
+        return client.request("ebay-live-streams", params, options);
+    }
+
+    /**
+     * ebay-live-streams (GET /ebay/live/streams). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreams() {
+        return ebayLiveStreams(Map.of(), null);
+    }
+
+    /**
+     * ebay-live-streams-batch (GET /ebay/live/streams/batch).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreamsBatch(Map<String, Object> params) {
+        return ebayLiveStreamsBatch(params, null);
+    }
+
+    /**
+     * ebay-live-streams-batch (GET /ebay/live/streams/batch). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreamsBatch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ebay-live-streams-batch", params);
+        return client.request("ebay-live-streams-batch", params, options);
+    }
+
+    /**
+     * ebay-live-stream (GET /ebay/live/streams/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStream(Map<String, Object> params) {
+        return ebayLiveStream(params, null);
+    }
+
+    /**
+     * ebay-live-stream (GET /ebay/live/streams/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStream(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ebay-live-stream", params);
+        return client.request("ebay-live-stream", params, options);
+    }
+
+    /**
+     * ebay-live-stream-items (GET /ebay/live/streams/{id}/items).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreamItems(Map<String, Object> params) {
+        return ebayLiveStreamItems(params, null);
+    }
+
+    /**
+     * ebay-live-stream-items (GET /ebay/live/streams/{id}/items). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ebayLiveStreamItems(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ebay-live-stream-items", params);
+        return client.request("ebay-live-stream-items", params, options);
+    }
+
+    /**
      * ebay-search (POST /ebay/search).
      *
      * @param params operation parameters

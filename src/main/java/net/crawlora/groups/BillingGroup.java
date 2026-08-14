@@ -221,4 +221,35 @@ public final class BillingGroup {
         return client.request("billing-me-portal", params, options);
     }
 
+    /**
+     * billing-me-rejections (GET /billing/me/rejections).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meRejections(Map<String, Object> params) {
+        return meRejections(params, null);
+    }
+
+    /**
+     * billing-me-rejections (GET /billing/me/rejections). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meRejections(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("billing-me-rejections", params);
+        return client.request("billing-me-rejections", params, options);
+    }
+
+    /**
+     * billing-me-rejections (GET /billing/me/rejections). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meRejections() {
+        return meRejections(Map.of(), null);
+    }
+
 }
