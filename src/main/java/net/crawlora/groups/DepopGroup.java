@@ -19,6 +19,37 @@ public final class DepopGroup {
     }
 
     /**
+     * depop-brands (GET /depop/brands).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params) {
+        return brands(params, null);
+    }
+
+    /**
+     * depop-brands (GET /depop/brands). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-brands", params);
+        return client.request("depop-brands", params, options);
+    }
+
+    /**
+     * depop-brands (GET /depop/brands). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands() {
+        return brands(Map.of(), null);
+    }
+
+    /**
      * depop-categories (GET /depop/categories).
      *
      * @param params operation parameters
@@ -116,6 +147,50 @@ public final class DepopGroup {
     }
 
     /**
+     * depop-search-sellers (GET /depop/search-sellers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchSellers(Map<String, Object> params) {
+        return searchSellers(params, null);
+    }
+
+    /**
+     * depop-search-sellers (GET /depop/search-sellers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchSellers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-search-sellers", params);
+        return client.request("depop-search-sellers", params, options);
+    }
+
+    /**
+     * depop-search-facets (GET /depop/search/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchFacets(Map<String, Object> params) {
+        return searchFacets(params, null);
+    }
+
+    /**
+     * depop-search-facets (GET /depop/search/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-search-facets", params);
+        return client.request("depop-search-facets", params, options);
+    }
+
+    /**
      * depop-shop (GET /depop/shop/{username}).
      *
      * @param params operation parameters
@@ -135,6 +210,59 @@ public final class DepopGroup {
     public Object shop(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("depop-shop", params);
         return client.request("depop-shop", params, options);
+    }
+
+    /**
+     * depop-sizes (GET /depop/sizes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sizes(Map<String, Object> params) {
+        return sizes(params, null);
+    }
+
+    /**
+     * depop-sizes (GET /depop/sizes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sizes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-sizes", params);
+        return client.request("depop-sizes", params, options);
+    }
+
+    /**
+     * depop-sizes (GET /depop/sizes). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sizes() {
+        return sizes(Map.of(), null);
+    }
+
+    /**
+     * depop-suggest (GET /depop/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params) {
+        return suggest(params, null);
+    }
+
+    /**
+     * depop-suggest (GET /depop/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-suggest", params);
+        return client.request("depop-suggest", params, options);
     }
 
 }

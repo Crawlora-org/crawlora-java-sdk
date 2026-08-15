@@ -19,6 +19,28 @@ public final class GooglePatentsGroup {
     }
 
     /**
+     * googlepatents-classification (GET /googlepatents/classification).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object googlepatentsClassification(Map<String, Object> params) {
+        return googlepatentsClassification(params, null);
+    }
+
+    /**
+     * googlepatents-classification (GET /googlepatents/classification). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object googlepatentsClassification(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("googlepatents-classification", params);
+        return client.request("googlepatents-classification", params, options);
+    }
+
+    /**
      * googlepatents-coverage (GET /googlepatents/coverage).
      *
      * @param params operation parameters
@@ -69,6 +91,28 @@ public final class GooglePatentsGroup {
     public Object googlepatentsDetail(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("googlepatents-detail", params);
         return client.request("googlepatents-detail", params, options);
+    }
+
+    /**
+     * googlepatents-recent (GET /googlepatents/recent).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object googlepatentsRecent(Map<String, Object> params) {
+        return googlepatentsRecent(params, null);
+    }
+
+    /**
+     * googlepatents-recent (GET /googlepatents/recent). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object googlepatentsRecent(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("googlepatents-recent", params);
+        return client.request("googlepatents-recent", params, options);
     }
 
     /**

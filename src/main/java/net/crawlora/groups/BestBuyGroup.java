@@ -19,6 +19,99 @@ public final class BestBuyGroup {
     }
 
     /**
+     * bestbuy-brands (GET /bestbuy/brands).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyBrands(Map<String, Object> params) {
+        return bestbuyBrands(params, null);
+    }
+
+    /**
+     * bestbuy-brands (GET /bestbuy/brands). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyBrands(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-brands", params);
+        return client.request("bestbuy-brands", params, options);
+    }
+
+    /**
+     * bestbuy-brands (GET /bestbuy/brands). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyBrands() {
+        return bestbuyBrands(Map.of(), null);
+    }
+
+    /**
+     * bestbuy-categories (GET /bestbuy/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategories(Map<String, Object> params) {
+        return bestbuyCategories(params, null);
+    }
+
+    /**
+     * bestbuy-categories (GET /bestbuy/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-categories", params);
+        return client.request("bestbuy-categories", params, options);
+    }
+
+    /**
+     * bestbuy-categories (GET /bestbuy/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategories() {
+        return bestbuyCategories(Map.of(), null);
+    }
+
+    /**
+     * bestbuy-categories-trending (GET /bestbuy/categories/trending).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategoriesTrending(Map<String, Object> params) {
+        return bestbuyCategoriesTrending(params, null);
+    }
+
+    /**
+     * bestbuy-categories-trending (GET /bestbuy/categories/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategoriesTrending(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-categories-trending", params);
+        return client.request("bestbuy-categories-trending", params, options);
+    }
+
+    /**
+     * bestbuy-categories-trending (GET /bestbuy/categories/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategoriesTrending() {
+        return bestbuyCategoriesTrending(Map.of(), null);
+    }
+
+    /**
      * bestbuy-category (GET /bestbuy/category).
      *
      * @param params operation parameters
@@ -38,6 +131,28 @@ public final class BestBuyGroup {
     public Object bestbuyCategory(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bestbuy-category", params);
         return client.request("bestbuy-category", params, options);
+    }
+
+    /**
+     * bestbuy-category-subcategories (GET /bestbuy/category/subcategories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategorySubcategories(Map<String, Object> params) {
+        return bestbuyCategorySubcategories(params, null);
+    }
+
+    /**
+     * bestbuy-category-subcategories (GET /bestbuy/category/subcategories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyCategorySubcategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-category-subcategories", params);
+        return client.request("bestbuy-category-subcategories", params, options);
     }
 
     /**
@@ -63,6 +178,50 @@ public final class BestBuyGroup {
     }
 
     /**
+     * bestbuy-product-questions (GET /bestbuy/product/questions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyProductQuestions(Map<String, Object> params) {
+        return bestbuyProductQuestions(params, null);
+    }
+
+    /**
+     * bestbuy-product-questions (GET /bestbuy/product/questions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyProductQuestions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-product-questions", params);
+        return client.request("bestbuy-product-questions", params, options);
+    }
+
+    /**
+     * bestbuy-product-related (GET /bestbuy/product/related).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyProductRelated(Map<String, Object> params) {
+        return bestbuyProductRelated(params, null);
+    }
+
+    /**
+     * bestbuy-product-related (GET /bestbuy/product/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyProductRelated(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-product-related", params);
+        return client.request("bestbuy-product-related", params, options);
+    }
+
+    /**
      * bestbuy-product-reviews (GET /bestbuy/product/reviews).
      *
      * @param params operation parameters
@@ -82,6 +241,50 @@ public final class BestBuyGroup {
     public Object bestbuyProductReviews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bestbuy-product-reviews", params);
         return client.request("bestbuy-product-reviews", params, options);
+    }
+
+    /**
+     * bestbuy-search (GET /bestbuy/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuySearch(Map<String, Object> params) {
+        return bestbuySearch(params, null);
+    }
+
+    /**
+     * bestbuy-search (GET /bestbuy/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuySearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-search", params);
+        return client.request("bestbuy-search", params, options);
+    }
+
+    /**
+     * bestbuy-stores (GET /bestbuy/stores).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyStores(Map<String, Object> params) {
+        return bestbuyStores(params, null);
+    }
+
+    /**
+     * bestbuy-stores (GET /bestbuy/stores). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bestbuyStores(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bestbuy-stores", params);
+        return client.request("bestbuy-stores", params, options);
     }
 
 }

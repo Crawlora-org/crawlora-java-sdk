@@ -251,11 +251,11 @@ public abstract class ClientGroups {
     }
 
     /**
-     * Typed accessor for the "draftKings" operation group.
-     * @return a new {@link DraftKingsGroup} bound to this client
+     * Typed accessor for the "draftKingsSportsbook" operation group.
+     * @return a new {@link DraftKingsSportsbookGroup} bound to this client
      */
-    public DraftKingsGroup draftKings() {
-        return new DraftKingsGroup((CrawloraClient) this);
+    public DraftKingsSportsbookGroup draftKingsSportsbook() {
+        return new DraftKingsSportsbookGroup((CrawloraClient) this);
     }
 
     /**
@@ -667,6 +667,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "sephora" operation group.
+     * @return a new {@link SephoraGroup} bound to this client
+     */
+    public SephoraGroup sephora() {
+        return new SephoraGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "shopApp" operation group.
      * @return a new {@link ShopAppGroup} bound to this client
      */
@@ -880,6 +888,14 @@ public abstract class ClientGroups {
      */
     public AccountDeletionGroup accountDeletion() {
         return new AccountDeletionGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "usptoPatentPublicSearch" operation group.
+     * @return a new {@link UsptoPatentPublicSearchGroup} bound to this client
+     */
+    public UsptoPatentPublicSearchGroup usptoPatentPublicSearch() {
+        return new UsptoPatentPublicSearchGroup((CrawloraClient) this);
     }
 
     /**
