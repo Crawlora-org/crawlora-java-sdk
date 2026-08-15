@@ -72,6 +72,28 @@ public final class DepopGroup {
     }
 
     /**
+     * depop-item-similar (GET /depop/item/{slug}/similar).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object itemSimilar(Map<String, Object> params) {
+        return itemSimilar(params, null);
+    }
+
+    /**
+     * depop-item-similar (GET /depop/item/{slug}/similar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object itemSimilar(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("depop-item-similar", params);
+        return client.request("depop-item-similar", params, options);
+    }
+
+    /**
      * depop-search (GET /depop/search).
      *
      * @param params operation parameters

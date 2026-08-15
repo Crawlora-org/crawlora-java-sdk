@@ -78,6 +78,9 @@ public final class OperationId {
     public static final String AUTOTRADER_DEALER = "autotrader-dealer";
     public static final String AUTOTRADER_SEARCH = "autotrader-search";
     public static final String AUTOTRADER_VEHICLE = "autotrader-vehicle";
+    public static final String BEST_BUY_BESTBUY_CATEGORY = "bestbuy-category";
+    public static final String BEST_BUY_BESTBUY_PRODUCT = "bestbuy-product";
+    public static final String BEST_BUY_BESTBUY_PRODUCT_REVIEWS = "bestbuy-product-reviews";
     public static final String BILLING_ME = "billing-me";
     public static final String BILLING_ME_CHECKOUT = "billing-me-checkout";
     public static final String BILLING_ME_EVENTS = "billing-me-events";
@@ -298,6 +301,7 @@ public final class OperationId {
     public static final String DATASETS_XUSERS_SEARCH = "datasets-x-users-search";
     public static final String DEPOP_CATEGORIES = "depop-categories";
     public static final String DEPOP_ITEM = "depop-item";
+    public static final String DEPOP_ITEM_SIMILAR = "depop-item-similar";
     public static final String DEPOP_SEARCH = "depop-search";
     public static final String DEPOP_SHOP = "depop-shop";
     public static final String DISCOGS_ARTIST = "discogs-artist";
@@ -319,6 +323,10 @@ public final class OperationId {
     public static final String DOOR_DASH_DOORDASH_STORE_ITEM = "doordash-store-item";
     public static final String DOOR_DASH_DOORDASH_STORE_MENU = "doordash-store-menu";
     public static final String DOOR_DASH_DOORDASH_STORE_REVIEWS = "doordash-store-reviews";
+    public static final String DRAFT_KINGS_DRAFTKINGS_EVENT = "draftkings-event";
+    public static final String DRAFT_KINGS_DRAFTKINGS_EVENT_MARKETS = "draftkings-event-markets";
+    public static final String DRAFT_KINGS_DRAFTKINGS_FUTURES = "draftkings-futures";
+    public static final String DRAFT_KINGS_DRAFTKINGS_ODDS = "draftkings-odds";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_IMAGE = "duckduckgo-image";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_NEWS = "duckduckgo-news";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_SEARCH = "duckduckgo-search";
@@ -420,6 +428,10 @@ public final class OperationId {
     public static final String GOOGLE_MAP_PLACE_REVIEWS = "google-map-place-reviews";
     public static final String GOOGLE_MAP_SEARCH = "google-map-search";
     public static final String GOOGLE_NEWS = "google-news";
+    public static final String GOOGLE_PATENTS_GOOGLEPATENTS_COVERAGE = "googlepatents-coverage";
+    public static final String GOOGLE_PATENTS_GOOGLEPATENTS_DETAIL = "googlepatents-detail";
+    public static final String GOOGLE_PATENTS_GOOGLEPATENTS_SEARCH = "googlepatents-search";
+    public static final String GOOGLE_PATENTS_GOOGLEPATENTS_SUGGEST = "googlepatents-suggest";
     public static final String GOOGLE_PLAY_APP = "googleplay-app";
     public static final String GOOGLE_PLAY_CATEGORIES = "googleplay-categories";
     public static final String GOOGLE_PLAY_DATASAFETY = "googleplay-datasafety";
@@ -448,7 +460,9 @@ public final class OperationId {
     public static final String HMHM_CATEGORIES = "hm-categories";
     public static final String HMHM_LISTING = "hm-listing";
     public static final String HMHM_PRODUCT = "hm-product";
+    public static final String HMHM_PRODUCT_RELATED = "hm-product-related";
     public static final String HMHM_SEARCH = "hm-search";
+    public static final String HMHM_SEARCH_SUGGESTIONS = "hm-search-suggestions";
     public static final String HMHM_STORES = "hm-stores";
     public static final String IMDB_NAME = "imdb-name";
     public static final String IMDB_NAME_AWARDS = "imdb-name-awards";

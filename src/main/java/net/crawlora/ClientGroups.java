@@ -91,6 +91,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "bestBuy" operation group.
+     * @return a new {@link BestBuyGroup} bound to this client
+     */
+    public BestBuyGroup bestBuy() {
+        return new BestBuyGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "billing" operation group.
      * @return a new {@link BillingGroup} bound to this client
      */
@@ -243,6 +251,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "draftKings" operation group.
+     * @return a new {@link DraftKingsGroup} bound to this client
+     */
+    public DraftKingsGroup draftKings() {
+        return new DraftKingsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "duckDuckGoSearch" operation group.
      * @return a new {@link DuckDuckGoSearchGroup} bound to this client
      */
@@ -336,6 +352,14 @@ public abstract class ClientGroups {
      */
     public GoogleGroup google() {
         return new GoogleGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "googlePatents" operation group.
+     * @return a new {@link GooglePatentsGroup} bound to this client
+     */
+    public GooglePatentsGroup googlePatents() {
+        return new GooglePatentsGroup((CrawloraClient) this);
     }
 
     /**
