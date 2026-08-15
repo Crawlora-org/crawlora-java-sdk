@@ -94,6 +94,28 @@ public final class HMGroup {
     }
 
     /**
+     * hm-product-related (GET /hm/product/{product_id}/related).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hmProductRelated(Map<String, Object> params) {
+        return hmProductRelated(params, null);
+    }
+
+    /**
+     * hm-product-related (GET /hm/product/{product_id}/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hmProductRelated(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hm-product-related", params);
+        return client.request("hm-product-related", params, options);
+    }
+
+    /**
      * hm-search (GET /hm/search).
      *
      * @param params operation parameters
@@ -113,6 +135,37 @@ public final class HMGroup {
     public Object hmSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("hm-search", params);
         return client.request("hm-search", params, options);
+    }
+
+    /**
+     * hm-search-suggestions (GET /hm/search/suggestions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hmSearchSuggestions(Map<String, Object> params) {
+        return hmSearchSuggestions(params, null);
+    }
+
+    /**
+     * hm-search-suggestions (GET /hm/search/suggestions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hmSearchSuggestions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hm-search-suggestions", params);
+        return client.request("hm-search-suggestions", params, options);
+    }
+
+    /**
+     * hm-search-suggestions (GET /hm/search/suggestions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hmSearchSuggestions() {
+        return hmSearchSuggestions(Map.of(), null);
     }
 
     /**

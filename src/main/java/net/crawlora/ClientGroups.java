@@ -91,6 +91,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "bestBuy" operation group.
+     * @return a new {@link BestBuyGroup} bound to this client
+     */
+    public BestBuyGroup bestBuy() {
+        return new BestBuyGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "billing" operation group.
      * @return a new {@link BillingGroup} bound to this client
      */
@@ -243,6 +251,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "draftKingsSportsbook" operation group.
+     * @return a new {@link DraftKingsSportsbookGroup} bound to this client
+     */
+    public DraftKingsSportsbookGroup draftKingsSportsbook() {
+        return new DraftKingsSportsbookGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "duckDuckGoSearch" operation group.
      * @return a new {@link DuckDuckGoSearchGroup} bound to this client
      */
@@ -336,6 +352,14 @@ public abstract class ClientGroups {
      */
     public GoogleGroup google() {
         return new GoogleGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "googlePatents" operation group.
+     * @return a new {@link GooglePatentsGroup} bound to this client
+     */
+    public GooglePatentsGroup googlePatents() {
+        return new GooglePatentsGroup((CrawloraClient) this);
     }
 
     /**
@@ -643,6 +667,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "sephora" operation group.
+     * @return a new {@link SephoraGroup} bound to this client
+     */
+    public SephoraGroup sephora() {
+        return new SephoraGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "shopApp" operation group.
      * @return a new {@link ShopAppGroup} bound to this client
      */
@@ -856,6 +888,14 @@ public abstract class ClientGroups {
      */
     public AccountDeletionGroup accountDeletion() {
         return new AccountDeletionGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "usptoPatentPublicSearch" operation group.
+     * @return a new {@link UsptoPatentPublicSearchGroup} bound to this client
+     */
+    public UsptoPatentPublicSearchGroup usptoPatentPublicSearch() {
+        return new UsptoPatentPublicSearchGroup((CrawloraClient) this);
     }
 
     /**
