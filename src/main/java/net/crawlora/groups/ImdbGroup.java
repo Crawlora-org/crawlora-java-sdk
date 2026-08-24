@@ -19,6 +19,37 @@ public final class ImdbGroup {
     }
 
     /**
+     * imdb-charts (GET /imdb/charts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object charts(Map<String, Object> params) {
+        return charts(params, null);
+    }
+
+    /**
+     * imdb-charts (GET /imdb/charts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object charts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-charts", params);
+        return client.request("imdb-charts", params, options);
+    }
+
+    /**
+     * imdb-charts (GET /imdb/charts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object charts() {
+        return charts(Map.of(), null);
+    }
+
+    /**
      * imdb-name (GET /imdb/name).
      *
      * @param params operation parameters
@@ -506,6 +537,37 @@ public final class ImdbGroup {
     }
 
     /**
+     * imdb-title-ratings (GET /imdb/title/ratings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleRatings(Map<String, Object> params) {
+        return titleRatings(params, null);
+    }
+
+    /**
+     * imdb-title-ratings (GET /imdb/title/ratings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleRatings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-ratings", params);
+        return client.request("imdb-title-ratings", params, options);
+    }
+
+    /**
+     * imdb-title-ratings (GET /imdb/title/ratings). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleRatings() {
+        return titleRatings(Map.of(), null);
+    }
+
+    /**
      * imdb-title-release-info (GET /imdb/title/release-info).
      *
      * @param params operation parameters
@@ -565,6 +627,37 @@ public final class ImdbGroup {
      */
     public Object titleReviews() {
         return titleReviews(Map.of(), null);
+    }
+
+    /**
+     * imdb-title-similar (GET /imdb/title/similar).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleSimilar(Map<String, Object> params) {
+        return titleSimilar(params, null);
+    }
+
+    /**
+     * imdb-title-similar (GET /imdb/title/similar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleSimilar(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-similar", params);
+        return client.request("imdb-title-similar", params, options);
+    }
+
+    /**
+     * imdb-title-similar (GET /imdb/title/similar). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleSimilar() {
+        return titleSimilar(Map.of(), null);
     }
 
     /**

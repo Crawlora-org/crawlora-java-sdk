@@ -8,18 +8,18 @@ import net.crawlora.OperationGroup;
 import net.crawlora.RequestOptions;
 
 /**
- * Generated typed accessor for the "nike" operation group.
- * Reach it via {@code client.nike()}.
+ * Generated typed accessor for the "quince" operation group.
+ * Reach it via {@code client.quince()}.
  */
-public final class NikeGroup {
+public final class QuinceGroup {
     private final CrawloraClient client;
 
-    public NikeGroup(CrawloraClient client) {
+    public QuinceGroup(CrawloraClient client) {
         this.client = client;
     }
 
     /**
-     * nike-categories (GET /nike/categories).
+     * quince-categories (GET /quince/categories).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
@@ -29,19 +29,19 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-categories (GET /nike/categories). with explicit request options.
+     * quince-categories (GET /quince/categories). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object categories(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-categories", params);
-        return client.request("nike-categories", params, options);
+        OperationGroup.checkParams("quince-categories", params);
+        return client.request("quince-categories", params, options);
     }
 
     /**
-     * nike-categories (GET /nike/categories). with no parameters.
+     * quince-categories (GET /quince/categories). with no parameters.
      *
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
@@ -50,7 +50,38 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-product (GET /nike/product).
+     * quince-navigation (GET /quince/navigation).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation(Map<String, Object> params) {
+        return navigation(params, null);
+    }
+
+    /**
+     * quince-navigation (GET /quince/navigation). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("quince-navigation", params);
+        return client.request("quince-navigation", params, options);
+    }
+
+    /**
+     * quince-navigation (GET /quince/navigation). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation() {
+        return navigation(Map.of(), null);
+    }
+
+    /**
+     * quince-product (GET /quince/product).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
@@ -60,85 +91,41 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-product (GET /nike/product). with explicit request options.
+     * quince-product (GET /quince/product). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object product(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-product", params);
-        return client.request("nike-product", params, options);
+        OperationGroup.checkParams("quince-product", params);
+        return client.request("quince-product", params, options);
     }
 
     /**
-     * nike-product-availability (GET /nike/product/availability).
+     * quince-product-faq (GET /quince/product/faq).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object productAvailability(Map<String, Object> params) {
-        return productAvailability(params, null);
+    public Object productFaq(Map<String, Object> params) {
+        return productFaq(params, null);
     }
 
     /**
-     * nike-product-availability (GET /nike/product/availability). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object productAvailability(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-product-availability", params);
-        return client.request("nike-product-availability", params, options);
-    }
-
-    /**
-     * nike-product-details (GET /nike/product/details).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object productDetails(Map<String, Object> params) {
-        return productDetails(params, null);
-    }
-
-    /**
-     * nike-product-details (GET /nike/product/details). with explicit request options.
+     * quince-product-faq (GET /quince/product/faq). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object productDetails(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-product-details", params);
-        return client.request("nike-product-details", params, options);
+    public Object productFaq(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("quince-product-faq", params);
+        return client.request("quince-product-faq", params, options);
     }
 
     /**
-     * nike-product-recommendations (GET /nike/product/recommendations).
-     *
-     * @param params operation parameters
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object productRecommendations(Map<String, Object> params) {
-        return productRecommendations(params, null);
-    }
-
-    /**
-     * nike-product-recommendations (GET /nike/product/recommendations). with explicit request options.
-     *
-     * @param params operation parameters
-     * @param options per-request options, or {@code null} for defaults
-     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
-     */
-    public Object productRecommendations(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-product-recommendations", params);
-        return client.request("nike-product-recommendations", params, options);
-    }
-
-    /**
-     * nike-product-reviews (GET /nike/product/reviews).
+     * quince-product-reviews (GET /quince/product/reviews).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
@@ -148,19 +135,19 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-product-reviews (GET /nike/product/reviews). with explicit request options.
+     * quince-product-reviews (GET /quince/product/reviews). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object productReviews(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-product-reviews", params);
-        return client.request("nike-product-reviews", params, options);
+        OperationGroup.checkParams("quince-product-reviews", params);
+        return client.request("quince-product-reviews", params, options);
     }
 
     /**
-     * nike-search (GET /nike/search).
+     * quince-search (GET /quince/search).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
@@ -170,19 +157,19 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-search (GET /nike/search). with explicit request options.
+     * quince-search (GET /quince/search). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object search(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-search", params);
-        return client.request("nike-search", params, options);
+        OperationGroup.checkParams("quince-search", params);
+        return client.request("quince-search", params, options);
     }
 
     /**
-     * nike-search (GET /nike/search). with no parameters.
+     * quince-search (GET /quince/search). with no parameters.
      *
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
@@ -191,29 +178,69 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-stores (GET /nike/stores).
+     * quince-sitemap-urls (GET /quince/sitemap/urls).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object stores(Map<String, Object> params) {
-        return stores(params, null);
+    public Object sitemapUrls(Map<String, Object> params) {
+        return sitemapUrls(params, null);
     }
 
     /**
-     * nike-stores (GET /nike/stores). with explicit request options.
+     * quince-sitemap-urls (GET /quince/sitemap/urls). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object stores(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-stores", params);
-        return client.request("nike-stores", params, options);
+    public Object sitemapUrls(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("quince-sitemap-urls", params);
+        return client.request("quince-sitemap-urls", params, options);
     }
 
     /**
-     * nike-suggest (GET /nike/suggest).
+     * quince-sitemap-urls (GET /quince/sitemap/urls). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemapUrls() {
+        return sitemapUrls(Map.of(), null);
+    }
+
+    /**
+     * quince-sitemaps (GET /quince/sitemaps).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params) {
+        return sitemaps(params, null);
+    }
+
+    /**
+     * quince-sitemaps (GET /quince/sitemaps). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("quince-sitemaps", params);
+        return client.request("quince-sitemaps", params, options);
+    }
+
+    /**
+     * quince-sitemaps (GET /quince/sitemaps). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps() {
+        return sitemaps(Map.of(), null);
+    }
+
+    /**
+     * quince-suggest (GET /quince/suggest).
      *
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
@@ -223,15 +250,15 @@ public final class NikeGroup {
     }
 
     /**
-     * nike-suggest (GET /nike/suggest). with explicit request options.
+     * quince-suggest (GET /quince/suggest). with explicit request options.
      *
      * @param params operation parameters
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
     public Object suggest(Map<String, Object> params, RequestOptions options) {
-        OperationGroup.checkParams("nike-suggest", params);
-        return client.request("nike-suggest", params, options);
+        OperationGroup.checkParams("quince-suggest", params);
+        return client.request("quince-suggest", params, options);
     }
 
 }

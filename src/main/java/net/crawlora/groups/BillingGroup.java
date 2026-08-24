@@ -252,4 +252,79 @@ public final class BillingGroup {
         return meRejections(Map.of(), null);
     }
 
+    /**
+     * billing-me-subscription-change (POST /billing/me/subscription/change).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionChange(Map<String, Object> params) {
+        return meSubscriptionChange(params, null);
+    }
+
+    /**
+     * billing-me-subscription-change (POST /billing/me/subscription/change). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionChange(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("billing-me-subscription-change", params);
+        return client.request("billing-me-subscription-change", params, options);
+    }
+
+    /**
+     * billing-me-subscription-change-cancel (POST /billing/me/subscription/change/cancel).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionChangeCancel(Map<String, Object> params) {
+        return meSubscriptionChangeCancel(params, null);
+    }
+
+    /**
+     * billing-me-subscription-change-cancel (POST /billing/me/subscription/change/cancel). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionChangeCancel(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("billing-me-subscription-change-cancel", params);
+        return client.request("billing-me-subscription-change-cancel", params, options);
+    }
+
+    /**
+     * billing-me-subscription-change-cancel (POST /billing/me/subscription/change/cancel). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionChangeCancel() {
+        return meSubscriptionChangeCancel(Map.of(), null);
+    }
+
+    /**
+     * billing-me-subscription-preview (POST /billing/me/subscription/preview).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionPreview(Map<String, Object> params) {
+        return meSubscriptionPreview(params, null);
+    }
+
+    /**
+     * billing-me-subscription-preview (POST /billing/me/subscription/preview). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meSubscriptionPreview(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("billing-me-subscription-preview", params);
+        return client.request("billing-me-subscription-preview", params, options);
+    }
+
 }

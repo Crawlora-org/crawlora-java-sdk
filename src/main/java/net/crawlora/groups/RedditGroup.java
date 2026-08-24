@@ -63,6 +63,28 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-leads (GET /reddit/leads).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leads(Map<String, Object> params) {
+        return leads(params, null);
+    }
+
+    /**
+     * reddit-leads (GET /reddit/leads). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leads(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-leads", params);
+        return client.request("reddit-leads", params, options);
+    }
+
+    /**
      * reddit-post (GET /reddit/post/{id}).
      *
      * @param params operation parameters
