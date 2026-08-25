@@ -63,6 +63,50 @@ public final class TicketmasterGroup {
     }
 
     /**
+     * ticketmaster-attraction-related (GET /ticketmaster/attraction-related).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object attractionRelated(Map<String, Object> params) {
+        return attractionRelated(params, null);
+    }
+
+    /**
+     * ticketmaster-attraction-related (GET /ticketmaster/attraction-related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object attractionRelated(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ticketmaster-attraction-related", params);
+        return client.request("ticketmaster-attraction-related", params, options);
+    }
+
+    /**
+     * ticketmaster-attraction-reviews (GET /ticketmaster/attraction-reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object attractionReviews(Map<String, Object> params) {
+        return attractionReviews(params, null);
+    }
+
+    /**
+     * ticketmaster-attraction-reviews (GET /ticketmaster/attraction-reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object attractionReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ticketmaster-attraction-reviews", params);
+        return client.request("ticketmaster-attraction-reviews", params, options);
+    }
+
+    /**
      * ticketmaster-discover-categories (GET /ticketmaster/discover-categories).
      *
      * @param params operation parameters
@@ -235,6 +279,37 @@ public final class TicketmasterGroup {
     }
 
     /**
+     * ticketmaster-trending-attractions (GET /ticketmaster/trending-attractions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingAttractions(Map<String, Object> params) {
+        return trendingAttractions(params, null);
+    }
+
+    /**
+     * ticketmaster-trending-attractions (GET /ticketmaster/trending-attractions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingAttractions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ticketmaster-trending-attractions", params);
+        return client.request("ticketmaster-trending-attractions", params, options);
+    }
+
+    /**
+     * ticketmaster-trending-attractions (GET /ticketmaster/trending-attractions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingAttractions() {
+        return trendingAttractions(Map.of(), null);
+    }
+
+    /**
      * ticketmaster-venue (GET /ticketmaster/venue).
      *
      * @param params operation parameters
@@ -254,6 +329,28 @@ public final class TicketmasterGroup {
     public Object venue(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("ticketmaster-venue", params);
         return client.request("ticketmaster-venue", params, options);
+    }
+
+    /**
+     * ticketmaster-venue-enhanced-details (GET /ticketmaster/venue-enhanced-details).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object venueEnhancedDetails(Map<String, Object> params) {
+        return venueEnhancedDetails(params, null);
+    }
+
+    /**
+     * ticketmaster-venue-enhanced-details (GET /ticketmaster/venue-enhanced-details). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object venueEnhancedDetails(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ticketmaster-venue-enhanced-details", params);
+        return client.request("ticketmaster-venue-enhanced-details", params, options);
     }
 
     /**
