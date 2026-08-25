@@ -979,6 +979,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "ticketWeb" operation group.
+     * @return a new {@link TicketWebGroup} bound to this client
+     */
+    public TicketWebGroup ticketWeb() {
+        return new TicketWebGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "tiktok" operation group.
      * @return a new {@link TiktokGroup} bound to this client
      */

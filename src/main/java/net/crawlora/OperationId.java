@@ -1216,8 +1216,13 @@ public final class OperationId {
     public static final String THREADS_PROFILE = "threads-profile";
     public static final String THREADS_PROFILE_POSTS = "threads-profile-posts";
     public static final String THREADS_SEARCH = "threads-search";
+    public static final String TICKET_WEB_TICKETWEB_EVENT = "ticketweb-event";
+    public static final String TICKET_WEB_TICKETWEB_SEARCH = "ticketweb-search";
+    public static final String TICKET_WEB_TICKETWEB_VENUE = "ticketweb-venue";
     public static final String TICKETMASTER_ATTRACTION = "ticketmaster-attraction";
     public static final String TICKETMASTER_ATTRACTION_EVENTS = "ticketmaster-attraction-events";
+    public static final String TICKETMASTER_ATTRACTION_RELATED = "ticketmaster-attraction-related";
+    public static final String TICKETMASTER_ATTRACTION_REVIEWS = "ticketmaster-attraction-reviews";
     public static final String TICKETMASTER_DISCOVER_CATEGORIES = "ticketmaster-discover-categories";
     public static final String TICKETMASTER_DISCOVER_CATEGORY_EVENTS = "ticketmaster-discover-category-events";
     public static final String TICKETMASTER_DISCOVER_CITIES = "ticketmaster-discover-cities";
@@ -1225,7 +1230,9 @@ public final class OperationId {
     public static final String TICKETMASTER_EVENT = "ticketmaster-event";
     public static final String TICKETMASTER_SEARCH_EVENTS = "ticketmaster-search-events";
     public static final String TICKETMASTER_SUGGEST = "ticketmaster-suggest";
+    public static final String TICKETMASTER_TRENDING_ATTRACTIONS = "ticketmaster-trending-attractions";
     public static final String TICKETMASTER_VENUE = "ticketmaster-venue";
+    public static final String TICKETMASTER_VENUE_ENHANCED_DETAILS = "ticketmaster-venue-enhanced-details";
     public static final String TICKETMASTER_VENUE_EVENTS = "ticketmaster-venue-events";
     public static final String TIKTOK_CATEGORY = "tiktok-category";
     public static final String TIKTOK_CHALLENGE = "tiktok-challenge";

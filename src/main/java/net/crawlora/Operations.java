@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 1468;
+    public static final int OPERATION_COUNT = 1475;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -5957,6 +5957,7 @@ public final class Operations {
             new QueryParam("render_tier", false, "string", List.of("http", "browser")),
             new QueryParam("seed_source", false, "string", List.of()),
             new QueryParam("has_captcha", false, "boolean", List.of()),
+            new QueryParam("is_infrastructure", false, "boolean", List.of()),
             new QueryParam("reachable", false, "boolean", List.of()),
             new QueryParam("min_tech_count", false, "integer", List.of()),
             new QueryParam("run_id", false, "string", List.of())),
@@ -6001,6 +6002,7 @@ public final class Operations {
             new QueryParam("render_tier", false, "string", List.of("http", "browser")),
             new QueryParam("seed_source", false, "string", List.of()),
             new QueryParam("has_captcha", false, "boolean", List.of()),
+            new QueryParam("is_infrastructure", false, "boolean", List.of()),
             new QueryParam("reachable", false, "boolean", List.of()),
             new QueryParam("min_tech_count", false, "integer", List.of()),
             new QueryParam("run_id", false, "string", List.of()),
@@ -18330,6 +18332,34 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("ticketmaster-attraction-related", new Operation(
+            "ticketmaster-attraction-related",
+            "GET",
+            "/ticketmaster/attraction-related",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ticketmaster-attraction-reviews", new Operation(
+            "ticketmaster-attraction-reviews",
+            "GET",
+            "/ticketmaster/attraction-reviews",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("ticketmaster-discover-categories", new Operation(
             "ticketmaster-discover-categories",
             "GET",
@@ -18430,10 +18460,35 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("ticketmaster-trending-attractions", new Operation(
+            "ticketmaster-trending-attractions",
+            "GET",
+            "/ticketmaster/trending-attractions",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("ticketmaster-venue", new Operation(
             "ticketmaster-venue",
             "GET",
             "/ticketmaster/venue",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ticketmaster-venue-enhanced-details", new Operation(
+            "ticketmaster-venue-enhanced-details",
+            "GET",
+            "/ticketmaster/venue-enhanced-details",
             List.of(),
             List.of(
             new QueryParam("id", true, "string", List.of())),
@@ -18452,6 +18507,47 @@ public final class Operations {
             new QueryParam("id", true, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("sort", false, "string", List.of("relevance", "date"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("ticketweb-event", new Operation(
+            "ticketweb-event",
+            "GET",
+            "/ticketweb/event",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ticketweb-search", new Operation(
+            "ticketweb-search",
+            "GET",
+            "/ticketweb/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("ticketweb-venue", new Operation(
+            "ticketweb-venue",
+            "GET",
+            "/ticketweb/venue",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -18981,6 +19077,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations21(Map<String, Operation> m) {
         m.put("tripadvisor-place", new Operation(
             "tripadvisor-place",
             "GET",
@@ -19100,9 +19199,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations21(Map<String, Operation> m) {
         m.put("trustmrr-category", new Operation(
             "trustmrr-category",
             "GET",
@@ -19834,6 +19930,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations22(Map<String, Operation> m) {
         m.put("vinted-categories", new Operation(
             "vinted-categories",
             "GET",
@@ -19928,9 +20027,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations22(Map<String, Operation> m) {
         m.put("walmart-search", new Operation(
             "walmart-search",
             "GET",
@@ -20626,6 +20722,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations23(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-options", new Operation(
             "yahoo-finance-ticker-options",
             "GET",
@@ -20712,9 +20811,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations23(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-sustainability", new Operation(
             "yahoo-finance-ticker-sustainability",
             "GET",
@@ -21413,6 +21509,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations24(Map<String, Operation> m) {
         m.put("yelp-business-reviews-search", new Operation(
             "yelp-business-reviews-search",
             "GET",
@@ -21507,9 +21606,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations24(Map<String, Operation> m) {
         m.put("youtube-channel-videos", new Operation(
             "youtube-channel-videos",
             "GET",
@@ -23601,6 +23697,8 @@ public final class Operations {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("attraction", "ticketmaster-attraction");
             group.put("attractionEvents", "ticketmaster-attraction-events");
+            group.put("attractionRelated", "ticketmaster-attraction-related");
+            group.put("attractionReviews", "ticketmaster-attraction-reviews");
             group.put("discoverCategories", "ticketmaster-discover-categories");
             group.put("discoverCategoryEvents", "ticketmaster-discover-category-events");
             group.put("discoverCities", "ticketmaster-discover-cities");
@@ -23608,9 +23706,18 @@ public final class Operations {
             group.put("event", "ticketmaster-event");
             group.put("searchEvents", "ticketmaster-search-events");
             group.put("suggest", "ticketmaster-suggest");
+            group.put("trendingAttractions", "ticketmaster-trending-attractions");
             group.put("venue", "ticketmaster-venue");
+            group.put("venueEnhancedDetails", "ticketmaster-venue-enhanced-details");
             group.put("venueEvents", "ticketmaster-venue-events");
             g.put("ticketmaster", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("ticketwebEvent", "ticketweb-event");
+            group.put("ticketwebSearch", "ticketweb-search");
+            group.put("ticketwebVenue", "ticketweb-venue");
+            g.put("ticketWeb", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
