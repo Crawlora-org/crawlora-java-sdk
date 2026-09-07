@@ -41,6 +41,50 @@ public final class AdidasGroup {
     }
 
     /**
+     * adidas-product-review-topics (GET /adidas/product/review-topics).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviewTopics(Map<String, Object> params) {
+        return productReviewTopics(params, null);
+    }
+
+    /**
+     * adidas-product-review-topics (GET /adidas/product/review-topics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviewTopics(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("adidas-product-review-topics", params);
+        return client.request("adidas-product-review-topics", params, options);
+    }
+
+    /**
+     * adidas-product-reviews (GET /adidas/product/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviews(Map<String, Object> params) {
+        return productReviews(params, null);
+    }
+
+    /**
+     * adidas-product-reviews (GET /adidas/product/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("adidas-product-reviews", params);
+        return client.request("adidas-product-reviews", params, options);
+    }
+
+    /**
      * adidas-search (GET /adidas/search).
      *
      * @param params operation parameters

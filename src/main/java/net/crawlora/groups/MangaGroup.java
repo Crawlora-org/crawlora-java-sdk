@@ -93,4 +93,70 @@ public final class MangaGroup {
         return client.request("manga-title", params, options);
     }
 
+    /**
+     * manga-title-characters (GET /manga/title/{id}/characters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleCharacters(Map<String, Object> params) {
+        return titleCharacters(params, null);
+    }
+
+    /**
+     * manga-title-characters (GET /manga/title/{id}/characters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleCharacters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("manga-title-characters", params);
+        return client.request("manga-title-characters", params, options);
+    }
+
+    /**
+     * manga-title-recommendations (GET /manga/title/{id}/recommendations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleRecommendations(Map<String, Object> params) {
+        return titleRecommendations(params, null);
+    }
+
+    /**
+     * manga-title-recommendations (GET /manga/title/{id}/recommendations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleRecommendations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("manga-title-recommendations", params);
+        return client.request("manga-title-recommendations", params, options);
+    }
+
+    /**
+     * manga-title-staff (GET /manga/title/{id}/staff).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleStaff(Map<String, Object> params) {
+        return titleStaff(params, null);
+    }
+
+    /**
+     * manga-title-staff (GET /manga/title/{id}/staff). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleStaff(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("manga-title-staff", params);
+        return client.request("manga-title-staff", params, options);
+    }
+
 }

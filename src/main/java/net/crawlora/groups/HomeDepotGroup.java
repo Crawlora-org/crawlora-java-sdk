@@ -137,4 +137,26 @@ public final class HomeDepotGroup {
         return client.request("homedepot-search", params, options);
     }
 
+    /**
+     * homedepot-suggest (GET /homedepot/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object homedepotSuggest(Map<String, Object> params) {
+        return homedepotSuggest(params, null);
+    }
+
+    /**
+     * homedepot-suggest (GET /homedepot/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object homedepotSuggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("homedepot-suggest", params);
+        return client.request("homedepot-suggest", params, options);
+    }
+
 }

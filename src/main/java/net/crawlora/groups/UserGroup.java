@@ -133,4 +133,26 @@ public final class UserGroup {
         return client.request("user-me-api-keys-reveal", params, options);
     }
 
+    /**
+     * user-me-browser-language (POST /user/me/browser-language).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meBrowserLanguage(Map<String, Object> params) {
+        return meBrowserLanguage(params, null);
+    }
+
+    /**
+     * user-me-browser-language (POST /user/me/browser-language). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object meBrowserLanguage(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("user-me-browser-language", params);
+        return client.request("user-me-browser-language", params, options);
+    }
+
 }

@@ -19,6 +19,37 @@ public final class ChewyGroup {
     }
 
     /**
+     * chewy-brands (GET /chewy/brands).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params) {
+        return brands(params, null);
+    }
+
+    /**
+     * chewy-brands (GET /chewy/brands). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-brands", params);
+        return client.request("chewy-brands", params, options);
+    }
+
+    /**
+     * chewy-brands (GET /chewy/brands). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands() {
+        return brands(Map.of(), null);
+    }
+
+    /**
      * chewy-categories (GET /chewy/categories).
      *
      * @param params operation parameters
@@ -72,6 +103,37 @@ public final class ChewyGroup {
     }
 
     /**
+     * chewy-facets (GET /chewy/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object facets(Map<String, Object> params) {
+        return facets(params, null);
+    }
+
+    /**
+     * chewy-facets (GET /chewy/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object facets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-facets", params);
+        return client.request("chewy-facets", params, options);
+    }
+
+    /**
+     * chewy-facets (GET /chewy/facets). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object facets() {
+        return facets(Map.of(), null);
+    }
+
+    /**
      * chewy-gtin-lookup (GET /chewy/gtin-lookup).
      *
      * @param params operation parameters
@@ -94,6 +156,50 @@ public final class ChewyGroup {
     }
 
     /**
+     * chewy-inventory (GET /chewy/inventory).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object inventory(Map<String, Object> params) {
+        return inventory(params, null);
+    }
+
+    /**
+     * chewy-inventory (GET /chewy/inventory). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object inventory(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-inventory", params);
+        return client.request("chewy-inventory", params, options);
+    }
+
+    /**
+     * chewy-item-attributes (GET /chewy/item-attributes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object itemAttributes(Map<String, Object> params) {
+        return itemAttributes(params, null);
+    }
+
+    /**
+     * chewy-item-attributes (GET /chewy/item-attributes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object itemAttributes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-item-attributes", params);
+        return client.request("chewy-item-attributes", params, options);
+    }
+
+    /**
      * chewy-product (GET /chewy/product).
      *
      * @param params operation parameters
@@ -113,6 +219,50 @@ public final class ChewyGroup {
     public Object product(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("chewy-product", params);
         return client.request("chewy-product", params, options);
+    }
+
+    /**
+     * chewy-product-questions (GET /chewy/product-questions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productQuestions(Map<String, Object> params) {
+        return productQuestions(params, null);
+    }
+
+    /**
+     * chewy-product-questions (GET /chewy/product-questions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productQuestions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-product-questions", params);
+        return client.request("chewy-product-questions", params, options);
+    }
+
+    /**
+     * chewy-product-reviews (GET /chewy/product-reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviews(Map<String, Object> params) {
+        return productReviews(params, null);
+    }
+
+    /**
+     * chewy-product-reviews (GET /chewy/product-reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object productReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-product-reviews", params);
+        return client.request("chewy-product-reviews", params, options);
     }
 
     /**
@@ -179,6 +329,37 @@ public final class ChewyGroup {
     public Object suggest(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("chewy-suggest", params);
         return client.request("chewy-suggest", params, options);
+    }
+
+    /**
+     * chewy-suggest (GET /chewy/suggest). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest() {
+        return suggest(Map.of(), null);
+    }
+
+    /**
+     * chewy-variants (GET /chewy/variants).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object variants(Map<String, Object> params) {
+        return variants(params, null);
+    }
+
+    /**
+     * chewy-variants (GET /chewy/variants). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object variants(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("chewy-variants", params);
+        return client.request("chewy-variants", params, options);
     }
 
 }

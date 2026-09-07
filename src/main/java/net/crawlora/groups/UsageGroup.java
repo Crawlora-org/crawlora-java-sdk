@@ -142,4 +142,35 @@ public final class UsageGroup {
         return meTimeseries(Map.of(), null);
     }
 
+    /**
+     * usage-platform-adjacency (GET /usage/platform-adjacency).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object platformAdjacency(Map<String, Object> params) {
+        return platformAdjacency(params, null);
+    }
+
+    /**
+     * usage-platform-adjacency (GET /usage/platform-adjacency). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object platformAdjacency(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("usage-platform-adjacency", params);
+        return client.request("usage-platform-adjacency", params, options);
+    }
+
+    /**
+     * usage-platform-adjacency (GET /usage/platform-adjacency). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object platformAdjacency() {
+        return platformAdjacency(Map.of(), null);
+    }
+
 }

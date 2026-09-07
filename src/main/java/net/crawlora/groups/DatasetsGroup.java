@@ -2473,6 +2473,103 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-starbucks-stores-facets (GET /datasets/starbucks-stores/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresFacets(Map<String, Object> params) {
+        return starbucksStoresFacets(params, null);
+    }
+
+    /**
+     * datasets-starbucks-stores-facets (GET /datasets/starbucks-stores/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-starbucks-stores-facets", params);
+        return client.request("datasets-starbucks-stores-facets", params, options);
+    }
+
+    /**
+     * datasets-starbucks-stores-item (GET /datasets/starbucks-stores/items/{store_number}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresItem(Map<String, Object> params) {
+        return starbucksStoresItem(params, null);
+    }
+
+    /**
+     * datasets-starbucks-stores-item (GET /datasets/starbucks-stores/items/{store_number}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-starbucks-stores-item", params);
+        return client.request("datasets-starbucks-stores-item", params, options);
+    }
+
+    /**
+     * datasets-starbucks-stores-nearby (GET /datasets/starbucks-stores/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresNearby(Map<String, Object> params) {
+        return starbucksStoresNearby(params, null);
+    }
+
+    /**
+     * datasets-starbucks-stores-nearby (GET /datasets/starbucks-stores/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-starbucks-stores-nearby", params);
+        return client.request("datasets-starbucks-stores-nearby", params, options);
+    }
+
+    /**
+     * datasets-starbucks-stores-search (GET /datasets/starbucks-stores/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresSearch(Map<String, Object> params) {
+        return starbucksStoresSearch(params, null);
+    }
+
+    /**
+     * datasets-starbucks-stores-search (GET /datasets/starbucks-stores/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-starbucks-stores-search", params);
+        return client.request("datasets-starbucks-stores-search", params, options);
+    }
+
+    /**
+     * datasets-starbucks-stores-search (GET /datasets/starbucks-stores/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object starbucksStoresSearch() {
+        return starbucksStoresSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-steam-achievements-search (GET /datasets/steam-achievements/search).
      *
      * @param params operation parameters

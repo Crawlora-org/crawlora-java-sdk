@@ -11,6 +11,22 @@ import net.crawlora.groups.*;
  */
 public abstract class ClientGroups {
     /**
+     * Typed accessor for the "sevenNow" operation group.
+     * @return a new {@link SevenNowGroup} bound to this client
+     */
+    public SevenNowGroup sevenNow() {
+        return new SevenNowGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "accor" operation group.
+     * @return a new {@link AccorGroup} bound to this client
+     */
+    public AccorGroup accor() {
+        return new AccorGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "adidas" operation group.
      * @return a new {@link AdidasGroup} bound to this client
      */
@@ -67,6 +83,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "appInsights" operation group.
+     * @return a new {@link AppInsightsGroup} bound to this client
+     */
+    public AppInsightsGroup appInsights() {
+        return new AppInsightsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "appleBooks" operation group.
      * @return a new {@link AppleBooksGroup} bound to this client
      */
@@ -83,6 +107,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "appleMaps" operation group.
+     * @return a new {@link AppleMapsGroup} bound to this client
+     */
+    public AppleMapsGroup appleMaps() {
+        return new AppleMapsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "applePodcasts" operation group.
      * @return a new {@link ApplePodcastsGroup} bound to this client
      */
@@ -96,6 +128,14 @@ public abstract class ClientGroups {
      */
     public AppStoreGroup appStore() {
         return new AppStoreGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "arbys" operation group.
+     * @return a new {@link ArbysGroup} bound to this client
+     */
+    public ArbysGroup arbys() {
+        return new ArbysGroup((CrawloraClient) this);
     }
 
     /**
@@ -123,11 +163,35 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "bbc" operation group.
+     * @return a new {@link BbcGroup} bound to this client
+     */
+    public BbcGroup bbc() {
+        return new BbcGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "bestBuy" operation group.
      * @return a new {@link BestBuyGroup} bound to this client
      */
     public BestBuyGroup bestBuy() {
         return new BestBuyGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "bigCommerce" operation group.
+     * @return a new {@link BigCommerceGroup} bound to this client
+     */
+    public BigCommerceGroup bigCommerce() {
+        return new BigCommerceGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "bilibili" operation group.
+     * @return a new {@link BilibiliGroup} bound to this client
+     */
+    public BilibiliGroup bilibili() {
+        return new BilibiliGroup((CrawloraClient) this);
     }
 
     /**
@@ -155,11 +219,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "bonhams" operation group.
+     * @return a new {@link BonhamsGroup} bound to this client
+     */
+    public BonhamsGroup bonhams() {
+        return new BonhamsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "booking" operation group.
      * @return a new {@link BookingGroup} bound to this client
      */
     public BookingGroup booking() {
         return new BookingGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "boots" operation group.
+     * @return a new {@link BootsGroup} bound to this client
+     */
+    public BootsGroup boots() {
+        return new BootsGroup((CrawloraClient) this);
     }
 
     /**
@@ -195,6 +275,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "burgerKing" operation group.
+     * @return a new {@link BurgerKingGroup} bound to this client
+     */
+    public BurgerKingGroup burgerKing() {
+        return new BurgerKingGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "capterra" operation group.
      * @return a new {@link CapterraGroup} bound to this client
      */
@@ -227,11 +315,35 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "chickFilA" operation group.
+     * @return a new {@link ChickFilAGroup} bound to this client
+     */
+    public ChickFilAGroup chickFilA() {
+        return new ChickFilAGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "chipotle" operation group.
+     * @return a new {@link ChipotleGroup} bound to this client
+     */
+    public ChipotleGroup chipotle() {
+        return new ChipotleGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "chromeWebStore" operation group.
      * @return a new {@link ChromeWebStoreGroup} bound to this client
      */
     public ChromeWebStoreGroup chromeWebStore() {
         return new ChromeWebStoreGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "cnn" operation group.
+     * @return a new {@link CnnGroup} bound to this client
+     */
+    public CnnGroup cnn() {
+        return new CnnGroup((CrawloraClient) this);
     }
 
     /**
@@ -275,11 +387,51 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "courtListener" operation group.
+     * @return a new {@link CourtListenerGroup} bound to this client
+     */
+    public CourtListenerGroup courtListener() {
+        return new CourtListenerGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "cricinfo" operation group.
+     * @return a new {@link CricinfoGroup} bound to this client
+     */
+    public CricinfoGroup cricinfo() {
+        return new CricinfoGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "culvers" operation group.
+     * @return a new {@link CulversGroup} bound to this client
+     */
+    public CulversGroup culvers() {
+        return new CulversGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "cvs" operation group.
+     * @return a new {@link CvsGroup} bound to this client
+     */
+    public CvsGroup cvs() {
+        return new CvsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "datasets" operation group.
      * @return a new {@link DatasetsGroup} bound to this client
      */
     public DatasetsGroup datasets() {
         return new DatasetsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "deliveroo" operation group.
+     * @return a new {@link DeliverooGroup} bound to this client
+     */
+    public DeliverooGroup deliveroo() {
+        return new DeliverooGroup((CrawloraClient) this);
     }
 
     /**
@@ -296,6 +448,14 @@ public abstract class ClientGroups {
      */
     public DiscogsGroup discogs() {
         return new DiscogsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "dominos" operation group.
+     * @return a new {@link DominosGroup} bound to this client
+     */
+    public DominosGroup dominos() {
+        return new DominosGroup((CrawloraClient) this);
     }
 
     /**
@@ -320,6 +480,14 @@ public abstract class ClientGroups {
      */
     public DuckDuckGoSearchGroup duckDuckGoSearch() {
         return new DuckDuckGoSearchGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "dunkin" operation group.
+     * @return a new {@link DunkinGroup} bound to this client
+     */
+    public DunkinGroup dunkin() {
+        return new DunkinGroup((CrawloraClient) this);
     }
 
     /**
@@ -379,11 +547,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "fiveGuys" operation group.
+     * @return a new {@link FiveGuysGroup} bound to this client
+     */
+    public FiveGuysGroup fiveGuys() {
+        return new FiveGuysGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "fiverr" operation group.
      * @return a new {@link FiverrGroup} bound to this client
      */
     public FiverrGroup fiverr() {
         return new FiverrGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "foodpanda" operation group.
+     * @return a new {@link FoodpandaGroup} bound to this client
+     */
+    public FoodpandaGroup foodpanda() {
+        return new FoodpandaGroup((CrawloraClient) this);
     }
 
     /**
@@ -408,6 +592,14 @@ public abstract class ClientGroups {
      */
     public GitHubGroup gitHub() {
         return new GitHubGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "goat" operation group.
+     * @return a new {@link GoatGroup} bound to this client
+     */
+    public GoatGroup goat() {
+        return new GoatGroup((CrawloraClient) this);
     }
 
     /**
@@ -451,6 +643,22 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "grubhub" operation group.
+     * @return a new {@link GrubhubGroup} bound to this client
+     */
+    public GrubhubGroup grubhub() {
+        return new GrubhubGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "guardian" operation group.
+     * @return a new {@link GuardianGroup} bound to this client
+     */
+    public GuardianGroup guardian() {
+        return new GuardianGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "gymshark" operation group.
      * @return a new {@link GymsharkGroup} bound to this client
      */
@@ -472,6 +680,14 @@ public abstract class ClientGroups {
      */
     public HomeDepotGroup homeDepot() {
         return new HomeDepotGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "hotelsCom" operation group.
+     * @return a new {@link HotelsComGroup} bound to this client
+     */
+    public HotelsComGroup hotelsCom() {
+        return new HotelsComGroup((CrawloraClient) this);
     }
 
     /**
@@ -531,11 +747,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "jimmyJohns" operation group.
+     * @return a new {@link JimmyJohnsGroup} bound to this client
+     */
+    public JimmyJohnsGroup jimmyJohns() {
+        return new JimmyJohnsGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "jobs" operation group.
      * @return a new {@link JobsGroup} bound to this client
      */
     public JobsGroup jobs() {
         return new JobsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "justEat" operation group.
+     * @return a new {@link JustEatGroup} bound to this client
+     */
+    public JustEatGroup justEat() {
+        return new JustEatGroup((CrawloraClient) this);
     }
 
     /**
@@ -555,6 +787,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "kfc" operation group.
+     * @return a new {@link KfcGroup} bound to this client
+     */
+    public KfcGroup kfc() {
+        return new KfcGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "kickstarter" operation group.
      * @return a new {@link KickstarterGroup} bound to this client
      */
@@ -571,11 +811,35 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "kroger" operation group.
+     * @return a new {@link KrogerGroup} bound to this client
+     */
+    public KrogerGroup kroger() {
+        return new KrogerGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "kylieCosmetics" operation group.
      * @return a new {@link KylieCosmeticsGroup} bound to this client
      */
     public KylieCosmeticsGroup kylieCosmetics() {
         return new KylieCosmeticsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "lazada" operation group.
+     * @return a new {@link LazadaGroup} bound to this client
+     */
+    public LazadaGroup lazada() {
+        return new LazadaGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "leboncoin" operation group.
+     * @return a new {@link LeboncoinGroup} bound to this client
+     */
+    public LeboncoinGroup leboncoin() {
+        return new LeboncoinGroup((CrawloraClient) this);
     }
 
     /**
@@ -616,6 +880,14 @@ public abstract class ClientGroups {
      */
     public MangaGroup manga() {
         return new MangaGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "mcDonalds" operation group.
+     * @return a new {@link McDonaldsGroup} bound to this client
+     */
+    public McDonaldsGroup mcDonalds() {
+        return new McDonaldsGroup((CrawloraClient) this);
     }
 
     /**
@@ -699,11 +971,59 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "openSea" operation group.
+     * @return a new {@link OpenSeaGroup} bound to this client
+     */
+    public OpenSeaGroup openSea() {
+        return new OpenSeaGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "openTable" operation group.
      * @return a new {@link OpenTableGroup} bound to this client
      */
     public OpenTableGroup openTable() {
         return new OpenTableGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "otto" operation group.
+     * @return a new {@link OttoGroup} bound to this client
+     */
+    public OttoGroup otto() {
+        return new OttoGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "pandamart" operation group.
+     * @return a new {@link PandamartGroup} bound to this client
+     */
+    public PandamartGroup pandamart() {
+        return new PandamartGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "panera" operation group.
+     * @return a new {@link PaneraGroup} bound to this client
+     */
+    public PaneraGroup panera() {
+        return new PaneraGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "papaJohnS" operation group.
+     * @return a new {@link PapaJohnSGroup} bound to this client
+     */
+    public PapaJohnSGroup papaJohnS() {
+        return new PapaJohnSGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "patreon" operation group.
+     * @return a new {@link PatreonGroup} bound to this client
+     */
+    public PatreonGroup patreon() {
+        return new PatreonGroup((CrawloraClient) this);
     }
 
     /**
@@ -731,6 +1051,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "pizzaHut" operation group.
+     * @return a new {@link PizzaHutGroup} bound to this client
+     */
+    public PizzaHutGroup pizzaHut() {
+        return new PizzaHutGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "playStation" operation group.
      * @return a new {@link PlayStationGroup} bound to this client
      */
@@ -744,6 +1072,14 @@ public abstract class ClientGroups {
      */
     public PolymarketGroup polymarket() {
         return new PolymarketGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "popeyes" operation group.
+     * @return a new {@link PopeyesGroup} bound to this client
+     */
+    public PopeyesGroup popeyes() {
+        return new PopeyesGroup((CrawloraClient) this);
     }
 
     /**
@@ -771,6 +1107,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "raisingCaneS" operation group.
+     * @return a new {@link RaisingCaneSGroup} bound to this client
+     */
+    public RaisingCaneSGroup raisingCaneS() {
+        return new RaisingCaneSGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "reddit" operation group.
      * @return a new {@link RedditGroup} bound to this client
      */
@@ -795,6 +1139,22 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "rightmove" operation group.
+     * @return a new {@link RightmoveGroup} bound to this client
+     */
+    public RightmoveGroup rightmove() {
+        return new RightmoveGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "roblox" operation group.
+     * @return a new {@link RobloxGroup} bound to this client
+     */
+    public RobloxGroup roblox() {
+        return new RobloxGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "rothyS" operation group.
      * @return a new {@link RothySGroup} bound to this client
      */
@@ -808,6 +1168,14 @@ public abstract class ClientGroups {
      */
     public RottenTomatoesGroup rottenTomatoes() {
         return new RottenTomatoesGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "rover" operation group.
+     * @return a new {@link RoverGroup} bound to this client
+     */
+    public RoverGroup rover() {
+        return new RoverGroup((CrawloraClient) this);
     }
 
     /**
@@ -832,6 +1200,14 @@ public abstract class ClientGroups {
      */
     public SephoraGroup sephora() {
         return new SephoraGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "shakeShack" operation group.
+     * @return a new {@link ShakeShackGroup} bound to this client
+     */
+    public ShakeShackGroup shakeShack() {
+        return new ShakeShackGroup((CrawloraClient) this);
     }
 
     /**
@@ -883,11 +1259,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "sonic" operation group.
+     * @return a new {@link SonicGroup} bound to this client
+     */
+    public SonicGroup sonic() {
+        return new SonicGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "soundCloud" operation group.
      * @return a new {@link SoundCloudGroup} bound to this client
      */
     public SoundCloudGroup soundCloud() {
         return new SoundCloudGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "sparkFun" operation group.
+     * @return a new {@link SparkFunGroup} bound to this client
+     */
+    public SparkFunGroup sparkFun() {
+        return new SparkFunGroup((CrawloraClient) this);
     }
 
     /**
@@ -904,6 +1296,14 @@ public abstract class ClientGroups {
      */
     public SpotifyGroup spotify() {
         return new SpotifyGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "starbucks" operation group.
+     * @return a new {@link StarbucksGroup} bound to this client
+     */
+    public StarbucksGroup starbucks() {
+        return new StarbucksGroup((CrawloraClient) this);
     }
 
     /**
@@ -939,11 +1339,43 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "subway" operation group.
+     * @return a new {@link SubwayGroup} bound to this client
+     */
+    public SubwayGroup subway() {
+        return new SubwayGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "swiggy" operation group.
+     * @return a new {@link SwiggyGroup} bound to this client
+     */
+    public SwiggyGroup swiggy() {
+        return new SwiggyGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "tacoBell" operation group.
+     * @return a new {@link TacoBellGroup} bound to this client
+     */
+    public TacoBellGroup tacoBell() {
+        return new TacoBellGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "target" operation group.
      * @return a new {@link TargetGroup} bound to this client
      */
     public TargetGroup target() {
         return new TargetGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "tes" operation group.
+     * @return a new {@link TesGroup} bound to this client
+     */
+    public TesGroup tes() {
+        return new TesGroup((CrawloraClient) this);
     }
 
     /**
@@ -1000,6 +1432,14 @@ public abstract class ClientGroups {
      */
     public TmdbGroup tmdb() {
         return new TmdbGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "tokopedia" operation group.
+     * @return a new {@link TokopediaGroup} bound to this client
+     */
+    public TokopediaGroup tokopedia() {
+        return new TokopediaGroup((CrawloraClient) this);
     }
 
     /**
@@ -1131,6 +1571,22 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "wendys" operation group.
+     * @return a new {@link WendysGroup} bound to this client
+     */
+    public WendysGroup wendys() {
+        return new WendysGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "whataburger" operation group.
+     * @return a new {@link WhataburgerGroup} bound to this client
+     */
+    public WhataburgerGroup whataburger() {
+        return new WhataburgerGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "whatnot" operation group.
      * @return a new {@link WhatnotGroup} bound to this client
      */
@@ -1139,11 +1595,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "wingstop" operation group.
+     * @return a new {@link WingstopGroup} bound to this client
+     */
+    public WingstopGroup wingstop() {
+        return new WingstopGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "wish" operation group.
      * @return a new {@link WishGroup} bound to this client
      */
     public WishGroup wish() {
         return new WishGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "wolt" operation group.
+     * @return a new {@link WoltGroup} bound to this client
+     */
+    public WoltGroup wolt() {
+        return new WoltGroup((CrawloraClient) this);
     }
 
     /**
@@ -1275,11 +1747,27 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "zaxbys" operation group.
+     * @return a new {@link ZaxbysGroup} bound to this client
+     */
+    public ZaxbysGroup zaxbys() {
+        return new ZaxbysGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "zillow" operation group.
      * @return a new {@link ZillowGroup} bound to this client
      */
     public ZillowGroup zillow() {
         return new ZillowGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "zomato" operation group.
+     * @return a new {@link ZomatoGroup} bound to this client
+     */
+    public ZomatoGroup zomato() {
+        return new ZomatoGroup((CrawloraClient) this);
     }
 
 }

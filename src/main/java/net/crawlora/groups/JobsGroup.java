@@ -349,6 +349,50 @@ public final class JobsGroup {
     }
 
     /**
+     * jobs-phenom-board (GET /jobs/phenom/board).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object phenomBoard(Map<String, Object> params) {
+        return phenomBoard(params, null);
+    }
+
+    /**
+     * jobs-phenom-board (GET /jobs/phenom/board). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object phenomBoard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-phenom-board", params);
+        return client.request("jobs-phenom-board", params, options);
+    }
+
+    /**
+     * jobs-phenom-job (GET /jobs/phenom/job).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object phenomJob(Map<String, Object> params) {
+        return phenomJob(params, null);
+    }
+
+    /**
+     * jobs-phenom-job (GET /jobs/phenom/job). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object phenomJob(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jobs-phenom-job", params);
+        return client.request("jobs-phenom-job", params, options);
+    }
+
+    /**
      * jobs-pinpoint-board (GET /jobs/pinpoint/board).
      *
      * @param params operation parameters
