@@ -63,6 +63,28 @@ public final class WebGroup {
     }
 
     /**
+     * email-verify (POST /email/verify).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object emailVerify(Map<String, Object> params) {
+        return emailVerify(params, null);
+    }
+
+    /**
+     * email-verify (POST /email/verify). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object emailVerify(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("email-verify", params);
+        return client.request("email-verify", params, options);
+    }
+
+    /**
      * extract (POST /extract).
      *
      * @param params operation parameters

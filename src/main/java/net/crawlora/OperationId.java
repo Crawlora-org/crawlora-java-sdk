@@ -1768,6 +1768,7 @@ public final class OperationId {
     public static final String WAYFAIR_PRODUCT = "wayfair-product";
     public static final String WEB_ANTIBOT_CHECK = "antibot-check";
     public static final String WEB_CONTACT = "contact";
+    public static final String WEB_EMAIL_VERIFY = "email-verify";
     public static final String WEB_EXTRACT = "extract";
     public static final String WEB_SCRAPE = "web-scrape";
     public static final String WEB_TECHSTACK = "web-techstack";
