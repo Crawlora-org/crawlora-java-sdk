@@ -1538,6 +1538,7 @@ public final class OperationId {
     public static final String LIVE_SCORE_LIVESCORE_NEWS_ARTICLE = "livescore-news-article";
     public static final String LIVE_SCORE_LIVESCORE_NEWS_CATEGORIES = "livescore-news-categories";
     public static final String LIVE_SCORE_LIVESCORE_NEWS_FEED = "livescore-news-feed";
+    public static final String LIVE_SCORE_LIVESCORE_NEWS_PUBLISHERS = "livescore-news-publishers";
     public static final String LIVE_SCORE_LIVESCORE_PLAYER = "livescore-player";
     public static final String LIVE_SCORE_LIVESCORE_SCORES = "livescore-scores";
     public static final String LIVE_SCORE_LIVESCORE_SCORES_TOC = "livescore-scores-toc";

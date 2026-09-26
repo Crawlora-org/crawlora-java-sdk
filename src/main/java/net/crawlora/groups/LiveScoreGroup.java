@@ -213,6 +213,37 @@ public final class LiveScoreGroup {
     }
 
     /**
+     * livescore-news-publishers (GET /livescore/news-publishers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreNewsPublishers(Map<String, Object> params) {
+        return livescoreNewsPublishers(params, null);
+    }
+
+    /**
+     * livescore-news-publishers (GET /livescore/news-publishers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreNewsPublishers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("livescore-news-publishers", params);
+        return client.request("livescore-news-publishers", params, options);
+    }
+
+    /**
+     * livescore-news-publishers (GET /livescore/news-publishers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreNewsPublishers() {
+        return livescoreNewsPublishers(Map.of(), null);
+    }
+
+    /**
      * livescore-player (GET /livescore/player).
      *
      * @param params operation parameters
