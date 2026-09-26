@@ -2235,8 +2235,11 @@ public final class OperationId {
     public static final String ROTHY_SROTHYS_SITEMAP_URLS = "rothys-sitemap-urls";
     public static final String ROTHY_SROTHYS_SITEMAPS = "rothys-sitemaps";
     public static final String ROTHY_SROTHYS_STORE = "rothys-store";
+    public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_BROWSE_FILTERS = "rottentomatoes-browse-filters";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_BROWSE_MOVIES = "rottentomatoes-browse-movies";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_BROWSE_TV = "rottentomatoes-browse-tv";
+    public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_CRITICS_AUTHORS = "rottentomatoes-critics-authors";
+    public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_EDITORIAL_SEARCH = "rottentomatoes-editorial-search";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_EPISODE = "rottentomatoes-episode";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_MOVIE = "rottentomatoes-movie";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_MOVIE_REVIEWS = "rottentomatoes-movie-reviews";
@@ -2244,6 +2247,8 @@ public final class OperationId {
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_SEARCH = "rottentomatoes-search";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_SEASON = "rottentomatoes-season";
     public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_SERIES = "rottentomatoes-series";
+    public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_SITEMAP_URLS = "rottentomatoes-sitemap-urls";
+    public static final String ROTTEN_TOMATOES_ROTTENTOMATOES_SITEMAPS = "rottentomatoes-sitemaps";
     public static final String ROVER_SITTER_PROFILE = "rover-sitter-profile";
     public static final String ROVER_SITTER_SEARCH = "rover-sitter-search";
     public static final String ROVER_TRAINER_PROFILE = "rover-trainer-profile";

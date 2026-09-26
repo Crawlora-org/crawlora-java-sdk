@@ -19,6 +19,37 @@ public final class RottenTomatoesGroup {
     }
 
     /**
+     * rottentomatoes-browse-filters (GET /rottentomatoes/browse/filters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesBrowseFilters(Map<String, Object> params) {
+        return rottentomatoesBrowseFilters(params, null);
+    }
+
+    /**
+     * rottentomatoes-browse-filters (GET /rottentomatoes/browse/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesBrowseFilters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-browse-filters", params);
+        return client.request("rottentomatoes-browse-filters", params, options);
+    }
+
+    /**
+     * rottentomatoes-browse-filters (GET /rottentomatoes/browse/filters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesBrowseFilters() {
+        return rottentomatoesBrowseFilters(Map.of(), null);
+    }
+
+    /**
      * rottentomatoes-browse-movies (GET /rottentomatoes/browse/movies).
      *
      * @param params operation parameters
@@ -78,6 +109,59 @@ public final class RottenTomatoesGroup {
      */
     public Object rottentomatoesBrowseTv() {
         return rottentomatoesBrowseTv(Map.of(), null);
+    }
+
+    /**
+     * rottentomatoes-critics-authors (GET /rottentomatoes/critics/authors).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesCriticsAuthors(Map<String, Object> params) {
+        return rottentomatoesCriticsAuthors(params, null);
+    }
+
+    /**
+     * rottentomatoes-critics-authors (GET /rottentomatoes/critics/authors). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesCriticsAuthors(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-critics-authors", params);
+        return client.request("rottentomatoes-critics-authors", params, options);
+    }
+
+    /**
+     * rottentomatoes-critics-authors (GET /rottentomatoes/critics/authors). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesCriticsAuthors() {
+        return rottentomatoesCriticsAuthors(Map.of(), null);
+    }
+
+    /**
+     * rottentomatoes-editorial-search (GET /rottentomatoes/editorial/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialSearch(Map<String, Object> params) {
+        return rottentomatoesEditorialSearch(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-search (GET /rottentomatoes/editorial/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-search", params);
+        return client.request("rottentomatoes-editorial-search", params, options);
     }
 
     /**
@@ -286,6 +370,59 @@ public final class RottenTomatoesGroup {
      */
     public Object rottentomatoesSeries() {
         return rottentomatoesSeries(Map.of(), null);
+    }
+
+    /**
+     * rottentomatoes-sitemap-urls (GET /rottentomatoes/sitemap/urls).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesSitemapUrls(Map<String, Object> params) {
+        return rottentomatoesSitemapUrls(params, null);
+    }
+
+    /**
+     * rottentomatoes-sitemap-urls (GET /rottentomatoes/sitemap/urls). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesSitemapUrls(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-sitemap-urls", params);
+        return client.request("rottentomatoes-sitemap-urls", params, options);
+    }
+
+    /**
+     * rottentomatoes-sitemaps (GET /rottentomatoes/sitemaps).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesSitemaps(Map<String, Object> params) {
+        return rottentomatoesSitemaps(params, null);
+    }
+
+    /**
+     * rottentomatoes-sitemaps (GET /rottentomatoes/sitemaps). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesSitemaps(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-sitemaps", params);
+        return client.request("rottentomatoes-sitemaps", params, options);
+    }
+
+    /**
+     * rottentomatoes-sitemaps (GET /rottentomatoes/sitemaps). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesSitemaps() {
+        return rottentomatoesSitemaps(Map.of(), null);
     }
 
 }
