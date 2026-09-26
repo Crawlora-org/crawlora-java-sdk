@@ -41,6 +41,37 @@ public final class LinkedInGroup {
     }
 
     /**
+     * linkedin-product-categories (GET /linkedin/product/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductCategories(Map<String, Object> params) {
+        return linkedinProductCategories(params, null);
+    }
+
+    /**
+     * linkedin-product-categories (GET /linkedin/product/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("linkedin-product-categories", params);
+        return client.request("linkedin-product-categories", params, options);
+    }
+
+    /**
+     * linkedin-product-categories (GET /linkedin/product/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductCategories() {
+        return linkedinProductCategories(Map.of(), null);
+    }
+
+    /**
      * linkedin-product (GET /linkedin/product/{id}).
      *
      * @param params operation parameters
@@ -60,6 +91,37 @@ public final class LinkedInGroup {
     public Object linkedinProduct(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("linkedin-product", params);
         return client.request("linkedin-product", params, options);
+    }
+
+    /**
+     * linkedin-products-search (GET /linkedin/products/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductsSearch(Map<String, Object> params) {
+        return linkedinProductsSearch(params, null);
+    }
+
+    /**
+     * linkedin-products-search (GET /linkedin/products/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("linkedin-products-search", params);
+        return client.request("linkedin-products-search", params, options);
+    }
+
+    /**
+     * linkedin-products-search (GET /linkedin/products/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object linkedinProductsSearch() {
+        return linkedinProductsSearch(Map.of(), null);
     }
 
     /**

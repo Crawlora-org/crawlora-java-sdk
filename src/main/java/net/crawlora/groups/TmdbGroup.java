@@ -19,6 +19,59 @@ public final class TmdbGroup {
     }
 
     /**
+     * tmdb-collection (GET /tmdb/collection/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collection(Map<String, Object> params) {
+        return collection(params, null);
+    }
+
+    /**
+     * tmdb-collection (GET /tmdb/collection/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collection(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tmdb-collection", params);
+        return client.request("tmdb-collection", params, options);
+    }
+
+    /**
+     * tmdb-genres (GET /tmdb/genres).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genres(Map<String, Object> params) {
+        return genres(params, null);
+    }
+
+    /**
+     * tmdb-genres (GET /tmdb/genres). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genres(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tmdb-genres", params);
+        return client.request("tmdb-genres", params, options);
+    }
+
+    /**
+     * tmdb-genres (GET /tmdb/genres). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genres() {
+        return genres(Map.of(), null);
+    }
+
+    /**
      * tmdb-movie-list (GET /tmdb/movie/list).
      *
      * @param params operation parameters

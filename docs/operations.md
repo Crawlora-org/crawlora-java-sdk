@@ -2,10 +2,14 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `1939`
+Total operations: `3159`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| firstDibs | `firstDibs.categories` | `firstdibs-categories` | `GET /1stdibs/categories` | none | `ApiKeyAuth` | `FirstDibsCategoriesResponse` |  |
+| firstDibs | `firstDibs.designers` | `firstdibs-designers` | `GET /1stdibs/designers` | `category` (query String) | `ApiKeyAuth` | `FirstDibsDesignersResponse` |  |
+| firstDibs | `firstDibs.product` | `firstdibs-product` | `GET /1stdibs/product` | `url` (query String required) | `ApiKeyAuth` | `FirstDibsProductResponse` |  |
+| firstDibs | `firstDibs.search` | `firstdibs-search` | `GET /1stdibs/search` | `q` (query String)<br>`category` (query String)<br>`designer` (query String)<br>`color` (query String)<br>`period` (query String)<br>`location` (query String)<br>`gender` (query String)<br>`origin` (query String)<br>`price` (query String)<br>`price_min` (query Double)<br>`price_max` (query Double)<br>`on_sale` (query Boolean)<br>`measurements` (query Boolean)<br>`this_week` (query Boolean)<br>`returnable` (query Boolean)<br>`recognized_seller` (query Boolean)<br>`top_seller` (query Boolean)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query String) | `ApiKeyAuth` | `FirstDibsSearchResponse` |  |
 | sevenNow | `sevenNow.catalog` | `7now-catalog` | `GET /7now/catalog` | `store_id` (query String required)<br>`lat` (query Double)<br>`lon` (query Double)<br>`skip` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `SevenNowCatalogResponse` |  |
 | sevenNow | `sevenNow.categories` | `7now-categories` | `GET /7now/categories` | `store_id` (query String required)<br>`lat` (query Double)<br>`lon` (query Double) | `ApiKeyAuth` | `SevenNowCategoriesResponse` |  |
 | sevenNow | `sevenNow.category` | `7now-category` | `GET /7now/category` | `store_id` (query String required)<br>`category_id` (query String required)<br>`subcategory` (query String)<br>`skip` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `SevenNowCategoryResponse` |  |
@@ -19,6 +23,16 @@ Total operations: `1939`
 | sevenNow | `sevenNow.search` | `7now-search` | `GET /7now/search` | `store_id` (query String required)<br>`q` (query String required)<br>`skip` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `SevenNowSearchResponse` |  |
 | sevenNow | `sevenNow.stores` | `7now-stores` | `GET /7now/stores` | `address` (query String required) | `ApiKeyAuth` | `SevenNowStoresResponse` |  |
 | sevenNow | `sevenNow.suggest` | `7now-suggest` | `GET /7now/suggest` | `q` (query String required)<br>`vertical` (query String) | `ApiKeyAuth` | `SevenNowSuggestResponse` |  |
+| abcNewsAustralia | `abcNewsAustralia.abcauArticle` | `abcau-article` | `GET /abcau/article` | `url` (query String required) | `ApiKeyAuth` | `AbcNewsAustraliaAbcauArticleResponse` |  |
+| abcNewsAustralia | `abcNewsAustralia.abcauAuthor` | `abcau-author` | `GET /abcau/author` | `url` (query String required) | `ApiKeyAuth` | `AbcNewsAustraliaAbcauAuthorResponse` |  |
+| abcNewsAustralia | `abcNewsAustralia.abcauHeadlines` | `abcau-headlines` | `GET /abcau/headlines` | `section` (query String required) | `ApiKeyAuth` | `AbcNewsAustraliaAbcauHeadlinesResponse` |  |
+| abcNewsAustralia | `abcNewsAustralia.abcauNews` | `abcau-news` | `GET /abcau/news` | none | `ApiKeyAuth` | `AbcNewsAustraliaAbcauNewsResponse` |  |
+| abcNewsAustralia | `abcNewsAustralia.abcauSections` | `abcau-sections` | `GET /abcau/sections` | none | `ApiKeyAuth` | `AbcNewsAustraliaAbcauSectionsResponse` |  |
+| abcNews | `abcNews.abcnewsArticle` | `abcnews-article` | `GET /abcnews/article` | `url` (query String required) | `ApiKeyAuth` | `AbcNewsAbcnewsArticleResponse` |  |
+| abcNews | `abcNews.abcnewsAuthor` | `abcnews-author` | `GET /abcnews/author` | `url` (query String required) | `ApiKeyAuth` | `AbcNewsAbcnewsAuthorResponse` |  |
+| abcNews | `abcNews.abcnewsHeadlines` | `abcnews-headlines` | `GET /abcnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `AbcNewsAbcnewsHeadlinesResponse` |  |
+| abcNews | `abcNews.abcnewsNews` | `abcnews-news` | `GET /abcnews/news` | none | `ApiKeyAuth` | `AbcNewsAbcnewsNewsResponse` |  |
+| abcNews | `abcNews.abcnewsSections` | `abcnews-sections` | `GET /abcnews/sections` | none | `ApiKeyAuth` | `AbcNewsAbcnewsSectionsResponse` |  |
 | accor | `accor.amenities` | `accor-amenities` | `GET /accor/amenities` | none | `ApiKeyAuth` | `AccorAmenitiesResponse` |  |
 | accor | `accor.brands` | `accor-brands` | `GET /accor/brands` | none | `ApiKeyAuth` | `AccorBrandsResponse` |  |
 | accor | `accor.catalogHotels` | `accor-catalog-hotels` | `GET /accor/catalog/hotels` | `query` (query String)<br>`hotel_id` (query String)<br>`latitude` (query Double)<br>`longitude` (query Double)<br>`radius_km` (query Double)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `AccorCatalogHotelsResponse` |  |
@@ -49,6 +63,11 @@ Total operations: `1939`
 | airbnb | `airbnb.roomCalendar` | `airbnb-room-calendar` | `GET /airbnb/room/{id}/calendar` | `id` (path String required) | `ApiKeyAuth` | `AirbnbRoomCalendarResponse` |  |
 | airbnb | `airbnb.roomReviews` | `airbnb-room-reviews` | `GET /airbnb/room/{id}/reviews` | `id` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `AirbnbRoomReviewsResponse` |  |
 | airbnb | `airbnb.search` | `airbnb-search` | `GET /airbnb/search` | `location` (query String required)<br>`check_in` (query String)<br>`check_out` (query String)<br>`adults` (query Integer)<br>`page` (query Integer)<br>`currency` (query String)<br>`ne_lat` (query Double)<br>`ne_lng` (query Double)<br>`sw_lat` (query Double)<br>`sw_lng` (query Double)<br>`zoom` (query Integer) | `ApiKeyAuth` | `AirbnbSearchResponse` |  |
+| alJazeera | `alJazeera.aljazeeraArticle` | `aljazeera-article` | `GET /aljazeera/article` | `url` (query String required) | `ApiKeyAuth` | `AlJazeeraAljazeeraArticleResponse` |  |
+| alJazeera | `alJazeera.aljazeeraAuthor` | `aljazeera-author` | `GET /aljazeera/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `AlJazeeraAljazeeraAuthorResponse` |  |
+| alJazeera | `alJazeera.aljazeeraCategories` | `aljazeera-categories` | `GET /aljazeera/categories` | none | `ApiKeyAuth` | `AlJazeeraAljazeeraCategoriesResponse` |  |
+| alJazeera | `alJazeera.aljazeeraHeadlines` | `aljazeera-headlines` | `GET /aljazeera/headlines` | none | `ApiKeyAuth` | `AlJazeeraAljazeeraHeadlinesResponse` |  |
+| alJazeera | `alJazeera.aljazeeraTopic` | `aljazeera-topic` | `GET /aljazeera/topic` | `topic` (query String required) | `ApiKeyAuth` | `AlJazeeraAljazeeraTopicResponse` |  |
 | allbirds | `allbirds.collections` | `allbirds-collections` | `GET /allbirds/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `AllbirdsCollectionsResponse` |  |
 | allbirds | `allbirds.collectionProducts` | `allbirds-collection-products` | `GET /allbirds/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `AllbirdsCollectionProductsResponse` |  |
 | allbirds | `allbirds.pages` | `allbirds-pages` | `GET /allbirds/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `AllbirdsPagesResponse` |  |
@@ -60,11 +79,27 @@ Total operations: `1939`
 | allbirds | `allbirds.sitemapUrls` | `allbirds-sitemap-urls` | `GET /allbirds/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `AllbirdsSitemapUrlsResponse` |  |
 | allbirds | `allbirds.sitemaps` | `allbirds-sitemaps` | `GET /allbirds/sitemaps` | none | `ApiKeyAuth` | `AllbirdsSitemapsResponse` |  |
 | allbirds | `allbirds.store` | `allbirds-store` | `GET /allbirds/store` | none | `ApiKeyAuth` | `AllbirdsStoreResponse` |  |
+| alt | `alt.asset` | `alt-asset` | `GET /alt/asset` | `asset_id` (query String required) | `ApiKeyAuth` | `AltAssetResponse` |  |
+| alt | `alt.auctions` | `alt-auctions` | `GET /alt/auctions` | `q` (query String)<br>`category` (query String)<br>`grading_company` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AltAuctionsResponse` |  |
+| alt | `alt.cardSearch` | `alt-card-search` | `GET /alt/card-search` | `q` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AltCardSearchResponse` |  |
+| alt | `alt.categories` | `alt-categories` | `GET /alt/categories` | none | `ApiKeyAuth` | `AltCategoriesResponse` |  |
+| alt | `alt.listing` | `alt-listing` | `GET /alt/listing` | `id` (query String required)<br>`listing_type` (query String required) | `ApiKeyAuth` | `AltListingResponse` |  |
+| alt | `alt.marketTrends` | `alt-market-trends` | `GET /alt/market-trends` | `category` (query String) | `ApiKeyAuth` | `AltMarketTrendsResponse` |  |
+| alt | `alt.search` | `alt-search` | `GET /alt/search` | `q` (query String)<br>`category` (query String)<br>`auction_house` (query String)<br>`grading_company` (query String)<br>`listing_type` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AltSearchResponse` |  |
+| alt | `alt.soldListings` | `alt-sold-listings` | `GET /alt/sold-listings` | `q` (query String)<br>`category` (query String)<br>`auction_house` (query String)<br>`grading_company` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AltSoldListingsResponse` |  |
+| alt | `alt.topMovers` | `alt-top-movers` | `GET /alt/top-movers` | `category` (query String)<br>`subject` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `AltTopMoversResponse` |  |
+| amazonJobs | `amazonJobs.categories` | `amazon-jobs-categories` | `GET /amazon-jobs/categories` | none | `ApiKeyAuth` | `AmazonJobsCategoriesResponse` |  |
 | amazonJobs | `amazonJobs.job` | `amazon-jobs-job` | `GET /amazon-jobs/job` | `id` (query String required) | `ApiKeyAuth` | `AmazonJobsJobResponse` |  |
 | amazonJobs | `amazonJobs.search` | `amazon-jobs-search` | `GET /amazon-jobs/search` | `q` (query String)<br>`category` (query String)<br>`country` (query String)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `AmazonJobsSearchResponse` |  |
+| amazon | `amazon.charts` | `amazon-charts` | `GET /amazon/charts` | `chart` (query String required)<br>`department` (query String required)<br>`node` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `AmazonChartsResponse` |  |
+| amazon | `amazon.chartsCategories` | `amazon-charts-categories` | `GET /amazon/charts/categories` | `chart` (query String required)<br>`department` (query String)<br>`node` (query String) | `ApiKeyAuth` | `AmazonChartsCategoriesResponse` |  |
 | amazon | `amazon.product` | `amazon-product` | `GET /amazon/product/{asin}` | `asin` (path String required)<br>`language` (query String)<br>`currency` (query String) | `ApiKeyAuth` | `AmazonProductResponse` |  |
 | amazon | `amazon.search` | `amazon-search` | `GET /amazon/search` | `k` (query String required)<br>`s` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `AmazonSearchResponse` |  |
 | amazon | `amazon.suggest` | `amazon-suggest` | `GET /amazon/suggest/{keyword}` | `keyword` (path String required) | `ApiKeyAuth` | `AmazonSuggestResponse` |  |
+| androidAuthority | `androidAuthority.androidauthorityArticle` | `androidauthority-article` | `GET /androidauthority/article` | `url` (query String required) | `ApiKeyAuth` | `AndroidAuthorityAndroidauthorityArticleResponse` |  |
+| androidAuthority | `androidAuthority.androidauthorityHeadlines` | `androidauthority-headlines` | `GET /androidauthority/headlines` | `section` (query String required) | `ApiKeyAuth` | `AndroidAuthorityAndroidauthorityHeadlinesResponse` |  |
+| androidAuthority | `androidAuthority.androidauthorityNews` | `androidauthority-news` | `GET /androidauthority/news` | none | `ApiKeyAuth` | `AndroidAuthorityAndroidauthorityNewsResponse` |  |
+| androidAuthority | `androidAuthority.androidauthoritySections` | `androidauthority-sections` | `GET /androidauthority/sections` | none | `ApiKeyAuth` | `AndroidAuthorityAndroidauthoritySectionsResponse` |  |
 | anime | `anime.airingSchedule` | `anime-airing-schedule` | `GET /anime/airing-schedule` | `page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AnimeAiringScheduleResponse` |  |
 | anime | `anime.characterSearch` | `anime-character-search` | `GET /anime/character/search` | `query` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `AnimeCharacterSearchResponse` |  |
 | anime | `anime.character` | `anime-character` | `GET /anime/character/{id}` | `id` (path String required) | `ApiKeyAuth` | `AnimeCharacterResponse` |  |
@@ -80,6 +115,12 @@ Total operations: `1939`
 | appInsights | `appInsights.apkTeardownDeleteJob` | `apkTeardownDeleteJob` | `DELETE /apk-teardown/jobs/{job_id}` | `job_id` (path String required) | `ApiKeyAuth` | `AppInsightsApkTeardownDeleteJobResponse` |  |
 | appInsights | `appInsights.apkTeardownJobStatus` | `apkTeardownJobStatus` | `GET /apk-teardown/jobs/{job_id}` | `job_id` (path String required) | `ApiKeyAuth` | `AppInsightsApkTeardownJobStatusResponse` |  |
 | appInsights | `appInsights.apkTeardownTimeline` | `apkTeardownTimeline` | `GET /apk-teardown/timeline` | `job_ids` (query String required) | `ApiKeyAuth` | `AppInsightsApkTeardownTimelineResponse` |  |
+| apNews | `apNews.apnewsArticle` | `apnews-article` | `GET /apnews/article` | `url` (query String required) | `ApiKeyAuth` | `ApNewsApnewsArticleResponse` |  |
+| apNews | `apNews.apnewsAuthor` | `apnews-author` | `GET /apnews/author` | `url` (query String required) | `ApiKeyAuth` | `ApNewsApnewsAuthorResponse` |  |
+| apNews | `apNews.apnewsFactCheck` | `apnews-fact-check` | `GET /apnews/fact-check` | none | `ApiKeyAuth` | `ApNewsApnewsFactCheckResponse` |  |
+| apNews | `apNews.apnewsHeadlines` | `apnews-headlines` | `GET /apnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `ApNewsApnewsHeadlinesResponse` |  |
+| apNews | `apNews.apnewsNews` | `apnews-news` | `GET /apnews/news` | none | `ApiKeyAuth` | `ApNewsApnewsNewsResponse` |  |
+| apNews | `apNews.apnewsSections` | `apnews-sections` | `GET /apnews/sections` | none | `ApiKeyAuth` | `ApNewsApnewsSectionsResponse` |  |
 | appleBooks | `appleBooks.audiobookSeries` | `apple-books-audiobook-series` | `GET /apple-books/audiobook-series/{id}` | `id` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppleBooksAudiobookSeriesResponse` |  |
 | appleBooks | `appleBooks.audiobookSearch` | `apple-books-audiobook-search` | `GET /apple-books/audiobook/search` | `term` (query String required)<br>`country` (query String)<br>`lang` (query String)<br>`limit` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `AppleBooksAudiobookSearchResponse` |  |
 | appleBooks | `appleBooks.audiobook` | `apple-books-audiobook` | `GET /apple-books/audiobook/{id}` | `id` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppleBooksAudiobookResponse` |  |
@@ -93,6 +134,7 @@ Total operations: `1939`
 | appleBooks | `appleBooks.search` | `apple-books-search` | `GET /apple-books/search` | `term` (query String required)<br>`country` (query String)<br>`lang` (query String)<br>`limit` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `AppleBooksSearchResponse` |  |
 | appleBooks | `appleBooks.series` | `apple-books-series` | `GET /apple-books/series/{id}` | `id` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppleBooksSeriesResponse` |  |
 | appleJobs | `appleJobs.job` | `apple-jobs-job` | `GET /apple-jobs/job` | `id` (query String required) | `ApiKeyAuth` | `AppleJobsJobResponse` |  |
+| appleJobs | `appleJobs.locations` | `apple-jobs-locations` | `GET /apple-jobs/locations` | `q` (query String) | `ApiKeyAuth` | `AppleJobsLocationsResponse` |  |
 | appleJobs | `appleJobs.search` | `apple-jobs-search` | `GET /apple-jobs/search` | `q` (query String required)<br>`location` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `AppleJobsSearchResponse` |  |
 | appleMaps | `appleMaps.autocomplete` | `apple-maps-autocomplete` | `GET /apple-maps/autocomplete` | `query` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`span` (query Double)<br>`lang` (query String)<br>`country` (query String) | `ApiKeyAuth` | `AppleMapsAutocompleteResponse` |  |
 | appleMaps | `appleMaps.categories` | `apple-maps-categories` | `GET /apple-maps/categories` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`span` (query Double)<br>`lang` (query String)<br>`country` (query String) | `ApiKeyAuth` | `AppleMapsCategoriesResponse` |  |
@@ -122,6 +164,7 @@ Total operations: `1939`
 | applePodcasts | `applePodcasts.showEpisodes` | `apple-podcasts-show-episodes` | `GET /apple-podcasts/show/{id}/episodes` | `id` (path String required)<br>`country` (query String)<br>`lang` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ApplePodcastsShowEpisodesResponse` |  |
 | applePodcasts | `applePodcasts.showRelated` | `apple-podcasts-show-related` | `GET /apple-podcasts/show/{id}/related` | `id` (path String required)<br>`country` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ApplePodcastsShowRelatedResponse` |  |
 | appStore | `appStore.app` | `appstore-app` | `GET /appstore/app` | `id` (query String)<br>`app_id` (query String)<br>`country` (query String)<br>`lang` (query String)<br>`ratings` (query Boolean)<br>`platforms` (query Boolean) | `ApiKeyAuth` | `AppStoreAppResponse` |  |
+| appStore | `appStore.categories` | `appstore-categories` | `GET /appstore/categories` | none | `ApiKeyAuth` | `AppStoreCategoriesResponse` |  |
 | appStore | `appStore.developer` | `appstore-developer` | `GET /appstore/developer/{dev_id}` | `dev_id` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppStoreDeveloperResponse` |  |
 | appStore | `appStore.editorial` | `appstore-editorial` | `GET /appstore/editorial` | `device` (query String required)<br>`section` (query String)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppStoreEditorialResponse` |  |
 | appStore | `appStore.editorialCategory` | `appstore-editorial-category` | `GET /appstore/editorial/category` | `device` (query String required)<br>`category_id` (query String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `AppStoreEditorialCategoryResponse` |  |
@@ -138,9 +181,15 @@ Total operations: `1939`
 | arbys | `arbys.location` | `arbys-location` | `GET /arbys/location` | `store_id` (query Integer required) | `ApiKeyAuth` | `ArbysLocationResponse` |  |
 | arbys | `arbys.locations` | `arbys-locations` | `GET /arbys/locations` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`limit` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `ArbysLocationsResponse` |  |
 | arbys | `arbys.menu` | `arbys-menu` | `GET /arbys/menu` | `category` (query String required)<br>`store_id` (query Integer) | `ApiKeyAuth` | `ArbysMenuResponse` |  |
+| arsTechnica | `arsTechnica.arstechnicaArticle` | `arstechnica-article` | `GET /arstechnica/article` | `url` (query String required) | `ApiKeyAuth` | `ArsTechnicaArstechnicaArticleResponse` |  |
+| arsTechnica | `arsTechnica.arstechnicaAuthor` | `arstechnica-author` | `GET /arstechnica/author` | `url` (query String required) | `ApiKeyAuth` | `ArsTechnicaArstechnicaAuthorResponse` |  |
+| arsTechnica | `arsTechnica.arstechnicaHeadlines` | `arstechnica-headlines` | `GET /arstechnica/headlines` | `section` (query String required) | `ApiKeyAuth` | `ArsTechnicaArstechnicaHeadlinesResponse` |  |
+| arsTechnica | `arsTechnica.arstechnicaNews` | `arstechnica-news` | `GET /arstechnica/news` | none | `ApiKeyAuth` | `ArsTechnicaArstechnicaNewsResponse` |  |
+| arsTechnica | `arsTechnica.arstechnicaSections` | `arstechnica-sections` | `GET /arstechnica/sections` | none | `ApiKeyAuth` | `ArsTechnicaArstechnicaSectionsResponse` |  |
 | audible | `audible.categories` | `audible-categories` | `GET /audible/categories` | none | `ApiKeyAuth` | `AudibleCategoriesResponse` |  |
 | audible | `audible.category` | `audible-category` | `GET /audible/category/{id}` | `id` (path String required) | `ApiKeyAuth` | `AudibleCategoryResponse` |  |
 | audible | `audible.charts` | `audible-charts` | `GET /audible/charts` | `chart` (query String)<br>`content_type` (query String)<br>`category_id` (query String)<br>`access_level` (query String)<br>`language` (query String)<br>`duration` (query String)<br>`originals_only` (query Boolean)<br>`page` (query Integer) | `ApiKeyAuth` | `AudibleChartsResponse` |  |
+| audible | `audible.authorCharts` | `audible-author-charts` | `GET /audible/charts/authors` | `page` (query Integer) | `ApiKeyAuth` | `AudibleAuthorChartsResponse` |  |
 | audible | `audible.editorialList` | `audible-editorial-list` | `GET /audible/list/{list}` | `list` (path String required) | `ApiKeyAuth` | `AudibleEditorialListResponse` |  |
 | audible | `audible.product` | `audible-product` | `GET /audible/product/{asin}` | `asin` (path String required) | `ApiKeyAuth` | `AudibleProductResponse` |  |
 | audible | `audible.productRelated` | `audible-product-related` | `GET /audible/product/{asin}/related` | `asin` (path String required)<br>`similarity_type` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `AudibleProductRelatedResponse` |  |
@@ -151,6 +200,20 @@ Total operations: `1939`
 | autotrader | `autotrader.dealer` | `autotrader-dealer` | `GET /autotrader/dealer/{id}` | `id` (path String required) | `ApiKeyAuth` | `AutotraderDealerResponse` |  |
 | autotrader | `autotrader.search` | `autotrader-search` | `GET /autotrader/search` | `query` (query String)<br>`zip` (query String)<br>`radius` (query Integer)<br>`make` (query String)<br>`model` (query String)<br>`trim` (query String)<br>`condition` (query String)<br>`body_style` (query String)<br>`seller_type` (query String)<br>`min_year` (query Integer)<br>`max_year` (query Integer)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`max_mileage` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `AutotraderSearchResponse` |  |
 | autotrader | `autotrader.vehicle` | `autotrader-vehicle` | `GET /autotrader/vehicle/{id}` | `id` (path String required) | `ApiKeyAuth` | `AutotraderVehicleResponse` |  |
+| axios | `axios.article` | `axios-article` | `GET /axios/article` | `url` (query String required) | `ApiKeyAuth` | `AxiosArticleResponse` |  |
+| axios | `axios.categories` | `axios-categories` | `GET /axios/categories` | none | `ApiKeyAuth` | `AxiosCategoriesResponse` |  |
+| axios | `axios.headlines` | `axios-headlines` | `GET /axios/headlines` | `topic` (query String required) | `ApiKeyAuth` | `AxiosHeadlinesResponse` |  |
+| balenciaga | `balenciaga.categories` | `balenciaga-categories` | `GET /balenciaga/categories` | none | `ApiKeyAuth` | `BalenciagaCategoriesResponse` |  |
+| balenciaga | `balenciaga.category` | `balenciaga-category` | `GET /balenciaga/category` | `path` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`filters` (query String) | `ApiKeyAuth` | `BalenciagaCategoryResponse` |  |
+| balenciaga | `balenciaga.product` | `balenciaga-product` | `GET /balenciaga/product` | `url` (query String required) | `ApiKeyAuth` | `BalenciagaProductResponse` |  |
+| balenciaga | `balenciaga.productVariants` | `balenciaga-product-variants` | `GET /balenciaga/product/variants` | `url` (query String required) | `ApiKeyAuth` | `BalenciagaProductVariantsResponse` |  |
+| balenciaga | `balenciaga.search` | `balenciaga-search` | `GET /balenciaga/search` | `q` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`filters` (query String) | `ApiKeyAuth` | `BalenciagaSearchResponse` |  |
+| balenciaga | `balenciaga.storeCountries` | `balenciaga-store-countries` | `GET /balenciaga/store-countries` | none | `ApiKeyAuth` | `BalenciagaStoreCountriesResponse` |  |
+| balenciaga | `balenciaga.stores` | `balenciaga-stores` | `GET /balenciaga/stores` | `country` (query String required) | `ApiKeyAuth` | `BalenciagaStoresResponse` |  |
+| barrons | `barrons.article` | `barrons-article` | `GET /barrons/article` | `url` (query String required) | `ApiKeyAuth` | `BarronsArticleResponse` |  |
+| barrons | `barrons.headlines` | `barrons-headlines` | `GET /barrons/headlines` | `section` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `BarronsHeadlinesResponse` |  |
+| barrons | `barrons.news` | `barrons-news` | `GET /barrons/news` | none | `ApiKeyAuth` | `BarronsNewsResponse` |  |
+| barrons | `barrons.topics` | `barrons-topics` | `GET /barrons/topics` | none | `ApiKeyAuth` | `BarronsTopicsResponse` |  |
 | bbb | `bbb.business` | `bbb-business` | `GET /bbb/business` | `url` (query String required) | `ApiKeyAuth` | `BbbBusinessResponse` |  |
 | bbb | `bbb.businessComplaints` | `bbb-business-complaints` | `GET /bbb/business/complaints` | `url` (query String required) | `ApiKeyAuth` | `BbbBusinessComplaintsResponse` |  |
 | bbb | `bbb.businessMoreInfo` | `bbb-business-more-info` | `GET /bbb/business/more-info` | `url` (query String required) | `ApiKeyAuth` | `BbbBusinessMoreInfoResponse` |  |
@@ -161,6 +224,7 @@ Total operations: `1939`
 | bbb | `bbb.scamtrackerDetail` | `bbb-scamtracker-detail` | `GET /bbb/scamtracker/{id}` | `id` (path String required) | `ApiKeyAuth` | `BbbScamtrackerDetailResponse` |  |
 | bbb | `bbb.search` | `bbb-search` | `GET /bbb/search` | `query` (query String required)<br>`location` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `BbbSearchResponse` |  |
 | bbc | `bbc.article` | `bbc-article` | `GET /bbc/article` | `url` (query String required) | `ApiKeyAuth` | `BbcArticleResponse` |  |
+| bbc | `bbc.author` | `bbc-author` | `GET /bbc/author` | `url` (query String required) | `ApiKeyAuth` | `BbcAuthorResponse` |  |
 | bbc | `bbc.headlines` | `bbc-headlines` | `GET /bbc/headlines` | `section` (query String) | `ApiKeyAuth` | `BbcHeadlinesResponse` |  |
 | bbc | `bbc.live` | `bbc-live` | `GET /bbc/live` | `url` (query String required) | `ApiKeyAuth` | `BbcLiveResponse` |  |
 | bbc | `bbc.search` | `bbc-search` | `GET /bbc/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `BbcSearchResponse` |  |
@@ -186,6 +250,11 @@ Total operations: `1939`
 | bilibili | `bilibili.ranking` | `bilibili-ranking` | `GET /bilibili/ranking` | none | `ApiKeyAuth` | `BilibiliRankingResponse` |  |
 | bilibili | `bilibili.verticalHome` | `bilibili-vertical-home` | `GET /bilibili/vertical-home` | `category` (query String required) | `ApiKeyAuth` | `BilibiliVerticalHomeResponse` |  |
 | bilibili | `bilibili.weekly` | `bilibili-weekly` | `GET /bilibili/weekly` | `number` (query Integer) | `ApiKeyAuth` | `BilibiliWeeklyResponse` |  |
+| billboard | `billboard.article` | `billboard-article` | `GET /billboard/article` | `url` (query String required) | `ApiKeyAuth` | `BillboardArticleResponse` |  |
+| billboard | `billboard.author` | `billboard-author` | `GET /billboard/author` | `url` (query String required) | `ApiKeyAuth` | `BillboardAuthorResponse` |  |
+| billboard | `billboard.headlines` | `billboard-headlines` | `GET /billboard/headlines` | `section` (query String required) | `ApiKeyAuth` | `BillboardHeadlinesResponse` |  |
+| billboard | `billboard.news` | `billboard-news` | `GET /billboard/news` | none | `ApiKeyAuth` | `BillboardNewsResponse` |  |
+| billboard | `billboard.sections` | `billboard-sections` | `GET /billboard/sections` | none | `ApiKeyAuth` | `BillboardSectionsResponse` |  |
 | billing | `billing.me` | `billing-me` | `GET /billing/me` | none | `ApiKeyAuth` | `BillingMeResponse` |  |
 | billing | `billing.meCheckout` | `billing-me-checkout` | `POST /billing/me/checkout` | `request` (body String required) | `ApiKeyAuth` | `BillingMeCheckoutResponse` |  |
 | billing | `billing.meEvents` | `billing-me-events` | `GET /billing/me/events` | `limit` (query Integer)<br>`from` (query String)<br>`to` (query String)<br>`endpoint` (query String)<br>`request_id` (query String)<br>`event_status` (query String)<br>`billable` (query Boolean) | `ApiKeyAuth` | `BillingMeEventsResponse` |  |
@@ -203,10 +272,30 @@ Total operations: `1939`
 | bing | `bing.search` | `bing-search` | `GET /bing/search` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingSearchResponse` |  |
 | bing | `bing.suggest` | `bing-suggest` | `GET /bing/suggest` | `q` (query String required)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingSuggestResponse` |  |
 | bing | `bing.videos` | `bing-videos` | `GET /bing/videos` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BingVideosResponse` |  |
+| birminghamMail | `birminghamMail.birminghammailArticle` | `birminghammail-article` | `GET /birminghammail/article` | `url` (query String required) | `ApiKeyAuth` | `BirminghamMailBirminghammailArticleResponse` |  |
+| birminghamMail | `birminghamMail.birminghammailAuthor` | `birminghammail-author` | `GET /birminghammail/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `BirminghamMailBirminghammailAuthorResponse` |  |
+| birminghamMail | `birminghamMail.birminghammailHeadlines` | `birminghammail-headlines` | `GET /birminghammail/headlines` | `section` (query String required) | `ApiKeyAuth` | `BirminghamMailBirminghammailHeadlinesResponse` |  |
+| birminghamMail | `birminghamMail.birminghammailNews` | `birminghammail-news` | `GET /birminghammail/news` | none | `ApiKeyAuth` | `BirminghamMailBirminghammailNewsResponse` |  |
+| birminghamMail | `birminghamMail.birminghammailSections` | `birminghammail-sections` | `GET /birminghammail/sections` | none | `ApiKeyAuth` | `BirminghamMailBirminghammailSectionsResponse` |  |
+| bleacherReport | `bleacherReport.bleacherreportArticle` | `bleacherreport-article` | `GET /bleacherreport/article` | `url` (query String required) | `ApiKeyAuth` | `BleacherReportBleacherreportArticleResponse` |  |
+| bleacherReport | `bleacherReport.bleacherreportAuthor` | `bleacherreport-author` | `GET /bleacherreport/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `BleacherReportBleacherreportAuthorResponse` |  |
+| bleacherReport | `bleacherReport.bleacherreportHeadlines` | `bleacherreport-headlines` | `GET /bleacherreport/headlines` | `section` (query String required) | `ApiKeyAuth` | `BleacherReportBleacherreportHeadlinesResponse` |  |
+| bleacherReport | `bleacherReport.bleacherreportNews` | `bleacherreport-news` | `GET /bleacherreport/news` | none | `ApiKeyAuth` | `BleacherReportBleacherreportNewsResponse` |  |
+| bleacherReport | `bleacherReport.bleacherreportSections` | `bleacherreport-sections` | `GET /bleacherreport/sections` | none | `ApiKeyAuth` | `BleacherReportBleacherreportSectionsResponse` |  |
+| bloomberg | `bloomberg.article` | `bloomberg-article` | `GET /bloomberg/article` | `url` (query String required) | `ApiKeyAuth` | `BloombergArticleResponse` |  |
+| bloomberg | `bloomberg.author` | `bloomberg-author` | `GET /bloomberg/author` | `url` (query String required) | `ApiKeyAuth` | `BloombergAuthorResponse` |  |
+| bloomberg | `bloomberg.categories` | `bloomberg-categories` | `GET /bloomberg/categories` | none | `ApiKeyAuth` | `BloombergCategoriesResponse` |  |
+| bloomberg | `bloomberg.headlines` | `bloomberg-headlines` | `GET /bloomberg/headlines` | `section` (query String required) | `ApiKeyAuth` | `BloombergHeadlinesResponse` |  |
+| bloomberg | `bloomberg.news` | `bloomberg-news` | `GET /bloomberg/news` | none | `ApiKeyAuth` | `BloombergNewsResponse` |  |
+| bloomberg | `bloomberg.newsSitemaps` | `bloomberg-news-sitemaps` | `GET /bloomberg/news-sitemaps` | none | `ApiKeyAuth` | `BloombergNewsSitemapsResponse` |  |
 | bluesky | `bluesky.authorFeed` | `bluesky-author-feed` | `GET /bluesky/author-feed` | `actor` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyAuthorFeedResponse` |  |
 | bluesky | `bluesky.followers` | `bluesky-followers` | `GET /bluesky/followers` | `actor` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyFollowersResponse` |  |
 | bluesky | `bluesky.follows` | `bluesky-follows` | `GET /bluesky/follows` | `actor` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyFollowsResponse` |  |
+| bluesky | `bluesky.postLikes` | `bluesky-post-likes` | `GET /bluesky/post-likes` | `uri` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyPostLikesResponse` |  |
+| bluesky | `bluesky.postQuotes` | `bluesky-post-quotes` | `GET /bluesky/post-quotes` | `uri` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyPostQuotesResponse` |  |
+| bluesky | `bluesky.postRepostedBy` | `bluesky-post-reposted-by` | `GET /bluesky/post-reposted-by` | `uri` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskyPostRepostedByResponse` |  |
 | bluesky | `bluesky.postThread` | `bluesky-post-thread` | `GET /bluesky/post-thread` | `uri` (query String required)<br>`depth` (query Integer) | `ApiKeyAuth` | `BlueskyPostThreadResponse` |  |
+| bluesky | `bluesky.posts` | `bluesky-posts` | `GET /bluesky/posts` | `uris` (query List<String> required) | `ApiKeyAuth` | `BlueskyPostsResponse` |  |
 | bluesky | `bluesky.profile` | `bluesky-profile` | `GET /bluesky/profile` | `actor` (query String required) | `ApiKeyAuth` | `BlueskyProfileResponse` |  |
 | bluesky | `bluesky.searchActors` | `bluesky-search-actors` | `GET /bluesky/search-actors` | `q` (query String required)<br>`limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `BlueskySearchActorsResponse` |  |
 | bluesky | `bluesky.trendingTopics` | `bluesky-trending-topics` | `GET /bluesky/trending-topics` | none | `ApiKeyAuth` | `BlueskyTrendingTopicsResponse` |  |
@@ -252,6 +341,11 @@ Total operations: `1939`
 | brave | `brave.search` | `brave-search` | `GET /brave/search` | `q` (query String required)<br>`offset` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`time_range` (query String)<br>`date_from` (query String)<br>`date_to` (query String) | `ApiKeyAuth` | `BraveSearchResponse` |  |
 | brave | `brave.suggest` | `brave-suggest` | `GET /brave/suggest` | `q` (query String required)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `BraveSuggestResponse` |  |
 | brave | `brave.videos` | `brave-videos` | `GET /brave/videos` | `q` (query String required)<br>`offset` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`time_range` (query String)<br>`date_from` (query String)<br>`date_to` (query String) | `ApiKeyAuth` | `BraveVideosResponse` |  |
+| breitbart | `breitbart.article` | `breitbart-article` | `GET /breitbart/article` | `url` (query String required) | `ApiKeyAuth` | `BreitbartArticleResponse` |  |
+| breitbart | `breitbart.author` | `breitbart-author` | `GET /breitbart/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `BreitbartAuthorResponse` |  |
+| breitbart | `breitbart.headlines` | `breitbart-headlines` | `GET /breitbart/headlines` | `section` (query String required) | `ApiKeyAuth` | `BreitbartHeadlinesResponse` |  |
+| breitbart | `breitbart.news` | `breitbart-news` | `GET /breitbart/news` | none | `ApiKeyAuth` | `BreitbartNewsResponse` |  |
+| breitbart | `breitbart.sections` | `breitbart-sections` | `GET /breitbart/sections` | none | `ApiKeyAuth` | `BreitbartSectionsResponse` |  |
 | brooklinen | `brooklinen.collections` | `brooklinen-collections` | `GET /brooklinen/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `BrooklinenCollectionsResponse` |  |
 | brooklinen | `brooklinen.collectionProducts` | `brooklinen-collection-products` | `GET /brooklinen/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `BrooklinenCollectionProductsResponse` |  |
 | brooklinen | `brooklinen.pages` | `brooklinen-pages` | `GET /brooklinen/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `BrooklinenPagesResponse` |  |
@@ -263,10 +357,26 @@ Total operations: `1939`
 | brooklinen | `brooklinen.sitemapUrls` | `brooklinen-sitemap-urls` | `GET /brooklinen/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `BrooklinenSitemapUrlsResponse` |  |
 | brooklinen | `brooklinen.sitemaps` | `brooklinen-sitemaps` | `GET /brooklinen/sitemaps` | none | `ApiKeyAuth` | `BrooklinenSitemapsResponse` |  |
 | brooklinen | `brooklinen.store` | `brooklinen-store` | `GET /brooklinen/store` | none | `ApiKeyAuth` | `BrooklinenStoreResponse` |  |
+| burberry | `burberry.categories` | `burberry-categories` | `GET /burberry/categories` | `department` (query String) | `ApiKeyAuth` | `BurberryCategoriesResponse` |  |
+| burberry | `burberry.category` | `burberry-category` | `GET /burberry/category` | `category` (query String required)<br>`offset` (query Integer)<br>`sort` (query String)<br>`facets` (query String) | `ApiKeyAuth` | `BurberryCategoryResponse` |  |
+| burberry | `burberry.product` | `burberry-product` | `GET /burberry/product` | `url` (query String required) | `ApiKeyAuth` | `BurberryProductResponse` |  |
+| burberry | `burberry.related` | `burberry-related` | `GET /burberry/related` | `url` (query String required) | `ApiKeyAuth` | `BurberryRelatedResponse` |  |
+| burberry | `burberry.search` | `burberry-search` | `GET /burberry/search` | `query` (query String required)<br>`offset` (query Integer)<br>`sort` (query String)<br>`facets` (query String) | `ApiKeyAuth` | `BurberrySearchResponse` |  |
+| burberry | `burberry.suggest` | `burberry-suggest` | `GET /burberry/suggest` | `query` (query String required) | `ApiKeyAuth` | `BurberrySuggestResponse` |  |
 | burgerKing | `burgerKing.burgerkingAvailability` | `burgerking-availability` | `GET /burgerking/availability` | `store_id` (query String required)<br>`market` (query String)<br>`forecast` (query Boolean) | `ApiKeyAuth` | `BurgerKingBurgerkingAvailabilityResponse` |  |
 | burgerKing | `burgerKing.burgerkingLocations` | `burgerking-locations` | `GET /burgerking/locations` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`max_results` (query Integer)<br>`market` (query String)<br>`include_availability` (query Boolean)<br>`delivery_only` (query Boolean) | `ApiKeyAuth` | `BurgerKingBurgerkingLocationsResponse` |  |
 | burgerKing | `burgerKing.burgerkingMenu` | `burgerking-menu` | `GET /burgerking/menu` | `store_id` (query String required)<br>`market` (query String) | `ApiKeyAuth` | `BurgerKingBurgerkingMenuResponse` |  |
 | burgerKing | `burgerKing.burgerkingProduct` | `burgerking-product` | `GET /burgerking/product` | `store_id` (query String required)<br>`item_id` (query String required)<br>`market` (query String) | `ApiKeyAuth` | `BurgerKingBurgerkingProductResponse` |  |
+| businessInsider | `businessInsider.businessinsiderArticle` | `businessinsider-article` | `GET /businessinsider/article` | `url` (query String required) | `ApiKeyAuth` | `BusinessInsiderBusinessinsiderArticleResponse` |  |
+| businessInsider | `businessInsider.businessinsiderAuthor` | `businessinsider-author` | `GET /businessinsider/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `BusinessInsiderBusinessinsiderAuthorResponse` |  |
+| businessInsider | `businessInsider.businessinsiderHeadlines` | `businessinsider-headlines` | `GET /businessinsider/headlines` | `section` (query String required) | `ApiKeyAuth` | `BusinessInsiderBusinessinsiderHeadlinesResponse` |  |
+| businessInsider | `businessInsider.businessinsiderNews` | `businessinsider-news` | `GET /businessinsider/news` | none | `ApiKeyAuth` | `BusinessInsiderBusinessinsiderNewsResponse` |  |
+| businessInsider | `businessInsider.businessinsiderSections` | `businessinsider-sections` | `GET /businessinsider/sections` | none | `ApiKeyAuth` | `BusinessInsiderBusinessinsiderSectionsResponse` |  |
+| businessStandard | `businessStandard.businessstandardArticle` | `businessstandard-article` | `GET /businessstandard/article` | `url` (query String required) | `ApiKeyAuth` | `BusinessStandardBusinessstandardArticleResponse` |  |
+| businessStandard | `businessStandard.businessstandardAuthor` | `businessstandard-author` | `GET /businessstandard/author` | `url` (query String required) | `ApiKeyAuth` | `BusinessStandardBusinessstandardAuthorResponse` |  |
+| businessStandard | `businessStandard.businessstandardHeadlines` | `businessstandard-headlines` | `GET /businessstandard/headlines` | `section` (query String required) | `ApiKeyAuth` | `BusinessStandardBusinessstandardHeadlinesResponse` |  |
+| businessStandard | `businessStandard.businessstandardNews` | `businessstandard-news` | `GET /businessstandard/news` | none | `ApiKeyAuth` | `BusinessStandardBusinessstandardNewsResponse` |  |
+| businessStandard | `businessStandard.businessstandardSections` | `businessstandard-sections` | `GET /businessstandard/sections` | none | `ApiKeyAuth` | `BusinessStandardBusinessstandardSectionsResponse` |  |
 | capterra | `capterra.product` | `capterra-product` | `GET /capterra/product` | `product_id` (query String required) | `ApiKeyAuth` | `CapterraProductResponse` |  |
 | capterra | `capterra.reviews` | `capterra-reviews` | `GET /capterra/product/reviews` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `CapterraReviewsResponse` |  |
 | capterra | `capterra.search` | `capterra-search` | `GET /capterra/search` | `q` (query String required) | `ApiKeyAuth` | `CapterraSearchResponse` |  |
@@ -279,6 +389,26 @@ Total operations: `1939`
 | carMax | `carMax.carmaxVehicleRecommendations` | `carmax-vehicle-recommendations` | `GET /carmax/vehicle/{stock_number}/recommendations` | `stock_number` (path String required)<br>`store_id` (query String required) | `ApiKeyAuth` | `CarMaxCarmaxVehicleRecommendationsResponse` |  |
 | carsCom | `carsCom.carsdotcomSearch` | `carsdotcom-search` | `GET /carsdotcom/search` | `zip` (query String)<br>`radius` (query Integer)<br>`stock_type` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `CarsComCarsdotcomSearchResponse` |  |
 | carsCom | `carsCom.carsdotcomVehicle` | `carsdotcom-vehicle` | `GET /carsdotcom/vehicle/{listing_id}` | `listing_id` (path String required) | `ApiKeyAuth` | `CarsComCarsdotcomVehicleResponse` |  |
+| cbcNews | `cbcNews.cbcArticle` | `cbc-article` | `GET /cbc/article` | `url` (query String required) | `ApiKeyAuth` | `CbcNewsCbcArticleResponse` |  |
+| cbcNews | `cbcNews.cbcAuthor` | `cbc-author` | `GET /cbc/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `CbcNewsCbcAuthorResponse` |  |
+| cbcNews | `cbcNews.cbcHeadlines` | `cbc-headlines` | `GET /cbc/headlines` | `section` (query String required) | `ApiKeyAuth` | `CbcNewsCbcHeadlinesResponse` |  |
+| cbcNews | `cbcNews.call` | `cbc-news` | `GET /cbc/news` | none | `ApiKeyAuth` | `CbcNewsCallResponse` |  |
+| cbcNews | `cbcNews.cbcSections` | `cbc-sections` | `GET /cbc/sections` | none | `ApiKeyAuth` | `CbcNewsCbcSectionsResponse` |  |
+| cbr | `cbr.article` | `cbr-article` | `GET /cbr/article` | `url` (query String required) | `ApiKeyAuth` | `CbrArticleResponse` |  |
+| cbr | `cbr.author` | `cbr-author` | `GET /cbr/author` | `url` (query String required) | `ApiKeyAuth` | `CbrAuthorResponse` |  |
+| cbr | `cbr.headlines` | `cbr-headlines` | `GET /cbr/headlines` | `section` (query String required) | `ApiKeyAuth` | `CbrHeadlinesResponse` |  |
+| cbr | `cbr.news` | `cbr-news` | `GET /cbr/news` | none | `ApiKeyAuth` | `CbrNewsResponse` |  |
+| cbr | `cbr.sections` | `cbr-sections` | `GET /cbr/sections` | none | `ApiKeyAuth` | `CbrSectionsResponse` |  |
+| cbsNews | `cbsNews.cbsnewsArticle` | `cbsnews-article` | `GET /cbsnews/article` | `url` (query String required) | `ApiKeyAuth` | `CbsNewsCbsnewsArticleResponse` |  |
+| cbsNews | `cbsNews.cbsnewsAuthor` | `cbsnews-author` | `GET /cbsnews/author` | `url` (query String required) | `ApiKeyAuth` | `CbsNewsCbsnewsAuthorResponse` |  |
+| cbsNews | `cbsNews.cbsnewsHeadlines` | `cbsnews-headlines` | `GET /cbsnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `CbsNewsCbsnewsHeadlinesResponse` |  |
+| cbsNews | `cbsNews.cbsnewsNews` | `cbsnews-news` | `GET /cbsnews/news` | none | `ApiKeyAuth` | `CbsNewsCbsnewsNewsResponse` |  |
+| cbsNews | `cbsNews.cbsnewsSections` | `cbsnews-sections` | `GET /cbsnews/sections` | none | `ApiKeyAuth` | `CbsNewsCbsnewsSectionsResponse` |  |
+| cbsSports | `cbsSports.cbssportsArticle` | `cbssports-article` | `GET /cbssports/article` | `url` (query String required) | `ApiKeyAuth` | `CbsSportsCbssportsArticleResponse` |  |
+| cbsSports | `cbsSports.cbssportsAuthor` | `cbssports-author` | `GET /cbssports/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `CbsSportsCbssportsAuthorResponse` |  |
+| cbsSports | `cbsSports.cbssportsHeadlines` | `cbssports-headlines` | `GET /cbssports/headlines` | `section` (query String required) | `ApiKeyAuth` | `CbsSportsCbssportsHeadlinesResponse` |  |
+| cbsSports | `cbsSports.cbssportsNews` | `cbssports-news` | `GET /cbssports/news` | none | `ApiKeyAuth` | `CbsSportsCbssportsNewsResponse` |  |
+| cbsSports | `cbsSports.cbssportsSections` | `cbssports-sections` | `GET /cbssports/sections` | none | `ApiKeyAuth` | `CbsSportsCbssportsSectionsResponse` |  |
 | chewy | `chewy.brands` | `chewy-brands` | `GET /chewy/brands` | `page` (query Integer)<br>`limit` (query Integer)<br>`name` (query String) | `ApiKeyAuth` | `ChewyBrandsResponse` |  |
 | chewy | `chewy.categories` | `chewy-categories` | `GET /chewy/categories` | `group_id` (query String)<br>`depth` (query Integer) | `ApiKeyAuth` | `ChewyCategoriesResponse` |  |
 | chewy | `chewy.category` | `chewy-category` | `GET /chewy/category` | `group_id` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`filter` (query List<String>)<br>`include_content` (query Boolean) | `ApiKeyAuth` | `ChewyCategoryResponse` |  |
@@ -293,6 +423,11 @@ Total operations: `1939`
 | chewy | `chewy.search` | `chewy-search` | `GET /chewy/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`filter` (query List<String>) | `ApiKeyAuth` | `ChewySearchResponse` |  |
 | chewy | `chewy.suggest` | `chewy-suggest` | `GET /chewy/suggest` | `term` (query String) | `ApiKeyAuth` | `ChewySuggestResponse` |  |
 | chewy | `chewy.variants` | `chewy-variants` | `GET /chewy/variants` | `id` (query String required) | `ApiKeyAuth` | `ChewyVariantsResponse` |  |
+| chicagoTribune | `chicagoTribune.chicagotribuneArticle` | `chicagotribune-article` | `GET /chicagotribune/article` | `url` (query String required) | `ApiKeyAuth` | `ChicagoTribuneChicagotribuneArticleResponse` |  |
+| chicagoTribune | `chicagoTribune.chicagotribuneAuthor` | `chicagotribune-author` | `GET /chicagotribune/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ChicagoTribuneChicagotribuneAuthorResponse` |  |
+| chicagoTribune | `chicagoTribune.chicagotribuneHeadlines` | `chicagotribune-headlines` | `GET /chicagotribune/headlines` | `section` (query String required) | `ApiKeyAuth` | `ChicagoTribuneChicagotribuneHeadlinesResponse` |  |
+| chicagoTribune | `chicagoTribune.chicagotribuneNews` | `chicagotribune-news` | `GET /chicagotribune/news` | none | `ApiKeyAuth` | `ChicagoTribuneChicagotribuneNewsResponse` |  |
+| chicagoTribune | `chicagoTribune.chicagotribuneSections` | `chicagotribune-sections` | `GET /chicagotribune/sections` | none | `ApiKeyAuth` | `ChicagoTribuneChicagotribuneSectionsResponse` |  |
 | chickFilA | `chickFilA.content` | `chick-fil-a-content` | `GET /chick-fil-a/content` | `type` (query String required)<br>`search` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`include_body` (query Boolean) | `ApiKeyAuth` | `ChickFilAContentResponse` |  |
 | chickFilA | `chickFilA.contentTaxonomy` | `chick-fil-a-content-taxonomy` | `GET /chick-fil-a/content-taxonomy` | `taxonomy` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `ChickFilAContentTaxonomyResponse` |  |
 | chickFilA | `chickFilA.faq` | `chick-fil-a-faq` | `GET /chick-fil-a/faq` | `search` (query String)<br>`category` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `ChickFilAFaqResponse` |  |
@@ -321,7 +456,30 @@ Total operations: `1939`
 | chromeWebStore | `chromeWebStore.chromewebstoreSearch` | `chromewebstore-search` | `GET /chromewebstore/search` | `term` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `ChromeWebStoreChromewebstoreSearchResponse` |  |
 | chromeWebStore | `chromeWebStore.chromewebstoreSimilar` | `chromewebstore-similar` | `GET /chromewebstore/similar` | `id` (query String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `ChromeWebStoreChromewebstoreSimilarResponse` |  |
 | chromeWebStore | `chromeWebStore.chromewebstoreSuggest` | `chromewebstore-suggest` | `GET /chromewebstore/suggest` | `term` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `ChromeWebStoreChromewebstoreSuggestResponse` |  |
+| chrono24 | `chrono24.autocomplete` | `chrono24-autocomplete` | `GET /chrono24/autocomplete` | `query` (query String required) | `ApiKeyAuth` | `Chrono24AutocompleteResponse` |  |
+| chrono24 | `chrono24.brands` | `chrono24-brands` | `GET /chrono24/brands` | none | `ApiKeyAuth` | `Chrono24BrandsResponse` |  |
+| chrono24 | `chrono24.dealer` | `chrono24-dealer` | `GET /chrono24/dealer` | `slug` (query String required) | `ApiKeyAuth` | `Chrono24DealerResponse` |  |
+| chrono24 | `chrono24.dealerReviews` | `chrono24-dealer-reviews` | `GET /chrono24/dealer/reviews` | `slug` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`min_stars` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `Chrono24DealerReviewsResponse` |  |
+| chrono24 | `chrono24.facets` | `chrono24-facets` | `GET /chrono24/facets` | `group` (query String required) | `ApiKeyAuth` | `Chrono24FacetsResponse` |  |
+| chrono24 | `chrono24.listing` | `chrono24-listing` | `GET /chrono24/listing` | `path` (query String required) | `ApiKeyAuth` | `Chrono24ListingResponse` |  |
+| chrono24 | `chrono24.models` | `chrono24-models` | `GET /chrono24/models` | `brand` (query String required) | `ApiKeyAuth` | `Chrono24ModelsResponse` |  |
+| chrono24 | `chrono24.search` | `chrono24-search` | `GET /chrono24/search` | `query` (query String)<br>`brand` (query String)<br>`model` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`condition` (query String)<br>`used_or_new` (query String)<br>`case_material` (query String)<br>`dial_color` (query String)<br>`bracelet_material` (query String)<br>`movement_type` (query String)<br>`gender` (query String)<br>`watch_type` (query String)<br>`stock_info` (query String) | `ApiKeyAuth` | `Chrono24SearchResponse` |  |
+| cna | `cna.article` | `cna-article` | `GET /cna/article` | `url` (query String required) | `ApiKeyAuth` | `CnaArticleResponse` |  |
+| cna | `cna.author` | `cna-author` | `GET /cna/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `CnaAuthorResponse` |  |
+| cna | `cna.headlines` | `cna-headlines` | `GET /cna/headlines` | `section` (query String required) | `ApiKeyAuth` | `CnaHeadlinesResponse` |  |
+| cna | `cna.news` | `cna-news` | `GET /cna/news` | none | `ApiKeyAuth` | `CnaNewsResponse` |  |
+| cna | `cna.sections` | `cna-sections` | `GET /cna/sections` | none | `ApiKeyAuth` | `CnaSectionsResponse` |  |
+| cnbc | `cnbc.article` | `cnbc-article` | `GET /cnbc/article` | `url` (query String required) | `ApiKeyAuth` | `CnbcArticleResponse` |  |
+| cnbc | `cnbc.author` | `cnbc-author` | `GET /cnbc/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `CnbcAuthorResponse` |  |
+| cnbc | `cnbc.categories` | `cnbc-categories` | `GET /cnbc/categories` | none | `ApiKeyAuth` | `CnbcCategoriesResponse` |  |
+| cnbc | `cnbc.headlines` | `cnbc-headlines` | `GET /cnbc/headlines` | `section` (query String required) | `ApiKeyAuth` | `CnbcHeadlinesResponse` |  |
+| cnet | `cnet.article` | `cnet-article` | `GET /cnet/article` | `url` (query String required) | `ApiKeyAuth` | `CnetArticleResponse` |  |
+| cnet | `cnet.author` | `cnet-author` | `GET /cnet/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `CnetAuthorResponse` |  |
+| cnet | `cnet.headlines` | `cnet-headlines` | `GET /cnet/headlines` | `section` (query String required) | `ApiKeyAuth` | `CnetHeadlinesResponse` |  |
+| cnet | `cnet.news` | `cnet-news` | `GET /cnet/news` | none | `ApiKeyAuth` | `CnetNewsResponse` |  |
+| cnet | `cnet.sections` | `cnet-sections` | `GET /cnet/sections` | none | `ApiKeyAuth` | `CnetSectionsResponse` |  |
 | cnn | `cnn.article` | `cnn-article` | `GET /cnn/article` | `url` (query String required) | `ApiKeyAuth` | `CnnArticleResponse` |  |
+| cnn | `cnn.author` | `cnn-author` | `GET /cnn/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `CnnAuthorResponse` |  |
 | cnn | `cnn.headlines` | `cnn-headlines` | `GET /cnn/headlines` | `section` (query String) | `ApiKeyAuth` | `CnnHeadlinesResponse` |  |
 | cnn | `cnn.liveStory` | `cnn-live-story` | `GET /cnn/live-story` | `url` (query String required) | `ApiKeyAuth` | `CnnLiveStoryResponse` |  |
 | coinGecko | `coinGecko.categories` | `coingecko-categories` | `GET /coingecko/categories` | `limit` (query Integer)<br>`vs_currency` (query String) | `ApiKeyAuth` | `CoinGeckoCategoriesResponse` |  |
@@ -356,6 +514,14 @@ Total operations: `1939`
 | coleHaan | `coleHaan.colehaanSitemapUrls` | `colehaan-sitemap-urls` | `GET /colehaan/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ColeHaanColehaanSitemapUrlsResponse` |  |
 | coleHaan | `coleHaan.colehaanSitemaps` | `colehaan-sitemaps` | `GET /colehaan/sitemaps` | none | `ApiKeyAuth` | `ColeHaanColehaanSitemapsResponse` |  |
 | coleHaan | `coleHaan.colehaanStore` | `colehaan-store` | `GET /colehaan/store` | none | `ApiKeyAuth` | `ColeHaanColehaanStoreResponse` |  |
+| collider | `collider.article` | `collider-article` | `GET /collider/article` | `url` (query String required) | `ApiKeyAuth` | `ColliderArticleResponse` |  |
+| collider | `collider.author` | `collider-author` | `GET /collider/author` | `url` (query String required) | `ApiKeyAuth` | `ColliderAuthorResponse` |  |
+| collider | `collider.headlines` | `collider-headlines` | `GET /collider/headlines` | `section` (query String required) | `ApiKeyAuth` | `ColliderHeadlinesResponse` |  |
+| collider | `collider.news` | `collider-news` | `GET /collider/news` | none | `ApiKeyAuth` | `ColliderNewsResponse` |  |
+| collider | `collider.sections` | `collider-sections` | `GET /collider/sections` | none | `ApiKeyAuth` | `ColliderSectionsResponse` |  |
+| comc | `comc.categories` | `comc-categories` | `GET /comc/categories` | none | `ApiKeyAuth` | `ComcCategoriesResponse` |  |
+| comc | `comc.listing` | `comc-listing` | `GET /comc/listing` | `handle` (query String required) | `ApiKeyAuth` | `ComcListingResponse` |  |
+| comc | `comc.search` | `comc-search` | `GET /comc/search` | `category` (query String)<br>`query` (query String)<br>`sort` (query String)<br>`attributes` (query String)<br>`condition` (query String)<br>`page` (query Integer)<br>`page_size` (query String) | `ApiKeyAuth` | `ComcSearchResponse` |  |
 | congress | `congress.report` | `congress-report` | `GET /congress/report` | `url` (query String required) | `ApiKeyAuth` | `CongressReportResponse` |  |
 | congress | `congress.stockDisclosures` | `congress-stock-disclosures` | `GET /congress/stock-disclosures` | `chamber` (query String)<br>`member` (query String)<br>`first_name` (query String)<br>`last_name` (query String)<br>`ticker` (query String)<br>`state` (query String)<br>`senator_state` (query String)<br>`candidate_state` (query String)<br>`district` (query String)<br>`filer_type` (query String)<br>`election_year` (query String)<br>`report_type` (query String)<br>`from` (query String)<br>`to` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `CongressStockDisclosuresResponse` |  |
 | web | `web.contact` | `contact` | `POST /contact` | `option` (body String required) | `ApiKeyAuth` | `WebContactResponse` |  |
@@ -395,6 +561,11 @@ Total operations: `1939`
 | cricinfo | `cricinfo.venue` | `cricinfo-venue` | `GET /cricinfo/venue` | `url` (query String required) | `ApiKeyAuth` | `CricinfoVenueResponse` |  |
 | cricinfo | `cricinfo.venueMatches` | `cricinfo-venue-matches` | `GET /cricinfo/venue/matches` | `url` (query String required) | `ApiKeyAuth` | `CricinfoVenueMatchesResponse` |  |
 | cricinfo | `cricinfo.videos` | `cricinfo-videos` | `GET /cricinfo/videos` | `limit` (query Integer) | `ApiKeyAuth` | `CricinfoVideosResponse` |  |
+| ctvNews | `ctvNews.ctvnewsArticle` | `ctvnews-article` | `GET /ctvnews/article` | `url` (query String required) | `ApiKeyAuth` | `CtvNewsCtvnewsArticleResponse` |  |
+| ctvNews | `ctvNews.ctvnewsAuthor` | `ctvnews-author` | `GET /ctvnews/author` | `url` (query String required) | `ApiKeyAuth` | `CtvNewsCtvnewsAuthorResponse` |  |
+| ctvNews | `ctvNews.ctvnewsHeadlines` | `ctvnews-headlines` | `GET /ctvnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `CtvNewsCtvnewsHeadlinesResponse` |  |
+| ctvNews | `ctvNews.ctvnewsNews` | `ctvnews-news` | `GET /ctvnews/news` | none | `ApiKeyAuth` | `CtvNewsCtvnewsNewsResponse` |  |
+| ctvNews | `ctvNews.ctvnewsSections` | `ctvnews-sections` | `GET /ctvnews/sections` | none | `ApiKeyAuth` | `CtvNewsCtvnewsSectionsResponse` |  |
 | culvers | `culvers.calendar` | `culvers-calendar` | `GET /culvers/calendar` | `slug` (query String required) | `ApiKeyAuth` | `CulversCalendarResponse` |  |
 | culvers | `culvers.categories` | `culvers-categories` | `GET /culvers/categories` | none | `ApiKeyAuth` | `CulversCategoriesResponse` |  |
 | culvers | `culvers.directory` | `culvers-directory` | `GET /culvers/directory` | `page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `CulversDirectoryResponse` |  |
@@ -409,6 +580,36 @@ Total operations: `1939`
 | cvs | `cvs.product` | `cvs-product` | `GET /cvs/product/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `CvsProductResponse` |  |
 | cvs | `cvs.search` | `cvs-search` | `GET /cvs/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `CvsSearchResponse` |  |
 | cvs | `cvs.storeLocator` | `cvs-store-locator` | `GET /cvs/store-locator` | `zip` (query String)<br>`address` (query String)<br>`latitude` (query Double)<br>`longitude` (query Double)<br>`service` (query String) | `ApiKeyAuth` | `CvsStoreLocatorResponse` |  |
+| theDailyCaller | `theDailyCaller.dailycallerArticle` | `dailycaller-article` | `GET /dailycaller/article` | `url` (query String required) | `ApiKeyAuth` | `TheDailyCallerDailycallerArticleResponse` |  |
+| theDailyCaller | `theDailyCaller.dailycallerAuthor` | `dailycaller-author` | `GET /dailycaller/author` | `url` (query String required) | `ApiKeyAuth` | `TheDailyCallerDailycallerAuthorResponse` |  |
+| theDailyCaller | `theDailyCaller.dailycallerHeadlines` | `dailycaller-headlines` | `GET /dailycaller/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheDailyCallerDailycallerHeadlinesResponse` |  |
+| theDailyCaller | `theDailyCaller.dailycallerNews` | `dailycaller-news` | `GET /dailycaller/news` | none | `ApiKeyAuth` | `TheDailyCallerDailycallerNewsResponse` |  |
+| theDailyCaller | `theDailyCaller.dailycallerSections` | `dailycaller-sections` | `GET /dailycaller/sections` | none | `ApiKeyAuth` | `TheDailyCallerDailycallerSectionsResponse` |  |
+| dailyExpress | `dailyExpress.dailyexpressArticle` | `dailyexpress-article` | `GET /dailyexpress/article` | `url` (query String required) | `ApiKeyAuth` | `DailyExpressDailyexpressArticleResponse` |  |
+| dailyExpress | `dailyExpress.dailyexpressAuthor` | `dailyexpress-author` | `GET /dailyexpress/author` | `url` (query String required) | `ApiKeyAuth` | `DailyExpressDailyexpressAuthorResponse` |  |
+| dailyExpress | `dailyExpress.dailyexpressHeadlines` | `dailyexpress-headlines` | `GET /dailyexpress/headlines` | `section` (query String required) | `ApiKeyAuth` | `DailyExpressDailyexpressHeadlinesResponse` |  |
+| dailyExpress | `dailyExpress.dailyexpressNews` | `dailyexpress-news` | `GET /dailyexpress/news` | none | `ApiKeyAuth` | `DailyExpressDailyexpressNewsResponse` |  |
+| dailyExpress | `dailyExpress.dailyexpressSections` | `dailyexpress-sections` | `GET /dailyexpress/sections` | none | `ApiKeyAuth` | `DailyExpressDailyexpressSectionsResponse` |  |
+| dailyMail | `dailyMail.dailymailArticle` | `dailymail-article` | `GET /dailymail/article` | `url` (query String required) | `ApiKeyAuth` | `DailyMailDailymailArticleResponse` |  |
+| dailyMail | `dailyMail.dailymailAuthor` | `dailymail-author` | `GET /dailymail/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `DailyMailDailymailAuthorResponse` |  |
+| dailyMail | `dailyMail.dailymailHeadlines` | `dailymail-headlines` | `GET /dailymail/headlines` | `section` (query String required) | `ApiKeyAuth` | `DailyMailDailymailHeadlinesResponse` |  |
+| dailyMail | `dailyMail.dailymailNews` | `dailymail-news` | `GET /dailymail/news` | none | `ApiKeyAuth` | `DailyMailDailymailNewsResponse` |  |
+| dailyMail | `dailyMail.dailymailSections` | `dailymail-sections` | `GET /dailymail/sections` | none | `ApiKeyAuth` | `DailyMailDailymailSectionsResponse` |  |
+| dailyRecord | `dailyRecord.dailyrecordArticle` | `dailyrecord-article` | `GET /dailyrecord/article` | `url` (query String required) | `ApiKeyAuth` | `DailyRecordDailyrecordArticleResponse` |  |
+| dailyRecord | `dailyRecord.dailyrecordAuthor` | `dailyrecord-author` | `GET /dailyrecord/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `DailyRecordDailyrecordAuthorResponse` |  |
+| dailyRecord | `dailyRecord.dailyrecordHeadlines` | `dailyrecord-headlines` | `GET /dailyrecord/headlines` | `section` (query String required) | `ApiKeyAuth` | `DailyRecordDailyrecordHeadlinesResponse` |  |
+| dailyRecord | `dailyRecord.dailyrecordNews` | `dailyrecord-news` | `GET /dailyrecord/news` | none | `ApiKeyAuth` | `DailyRecordDailyrecordNewsResponse` |  |
+| dailyRecord | `dailyRecord.dailyrecordSections` | `dailyrecord-sections` | `GET /dailyrecord/sections` | none | `ApiKeyAuth` | `DailyRecordDailyrecordSectionsResponse` |  |
+| dailyStarUk | `dailyStarUk.dailystarukArticle` | `dailystaruk-article` | `GET /dailystaruk/article` | `url` (query String required) | `ApiKeyAuth` | `DailyStarUkDailystarukArticleResponse` |  |
+| dailyStarUk | `dailyStarUk.dailystarukAuthor` | `dailystaruk-author` | `GET /dailystaruk/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `DailyStarUkDailystarukAuthorResponse` |  |
+| dailyStarUk | `dailyStarUk.dailystarukHeadlines` | `dailystaruk-headlines` | `GET /dailystaruk/headlines` | `section` (query String required) | `ApiKeyAuth` | `DailyStarUkDailystarukHeadlinesResponse` |  |
+| dailyStarUk | `dailyStarUk.dailystarukNews` | `dailystaruk-news` | `GET /dailystaruk/news` | none | `ApiKeyAuth` | `DailyStarUkDailystarukNewsResponse` |  |
+| dailyStarUk | `dailyStarUk.dailystarukSections` | `dailystaruk-sections` | `GET /dailystaruk/sections` | none | `ApiKeyAuth` | `DailyStarUkDailystarukSectionsResponse` |  |
+| dailyWire | `dailyWire.dailywireArticle` | `dailywire-article` | `GET /dailywire/article` | `url` (query String required) | `ApiKeyAuth` | `DailyWireDailywireArticleResponse` |  |
+| dailyWire | `dailyWire.dailywireAuthor` | `dailywire-author` | `GET /dailywire/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `DailyWireDailywireAuthorResponse` |  |
+| dailyWire | `dailyWire.dailywireHeadlines` | `dailywire-headlines` | `GET /dailywire/headlines` | `section` (query String required) | `ApiKeyAuth` | `DailyWireDailywireHeadlinesResponse` |  |
+| dailyWire | `dailyWire.dailywireNews` | `dailywire-news` | `GET /dailywire/news` | none | `ApiKeyAuth` | `DailyWireDailywireNewsResponse` |  |
+| dailyWire | `dailyWire.dailywireSections` | `dailywire-sections` | `GET /dailywire/sections` | none | `ApiKeyAuth` | `DailyWireDailywireSectionsResponse` |  |
 | datasets | `datasets.list` | `datasets-list` | `GET /datasets` | none | `ApiKeyAuth` | `DatasetsListResponse` |  |
 | datasets | `datasets.airbnbMarketsFacets` | `datasets-airbnb-markets-facets` | `GET /datasets/airbnb-markets/facets` | `facet` (query String required)<br>`group_by` (query String)<br>`country` (query String)<br>`market` (query String)<br>`superhost` (query Boolean)<br>`guest_favorite` (query Boolean)<br>`min_rating` (query Double)<br>`min_review_count` (query Integer)<br>`active_since` (query String)<br>`min_listings` (query Integer) | `ApiKeyAuth` | `DatasetsAirbnbMarketsFacetsResponse` |  |
 | datasets | `datasets.airbnbMarketsItem` | `datasets-airbnb-markets-item` | `GET /datasets/airbnb-markets/items/{country}` | `country` (path String required) | `ApiKeyAuth` | `DatasetsAirbnbMarketsItemResponse` |  |
@@ -434,7 +635,7 @@ Total operations: `1939`
 | datasets | `datasets.chromeExtensionsSearch` | `datasets-chrome-extensions-search` | `GET /datasets/chrome-extensions/search` | `q` (query String)<br>`item_type` (query String)<br>`category` (query String)<br>`developer` (query String)<br>`developer_email` (query String)<br>`permission` (query String)<br>`status` (query String)<br>`manifest_version` (query String)<br>`collects_data` (query Boolean)<br>`has_broad_host_access` (query Boolean)<br>`min_users` (query Integer)<br>`min_rating` (query Double)<br>`min_rating_count` (query Integer)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsChromeExtensionsSearchResponse` |  |
 | datasets | `datasets.chromeExtensionsTrending` | `datasets-chrome-extensions-trending` | `GET /datasets/chrome-extensions/trending` | `q` (query String)<br>`item_type` (query String)<br>`category` (query String)<br>`developer` (query String)<br>`developer_email` (query String)<br>`permission` (query String)<br>`status` (query String)<br>`manifest_version` (query String)<br>`collects_data` (query Boolean)<br>`has_broad_host_access` (query Boolean)<br>`min_users` (query Integer)<br>`min_rating` (query Double)<br>`min_rating_count` (query Integer)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsChromeExtensionsTrendingResponse` |  |
 | datasets | `datasets.creatorsSearch` | `datasets-creators-search` | `GET /datasets/creators/search` | `q` (query String)<br>`handle` (query String)<br>`niche` (query String)<br>`country` (query String)<br>`verified` (query Boolean)<br>`min_followers` (query Integer)<br>`has_email` (query Boolean)<br>`include_email` (query Boolean)<br>`include_inactive` (query Boolean)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsCreatorsSearchResponse` |  |
-| datasets | `datasets.facebookPagesFacets` | `datasets-facebook-pages-facets` | `GET /datasets/facebook-pages/facets` | `facet` (query String required)<br>`q` (query String)<br>`page_id` (query String)<br>`identifier` (query String)<br>`category` (query String)<br>`discovery_source` (query String)<br>`has_website` (query Boolean)<br>`has_email` (query Boolean)<br>`has_phone` (query Boolean)<br>`has_whatsapp` (query Boolean)<br>`min_likes` (query Integer)<br>`max_likes` (query Integer)<br>`hydrated_after` (query String)<br>`hydrated_before` (query String)<br>`sort` (query String) | `ApiKeyAuth` | `DatasetsFacebookPagesFacetsResponse` |  |
+| datasets | `datasets.facebookPagesFacets` | `datasets-facebook-pages-facets` | `GET /datasets/facebook-pages/facets` | `limit` (query Integer)<br>`order` (query String)<br>`after` (query String)<br>`facet` (query String required)<br>`q` (query String)<br>`page_id` (query String)<br>`identifier` (query String)<br>`category` (query String)<br>`discovery_source` (query String)<br>`has_website` (query Boolean)<br>`has_email` (query Boolean)<br>`has_phone` (query Boolean)<br>`has_whatsapp` (query Boolean)<br>`min_likes` (query Integer)<br>`max_likes` (query Integer)<br>`hydrated_after` (query String)<br>`hydrated_before` (query String)<br>`sort` (query String) | `ApiKeyAuth` | `DatasetsFacebookPagesFacetsResponse` |  |
 | datasets | `datasets.facebookPagesItem` | `datasets-facebook-pages-item` | `GET /datasets/facebook-pages/items/{page_id}` | `page_id` (path String required) | `ApiKeyAuth` | `DatasetsFacebookPagesItemResponse` |  |
 | datasets | `datasets.facebookPagesSearch` | `datasets-facebook-pages-search` | `GET /datasets/facebook-pages/search` | `q` (query String)<br>`page_id` (query String)<br>`identifier` (query String)<br>`category` (query String)<br>`discovery_source` (query String)<br>`has_website` (query Boolean)<br>`has_email` (query Boolean)<br>`has_phone` (query Boolean)<br>`has_whatsapp` (query Boolean)<br>`min_likes` (query Integer)<br>`max_likes` (query Integer)<br>`hydrated_after` (query String)<br>`hydrated_before` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsFacebookPagesSearchResponse` |  |
 | datasets | `datasets.githubUsersFacets` | `datasets-github-users-facets` | `GET /datasets/github-users/facets` | `facet` (query String required)<br>`q` (query String)<br>`login` (query String)<br>`company` (query String)<br>`influence_tier` (query String)<br>`country` (query String)<br>`country_code` (query String)<br>`state` (query String)<br>`city` (query String)<br>`domain` (query String)<br>`has_email` (query Boolean)<br>`has_twitter` (query Boolean)<br>`has_blog` (query Boolean)<br>`reachable` (query Boolean)<br>`active_90d` (query Boolean)<br>`hireable` (query Boolean)<br>`is_org` (query Boolean)<br>`is_bot` (query Boolean)<br>`is_suspected_automation` (query Boolean)<br>`min_followers` (query Integer)<br>`max_followers` (query Integer)<br>`min_repos` (query Integer)<br>`min_rank_score` (query Integer)<br>`min_account_age_years` (query Double)<br>`max_account_age_years` (query Double)<br>`lat` (query Double)<br>`lon` (query Double)<br>`radius_m` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `DatasetsGithubUsersFacetsResponse` |  |
@@ -463,9 +664,9 @@ Total operations: `1939`
 | datasets | `datasets.jobsItem` | `datasets-jobs-item` | `GET /datasets/jobs/items/{id}` | `id` (path String required) | `ApiKeyAuth` | `DatasetsJobsItemResponse` |  |
 | datasets | `datasets.jobsNearby` | `datasets-jobs-nearby` | `GET /datasets/jobs/nearby` | `lat` (query Double required)<br>`lon` (query Double required)<br>`radius_km` (query Double)<br>`provider` (query String)<br>`include_closed` (query Boolean)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsJobsNearbyResponse` |  |
 | datasets | `datasets.jobsSearch` | `datasets-jobs-search` | `GET /datasets/jobs/search` | `q` (query String)<br>`company` (query String)<br>`provider` (query String)<br>`department` (query String)<br>`location` (query String)<br>`city` (query String)<br>`state` (query String)<br>`country` (query String)<br>`employment_type` (query String)<br>`job_family` (query String)<br>`remote` (query Boolean)<br>`workplace_type` (query String)<br>`include_closed` (query Boolean)<br>`min_salary` (query Double)<br>`max_salary` (query Double)<br>`salary_currency` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsJobsSearchResponse` |  |
-| datasets | `datasets.journalistsFacets` | `datasets-journalists-facets` | `GET /datasets/journalists/facets` | `facet` (query String required)<br>`q` (query String)<br>`outlet` (query String)<br>`vertical` (query String)<br>`topic` (query String)<br>`contact_type` (query String) | `ApiKeyAuth` | `DatasetsJournalistsFacetsResponse` |  |
+| datasets | `datasets.journalistsFacets` | `datasets-journalists-facets` | `GET /datasets/journalists/facets` | `facet` (query String required)<br>`q` (query String)<br>`outlet` (query String)<br>`vertical` (query String)<br>`topic` (query String)<br>`contact_type` (query String)<br>`record_type` (query String)<br>`role_type` (query String)<br>`email_kind` (query String)<br>`min_outreach_readiness` (query Integer) | `ApiKeyAuth` | `DatasetsJournalistsFacetsResponse` |  |
 | datasets | `datasets.journalistsItem` | `datasets-journalists-item` | `GET /datasets/journalists/items/{outlet}/{slug}` | `outlet` (path String required)<br>`slug` (path String required) | `ApiKeyAuth` | `DatasetsJournalistsItemResponse` |  |
-| datasets | `datasets.journalistsSearch` | `datasets-journalists-search` | `GET /datasets/journalists/search` | `q` (query String)<br>`outlet` (query String)<br>`vertical` (query String)<br>`topic` (query String)<br>`contact_type` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsJournalistsSearchResponse` |  |
+| datasets | `datasets.journalistsSearch` | `datasets-journalists-search` | `GET /datasets/journalists/search` | `q` (query String)<br>`outlet` (query String)<br>`vertical` (query String)<br>`topic` (query String)<br>`contact_type` (query String)<br>`record_type` (query String)<br>`role_type` (query String)<br>`email_kind` (query String)<br>`min_outreach_readiness` (query Integer)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsJournalistsSearchResponse` |  |
 | datasets | `datasets.numbeoCitiesFacets` | `datasets-numbeo-cities-facets` | `GET /datasets/numbeo-cities/facets` | `facet` (query String required)<br>`q` (query String)<br>`country` (query String)<br>`min_cost_of_living_index` (query Double)<br>`max_cost_of_living_index` (query Double)<br>`min_quality_of_life_index` (query Double)<br>`min_crime_index` (query Double)<br>`max_crime_index` (query Double)<br>`min_safety_index` (query Double)<br>`min_health_care_index` (query Double)<br>`max_pollution_index` (query Double)<br>`max_traffic_index` (query Double) | `ApiKeyAuth` | `DatasetsNumbeoCitiesFacetsResponse` |  |
 | datasets | `datasets.numbeoCitiesItem` | `datasets-numbeo-cities-item` | `GET /datasets/numbeo-cities/items/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `DatasetsNumbeoCitiesItemResponse` |  |
 | datasets | `datasets.numbeoCitiesSearch` | `datasets-numbeo-cities-search` | `GET /datasets/numbeo-cities/search` | `q` (query String)<br>`country` (query String)<br>`min_cost_of_living_index` (query Double)<br>`max_cost_of_living_index` (query Double)<br>`min_quality_of_life_index` (query Double)<br>`min_crime_index` (query Double)<br>`max_crime_index` (query Double)<br>`min_safety_index` (query Double)<br>`min_health_care_index` (query Double)<br>`max_pollution_index` (query Double)<br>`max_traffic_index` (query Double)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsNumbeoCitiesSearchResponse` |  |
@@ -535,6 +736,16 @@ Total operations: `1939`
 | datasets | `datasets.youtubeCreatorsFacets` | `datasets-youtube-creators-facets` | `GET /datasets/youtube-creators/facets` | `facet` (query String required)<br>`q` (query String)<br>`channel_id` (query String)<br>`region` (query String)<br>`discovery_source` (query String)<br>`has_bio` (query Boolean)<br>`has_links` (query Boolean)<br>`followers_count_available` (query Boolean)<br>`videos_count_available` (query Boolean)<br>`views_count_available` (query Boolean)<br>`min_followers` (query Integer)<br>`max_followers` (query Integer)<br>`min_videos` (query Integer)<br>`max_videos` (query Integer)<br>`min_views` (query Integer)<br>`max_views` (query Integer)<br>`joined_after` (query String)<br>`joined_before` (query String)<br>`hydrated_after` (query String)<br>`hydrated_before` (query String)<br>`sort` (query String) | `ApiKeyAuth` | `DatasetsYoutubeCreatorsFacetsResponse` |  |
 | datasets | `datasets.youtubeCreatorsItem` | `datasets-youtube-creators-item` | `GET /datasets/youtube-creators/items/{channel_id}` | `channel_id` (path String required) | `ApiKeyAuth` | `DatasetsYoutubeCreatorsItemResponse` |  |
 | datasets | `datasets.youtubeCreatorsSearch` | `datasets-youtube-creators-search` | `GET /datasets/youtube-creators/search` | `q` (query String)<br>`channel_id` (query String)<br>`region` (query String)<br>`discovery_source` (query String)<br>`has_bio` (query Boolean)<br>`has_links` (query Boolean)<br>`followers_count_available` (query Boolean)<br>`videos_count_available` (query Boolean)<br>`views_count_available` (query Boolean)<br>`min_followers` (query Integer)<br>`max_followers` (query Integer)<br>`min_videos` (query Integer)<br>`max_videos` (query Integer)<br>`min_views` (query Integer)<br>`max_views` (query Integer)<br>`joined_after` (query String)<br>`joined_before` (query String)<br>`hydrated_after` (query String)<br>`hydrated_before` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `DatasetsYoutubeCreatorsSearchResponse` |  |
+| dawn | `dawn.article` | `dawn-article` | `GET /dawn/article` | `url` (query String required) | `ApiKeyAuth` | `DawnArticleResponse` |  |
+| dawn | `dawn.author` | `dawn-author` | `GET /dawn/author` | `url` (query String required) | `ApiKeyAuth` | `DawnAuthorResponse` |  |
+| dawn | `dawn.headlines` | `dawn-headlines` | `GET /dawn/headlines` | `section` (query String required) | `ApiKeyAuth` | `DawnHeadlinesResponse` |  |
+| dawn | `dawn.news` | `dawn-news` | `GET /dawn/news` | none | `ApiKeyAuth` | `DawnNewsResponse` |  |
+| dawn | `dawn.sections` | `dawn-sections` | `GET /dawn/sections` | none | `ApiKeyAuth` | `DawnSectionsResponse` |  |
+| deadline | `deadline.article` | `deadline-article` | `GET /deadline/article` | `url` (query String required) | `ApiKeyAuth` | `DeadlineArticleResponse` |  |
+| deadline | `deadline.author` | `deadline-author` | `GET /deadline/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `DeadlineAuthorResponse` |  |
+| deadline | `deadline.headlines` | `deadline-headlines` | `GET /deadline/headlines` | `section` (query String required) | `ApiKeyAuth` | `DeadlineHeadlinesResponse` |  |
+| deadline | `deadline.news` | `deadline-news` | `GET /deadline/news` | none | `ApiKeyAuth` | `DeadlineNewsResponse` |  |
+| deadline | `deadline.sections` | `deadline-sections` | `GET /deadline/sections` | none | `ApiKeyAuth` | `DeadlineSectionsResponse` |  |
 | deliveroo | `deliveroo.fulfillmentTimes` | `deliveroo-fulfillment-times` | `GET /deliveroo/fulfillment-times` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`market` (query String) | `ApiKeyAuth` | `DeliverooFulfillmentTimesResponse` |  |
 | deliveroo | `deliveroo.restaurant` | `deliveroo-restaurant` | `GET /deliveroo/restaurant` | `uname` (query String required)<br>`market` (query String) | `ApiKeyAuth` | `DeliverooRestaurantResponse` |  |
 | deliveroo | `deliveroo.restaurantMenu` | `deliveroo-restaurant-menu` | `GET /deliveroo/restaurant/menu` | `uname` (query String required)<br>`market` (query String) | `ApiKeyAuth` | `DeliverooRestaurantMenuResponse` |  |
@@ -596,6 +807,11 @@ Total operations: `1939`
 | dunkin | `dunkin.menu` | `dunkin-menu` | `GET /dunkin/menu` | none | `ApiKeyAuth` | `DunkinMenuResponse` |  |
 | dunkin | `dunkin.nearby` | `dunkin-nearby` | `GET /dunkin/nearby` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `DunkinNearbyResponse` |  |
 | dunkin | `dunkin.store` | `dunkin-store` | `GET /dunkin/store` | `path` (query String required) | `ApiKeyAuth` | `DunkinStoreResponse` |  |
+| dw | `dw.article` | `dw-article` | `GET /dw/article` | `url` (query String required) | `ApiKeyAuth` | `DwArticleResponse` |  |
+| dw | `dw.author` | `dw-author` | `GET /dw/author` | `url` (query String required) | `ApiKeyAuth` | `DwAuthorResponse` |  |
+| dw | `dw.headlines` | `dw-headlines` | `GET /dw/headlines` | `section` (query String required) | `ApiKeyAuth` | `DwHeadlinesResponse` |  |
+| dw | `dw.news` | `dw-news` | `GET /dw/news` | none | `ApiKeyAuth` | `DwNewsResponse` |  |
+| dw | `dw.sections` | `dw-sections` | `GET /dw/sections` | none | `ApiKeyAuth` | `DwSectionsResponse` |  |
 | eBay | `eBay.ebayItem` | `ebay-item` | `GET /ebay/item/{item_id}` | `item_id` (path String required) | `ApiKeyAuth` | `EBayEbayItemResponse` |  |
 | eBay | `eBay.ebayLiveStreams` | `ebay-live-streams` | `GET /ebay/live/streams` | `category` (query String)<br>`request_number` (query Integer)<br>`session_id` (query String) | `ApiKeyAuth` | `EBayEbayLiveStreamsResponse` |  |
 | eBay | `eBay.ebayLiveStreamsBatch` | `ebay-live-streams-batch` | `GET /ebay/live/streams/batch` | `ids` (query String required) | `ApiKeyAuth` | `EBayEbayLiveStreamsBatchResponse` |  |
@@ -606,6 +822,21 @@ Total operations: `1939`
 | eBay | `eBay.ebaySellerAbout` | `ebay-seller-about` | `GET /ebay/seller/{seller}/about` | `seller` (path String required) | `ApiKeyAuth` | `EBayEbaySellerAboutResponse` |  |
 | eBay | `eBay.ebaySellerFeedback` | `ebay-seller-feedback` | `GET /ebay/seller/{seller}/feedback` | `seller` (path String required)<br>`page` (query Integer)<br>`per_page` (query String) | `ApiKeyAuth` | `EBayEbaySellerFeedbackResponse` |  |
 | eBay | `eBay.ebaySellerShop` | `ebay-seller-shop` | `GET /ebay/seller/{seller}/shop` | `seller` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `EBayEbaySellerShopResponse` |  |
+| economicTimes | `economicTimes.economictimesArticle` | `economictimes-article` | `GET /economictimes/article` | `url` (query String required) | `ApiKeyAuth` | `EconomicTimesEconomictimesArticleResponse` |  |
+| economicTimes | `economicTimes.economictimesAuthor` | `economictimes-author` | `GET /economictimes/author` | `url` (query String required) | `ApiKeyAuth` | `EconomicTimesEconomictimesAuthorResponse` |  |
+| economicTimes | `economicTimes.economictimesHeadlines` | `economictimes-headlines` | `GET /economictimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `EconomicTimesEconomictimesHeadlinesResponse` |  |
+| economicTimes | `economicTimes.economictimesNews` | `economictimes-news` | `GET /economictimes/news` | none | `ApiKeyAuth` | `EconomicTimesEconomictimesNewsResponse` |  |
+| economicTimes | `economicTimes.economictimesSections` | `economictimes-sections` | `GET /economictimes/sections` | none | `ApiKeyAuth` | `EconomicTimesEconomictimesSectionsResponse` |  |
+| engadget | `engadget.article` | `engadget-article` | `GET /engadget/article` | `url` (query String required) | `ApiKeyAuth` | `EngadgetArticleResponse` |  |
+| engadget | `engadget.author` | `engadget-author` | `GET /engadget/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `EngadgetAuthorResponse` |  |
+| engadget | `engadget.headlines` | `engadget-headlines` | `GET /engadget/headlines` | `section` (query String required) | `ApiKeyAuth` | `EngadgetHeadlinesResponse` |  |
+| engadget | `engadget.news` | `engadget-news` | `GET /engadget/news` | none | `ApiKeyAuth` | `EngadgetNewsResponse` |  |
+| engadget | `engadget.sections` | `engadget-sections` | `GET /engadget/sections` | none | `ApiKeyAuth` | `EngadgetSectionsResponse` |  |
+| eNews | `eNews.eonlineArticle` | `eonline-article` | `GET /eonline/article` | `url` (query String required) | `ApiKeyAuth` | `ENewsEonlineArticleResponse` |  |
+| eNews | `eNews.eonlineAuthor` | `eonline-author` | `GET /eonline/author` | `url` (query String required) | `ApiKeyAuth` | `ENewsEonlineAuthorResponse` |  |
+| eNews | `eNews.eonlineHeadlines` | `eonline-headlines` | `GET /eonline/headlines` | `section` (query String required) | `ApiKeyAuth` | `ENewsEonlineHeadlinesResponse` |  |
+| eNews | `eNews.eonlineNews` | `eonline-news` | `GET /eonline/news` | none | `ApiKeyAuth` | `ENewsEonlineNewsResponse` |  |
+| eNews | `eNews.eonlineSections` | `eonline-sections` | `GET /eonline/sections` | none | `ApiKeyAuth` | `ENewsEonlineSectionsResponse` |  |
 | espn | `espn.athlete` | `espn-athlete` | `GET /espn/athlete` | `sport` (query String required)<br>`league` (query String required)<br>`athlete` (query String required) | `ApiKeyAuth` | `EspnAthleteResponse` |  |
 | espn | `espn.gameSummary` | `espn-game-summary` | `GET /espn/game-summary` | `sport` (query String required)<br>`league` (query String required)<br>`event` (query String required) | `ApiKeyAuth` | `EspnGameSummaryResponse` |  |
 | espn | `espn.news` | `espn-news` | `GET /espn/news` | `sport` (query String required)<br>`league` (query String required) | `ApiKeyAuth` | `EspnNewsResponse` |  |
@@ -622,6 +853,11 @@ Total operations: `1939`
 | etsy | `etsy.shop` | `etsy-shop` | `GET /etsy/shop/{id}` | `id` (path String required) | `ApiKeyAuth` | `EtsyShopResponse` |  |
 | etsy | `etsy.shopListings` | `etsy-shop-listings` | `GET /etsy/shop/{id}/listings` | `id` (path String required)<br>`q` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `EtsyShopListingsResponse` |  |
 | etsy | `etsy.shopReviews` | `etsy-shop-reviews` | `GET /etsy/shop/{id}/reviews` | `id` (path String required)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `EtsyShopReviewsResponse` |  |
+| euronews | `euronews.article` | `euronews-article` | `GET /euronews/article` | `url` (query String required) | `ApiKeyAuth` | `EuronewsArticleResponse` |  |
+| euronews | `euronews.author` | `euronews-author` | `GET /euronews/author` | `url` (query String required) | `ApiKeyAuth` | `EuronewsAuthorResponse` |  |
+| euronews | `euronews.headlines` | `euronews-headlines` | `GET /euronews/headlines` | `section` (query String required) | `ApiKeyAuth` | `EuronewsHeadlinesResponse` |  |
+| euronews | `euronews.news` | `euronews-news` | `GET /euronews/news` | none | `ApiKeyAuth` | `EuronewsNewsResponse` |  |
+| euronews | `euronews.sections` | `euronews-sections` | `GET /euronews/sections` | none | `ApiKeyAuth` | `EuronewsSectionsResponse` |  |
 | everlane | `everlane.collections` | `everlane-collections` | `GET /everlane/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `EverlaneCollectionsResponse` |  |
 | everlane | `everlane.collectionProducts` | `everlane-collection-products` | `GET /everlane/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `EverlaneCollectionProductsResponse` |  |
 | everlane | `everlane.pages` | `everlane-pages` | `GET /everlane/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `EverlanePagesResponse` |  |
@@ -633,6 +869,11 @@ Total operations: `1939`
 | everlane | `everlane.sitemapUrls` | `everlane-sitemap-urls` | `GET /everlane/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `EverlaneSitemapUrlsResponse` |  |
 | everlane | `everlane.sitemaps` | `everlane-sitemaps` | `GET /everlane/sitemaps` | none | `ApiKeyAuth` | `EverlaneSitemapsResponse` |  |
 | everlane | `everlane.store` | `everlane-store` | `GET /everlane/store` | none | `ApiKeyAuth` | `EverlaneStoreResponse` |  |
+| entertainmentWeekly | `entertainmentWeekly.ewArticle` | `ew-article` | `GET /ew/article` | `url` (query String required) | `ApiKeyAuth` | `EntertainmentWeeklyEwArticleResponse` |  |
+| entertainmentWeekly | `entertainmentWeekly.ewAuthor` | `ew-author` | `GET /ew/author` | `url` (query String required) | `ApiKeyAuth` | `EntertainmentWeeklyEwAuthorResponse` |  |
+| entertainmentWeekly | `entertainmentWeekly.ewHeadlines` | `ew-headlines` | `GET /ew/headlines` | `section` (query String required) | `ApiKeyAuth` | `EntertainmentWeeklyEwHeadlinesResponse` |  |
+| entertainmentWeekly | `entertainmentWeekly.ewNews` | `ew-news` | `GET /ew/news` | none | `ApiKeyAuth` | `EntertainmentWeeklyEwNewsResponse` |  |
+| entertainmentWeekly | `entertainmentWeekly.ewSections` | `ew-sections` | `GET /ew/sections` | none | `ApiKeyAuth` | `EntertainmentWeeklyEwSectionsResponse` |  |
 | expedia | `expedia.activitiesSearch` | `expedia-activities-search` | `POST /expedia/activities/search` | `option` (body String required) | `ApiKeyAuth` | `ExpediaActivitiesSearchResponse` |  |
 | expedia | `expedia.flightsSearch` | `expedia-flights-search` | `POST /expedia/flights/search` | `option` (body String required) | `ApiKeyAuth` | `ExpediaFlightsSearchResponse` |  |
 | expedia | `expedia.locationsSearch` | `expedia-locations-search` | `POST /expedia/locations/search` | `option` (body String required) | `ApiKeyAuth` | `ExpediaLocationsSearchResponse` |  |
@@ -642,6 +883,29 @@ Total operations: `1939`
 | expedia | `expedia.propertiesSearch` | `expedia-properties-search` | `POST /expedia/properties/search` | `option` (body String required) | `ApiKeyAuth` | `ExpediaPropertiesSearchResponse` |  |
 | facebook | `facebook.marketplaceSearch` | `facebook-marketplace-search` | `GET /facebook/marketplace/search` | `location` (query String required)<br>`query` (query String)<br>`category` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`sort_by` (query String)<br>`days_since_listed` (query String)<br>`condition` (query String) | `ApiKeyAuth` | `FacebookMarketplaceSearchResponse` |  |
 | facebook | `facebook.page` | `facebook-page` | `GET /facebook/{page}` | `page` (path String required) | `ApiKeyAuth` | `FacebookPageResponse` |  |
+| fanatics | `fanatics.categories` | `fanatics-categories` | `GET /fanatics/categories` | none | `ApiKeyAuth` | `FanaticsCategoriesResponse` |  |
+| fanatics | `fanatics.category` | `fanatics-category` | `GET /fanatics/category` | `url` (query String required)<br>`page_number` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `FanaticsCategoryResponse` |  |
+| fanatics | `fanatics.product` | `fanatics-product` | `GET /fanatics/product` | `url` (query String required) | `ApiKeyAuth` | `FanaticsProductResponse` |  |
+| fanatics | `fanatics.search` | `fanatics-search` | `GET /fanatics/search` | `query` (query String required)<br>`page_number` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `FanaticsSearchResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectAuctions` | `fanaticscollect-auctions` | `GET /fanaticscollect/auctions` | none | `ApiKeyAuth` | `FanaticsCollectFanaticscollectAuctionsResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectCategories` | `fanaticscollect-categories` | `GET /fanaticscollect/categories` | none | `ApiKeyAuth` | `FanaticsCollectFanaticscollectCategoriesResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectInstantRipsCategories` | `fanaticscollect-instant-rips-categories` | `GET /fanaticscollect/instant-rips/categories` | none | `ApiKeyAuth` | `FanaticsCollectFanaticscollectInstantRipsCategoriesResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectListing` | `fanaticscollect-listing` | `GET /fanaticscollect/listing/{id}` | `id` (path String required)<br>`type` (query String) | `ApiKeyAuth` | `FanaticsCollectFanaticscollectListingResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectSearch` | `fanaticscollect-search` | `GET /fanaticscollect/search` | `q` (query String)<br>`marketplace` (query String)<br>`category_parent` (query String)<br>`sub_category` (query String)<br>`grading_service` (query String)<br>`certified_seller` (query String)<br>`seller_id` (query String)<br>`brand` (query String)<br>`auction_urn` (query String)<br>`status` (query String)<br>`allow_offers` (query Boolean)<br>`has_offers` (query Boolean)<br>`great_price` (query Boolean)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`min_year` (query Integer)<br>`max_year` (query Integer)<br>`min_grade` (query Double)<br>`max_grade` (query Double)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `FanaticsCollectFanaticscollectSearchResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectSoldItems` | `fanaticscollect-sold-items` | `GET /fanaticscollect/sold-items` | `title` (query String)<br>`category` (query String)<br>`grading_service` (query String)<br>`eye_appeal_grade` (query String)<br>`min_year` (query Integer)<br>`max_year` (query Integer)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `FanaticsCollectFanaticscollectSoldItemsResponse` |  |
+| fanaticsCollect | `fanaticsCollect.fanaticscollectTrendingSearches` | `fanaticscollect-trending-searches` | `GET /fanaticscollect/trending-searches` | `limit` (query Integer) | `ApiKeyAuth` | `FanaticsCollectFanaticscollectTrendingSearchesResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveBrowse` | `fanaticslive-browse` | `GET /fanaticslive/browse` | `league` (query String required) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveBrowseResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveChannel` | `fanaticslive-channel` | `GET /fanaticslive/channel/{id}` | `id` (path String required) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveChannelResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveLeagues` | `fanaticslive-leagues` | `GET /fanaticslive/leagues` | none | `ApiKeyAuth` | `FanaticsLiveFanaticsliveLeaguesResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveShop` | `fanaticslive-shop` | `GET /fanaticslive/shop/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveShopResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveShopShows` | `fanaticslive-shop-shows` | `GET /fanaticslive/shop/{slug}/shows` | `slug` (path String required)<br>`status` (query String required)<br>`after` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveShopShowsResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveShops` | `fanaticslive-shops` | `GET /fanaticslive/shops` | none | `ApiKeyAuth` | `FanaticsLiveFanaticsliveShopsResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveShow` | `fanaticslive-show` | `GET /fanaticslive/show/{id}` | `id` (path String required) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveShowResponse` |  |
+| fanaticsLive | `fanaticsLive.fanaticsliveInstantRips` | `fanaticslive-instant-rips` | `GET /fanaticslive/show/{id}/instant-rips` | `id` (path String required) | `ApiKeyAuth` | `FanaticsLiveFanaticsliveInstantRipsResponse` |  |
+| farfetch | `farfetch.categories` | `farfetch-categories` | `GET /farfetch/categories` | none | `ApiKeyAuth` | `FarfetchCategoriesResponse` |  |
+| farfetch | `farfetch.designers` | `farfetch-designers` | `GET /farfetch/designers` | `gender` (query String required) | `ApiKeyAuth` | `FarfetchDesignersResponse` |  |
+| farfetch | `farfetch.product` | `farfetch-product` | `GET /farfetch/product` | `gender` (query String required)<br>`slug` (query String required) | `ApiKeyAuth` | `FarfetchProductResponse` |  |
+| farfetch | `farfetch.search` | `farfetch-search` | `GET /farfetch/search` | `gender` (query String required)<br>`designer` (query String)<br>`category` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `FarfetchSearchResponse` |  |
 | fashionNova | `fashionNova.fashionnovaCollections` | `fashionnova-collections` | `GET /fashionnova/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionNovaFashionnovaCollectionsResponse` |  |
 | fashionNova | `fashionNova.fashionnovaCollectionProducts` | `fashionnova-collection-products` | `GET /fashionnova/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionNovaFashionnovaCollectionProductsResponse` |  |
 | fashionNova | `fashionNova.fashionnovaPages` | `fashionnova-pages` | `GET /fashionnova/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionNovaFashionnovaPagesResponse` |  |
@@ -653,6 +917,23 @@ Total operations: `1939`
 | fashionNova | `fashionNova.fashionnovaSitemapUrls` | `fashionnova-sitemap-urls` | `GET /fashionnova/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionNovaFashionnovaSitemapUrlsResponse` |  |
 | fashionNova | `fashionNova.fashionnovaSitemaps` | `fashionnova-sitemaps` | `GET /fashionnova/sitemaps` | none | `ApiKeyAuth` | `FashionNovaFashionnovaSitemapsResponse` |  |
 | fashionNova | `fashionNova.fashionnovaStore` | `fashionnova-store` | `GET /fashionnova/store` | none | `ApiKeyAuth` | `FashionNovaFashionnovaStoreResponse` |  |
+| fashionphile | `fashionphile.collections` | `fashionphile-collections` | `GET /fashionphile/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileCollectionsResponse` |  |
+| fashionphile | `fashionphile.collectionProducts` | `fashionphile-collection-products` | `GET /fashionphile/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileCollectionProductsResponse` |  |
+| fashionphile | `fashionphile.pages` | `fashionphile-pages` | `GET /fashionphile/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphilePagesResponse` |  |
+| fashionphile | `fashionphile.page` | `fashionphile-page` | `GET /fashionphile/pages/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `FashionphilePageResponse` |  |
+| fashionphile | `fashionphile.products` | `fashionphile-products` | `GET /fashionphile/products` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileProductsResponse` |  |
+| fashionphile | `fashionphile.product` | `fashionphile-product` | `GET /fashionphile/products/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `FashionphileProductResponse` |  |
+| fashionphile | `fashionphile.productRecommendations` | `fashionphile-product-recommendations` | `GET /fashionphile/products/{handle}/recommendations` | `handle` (path String required)<br>`limit` (query Integer)<br>`intent` (query String) | `ApiKeyAuth` | `FashionphileProductRecommendationsResponse` |  |
+| fashionphile | `fashionphile.search` | `fashionphile-search` | `GET /fashionphile/search` | `q` (query String)<br>`condition` (query String)<br>`availability` (query String)<br>`vendor` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileSearchResponse` |  |
+| fashionphile | `fashionphile.searchSuggest` | `fashionphile-search-suggest` | `GET /fashionphile/search/suggest` | `q` (query String required)<br>`types` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileSearchSuggestResponse` |  |
+| fashionphile | `fashionphile.sitemapUrls` | `fashionphile-sitemap-urls` | `GET /fashionphile/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `FashionphileSitemapUrlsResponse` |  |
+| fashionphile | `fashionphile.sitemaps` | `fashionphile-sitemaps` | `GET /fashionphile/sitemaps` | none | `ApiKeyAuth` | `FashionphileSitemapsResponse` |  |
+| fashionphile | `fashionphile.store` | `fashionphile-store` | `GET /fashionphile/store` | none | `ApiKeyAuth` | `FashionphileStoreResponse` |  |
+| fastCompany | `fastCompany.fastcompanyArticle` | `fastcompany-article` | `GET /fastcompany/article` | `url` (query String required) | `ApiKeyAuth` | `FastCompanyFastcompanyArticleResponse` |  |
+| fastCompany | `fastCompany.fastcompanyAuthor` | `fastcompany-author` | `GET /fastcompany/author` | `url` (query String required) | `ApiKeyAuth` | `FastCompanyFastcompanyAuthorResponse` |  |
+| fastCompany | `fastCompany.fastcompanyHeadlines` | `fastcompany-headlines` | `GET /fastcompany/headlines` | `section` (query String required) | `ApiKeyAuth` | `FastCompanyFastcompanyHeadlinesResponse` |  |
+| fastCompany | `fastCompany.fastcompanyNews` | `fastcompany-news` | `GET /fastcompany/news` | none | `ApiKeyAuth` | `FastCompanyFastcompanyNewsResponse` |  |
+| fastCompany | `fastCompany.fastcompanySections` | `fastcompany-sections` | `GET /fastcompany/sections` | none | `ApiKeyAuth` | `FastCompanyFastcompanySectionsResponse` |  |
 | fiveGuys | `fiveGuys.fiveguysDirectory` | `fiveguys-directory` | `GET /fiveguys/directory` | `path` (query String) | `ApiKeyAuth` | `FiveGuysFiveguysDirectoryResponse` |  |
 | fiveGuys | `fiveGuys.fiveguysFaq` | `fiveguys-faq` | `GET /fiveguys/faq` | `search` (query String)<br>`category` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`lang` (query String) | `ApiKeyAuth` | `FiveGuysFiveguysFaqResponse` |  |
 | fiveGuys | `fiveGuys.fiveguysFaqCategories` | `fiveguys-faq-categories` | `GET /fiveguys/faq-categories` | `lang` (query String) | `ApiKeyAuth` | `FiveGuysFiveguysFaqCategoriesResponse` |  |
@@ -666,10 +947,114 @@ Total operations: `1939`
 | fiverr | `fiverr.gig` | `fiverr-gig` | `GET /fiverr/gig/{username}/{slug}` | `username` (path String required)<br>`slug` (path String required) | `ApiKeyAuth` | `FiverrGigResponse` |  |
 | fiverr | `fiverr.search` | `fiverr-search` | `GET /fiverr/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `FiverrSearchResponse` |  |
 | fiverr | `fiverr.seller` | `fiverr-seller` | `GET /fiverr/seller/{username}` | `username` (path String required) | `ApiKeyAuth` | `FiverrSellerResponse` |  |
+| flashscore | `flashscore.calendar` | `flashscore-calendar` | `GET /flashscore/calendar` | `category` (query String required) | `ApiKeyAuth` | `FlashscoreCalendarResponse` |  |
+| flashscore | `flashscore.calendarCategories` | `flashscore-calendar-categories` | `GET /flashscore/calendar-categories` | none | `ApiKeyAuth` | `FlashscoreCalendarCategoriesResponse` |  |
+| flashscore | `flashscore.competitions` | `flashscore-competitions` | `GET /flashscore/competitions` | `sport` (query String required)<br>`day_offset` (query Integer) | `ApiKeyAuth` | `FlashscoreCompetitionsResponse` |  |
+| flashscore | `flashscore.matchH2h` | `flashscore-match-h2h` | `GET /flashscore/match-h2h` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchH2hResponse` |  |
+| flashscore | `flashscore.matchHighlights` | `flashscore-match-highlights` | `GET /flashscore/match-highlights` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchHighlightsResponse` |  |
+| flashscore | `flashscore.matchInfo` | `flashscore-match-info` | `GET /flashscore/match-info` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchInfoResponse` |  |
+| flashscore | `flashscore.matchLineups` | `flashscore-match-lineups` | `GET /flashscore/match-lineups` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchLineupsResponse` |  |
+| flashscore | `flashscore.matchNews` | `flashscore-match-news` | `GET /flashscore/match-news` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchNewsResponse` |  |
+| flashscore | `flashscore.matchStandings` | `flashscore-match-standings` | `GET /flashscore/match-standings` | `id` (query String required)<br>`view` (query String) | `ApiKeyAuth` | `FlashscoreMatchStandingsResponse` |  |
+| flashscore | `flashscore.matchStats` | `flashscore-match-stats` | `GET /flashscore/match-stats` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreMatchStatsResponse` |  |
+| flashscore | `flashscore.navigation` | `flashscore-navigation` | `GET /flashscore/navigation` | `path` (query String) | `ApiKeyAuth` | `FlashscoreNavigationResponse` |  |
+| flashscore | `flashscore.news` | `flashscore-news` | `GET /flashscore/news` | `category` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `FlashscoreNewsResponse` |  |
+| flashscore | `flashscore.newsArticle` | `flashscore-news-article` | `GET /flashscore/news-article` | `id` (query String required) | `ApiKeyAuth` | `FlashscoreNewsArticleResponse` |  |
+| flashscore | `flashscore.newsCategories` | `flashscore-news-categories` | `GET /flashscore/news-categories` | none | `ApiKeyAuth` | `FlashscoreNewsCategoriesResponse` |  |
+| flashscore | `flashscore.rankingCategories` | `flashscore-ranking-categories` | `GET /flashscore/ranking-categories` | none | `ApiKeyAuth` | `FlashscoreRankingCategoriesResponse` |  |
+| flashscore | `flashscore.rankings` | `flashscore-rankings` | `GET /flashscore/rankings` | `category` (query String required) | `ApiKeyAuth` | `FlashscoreRankingsResponse` |  |
+| flashscore | `flashscore.scores` | `flashscore-scores` | `GET /flashscore/scores` | `sport` (query String required)<br>`day_offset` (query Integer) | `ApiKeyAuth` | `FlashscoreScoresResponse` |  |
+| flashscore | `flashscore.search` | `flashscore-search` | `GET /flashscore/search` | `q` (query String required) | `ApiKeyAuth` | `FlashscoreSearchResponse` |  |
+| flashscore | `flashscore.sports` | `flashscore-sports` | `GET /flashscore/sports` | none | `ApiKeyAuth` | `FlashscoreSportsResponse` |  |
+| flashscore | `flashscore.topSearch` | `flashscore-top-search` | `GET /flashscore/top-search` | none | `ApiKeyAuth` | `FlashscoreTopSearchResponse` |  |
+| flashscore | `flashscore.tournamentEvents` | `flashscore-tournament-events` | `GET /flashscore/tournament-events` | `path` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `FlashscoreTournamentEventsResponse` |  |
+| flashscore | `flashscore.tournamentSeasons` | `flashscore-tournament-seasons` | `GET /flashscore/tournament-seasons` | `path` (query String required) | `ApiKeyAuth` | `FlashscoreTournamentSeasonsResponse` |  |
+| flashscore | `flashscore.tournamentStandings` | `flashscore-tournament-standings` | `GET /flashscore/tournament-standings` | `path` (query String required)<br>`view` (query String) | `ApiKeyAuth` | `FlashscoreTournamentStandingsResponse` |  |
+| flashscore | `flashscore.tournamentStandingsViews` | `flashscore-tournament-standings-views` | `GET /flashscore/tournament-standings-views` | `path` (query String required) | `ApiKeyAuth` | `FlashscoreTournamentStandingsViewsResponse` |  |
 | foodpanda | `foodpanda.restaurant` | `foodpanda-restaurant` | `GET /foodpanda/restaurant` | `market` (query String)<br>`code` (query String required)<br>`latitude` (query Double)<br>`longitude` (query Double) | `ApiKeyAuth` | `FoodpandaRestaurantResponse` |  |
 | foodpanda | `foodpanda.restaurantMenu` | `foodpanda-restaurant-menu` | `GET /foodpanda/restaurant/menu` | `market` (query String)<br>`code` (query String required) | `ApiKeyAuth` | `FoodpandaRestaurantMenuResponse` |  |
 | foodpanda | `foodpanda.restaurantReviews` | `foodpanda-restaurant-reviews` | `GET /foodpanda/restaurant/reviews` | `market` (query String)<br>`code` (query String required) | `ApiKeyAuth` | `FoodpandaRestaurantReviewsResponse` |  |
 | foodpanda | `foodpanda.search` | `foodpanda-search` | `GET /foodpanda/search` | `market` (query String)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`cuisine_id` (query Integer)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `FoodpandaSearchResponse` |  |
+| foodpanda | `foodpanda.searchCuisines` | `foodpanda-search-cuisines` | `GET /foodpanda/search/cuisines` | `market` (query String)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `FoodpandaSearchCuisinesResponse` |  |
+| forbes | `forbes.article` | `forbes-article` | `GET /forbes/article` | `url` (query String required) | `ApiKeyAuth` | `ForbesArticleResponse` |  |
+| forbes | `forbes.author` | `forbes-author` | `GET /forbes/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ForbesAuthorResponse` |  |
+| forbes | `forbes.billionaires` | `forbes-billionaires` | `GET /forbes/billionaires` | `year` (query Integer)<br>`limit` (query Integer)<br>`start` (query Integer) | `ApiKeyAuth` | `ForbesBillionairesResponse` |  |
+| forbes | `forbes.categories` | `forbes-categories` | `GET /forbes/categories` | none | `ApiKeyAuth` | `ForbesCategoriesResponse` |  |
+| forbes | `forbes.headlines` | `forbes-headlines` | `GET /forbes/headlines` | `section` (query String required) | `ApiKeyAuth` | `ForbesHeadlinesResponse` |  |
+| forbes | `forbes.person` | `forbes-person` | `GET /forbes/person` | `uri` (query String required) | `ApiKeyAuth` | `ForbesPersonResponse` |  |
+| foreignAffairs | `foreignAffairs.foreignaffairsArticle` | `foreignaffairs-article` | `GET /foreignaffairs/article` | `url` (query String required) | `ApiKeyAuth` | `ForeignAffairsForeignaffairsArticleResponse` |  |
+| foreignAffairs | `foreignAffairs.foreignaffairsAuthor` | `foreignaffairs-author` | `GET /foreignaffairs/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ForeignAffairsForeignaffairsAuthorResponse` |  |
+| foreignAffairs | `foreignAffairs.foreignaffairsHeadlines` | `foreignaffairs-headlines` | `GET /foreignaffairs/headlines` | none | `ApiKeyAuth` | `ForeignAffairsForeignaffairsHeadlinesResponse` |  |
+| foreignAffairs | `foreignAffairs.foreignaffairsTopic` | `foreignaffairs-topic` | `GET /foreignaffairs/topic` | `topic` (query String required) | `ApiKeyAuth` | `ForeignAffairsForeignaffairsTopicResponse` |  |
+| foreignAffairs | `foreignAffairs.foreignaffairsTopics` | `foreignaffairs-topics` | `GET /foreignaffairs/topics` | none | `ApiKeyAuth` | `ForeignAffairsForeignaffairsTopicsResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyArticle` | `foreignpolicy-article` | `GET /foreignpolicy/article` | `url` (query String required) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyArticleResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyAuthor` | `foreignpolicy-author` | `GET /foreignpolicy/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyAuthorResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyHeadlines` | `foreignpolicy-headlines` | `GET /foreignpolicy/headlines` | none | `ApiKeyAuth` | `ForeignPolicyForeignpolicyHeadlinesResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyLive` | `foreignpolicy-live` | `GET /foreignpolicy/live` | none | `ApiKeyAuth` | `ForeignPolicyForeignpolicyLiveResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyLiveDetail` | `foreignpolicy-live-detail` | `GET /foreignpolicy/live-detail` | `live` (query String required) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyLiveDetailResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyProject` | `foreignpolicy-project` | `GET /foreignpolicy/project` | `project` (query String required) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyProjectResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyProjects` | `foreignpolicy-projects` | `GET /foreignpolicy/projects` | `page` (query Integer) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyProjectsResponse` |  |
+| foreignPolicy | `foreignPolicy.foreignpolicyTopic` | `foreignpolicy-topic` | `GET /foreignpolicy/topic` | `type` (query String)<br>`topic` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ForeignPolicyForeignpolicyTopicResponse` |  |
+| fortune | `fortune.article` | `fortune-article` | `GET /fortune/article` | `url` (query String required) | `ApiKeyAuth` | `FortuneArticleResponse` |  |
+| fortune | `fortune.author` | `fortune-author` | `GET /fortune/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `FortuneAuthorResponse` |  |
+| fortune | `fortune.companies` | `fortune-companies` | `GET /fortune/companies` | `search` (query String)<br>`country` (query String)<br>`industry` (query String)<br>`ranking` (query String)<br>`year` (query String)<br>`min_revenue` (query Integer)<br>`max_revenue` (query Integer)<br>`min_employees` (query Integer)<br>`max_employees` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `FortuneCompaniesResponse` |  |
+| fortune | `fortune.companyFilters` | `fortune-company-filters` | `GET /fortune/companies/filters` | none | `ApiKeyAuth` | `FortuneCompanyFiltersResponse` |  |
+| fortune | `fortune.company` | `fortune-company` | `GET /fortune/company` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `FortuneCompanyResponse` |  |
+| fortune | `fortune.headlines` | `fortune-headlines` | `GET /fortune/headlines` | `section` (query String required) | `ApiKeyAuth` | `FortuneHeadlinesResponse` |  |
+| fortune | `fortune.news` | `fortune-news` | `GET /fortune/news` | none | `ApiKeyAuth` | `FortuneNewsResponse` |  |
+| fortune | `fortune.ranking` | `fortune-ranking` | `GET /fortune/ranking` | `list` (query String)<br>`year` (query String)<br>`search` (query String)<br>`filter` (query List<String>)<br>`sector` (query String)<br>`industry` (query String)<br>`state` (query String)<br>`profitable` (query String)<br>`sort_by` (query String)<br>`sort_order` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `FortuneRankingResponse` |  |
+| fortune | `fortune.rankingFilters` | `fortune-ranking-filters` | `GET /fortune/ranking/filters` | `list` (query String)<br>`year` (query String) | `ApiKeyAuth` | `FortuneRankingFiltersResponse` |  |
+| fortune | `fortune.rankingLists` | `fortune-ranking-lists` | `GET /fortune/ranking/lists` | none | `ApiKeyAuth` | `FortuneRankingListsResponse` |  |
+| fortune | `fortune.rankingYears` | `fortune-ranking-years` | `GET /fortune/ranking/years` | `list` (query String) | `ApiKeyAuth` | `FortuneRankingYearsResponse` |  |
+| fortune | `fortune.sections` | `fortune-sections` | `GET /fortune/sections` | none | `ApiKeyAuth` | `FortuneSectionsResponse` |  |
+| fotMob | `fotMob.fotmobLeague` | `fotmob-league` | `GET /fotmob/league` | `league_id` (query Integer required) | `ApiKeyAuth` | `FotMobFotmobLeagueResponse` |  |
+| fotMob | `fotMob.fotmobLeagues` | `fotmob-leagues` | `GET /fotmob/leagues` | none | `ApiKeyAuth` | `FotMobFotmobLeaguesResponse` |  |
+| fotMob | `fotMob.fotmobMatch` | `fotmob-match` | `GET /fotmob/match` | `id` (query String required) | `ApiKeyAuth` | `FotMobFotmobMatchResponse` |  |
+| fotMob | `fotMob.fotmobMatches` | `fotmob-matches` | `GET /fotmob/matches` | `date` (query String required)<br>`timezone` (query String) | `ApiKeyAuth` | `FotMobFotmobMatchesResponse` |  |
+| fotMob | `fotMob.fotmobNews` | `fotmob-news` | `GET /fotmob/news` | `league_id` (query String required)<br>`start_index` (query Integer) | `ApiKeyAuth` | `FotMobFotmobNewsResponse` |  |
+| fotMob | `fotMob.fotmobPlayer` | `fotmob-player` | `GET /fotmob/player` | `id` (query String required)<br>`include_market_values` (query Boolean) | `ApiKeyAuth` | `FotMobFotmobPlayerResponse` |  |
+| fotMob | `fotMob.fotmobPlayerMatchStats` | `fotmob-player-match-stats` | `GET /fotmob/player-match-stats` | `player_id` (query String required)<br>`match_id` (query String required) | `ApiKeyAuth` | `FotMobFotmobPlayerMatchStatsResponse` |  |
+| fotMob | `fotMob.fotmobPlayerMatches` | `fotmob-player-matches` | `GET /fotmob/player-matches` | `player_id` (query String required)<br>`league_id` (query String)<br>`team_id` (query String)<br>`before` (query String) | `ApiKeyAuth` | `FotMobFotmobPlayerMatchesResponse` |  |
+| fotMob | `fotMob.fotmobPlayerStats` | `fotmob-player-stats` | `GET /fotmob/player-stats` | `player_id` (query String required)<br>`season_id` (query String required) | `ApiKeyAuth` | `FotMobFotmobPlayerStatsResponse` |  |
+| fotMob | `fotMob.fotmobSearch` | `fotmob-search` | `GET /fotmob/search` | `term` (query String required) | `ApiKeyAuth` | `FotMobFotmobSearchResponse` |  |
+| fotMob | `fotMob.fotmobStats` | `fotmob-stats` | `GET /fotmob/stats` | `league_id` (query String required)<br>`season_id` (query String)<br>`type` (query String required)<br>`stat` (query String required)<br>`team_id` (query String)<br>`position` (query String) | `ApiKeyAuth` | `FotMobFotmobStatsResponse` |  |
+| fotMob | `fotMob.fotmobStatsCategories` | `fotmob-stats-categories` | `GET /fotmob/stats-categories` | `league_id` (query String required)<br>`season_id` (query String)<br>`type` (query String required) | `ApiKeyAuth` | `FotMobFotmobStatsCategoriesResponse` |  |
+| fotMob | `fotMob.fotmobTable` | `fotmob-table` | `GET /fotmob/table` | `league_id` (query String required) | `ApiKeyAuth` | `FotMobFotmobTableResponse` |  |
+| fotMob | `fotMob.fotmobTeam` | `fotmob-team` | `GET /fotmob/team` | `id` (query String required) | `ApiKeyAuth` | `FotMobFotmobTeamResponse` |  |
+| fotMob | `fotMob.fotmobTeamNews` | `fotmob-team-news` | `GET /fotmob/team-news` | `team_id` (query Integer required)<br>`start_index` (query Integer) | `ApiKeyAuth` | `FotMobFotmobTeamNewsResponse` |  |
+| fotMob | `fotMob.fotmobTransfers` | `fotmob-transfers` | `GET /fotmob/transfers` | `mode` (query String)<br>`page` (query Integer)<br>`last` (query String)<br>`direction` (query String)<br>`min_fee` (query Integer)<br>`max_fee` (query Integer)<br>`league_ids` (query String)<br>`team_ids` (query String)<br>`order_by` (query String)<br>`exclude_extensions` (query Boolean)<br>`likely_only` (query Boolean) | `ApiKeyAuth` | `FotMobFotmobTransfersResponse` |  |
+| foxNews | `foxNews.foxnewsArticle` | `foxnews-article` | `GET /foxnews/article` | `url` (query String required) | `ApiKeyAuth` | `FoxNewsFoxnewsArticleResponse` |  |
+| foxNews | `foxNews.foxnewsAuthor` | `foxnews-author` | `GET /foxnews/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `FoxNewsFoxnewsAuthorResponse` |  |
+| foxNews | `foxNews.foxnewsHeadlines` | `foxnews-headlines` | `GET /foxnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `FoxNewsFoxnewsHeadlinesResponse` |  |
+| foxNews | `foxNews.foxnewsNews` | `foxnews-news` | `GET /foxnews/news` | none | `ApiKeyAuth` | `FoxNewsFoxnewsNewsResponse` |  |
+| foxNews | `foxNews.foxnewsSearch` | `foxnews-search` | `GET /foxnews/search` | `q` (query String required)<br>`start` (query Integer)<br>`type` (query String) | `ApiKeyAuth` | `FoxNewsFoxnewsSearchResponse` |  |
+| foxNews | `foxNews.foxnewsSections` | `foxnews-sections` | `GET /foxnews/sections` | none | `ApiKeyAuth` | `FoxNewsFoxnewsSectionsResponse` |  |
+| france24 | `france24.france24Article` | `france24-article` | `GET /france24/article` | `url` (query String required) | `ApiKeyAuth` | `France24France24ArticleResponse` |  |
+| france24 | `france24.france24Author` | `france24-author` | `GET /france24/author` | `url` (query String required) | `ApiKeyAuth` | `France24France24AuthorResponse` |  |
+| france24 | `france24.france24Headlines` | `france24-headlines` | `GET /france24/headlines` | `section` (query String required) | `ApiKeyAuth` | `France24France24HeadlinesResponse` |  |
+| france24 | `france24.france24News` | `france24-news` | `GET /france24/news` | none | `ApiKeyAuth` | `France24France24NewsResponse` |  |
+| france24 | `france24.france24Sections` | `france24-sections` | `GET /france24/sections` | none | `ApiKeyAuth` | `France24France24SectionsResponse` |  |
+| ft | `ft.article` | `ft-article` | `GET /ft/article` | `url` (query String required) | `ApiKeyAuth` | `FtArticleResponse` |  |
+| ft | `ft.author` | `ft-author` | `GET /ft/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `FtAuthorResponse` |  |
+| ft | `ft.categories` | `ft-categories` | `GET /ft/categories` | none | `ApiKeyAuth` | `FtCategoriesResponse` |  |
+| ft | `ft.headlines` | `ft-headlines` | `GET /ft/headlines` | `section` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `FtHeadlinesResponse` |  |
+| ft | `ft.news` | `ft-news` | `GET /ft/news` | none | `ApiKeyAuth` | `FtNewsResponse` |  |
+| ft | `ft.search` | `ft-search` | `GET /ft/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`date_range` (query String) | `ApiKeyAuth` | `FtSearchResponse` |  |
+| gameRant | `gameRant.gamerantArticle` | `gamerant-article` | `GET /gamerant/article` | `url` (query String required) | `ApiKeyAuth` | `GameRantGamerantArticleResponse` |  |
+| gameRant | `gameRant.gamerantAuthor` | `gamerant-author` | `GET /gamerant/author` | `url` (query String required) | `ApiKeyAuth` | `GameRantGamerantAuthorResponse` |  |
+| gameRant | `gameRant.gamerantHeadlines` | `gamerant-headlines` | `GET /gamerant/headlines` | `section` (query String required) | `ApiKeyAuth` | `GameRantGamerantHeadlinesResponse` |  |
+| gameRant | `gameRant.gamerantNews` | `gamerant-news` | `GET /gamerant/news` | none | `ApiKeyAuth` | `GameRantGamerantNewsResponse` |  |
+| gameRant | `gameRant.gamerantSections` | `gamerant-sections` | `GET /gamerant/sections` | none | `ApiKeyAuth` | `GameRantGamerantSectionsResponse` |  |
+| gamesRadar | `gamesRadar.gamesradarArticle` | `gamesradar-article` | `GET /gamesradar/article` | `url` (query String required) | `ApiKeyAuth` | `GamesRadarGamesradarArticleResponse` |  |
+| gamesRadar | `gamesRadar.gamesradarAuthor` | `gamesradar-author` | `GET /gamesradar/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `GamesRadarGamesradarAuthorResponse` |  |
+| gamesRadar | `gamesRadar.gamesradarHeadlines` | `gamesradar-headlines` | `GET /gamesradar/headlines` | `section` (query String required) | `ApiKeyAuth` | `GamesRadarGamesradarHeadlinesResponse` |  |
+| gamesRadar | `gamesRadar.gamesradarNews` | `gamesradar-news` | `GET /gamesradar/news` | none | `ApiKeyAuth` | `GamesRadarGamesradarNewsResponse` |  |
+| gamesRadar | `gamesRadar.gamesradarSections` | `gamesradar-sections` | `GET /gamesradar/sections` | none | `ApiKeyAuth` | `GamesRadarGamesradarSectionsResponse` |  |
+| gbNews | `gbNews.gbnewsArticle` | `gbnews-article` | `GET /gbnews/article` | `url` (query String required) | `ApiKeyAuth` | `GbNewsGbnewsArticleResponse` |  |
+| gbNews | `gbNews.gbnewsAuthor` | `gbnews-author` | `GET /gbnews/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `GbNewsGbnewsAuthorResponse` |  |
+| gbNews | `gbNews.gbnewsHeadlines` | `gbnews-headlines` | `GET /gbnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `GbNewsGbnewsHeadlinesResponse` |  |
+| gbNews | `gbNews.gbnewsNews` | `gbnews-news` | `GET /gbnews/news` | none | `ApiKeyAuth` | `GbNewsGbnewsNewsResponse` |  |
+| gbNews | `gbNews.gbnewsSections` | `gbnews-sections` | `GET /gbnews/sections` | none | `ApiKeyAuth` | `GbNewsGbnewsSectionsResponse` |  |
 | gdelt | `gdelt.context` | `gdelt-context` | `GET /gdelt/context` | `query` (query String required)<br>`domain` (query String)<br>`language` (query String)<br>`is_quote` (query Boolean)<br>`timespan` (query String)<br>`from` (query String)<br>`to` (query String)<br>`sort` (query String)<br>`maxrecords` (query Integer) | `ApiKeyAuth` | `GdeltContextResponse` |  |
 | gdelt | `gdelt.search` | `gdelt-search` | `GET /gdelt/search` | `query` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`domain` (query String)<br>`timespan` (query String)<br>`from` (query String)<br>`to` (query String)<br>`sort` (query String)<br>`maxrecords` (query Integer) | `ApiKeyAuth` | `GdeltSearchResponse` |  |
 | gdelt | `gdelt.timeline` | `gdelt-timeline` | `GET /gdelt/timeline` | `query` (query String required)<br>`metric` (query String)<br>`country` (query String)<br>`language` (query String)<br>`domain` (query String)<br>`timespan` (query String)<br>`from` (query String)<br>`to` (query String)<br>`smooth` (query Integer) | `ApiKeyAuth` | `GdeltTimelineResponse` |  |
@@ -702,6 +1087,25 @@ Total operations: `1939`
 | gitHub | `gitHub.githubUserFollowing` | `github-user-following` | `GET /github/user/{username}/following` | `username` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubUserFollowingResponse` |  |
 | gitHub | `gitHub.githubUserPinned` | `github-user-pinned` | `GET /github/user/{username}/pinned` | `username` (path String required) | `ApiKeyAuth` | `GitHubGithubUserPinnedResponse` |  |
 | gitHub | `gitHub.githubUserRepos` | `github-user-repos` | `GET /github/user/{username}/repos` | `username` (path String required)<br>`sort` (query String)<br>`direction` (query String)<br>`type` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `GitHubGithubUserReposResponse` |  |
+| gizmodo | `gizmodo.article` | `gizmodo-article` | `GET /gizmodo/article` | `url` (query String required) | `ApiKeyAuth` | `GizmodoArticleResponse` |  |
+| gizmodo | `gizmodo.author` | `gizmodo-author` | `GET /gizmodo/author` | `url` (query String required) | `ApiKeyAuth` | `GizmodoAuthorResponse` |  |
+| gizmodo | `gizmodo.headlines` | `gizmodo-headlines` | `GET /gizmodo/headlines` | `section` (query String required) | `ApiKeyAuth` | `GizmodoHeadlinesResponse` |  |
+| gizmodo | `gizmodo.news` | `gizmodo-news` | `GET /gizmodo/news` | none | `ApiKeyAuth` | `GizmodoNewsResponse` |  |
+| gizmodo | `gizmodo.sections` | `gizmodo-sections` | `GET /gizmodo/sections` | none | `ApiKeyAuth` | `GizmodoSectionsResponse` |  |
+| globalNews | `globalNews.globalnewsArticle` | `globalnews-article` | `GET /globalnews/article` | `url` (query String required) | `ApiKeyAuth` | `GlobalNewsGlobalnewsArticleResponse` |  |
+| globalNews | `globalNews.globalnewsAuthor` | `globalnews-author` | `GET /globalnews/author` | `url` (query String required) | `ApiKeyAuth` | `GlobalNewsGlobalnewsAuthorResponse` |  |
+| globalNews | `globalNews.globalnewsHeadlines` | `globalnews-headlines` | `GET /globalnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `GlobalNewsGlobalnewsHeadlinesResponse` |  |
+| globalNews | `globalNews.globalnewsNews` | `globalnews-news` | `GET /globalnews/news` | none | `ApiKeyAuth` | `GlobalNewsGlobalnewsNewsResponse` |  |
+| globalNews | `globalNews.globalnewsSections` | `globalnews-sections` | `GET /globalnews/sections` | none | `ApiKeyAuth` | `GlobalNewsGlobalnewsSectionsResponse` |  |
+| globeAndMail | `globeAndMail.globeandmailArticle` | `globeandmail-article` | `GET /globeandmail/article` | `url` (query String required) | `ApiKeyAuth` | `GlobeAndMailGlobeandmailArticleResponse` |  |
+| globeAndMail | `globeAndMail.globeandmailAuthor` | `globeandmail-author` | `GET /globeandmail/author` | `url` (query String required) | `ApiKeyAuth` | `GlobeAndMailGlobeandmailAuthorResponse` |  |
+| globeAndMail | `globeAndMail.globeandmailHeadlines` | `globeandmail-headlines` | `GET /globeandmail/headlines` | `section` (query String required) | `ApiKeyAuth` | `GlobeAndMailGlobeandmailHeadlinesResponse` |  |
+| globeAndMail | `globeAndMail.globeandmailNews` | `globeandmail-news` | `GET /globeandmail/news` | none | `ApiKeyAuth` | `GlobeAndMailGlobeandmailNewsResponse` |  |
+| globeAndMail | `globeAndMail.globeandmailSections` | `globeandmail-sections` | `GET /globeandmail/sections` | none | `ApiKeyAuth` | `GlobeAndMailGlobeandmailSectionsResponse` |  |
+| gmaNews | `gmaNews.gmanewsArticle` | `gmanews-article` | `GET /gmanews/article` | `url` (query String required) | `ApiKeyAuth` | `GmaNewsGmanewsArticleResponse` |  |
+| gmaNews | `gmaNews.gmanewsHeadlines` | `gmanews-headlines` | `GET /gmanews/headlines` | `section` (query String required) | `ApiKeyAuth` | `GmaNewsGmanewsHeadlinesResponse` |  |
+| gmaNews | `gmaNews.gmanewsNews` | `gmanews-news` | `GET /gmanews/news` | none | `ApiKeyAuth` | `GmaNewsGmanewsNewsResponse` |  |
+| gmaNews | `gmaNews.gmanewsSections` | `gmanews-sections` | `GET /gmanews/sections` | none | `ApiKeyAuth` | `GmaNewsGmanewsSectionsResponse` |  |
 | goat | `goat.collection` | `goat-collection` | `GET /goat/collection` | `slug` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`exclude_product_ids` (query String) | `ApiKeyAuth` | `GoatCollectionResponse` |  |
 | goat | `goat.countries` | `goat-countries` | `GET /goat/countries` | none | `ApiKeyAuth` | `GoatCountriesResponse` |  |
 | goat | `goat.curated` | `goat-curated` | `GET /goat/curated` | none | `ApiKeyAuth` | `GoatCuratedResponse` |  |
@@ -712,6 +1116,11 @@ Total operations: `1939`
 | goat | `goat.searchFacets` | `goat-search-facets` | `GET /goat/search/facets` | none | `ApiKeyAuth` | `GoatSearchFacetsResponse` |  |
 | goat | `goat.trendingSearches` | `goat-trending-searches` | `GET /goat/searches/trending` | none | `ApiKeyAuth` | `GoatTrendingSearchesResponse` |  |
 | goat | `goat.suggest` | `goat-suggest` | `GET /goat/suggest` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `GoatSuggestResponse` |  |
+| goldin | `goldin.auctions` | `goldin-auctions` | `GET /goldin/auctions` | `order` (query String) | `ApiKeyAuth` | `GoldinAuctionsResponse` |  |
+| goldin | `goldin.categories` | `goldin-categories` | `GET /goldin/categories` | `auction_type` (query String) | `ApiKeyAuth` | `GoldinCategoriesResponse` |  |
+| goldin | `goldin.listing` | `goldin-listing` | `GET /goldin/listing` | `slug` (query String required) | `ApiKeyAuth` | `GoldinListingResponse` |  |
+| goldin | `goldin.search` | `goldin-search` | `GET /goldin/search` | `auction_type` (query String)<br>`keyword` (query String)<br>`category` (query String)<br>`sub_category` (query String)<br>`certification` (query String)<br>`item_type` (query String)<br>`auction_id` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `GoldinSearchResponse` |  |
+| goldin | `goldin.suggest` | `goldin-suggest` | `GET /goldin/suggest` | `keyword` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `GoldinSuggestResponse` |  |
 | goodreads | `goodreads.author` | `goodreads-author` | `GET /goodreads/author/{id}` | `id` (path String required) | `ApiKeyAuth` | `GoodreadsAuthorResponse` |  |
 | goodreads | `goodreads.authorBooks` | `goodreads-author-books` | `GET /goodreads/author/{id}/books` | `id` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `GoodreadsAuthorBooksResponse` |  |
 | goodreads | `goodreads.authorQuotes` | `goodreads-author-quotes` | `GET /goodreads/author/{id}/quotes` | `id` (path String required)<br>`page` (query Integer) | `ApiKeyAuth` | `GoodreadsAuthorQuotesResponse` |  |
@@ -750,7 +1159,7 @@ Total operations: `1939`
 | google | `google.mapPlaceReviews` | `google-map-place-reviews` | `GET /google/map/place/{place_id}/reviews` | `place_id` (path String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `GoogleMapPlaceReviewsResponse` |  |
 | google | `google.mapSearch` | `google-map-search` | `POST /google/map/search` | `mapSearchOption` (body String required) | `ApiKeyAuth` | `GoogleMapSearchResponse` |  |
 | google | `google.news` | `google-news` | `GET /google/news` | `q` (query String required)<br>`page` (query Integer)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `GoogleNewsResponse` |  |
-| google | `google.search` | `google-search` | `POST /google/search` | `searchOption` (body String required) | `ApiKeyAuth` | `GoogleSearchResponse` |  |
+| google | `google.newsSearch` | `google-news-search` | `POST /google/news` | `searchOption` (body String required) | `ApiKeyAuth` | `GoogleNewsSearchResponse` |  |
 | google | `google.suggest` | `google-suggest` | `GET /google/suggest` | `q` (query String required)<br>`count` (query Integer)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `GoogleSuggestResponse` |  |
 | google | `google.trendsCategories` | `google-trends-categories` | `GET /google/trends/categories` | none | `ApiKeyAuth` | `GoogleTrendsCategoriesResponse` |  |
 | google | `google.trendsEnums` | `google-trends-enums` | `GET /google/trends/enums` | none | `ApiKeyAuth` | `GoogleTrendsEnumsResponse` |  |
@@ -781,6 +1190,22 @@ Total operations: `1939`
 | googlePlay | `googlePlay.search` | `googleplay-search` | `GET /googleplay/search` | `term` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`full_detail` (query Boolean)<br>`price` (query String) | `ApiKeyAuth` | `GooglePlaySearchResponse` |  |
 | googlePlay | `googlePlay.similar` | `googleplay-similar` | `GET /googleplay/similar` | `app_id` (query String required)<br>`num` (query Integer)<br>`country` (query String)<br>`lang` (query String)<br>`full_detail` (query Boolean) | `ApiKeyAuth` | `GooglePlaySimilarResponse` |  |
 | googlePlay | `googlePlay.suggest` | `googleplay-suggest` | `GET /googleplay/suggest/{term}` | `term` (path String required)<br>`country` (query String)<br>`lang` (query String) | `ApiKeyAuth` | `GooglePlaySuggestResponse` |  |
+| gq | `gq.article` | `gq-article` | `GET /gq/article` | `url` (query String required) | `ApiKeyAuth` | `GqArticleResponse` |  |
+| gq | `gq.author` | `gq-author` | `GET /gq/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `GqAuthorResponse` |  |
+| gq | `gq.headlines` | `gq-headlines` | `GET /gq/headlines` | `section` (query String required) | `ApiKeyAuth` | `GqHeadlinesResponse` |  |
+| gq | `gq.news` | `gq-news` | `GET /gq/news` | none | `ApiKeyAuth` | `GqNewsResponse` |  |
+| gq | `gq.sections` | `gq-sections` | `GET /gq/sections` | none | `ApiKeyAuth` | `GqSectionsResponse` |  |
+| grailed | `grailed.categories` | `grailed-categories` | `GET /grailed/categories` | none | `ApiKeyAuth` | `GrailedCategoriesResponse` |  |
+| grailed | `grailed.collection` | `grailed-collection` | `GET /grailed/collection` | `id` (query Integer required) | `ApiKeyAuth` | `GrailedCollectionResponse` |  |
+| grailed | `grailed.collections` | `grailed-collections` | `GET /grailed/collections` | none | `ApiKeyAuth` | `GrailedCollectionsResponse` |  |
+| grailed | `grailed.designers` | `grailed-designers` | `GET /grailed/designers` | `q` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GrailedDesignersResponse` |  |
+| grailed | `grailed.listing` | `grailed-listing` | `GET /grailed/listing` | `id` (query Integer required) | `ApiKeyAuth` | `GrailedListingResponse` |  |
+| grailed | `grailed.search` | `grailed-search` | `GET /grailed/search` | `q` (query String)<br>`designer` (query String)<br>`department` (query String)<br>`category` (query String)<br>`size` (query String)<br>`color` (query String)<br>`condition` (query String)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GrailedSearchResponse` |  |
+| grailed | `grailed.seller` | `grailed-seller` | `GET /grailed/seller` | `username` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GrailedSellerResponse` |  |
+| grailed | `grailed.sellerReviews` | `grailed-seller-reviews` | `GET /grailed/seller-reviews` | `username` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `GrailedSellerReviewsResponse` |  |
+| grailed | `grailed.similarListings` | `grailed-similar-listings` | `GET /grailed/similar-listings` | `id` (query Integer required)<br>`limit` (query Integer) | `ApiKeyAuth` | `GrailedSimilarListingsResponse` |  |
+| grailed | `grailed.soldListings` | `grailed-sold-listings` | `GET /grailed/sold-listings` | `q` (query String)<br>`designer` (query String)<br>`department` (query String)<br>`category` (query String)<br>`size` (query String)<br>`color` (query String)<br>`condition` (query String)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GrailedSoldListingsResponse` |  |
+| grailed | `grailed.suggest` | `grailed-suggest` | `GET /grailed/suggest` | `q` (query String required) | `ApiKeyAuth` | `GrailedSuggestResponse` |  |
 | grubhub | `grubhub.availability` | `grubhub-availability` | `GET /grubhub/availability` | `restaurant_ids` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `GrubhubAvailabilityResponse` |  |
 | grubhub | `grubhub.offers` | `grubhub-offers` | `GET /grubhub/offers` | `restaurant_id` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `GrubhubOffersResponse` |  |
 | grubhub | `grubhub.restaurant` | `grubhub-restaurant` | `GET /grubhub/restaurant` | `restaurant_id` (query String required) | `ApiKeyAuth` | `GrubhubRestaurantResponse` |  |
@@ -789,9 +1214,25 @@ Total operations: `1939`
 | grubhub | `grubhub.search` | `grubhub-search` | `GET /grubhub/search` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`search` (query String)<br>`order_method` (query String)<br>`page_size` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `GrubhubSearchResponse` |  |
 | grubhub | `grubhub.timepicker` | `grubhub-timepicker` | `GET /grubhub/timepicker` | `restaurant_id` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`location_mode` (query String required)<br>`days` (query Integer) | `ApiKeyAuth` | `GrubhubTimepickerResponse` |  |
 | guardian | `guardian.article` | `guardian-article` | `GET /guardian/article` | `url` (query String required) | `ApiKeyAuth` | `GuardianArticleResponse` |  |
+| guardian | `guardian.author` | `guardian-author` | `GET /guardian/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `GuardianAuthorResponse` |  |
 | guardian | `guardian.headlines` | `guardian-headlines` | `GET /guardian/headlines` | `section` (query String) | `ApiKeyAuth` | `GuardianHeadlinesResponse` |  |
 | guardian | `guardian.live` | `guardian-live` | `GET /guardian/live` | `url` (query String required) | `ApiKeyAuth` | `GuardianLiveResponse` |  |
 | guardian | `guardian.topic` | `guardian-topic` | `GET /guardian/topic` | `topic` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `GuardianTopicResponse` |  |
+| gucci | `gucci.categories` | `gucci-categories` | `GET /gucci/categories` | `department` (query String) | `ApiKeyAuth` | `GucciCategoriesResponse` |  |
+| gucci | `gucci.category` | `gucci-category` | `GET /gucci/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `GucciCategoryResponse` |  |
+| gucci | `gucci.product` | `gucci-product` | `GET /gucci/product` | `style_code` (query String required) | `ApiKeyAuth` | `GucciProductResponse` |  |
+| gucci | `gucci.recommendations` | `gucci-recommendations` | `GET /gucci/recommendations` | `style_code` (query String)<br>`max` (query Integer) | `ApiKeyAuth` | `GucciRecommendationsResponse` |  |
+| gucci | `gucci.search` | `gucci-search` | `GET /gucci/search` | `q` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`size` (query String) | `ApiKeyAuth` | `GucciSearchResponse` |  |
+| gucci | `gucci.sizeGuide` | `gucci-size-guide` | `GET /gucci/size-guide` | `style_code` (query String required) | `ApiKeyAuth` | `GucciSizeGuideResponse` |  |
+| gucci | `gucci.store` | `gucci-store` | `GET /gucci/store` | `slug` (query String required) | `ApiKeyAuth` | `GucciStoreResponse` |  |
+| gucci | `gucci.stores` | `gucci-stores` | `GET /gucci/stores` | `department` (query String) | `ApiKeyAuth` | `GucciStoresResponse` |  |
+| gucci | `gucci.storeSearch` | `gucci-store-search` | `GET /gucci/stores/search` | `market` (query String required)<br>`north` (query Double required)<br>`west` (query Double required)<br>`south` (query Double required)<br>`east` (query Double required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `GucciStoreSearchResponse` |  |
+| gucci | `gucci.suggest` | `gucci-suggest` | `GET /gucci/suggest` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `GucciSuggestResponse` |  |
+| gulfNews | `gulfNews.gulfnewsArticle` | `gulfnews-article` | `GET /gulfnews/article` | `url` (query String required) | `ApiKeyAuth` | `GulfNewsGulfnewsArticleResponse` |  |
+| gulfNews | `gulfNews.gulfnewsAuthor` | `gulfnews-author` | `GET /gulfnews/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `GulfNewsGulfnewsAuthorResponse` |  |
+| gulfNews | `gulfNews.gulfnewsHeadlines` | `gulfnews-headlines` | `GET /gulfnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `GulfNewsGulfnewsHeadlinesResponse` |  |
+| gulfNews | `gulfNews.gulfnewsNews` | `gulfnews-news` | `GET /gulfnews/news` | none | `ApiKeyAuth` | `GulfNewsGulfnewsNewsResponse` |  |
+| gulfNews | `gulfNews.gulfnewsSections` | `gulfnews-sections` | `GET /gulfnews/sections` | none | `ApiKeyAuth` | `GulfNewsGulfnewsSectionsResponse` |  |
 | gymshark | `gymshark.collections` | `gymshark-collections` | `GET /gymshark/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GymsharkCollectionsResponse` |  |
 | gymshark | `gymshark.collectionProducts` | `gymshark-collection-products` | `GET /gymshark/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GymsharkCollectionProductsResponse` |  |
 | gymshark | `gymshark.pages` | `gymshark-pages` | `GET /gymshark/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `GymsharkPagesResponse` |  |
@@ -802,6 +1243,23 @@ Total operations: `1939`
 | gymshark | `gymshark.sitemapUrls` | `gymshark-sitemap-urls` | `GET /gymshark/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `GymsharkSitemapUrlsResponse` |  |
 | gymshark | `gymshark.sitemaps` | `gymshark-sitemaps` | `GET /gymshark/sitemaps` | none | `ApiKeyAuth` | `GymsharkSitemapsResponse` |  |
 | gymshark | `gymshark.store` | `gymshark-store` | `GET /gymshark/store` | none | `ApiKeyAuth` | `GymsharkStoreResponse` |  |
+| harvardBusinessReview | `harvardBusinessReview.hbrArticle` | `hbr-article` | `GET /hbr/article` | `url` (query String required) | `ApiKeyAuth` | `HarvardBusinessReviewHbrArticleResponse` |  |
+| harvardBusinessReview | `harvardBusinessReview.hbrCategories` | `hbr-categories` | `GET /hbr/categories` | none | `ApiKeyAuth` | `HarvardBusinessReviewHbrCategoriesResponse` |  |
+| harvardBusinessReview | `harvardBusinessReview.hbrHeadlines` | `hbr-headlines` | `GET /hbr/headlines` | none | `ApiKeyAuth` | `HarvardBusinessReviewHbrHeadlinesResponse` |  |
+| harvardBusinessReview | `harvardBusinessReview.hbrTopic` | `hbr-topic` | `GET /hbr/topic` | `topic` (query String required) | `ApiKeyAuth` | `HarvardBusinessReviewHbrTopicResponse` |  |
+| hermes | `hermes.categories` | `hermes-categories` | `GET /hermes/categories` | `locale` (query String) | `ApiKeyAuth` | `HermesCategoriesResponse` |  |
+| hermes | `hermes.category` | `hermes-category` | `GET /hermes/category` | `category` (query String required)<br>`sort` (query String)<br>`locale` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `HermesCategoryResponse` |  |
+| hermes | `hermes.product` | `hermes-product` | `GET /hermes/product` | `sku` (query String required)<br>`locale` (query String) | `ApiKeyAuth` | `HermesProductResponse` |  |
+| hermes | `hermes.productRecommendations` | `hermes-product-recommendations` | `GET /hermes/product/recommendations` | `sku` (query String required)<br>`locale` (query String) | `ApiKeyAuth` | `HermesProductRecommendationsResponse` |  |
+| hermes | `hermes.products` | `hermes-products` | `GET /hermes/products` | `locale` (query String)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`changed_since` (query String) | `ApiKeyAuth` | `HermesProductsResponse` |  |
+| hermes | `hermes.search` | `hermes-search` | `GET /hermes/search` | `query` (query String required)<br>`locale` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `HermesSearchResponse` |  |
+| hermes | `hermes.stores` | `hermes-stores` | `GET /hermes/stores` | `locale` (query String)<br>`country` (query String)<br>`city` (query String) | `ApiKeyAuth` | `HermesStoresResponse` |  |
+| hermes | `hermes.suggest` | `hermes-suggest` | `GET /hermes/suggest` | `query` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `HermesSuggestResponse` |  |
+| hindustanTimes | `hindustanTimes.hindustantimesArticle` | `hindustantimes-article` | `GET /hindustantimes/article` | `url` (query String required) | `ApiKeyAuth` | `HindustanTimesHindustantimesArticleResponse` |  |
+| hindustanTimes | `hindustanTimes.hindustantimesAuthor` | `hindustantimes-author` | `GET /hindustantimes/author` | `url` (query String required) | `ApiKeyAuth` | `HindustanTimesHindustantimesAuthorResponse` |  |
+| hindustanTimes | `hindustanTimes.hindustantimesHeadlines` | `hindustantimes-headlines` | `GET /hindustantimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `HindustanTimesHindustantimesHeadlinesResponse` |  |
+| hindustanTimes | `hindustanTimes.hindustantimesNews` | `hindustantimes-news` | `GET /hindustantimes/news` | none | `ApiKeyAuth` | `HindustanTimesHindustantimesNewsResponse` |  |
+| hindustanTimes | `hindustanTimes.hindustantimesSections` | `hindustantimes-sections` | `GET /hindustantimes/sections` | none | `ApiKeyAuth` | `HindustanTimesHindustantimesSectionsResponse` |  |
 | hM | `hM.hmCategories` | `hm-categories` | `GET /hm/categories` | `department` (query String) | `ApiKeyAuth` | `HMHmCategoriesResponse` |  |
 | hM | `hM.hmListing` | `hm-listing` | `GET /hm/listing` | `category_id` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String)<br>`is_new` (query Boolean) | `ApiKeyAuth` | `HMHmListingResponse` |  |
 | hM | `hM.hmProduct` | `hm-product` | `GET /hm/product/{product_id}` | `product_id` (path String required) | `ApiKeyAuth` | `HMHmProductResponse` |  |
@@ -809,6 +1267,11 @@ Total operations: `1939`
 | hM | `hM.hmSearch` | `hm-search` | `GET /hm/search` | `query` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `HMHmSearchResponse` |  |
 | hM | `hM.hmSearchSuggestions` | `hm-search-suggestions` | `GET /hm/search/suggestions` | `query` (query String) | `ApiKeyAuth` | `HMHmSearchSuggestionsResponse` |  |
 | hM | `hM.hmStores` | `hm-stores` | `GET /hm/stores` | `search` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_meters` (query Integer) | `ApiKeyAuth` | `HMHmStoresResponse` |  |
+| hollywoodReporter | `hollywoodReporter.hollywoodreporterArticle` | `hollywoodreporter-article` | `GET /hollywoodreporter/article` | `url` (query String required) | `ApiKeyAuth` | `HollywoodReporterHollywoodreporterArticleResponse` |  |
+| hollywoodReporter | `hollywoodReporter.hollywoodreporterAuthor` | `hollywoodreporter-author` | `GET /hollywoodreporter/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `HollywoodReporterHollywoodreporterAuthorResponse` |  |
+| hollywoodReporter | `hollywoodReporter.hollywoodreporterHeadlines` | `hollywoodreporter-headlines` | `GET /hollywoodreporter/headlines` | `section` (query String required) | `ApiKeyAuth` | `HollywoodReporterHollywoodreporterHeadlinesResponse` |  |
+| hollywoodReporter | `hollywoodReporter.hollywoodreporterNews` | `hollywoodreporter-news` | `GET /hollywoodreporter/news` | none | `ApiKeyAuth` | `HollywoodReporterHollywoodreporterNewsResponse` |  |
+| hollywoodReporter | `hollywoodReporter.hollywoodreporterSections` | `hollywoodreporter-sections` | `GET /hollywoodreporter/sections` | none | `ApiKeyAuth` | `HollywoodReporterHollywoodreporterSectionsResponse` |  |
 | homeDepot | `homeDepot.homedepotCategories` | `homedepot-categories` | `GET /homedepot/categories` | none | `ApiKeyAuth` | `HomeDepotHomedepotCategoriesResponse` |  |
 | homeDepot | `homeDepot.homedepotCategory` | `homedepot-category` | `GET /homedepot/category` | `path` (query String required)<br>`sort` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `HomeDepotHomedepotCategoryResponse` |  |
 | homeDepot | `homeDepot.homedepotProduct` | `homedepot-product` | `GET /homedepot/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `HomeDepotHomedepotProductResponse` |  |
@@ -822,7 +1285,18 @@ Total operations: `1939`
 | hotelsCom | `hotelsCom.hotelsReviews` | `hotels-reviews` | `POST /hotels/reviews` | `request` (body String required) | `ApiKeyAuth` | `HotelsComHotelsReviewsResponse` |  |
 | hotelsCom | `hotelsCom.hotelsReviewsArchive` | `hotels-reviews-archive` | `POST /hotels/reviews/archive` | `request` (body String required) | `ApiKeyAuth` | `HotelsComHotelsReviewsArchiveResponse` |  |
 | hotelsCom | `hotelsCom.hotelsSearch` | `hotels-search` | `POST /hotels/search` | `request` (body String required) | `ApiKeyAuth` | `HotelsComHotelsSearchResponse` |  |
+| huffPost | `huffPost.huffpostArticle` | `huffpost-article` | `GET /huffpost/article` | `url` (query String required) | `ApiKeyAuth` | `HuffPostHuffpostArticleResponse` |  |
+| huffPost | `huffPost.huffpostAuthor` | `huffpost-author` | `GET /huffpost/author` | `url` (query String required) | `ApiKeyAuth` | `HuffPostHuffpostAuthorResponse` |  |
+| huffPost | `huffPost.huffpostHeadlines` | `huffpost-headlines` | `GET /huffpost/headlines` | `section` (query String required) | `ApiKeyAuth` | `HuffPostHuffpostHeadlinesResponse` |  |
+| huffPost | `huffPost.huffpostNews` | `huffpost-news` | `GET /huffpost/news` | none | `ApiKeyAuth` | `HuffPostHuffpostNewsResponse` |  |
+| huffPost | `huffPost.huffpostSections` | `huffpost-sections` | `GET /huffpost/sections` | none | `ApiKeyAuth` | `HuffPostHuffpostSectionsResponse` |  |
+| ign | `ign.article` | `ign-article` | `GET /ign/article` | `url` (query String required) | `ApiKeyAuth` | `IgnArticleResponse` |  |
+| ign | `ign.author` | `ign-author` | `GET /ign/author` | `url` (query String required) | `ApiKeyAuth` | `IgnAuthorResponse` |  |
+| ign | `ign.headlines` | `ign-headlines` | `GET /ign/headlines` | `section` (query String required) | `ApiKeyAuth` | `IgnHeadlinesResponse` |  |
+| ign | `ign.news` | `ign-news` | `GET /ign/news` | none | `ApiKeyAuth` | `IgnNewsResponse` |  |
+| ign | `ign.sections` | `ign-sections` | `GET /ign/sections` | none | `ApiKeyAuth` | `IgnSectionsResponse` |  |
 | ikea | `ikea.availability` | `ikea-availability` | `GET /ikea/availability` | `item_no` (query String required)<br>`country` (query String) | `ApiKeyAuth` | `IkeaAvailabilityResponse` |  |
+| ikea | `ikea.categories` | `ikea-categories` | `GET /ikea/categories` | `q` (query String)<br>`country` (query String)<br>`language` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `IkeaCategoriesResponse` |  |
 | ikea | `ikea.category` | `ikea-category` | `GET /ikea/category` | `category` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`offset` (query Integer)<br>`size` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `IkeaCategoryResponse` |  |
 | ikea | `ikea.product` | `ikea-product` | `GET /ikea/product` | `item_no` (query String required)<br>`country` (query String)<br>`language` (query String) | `ApiKeyAuth` | `IkeaProductResponse` |  |
 | ikea | `ikea.reviews` | `ikea-reviews` | `GET /ikea/reviews` | `item_no` (query String required)<br>`country` (query String)<br>`language` (query String) | `ApiKeyAuth` | `IkeaReviewsResponse` |  |
@@ -831,18 +1305,24 @@ Total operations: `1939`
 | ikea | `ikea.stores` | `ikea-stores` | `GET /ikea/stores` | `country` (query String)<br>`language` (query String) | `ApiKeyAuth` | `IkeaStoresResponse` |  |
 | ikea | `ikea.suggest` | `ikea-suggest` | `GET /ikea/suggest` | `q` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`size` (query Integer) | `ApiKeyAuth` | `IkeaSuggestResponse` |  |
 | imdb | `imdb.charts` | `imdb-charts` | `GET /imdb/charts` | `chart` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbChartsResponse` |  |
+| imdb | `imdb.imageTypes` | `imdb-image-types` | `GET /imdb/image-types` | none | `ApiKeyAuth` | `ImdbImageTypesResponse` |  |
 | imdb | `imdb.name` | `imdb-name` | `GET /imdb/name` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameResponse` |  |
 | imdb | `imdb.nameAwards` | `imdb-name-awards` | `GET /imdb/name/awards` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameAwardsResponse` |  |
 | imdb | `imdb.nameCredits` | `imdb-name-credits` | `GET /imdb/name/credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbNameCreditsResponse` |  |
+| imdb | `imdb.nameImages` | `imdb-name-images` | `GET /imdb/name/images` | `id` (query String)<br>`url` (query String)<br>`type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbNameImagesResponse` |  |
+| imdb | `imdb.nameVideos` | `imdb-name-videos` | `GET /imdb/name/videos` | `id` (query String)<br>`url` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbNameVideosResponse` |  |
 | imdb | `imdb.search` | `imdb-search` | `GET /imdb/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbSearchResponse` |  |
 | imdb | `imdb.searchTitle` | `imdb-search-title` | `GET /imdb/search/title` | `title` (query String)<br>`title_type` (query String)<br>`genres` (query String)<br>`release_date_from` (query String)<br>`release_date_to` (query String)<br>`min_user_rating` (query Double)<br>`max_user_rating` (query Double)<br>`min_votes` (query Integer)<br>`max_votes` (query Integer)<br>`min_popularity` (query Integer)<br>`max_popularity` (query Integer)<br>`min_runtime` (query Integer)<br>`max_runtime` (query Integer)<br>`groups` (query String)<br>`keywords` (query String)<br>`companies` (query String)<br>`certificates` (query String)<br>`colors` (query String)<br>`countries` (query String)<br>`languages` (query String)<br>`sound_mixes` (query String)<br>`role` (query String)<br>`characters` (query String)<br>`plot` (query String)<br>`include_adult` (query Boolean)<br>`sort` (query String)<br>`sort_order` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbSearchTitleResponse` |  |
 | imdb | `imdb.title` | `imdb-title` | `GET /imdb/title` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleResponse` |  |
 | imdb | `imdb.titleAwards` | `imdb-title-awards` | `GET /imdb/title/awards` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleAwardsResponse` |  |
+| imdb | `imdb.titleBoxOffice` | `imdb-title-box-office` | `GET /imdb/title/box-office` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleBoxOfficeResponse` |  |
 | imdb | `imdb.titleCompanyCredits` | `imdb-title-company-credits` | `GET /imdb/title/company-credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleCompanyCreditsResponse` |  |
+| imdb | `imdb.titleConnections` | `imdb-title-connections` | `GET /imdb/title/connections` | `id` (query String)<br>`url` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbTitleConnectionsResponse` |  |
 | imdb | `imdb.titleCredits` | `imdb-title-credits` | `GET /imdb/title/credits` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleCreditsResponse` |  |
 | imdb | `imdb.titleEpisodes` | `imdb-title-episodes` | `GET /imdb/title/episodes` | `id` (query String)<br>`url` (query String)<br>`season` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbTitleEpisodesResponse` |  |
 | imdb | `imdb.titleFilmingLocations` | `imdb-title-filming-locations` | `GET /imdb/title/filming-locations` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleFilmingLocationsResponse` |  |
 | imdb | `imdb.titleGoofs` | `imdb-title-goofs` | `GET /imdb/title/goofs` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleGoofsResponse` |  |
+| imdb | `imdb.titleImages` | `imdb-title-images` | `GET /imdb/title/images` | `id` (query String)<br>`url` (query String)<br>`type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbTitleImagesResponse` |  |
 | imdb | `imdb.titleKeywords` | `imdb-title-keywords` | `GET /imdb/title/keywords` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleKeywordsResponse` |  |
 | imdb | `imdb.titleParentalGuide` | `imdb-title-parental-guide` | `GET /imdb/title/parental-guide` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleParentalGuideResponse` |  |
 | imdb | `imdb.titlePublicFactsAnalysis` | `imdb-title-public-facts-analysis` | `GET /imdb/title/public-facts-analysis` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitlePublicFactsAnalysisResponse` |  |
@@ -853,11 +1333,42 @@ Total operations: `1939`
 | imdb | `imdb.titleSimilar` | `imdb-title-similar` | `GET /imdb/title/similar` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleSimilarResponse` |  |
 | imdb | `imdb.titleTechnicalSpecs` | `imdb-title-technical-specs` | `GET /imdb/title/technical-specs` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleTechnicalSpecsResponse` |  |
 | imdb | `imdb.titleTrivia` | `imdb-title-trivia` | `GET /imdb/title/trivia` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ImdbTitleTriviaResponse` |  |
+| imdb | `imdb.titleVideos` | `imdb-title-videos` | `GET /imdb/title/videos` | `id` (query String)<br>`url` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ImdbTitleVideosResponse` |  |
 | importYeti | `importYeti.importyetiCompany` | `importyeti-company` | `GET /importyeti/company` | `slug` (query String required) | `ApiKeyAuth` | `ImportYetiImportyetiCompanyResponse` |  |
 | importYeti | `importYeti.importyetiSearch` | `importyeti-search` | `GET /importyeti/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ImportYetiImportyetiSearchResponse` |  |
 | indeed | `indeed.job` | `indeed-job` | `GET /indeed/job` | `jk` (query String required) | `ApiKeyAuth` | `IndeedJobResponse` |  |
 | indeed | `indeed.locationsSuggest` | `indeed-locations-suggest` | `GET /indeed/locations/suggest` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `IndeedLocationsSuggestResponse` |  |
 | indeed | `indeed.search` | `indeed-search` | `GET /indeed/search` | `q` (query String required)<br>`l` (query String)<br>`page` (query Integer)<br>`sort` (query String)<br>`radius` (query Integer)<br>`fromage` (query Integer) | `ApiKeyAuth` | `IndeedSearchResponse` |  |
+| theIndependent | `theIndependent.independentArticle` | `independent-article` | `GET /independent/article` | `url` (query String required) | `ApiKeyAuth` | `TheIndependentIndependentArticleResponse` |  |
+| theIndependent | `theIndependent.independentAuthor` | `independent-author` | `GET /independent/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `TheIndependentIndependentAuthorResponse` |  |
+| theIndependent | `theIndependent.independentHeadlines` | `independent-headlines` | `GET /independent/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheIndependentIndependentHeadlinesResponse` |  |
+| theIndependent | `theIndependent.independentNews` | `independent-news` | `GET /independent/news` | none | `ApiKeyAuth` | `TheIndependentIndependentNewsResponse` |  |
+| theIndependent | `theIndependent.independentSections` | `independent-sections` | `GET /independent/sections` | none | `ApiKeyAuth` | `TheIndependentIndependentSectionsResponse` |  |
+| theIndianExpress | `theIndianExpress.indianexpressArticle` | `indianexpress-article` | `GET /indianexpress/article` | `url` (query String required) | `ApiKeyAuth` | `TheIndianExpressIndianexpressArticleResponse` |  |
+| theIndianExpress | `theIndianExpress.indianexpressAuthor` | `indianexpress-author` | `GET /indianexpress/author` | `url` (query String required) | `ApiKeyAuth` | `TheIndianExpressIndianexpressAuthorResponse` |  |
+| theIndianExpress | `theIndianExpress.indianexpressHeadlines` | `indianexpress-headlines` | `GET /indianexpress/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheIndianExpressIndianexpressHeadlinesResponse` |  |
+| theIndianExpress | `theIndianExpress.indianexpressNews` | `indianexpress-news` | `GET /indianexpress/news` | none | `ApiKeyAuth` | `TheIndianExpressIndianexpressNewsResponse` |  |
+| theIndianExpress | `theIndianExpress.indianexpressSections` | `indianexpress-sections` | `GET /indianexpress/sections` | none | `ApiKeyAuth` | `TheIndianExpressIndianexpressSectionsResponse` |  |
+| indiaToday | `indiaToday.indiatodayArticle` | `indiatoday-article` | `GET /indiatoday/article` | `url` (query String required) | `ApiKeyAuth` | `IndiaTodayIndiatodayArticleResponse` |  |
+| indiaToday | `indiaToday.indiatodayAuthor` | `indiatoday-author` | `GET /indiatoday/author` | `url` (query String required) | `ApiKeyAuth` | `IndiaTodayIndiatodayAuthorResponse` |  |
+| indiaToday | `indiaToday.indiatodayHeadlines` | `indiatoday-headlines` | `GET /indiatoday/headlines` | `section` (query String required) | `ApiKeyAuth` | `IndiaTodayIndiatodayHeadlinesResponse` |  |
+| indiaToday | `indiaToday.indiatodayNews` | `indiatoday-news` | `GET /indiatoday/news` | none | `ApiKeyAuth` | `IndiaTodayIndiatodayNewsResponse` |  |
+| indiaToday | `indiaToday.indiatodaySections` | `indiatoday-sections` | `GET /indiatoday/sections` | none | `ApiKeyAuth` | `IndiaTodayIndiatodaySectionsResponse` |  |
+| indieWire | `indieWire.indiewireArticle` | `indiewire-article` | `GET /indiewire/article` | `url` (query String required) | `ApiKeyAuth` | `IndieWireIndiewireArticleResponse` |  |
+| indieWire | `indieWire.indiewireAuthor` | `indiewire-author` | `GET /indiewire/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `IndieWireIndiewireAuthorResponse` |  |
+| indieWire | `indieWire.indiewireHeadlines` | `indiewire-headlines` | `GET /indiewire/headlines` | `section` (query String required) | `ApiKeyAuth` | `IndieWireIndiewireHeadlinesResponse` |  |
+| indieWire | `indieWire.indiewireNews` | `indiewire-news` | `GET /indiewire/news` | none | `ApiKeyAuth` | `IndieWireIndiewireNewsResponse` |  |
+| indieWire | `indieWire.indiewireSections` | `indiewire-sections` | `GET /indiewire/sections` | none | `ApiKeyAuth` | `IndieWireIndiewireSectionsResponse` |  |
+| i | `i.inewsArticle` | `inews-article` | `GET /inews/article` | `url` (query String required) | `ApiKeyAuth` | `IInewsArticleResponse` |  |
+| i | `i.inewsAuthor` | `inews-author` | `GET /inews/author` | `url` (query String required) | `ApiKeyAuth` | `IInewsAuthorResponse` |  |
+| i | `i.inewsHeadlines` | `inews-headlines` | `GET /inews/headlines` | `section` (query String required) | `ApiKeyAuth` | `IInewsHeadlinesResponse` |  |
+| i | `i.inewsNews` | `inews-news` | `GET /inews/news` | none | `ApiKeyAuth` | `IInewsNewsResponse` |  |
+| i | `i.inewsSections` | `inews-sections` | `GET /inews/sections` | none | `ApiKeyAuth` | `IInewsSectionsResponse` |  |
+| philippineDailyInquirer | `philippineDailyInquirer.inquirerArticle` | `inquirer-article` | `GET /inquirer/article` | `url` (query String required) | `ApiKeyAuth` | `PhilippineDailyInquirerInquirerArticleResponse` |  |
+| philippineDailyInquirer | `philippineDailyInquirer.inquirerAuthor` | `inquirer-author` | `GET /inquirer/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `PhilippineDailyInquirerInquirerAuthorResponse` |  |
+| philippineDailyInquirer | `philippineDailyInquirer.inquirerHeadlines` | `inquirer-headlines` | `GET /inquirer/headlines` | `section` (query String required) | `ApiKeyAuth` | `PhilippineDailyInquirerInquirerHeadlinesResponse` |  |
+| philippineDailyInquirer | `philippineDailyInquirer.inquirerNews` | `inquirer-news` | `GET /inquirer/news` | none | `ApiKeyAuth` | `PhilippineDailyInquirerInquirerNewsResponse` |  |
+| philippineDailyInquirer | `philippineDailyInquirer.inquirerSections` | `inquirer-sections` | `GET /inquirer/sections` | none | `ApiKeyAuth` | `PhilippineDailyInquirerInquirerSectionsResponse` |  |
 | instacart | `instacart.departments` | `instacart-departments` | `GET /instacart/departments` | `shop_id` (query String required)<br>`store_slug` (query String required)<br>`postal_code` (query String required) | `ApiKeyAuth` | `InstacartDepartmentsResponse` |  |
 | instacart | `instacart.item` | `instacart-item` | `GET /instacart/item` | `shop_id` (query String required)<br>`store_slug` (query String required)<br>`retailer_location_id` (query String required)<br>`product_id` (query String required)<br>`postal_code` (query String required) | `ApiKeyAuth` | `InstacartItemResponse` |  |
 | instacart | `instacart.search` | `instacart-search` | `GET /instacart/search` | `shop_id` (query String required)<br>`store_slug` (query String required)<br>`q` (query String required) | `ApiKeyAuth` | `InstacartSearchResponse` |  |
@@ -867,6 +1378,26 @@ Total operations: `1939`
 | instagram | `instagram.post` | `instagram-post` | `GET /instagram/post/{id}/{post_id}` | `id` (path String required)<br>`post_id` (path String required) | `ApiKeyAuth` | `InstagramPostResponse` |  |
 | instagram | `instagram.profile` | `instagram-profile` | `GET /instagram/profile/{username}` | `username` (path String required) | `ApiKeyAuth` | `InstagramProfileResponse` |  |
 | instagram | `instagram.reels` | `instagram-reels` | `GET /instagram/reels/{id}` | `id` (path String required)<br>`max_id` (query String) | `ApiKeyAuth` | `InstagramReelsResponse` |  |
+| investopedia | `investopedia.article` | `investopedia-article` | `GET /investopedia/article` | `url` (query String required) | `ApiKeyAuth` | `InvestopediaArticleResponse` |  |
+| investopedia | `investopedia.author` | `investopedia-author` | `GET /investopedia/author` | `url` (query String required) | `ApiKeyAuth` | `InvestopediaAuthorResponse` |  |
+| investopedia | `investopedia.headlines` | `investopedia-headlines` | `GET /investopedia/headlines` | `section` (query String required) | `ApiKeyAuth` | `InvestopediaHeadlinesResponse` |  |
+| investopedia | `investopedia.news` | `investopedia-news` | `GET /investopedia/news` | none | `ApiKeyAuth` | `InvestopediaNewsResponse` |  |
+| investopedia | `investopedia.sections` | `investopedia-sections` | `GET /investopedia/sections` | none | `ApiKeyAuth` | `InvestopediaSectionsResponse` |  |
+| iol | `iol.article` | `iol-article` | `GET /iol/article` | `url` (query String required) | `ApiKeyAuth` | `IolArticleResponse` |  |
+| iol | `iol.author` | `iol-author` | `GET /iol/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `IolAuthorResponse` |  |
+| iol | `iol.headlines` | `iol-headlines` | `GET /iol/headlines` | `section` (query String required) | `ApiKeyAuth` | `IolHeadlinesResponse` |  |
+| iol | `iol.news` | `iol-news` | `GET /iol/news` | none | `ApiKeyAuth` | `IolNewsResponse` |  |
+| iol | `iol.sections` | `iol-sections` | `GET /iol/sections` | none | `ApiKeyAuth` | `IolSectionsResponse` |  |
+| irishIndependent | `irishIndependent.irishindependentArticle` | `irishindependent-article` | `GET /irishindependent/article` | `url` (query String required) | `ApiKeyAuth` | `IrishIndependentIrishindependentArticleResponse` |  |
+| irishIndependent | `irishIndependent.irishindependentAuthor` | `irishindependent-author` | `GET /irishindependent/author` | `url` (query String required) | `ApiKeyAuth` | `IrishIndependentIrishindependentAuthorResponse` |  |
+| irishIndependent | `irishIndependent.irishindependentHeadlines` | `irishindependent-headlines` | `GET /irishindependent/headlines` | `section` (query String required) | `ApiKeyAuth` | `IrishIndependentIrishindependentHeadlinesResponse` |  |
+| irishIndependent | `irishIndependent.irishindependentNews` | `irishindependent-news` | `GET /irishindependent/news` | none | `ApiKeyAuth` | `IrishIndependentIrishindependentNewsResponse` |  |
+| irishIndependent | `irishIndependent.irishindependentSections` | `irishindependent-sections` | `GET /irishindependent/sections` | none | `ApiKeyAuth` | `IrishIndependentIrishindependentSectionsResponse` |  |
+| irishTimes | `irishTimes.irishtimesArticle` | `irishtimes-article` | `GET /irishtimes/article` | `url` (query String required) | `ApiKeyAuth` | `IrishTimesIrishtimesArticleResponse` |  |
+| irishTimes | `irishTimes.irishtimesAuthor` | `irishtimes-author` | `GET /irishtimes/author` | `url` (query String required) | `ApiKeyAuth` | `IrishTimesIrishtimesAuthorResponse` |  |
+| irishTimes | `irishTimes.irishtimesHeadlines` | `irishtimes-headlines` | `GET /irishtimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `IrishTimesIrishtimesHeadlinesResponse` |  |
+| irishTimes | `irishTimes.irishtimesNews` | `irishtimes-news` | `GET /irishtimes/news` | none | `ApiKeyAuth` | `IrishTimesIrishtimesNewsResponse` |  |
+| irishTimes | `irishTimes.irishtimesSections` | `irishtimes-sections` | `GET /irishtimes/sections` | none | `ApiKeyAuth` | `IrishTimesIrishtimesSectionsResponse` |  |
 | jCrew | `jCrew.jcrewCategories` | `jcrew-categories` | `GET /jcrew/categories` | `site` (query String)<br>`department` (query String) | `ApiKeyAuth` | `JCrewJcrewCategoriesResponse` |  |
 | jCrew | `jCrew.jcrewCategory` | `jcrew-category` | `GET /jcrew/category` | `category` (query String required)<br>`site` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `JCrewJcrewCategoryResponse` |  |
 | jCrew | `jCrew.jcrewProduct` | `jcrew-product` | `GET /jcrew/product` | `pid` (query String required)<br>`site` (query String) | `ApiKeyAuth` | `JCrewJcrewProductResponse` |  |
@@ -913,6 +1444,7 @@ Total operations: `1939`
 | justEat | `justEat.justeatRestaurant` | `justeat-restaurant` | `GET /justeat/restaurant` | `unique_name` (query String required) | `ApiKeyAuth` | `JustEatJusteatRestaurantResponse` |  |
 | justEat | `justEat.justeatRestaurantMenu` | `justeat-restaurant-menu` | `GET /justeat/restaurant/menu` | `unique_name` (query String required) | `ApiKeyAuth` | `JustEatJusteatRestaurantMenuResponse` |  |
 | justEat | `justEat.justeatSearch` | `justeat-search` | `GET /justeat/search` | `postcode` (query String required)<br>`limit` (query Integer)<br>`filter` (query List<String>)<br>`sort_by` (query String) | `ApiKeyAuth` | `JustEatJusteatSearchResponse` |  |
+| justEat | `justEat.justeatSearchFilters` | `justeat-search-filters` | `GET /justeat/search/filters` | `postcode` (query String required) | `ApiKeyAuth` | `JustEatJusteatSearchFiltersResponse` |  |
 | justWatch | `justWatch.justwatchAgeCertifications` | `justwatch-age-certifications` | `GET /justwatch/age-certifications` | `country` (query String) | `ApiKeyAuth` | `JustWatchJustwatchAgeCertificationsResponse` |  |
 | justWatch | `justWatch.justwatchDiscover` | `justwatch-discover` | `GET /justwatch/discover` | `country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String)<br>`genres` (query String)<br>`providers` (query String)<br>`production_countries` (query String)<br>`monetization_types` (query String)<br>`year_min` (query Integer)<br>`year_max` (query Integer) | `ApiKeyAuth` | `JustWatchJustwatchDiscoverResponse` |  |
 | justWatch | `justWatch.justwatchEpisodeById` | `justwatch-episode-by-id` | `GET /justwatch/episode/by-id` | `id` (query String required)<br>`country` (query String)<br>`language` (query String) | `ApiKeyAuth` | `JustWatchJustwatchEpisodeByIdResponse` |  |
@@ -921,7 +1453,7 @@ Total operations: `1939`
 | justWatch | `justWatch.justwatchGenres` | `justwatch-genres` | `GET /justwatch/genres` | `language` (query String) | `ApiKeyAuth` | `JustWatchJustwatchGenresResponse` |  |
 | justWatch | `justWatch.justwatchMonetizationTitles` | `justwatch-monetization-titles` | `GET /justwatch/monetization/titles` | `monetization_type` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String) | `ApiKeyAuth` | `JustWatchJustwatchMonetizationTitlesResponse` |  |
 | justWatch | `justWatch.justwatchNew` | `justwatch-new` | `GET /justwatch/new` | `country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String) | `ApiKeyAuth` | `JustWatchJustwatchNewResponse` |  |
-| justWatch | `justWatch.justwatchPopular` | `justwatch-popular` | `GET /justwatch/popular` | `country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String) | `ApiKeyAuth` | `JustWatchJustwatchPopularResponse` |  |
+| justWatch | `justWatch.justwatchPopular` | `justwatch-popular` | `GET /justwatch/popular` | `country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String)<br>`cursor` (query String) | `ApiKeyAuth` | `JustWatchJustwatchPopularResponse` |  |
 | justWatch | `justWatch.justwatchProviderTitles` | `justwatch-provider-titles` | `GET /justwatch/provider/titles` | `provider` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`limit` (query Integer)<br>`type` (query String) | `ApiKeyAuth` | `JustWatchJustwatchProviderTitlesResponse` |  |
 | justWatch | `justWatch.justwatchProviders` | `justwatch-providers` | `GET /justwatch/providers` | `country` (query String) | `ApiKeyAuth` | `JustWatchJustwatchProvidersResponse` |  |
 | justWatch | `justWatch.justwatchSearch` | `justwatch-search` | `GET /justwatch/search` | `query` (query String required)<br>`country` (query String)<br>`language` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `JustWatchJustwatchSearchResponse` |  |
@@ -962,6 +1494,11 @@ Total operations: `1939`
 | kfc | `kfc.promotions` | `kfc-promotions` | `GET /kfc/promotions` | `store_number` (query String required) | `ApiKeyAuth` | `KfcPromotionsResponse` |  |
 | kfc | `kfc.store` | `kfc-store` | `GET /kfc/store` | `store_number` (query String required) | `ApiKeyAuth` | `KfcStoreResponse` |  |
 | kfc | `kfc.stores` | `kfc-stores` | `GET /kfc/stores` | `store_number` (query String)<br>`city` (query String)<br>`state` (query String)<br>`postal_code` (query String)<br>`name` (query String)<br>`franchise_code` (query String)<br>`appear_in_store_results` (query Boolean)<br>`sort` (query String)<br>`max_results` (query Integer) | `ApiKeyAuth` | `KfcStoresResponse` |  |
+| khaleejTimes | `khaleejTimes.khaleejtimesArticle` | `khaleejtimes-article` | `GET /khaleejtimes/article` | `url` (query String required) | `ApiKeyAuth` | `KhaleejTimesKhaleejtimesArticleResponse` |  |
+| khaleejTimes | `khaleejTimes.khaleejtimesAuthor` | `khaleejtimes-author` | `GET /khaleejtimes/author` | `url` (query String required) | `ApiKeyAuth` | `KhaleejTimesKhaleejtimesAuthorResponse` |  |
+| khaleejTimes | `khaleejTimes.khaleejtimesHeadlines` | `khaleejtimes-headlines` | `GET /khaleejtimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `KhaleejTimesKhaleejtimesHeadlinesResponse` |  |
+| khaleejTimes | `khaleejTimes.khaleejtimesNews` | `khaleejtimes-news` | `GET /khaleejtimes/news` | none | `ApiKeyAuth` | `KhaleejTimesKhaleejtimesNewsResponse` |  |
+| khaleejTimes | `khaleejTimes.khaleejtimesSections` | `khaleejtimes-sections` | `GET /khaleejtimes/sections` | none | `ApiKeyAuth` | `KhaleejTimesKhaleejtimesSectionsResponse` |  |
 | kickstarter | `kickstarter.comments` | `kickstarter-comments` | `GET /kickstarter/comments` | `creator` (query String required)<br>`slug` (query String required) | `ApiKeyAuth` | `KickstarterCommentsResponse` |  |
 | kickstarter | `kickstarter.discover` | `kickstarter-discover` | `GET /kickstarter/discover` | `category_id` (query Integer)<br>`term` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`state` (query String)<br>`staff_pick_only` (query Boolean) | `ApiKeyAuth` | `KickstarterDiscoverResponse` |  |
 | kickstarter | `kickstarter.project` | `kickstarter-project` | `GET /kickstarter/project` | `creator` (query String required)<br>`slug` (query String required) | `ApiKeyAuth` | `KickstarterProjectResponse` |  |
@@ -970,6 +1507,12 @@ Total operations: `1939`
 | kohlS | `kohlS.kohlsProductReviews` | `kohls-product-reviews` | `GET /kohls/product/reviews` | `web_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `KohlSKohlsProductReviewsResponse` |  |
 | kohlS | `kohlS.kohlsStores` | `kohls-stores` | `GET /kohls/stores` | `search` (query String required) | `ApiKeyAuth` | `KohlSKohlsStoresResponse` |  |
 | kohlS | `kohlS.kohlsSuggest` | `kohls-suggest` | `GET /kohls/suggest` | `query` (query String required) | `ApiKeyAuth` | `KohlSKohlsSuggestResponse` |  |
+| kotaku | `kotaku.article` | `kotaku-article` | `GET /kotaku/article` | `url` (query String required) | `ApiKeyAuth` | `KotakuArticleResponse` |  |
+| kotaku | `kotaku.author` | `kotaku-author` | `GET /kotaku/author` | `url` (query String required) | `ApiKeyAuth` | `KotakuAuthorResponse` |  |
+| kotaku | `kotaku.headlines` | `kotaku-headlines` | `GET /kotaku/headlines` | `section` (query String required) | `ApiKeyAuth` | `KotakuHeadlinesResponse` |  |
+| kotaku | `kotaku.news` | `kotaku-news` | `GET /kotaku/news` | none | `ApiKeyAuth` | `KotakuNewsResponse` |  |
+| kotaku | `kotaku.sections` | `kotaku-sections` | `GET /kotaku/sections` | none | `ApiKeyAuth` | `KotakuSectionsResponse` |  |
+| kroger | `kroger.categories` | `kroger-categories` | `GET /kroger/categories` | none | `ApiKeyAuth` | `KrogerCategoriesResponse` |  |
 | kroger | `kroger.category` | `kroger-category` | `GET /kroger/category` | `slug` (query String required)<br>`category_id` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`brands` (query String)<br>`nutrition` (query String)<br>`flavor` (query String)<br>`scent` (query String)<br>`savings` (query String)<br>`more_options` (query String)<br>`price_min` (query Double)<br>`price_max` (query Double) | `ApiKeyAuth` | `KrogerCategoryResponse` |  |
 | kroger | `kroger.coupons` | `kroger-coupons` | `GET /kroger/coupons` | `upc` (query String)<br>`brand` (query String)<br>`location_id` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `KrogerCouponsResponse` |  |
 | kroger | `kroger.product` | `kroger-product` | `GET /kroger/product` | `upc` (query String required) | `ApiKeyAuth` | `KrogerProductResponse` |  |
@@ -990,6 +1533,10 @@ Total operations: `1939`
 | kylieCosmetics | `kylieCosmetics.kyliecosmeticsSitemapUrls` | `kyliecosmetics-sitemap-urls` | `GET /kyliecosmetics/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `KylieCosmeticsKyliecosmeticsSitemapUrlsResponse` |  |
 | kylieCosmetics | `kylieCosmetics.kyliecosmeticsSitemaps` | `kyliecosmetics-sitemaps` | `GET /kyliecosmetics/sitemaps` | none | `ApiKeyAuth` | `KylieCosmeticsKyliecosmeticsSitemapsResponse` |  |
 | kylieCosmetics | `kylieCosmetics.kyliecosmeticsStore` | `kyliecosmetics-store` | `GET /kyliecosmetics/store` | none | `ApiKeyAuth` | `KylieCosmeticsKyliecosmeticsStoreResponse` |  |
+| losAngelesTimes | `losAngelesTimes.latimesArticle` | `latimes-article` | `GET /latimes/article` | `url` (query String required) | `ApiKeyAuth` | `LosAngelesTimesLatimesArticleResponse` |  |
+| losAngelesTimes | `losAngelesTimes.latimesAuthor` | `latimes-author` | `GET /latimes/author` | `url` (query String required) | `ApiKeyAuth` | `LosAngelesTimesLatimesAuthorResponse` |  |
+| losAngelesTimes | `losAngelesTimes.latimesHeadlines` | `latimes-headlines` | `GET /latimes/headlines` | `section` (query String) | `ApiKeyAuth` | `LosAngelesTimesLatimesHeadlinesResponse` |  |
+| losAngelesTimes | `losAngelesTimes.latimesSections` | `latimes-sections` | `GET /latimes/sections` | none | `ApiKeyAuth` | `LosAngelesTimesLatimesSectionsResponse` |  |
 | lazada | `lazada.categories` | `lazada-categories` | `GET /lazada/categories` | `country` (query String) | `ApiKeyAuth` | `LazadaCategoriesResponse` |  |
 | lazada | `lazada.categoryProducts` | `lazada-category-products` | `GET /lazada/category-products` | `country` (query String)<br>`category` (query String required)<br>`brand` (query String)<br>`page` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `LazadaCategoryProductsResponse` |  |
 | lazada | `lazada.home` | `lazada-home` | `GET /lazada/home` | `country` (query String) | `ApiKeyAuth` | `LazadaHomeResponse` |  |
@@ -1006,13 +1553,48 @@ Total operations: `1939`
 | letterboxd | `letterboxd.popular` | `letterboxd-popular` | `GET /letterboxd/popular` | `period` (query String)<br>`genre` (query String)<br>`decade` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `LetterboxdPopularResponse` |  |
 | letterboxd | `letterboxd.search` | `letterboxd-search` | `GET /letterboxd/search` | `q` (query String required)<br>`type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `LetterboxdSearchResponse` |  |
 | linkedIn | `linkedIn.linkedinCompany` | `linkedin-company` | `GET /linkedin/company/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinCompanyResponse` |  |
+| linkedIn | `linkedIn.linkedinProductCategories` | `linkedin-product-categories` | `GET /linkedin/product/categories` | `keyword` (query String) | `ApiKeyAuth` | `LinkedInLinkedinProductCategoriesResponse` |  |
 | linkedIn | `linkedIn.linkedinProduct` | `linkedin-product` | `GET /linkedin/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinProductResponse` |  |
+| linkedIn | `linkedIn.linkedinProductsSearch` | `linkedin-products-search` | `GET /linkedin/products/search` | `keyword` (query String)<br>`category_id` (query String)<br>`start` (query Integer) | `ApiKeyAuth` | `LinkedInLinkedinProductsSearchResponse` |  |
 | linkedIn | `linkedIn.linkedinShowcase` | `linkedin-showcase` | `GET /linkedin/showcase/{id}` | `id` (path String required) | `ApiKeyAuth` | `LinkedInLinkedinShowcaseResponse` |  |
+| mint | `mint.livemintArticle` | `livemint-article` | `GET /livemint/article` | `url` (query String required) | `ApiKeyAuth` | `MintLivemintArticleResponse` |  |
+| mint | `mint.livemintAuthor` | `livemint-author` | `GET /livemint/author` | `url` (query String required) | `ApiKeyAuth` | `MintLivemintAuthorResponse` |  |
+| mint | `mint.livemintHeadlines` | `livemint-headlines` | `GET /livemint/headlines` | `section` (query String required) | `ApiKeyAuth` | `MintLivemintHeadlinesResponse` |  |
+| mint | `mint.livemintNews` | `livemint-news` | `GET /livemint/news` | none | `ApiKeyAuth` | `MintLivemintNewsResponse` |  |
+| mint | `mint.livemintSections` | `livemint-sections` | `GET /livemint/sections` | none | `ApiKeyAuth` | `MintLivemintSectionsResponse` |  |
+| liverpoolEcho | `liverpoolEcho.liverpoolechoArticle` | `liverpoolecho-article` | `GET /liverpoolecho/article` | `url` (query String required) | `ApiKeyAuth` | `LiverpoolEchoLiverpoolechoArticleResponse` |  |
+| liverpoolEcho | `liverpoolEcho.liverpoolechoAuthor` | `liverpoolecho-author` | `GET /liverpoolecho/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `LiverpoolEchoLiverpoolechoAuthorResponse` |  |
+| liverpoolEcho | `liverpoolEcho.liverpoolechoHeadlines` | `liverpoolecho-headlines` | `GET /liverpoolecho/headlines` | `section` (query String required) | `ApiKeyAuth` | `LiverpoolEchoLiverpoolechoHeadlinesResponse` |  |
+| liverpoolEcho | `liverpoolEcho.liverpoolechoNews` | `liverpoolecho-news` | `GET /liverpoolecho/news` | none | `ApiKeyAuth` | `LiverpoolEchoLiverpoolechoNewsResponse` |  |
+| liverpoolEcho | `liverpoolEcho.liverpoolechoSections` | `liverpoolecho-sections` | `GET /liverpoolecho/sections` | none | `ApiKeyAuth` | `LiverpoolEchoLiverpoolechoSectionsResponse` |  |
+| liveScience | `liveScience.livescienceArticle` | `livescience-article` | `GET /livescience/article` | `url` (query String required) | `ApiKeyAuth` | `LiveScienceLivescienceArticleResponse` |  |
+| liveScience | `liveScience.livescienceAuthor` | `livescience-author` | `GET /livescience/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `LiveScienceLivescienceAuthorResponse` |  |
+| liveScience | `liveScience.livescienceHeadlines` | `livescience-headlines` | `GET /livescience/headlines` | `section` (query String required) | `ApiKeyAuth` | `LiveScienceLivescienceHeadlinesResponse` |  |
+| liveScience | `liveScience.livescienceNews` | `livescience-news` | `GET /livescience/news` | none | `ApiKeyAuth` | `LiveScienceLivescienceNewsResponse` |  |
+| liveScience | `liveScience.livescienceSections` | `livescience-sections` | `GET /livescience/sections` | none | `ApiKeyAuth` | `LiveScienceLivescienceSectionsResponse` |  |
+| liveScore | `liveScore.livescoreCompetition` | `livescore-competition` | `GET /livescore/competition` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreCompetitionResponse` |  |
+| liveScore | `liveScore.livescoreLiveScores` | `livescore-live-scores` | `GET /livescore/live-scores` | `sport` (query String required)<br>`timezone_offset` (query Integer)<br>`paging` (query Boolean)<br>`cursor` (query String)<br>`direction` (query String) | `ApiKeyAuth` | `LiveScoreLivescoreLiveScoresResponse` |  |
+| liveScore | `liveScore.livescoreMatch` | `livescore-match` | `GET /livescore/match` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreMatchResponse` |  |
+| liveScore | `liveScore.livescoreMatchStats` | `livescore-match-stats` | `GET /livescore/match-stats` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreMatchStatsResponse` |  |
+| liveScore | `liveScore.livescoreNews` | `livescore-news` | `GET /livescore/news` | `category` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreNewsResponse` |  |
+| liveScore | `liveScore.livescoreNewsArticle` | `livescore-news-article` | `GET /livescore/news-article` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreNewsArticleResponse` |  |
+| liveScore | `liveScore.livescoreNewsCategories` | `livescore-news-categories` | `GET /livescore/news-categories` | none | `ApiKeyAuth` | `LiveScoreLivescoreNewsCategoriesResponse` |  |
+| liveScore | `liveScore.livescoreNewsFeed` | `livescore-news-feed` | `GET /livescore/news-feed` | none | `ApiKeyAuth` | `LiveScoreLivescoreNewsFeedResponse` |  |
+| liveScore | `liveScore.livescorePlayer` | `livescore-player` | `GET /livescore/player` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescorePlayerResponse` |  |
+| liveScore | `liveScore.livescoreScores` | `livescore-scores` | `GET /livescore/scores` | `sport` (query String required)<br>`date` (query String required)<br>`timezone_offset` (query Integer)<br>`paging` (query Boolean)<br>`cursor` (query String)<br>`direction` (query String) | `ApiKeyAuth` | `LiveScoreLivescoreScoresResponse` |  |
+| liveScore | `liveScore.livescoreScoresToc` | `livescore-scores-toc` | `GET /livescore/scores-toc` | `sport` (query String required)<br>`date` (query String required)<br>`timezone_offset` (query Integer) | `ApiKeyAuth` | `LiveScoreLivescoreScoresTocResponse` |  |
+| liveScore | `liveScore.livescoreSports` | `livescore-sports` | `GET /livescore/sports` | none | `ApiKeyAuth` | `LiveScoreLivescoreSportsResponse` |  |
+| liveScore | `liveScore.livescoreTeam` | `livescore-team` | `GET /livescore/team` | `path` (query String required) | `ApiKeyAuth` | `LiveScoreLivescoreTeamResponse` |  |
 | lululemon | `lululemon.categories` | `lululemon-categories` | `GET /lululemon/categories` | `section` (query String) | `ApiKeyAuth` | `LululemonCategoriesResponse` |  |
 | lululemon | `lululemon.category` | `lululemon-category` | `GET /lululemon/category` | `category` (query String required)<br>`cdp_hash` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `LululemonCategoryResponse` |  |
 | lululemon | `lululemon.outfit` | `lululemon-outfit` | `GET /lululemon/outfit` | `unified_id` (query String required)<br>`color_code` (query String required) | `ApiKeyAuth` | `LululemonOutfitResponse` |  |
 | lululemon | `lululemon.product` | `lululemon-product` | `GET /lululemon/product/{product_id}` | `product_id` (path String required) | `ApiKeyAuth` | `LululemonProductResponse` |  |
 | lululemon | `lululemon.stores` | `lululemon-stores` | `GET /lululemon/stores` | `country` (query String)<br>`state` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_miles` (query Double) | `ApiKeyAuth` | `LululemonStoresResponse` |  |
+| macRumors | `macRumors.macrumorsArticle` | `macrumors-article` | `GET /macrumors/article` | `url` (query String required) | `ApiKeyAuth` | `MacRumorsMacrumorsArticleResponse` |  |
+| macRumors | `macRumors.macrumorsAuthor` | `macrumors-author` | `GET /macrumors/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `MacRumorsMacrumorsAuthorResponse` |  |
+| macRumors | `macRumors.macrumorsHeadlines` | `macrumors-headlines` | `GET /macrumors/headlines` | `section` (query String required) | `ApiKeyAuth` | `MacRumorsMacrumorsHeadlinesResponse` |  |
+| macRumors | `macRumors.macrumorsNews` | `macrumors-news` | `GET /macrumors/news` | none | `ApiKeyAuth` | `MacRumorsMacrumorsNewsResponse` |  |
+| macRumors | `macRumors.macrumorsSections` | `macrumors-sections` | `GET /macrumors/sections` | none | `ApiKeyAuth` | `MacRumorsMacrumorsSectionsResponse` |  |
 | macyS | `macyS.macysProductReviews` | `macys-product-reviews` | `GET /macys/product/reviews` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `MacySMacysProductReviewsResponse` |  |
 | macyS | `macyS.macysProduct` | `macys-product` | `GET /macys/product/{productId}` | `productId` (path String required) | `ApiKeyAuth` | `MacySMacysProductResponse` |  |
 | macyS | `macyS.macysSuggest` | `macys-suggest` | `GET /macys/suggest` | `query` (query String required) | `ApiKeyAuth` | `MacySMacysSuggestResponse` |  |
@@ -1022,12 +1604,32 @@ Total operations: `1939`
 | manga | `manga.titleCharacters` | `manga-title-characters` | `GET /manga/title/{id}/characters` | `id` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `MangaTitleCharactersResponse` |  |
 | manga | `manga.titleRecommendations` | `manga-title-recommendations` | `GET /manga/title/{id}/recommendations` | `id` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `MangaTitleRecommendationsResponse` |  |
 | manga | `manga.titleStaff` | `manga-title-staff` | `GET /manga/title/{id}/staff` | `id` (path String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `MangaTitleStaffResponse` |  |
+| marketWatch | `marketWatch.marketwatchArticle` | `marketwatch-article` | `GET /marketwatch/article` | `url` (query String required) | `ApiKeyAuth` | `MarketWatchMarketwatchArticleResponse` |  |
+| marketWatch | `marketWatch.marketwatchAuthor` | `marketwatch-author` | `GET /marketwatch/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `MarketWatchMarketwatchAuthorResponse` |  |
+| marketWatch | `marketWatch.marketwatchHeadlines` | `marketwatch-headlines` | `GET /marketwatch/headlines` | `section` (query String required) | `ApiKeyAuth` | `MarketWatchMarketwatchHeadlinesResponse` |  |
+| marketWatch | `marketWatch.marketwatchNews` | `marketwatch-news` | `GET /marketwatch/news` | none | `ApiKeyAuth` | `MarketWatchMarketwatchNewsResponse` |  |
+| marketWatch | `marketWatch.marketwatchSections` | `marketwatch-sections` | `GET /marketwatch/sections` | none | `ApiKeyAuth` | `MarketWatchMarketwatchSectionsResponse` |  |
+| mashable | `mashable.article` | `mashable-article` | `GET /mashable/article` | `url` (query String required) | `ApiKeyAuth` | `MashableArticleResponse` |  |
+| mashable | `mashable.author` | `mashable-author` | `GET /mashable/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `MashableAuthorResponse` |  |
+| mashable | `mashable.headlines` | `mashable-headlines` | `GET /mashable/headlines` | `section` (query String required) | `ApiKeyAuth` | `MashableHeadlinesResponse` |  |
+| mashable | `mashable.news` | `mashable-news` | `GET /mashable/news` | none | `ApiKeyAuth` | `MashableNewsResponse` |  |
+| mashable | `mashable.sections` | `mashable-sections` | `GET /mashable/sections` | none | `ApiKeyAuth` | `MashableSectionsResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsCategories` | `mcdonalds-categories` | `GET /mcdonalds/categories` | `country` (query String) | `ApiKeyAuth` | `McDonaldsMcdonaldsCategoriesResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsItem` | `mcdonalds-item` | `GET /mcdonalds/item` | `item_id` (query String required)<br>`country` (query String) | `ApiKeyAuth` | `McDonaldsMcdonaldsItemResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsItemList` | `mcdonalds-item-list` | `GET /mcdonalds/item-list` | `item_ids` (query String required)<br>`country` (query String) | `ApiKeyAuth` | `McDonaldsMcdonaldsItemListResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsMenu` | `mcdonalds-menu` | `GET /mcdonalds/menu` | `category` (query String required)<br>`country` (query String) | `ApiKeyAuth` | `McDonaldsMcdonaldsMenuResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsRestaurantMenu` | `mcdonalds-restaurant-menu` | `GET /mcdonalds/restaurant-menu` | `store_id` (query String required) | `ApiKeyAuth` | `McDonaldsMcdonaldsRestaurantMenuResponse` |  |
 | mcDonalds | `mcDonalds.mcdonaldsRestaurants` | `mcdonalds-restaurants` | `GET /mcdonalds/restaurants` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`max_results` (query Integer)<br>`country` (query String) | `ApiKeyAuth` | `McDonaldsMcdonaldsRestaurantsResponse` |  |
+| mediaite | `mediaite.article` | `mediaite-article` | `GET /mediaite/article` | `url` (query String required) | `ApiKeyAuth` | `MediaiteArticleResponse` |  |
+| mediaite | `mediaite.author` | `mediaite-author` | `GET /mediaite/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `MediaiteAuthorResponse` |  |
+| mediaite | `mediaite.headlines` | `mediaite-headlines` | `GET /mediaite/headlines` | `section` (query String required) | `ApiKeyAuth` | `MediaiteHeadlinesResponse` |  |
+| mediaite | `mediaite.news` | `mediaite-news` | `GET /mediaite/news` | none | `ApiKeyAuth` | `MediaiteNewsResponse` |  |
+| mediaite | `mediaite.sections` | `mediaite-sections` | `GET /mediaite/sections` | none | `ApiKeyAuth` | `MediaiteSectionsResponse` |  |
+| manchesterEveningNews | `manchesterEveningNews.menArticle` | `men-article` | `GET /men/article` | `url` (query String required) | `ApiKeyAuth` | `ManchesterEveningNewsMenArticleResponse` |  |
+| manchesterEveningNews | `manchesterEveningNews.menAuthor` | `men-author` | `GET /men/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `ManchesterEveningNewsMenAuthorResponse` |  |
+| manchesterEveningNews | `manchesterEveningNews.menHeadlines` | `men-headlines` | `GET /men/headlines` | `section` (query String required) | `ApiKeyAuth` | `ManchesterEveningNewsMenHeadlinesResponse` |  |
+| manchesterEveningNews | `manchesterEveningNews.menNews` | `men-news` | `GET /men/news` | none | `ApiKeyAuth` | `ManchesterEveningNewsMenNewsResponse` |  |
+| manchesterEveningNews | `manchesterEveningNews.menSections` | `men-sections` | `GET /men/sections` | none | `ApiKeyAuth` | `ManchesterEveningNewsMenSectionsResponse` |  |
 | mercari | `mercari.autocomplete` | `mercari-autocomplete` | `GET /mercari/autocomplete` | `query` (query String required) | `ApiKeyAuth` | `MercariAutocompleteResponse` |  |
 | mercari | `mercari.home` | `mercari-home` | `GET /mercari/home` | none | `ApiKeyAuth` | `MercariHomeResponse` |  |
 | mercari | `mercari.item` | `mercari-item` | `GET /mercari/item/{id}` | `id` (path String required) | `ApiKeyAuth` | `MercariItemResponse` |  |
@@ -1057,6 +1659,30 @@ Total operations: `1939`
 | metaculus | `metaculus.questions` | `metaculus-questions` | `GET /metaculus/questions` | `limit` (query Integer)<br>`topic` (query String) | `ApiKeyAuth` | `MetaculusQuestionsResponse` |  |
 | metaculus | `metaculus.topComments` | `metaculus-top-comments` | `GET /metaculus/top-comments` | `limit` (query Integer)<br>`topic` (query String) | `ApiKeyAuth` | `MetaculusTopCommentsResponse` |  |
 | metaculus | `metaculus.tournamentQuestions` | `metaculus-tournament-questions` | `GET /metaculus/tournament/{slug}/questions` | `slug` (path String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `MetaculusTournamentQuestionsResponse` |  |
+| metro | `metro.article` | `metro-article` | `GET /metro/article` | `url` (query String required) | `ApiKeyAuth` | `MetroArticleResponse` |  |
+| metro | `metro.author` | `metro-author` | `GET /metro/author` | `url` (query String required) | `ApiKeyAuth` | `MetroAuthorResponse` |  |
+| metro | `metro.headlines` | `metro-headlines` | `GET /metro/headlines` | `section` (query String required) | `ApiKeyAuth` | `MetroHeadlinesResponse` |  |
+| metro | `metro.news` | `metro-news` | `GET /metro/news` | none | `ApiKeyAuth` | `MetroNewsResponse` |  |
+| metro | `metro.sections` | `metro-sections` | `GET /metro/sections` | none | `ApiKeyAuth` | `MetroSectionsResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreCategories` | `microsoftstore-categories` | `GET /microsoftstore/categories` | `media_type` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreCategoriesResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreCategory` | `microsoftstore-category` | `GET /microsoftstore/category` | `category` (query String required)<br>`media_type` (query String)<br>`cursor` (query String)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreCategoryResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreCharts` | `microsoftstore-charts` | `GET /microsoftstore/charts` | `list` (query String required)<br>`media_type` (query String)<br>`category` (query String)<br>`subcategory` (query String)<br>`discount_filter` (query String)<br>`subscription_filter` (query String)<br>`num_players_filter` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreChartsResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreEditorial` | `microsoftstore-editorial` | `GET /microsoftstore/editorial` | `editorial_id` (query String required)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreEditorialResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreEvents` | `microsoftstore-events` | `GET /microsoftstore/events` | `media_type` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreEventsResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreProduct` | `microsoftstore-product` | `GET /microsoftstore/product` | `product_id` (query String required)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreProductResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstorePublisher` | `microsoftstore-publisher` | `GET /microsoftstore/publisher` | `publisher_name` (query String required)<br>`cursor` (query String)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstorePublisherResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreRecommended` | `microsoftstore-recommended` | `GET /microsoftstore/recommended` | `country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreRecommendedResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreRelated` | `microsoftstore-related` | `GET /microsoftstore/related` | `product_id` (query String required)<br>`product_type` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreRelatedResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreReviews` | `microsoftstore-reviews` | `GET /microsoftstore/reviews` | `product_id` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreReviewsResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreReviewsSummary` | `microsoftstore-reviews-summary` | `GET /microsoftstore/reviews/summary` | `product_id` (query String required)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreReviewsSummaryResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreSearch` | `microsoftstore-search` | `GET /microsoftstore/search` | `query` (query String required)<br>`media_type` (query String)<br>`category` (query String)<br>`price` (query String)<br>`age` (query String)<br>`cursor` (query String)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreSearchResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreSpotlight` | `microsoftstore-spotlight` | `GET /microsoftstore/spotlight` | `media_type` (query String)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreSpotlightResponse` |  |
+| microsoftStore | `microsoftStore.microsoftstoreSuggest` | `microsoftstore-suggest` | `GET /microsoftstore/suggest` | `prefix` (query String required)<br>`country` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `MicrosoftStoreMicrosoftstoreSuggestResponse` |  |
+| mirror | `mirror.article` | `mirror-article` | `GET /mirror/article` | `url` (query String required) | `ApiKeyAuth` | `MirrorArticleResponse` |  |
+| mirror | `mirror.author` | `mirror-author` | `GET /mirror/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `MirrorAuthorResponse` |  |
+| mirror | `mirror.headlines` | `mirror-headlines` | `GET /mirror/headlines` | `section` (query String required) | `ApiKeyAuth` | `MirrorHeadlinesResponse` |  |
+| mirror | `mirror.news` | `mirror-news` | `GET /mirror/news` | none | `ApiKeyAuth` | `MirrorNewsResponse` |  |
+| mirror | `mirror.sections` | `mirror-sections` | `GET /mirror/sections` | none | `ApiKeyAuth` | `MirrorSectionsResponse` |  |
 | mlb | `mlb.game` | `mlb-game` | `GET /mlb/game` | `id` (query String required) | `ApiKeyAuth` | `MlbGameResponse` |  |
 | mlb | `mlb.gameBoxscore` | `mlb-game-boxscore` | `GET /mlb/game-boxscore` | `id` (query String required) | `ApiKeyAuth` | `MlbGameBoxscoreResponse` |  |
 | mlb | `mlb.gamePlayByPlay` | `mlb-game-play-by-play` | `GET /mlb/game-play-by-play` | `id` (query String required) | `ApiKeyAuth` | `MlbGamePlayByPlayResponse` |  |
@@ -1069,12 +1695,76 @@ Total operations: `1939`
 | mlb | `mlb.teamStats` | `mlb-team-stats` | `GET /mlb/team-stats` | `team_id` (query String required)<br>`season` (query Integer)<br>`group` (query String required) | `ApiKeyAuth` | `MlbTeamStatsResponse` |  |
 | mlb | `mlb.teams` | `mlb-teams` | `GET /mlb/teams` | `season` (query Integer) | `ApiKeyAuth` | `MlbTeamsResponse` |  |
 | mlb | `mlb.transactions` | `mlb-transactions` | `GET /mlb/transactions` | `start_date` (query String required)<br>`end_date` (query String required)<br>`team_id` (query String)<br>`player_id` (query String) | `ApiKeyAuth` | `MlbTransactionsResponse` |  |
+| modaOperandi | `modaOperandi.modaoperandiCategories` | `modaoperandi-categories` | `GET /modaoperandi/categories` | none | `ApiKeyAuth` | `ModaOperandiModaoperandiCategoriesResponse` |  |
+| modaOperandi | `modaOperandi.modaoperandiDesigners` | `modaoperandi-designers` | `GET /modaoperandi/designers` | `gender` (query String required) | `ApiKeyAuth` | `ModaOperandiModaoperandiDesignersResponse` |  |
+| modaOperandi | `modaOperandi.modaoperandiProduct` | `modaoperandi-product` | `GET /modaoperandi/product` | `url` (query String required) | `ApiKeyAuth` | `ModaOperandiModaoperandiProductResponse` |  |
+| modaOperandi | `modaOperandi.modaoperandiSearch` | `modaoperandi-search` | `GET /modaoperandi/search` | `gender` (query String required)<br>`q` (query String)<br>`category` (query String)<br>`designer` (query String)<br>`color` (query String)<br>`size` (query String)<br>`attribute` (query String)<br>`availability` (query String)<br>`price_min` (query Double)<br>`price_max` (query Double)<br>`on_sale` (query Boolean)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ModaOperandiModaoperandiSearchResponse` |  |
+| moncler | `moncler.categories` | `moncler-categories` | `GET /moncler/categories` | `levels` (query Integer) | `ApiKeyAuth` | `MonclerCategoriesResponse` |  |
+| moncler | `moncler.category` | `moncler-category` | `GET /moncler/category` | `category_id` (query String required)<br>`sort` (query String)<br>`filter` (query List<String>)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `MonclerCategoryResponse` |  |
+| moncler | `moncler.product` | `moncler-product` | `GET /moncler/product` | `product_id` (query String required) | `ApiKeyAuth` | `MonclerProductResponse` |  |
+| moncler | `moncler.search` | `moncler-search` | `GET /moncler/search` | `q` (query String required)<br>`sort` (query String)<br>`filter` (query List<String>)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `MonclerSearchResponse` |  |
+| moncler | `moncler.stores` | `moncler-stores` | `GET /moncler/stores` | none | `ApiKeyAuth` | `MonclerStoresResponse` |  |
+| moncler | `moncler.suggest` | `moncler-suggest` | `GET /moncler/suggest` | `q` (query String required) | `ApiKeyAuth` | `MonclerSuggestResponse` |  |
+| moneycontrol | `moneycontrol.article` | `moneycontrol-article` | `GET /moneycontrol/article` | `url` (query String required) | `ApiKeyAuth` | `MoneycontrolArticleResponse` |  |
+| moneycontrol | `moneycontrol.author` | `moneycontrol-author` | `GET /moneycontrol/author` | `url` (query String required) | `ApiKeyAuth` | `MoneycontrolAuthorResponse` |  |
+| moneycontrol | `moneycontrol.headlines` | `moneycontrol-headlines` | `GET /moneycontrol/headlines` | `section` (query String required) | `ApiKeyAuth` | `MoneycontrolHeadlinesResponse` |  |
+| moneycontrol | `moneycontrol.news` | `moneycontrol-news` | `GET /moneycontrol/news` | none | `ApiKeyAuth` | `MoneycontrolNewsResponse` |  |
+| moneycontrol | `moneycontrol.sections` | `moneycontrol-sections` | `GET /moneycontrol/sections` | none | `ApiKeyAuth` | `MoneycontrolSectionsResponse` |  |
 | monitors | `monitors.list` | `monitors-list` | `GET /monitors` | none | `ApiKeyAuth` | `MonitorsListResponse` |  |
 | monitors | `monitors.create` | `monitors-create` | `POST /monitors` | `request` (body String required) | `ApiKeyAuth` | `MonitorsCreateResponse` |  |
 | monitors | `monitors.delete` | `monitors-delete` | `DELETE /monitors/{id}` | `id` (path String required) | `ApiKeyAuth` | `MonitorsDeleteResponse` |  |
 | monitors | `monitors.get` | `monitors-get` | `GET /monitors/{id}` | `id` (path String required) | `ApiKeyAuth` | `MonitorsGetResponse` |  |
 | monitors | `monitors.update` | `monitors-update` | `PATCH /monitors/{id}` | `id` (path String required)<br>`request` (body String required) | `ApiKeyAuth` | `MonitorsUpdateResponse` |  |
 | monitors | `monitors.checks` | `monitors-checks` | `GET /monitors/{id}/checks` | `id` (path String required) | `ApiKeyAuth` | `MonitorsChecksResponse` |  |
+| nationAfrica | `nationAfrica.nationafricaArticle` | `nationafrica-article` | `GET /nationafrica/article` | `url` (query String required) | `ApiKeyAuth` | `NationAfricaNationafricaArticleResponse` |  |
+| nationAfrica | `nationAfrica.nationafricaAuthor` | `nationafrica-author` | `GET /nationafrica/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `NationAfricaNationafricaAuthorResponse` |  |
+| nationAfrica | `nationAfrica.nationafricaHeadlines` | `nationafrica-headlines` | `GET /nationafrica/headlines` | `section` (query String required) | `ApiKeyAuth` | `NationAfricaNationafricaHeadlinesResponse` |  |
+| nationAfrica | `nationAfrica.nationafricaNews` | `nationafrica-news` | `GET /nationafrica/news` | none | `ApiKeyAuth` | `NationAfricaNationafricaNewsResponse` |  |
+| nationAfrica | `nationAfrica.nationafricaSections` | `nationafrica-sections` | `GET /nationafrica/sections` | none | `ApiKeyAuth` | `NationAfricaNationafricaSectionsResponse` |  |
+| nationalPost | `nationalPost.nationalpostArticle` | `nationalpost-article` | `GET /nationalpost/article` | `url` (query String required) | `ApiKeyAuth` | `NationalPostNationalpostArticleResponse` |  |
+| nationalPost | `nationalPost.nationalpostAuthor` | `nationalpost-author` | `GET /nationalpost/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `NationalPostNationalpostAuthorResponse` |  |
+| nationalPost | `nationalPost.nationalpostHeadlines` | `nationalpost-headlines` | `GET /nationalpost/headlines` | `section` (query String required) | `ApiKeyAuth` | `NationalPostNationalpostHeadlinesResponse` |  |
+| nationalPost | `nationalPost.nationalpostNews` | `nationalpost-news` | `GET /nationalpost/news` | none | `ApiKeyAuth` | `NationalPostNationalpostNewsResponse` |  |
+| nationalPost | `nationalPost.nationalpostSections` | `nationalpost-sections` | `GET /nationalpost/sections` | none | `ApiKeyAuth` | `NationalPostNationalpostSectionsResponse` |  |
+| nbcNews | `nbcNews.nbcArticle` | `nbc-article` | `GET /nbc/article` | `url` (query String required) | `ApiKeyAuth` | `NbcNewsNbcArticleResponse` |  |
+| nbcNews | `nbcNews.nbcAuthor` | `nbc-author` | `GET /nbc/author` | `url` (query String required) | `ApiKeyAuth` | `NbcNewsNbcAuthorResponse` |  |
+| nbcNews | `nbcNews.nbcHeadlines` | `nbc-headlines` | `GET /nbc/headlines` | `section` (query String required) | `ApiKeyAuth` | `NbcNewsNbcHeadlinesResponse` |  |
+| nbcNews | `nbcNews.call` | `nbc-news` | `GET /nbc/news` | none | `ApiKeyAuth` | `NbcNewsCallResponse` |  |
+| nbcNews | `nbcNews.nbcSections` | `nbc-sections` | `GET /nbc/sections` | none | `ApiKeyAuth` | `NbcNewsNbcSectionsResponse` |  |
+| ndtv | `ndtv.article` | `ndtv-article` | `GET /ndtv/article` | `url` (query String required) | `ApiKeyAuth` | `NdtvArticleResponse` |  |
+| ndtv | `ndtv.author` | `ndtv-author` | `GET /ndtv/author` | `url` (query String required) | `ApiKeyAuth` | `NdtvAuthorResponse` |  |
+| ndtv | `ndtv.headlines` | `ndtv-headlines` | `GET /ndtv/headlines` | `section` (query String required) | `ApiKeyAuth` | `NdtvHeadlinesResponse` |  |
+| ndtv | `ndtv.news` | `ndtv-news` | `GET /ndtv/news` | none | `ApiKeyAuth` | `NdtvNewsResponse` |  |
+| ndtv | `ndtv.sections` | `ndtv-sections` | `GET /ndtv/sections` | none | `ApiKeyAuth` | `NdtvSectionsResponse` |  |
+| news18 | `news18.article` | `news18-article` | `GET /news18/article` | `url` (query String required) | `ApiKeyAuth` | `News18ArticleResponse` |  |
+| news18 | `news18.author` | `news18-author` | `GET /news18/author` | `url` (query String required) | `ApiKeyAuth` | `News18AuthorResponse` |  |
+| news18 | `news18.headlines` | `news18-headlines` | `GET /news18/headlines` | `section` (query String required) | `ApiKeyAuth` | `News18HeadlinesResponse` |  |
+| news18 | `news18.news` | `news18-news` | `GET /news18/news` | none | `ApiKeyAuth` | `News18NewsResponse` |  |
+| news18 | `news18.sections` | `news18-sections` | `GET /news18/sections` | none | `ApiKeyAuth` | `News18SectionsResponse` |  |
+| news24 | `news24.article` | `news24-article` | `GET /news24/article` | `url` (query String required) | `ApiKeyAuth` | `News24ArticleResponse` |  |
+| news24 | `news24.headlines` | `news24-headlines` | `GET /news24/headlines` | `section` (query String required) | `ApiKeyAuth` | `News24HeadlinesResponse` |  |
+| news24 | `news24.news` | `news24-news` | `GET /news24/news` | none | `ApiKeyAuth` | `News24NewsResponse` |  |
+| news24 | `news24.sections` | `news24-sections` | `GET /news24/sections` | none | `ApiKeyAuth` | `News24SectionsResponse` |  |
+| newsComAu | `newsComAu.newscomauArticle` | `newscomau-article` | `GET /newscomau/article` | `url` (query String required) | `ApiKeyAuth` | `NewsComAuNewscomauArticleResponse` |  |
+| newsComAu | `newsComAu.newscomauAuthor` | `newscomau-author` | `GET /newscomau/author` | `url` (query String required) | `ApiKeyAuth` | `NewsComAuNewscomauAuthorResponse` |  |
+| newsComAu | `newsComAu.newscomauHeadlines` | `newscomau-headlines` | `GET /newscomau/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewsComAuNewscomauHeadlinesResponse` |  |
+| newsComAu | `newsComAu.newscomauNews` | `newscomau-news` | `GET /newscomau/news` | none | `ApiKeyAuth` | `NewsComAuNewscomauNewsResponse` |  |
+| newsComAu | `newsComAu.newscomauSections` | `newscomau-sections` | `GET /newscomau/sections` | none | `ApiKeyAuth` | `NewsComAuNewscomauSectionsResponse` |  |
+| newsmax | `newsmax.article` | `newsmax-article` | `GET /newsmax/article` | `url` (query String required) | `ApiKeyAuth` | `NewsmaxArticleResponse` |  |
+| newsmax | `newsmax.author` | `newsmax-author` | `GET /newsmax/author` | `url` (query String required) | `ApiKeyAuth` | `NewsmaxAuthorResponse` |  |
+| newsmax | `newsmax.headlines` | `newsmax-headlines` | `GET /newsmax/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewsmaxHeadlinesResponse` |  |
+| newsmax | `newsmax.news` | `newsmax-news` | `GET /newsmax/news` | none | `ApiKeyAuth` | `NewsmaxNewsResponse` |  |
+| newsmax | `newsmax.sections` | `newsmax-sections` | `GET /newsmax/sections` | none | `ApiKeyAuth` | `NewsmaxSectionsResponse` |  |
+| newsweek | `newsweek.article` | `newsweek-article` | `GET /newsweek/article` | `url` (query String required) | `ApiKeyAuth` | `NewsweekArticleResponse` |  |
+| newsweek | `newsweek.author` | `newsweek-author` | `GET /newsweek/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `NewsweekAuthorResponse` |  |
+| newsweek | `newsweek.headlines` | `newsweek-headlines` | `GET /newsweek/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewsweekHeadlinesResponse` |  |
+| newsweek | `newsweek.news` | `newsweek-news` | `GET /newsweek/news` | none | `ApiKeyAuth` | `NewsweekNewsResponse` |  |
+| newsweek | `newsweek.sections` | `newsweek-sections` | `GET /newsweek/sections` | none | `ApiKeyAuth` | `NewsweekSectionsResponse` |  |
+| theNewYorker | `theNewYorker.newyorkerArticle` | `newyorker-article` | `GET /newyorker/article` | `url` (query String required) | `ApiKeyAuth` | `TheNewYorkerNewyorkerArticleResponse` |  |
+| theNewYorker | `theNewYorker.newyorkerAuthor` | `newyorker-author` | `GET /newyorker/author` | `url` (query String required) | `ApiKeyAuth` | `TheNewYorkerNewyorkerAuthorResponse` |  |
+| theNewYorker | `theNewYorker.newyorkerHeadlines` | `newyorker-headlines` | `GET /newyorker/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheNewYorkerNewyorkerHeadlinesResponse` |  |
+| theNewYorker | `theNewYorker.newyorkerNews` | `newyorker-news` | `GET /newyorker/news` | none | `ApiKeyAuth` | `TheNewYorkerNewyorkerNewsResponse` |  |
+| theNewYorker | `theNewYorker.newyorkerSections` | `newyorker-sections` | `GET /newyorker/sections` | none | `ApiKeyAuth` | `TheNewYorkerNewyorkerSectionsResponse` |  |
 | nike | `nike.categories` | `nike-categories` | `GET /nike/categories` | none | `ApiKeyAuth` | `NikeCategoriesResponse` |  |
 | nike | `nike.product` | `nike-product` | `GET /nike/product` | `slug` (query String required)<br>`style_color` (query String required) | `ApiKeyAuth` | `NikeProductResponse` |  |
 | nike | `nike.productAvailability` | `nike-product-availability` | `GET /nike/product/availability` | `group_key` (query String required) | `ApiKeyAuth` | `NikeProductAvailabilityResponse` |  |
@@ -1084,6 +1774,16 @@ Total operations: `1939`
 | nike | `nike.search` | `nike-search` | `GET /nike/search` | `keyword` (query String)<br>`category` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `NikeSearchResponse` |  |
 | nike | `nike.stores` | `nike-stores` | `GET /nike/stores` | `lat` (query Double required)<br>`lng` (query Double required)<br>`radius_miles` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `NikeStoresResponse` |  |
 | nike | `nike.suggest` | `nike-suggest` | `GET /nike/suggest` | `query` (query String required) | `ApiKeyAuth` | `NikeSuggestResponse` |  |
+| nineToFiveMac | `nineToFiveMac.article` | `ninetofivemac-article` | `GET /ninetofivemac/article` | `url` (query String required) | `ApiKeyAuth` | `NineToFiveMacArticleResponse` |  |
+| nineToFiveMac | `nineToFiveMac.author` | `ninetofivemac-author` | `GET /ninetofivemac/author` | `url` (query String required) | `ApiKeyAuth` | `NineToFiveMacAuthorResponse` |  |
+| nineToFiveMac | `nineToFiveMac.headlines` | `ninetofivemac-headlines` | `GET /ninetofivemac/headlines` | `section` (query String required) | `ApiKeyAuth` | `NineToFiveMacHeadlinesResponse` |  |
+| nineToFiveMac | `nineToFiveMac.news` | `ninetofivemac-news` | `GET /ninetofivemac/news` | none | `ApiKeyAuth` | `NineToFiveMacNewsResponse` |  |
+| nineToFiveMac | `nineToFiveMac.sections` | `ninetofivemac-sections` | `GET /ninetofivemac/sections` | none | `ApiKeyAuth` | `NineToFiveMacSectionsResponse` |  |
+| npr | `npr.article` | `npr-article` | `GET /npr/article` | `url` (query String required) | `ApiKeyAuth` | `NprArticleResponse` |  |
+| npr | `npr.author` | `npr-author` | `GET /npr/author` | `url` (query String required) | `ApiKeyAuth` | `NprAuthorResponse` |  |
+| npr | `npr.categories` | `npr-categories` | `GET /npr/categories` | none | `ApiKeyAuth` | `NprCategoriesResponse` |  |
+| npr | `npr.headlines` | `npr-headlines` | `GET /npr/headlines` | none | `ApiKeyAuth` | `NprHeadlinesResponse` |  |
+| npr | `npr.topic` | `npr-topic` | `GET /npr/topic` | `topic` (query String required) | `ApiKeyAuth` | `NprTopicResponse` |  |
 | numbeo | `numbeo.costOfLivingCity` | `numbeo-cost-of-living-city` | `GET /numbeo/cost-of-living/city/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `NumbeoCostOfLivingCityResponse` |  |
 | numbeo | `numbeo.costOfLivingCountry` | `numbeo-cost-of-living-country` | `GET /numbeo/cost-of-living/country` | `country` (query String required) | `ApiKeyAuth` | `NumbeoCostOfLivingCountryResponse` |  |
 | numbeo | `numbeo.costOfLivingRankings` | `numbeo-cost-of-living-rankings` | `GET /numbeo/cost-of-living/rankings` | `scope` (query String)<br>`period` (query String) | `ApiKeyAuth` | `NumbeoCostOfLivingRankingsResponse` |  |
@@ -1092,6 +1792,31 @@ Total operations: `1939`
 | numbeo | `numbeo.indicesCountry` | `numbeo-indices-country` | `GET /numbeo/indices/country` | `country` (query String required)<br>`index` (query String required) | `ApiKeyAuth` | `NumbeoIndicesCountryResponse` |  |
 | numbeo | `numbeo.indicesRankings` | `numbeo-indices-rankings` | `GET /numbeo/indices/rankings` | `index` (query String required)<br>`scope` (query String)<br>`period` (query String) | `ApiKeyAuth` | `NumbeoIndicesRankingsResponse` |  |
 | numbeo | `numbeo.indicesRankingsByCountry` | `numbeo-indices-rankings-by-country` | `GET /numbeo/indices/rankings-by-country` | `index` (query String required) | `ApiKeyAuth` | `NumbeoIndicesRankingsByCountryResponse` |  |
+| newYorkDailyNews | `newYorkDailyNews.nydailynewsArticle` | `nydailynews-article` | `GET /nydailynews/article` | `url` (query String required) | `ApiKeyAuth` | `NewYorkDailyNewsNydailynewsArticleResponse` |  |
+| newYorkDailyNews | `newYorkDailyNews.nydailynewsAuthor` | `nydailynews-author` | `GET /nydailynews/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `NewYorkDailyNewsNydailynewsAuthorResponse` |  |
+| newYorkDailyNews | `newYorkDailyNews.nydailynewsHeadlines` | `nydailynews-headlines` | `GET /nydailynews/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewYorkDailyNewsNydailynewsHeadlinesResponse` |  |
+| newYorkDailyNews | `newYorkDailyNews.nydailynewsNews` | `nydailynews-news` | `GET /nydailynews/news` | none | `ApiKeyAuth` | `NewYorkDailyNewsNydailynewsNewsResponse` |  |
+| newYorkDailyNews | `newYorkDailyNews.nydailynewsSections` | `nydailynews-sections` | `GET /nydailynews/sections` | none | `ApiKeyAuth` | `NewYorkDailyNewsNydailynewsSectionsResponse` |  |
+| newYorkMagazine | `newYorkMagazine.nymagArticle` | `nymag-article` | `GET /nymag/article` | `url` (query String required) | `ApiKeyAuth` | `NewYorkMagazineNymagArticleResponse` |  |
+| newYorkMagazine | `newYorkMagazine.nymagAuthor` | `nymag-author` | `GET /nymag/author` | `url` (query String required) | `ApiKeyAuth` | `NewYorkMagazineNymagAuthorResponse` |  |
+| newYorkMagazine | `newYorkMagazine.nymagHeadlines` | `nymag-headlines` | `GET /nymag/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewYorkMagazineNymagHeadlinesResponse` |  |
+| newYorkMagazine | `newYorkMagazine.nymagNews` | `nymag-news` | `GET /nymag/news` | none | `ApiKeyAuth` | `NewYorkMagazineNymagNewsResponse` |  |
+| newYorkMagazine | `newYorkMagazine.nymagSections` | `nymag-sections` | `GET /nymag/sections` | none | `ApiKeyAuth` | `NewYorkMagazineNymagSectionsResponse` |  |
+| newYorkPost | `newYorkPost.nypostArticle` | `nypost-article` | `GET /nypost/article` | `url` (query String required) | `ApiKeyAuth` | `NewYorkPostNypostArticleResponse` |  |
+| newYorkPost | `newYorkPost.nypostAuthor` | `nypost-author` | `GET /nypost/author` | `url` (query String required) | `ApiKeyAuth` | `NewYorkPostNypostAuthorResponse` |  |
+| newYorkPost | `newYorkPost.nypostHeadlines` | `nypost-headlines` | `GET /nypost/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewYorkPostNypostHeadlinesResponse` |  |
+| newYorkPost | `newYorkPost.nypostNews` | `nypost-news` | `GET /nypost/news` | none | `ApiKeyAuth` | `NewYorkPostNypostNewsResponse` |  |
+| newYorkPost | `newYorkPost.nypostSections` | `nypost-sections` | `GET /nypost/sections` | none | `ApiKeyAuth` | `NewYorkPostNypostSectionsResponse` |  |
+| newYorkTimes | `newYorkTimes.nytArticle` | `nyt-article` | `GET /nyt/article` | `url` (query String required) | `ApiKeyAuth` | `NewYorkTimesNytArticleResponse` |  |
+| newYorkTimes | `newYorkTimes.nytAuthor` | `nyt-author` | `GET /nyt/author` | `url` (query String required) | `ApiKeyAuth` | `NewYorkTimesNytAuthorResponse` |  |
+| newYorkTimes | `newYorkTimes.nytCategories` | `nyt-categories` | `GET /nyt/categories` | none | `ApiKeyAuth` | `NewYorkTimesNytCategoriesResponse` |  |
+| newYorkTimes | `newYorkTimes.nytHeadlines` | `nyt-headlines` | `GET /nyt/headlines` | `section` (query String required) | `ApiKeyAuth` | `NewYorkTimesNytHeadlinesResponse` |  |
+| newYorkTimes | `newYorkTimes.nytSections` | `nyt-sections` | `GET /nyt/sections` | none | `ApiKeyAuth` | `NewYorkTimesNytSectionsResponse` |  |
+| nzHerald | `nzHerald.nzheraldArticle` | `nzherald-article` | `GET /nzherald/article` | `url` (query String required) | `ApiKeyAuth` | `NzHeraldNzheraldArticleResponse` |  |
+| nzHerald | `nzHerald.nzheraldAuthor` | `nzherald-author` | `GET /nzherald/author` | `url` (query String required) | `ApiKeyAuth` | `NzHeraldNzheraldAuthorResponse` |  |
+| nzHerald | `nzHerald.nzheraldHeadlines` | `nzherald-headlines` | `GET /nzherald/headlines` | `section` (query String required) | `ApiKeyAuth` | `NzHeraldNzheraldHeadlinesResponse` |  |
+| nzHerald | `nzHerald.nzheraldNews` | `nzherald-news` | `GET /nzherald/news` | none | `ApiKeyAuth` | `NzHeraldNzheraldNewsResponse` |  |
+| nzHerald | `nzHerald.nzheraldSections` | `nzherald-sections` | `GET /nzherald/sections` | none | `ApiKeyAuth` | `NzHeraldNzheraldSectionsResponse` |  |
 | ohPolly | `ohPolly.ohpollyCollections` | `ohpolly-collections` | `GET /ohpolly/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `OhPollyOhpollyCollectionsResponse` |  |
 | ohPolly | `ohPolly.ohpollyCollectionProducts` | `ohpolly-collection-products` | `GET /ohpolly/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `OhPollyOhpollyCollectionProductsResponse` |  |
 | ohPolly | `ohPolly.ohpollyPages` | `ohpolly-pages` | `GET /ohpolly/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `OhPollyOhpollyPagesResponse` |  |
@@ -1153,6 +1878,11 @@ Total operations: `1939`
 | otto | `otto.categories` | `otto-categories` | `GET /otto/categories` | none | `ApiKeyAuth` | `OttoCategoriesResponse` |  |
 | otto | `otto.product` | `otto-product` | `GET /otto/product` | `url` (query String required) | `ApiKeyAuth` | `OttoProductResponse` |  |
 | otto | `otto.search` | `otto-search` | `GET /otto/search` | `q` (query String required)<br>`offset` (query Integer) | `ApiKeyAuth` | `OttoSearchResponse` |  |
+| pageSix | `pageSix.pagesixArticle` | `pagesix-article` | `GET /pagesix/article` | `url` (query String required) | `ApiKeyAuth` | `PageSixPagesixArticleResponse` |  |
+| pageSix | `pageSix.pagesixAuthor` | `pagesix-author` | `GET /pagesix/author` | `url` (query String required) | `ApiKeyAuth` | `PageSixPagesixAuthorResponse` |  |
+| pageSix | `pageSix.pagesixHeadlines` | `pagesix-headlines` | `GET /pagesix/headlines` | `section` (query String required) | `ApiKeyAuth` | `PageSixPagesixHeadlinesResponse` |  |
+| pageSix | `pageSix.pagesixNews` | `pagesix-news` | `GET /pagesix/news` | none | `ApiKeyAuth` | `PageSixPagesixNewsResponse` |  |
+| pageSix | `pageSix.pagesixSections` | `pagesix-sections` | `GET /pagesix/sections` | none | `ApiKeyAuth` | `PageSixPagesixSectionsResponse` |  |
 | pandamart | `pandamart.search` | `pandamart-search` | `GET /pandamart/search` | `market` (query String)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `PandamartSearchResponse` |  |
 | pandamart | `pandamart.store` | `pandamart-store` | `GET /pandamart/store` | `market` (query String)<br>`code` (query String required)<br>`latitude` (query Double)<br>`longitude` (query Double) | `ApiKeyAuth` | `PandamartStoreResponse` |  |
 | pandamart | `pandamart.storeCategories` | `pandamart-store-categories` | `GET /pandamart/store/categories` | `market` (query String)<br>`code` (query String required) | `ApiKeyAuth` | `PandamartStoreCategoriesResponse` |  |
@@ -1199,6 +1929,36 @@ Total operations: `1939`
 | patreon | `patreon.creatorTiers` | `patreon-creator-tiers` | `GET /patreon/creator/tiers` | `handle` (query String required) | `ApiKeyAuth` | `PatreonCreatorTiersResponse` |  |
 | patreon | `patreon.explore` | `patreon-explore` | `GET /patreon/explore` | `topic` (query String required) | `ApiKeyAuth` | `PatreonExploreResponse` |  |
 | patreon | `patreon.rss` | `patreon-rss` | `GET /patreon/rss` | `campaign_id` (query String required)<br>`show_id` (query String required) | `ApiKeyAuth` | `PatreonRssResponse` |  |
+| pcGamer | `pcGamer.pcgamerArticle` | `pcgamer-article` | `GET /pcgamer/article` | `url` (query String required) | `ApiKeyAuth` | `PcGamerPcgamerArticleResponse` |  |
+| pcGamer | `pcGamer.pcgamerAuthor` | `pcgamer-author` | `GET /pcgamer/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `PcGamerPcgamerAuthorResponse` |  |
+| pcGamer | `pcGamer.pcgamerHeadlines` | `pcgamer-headlines` | `GET /pcgamer/headlines` | `section` (query String required) | `ApiKeyAuth` | `PcGamerPcgamerHeadlinesResponse` |  |
+| pcGamer | `pcGamer.pcgamerNews` | `pcgamer-news` | `GET /pcgamer/news` | none | `ApiKeyAuth` | `PcGamerPcgamerNewsResponse` |  |
+| pcGamer | `pcGamer.pcgamerSections` | `pcgamer-sections` | `GET /pcgamer/sections` | none | `ApiKeyAuth` | `PcGamerPcgamerSectionsResponse` |  |
+| pcmag | `pcmag.article` | `pcmag-article` | `GET /pcmag/article` | `url` (query String required) | `ApiKeyAuth` | `PcmagArticleResponse` |  |
+| pcmag | `pcmag.author` | `pcmag-author` | `GET /pcmag/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `PcmagAuthorResponse` |  |
+| pcmag | `pcmag.headlines` | `pcmag-headlines` | `GET /pcmag/headlines` | `section` (query String required) | `ApiKeyAuth` | `PcmagHeadlinesResponse` |  |
+| pcmag | `pcmag.news` | `pcmag-news` | `GET /pcmag/news` | none | `ApiKeyAuth` | `PcmagNewsResponse` |  |
+| pcmag | `pcmag.sections` | `pcmag-sections` | `GET /pcmag/sections` | none | `ApiKeyAuth` | `PcmagSectionsResponse` |  |
+| people | `people.article` | `people-article` | `GET /people/article` | `url` (query String required) | `ApiKeyAuth` | `PeopleArticleResponse` |  |
+| people | `people.author` | `people-author` | `GET /people/author` | `url` (query String required) | `ApiKeyAuth` | `PeopleAuthorResponse` |  |
+| people | `people.headlines` | `people-headlines` | `GET /people/headlines` | `section` (query String required) | `ApiKeyAuth` | `PeopleHeadlinesResponse` |  |
+| people | `people.news` | `people-news` | `GET /people/news` | none | `ApiKeyAuth` | `PeopleNewsResponse` |  |
+| people | `people.sections` | `people-sections` | `GET /people/sections` | none | `ApiKeyAuth` | `PeopleSectionsResponse` |  |
+| philadelphiaInquirer | `philadelphiaInquirer.phillyinquirerArticle` | `phillyinquirer-article` | `GET /phillyinquirer/article` | `url` (query String required) | `ApiKeyAuth` | `PhiladelphiaInquirerPhillyinquirerArticleResponse` |  |
+| philadelphiaInquirer | `philadelphiaInquirer.phillyinquirerAuthor` | `phillyinquirer-author` | `GET /phillyinquirer/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `PhiladelphiaInquirerPhillyinquirerAuthorResponse` |  |
+| philadelphiaInquirer | `philadelphiaInquirer.phillyinquirerHeadlines` | `phillyinquirer-headlines` | `GET /phillyinquirer/headlines` | `section` (query String required) | `ApiKeyAuth` | `PhiladelphiaInquirerPhillyinquirerHeadlinesResponse` |  |
+| philadelphiaInquirer | `philadelphiaInquirer.phillyinquirerNews` | `phillyinquirer-news` | `GET /phillyinquirer/news` | none | `ApiKeyAuth` | `PhiladelphiaInquirerPhillyinquirerNewsResponse` |  |
+| philadelphiaInquirer | `philadelphiaInquirer.phillyinquirerSections` | `phillyinquirer-sections` | `GET /phillyinquirer/sections` | none | `ApiKeyAuth` | `PhiladelphiaInquirerPhillyinquirerSectionsResponse` |  |
+| philstar | `philstar.article` | `philstar-article` | `GET /philstar/article` | `url` (query String required) | `ApiKeyAuth` | `PhilstarArticleResponse` |  |
+| philstar | `philstar.author` | `philstar-author` | `GET /philstar/author` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `PhilstarAuthorResponse` |  |
+| philstar | `philstar.headlines` | `philstar-headlines` | `GET /philstar/headlines` | `section` (query String required) | `ApiKeyAuth` | `PhilstarHeadlinesResponse` |  |
+| philstar | `philstar.news` | `philstar-news` | `GET /philstar/news` | none | `ApiKeyAuth` | `PhilstarNewsResponse` |  |
+| philstar | `philstar.sections` | `philstar-sections` | `GET /philstar/sections` | none | `ApiKeyAuth` | `PhilstarSectionsResponse` |  |
+| phoneArena | `phoneArena.phonearenaArticle` | `phonearena-article` | `GET /phonearena/article` | `url` (query String required) | `ApiKeyAuth` | `PhoneArenaPhonearenaArticleResponse` |  |
+| phoneArena | `phoneArena.phonearenaAuthor` | `phonearena-author` | `GET /phonearena/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `PhoneArenaPhonearenaAuthorResponse` |  |
+| phoneArena | `phoneArena.phonearenaHeadlines` | `phonearena-headlines` | `GET /phonearena/headlines` | `section` (query String required) | `ApiKeyAuth` | `PhoneArenaPhonearenaHeadlinesResponse` |  |
+| phoneArena | `phoneArena.phonearenaNews` | `phonearena-news` | `GET /phonearena/news` | none | `ApiKeyAuth` | `PhoneArenaPhonearenaNewsResponse` |  |
+| phoneArena | `phoneArena.phonearenaSections` | `phonearena-sections` | `GET /phonearena/sections` | none | `ApiKeyAuth` | `PhoneArenaPhonearenaSectionsResponse` |  |
 | meta | `meta.ping` | `ping` | `GET /ping` | none | none | `MetaPingResponse` |  |
 | meta | `meta.ready` | `ready` | `GET /ready` | none | none | `MetaReadyResponse` |  |
 | pinterest | `pinterest.board` | `pinterest-board` | `GET /pinterest/board/{username}/{slug}` | `username` (path String required)<br>`slug` (path String required) | `ApiKeyAuth` | `PinterestBoardResponse` |  |
@@ -1223,11 +1983,23 @@ Total operations: `1939`
 | playStation | `playStation.playstationBrowse` | `playstation-browse` | `GET /playstation/browse` | `page` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationBrowseResponse` |  |
 | playStation | `playStation.playstationCategory` | `playstation-category` | `GET /playstation/category` | `id` (query String required)<br>`page` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationCategoryResponse` |  |
 | playStation | `playStation.playstationConcept` | `playstation-concept` | `GET /playstation/concept` | `id` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationConceptResponse` |  |
+| playStation | `playStation.playstationConceptReviews` | `playstation-concept-reviews` | `GET /playstation/concept/reviews` | `id` (query String required)<br>`cc` (query String)<br>`l` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String)<br>`rating` (query Integer) | `ApiKeyAuth` | `PlayStationPlaystationConceptReviewsResponse` |  |
 | playStation | `playStation.playstationDeals` | `playstation-deals` | `GET /playstation/deals` | `cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationDealsResponse` |  |
 | playStation | `playStation.playstationLatest` | `playstation-latest` | `GET /playstation/latest` | `cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationLatestResponse` |  |
 | playStation | `playStation.playstationPage` | `playstation-page` | `GET /playstation/page` | `alias` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationPageResponse` |  |
 | playStation | `playStation.playstationProduct` | `playstation-product` | `GET /playstation/product` | `id` (query String required)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationProductResponse` |  |
 | playStation | `playStation.playstationSearch` | `playstation-search` | `GET /playstation/search` | `term` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationSearchResponse` |  |
+| playStation | `playStation.playstationSuggest` | `playstation-suggest` | `GET /playstation/suggest` | `term` (query String required)<br>`limit` (query Integer)<br>`cc` (query String)<br>`l` (query String) | `ApiKeyAuth` | `PlayStationPlaystationSuggestResponse` |  |
+| politico | `politico.article` | `politico-article` | `GET /politico/article` | `url` (query String required) | `ApiKeyAuth` | `PoliticoArticleResponse` |  |
+| politico | `politico.author` | `politico-author` | `GET /politico/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `PoliticoAuthorResponse` |  |
+| politico | `politico.categories` | `politico-categories` | `GET /politico/categories` | none | `ApiKeyAuth` | `PoliticoCategoriesResponse` |  |
+| politico | `politico.headlines` | `politico-headlines` | `GET /politico/headlines` | none | `ApiKeyAuth` | `PoliticoHeadlinesResponse` |  |
+| politico | `politico.topic` | `politico-topic` | `GET /politico/topic` | `topic` (query String required) | `ApiKeyAuth` | `PoliticoTopicResponse` |  |
+| polygon | `polygon.article` | `polygon-article` | `GET /polygon/article` | `url` (query String required) | `ApiKeyAuth` | `PolygonArticleResponse` |  |
+| polygon | `polygon.author` | `polygon-author` | `GET /polygon/author` | `url` (query String required) | `ApiKeyAuth` | `PolygonAuthorResponse` |  |
+| polygon | `polygon.headlines` | `polygon-headlines` | `GET /polygon/headlines` | `section` (query String required) | `ApiKeyAuth` | `PolygonHeadlinesResponse` |  |
+| polygon | `polygon.news` | `polygon-news` | `GET /polygon/news` | none | `ApiKeyAuth` | `PolygonNewsResponse` |  |
+| polygon | `polygon.sections` | `polygon-sections` | `GET /polygon/sections` | none | `ApiKeyAuth` | `PolygonSectionsResponse` |  |
 | polymarket | `polymarket.activityTrades` | `polymarket-activity-trades` | `GET /polymarket/activity/trades` | `limit` (query Integer)<br>`offset` (query Integer)<br>`taker_only` (query String)<br>`filter_type` (query String)<br>`filter_amount` (query String)<br>`event_id` (query String)<br>`market` (query String) | `ApiKeyAuth` | `PolymarketActivityTradesResponse` |  |
 | polymarket | `polymarket.clobMarket` | `polymarket-clob-market` | `GET /polymarket/clob/market/{condition_id}` | `condition_id` (path String required) | `ApiKeyAuth` | `PolymarketClobMarketResponse` |  |
 | polymarket | `polymarket.dashboardMacro` | `polymarket-dashboard-macro` | `GET /polymarket/dashboards/macro` | `limit` (query Integer)<br>`cursor` (query String) | `ApiKeyAuth` | `PolymarketDashboardMacroResponse` |  |
@@ -1309,6 +2081,28 @@ Total operations: `1939`
 | poshmark | `poshmark.listing` | `poshmark-listing` | `GET /poshmark/listing/{id}` | `id` (path String required) | `ApiKeyAuth` | `PoshmarkListingResponse` |  |
 | poshmark | `poshmark.search` | `poshmark-search` | `GET /poshmark/search` | `query` (query String required)<br>`department` (query String)<br>`max_id` (query String) | `ApiKeyAuth` | `PoshmarkSearchResponse` |  |
 | poshmark | `poshmark.trend` | `poshmark-trend` | `GET /poshmark/trend/{id}` | `id` (path String required)<br>`max_id` (query String) | `ApiKeyAuth` | `PoshmarkTrendResponse` |  |
+| prada | `prada.categories` | `prada-categories` | `GET /prada/categories` | none | `ApiKeyAuth` | `PradaCategoriesResponse` |  |
+| prada | `prada.category` | `prada-category` | `GET /prada/category` | `category_id` (query String required)<br>`gender` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PradaCategoryResponse` |  |
+| prada | `prada.product` | `prada-product` | `GET /prada/product` | `pv` (query String required) | `ApiKeyAuth` | `PradaProductResponse` |  |
+| prada | `prada.search` | `prada-search` | `GET /prada/search` | `q` (query String required)<br>`gender` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PradaSearchResponse` |  |
+| prada | `prada.stores` | `prada-stores` | `GET /prada/stores` | `query` (query String)<br>`lat` (query Double)<br>`lng` (query Double)<br>`radius_km` (query Double)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `PradaStoresResponse` |  |
+| prada | `prada.suggest` | `prada-suggest` | `GET /prada/suggest` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `PradaSuggestResponse` |  |
+| pristineAuction | `pristineAuction.categories` | `pristine-auction-categories` | `GET /pristine-auction/categories` | none | `ApiKeyAuth` | `PristineAuctionCategoriesResponse` |  |
+| pristineAuction | `pristineAuction.lotDetail` | `pristine-auction-lot-detail` | `GET /pristine-auction/lot/{lot_number}` | `lot_number` (path Integer required) | `ApiKeyAuth` | `PristineAuctionLotDetailResponse` |  |
+| pristineAuction | `pristineAuction.search` | `pristine-auction-search` | `GET /pristine-auction/search` | `term` (query String)<br>`category` (query String)<br>`auction_type` (query String)<br>`status` (query String)<br>`sort` (query String)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`page` (query Integer)<br>`per_page` (query String) | `ApiKeyAuth` | `PristineAuctionSearchResponse` |  |
+| pristineMarketplace | `pristineMarketplace.collections` | `pristine-marketplace-collections` | `GET /pristine-marketplace/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceCollectionsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.collectionProducts` | `pristine-marketplace-collection-products` | `GET /pristine-marketplace/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceCollectionProductsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.pages` | `pristine-marketplace-pages` | `GET /pristine-marketplace/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplacePagesResponse` |  |
+| pristineMarketplace | `pristineMarketplace.page` | `pristine-marketplace-page` | `GET /pristine-marketplace/pages/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `PristineMarketplacePageResponse` |  |
+| pristineMarketplace | `pristineMarketplace.products` | `pristine-marketplace-products` | `GET /pristine-marketplace/products` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceProductsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.product` | `pristine-marketplace-product` | `GET /pristine-marketplace/products/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `PristineMarketplaceProductResponse` |  |
+| pristineMarketplace | `pristineMarketplace.productRecommendations` | `pristine-marketplace-product-recommendations` | `GET /pristine-marketplace/products/{handle}/recommendations` | `handle` (path String required)<br>`limit` (query Integer)<br>`intent` (query String) | `ApiKeyAuth` | `PristineMarketplaceProductRecommendationsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.reviews` | `pristine-marketplace-reviews` | `GET /pristine-marketplace/reviews` | `page` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceReviewsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.search` | `pristine-marketplace-search` | `GET /pristine-marketplace/search` | `q` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceSearchResponse` |  |
+| pristineMarketplace | `pristineMarketplace.searchSuggest` | `pristine-marketplace-search-suggest` | `GET /pristine-marketplace/search/suggest` | `q` (query String required)<br>`types` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceSearchSuggestResponse` |  |
+| pristineMarketplace | `pristineMarketplace.sitemapUrls` | `pristine-marketplace-sitemap-urls` | `GET /pristine-marketplace/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `PristineMarketplaceSitemapUrlsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.sitemaps` | `pristine-marketplace-sitemaps` | `GET /pristine-marketplace/sitemaps` | none | `ApiKeyAuth` | `PristineMarketplaceSitemapsResponse` |  |
+| pristineMarketplace | `pristineMarketplace.store` | `pristine-marketplace-store` | `GET /pristine-marketplace/store` | none | `ApiKeyAuth` | `PristineMarketplaceStoreResponse` |  |
 | productHunt | `productHunt.category` | `producthunt-category` | `GET /producthunt/category/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `ProductHuntCategoryResponse` |  |
 | productHunt | `productHunt.categoryProducts` | `producthunt-category-products` | `GET /producthunt/category/{slug}/products` | `slug` (path String required)<br>`cursor` (query String)<br>`page_size` (query Integer)<br>`featured_only` (query Boolean)<br>`order` (query String)<br>`page` (query Integer)<br>`tags` (query String) | `ApiKeyAuth` | `ProductHuntCategoryProductsResponse` |  |
 | productHunt | `productHunt.leaderboard` | `producthunt-leaderboard` | `GET /producthunt/leaderboard` | `scope` (query String)<br>`date` (query String)<br>`year` (query Integer)<br>`month` (query Integer)<br>`day` (query Integer)<br>`week` (query Integer)<br>`featured` (query Boolean)<br>`order` (query String)<br>`cursor` (query String) | `ApiKeyAuth` | `ProductHuntLeaderboardResponse` |  |
@@ -1320,6 +2114,46 @@ Total operations: `1939`
 | productHunt | `productHunt.makers` | `producthunt-makers` | `GET /producthunt/product/{id}/makers` | `id` (path String required)<br>`cursor` (query String) | `ApiKeyAuth` | `ProductHuntMakersResponse` |  |
 | productHunt | `productHunt.reviews` | `producthunt-reviews` | `GET /producthunt/product/{id}/reviews` | `id` (path String required) | `ApiKeyAuth` | `ProductHuntReviewsResponse` |  |
 | productHunt | `productHunt.search` | `producthunt-search` | `GET /producthunt/search` | `query` (query String required)<br>`type` (query String)<br>`page` (query Integer)<br>`featured` (query Boolean)<br>`topics` (query String) | `ApiKeyAuth` | `ProductHuntSearchResponse` |  |
+| proPublica | `proPublica.propublicaArticle` | `propublica-article` | `GET /propublica/article` | `url` (query String required) | `ApiKeyAuth` | `ProPublicaPropublicaArticleResponse` |  |
+| proPublica | `proPublica.propublicaAuthor` | `propublica-author` | `GET /propublica/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ProPublicaPropublicaAuthorResponse` |  |
+| proPublica | `proPublica.propublicaHeadlines` | `propublica-headlines` | `GET /propublica/headlines` | `section` (query String required) | `ApiKeyAuth` | `ProPublicaPropublicaHeadlinesResponse` |  |
+| proPublica | `proPublica.propublicaNews` | `propublica-news` | `GET /propublica/news` | none | `ApiKeyAuth` | `ProPublicaPropublicaNewsResponse` |  |
+| proPublica | `proPublica.propublicaSections` | `propublica-sections` | `GET /propublica/sections` | none | `ApiKeyAuth` | `ProPublicaPropublicaSectionsResponse` |  |
+| psa | `psa.autographfactsCategories` | `psa-autographfacts-categories` | `GET /psa/autographfacts/categories` | none | `ApiKeyAuth` | `PsaAutographfactsCategoriesResponse` |  |
+| psa | `psa.autographfactsGallery` | `psa-autographfacts-gallery` | `GET /psa/autographfacts/gallery` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaAutographfactsGalleryResponse` |  |
+| psa | `psa.autographfactsSubject` | `psa-autographfacts-subject` | `GET /psa/autographfacts/subject` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaAutographfactsSubjectResponse` |  |
+| psa | `psa.autographfactsSubjects` | `psa-autographfacts-subjects` | `GET /psa/autographfacts/subjects` | `category_id` (query Integer required) | `ApiKeyAuth` | `PsaAutographfactsSubjectsResponse` |  |
+| psa | `psa.cardfactsCategories` | `psa-cardfacts-categories` | `GET /psa/cardfacts/categories` | none | `ApiKeyAuth` | `PsaCardfactsCategoriesResponse` |  |
+| psa | `psa.cardfactsChecklist` | `psa-cardfacts-checklist` | `GET /psa/cardfacts/checklist` | `set_id` (query String required) | `ApiKeyAuth` | `PsaCardfactsChecklistResponse` |  |
+| psa | `psa.cardfactsSets` | `psa-cardfacts-sets` | `GET /psa/cardfacts/sets` | `category_id` (query Integer required) | `ApiKeyAuth` | `PsaCardfactsSetsResponse` |  |
+| psa | `psa.certLookup` | `psa-cert-lookup` | `GET /psa/cert-lookup` | `cert_number` (query String required) | `ApiKeyAuth` | `PsaCertLookupResponse` |  |
+| psa | `psa.priceGuideCategories` | `psa-price-guide-categories` | `GET /psa/price-guide/categories` | none | `ApiKeyAuth` | `PsaPriceGuideCategoriesResponse` |  |
+| psa | `psa.priceGuideSearch` | `psa-price-guide-search` | `GET /psa/price-guide/search` | `query` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `PsaPriceGuideSearchResponse` |  |
+| psa | `psa.priceGuideSet` | `psa-price-guide-set` | `GET /psa/price-guide/set` | `category_path` (query String required)<br>`set_path` (query String required)<br>`set_id` (query String required) | `ApiKeyAuth` | `PsaPriceGuideSetResponse` |  |
+| psa | `psa.probatfactsCategories` | `psa-probatfacts-categories` | `GET /psa/probatfacts/categories` | none | `ApiKeyAuth` | `PsaProbatfactsCategoriesResponse` |  |
+| psa | `psa.probatfactsGallery` | `psa-probatfacts-gallery` | `GET /psa/probatfacts/gallery` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaProbatfactsGalleryResponse` |  |
+| psa | `psa.probatfactsSubject` | `psa-probatfacts-subject` | `GET /psa/probatfacts/subject` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaProbatfactsSubjectResponse` |  |
+| psa | `psa.probatfactsSubjects` | `psa-probatfacts-subjects` | `GET /psa/probatfacts/subjects` | `category_id` (query Integer required) | `ApiKeyAuth` | `PsaProbatfactsSubjectsResponse` |  |
+| psa | `psa.ticketfactsCategories` | `psa-ticketfacts-categories` | `GET /psa/ticketfacts/categories` | none | `ApiKeyAuth` | `PsaTicketfactsCategoriesResponse` |  |
+| psa | `psa.ticketfactsGallery` | `psa-ticketfacts-gallery` | `GET /psa/ticketfacts/gallery` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaTicketfactsGalleryResponse` |  |
+| psa | `psa.ticketfactsSubject` | `psa-ticketfacts-subject` | `GET /psa/ticketfacts/subject` | `subject_id` (query String required) | `ApiKeyAuth` | `PsaTicketfactsSubjectResponse` |  |
+| psa | `psa.ticketfactsSubjects` | `psa-ticketfacts-subjects` | `GET /psa/ticketfacts/subjects` | `category_id` (query Integer required) | `ApiKeyAuth` | `PsaTicketfactsSubjectsResponse` |  |
+| psastore | `psastore.collections` | `psastore-collections` | `GET /psastore/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastoreCollectionsResponse` |  |
+| psastore | `psastore.collectionProducts` | `psastore-collection-products` | `GET /psastore/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastoreCollectionProductsResponse` |  |
+| psastore | `psastore.pages` | `psastore-pages` | `GET /psastore/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastorePagesResponse` |  |
+| psastore | `psastore.page` | `psastore-page` | `GET /psastore/pages/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `PsastorePageResponse` |  |
+| psastore | `psastore.products` | `psastore-products` | `GET /psastore/products` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastoreProductsResponse` |  |
+| psastore | `psastore.product` | `psastore-product` | `GET /psastore/products/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `PsastoreProductResponse` |  |
+| psastore | `psastore.productRecommendations` | `psastore-product-recommendations` | `GET /psastore/products/{handle}/recommendations` | `handle` (path String required)<br>`limit` (query Integer)<br>`intent` (query String) | `ApiKeyAuth` | `PsastoreProductRecommendationsResponse` |  |
+| psastore | `psastore.searchSuggest` | `psastore-search-suggest` | `GET /psastore/search/suggest` | `q` (query String required)<br>`types` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastoreSearchSuggestResponse` |  |
+| psastore | `psastore.sitemapUrls` | `psastore-sitemap-urls` | `GET /psastore/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `PsastoreSitemapUrlsResponse` |  |
+| psastore | `psastore.sitemaps` | `psastore-sitemaps` | `GET /psastore/sitemaps` | none | `ApiKeyAuth` | `PsastoreSitemapsResponse` |  |
+| psastore | `psastore.store` | `psastore-store` | `GET /psastore/store` | none | `ApiKeyAuth` | `PsastoreStoreResponse` |  |
+| punch | `punch.article` | `punch-article` | `GET /punch/article` | `url` (query String required) | `ApiKeyAuth` | `PunchArticleResponse` |  |
+| punch | `punch.author` | `punch-author` | `GET /punch/author` | `url` (query String required) | `ApiKeyAuth` | `PunchAuthorResponse` |  |
+| punch | `punch.headlines` | `punch-headlines` | `GET /punch/headlines` | `section` (query String required) | `ApiKeyAuth` | `PunchHeadlinesResponse` |  |
+| punch | `punch.news` | `punch-news` | `GET /punch/news` | none | `ApiKeyAuth` | `PunchNewsResponse` |  |
+| punch | `punch.sections` | `punch-sections` | `GET /punch/sections` | none | `ApiKeyAuth` | `PunchSectionsResponse` |  |
 | quince | `quince.categories` | `quince-categories` | `GET /quince/categories` | none | `ApiKeyAuth` | `QuinceCategoriesResponse` |  |
 | quince | `quince.navigation` | `quince-navigation` | `GET /quince/navigation` | none | `ApiKeyAuth` | `QuinceNavigationResponse` |  |
 | quince | `quince.product` | `quince-product` | `GET /quince/product` | `handle` (query String required) | `ApiKeyAuth` | `QuinceProductResponse` |  |
@@ -1335,6 +2169,28 @@ Total operations: `1939`
 | raisingCaneS | `raisingCaneS.raisingcanesPromotion` | `raisingcanes-promotion` | `GET /raisingcanes/promotion` | `path` (query String required) | `ApiKeyAuth` | `RaisingCaneSRaisingcanesPromotionResponse` |  |
 | raisingCaneS | `raisingCaneS.raisingcanesPromotions` | `raisingcanes-promotions` | `GET /raisingcanes/promotions` | none | `ApiKeyAuth` | `RaisingCaneSRaisingcanesPromotionsResponse` |  |
 | raisingCaneS | `raisingCaneS.raisingcanesStore` | `raisingcanes-store` | `GET /raisingcanes/store` | `path` (query String required) | `ApiKeyAuth` | `RaisingCaneSRaisingcanesStoreResponse` |  |
+| rappler | `rappler.article` | `rappler-article` | `GET /rappler/article` | `url` (query String required) | `ApiKeyAuth` | `RapplerArticleResponse` |  |
+| rappler | `rappler.author` | `rappler-author` | `GET /rappler/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RapplerAuthorResponse` |  |
+| rappler | `rappler.headlines` | `rappler-headlines` | `GET /rappler/headlines` | `section` (query String required) | `ApiKeyAuth` | `RapplerHeadlinesResponse` |  |
+| rappler | `rappler.news` | `rappler-news` | `GET /rappler/news` | none | `ApiKeyAuth` | `RapplerNewsResponse` |  |
+| rappler | `rappler.sections` | `rappler-sections` | `GET /rappler/sections` | none | `ApiKeyAuth` | `RapplerSectionsResponse` |  |
+| rawStory | `rawStory.rawstoryArticle` | `rawstory-article` | `GET /rawstory/article` | `url` (query String required) | `ApiKeyAuth` | `RawStoryRawstoryArticleResponse` |  |
+| rawStory | `rawStory.rawstoryAuthor` | `rawstory-author` | `GET /rawstory/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RawStoryRawstoryAuthorResponse` |  |
+| rawStory | `rawStory.rawstoryHeadlines` | `rawstory-headlines` | `GET /rawstory/headlines` | `section` (query String required) | `ApiKeyAuth` | `RawStoryRawstoryHeadlinesResponse` |  |
+| rawStory | `rawStory.rawstoryNews` | `rawstory-news` | `GET /rawstory/news` | none | `ApiKeyAuth` | `RawStoryRawstoryNewsResponse` |  |
+| rawStory | `rawStory.rawstorySections` | `rawstory-sections` | `GET /rawstory/sections` | none | `ApiKeyAuth` | `RawStoryRawstorySectionsResponse` |  |
+| rebag | `rebag.collections` | `rebag-collections` | `GET /rebag/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagCollectionsResponse` |  |
+| rebag | `rebag.collectionProducts` | `rebag-collection-products` | `GET /rebag/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagCollectionProductsResponse` |  |
+| rebag | `rebag.pages` | `rebag-pages` | `GET /rebag/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagPagesResponse` |  |
+| rebag | `rebag.page` | `rebag-page` | `GET /rebag/pages/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `RebagPageResponse` |  |
+| rebag | `rebag.products` | `rebag-products` | `GET /rebag/products` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagProductsResponse` |  |
+| rebag | `rebag.product` | `rebag-product` | `GET /rebag/products/{handle}` | `handle` (path String required) | `ApiKeyAuth` | `RebagProductResponse` |  |
+| rebag | `rebag.productRecommendations` | `rebag-product-recommendations` | `GET /rebag/products/{handle}/recommendations` | `handle` (path String required)<br>`limit` (query Integer)<br>`intent` (query String) | `ApiKeyAuth` | `RebagProductRecommendationsResponse` |  |
+| rebag | `rebag.search` | `rebag-search` | `GET /rebag/search` | `q` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagSearchResponse` |  |
+| rebag | `rebag.searchSuggest` | `rebag-search-suggest` | `GET /rebag/search/suggest` | `q` (query String required)<br>`types` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagSearchSuggestResponse` |  |
+| rebag | `rebag.sitemapUrls` | `rebag-sitemap-urls` | `GET /rebag/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `RebagSitemapUrlsResponse` |  |
+| rebag | `rebag.sitemaps` | `rebag-sitemaps` | `GET /rebag/sitemaps` | none | `ApiKeyAuth` | `RebagSitemapsResponse` |  |
+| rebag | `rebag.store` | `rebag-store` | `GET /rebag/store` | none | `ApiKeyAuth` | `RebagStoreResponse` |  |
 | reddit | `reddit.comments` | `reddit-comments` | `GET /reddit/comments/{id}` | `id` (path String required)<br>`sort` (query String)<br>`limit` (query Integer)<br>`depth` (query Integer)<br>`include_metrics` (query Boolean) | `ApiKeyAuth` | `RedditCommentsResponse` |  |
 | reddit | `reddit.domainPosts` | `reddit-domain-posts` | `GET /reddit/domain/{domain}/posts` | `domain` (path String required)<br>`sort` (query String)<br>`time` (query String)<br>`limit` (query Integer)<br>`after` (query String) | `ApiKeyAuth` | `RedditDomainPostsResponse` |  |
 | reddit | `reddit.leads` | `reddit-leads` | `GET /reddit/leads` | `q` (query String required)<br>`subreddit` (query String)<br>`sort` (query String)<br>`time` (query String)<br>`limit` (query Integer)<br>`min_score` (query Integer)<br>`classifier` (query String) | `ApiKeyAuth` | `RedditLeadsResponse` |  |
@@ -1349,24 +2205,47 @@ Total operations: `1939`
 | reddit | `reddit.userPosts` | `reddit-user-posts` | `GET /reddit/user/{username}/posts` | `username` (path String required)<br>`limit` (query Integer)<br>`after` (query String) | `ApiKeyAuth` | `RedditUserPostsResponse` |  |
 | redfin | `redfin.estimate` | `redfin-estimate` | `GET /redfin/estimate` | `property_id` (query String required) | `ApiKeyAuth` | `RedfinEstimateResponse` |  |
 | redfin | `redfin.property` | `redfin-property` | `GET /redfin/property` | `url` (query String)<br>`property_id` (query String)<br>`listing_id` (query String) | `ApiKeyAuth` | `RedfinPropertyResponse` |  |
-| redfin | `redfin.regionTrends` | `redfin-region-trends` | `GET /redfin/region-trends` | `region_id` (query Integer required)<br>`region_type` (query Integer) | `ApiKeyAuth` | `RedfinRegionTrendsResponse` |  |
-| redfin | `redfin.search` | `redfin-search` | `GET /redfin/search` | `location` (query String)<br>`page` (query Integer)<br>`region_id` (query Integer)<br>`region_type` (query Integer)<br>`status` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_beds` (query Integer)<br>`min_baths` (query Double) | `ApiKeyAuth` | `RedfinSearchResponse` |  |
+| redfin | `redfin.regionTrends` | `redfin-region-trends` | `GET /redfin/region-trends` | `region_id` (query Integer required)<br>`region_type` (query String) | `ApiKeyAuth` | `RedfinRegionTrendsResponse` |  |
+| redfin | `redfin.search` | `redfin-search` | `GET /redfin/search` | `location` (query String)<br>`page` (query Integer)<br>`region_id` (query Integer)<br>`region_type` (query String)<br>`status` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_beds` (query Integer)<br>`min_baths` (query Double) | `ApiKeyAuth` | `RedfinSearchResponse` |  |
 | redfin | `redfin.similar` | `redfin-similar` | `GET /redfin/similar` | `property_id` (query String required) | `ApiKeyAuth` | `RedfinSimilarResponse` |  |
 | referrals | `referrals.click` | `referrals-click` | `POST /referrals/click` | `request` (body String required) | none | `ReferralsClickResponse` |  |
 | referrals | `referrals.me` | `referrals-me` | `GET /referrals/me` | none | `JWTAuth` | `ReferralsMeResponse` |  |
 | referrals | `referrals.meEvents` | `referrals-me-events` | `GET /referrals/me/events` | `limit` (query Integer) | `JWTAuth` | `ReferralsMeEventsResponse` |  |
+| resy | `resy.availability` | `resy-availability` | `GET /resy/availability` | `restaurant_id` (query String required)<br>`date` (query String required)<br>`party_size` (query Integer) | `ApiKeyAuth` | `ResyAvailabilityResponse` |  |
+| resy | `resy.cuisines` | `resy-cuisines` | `GET /resy/cuisines` | `location` (query String required) | `ApiKeyAuth` | `ResyCuisinesResponse` |  |
+| resy | `resy.eventDetail` | `resy-event-detail` | `GET /resy/event` | `event_url_slug` (query String required)<br>`restaurant_url_slug` (query String required)<br>`location` (query String required)<br>`party_size` (query Integer) | `ApiKeyAuth` | `ResyEventDetailResponse` |  |
+| resy | `resy.events` | `resy-events` | `GET /resy/events` | `location` (query String required)<br>`date` (query String)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `ResyEventsResponse` |  |
+| resy | `resy.locations` | `resy-locations` | `GET /resy/locations` | `q` (query String)<br>`country` (query String) | `ApiKeyAuth` | `ResyLocationsResponse` |  |
+| resy | `resy.restaurant` | `resy-restaurant` | `GET /resy/restaurant` | `restaurant_id` (query String required) | `ApiKeyAuth` | `ResyRestaurantResponse` |  |
+| resy | `resy.search` | `resy-search` | `GET /resy/search` | `term` (query String)<br>`latitude` (query Double required)<br>`longitude` (query Double required)<br>`date` (query String)<br>`party_size` (query Integer)<br>`size` (query Integer) | `ApiKeyAuth` | `ResySearchResponse` |  |
+| reuters | `reuters.article` | `reuters-article` | `GET /reuters/article` | `url` (query String required) | `ApiKeyAuth` | `ReutersArticleResponse` |  |
+| reuters | `reuters.articles` | `reuters-articles` | `GET /reuters/articles` | `page` (query Integer) | `ApiKeyAuth` | `ReutersArticlesResponse` |  |
+| reuters | `reuters.author` | `reuters-author` | `GET /reuters/author` | `url` (query String required) | `ApiKeyAuth` | `ReutersAuthorResponse` |  |
+| reuters | `reuters.news` | `reuters-news` | `GET /reuters/news` | `page` (query Integer) | `ApiKeyAuth` | `ReutersNewsResponse` |  |
+| reuters | `reuters.section` | `reuters-section` | `GET /reuters/section` | `section` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `ReutersSectionResponse` |  |
+| reuters | `reuters.sections` | `reuters-sections` | `GET /reuters/sections` | none | `ApiKeyAuth` | `ReutersSectionsResponse` |  |
 | rightmove | `rightmove.agents` | `rightmove-agents` | `GET /rightmove/agents` | `location` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `RightmoveAgentsResponse` |  |
 | rightmove | `rightmove.agentBranch` | `rightmove-agent-branch` | `GET /rightmove/agents/{id}` | `id` (path String required) | `ApiKeyAuth` | `RightmoveAgentBranchResponse` |  |
 | rightmove | `rightmove.autocomplete` | `rightmove-autocomplete` | `GET /rightmove/autocomplete` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `RightmoveAutocompleteResponse` |  |
 | rightmove | `rightmove.commercialSearch` | `rightmove-commercial-search` | `GET /rightmove/commercial/search` | `location` (query String required)<br>`page` (query Integer)<br>`status` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_size` (query Integer)<br>`max_size` (query Integer)<br>`property_type` (query String) | `ApiKeyAuth` | `RightmoveCommercialSearchResponse` |  |
 | rightmove | `rightmove.newHomesSearch` | `rightmove-new-homes-search` | `GET /rightmove/new-homes/search` | `location` (query String required)<br>`page` (query Integer)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_bedrooms` (query Integer)<br>`max_bedrooms` (query Integer)<br>`min_bathrooms` (query Double)<br>`max_bathrooms` (query Double)<br>`property_type` (query String) | `ApiKeyAuth` | `RightmoveNewHomesSearchResponse` |  |
 | rightmove | `rightmove.property` | `rightmove-property` | `GET /rightmove/properties/{id}` | `id` (path String required) | `ApiKeyAuth` | `RightmovePropertyResponse` |  |
-| rightmove | `rightmove.search` | `rightmove-search` | `GET /rightmove/search` | `location` (query String required)<br>`page` (query Integer)<br>`status` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_bedrooms` (query Integer)<br>`max_bedrooms` (query Integer)<br>`min_bathrooms` (query Double)<br>`max_bathrooms` (query Double)<br>`property_type` (query String) | `ApiKeyAuth` | `RightmoveSearchResponse` |  |
+| rightmove | `rightmove.search` | `rightmove-search` | `GET /rightmove/search` | `location` (query String required)<br>`page` (query Integer)<br>`status` (query String)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_bedrooms` (query Integer)<br>`max_bedrooms` (query Integer)<br>`min_bathrooms` (query Double)<br>`max_bathrooms` (query Double)<br>`property_type` (query String)<br>`radius` (query String)<br>`must_have` (query String)<br>`dont_show` (query String)<br>`tenure_types` (query String)<br>`sort` (query String) | `ApiKeyAuth` | `RightmoveSearchResponse` |  |
 | rightmove | `rightmove.studentSearch` | `rightmove-student-search` | `GET /rightmove/student/search` | `location` (query String required)<br>`page` (query Integer)<br>`min_price` (query Integer)<br>`max_price` (query Integer)<br>`min_bedrooms` (query Integer)<br>`max_bedrooms` (query Integer)<br>`furnish_type` (query String) | `ApiKeyAuth` | `RightmoveStudentSearchResponse` |  |
+| rnz | `rnz.article` | `rnz-article` | `GET /rnz/article` | `url` (query String required) | `ApiKeyAuth` | `RnzArticleResponse` |  |
+| rnz | `rnz.author` | `rnz-author` | `GET /rnz/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `RnzAuthorResponse` |  |
+| rnz | `rnz.headlines` | `rnz-headlines` | `GET /rnz/headlines` | `section` (query String required) | `ApiKeyAuth` | `RnzHeadlinesResponse` |  |
+| rnz | `rnz.news` | `rnz-news` | `GET /rnz/news` | none | `ApiKeyAuth` | `RnzNewsResponse` |  |
+| rnz | `rnz.sections` | `rnz-sections` | `GET /rnz/sections` | none | `ApiKeyAuth` | `RnzSectionsResponse` |  |
 | roblox | `roblox.badges` | `roblox-badges` | `GET /roblox/badges` | `universe_id` (query Integer required)<br>`cursor` (query String) | `ApiKeyAuth` | `RobloxBadgesResponse` |  |
 | roblox | `roblox.game` | `roblox-game` | `GET /roblox/game` | `universe_id` (query Integer required) | `ApiKeyAuth` | `RobloxGameResponse` |  |
 | roblox | `roblox.rankings` | `roblox-rankings` | `GET /roblox/rankings` | `sort_id` (query String) | `ApiKeyAuth` | `RobloxRankingsResponse` |  |
 | roblox | `roblox.search` | `roblox-search` | `GET /roblox/search` | `q` (query String required)<br>`page_token` (query String) | `ApiKeyAuth` | `RobloxSearchResponse` |  |
+| rollingStone | `rollingStone.rollingstoneArticle` | `rollingstone-article` | `GET /rollingstone/article` | `url` (query String required) | `ApiKeyAuth` | `RollingStoneRollingstoneArticleResponse` |  |
+| rollingStone | `rollingStone.rollingstoneAuthor` | `rollingstone-author` | `GET /rollingstone/author` | `url` (query String required) | `ApiKeyAuth` | `RollingStoneRollingstoneAuthorResponse` |  |
+| rollingStone | `rollingStone.rollingstoneHeadlines` | `rollingstone-headlines` | `GET /rollingstone/headlines` | `section` (query String required) | `ApiKeyAuth` | `RollingStoneRollingstoneHeadlinesResponse` |  |
+| rollingStone | `rollingStone.rollingstoneNews` | `rollingstone-news` | `GET /rollingstone/news` | none | `ApiKeyAuth` | `RollingStoneRollingstoneNewsResponse` |  |
+| rollingStone | `rollingStone.rollingstoneSections` | `rollingstone-sections` | `GET /rollingstone/sections` | none | `ApiKeyAuth` | `RollingStoneRollingstoneSectionsResponse` |  |
 | rothyS | `rothyS.rothysCollections` | `rothys-collections` | `GET /rothys/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RothySRothysCollectionsResponse` |  |
 | rothyS | `rothyS.rothysCollectionProducts` | `rothys-collection-products` | `GET /rothys/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RothySRothysCollectionProductsResponse` |  |
 | rothyS | `rothyS.rothysPages` | `rothys-pages` | `GET /rothys/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `RothySRothysPagesResponse` |  |
@@ -1391,11 +2270,46 @@ Total operations: `1939`
 | rover | `rover.sitterProfile` | `rover-sitter-profile` | `GET /rover/sitter/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `RoverSitterProfileResponse` |  |
 | rover | `rover.trainerSearch` | `rover-trainer-search` | `GET /rover/trainer-search` | `location` (query String required) | `ApiKeyAuth` | `RoverTrainerSearchResponse` |  |
 | rover | `rover.trainerProfile` | `rover-trainer-profile` | `GET /rover/trainer/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `RoverTrainerProfileResponse` |  |
+| rtNews | `rtNews.rteArticle` | `rte-article` | `GET /rte/article` | `url` (query String required) | `ApiKeyAuth` | `RtNewsRteArticleResponse` |  |
+| rtNews | `rtNews.rteAuthor` | `rte-author` | `GET /rte/author` | `url` (query String required) | `ApiKeyAuth` | `RtNewsRteAuthorResponse` |  |
+| rtNews | `rtNews.rteHeadlines` | `rte-headlines` | `GET /rte/headlines` | `section` (query String required) | `ApiKeyAuth` | `RtNewsRteHeadlinesResponse` |  |
+| rtNews | `rtNews.rteNews` | `rte-news` | `GET /rte/news` | none | `ApiKeyAuth` | `RtNewsRteNewsResponse` |  |
+| rtNews | `rtNews.rteSections` | `rte-sections` | `GET /rte/sections` | none | `ApiKeyAuth` | `RtNewsRteSectionsResponse` |  |
+| salon | `salon.article` | `salon-article` | `GET /salon/article` | `url` (query String required) | `ApiKeyAuth` | `SalonArticleResponse` |  |
+| salon | `salon.author` | `salon-author` | `GET /salon/author` | `url` (query String required) | `ApiKeyAuth` | `SalonAuthorResponse` |  |
+| salon | `salon.headlines` | `salon-headlines` | `GET /salon/headlines` | `section` (query String required) | `ApiKeyAuth` | `SalonHeadlinesResponse` |  |
+| salon | `salon.news` | `salon-news` | `GET /salon/news` | none | `ApiKeyAuth` | `SalonNewsResponse` |  |
+| salon | `salon.sections` | `salon-sections` | `GET /salon/sections` | none | `ApiKeyAuth` | `SalonSectionsResponse` |  |
 | samSClub | `samSClub.samsclubCategory` | `samsclub-category` | `GET /samsclub/category` | `id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SamSclubSamsclubCategoryResponse` |  |
 | samSClub | `samSClub.samsclubContent` | `samsclub-content` | `GET /samsclub/content/{id}` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubContentResponse` |  |
 | samSClub | `samSClub.samsclubDepartments` | `samsclub-departments` | `GET /samsclub/departments` | none | `ApiKeyAuth` | `SamSclubSamsclubDepartmentsResponse` |  |
 | samSClub | `samSClub.samsclubProduct` | `samsclub-product` | `GET /samsclub/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubProductResponse` |  |
 | samSClub | `samSClub.samsclubProductRelated` | `samsclub-product-related` | `GET /samsclub/product/{id}/related` | `id` (path String required) | `ApiKeyAuth` | `SamSclubSamsclubProductRelatedResponse` |  |
+| scmp | `scmp.article` | `scmp-article` | `GET /scmp/article` | `url` (query String required) | `ApiKeyAuth` | `ScmpArticleResponse` |  |
+| scmp | `scmp.author` | `scmp-author` | `GET /scmp/author` | `url` (query String required) | `ApiKeyAuth` | `ScmpAuthorResponse` |  |
+| scmp | `scmp.headlines` | `scmp-headlines` | `GET /scmp/headlines` | `section` (query String required) | `ApiKeyAuth` | `ScmpHeadlinesResponse` |  |
+| scmp | `scmp.sections` | `scmp-sections` | `GET /scmp/sections` | none | `ApiKeyAuth` | `ScmpSectionsResponse` |  |
+| screenRant | `screenRant.screenrantArticle` | `screenrant-article` | `GET /screenrant/article` | `url` (query String required) | `ApiKeyAuth` | `ScreenRantScreenrantArticleResponse` |  |
+| screenRant | `screenRant.screenrantAuthor` | `screenrant-author` | `GET /screenrant/author` | `url` (query String required) | `ApiKeyAuth` | `ScreenRantScreenrantAuthorResponse` |  |
+| screenRant | `screenRant.screenrantHeadlines` | `screenrant-headlines` | `GET /screenrant/headlines` | `section` (query String required) | `ApiKeyAuth` | `ScreenRantScreenrantHeadlinesResponse` |  |
+| screenRant | `screenRant.screenrantNews` | `screenrant-news` | `GET /screenrant/news` | none | `ApiKeyAuth` | `ScreenRantScreenrantNewsResponse` |  |
+| screenRant | `screenRant.screenrantSections` | `screenrant-sections` | `GET /screenrant/sections` | none | `ApiKeyAuth` | `ScreenRantScreenrantSectionsResponse` |  |
+| seatGeek | `seatGeek.seatgeekCategories` | `seatgeek-categories` | `GET /seatgeek/categories` | none | `ApiKeyAuth` | `SeatGeekSeatgeekCategoriesResponse` |  |
+| seatGeek | `seatGeek.seatgeekCities` | `seatgeek-cities` | `GET /seatgeek/cities` | none | `ApiKeyAuth` | `SeatGeekSeatgeekCitiesResponse` |  |
+| seatGeek | `seatGeek.seatgeekEvent` | `seatgeek-event` | `GET /seatgeek/event` | `id` (query Integer required) | `ApiKeyAuth` | `SeatGeekSeatgeekEventResponse` |  |
+| seatGeek | `seatGeek.seatgeekEventsByCategory` | `seatgeek-events-by-category` | `GET /seatgeek/events-by-category` | `taxonomy_id` (query Integer required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `SeatGeekSeatgeekEventsByCategoryResponse` |  |
+| seatGeek | `seatGeek.seatgeekEventsNear` | `seatgeek-events-near` | `GET /seatgeek/events-near` | `lat` (query Double required)<br>`lon` (query Double required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `SeatGeekSeatgeekEventsNearResponse` |  |
+| seatGeek | `seatGeek.seatgeekPerformer` | `seatgeek-performer` | `GET /seatgeek/performer` | `id` (query Integer required) | `ApiKeyAuth` | `SeatGeekSeatgeekPerformerResponse` |  |
+| seatGeek | `seatGeek.seatgeekPerformerEvents` | `seatgeek-performer-events` | `GET /seatgeek/performer-events` | `performer_id` (query Integer required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `SeatGeekSeatgeekPerformerEventsResponse` |  |
+| seatGeek | `seatGeek.seatgeekSearch` | `seatgeek-search` | `GET /seatgeek/search` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SeatGeekSeatgeekSearchResponse` |  |
+| seatGeek | `seatGeek.seatgeekTrending` | `seatgeek-trending` | `GET /seatgeek/trending` | `lat` (query Double required)<br>`lon` (query Double required) | `ApiKeyAuth` | `SeatGeekSeatgeekTrendingResponse` |  |
+| seatGeek | `seatGeek.seatgeekVenue` | `seatgeek-venue` | `GET /seatgeek/venue` | `id` (query Integer required) | `ApiKeyAuth` | `SeatGeekSeatgeekVenueResponse` |  |
+| seatGeek | `seatGeek.seatgeekVenueEvents` | `seatgeek-venue-events` | `GET /seatgeek/venue-events` | `venue_id` (query Integer required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `SeatGeekSeatgeekVenueEventsResponse` |  |
+| seattleTimes | `seattleTimes.seattletimesArticle` | `seattletimes-article` | `GET /seattletimes/article` | `url` (query String required) | `ApiKeyAuth` | `SeattleTimesSeattletimesArticleResponse` |  |
+| seattleTimes | `seattleTimes.seattletimesAuthor` | `seattletimes-author` | `GET /seattletimes/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `SeattleTimesSeattletimesAuthorResponse` |  |
+| seattleTimes | `seattleTimes.seattletimesHeadlines` | `seattletimes-headlines` | `GET /seattletimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `SeattleTimesSeattletimesHeadlinesResponse` |  |
+| seattleTimes | `seattleTimes.seattletimesNews` | `seattletimes-news` | `GET /seattletimes/news` | none | `ApiKeyAuth` | `SeattleTimesSeattletimesNewsResponse` |  |
+| seattleTimes | `seattleTimes.seattletimesSections` | `seattletimes-sections` | `GET /seattletimes/sections` | none | `ApiKeyAuth` | `SeattleTimesSeattletimesSectionsResponse` |  |
 | secEdgar | `secEdgar.secCompanyIntelligence` | `sec-company-intelligence` | `GET /sec/company/intelligence` | `cik` (query String)<br>`ticker` (query String)<br>`enrich` (query String)<br>`ats` (query String)<br>`careers_slug` (query String)<br>`tenant` (query String)<br>`datacenter` (query String)<br>`site` (query String) | `ApiKeyAuth` | `SecEdgarSecCompanyIntelligenceResponse` |  |
 | secEdgar | `secEdgar.secCompanySearch` | `sec-company-search` | `GET /sec/company/search` | `q` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySearchResponse` |  |
 | secEdgar | `secEdgar.secCompanySubmissions` | `sec-company-submissions` | `GET /sec/company/submissions` | `cik` (query String)<br>`ticker` (query String)<br>`form` (query String)<br>`from` (query String)<br>`to` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecCompanySubmissionsResponse` |  |
@@ -1406,6 +2320,8 @@ Total operations: `1939`
 | secEdgar | `secEdgar.secFullTextSearch` | `sec-full-text-search` | `GET /sec/full-text-search` | `q` (query String required)<br>`forms` (query String)<br>`from` (query String)<br>`to` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `SecEdgarSecFullTextSearchResponse` |  |
 | secEdgar | `secEdgar.secInsider` | `sec-insider` | `GET /sec/insider` | `cik` (query String)<br>`ticker` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecInsiderResponse` |  |
 | secEdgar | `secEdgar.secInstitutionalHoldings` | `sec-institutional-holdings` | `GET /sec/institutional-holdings` | `cik` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SecEdgarSecInstitutionalHoldingsResponse` |  |
+| sephora | `sephora.brands` | `sephora-brands` | `GET /sephora/brands` | none | `ApiKeyAuth` | `SephoraBrandsResponse` |  |
+| sephora | `sephora.categories` | `sephora-categories` | `GET /sephora/categories` | `department` (query String) | `ApiKeyAuth` | `SephoraCategoriesResponse` |  |
 | sephora | `sephora.category` | `sephora-category` | `GET /sephora/category` | `slug` (query String required)<br>`page` (query Integer)<br>`sort_by` (query String)<br>`price_min` (query Integer)<br>`price_max` (query Integer)<br>`brand` (query List<String>)<br>`rating_min` (query Integer)<br>`is_new` (query Boolean)<br>`filter` (query List<String>) | `ApiKeyAuth` | `SephoraCategoryResponse` |  |
 | sephora | `sephora.product` | `sephora-product` | `GET /sephora/product` | `product_id` (query String required) | `ApiKeyAuth` | `SephoraProductResponse` |  |
 | sephora | `sephora.productQuestions` | `sephora-product-questions` | `GET /sephora/product/questions` | `product_id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SephoraProductQuestionsResponse` |  |
@@ -1413,6 +2329,16 @@ Total operations: `1939`
 | sephora | `sephora.search` | `sephora-search` | `GET /sephora/search` | `query` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`sort_by` (query String)<br>`price_min` (query Integer)<br>`price_max` (query Integer)<br>`brand` (query List<String>)<br>`rating_min` (query Integer)<br>`is_new` (query Boolean)<br>`filter` (query List<String>) | `ApiKeyAuth` | `SephoraSearchResponse` |  |
 | sephora | `sephora.stores` | `sephora-stores` | `GET /sephora/stores` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `SephoraStoresResponse` |  |
 | sephora | `sephora.suggest` | `sephora-suggest` | `GET /sephora/suggest` | `query` (query String required) | `ApiKeyAuth` | `SephoraSuggestResponse` |  |
+| sevenNewsAustralia | `sevenNewsAustralia.article` | `sevennewsau-article` | `GET /sevennewsau/article` | `url` (query String required) | `ApiKeyAuth` | `SevenNewsAustraliaArticleResponse` |  |
+| sevenNewsAustralia | `sevenNewsAustralia.author` | `sevennewsau-author` | `GET /sevennewsau/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `SevenNewsAustraliaAuthorResponse` |  |
+| sevenNewsAustralia | `sevenNewsAustralia.headlines` | `sevennewsau-headlines` | `GET /sevennewsau/headlines` | `section` (query String required) | `ApiKeyAuth` | `SevenNewsAustraliaHeadlinesResponse` |  |
+| sevenNewsAustralia | `sevenNewsAustralia.news` | `sevennewsau-news` | `GET /sevennewsau/news` | none | `ApiKeyAuth` | `SevenNewsAustraliaNewsResponse` |  |
+| sevenNewsAustralia | `sevenNewsAustralia.sections` | `sevennewsau-sections` | `GET /sevennewsau/sections` | none | `ApiKeyAuth` | `SevenNewsAustraliaSectionsResponse` |  |
+| sfgate | `sfgate.article` | `sfgate-article` | `GET /sfgate/article` | `url` (query String required) | `ApiKeyAuth` | `SfgateArticleResponse` |  |
+| sfgate | `sfgate.author` | `sfgate-author` | `GET /sfgate/author` | `url` (query String required) | `ApiKeyAuth` | `SfgateAuthorResponse` |  |
+| sfgate | `sfgate.headlines` | `sfgate-headlines` | `GET /sfgate/headlines` | `section` (query String required) | `ApiKeyAuth` | `SfgateHeadlinesResponse` |  |
+| sfgate | `sfgate.news` | `sfgate-news` | `GET /sfgate/news` | none | `ApiKeyAuth` | `SfgateNewsResponse` |  |
+| sfgate | `sfgate.sections` | `sfgate-sections` | `GET /sfgate/sections` | none | `ApiKeyAuth` | `SfgateSectionsResponse` |  |
 | shakeShack | `shakeShack.shakeshackLocations` | `shakeshack-locations` | `GET /shakeshack/locations` | `page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `ShakeShackShakeshackLocationsResponse` |  |
 | shakeShack | `shakeShack.shakeshackMenu` | `shakeshack-menu` | `GET /shakeshack/menu` | `location_id` (query Integer required) | `ApiKeyAuth` | `ShakeShackShakeshackMenuResponse` |  |
 | shakeShack | `shakeShack.shakeshackNearby` | `shakeshack-nearby` | `GET /shakeshack/nearby` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShakeShackShakeshackNearbyResponse` |  |
@@ -1442,10 +2368,10 @@ Total operations: `1939`
 | shopApp | `shopApp.shopTypeahead` | `shop-app-shop-typeahead` | `GET /shop-app/shops/{handle}/typeahead` | `handle` (path String required)<br>`query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShopAppShopTypeaheadResponse` |  |
 | shopApp | `shopApp.suggestions` | `shop-app-suggestions` | `GET /shop-app/suggestions` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShopAppSuggestionsResponse` |  |
 | shopify | `shopify.collections` | `shopify-collections` | `GET /shopify/collections` | `url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShopifyCollectionsResponse` |  |
-| shopify | `shopify.collectionProducts` | `shopify-collection-products` | `GET /shopify/collections/{handle}/products` | `handle` (path String required)<br>`url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`sortBy` (query String) | `ApiKeyAuth` | `ShopifyCollectionProductsResponse` |  |
+| shopify | `shopify.collectionProducts` | `shopify-collection-products` | `GET /shopify/collections/{handle}/products` | `handle` (path String required)<br>`url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`sortBy` (query String)<br>`sort_by` (query String)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`product_type` (query String)<br>`in_stock_only` (query Boolean)<br>`option_size` (query String) | `ApiKeyAuth` | `ShopifyCollectionProductsResponse` |  |
 | shopify | `shopify.pages` | `shopify-pages` | `GET /shopify/pages` | `url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShopifyPagesResponse` |  |
 | shopify | `shopify.page` | `shopify-page` | `GET /shopify/pages/{handle}` | `handle` (path String required)<br>`url` (query String required) | `ApiKeyAuth` | `ShopifyPageResponse` |  |
-| shopify | `shopify.products` | `shopify-products` | `GET /shopify/products` | `url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`sortBy` (query String) | `ApiKeyAuth` | `ShopifyProductsResponse` |  |
+| shopify | `shopify.products` | `shopify-products` | `GET /shopify/products` | `url` (query String required)<br>`page` (query Integer)<br>`limit` (query Integer)<br>`sortBy` (query String)<br>`sort_by` (query String)<br>`min_price` (query Double)<br>`max_price` (query Double)<br>`product_type` (query String)<br>`in_stock_only` (query Boolean)<br>`option_size` (query String) | `ApiKeyAuth` | `ShopifyProductsResponse` |  |
 | shopify | `shopify.product` | `shopify-product` | `GET /shopify/products/{handle}` | `handle` (path String required)<br>`url` (query String required) | `ApiKeyAuth` | `ShopifyProductResponse` |  |
 | shopify | `shopify.productRecommendations` | `shopify-product-recommendations` | `GET /shopify/products/{handle}/recommendations` | `handle` (path String required)<br>`url` (query String required)<br>`limit` (query Integer)<br>`intent` (query String) | `ApiKeyAuth` | `ShopifyProductRecommendationsResponse` |  |
 | shopify | `shopify.searchSuggest` | `shopify-search-suggest` | `GET /shopify/search/suggest` | `url` (query String required)<br>`q` (query String required)<br>`types` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `ShopifySearchSuggestResponse` |  |
@@ -1465,6 +2391,37 @@ Total operations: `1939`
 | skims | `skims.sitemapUrls` | `skims-sitemap-urls` | `GET /skims/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SkimsSitemapUrlsResponse` |  |
 | skims | `skims.sitemaps` | `skims-sitemaps` | `GET /skims/sitemaps` | none | `ApiKeyAuth` | `SkimsSitemapsResponse` |  |
 | skims | `skims.store` | `skims-store` | `GET /skims/store` | none | `ApiKeyAuth` | `SkimsStoreResponse` |  |
+| skyNews | `skyNews.skynewsArticle` | `skynews-article` | `GET /skynews/article` | `url` (query String required) | `ApiKeyAuth` | `SkyNewsSkynewsArticleResponse` |  |
+| skyNews | `skyNews.skynewsAuthor` | `skynews-author` | `GET /skynews/author` | `url` (query String required) | `ApiKeyAuth` | `SkyNewsSkynewsAuthorResponse` |  |
+| skyNews | `skyNews.skynewsHeadlines` | `skynews-headlines` | `GET /skynews/headlines` | `section` (query String required) | `ApiKeyAuth` | `SkyNewsSkynewsHeadlinesResponse` |  |
+| skyNews | `skyNews.skynewsNews` | `skynews-news` | `GET /skynews/news` | none | `ApiKeyAuth` | `SkyNewsSkynewsNewsResponse` |  |
+| skyNews | `skyNews.skynewsSections` | `skynews-sections` | `GET /skynews/sections` | none | `ApiKeyAuth` | `SkyNewsSkynewsSectionsResponse` |  |
+| skyNews | `skyNews.skynewsVideo` | `skynews-video` | `GET /skynews/video` | `url` (query String required) | `ApiKeyAuth` | `SkyNewsSkynewsVideoResponse` |  |
+| skyNews | `skyNews.skynewsVideos` | `skynews-videos` | `GET /skynews/videos` | none | `ApiKeyAuth` | `SkyNewsSkynewsVideosResponse` |  |
+| slate | `slate.article` | `slate-article` | `GET /slate/article` | `url` (query String required) | `ApiKeyAuth` | `SlateArticleResponse` |  |
+| slate | `slate.categories` | `slate-categories` | `GET /slate/categories` | none | `ApiKeyAuth` | `SlateCategoriesResponse` |  |
+| slate | `slate.headlines` | `slate-headlines` | `GET /slate/headlines` | `section` (query String) | `ApiKeyAuth` | `SlateHeadlinesResponse` |  |
+| slickdeals | `slickdeals.categories` | `slickdeals-categories` | `GET /slickdeals/categories` | `q` (query String) | `ApiKeyAuth` | `SlickdealsCategoriesResponse` |  |
+| slickdeals | `slickdeals.category` | `slickdeals-category` | `GET /slickdeals/category` | `slug` (query String required) | `ApiKeyAuth` | `SlickdealsCategoryResponse` |  |
+| slickdeals | `slickdeals.comments` | `slickdeals-comments` | `GET /slickdeals/comments` | `url` (query String)<br>`thread_id` (query Integer) | `ApiKeyAuth` | `SlickdealsCommentsResponse` |  |
+| slickdeals | `slickdeals.deal` | `slickdeals-deal` | `GET /slickdeals/deal` | `url` (query String)<br>`thread_id` (query Integer) | `ApiKeyAuth` | `SlickdealsDealResponse` |  |
+| slickdeals | `slickdeals.dealTypes` | `slickdeals-deal-types` | `GET /slickdeals/deal-types` | `q` (query String) | `ApiKeyAuth` | `SlickdealsDealTypesResponse` |  |
+| slickdeals | `slickdeals.forums` | `slickdeals-forums` | `GET /slickdeals/forums` | `q` (query String) | `ApiKeyAuth` | `SlickdealsForumsResponse` |  |
+| slickdeals | `slickdeals.frontpage` | `slickdeals-frontpage` | `GET /slickdeals/frontpage` | `page` (query Integer) | `ApiKeyAuth` | `SlickdealsFrontpageResponse` |  |
+| slickdeals | `slickdeals.primaryCategories` | `slickdeals-primary-categories` | `GET /slickdeals/primary-categories` | `q` (query String) | `ApiKeyAuth` | `SlickdealsPrimaryCategoriesResponse` |  |
+| slickdeals | `slickdeals.primaryCategory` | `slickdeals-primary-category` | `GET /slickdeals/primary-category` | `slug` (query String required) | `ApiKeyAuth` | `SlickdealsPrimaryCategoryResponse` |  |
+| slickdeals | `slickdeals.search` | `slickdeals-search` | `GET /slickdeals/search` | `q` (query String required)<br>`forum_id` (query Integer)<br>`deal_type_id` (query Integer) | `ApiKeyAuth` | `SlickdealsSearchResponse` |  |
+| slickdeals | `slickdeals.searchAdvanced` | `slickdeals-search-advanced` | `GET /slickdeals/search/advanced` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`category_id` (query Integer)<br>`brand_id` (query Integer)<br>`store_id` (query Integer) | `ApiKeyAuth` | `SlickdealsSearchAdvancedResponse` |  |
+| mitSloanManagementReview | `mitSloanManagementReview.sloanreviewArticle` | `sloanreview-article` | `GET /sloanreview/article` | `url` (query String required) | `ApiKeyAuth` | `MitSloanManagementReviewSloanreviewArticleResponse` |  |
+| mitSloanManagementReview | `mitSloanManagementReview.sloanreviewArticles` | `sloanreview-articles` | `GET /sloanreview/articles` | `page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `MitSloanManagementReviewSloanreviewArticlesResponse` |  |
+| mitSloanManagementReview | `mitSloanManagementReview.sloanreviewCategories` | `sloanreview-categories` | `GET /sloanreview/categories` | none | `ApiKeyAuth` | `MitSloanManagementReviewSloanreviewCategoriesResponse` |  |
+| mitSloanManagementReview | `mitSloanManagementReview.sloanreviewHeadlines` | `sloanreview-headlines` | `GET /sloanreview/headlines` | none | `ApiKeyAuth` | `MitSloanManagementReviewSloanreviewHeadlinesResponse` |  |
+| mitSloanManagementReview | `mitSloanManagementReview.sloanreviewTopic` | `sloanreview-topic` | `GET /sloanreview/topic` | `topic` (query String required) | `ApiKeyAuth` | `MitSloanManagementReviewSloanreviewTopicResponse` |  |
+| theSydneyMorningHerald | `theSydneyMorningHerald.smhArticle` | `smh-article` | `GET /smh/article` | `url` (query String required) | `ApiKeyAuth` | `TheSydneyMorningHeraldSmhArticleResponse` |  |
+| theSydneyMorningHerald | `theSydneyMorningHerald.smhAuthor` | `smh-author` | `GET /smh/author` | `url` (query String required) | `ApiKeyAuth` | `TheSydneyMorningHeraldSmhAuthorResponse` |  |
+| theSydneyMorningHerald | `theSydneyMorningHerald.smhHeadlines` | `smh-headlines` | `GET /smh/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheSydneyMorningHeraldSmhHeadlinesResponse` |  |
+| theSydneyMorningHerald | `theSydneyMorningHerald.smhNews` | `smh-news` | `GET /smh/news` | none | `ApiKeyAuth` | `TheSydneyMorningHeraldSmhNewsResponse` |  |
+| theSydneyMorningHerald | `theSydneyMorningHerald.smhSections` | `smh-sections` | `GET /smh/sections` | none | `ApiKeyAuth` | `TheSydneyMorningHeraldSmhSectionsResponse` |  |
 | sofaScore | `sofaScore.sofascoreEvent` | `sofascore-event` | `GET /sofascore/event` | `id` (query String required) | `ApiKeyAuth` | `SofaScoreSofascoreEventResponse` |  |
 | sofaScore | `sofaScore.sofascoreEventH2h` | `sofascore-event-h2h` | `GET /sofascore/event-h2h` | `id` (query String required) | `ApiKeyAuth` | `SofaScoreSofascoreEventH2hResponse` |  |
 | sofaScore | `sofaScore.sofascoreEventIncidents` | `sofascore-event-incidents` | `GET /sofascore/event-incidents` | `id` (query String required) | `ApiKeyAuth` | `SofaScoreSofascoreEventIncidentsResponse` |  |
@@ -1497,10 +2454,20 @@ Total operations: `1939`
 | soundCloud | `soundCloud.soundcloudSearch` | `soundcloud-search` | `GET /soundcloud/search` | `query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SoundCloudSoundcloudSearchResponse` |  |
 | soundCloud | `soundCloud.soundcloudTrack` | `soundcloud-track` | `GET /soundcloud/track` | `url` (query String required) | `ApiKeyAuth` | `SoundCloudSoundcloudTrackResponse` |  |
 | soundCloud | `soundCloud.soundcloudUserTracks` | `soundcloud-user-tracks` | `GET /soundcloud/user-tracks` | `url` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SoundCloudSoundcloudUserTracksResponse` |  |
+| space | `space.article` | `space-article` | `GET /space/article` | `url` (query String required) | `ApiKeyAuth` | `SpaceArticleResponse` |  |
+| space | `space.author` | `space-author` | `GET /space/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `SpaceAuthorResponse` |  |
+| space | `space.headlines` | `space-headlines` | `GET /space/headlines` | `section` (query String required) | `ApiKeyAuth` | `SpaceHeadlinesResponse` |  |
+| space | `space.news` | `space-news` | `GET /space/news` | none | `ApiKeyAuth` | `SpaceNewsResponse` |  |
+| space | `space.sections` | `space-sections` | `GET /space/sections` | none | `ApiKeyAuth` | `SpaceSectionsResponse` |  |
 | sparkFun | `sparkFun.sparkfunCategories` | `sparkfun-categories` | `GET /sparkfun/categories` | none | `ApiKeyAuth` | `SparkFunSparkfunCategoriesResponse` |  |
 | sparkFun | `sparkFun.sparkfunCategory` | `sparkfun-category` | `GET /sparkfun/category` | `url_key` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`filter` (query List<String>) | `ApiKeyAuth` | `SparkFunSparkfunCategoryResponse` |  |
 | sparkFun | `sparkFun.sparkfunProduct` | `sparkfun-product` | `GET /sparkfun/product` | `sku` (query String required) | `ApiKeyAuth` | `SparkFunSparkfunProductResponse` |  |
 | sparkFun | `sparkFun.sparkfunSearch` | `sparkfun-search` | `GET /sparkfun/search` | `q` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`filter` (query List<String>) | `ApiKeyAuth` | `SparkFunSparkfunSearchResponse` |  |
+| sportingNews | `sportingNews.sportingnewsArticle` | `sportingnews-article` | `GET /sportingnews/article` | `url` (query String required) | `ApiKeyAuth` | `SportingNewsSportingnewsArticleResponse` |  |
+| sportingNews | `sportingNews.sportingnewsAuthor` | `sportingnews-author` | `GET /sportingnews/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `SportingNewsSportingnewsAuthorResponse` |  |
+| sportingNews | `sportingNews.sportingnewsHeadlines` | `sportingnews-headlines` | `GET /sportingnews/headlines` | `section` (query String required) | `ApiKeyAuth` | `SportingNewsSportingnewsHeadlinesResponse` |  |
+| sportingNews | `sportingNews.sportingnewsNews` | `sportingnews-news` | `GET /sportingnews/news` | none | `ApiKeyAuth` | `SportingNewsSportingnewsNewsResponse` |  |
+| sportingNews | `sportingNews.sportingnewsSections` | `sportingnews-sections` | `GET /sportingnews/sections` | none | `ApiKeyAuth` | `SportingNewsSportingnewsSectionsResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.categories` | `spotify-podcasts-categories` | `GET /spotify-podcasts/categories` | `uri` (query String)<br>`page_offset` (query Integer)<br>`page_limit` (query Integer)<br>`section_offset` (query Integer)<br>`section_limit` (query Integer)<br>`include_episode_content_ratings_v2` (query Boolean) | `ApiKeyAuth` | `SpotifyPodcastsCategoriesResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.charts` | `spotify-podcasts-charts` | `GET /spotify-podcasts/charts` | `chart` (query String)<br>`region` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SpotifyPodcastsChartsResponse` |  |
 | spotifyPodcasts | `spotifyPodcasts.episode` | `spotify-podcasts-episode` | `GET /spotify-podcasts/episode` | `uri` (query String)<br>`id` (query String) | `ApiKeyAuth` | `SpotifyPodcastsEpisodeResponse` |  |
@@ -1539,6 +2506,11 @@ Total operations: `1939`
 | spotify | `spotify.trackRecommended` | `spotify-track-recommended` | `GET /spotify/track/recommended` | `uri` (query String)<br>`id` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `SpotifyTrackRecommendedResponse` |  |
 | spotify | `spotify.trackSimilarAlbums` | `spotify-track-similar-albums` | `GET /spotify/track/similar-albums` | `uri` (query String)<br>`id` (query String)<br>`limit` (query Integer)<br>`albums_only` (query Boolean) | `ApiKeyAuth` | `SpotifyTrackSimilarAlbumsResponse` |  |
 | spotify | `spotify.tracksSearch` | `spotify-tracks-search` | `GET /spotify/tracks/search` | `q` (query String required)<br>`offset` (query Integer)<br>`limit` (query Integer)<br>`number_of_top_results` (query Integer)<br>`include_audiobooks` (query Boolean)<br>`include_pre_releases` (query Boolean)<br>`include_album_pre_releases` (query Boolean)<br>`include_authors` (query Boolean)<br>`include_episode_content_ratings_v2` (query Boolean) | `ApiKeyAuth` | `SpotifyTracksSearchResponse` |  |
+| eveningStandard | `eveningStandard.standardArticle` | `standard-article` | `GET /standard/article` | `url` (query String required) | `ApiKeyAuth` | `EveningStandardStandardArticleResponse` |  |
+| eveningStandard | `eveningStandard.standardAuthor` | `standard-author` | `GET /standard/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `EveningStandardStandardAuthorResponse` |  |
+| eveningStandard | `eveningStandard.standardHeadlines` | `standard-headlines` | `GET /standard/headlines` | `section` (query String required) | `ApiKeyAuth` | `EveningStandardStandardHeadlinesResponse` |  |
+| eveningStandard | `eveningStandard.standardNews` | `standard-news` | `GET /standard/news` | none | `ApiKeyAuth` | `EveningStandardStandardNewsResponse` |  |
+| eveningStandard | `eveningStandard.standardSections` | `standard-sections` | `GET /standard/sections` | none | `ApiKeyAuth` | `EveningStandardStandardSectionsResponse` |  |
 | starbucks | `starbucks.menu` | `starbucks-menu` | `GET /starbucks/menu` | `store_number` (query String)<br>`market` (query String) | `ApiKeyAuth` | `StarbucksMenuResponse` |  |
 | starbucks | `starbucks.nearestStore` | `starbucks-nearest-store` | `GET /starbucks/nearest-store` | `lat` (query Double required)<br>`lng` (query Double required)<br>`market` (query String) | `ApiKeyAuth` | `StarbucksNearestStoreResponse` |  |
 | starbucks | `starbucks.product` | `starbucks-product` | `GET /starbucks/product/{product_number}/{form}` | `product_number` (path String required)<br>`form` (path String required)<br>`store_number` (query String)<br>`market` (query String) | `ApiKeyAuth` | `StarbucksProductResponse` |  |
@@ -1581,16 +2553,61 @@ Total operations: `1939`
 | stockX | `stockX.stockxProduct` | `stockx-product` | `GET /stockx/product/{slug}` | `slug` (path String required) | `ApiKeyAuth` | `StockXStockxProductResponse` |  |
 | stockX | `stockX.stockxReleases` | `stockx-releases` | `GET /stockx/releases` | `from` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `StockXStockxReleasesResponse` |  |
 | stockX | `stockX.stockxSearch` | `stockx-search` | `GET /stockx/search` | `category` (query String required)<br>`query` (query String)<br>`gender` (query String)<br>`brand` (query String)<br>`model` (query String)<br>`color` (query String)<br>`shoe_height` (query String)<br>`activity` (query String)<br>`available_now` (query Boolean)<br>`xpress_ship` (query Boolean)<br>`below_retail` (query Boolean)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `StockXStockxSearchResponse` |  |
+| theStraitsTimes | `theStraitsTimes.straitstimesArticle` | `straitstimes-article` | `GET /straitstimes/article` | `url` (query String required) | `ApiKeyAuth` | `TheStraitsTimesStraitstimesArticleResponse` |  |
+| theStraitsTimes | `theStraitsTimes.straitstimesAuthor` | `straitstimes-author` | `GET /straitstimes/author` | `url` (query String required) | `ApiKeyAuth` | `TheStraitsTimesStraitstimesAuthorResponse` |  |
+| theStraitsTimes | `theStraitsTimes.straitstimesHeadlines` | `straitstimes-headlines` | `GET /straitstimes/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheStraitsTimesStraitstimesHeadlinesResponse` |  |
+| theStraitsTimes | `theStraitsTimes.straitstimesNews` | `straitstimes-news` | `GET /straitstimes/news` | none | `ApiKeyAuth` | `TheStraitsTimesStraitstimesNewsResponse` |  |
+| theStraitsTimes | `theStraitsTimes.straitstimesSections` | `straitstimes-sections` | `GET /straitstimes/sections` | none | `ApiKeyAuth` | `TheStraitsTimesStraitstimesSectionsResponse` |  |
 | strava | `strava.challenges` | `strava-challenges` | `GET /strava/challenges` | none | `ApiKeyAuth` | `StravaChallengesResponse` |  |
 | strava | `strava.club` | `strava-club` | `GET /strava/clubs/{id}` | `id` (path String required) | `ApiKeyAuth` | `StravaClubResponse` |  |
 | strava | `strava.routes` | `strava-routes` | `GET /strava/routes` | `sport` (query String required)<br>`country` (query String required)<br>`region` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `StravaRoutesResponse` |  |
 | strava | `strava.routeDetail` | `strava-route-detail` | `GET /strava/routes/detail` | `path` (query String required) | `ApiKeyAuth` | `StravaRouteDetailResponse` |  |
+| stubHub | `stubHub.stubhubCarousel` | `stubhub-carousel` | `GET /stubhub/carousel` | `performer_slug` (query String required)<br>`performer_id` (query Integer required)<br>`top_level_category_id` (query String required)<br>`category_id` (query Integer required)<br>`lat` (query Double required)<br>`lon` (query Double required)<br>`max` (query Integer) | `ApiKeyAuth` | `StubHubStubhubCarouselResponse` |  |
+| stubHub | `stubHub.stubhubCategories` | `stubhub-categories` | `GET /stubhub/categories` | `lat` (query Double required)<br>`lon` (query Double required)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `StubHubStubhubCategoriesResponse` |  |
+| stubHub | `stubHub.stubhubCategoryEvents` | `stubhub-category-events` | `GET /stubhub/category-events` | `category_id` (query Integer required)<br>`lat` (query Double required)<br>`lon` (query Double required)<br>`from` (query String)<br>`to` (query String)<br>`page` (query Integer)<br>`radius_miles` (query Integer)<br>`include_parking_passes` (query Boolean) | `ApiKeyAuth` | `StubHubStubhubCategoryEventsResponse` |  |
+| stubHub | `stubHub.stubhubExplore` | `stubhub-explore` | `GET /stubhub/explore` | `lat` (query Double required)<br>`lon` (query Double required)<br>`from` (query String)<br>`to` (query String)<br>`price_min` (query Integer)<br>`price_max` (query Integer)<br>`top_level_category_id` (query String)<br>`category_id` (query Integer) | `ApiKeyAuth` | `StubHubStubhubExploreResponse` |  |
+| stubHub | `stubHub.stubhubNavigationCategories` | `stubhub-navigation-categories` | `GET /stubhub/navigation-categories` | `category_id` (query String required) | `ApiKeyAuth` | `StubHubStubhubNavigationCategoriesResponse` |  |
+| stubHub | `stubHub.stubhubPerformerEvents` | `stubhub-performer-events` | `GET /stubhub/performer-events` | `performer_slug` (query String required)<br>`performer_id` (query Integer required) | `ApiKeyAuth` | `StubHubStubhubPerformerEventsResponse` |  |
+| stubHub | `stubHub.stubhubSearch` | `stubhub-search` | `GET /stubhub/search` | `query` (query String required) | `ApiKeyAuth` | `StubHubStubhubSearchResponse` |  |
+| stubHub | `stubHub.stubhubSuggestedSearches` | `stubhub-suggested-searches` | `GET /stubhub/suggested-searches` | none | `ApiKeyAuth` | `StubHubStubhubSuggestedSearchesResponse` |  |
+| stubHub | `stubHub.stubhubTrending` | `stubhub-trending` | `GET /stubhub/trending` | `top_level_category_id` (query String) | `ApiKeyAuth` | `StubHubStubhubTrendingResponse` |  |
+| stubHub | `stubHub.stubhubTrendingEvents` | `stubhub-trending-events` | `GET /stubhub/trending-events` | `top_level_category_id` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `StubHubStubhubTrendingEventsResponse` |  |
+| stubHub | `stubHub.stubhubVenueEvents` | `stubhub-venue-events` | `GET /stubhub/venue-events` | `venue_slug` (query String required)<br>`venue_id` (query Integer required) | `ApiKeyAuth` | `StubHubStubhubVenueEventsResponse` |  |
+| stuff | `stuff.article` | `stuff-article` | `GET /stuff/article` | `url` (query String required) | `ApiKeyAuth` | `StuffArticleResponse` |  |
+| stuff | `stuff.author` | `stuff-author` | `GET /stuff/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `StuffAuthorResponse` |  |
+| stuff | `stuff.headlines` | `stuff-headlines` | `GET /stuff/headlines` | `section` (query String required) | `ApiKeyAuth` | `StuffHeadlinesResponse` |  |
+| stuff | `stuff.news` | `stuff-news` | `GET /stuff/news` | none | `ApiKeyAuth` | `StuffNewsResponse` |  |
+| stuff | `stuff.sections` | `stuff-sections` | `GET /stuff/sections` | none | `ApiKeyAuth` | `StuffSectionsResponse` |  |
+| substack | `substack.categories` | `substack-categories` | `GET /substack/categories` | none | `ApiKeyAuth` | `SubstackCategoriesResponse` |  |
+| substack | `substack.category` | `substack-category` | `GET /substack/category` | `category_id` (query String required)<br>`type` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `SubstackCategoryResponse` |  |
+| substack | `substack.explore` | `substack-explore` | `GET /substack/explore` | `tab` (query String)<br>`type` (query String)<br>`cursor` (query String) | `ApiKeyAuth` | `SubstackExploreResponse` |  |
+| substack | `substack.leaderboard` | `substack-leaderboard` | `GET /substack/leaderboard` | `category_id` (query String required)<br>`type` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `SubstackLeaderboardResponse` |  |
+| substack | `substack.note` | `substack-note` | `GET /substack/note` | `note_id` (query Integer required) | `ApiKeyAuth` | `SubstackNoteResponse` |  |
+| substack | `substack.noteReplies` | `substack-note-replies` | `GET /substack/note/replies` | `note_id` (query Integer required)<br>`cursor` (query String) | `ApiKeyAuth` | `SubstackNoteRepliesResponse` |  |
+| substack | `substack.noteRestacks` | `substack-note-restacks` | `GET /substack/note/restacks` | `note_id` (query Integer required)<br>`cursor` (query String) | `ApiKeyAuth` | `SubstackNoteRestacksResponse` |  |
+| substack | `substack.notes` | `substack-notes` | `GET /substack/notes` | `tab` (query String)<br>`type` (query String)<br>`cursor` (query String) | `ApiKeyAuth` | `SubstackNotesResponse` |  |
+| substack | `substack.notesTabs` | `substack-notes-tabs` | `GET /substack/notes/tabs` | `surface` (query String) | `ApiKeyAuth` | `SubstackNotesTabsResponse` |  |
+| substack | `substack.post` | `substack-post` | `GET /substack/post` | `publication` (query String required)<br>`slug` (query String required) | `ApiKeyAuth` | `SubstackPostResponse` |  |
+| substack | `substack.publication` | `substack-publication` | `GET /substack/publication` | `publication` (query String)<br>`publication_id` (query Integer) | `ApiKeyAuth` | `SubstackPublicationResponse` |  |
+| substack | `substack.publicationContributors` | `substack-publication-contributors` | `GET /substack/publication/contributors` | `publication` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SubstackPublicationContributorsResponse` |  |
+| substack | `substack.publicationPosts` | `substack-publication-posts` | `GET /substack/publication/posts` | `publication` (query String required)<br>`search` (query String)<br>`sort` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `SubstackPublicationPostsResponse` |  |
+| substack | `substack.publicationRecommendations` | `substack-publication-recommendations` | `GET /substack/publication/recommendations` | `publication_id` (query Integer required) | `ApiKeyAuth` | `SubstackPublicationRecommendationsResponse` |  |
+| substack | `substack.search` | `substack-search` | `GET /substack/search` | `query` (query String required)<br>`page` (query Integer)<br>`focus_publication_id` (query Integer)<br>`focus_limit` (query Integer) | `ApiKeyAuth` | `SubstackSearchResponse` |  |
+| substack | `substack.user` | `substack-user` | `GET /substack/user` | `handle` (query String required) | `ApiKeyAuth` | `SubstackUserResponse` |  |
+| substack | `substack.userActivity` | `substack-user-activity` | `GET /substack/user/activity` | `user_id` (query Integer required)<br>`types` (query String)<br>`cursor` (query String) | `ApiKeyAuth` | `SubstackUserActivityResponse` |  |
+| substack | `substack.userConnections` | `substack-user-connections` | `GET /substack/user/connections` | `user_id` (query Integer required)<br>`list` (query String) | `ApiKeyAuth` | `SubstackUserConnectionsResponse` |  |
+| substack | `substack.userSearch` | `substack-user-search` | `GET /substack/user/search` | `query` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `SubstackUserSearchResponse` |  |
 | subway | `subway.availableTimes` | `subway-available-times` | `GET /subway/available-times` | `store_id` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `SubwayAvailableTimesResponse` |  |
 | subway | `subway.combos` | `subway-combos` | `GET /subway/combos` | `store_id` (query String required)<br>`culture` (query String) | `ApiKeyAuth` | `SubwayCombosResponse` |  |
 | subway | `subway.menu` | `subway-menu` | `GET /subway/menu` | `store_id` (query String required) | `ApiKeyAuth` | `SubwayMenuResponse` |  |
 | subway | `subway.nearby` | `subway-nearby` | `GET /subway/nearby` | `latitude` (query Double)<br>`longitude` (query Double)<br>`query` (query String)<br>`store_id` (query String)<br>`limit` (query Integer)<br>`offset` (query String)<br>`features` (query String) | `ApiKeyAuth` | `SubwayNearbyResponse` |  |
 | subway | `subway.sitemap` | `subway-sitemap` | `GET /subway/sitemap` | `shard` (query Integer)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `SubwaySitemapResponse` |  |
 | subway | `subway.store` | `subway-store` | `GET /subway/store` | `path` (query String required) | `ApiKeyAuth` | `SubwayStoreResponse` |  |
+| theSun | `theSun.sunArticle` | `sun-article` | `GET /sun/article` | `url` (query String required) | `ApiKeyAuth` | `TheSunSunArticleResponse` |  |
+| theSun | `theSun.sunAuthor` | `sun-author` | `GET /sun/author` | `url` (query String required) | `ApiKeyAuth` | `TheSunSunAuthorResponse` |  |
+| theSun | `theSun.sunHeadlines` | `sun-headlines` | `GET /sun/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheSunSunHeadlinesResponse` |  |
+| theSun | `theSun.sunNews` | `sun-news` | `GET /sun/news` | none | `ApiKeyAuth` | `TheSunSunNewsResponse` |  |
+| theSun | `theSun.sunSections` | `sun-sections` | `GET /sun/sections` | none | `ApiKeyAuth` | `TheSunSunSectionsResponse` |  |
 | swiggy | `swiggy.collections` | `swiggy-collections` | `GET /swiggy/collections` | `latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `SwiggyCollectionsResponse` |  |
 | swiggy | `swiggy.restaurant` | `swiggy-restaurant` | `GET /swiggy/restaurant` | `restaurant_id` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `SwiggyRestaurantResponse` |  |
 | swiggy | `swiggy.restaurantMenu` | `swiggy-restaurant-menu` | `GET /swiggy/restaurant/menu` | `restaurant_id` (query String required)<br>`latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `SwiggyRestaurantMenuResponse` |  |
@@ -1610,6 +2627,22 @@ Total operations: `1939`
 | target | `target.questions` | `target-questions` | `GET /target/questions` | `tcin` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `TargetQuestionsResponse` |  |
 | target | `target.reviews` | `target-reviews` | `GET /target/reviews` | `tcin` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `TargetReviewsResponse` |  |
 | target | `target.search` | `target-search` | `GET /target/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`store_id` (query Integer)<br>`filter_ids` (query String) | `ApiKeyAuth` | `TargetSearchResponse` |  |
+| target | `target.stores` | `target-stores` | `GET /target/stores` | `place` (query String required)<br>`limit` (query Integer)<br>`within` (query Integer) | `ApiKeyAuth` | `TargetStoresResponse` |  |
+| techCrunch | `techCrunch.techcrunchArticle` | `techcrunch-article` | `GET /techcrunch/article` | `url` (query String required) | `ApiKeyAuth` | `TechCrunchTechcrunchArticleResponse` |  |
+| techCrunch | `techCrunch.techcrunchAuthor` | `techcrunch-author` | `GET /techcrunch/author` | `url` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TechCrunchTechcrunchAuthorResponse` |  |
+| techCrunch | `techCrunch.techcrunchHeadlines` | `techcrunch-headlines` | `GET /techcrunch/headlines` | `section` (query String required) | `ApiKeyAuth` | `TechCrunchTechcrunchHeadlinesResponse` |  |
+| techCrunch | `techCrunch.techcrunchNews` | `techcrunch-news` | `GET /techcrunch/news` | none | `ApiKeyAuth` | `TechCrunchTechcrunchNewsResponse` |  |
+| techCrunch | `techCrunch.techcrunchSections` | `techcrunch-sections` | `GET /techcrunch/sections` | none | `ApiKeyAuth` | `TechCrunchTechcrunchSectionsResponse` |  |
+| techRadar | `techRadar.techradarArticle` | `techradar-article` | `GET /techradar/article` | `url` (query String required) | `ApiKeyAuth` | `TechRadarTechradarArticleResponse` |  |
+| techRadar | `techRadar.techradarAuthor` | `techradar-author` | `GET /techradar/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `TechRadarTechradarAuthorResponse` |  |
+| techRadar | `techRadar.techradarHeadlines` | `techradar-headlines` | `GET /techradar/headlines` | `section` (query String required) | `ApiKeyAuth` | `TechRadarTechradarHeadlinesResponse` |  |
+| techRadar | `techRadar.techradarNews` | `techradar-news` | `GET /techradar/news` | none | `ApiKeyAuth` | `TechRadarTechradarNewsResponse` |  |
+| techRadar | `techRadar.techradarSections` | `techradar-sections` | `GET /techradar/sections` | none | `ApiKeyAuth` | `TechRadarTechradarSectionsResponse` |  |
+| theTelegraph | `theTelegraph.telegraphArticle` | `telegraph-article` | `GET /telegraph/article` | `url` (query String required) | `ApiKeyAuth` | `TheTelegraphTelegraphArticleResponse` |  |
+| theTelegraph | `theTelegraph.telegraphAuthor` | `telegraph-author` | `GET /telegraph/author` | `url` (query String required) | `ApiKeyAuth` | `TheTelegraphTelegraphAuthorResponse` |  |
+| theTelegraph | `theTelegraph.telegraphHeadlines` | `telegraph-headlines` | `GET /telegraph/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheTelegraphTelegraphHeadlinesResponse` |  |
+| theTelegraph | `theTelegraph.telegraphNews` | `telegraph-news` | `GET /telegraph/news` | none | `ApiKeyAuth` | `TheTelegraphTelegraphNewsResponse` |  |
+| theTelegraph | `theTelegraph.telegraphSections` | `telegraph-sections` | `GET /telegraph/sections` | none | `ApiKeyAuth` | `TheTelegraphTelegraphSectionsResponse` |  |
 | tes | `tes.jobDetail` | `tes-job-detail` | `GET /tes/jobs/detail` | `id` (query String required) | `ApiKeyAuth` | `TesJobDetailResponse` |  |
 | tes | `tes.jobEmployer` | `tes-job-employer` | `GET /tes/jobs/employer` | `id` (query String required) | `ApiKeyAuth` | `TesJobEmployerResponse` |  |
 | tes | `tes.jobSearch` | `tes-job-search` | `GET /tes/jobs/search` | `keywords` (query String)<br>`location` (query String)<br>`radius_miles` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer)<br>`sort` (query String)<br>`contract_type` (query String)<br>`contract_term` (query String)<br>`position` (query String)<br>`subject` (query String)<br>`workplace` (query String)<br>`salary_min` (query Integer) | `ApiKeyAuth` | `TesJobSearchResponse` |  |
@@ -1619,6 +2652,15 @@ Total operations: `1939`
 | tes | `tes.schoolSearch` | `tes-school-search` | `GET /tes/schools/search` | `query` (query String required)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `TesSchoolSearchResponse` |  |
 | teslaJobs | `teslaJobs.job` | `tesla-jobs-job` | `GET /tesla-jobs/job` | `id` (query String required) | `ApiKeyAuth` | `TeslaJobsJobResponse` |  |
 | teslaJobs | `teslaJobs.list` | `tesla-jobs-list` | `GET /tesla-jobs/list` | `query` (query String)<br>`location` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `TeslaJobsListResponse` |  |
+| theAge | `theAge.theageArticle` | `theage-article` | `GET /theage/article` | `url` (query String required) | `ApiKeyAuth` | `TheAgeTheageArticleResponse` |  |
+| theAge | `theAge.theageAuthor` | `theage-author` | `GET /theage/author` | `url` (query String required) | `ApiKeyAuth` | `TheAgeTheageAuthorResponse` |  |
+| theAge | `theAge.theageHeadlines` | `theage-headlines` | `GET /theage/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheAgeTheageHeadlinesResponse` |  |
+| theAge | `theAge.theageNews` | `theage-news` | `GET /theage/news` | none | `ApiKeyAuth` | `TheAgeTheageNewsResponse` |  |
+| theAge | `theAge.theageSections` | `theage-sections` | `GET /theage/sections` | none | `ApiKeyAuth` | `TheAgeTheageSectionsResponse` |  |
+| theAtlantic | `theAtlantic.theatlanticArticle` | `theatlantic-article` | `GET /theatlantic/article` | `url` (query String required) | `ApiKeyAuth` | `TheAtlanticTheatlanticArticleResponse` |  |
+| theAtlantic | `theAtlantic.theatlanticAuthor` | `theatlantic-author` | `GET /theatlantic/author` | `url` (query String required) | `ApiKeyAuth` | `TheAtlanticTheatlanticAuthorResponse` |  |
+| theAtlantic | `theAtlantic.theatlanticHeadlines` | `theatlantic-headlines` | `GET /theatlantic/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheAtlanticTheatlanticHeadlinesResponse` |  |
+| theAtlantic | `theAtlantic.theatlanticSections` | `theatlantic-sections` | `GET /theatlantic/sections` | none | `ApiKeyAuth` | `TheAtlanticTheatlanticSectionsResponse` |  |
 | theBodyShop | `theBodyShop.thebodyshopCollections` | `thebodyshop-collections` | `GET /thebodyshop/collections` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TheBodyShopThebodyshopCollectionsResponse` |  |
 | theBodyShop | `theBodyShop.thebodyshopCollectionProducts` | `thebodyshop-collection-products` | `GET /thebodyshop/collections/{handle}/products` | `handle` (path String required)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TheBodyShopThebodyshopCollectionProductsResponse` |  |
 | theBodyShop | `theBodyShop.thebodyshopPages` | `thebodyshop-pages` | `GET /thebodyshop/pages` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TheBodyShopThebodyshopPagesResponse` |  |
@@ -1630,6 +2672,52 @@ Total operations: `1939`
 | theBodyShop | `theBodyShop.thebodyshopSitemapUrls` | `thebodyshop-sitemap-urls` | `GET /thebodyshop/sitemap/urls` | `type` (query String)<br>`limit` (query Integer) | `ApiKeyAuth` | `TheBodyShopThebodyshopSitemapUrlsResponse` |  |
 | theBodyShop | `theBodyShop.thebodyshopSitemaps` | `thebodyshop-sitemaps` | `GET /thebodyshop/sitemaps` | none | `ApiKeyAuth` | `TheBodyShopThebodyshopSitemapsResponse` |  |
 | theBodyShop | `theBodyShop.thebodyshopStore` | `thebodyshop-store` | `GET /thebodyshop/store` | none | `ApiKeyAuth` | `TheBodyShopThebodyshopStoreResponse` |  |
+| theDailyBeast | `theDailyBeast.thedailybeastArticle` | `thedailybeast-article` | `GET /thedailybeast/article` | `url` (query String required) | `ApiKeyAuth` | `TheDailyBeastThedailybeastArticleResponse` |  |
+| theDailyBeast | `theDailyBeast.thedailybeastAuthor` | `thedailybeast-author` | `GET /thedailybeast/author` | `url` (query String required) | `ApiKeyAuth` | `TheDailyBeastThedailybeastAuthorResponse` |  |
+| theDailyBeast | `theDailyBeast.thedailybeastHeadlines` | `thedailybeast-headlines` | `GET /thedailybeast/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheDailyBeastThedailybeastHeadlinesResponse` |  |
+| theDailyBeast | `theDailyBeast.thedailybeastNews` | `thedailybeast-news` | `GET /thedailybeast/news` | none | `ApiKeyAuth` | `TheDailyBeastThedailybeastNewsResponse` |  |
+| theDailyBeast | `theDailyBeast.thedailybeastSections` | `thedailybeast-sections` | `GET /thedailybeast/sections` | none | `ApiKeyAuth` | `TheDailyBeastThedailybeastSectionsResponse` |  |
+| theHill | `theHill.thehillArticle` | `thehill-article` | `GET /thehill/article` | `url` (query String required) | `ApiKeyAuth` | `TheHillThehillArticleResponse` |  |
+| theHill | `theHill.thehillAuthor` | `thehill-author` | `GET /thehill/author` | `url` (query String required) | `ApiKeyAuth` | `TheHillThehillAuthorResponse` |  |
+| theHill | `theHill.thehillHeadlines` | `thehill-headlines` | `GET /thehill/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheHillThehillHeadlinesResponse` |  |
+| theHill | `theHill.thehillNews` | `thehill-news` | `GET /thehill/news` | none | `ApiKeyAuth` | `TheHillThehillNewsResponse` |  |
+| theHill | `theHill.thehillSections` | `thehill-sections` | `GET /thehill/sections` | none | `ApiKeyAuth` | `TheHillThehillSectionsResponse` |  |
+| theHindu | `theHindu.thehinduArticle` | `thehindu-article` | `GET /thehindu/article` | `url` (query String required) | `ApiKeyAuth` | `TheHinduThehinduArticleResponse` |  |
+| theHindu | `theHindu.thehinduAuthor` | `thehindu-author` | `GET /thehindu/author` | `url` (query String required) | `ApiKeyAuth` | `TheHinduThehinduAuthorResponse` |  |
+| theHindu | `theHindu.thehinduHeadlines` | `thehindu-headlines` | `GET /thehindu/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheHinduThehinduHeadlinesResponse` |  |
+| theHindu | `theHindu.thehinduNews` | `thehindu-news` | `GET /thehindu/news` | none | `ApiKeyAuth` | `TheHinduThehinduNewsResponse` |  |
+| theHindu | `theHindu.thehinduSections` | `thehindu-sections` | `GET /thehindu/sections` | none | `ApiKeyAuth` | `TheHinduThehinduSectionsResponse` |  |
+| theJournalIe | `theJournalIe.thejournalArticle` | `thejournal-article` | `GET /thejournal/article` | `url` (query String required) | `ApiKeyAuth` | `TheJournalIeThejournalArticleResponse` |  |
+| theJournalIe | `theJournalIe.thejournalAuthor` | `thejournal-author` | `GET /thejournal/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `TheJournalIeThejournalAuthorResponse` |  |
+| theJournalIe | `theJournalIe.thejournalHeadlines` | `thejournal-headlines` | `GET /thejournal/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheJournalIeThejournalHeadlinesResponse` |  |
+| theJournalIe | `theJournalIe.thejournalNews` | `thejournal-news` | `GET /thejournal/news` | none | `ApiKeyAuth` | `TheJournalIeThejournalNewsResponse` |  |
+| theJournalIe | `theJournalIe.thejournalSections` | `thejournal-sections` | `GET /thejournal/sections` | none | `ApiKeyAuth` | `TheJournalIeThejournalSectionsResponse` |  |
+| theRealReal | `theRealReal.therealrealAutocomplete` | `therealreal-autocomplete` | `GET /therealreal/autocomplete` | `term` (query String required) | `ApiKeyAuth` | `TheRealRealTherealrealAutocompleteResponse` |  |
+| theRealReal | `theRealReal.therealrealCategories` | `therealreal-categories` | `GET /therealreal/categories` | none | `ApiKeyAuth` | `TheRealRealTherealrealCategoriesResponse` |  |
+| theRealReal | `theRealReal.therealrealCategory` | `therealreal-category` | `GET /therealreal/category` | `path` (query String required)<br>`on_sale` (query Boolean)<br>`available` (query Boolean)<br>`after` (query String) | `ApiKeyAuth` | `TheRealRealTherealrealCategoryResponse` |  |
+| theRealReal | `theRealReal.therealrealCollection` | `therealreal-collection` | `GET /therealreal/collection` | `slug` (query String required)<br>`after` (query String) | `ApiKeyAuth` | `TheRealRealTherealrealCollectionResponse` |  |
+| theRealReal | `theRealReal.therealrealCollections` | `therealreal-collections` | `GET /therealreal/collections` | none | `ApiKeyAuth` | `TheRealRealTherealrealCollectionsResponse` |  |
+| theRealReal | `theRealReal.therealrealConditions` | `therealreal-conditions` | `GET /therealreal/conditions` | none | `ApiKeyAuth` | `TheRealRealTherealrealConditionsResponse` |  |
+| theRealReal | `theRealReal.therealrealDesigner` | `therealreal-designer` | `GET /therealreal/designer` | `slug` (query String required)<br>`on_sale` (query Boolean)<br>`available` (query Boolean)<br>`after` (query String) | `ApiKeyAuth` | `TheRealRealTherealrealDesignerResponse` |  |
+| theRealReal | `theRealReal.therealrealDesigners` | `therealreal-designers` | `GET /therealreal/designers` | `category` (query String) | `ApiKeyAuth` | `TheRealRealTherealrealDesignersResponse` |  |
+| theRealReal | `theRealReal.therealrealListing` | `therealreal-listing` | `GET /therealreal/listing` | `url` (query String required) | `ApiKeyAuth` | `TheRealRealTherealrealListingResponse` |  |
+| theRealReal | `theRealReal.therealrealSearch` | `therealreal-search` | `GET /therealreal/search` | `query` (query String required)<br>`category_id` (query String)<br>`designer_id` (query String)<br>`condition_id` (query String)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`on_sale` (query Boolean)<br>`available` (query Boolean)<br>`after` (query String) | `ApiKeyAuth` | `TheRealRealTherealrealSearchResponse` |  |
+| theRealReal | `theRealReal.therealrealSimilar` | `therealreal-similar` | `GET /therealreal/similar` | `product_id` (query String required) | `ApiKeyAuth` | `TheRealRealTherealrealSimilarResponse` |  |
+| theStarMalaysia | `theStarMalaysia.thestarmyArticle` | `thestarmy-article` | `GET /thestarmy/article` | `url` (query String required) | `ApiKeyAuth` | `TheStarMalaysiaThestarmyArticleResponse` |  |
+| theStarMalaysia | `theStarMalaysia.thestarmyAuthor` | `thestarmy-author` | `GET /thestarmy/author` | `name` (query String)<br>`url` (query String) | `ApiKeyAuth` | `TheStarMalaysiaThestarmyAuthorResponse` |  |
+| theStarMalaysia | `theStarMalaysia.thestarmyHeadlines` | `thestarmy-headlines` | `GET /thestarmy/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheStarMalaysiaThestarmyHeadlinesResponse` |  |
+| theStarMalaysia | `theStarMalaysia.thestarmyNews` | `thestarmy-news` | `GET /thestarmy/news` | none | `ApiKeyAuth` | `TheStarMalaysiaThestarmyNewsResponse` |  |
+| theStarMalaysia | `theStarMalaysia.thestarmySections` | `thestarmy-sections` | `GET /thestarmy/sections` | none | `ApiKeyAuth` | `TheStarMalaysiaThestarmySectionsResponse` |  |
+| theVerge | `theVerge.thevergeArticle` | `theverge-article` | `GET /theverge/article` | `url` (query String required) | `ApiKeyAuth` | `TheVergeThevergeArticleResponse` |  |
+| theVerge | `theVerge.thevergeAuthor` | `theverge-author` | `GET /theverge/author` | `url` (query String required) | `ApiKeyAuth` | `TheVergeThevergeAuthorResponse` |  |
+| theVerge | `theVerge.thevergeHeadlines` | `theverge-headlines` | `GET /theverge/headlines` | `section` (query String required) | `ApiKeyAuth` | `TheVergeThevergeHeadlinesResponse` |  |
+| theVerge | `theVerge.thevergeNews` | `theverge-news` | `GET /theverge/news` | none | `ApiKeyAuth` | `TheVergeThevergeNewsResponse` |  |
+| theVerge | `theVerge.thevergeSections` | `theverge-sections` | `GET /theverge/sections` | none | `ApiKeyAuth` | `TheVergeThevergeSectionsResponse` |  |
+| thisIsMoney | `thisIsMoney.thisismoneyArticle` | `thisismoney-article` | `GET /thisismoney/article` | `url` (query String required) | `ApiKeyAuth` | `ThisIsMoneyThisismoneyArticleResponse` |  |
+| thisIsMoney | `thisIsMoney.thisismoneyAuthor` | `thisismoney-author` | `GET /thisismoney/author` | `url` (query String required) | `ApiKeyAuth` | `ThisIsMoneyThisismoneyAuthorResponse` |  |
+| thisIsMoney | `thisIsMoney.thisismoneyHeadlines` | `thisismoney-headlines` | `GET /thisismoney/headlines` | `section` (query String required) | `ApiKeyAuth` | `ThisIsMoneyThisismoneyHeadlinesResponse` |  |
+| thisIsMoney | `thisIsMoney.thisismoneyNews` | `thisismoney-news` | `GET /thisismoney/news` | none | `ApiKeyAuth` | `ThisIsMoneyThisismoneyNewsResponse` |  |
+| thisIsMoney | `thisIsMoney.thisismoneySections` | `thisismoney-sections` | `GET /thisismoney/sections` | none | `ApiKeyAuth` | `ThisIsMoneyThisismoneySectionsResponse` |  |
 | threads | `threads.post` | `threads-post` | `GET /threads/post/{username}/{code}` | `username` (path String required)<br>`code` (path String required) | `ApiKeyAuth` | `ThreadsPostResponse` |  |
 | threads | `threads.postReplies` | `threads-post-replies` | `GET /threads/post/{username}/{code}/replies` | `username` (path String required)<br>`code` (path String required) | `ApiKeyAuth` | `ThreadsPostRepliesResponse` |  |
 | threads | `threads.profile` | `threads-profile` | `GET /threads/profile/{username}` | `username` (path String required) | `ApiKeyAuth` | `ThreadsProfileResponse` |  |
@@ -1653,6 +2741,14 @@ Total operations: `1939`
 | ticketWeb | `ticketWeb.ticketwebEvent` | `ticketweb-event` | `GET /ticketweb/event` | `id` (query String required) | `ApiKeyAuth` | `TicketWebTicketwebEventResponse` |  |
 | ticketWeb | `ticketWeb.ticketwebSearch` | `ticketweb-search` | `GET /ticketweb/search` | `q` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TicketWebTicketwebSearchResponse` |  |
 | ticketWeb | `ticketWeb.ticketwebVenue` | `ticketweb-venue` | `GET /ticketweb/venue` | `id` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `TicketWebTicketwebVenueResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyCategories` | `tiffany-categories` | `GET /tiffany/categories` | none | `ApiKeyAuth` | `TiffanyCoTiffanyCategoriesResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyCategory` | `tiffany-category` | `GET /tiffany/category` | `category` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`material` (query String)<br>`gemstone` (query String)<br>`color` (query String)<br>`product_type` (query String)<br>`gender` (query String)<br>`designer` (query String) | `ApiKeyAuth` | `TiffanyCoTiffanyCategoryResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyContentSearch` | `tiffany-content-search` | `GET /tiffany/content-search` | `keyword` (query String required)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `TiffanyCoTiffanyContentSearchResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyFilters` | `tiffany-filters` | `GET /tiffany/filters` | none | `ApiKeyAuth` | `TiffanyCoTiffanyFiltersResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyProduct` | `tiffany-product` | `GET /tiffany/product` | `product_id` (query String required) | `ApiKeyAuth` | `TiffanyCoTiffanyProductResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanySearch` | `tiffany-search` | `GET /tiffany/search` | `keyword` (query String required)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer)<br>`material` (query String)<br>`gemstone` (query String)<br>`color` (query String)<br>`product_type` (query String)<br>`gender` (query String)<br>`designer` (query String) | `ApiKeyAuth` | `TiffanyCoTiffanySearchResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanyStores` | `tiffany-stores` | `GET /tiffany/stores` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Double)<br>`limit` (query Integer) | `ApiKeyAuth` | `TiffanyCoTiffanyStoresResponse` |  |
+| tiffanyCo | `tiffanyCo.tiffanySuggest` | `tiffany-suggest` | `GET /tiffany/suggest` | `query` (query String required) | `ApiKeyAuth` | `TiffanyCoTiffanySuggestResponse` |  |
 | tiktok | `tiktok.category` | `tiktok-category` | `GET /tiktok/category` | none | `ApiKeyAuth` | `TiktokCategoryResponse` |  |
 | tiktok | `tiktok.videoComments` | `tiktok-video-comments` | `GET /tiktok/comments` | `aweme_id` (query String required)<br>`cursor` (query Integer) | `ApiKeyAuth` | `TiktokVideoCommentsResponse` |  |
 | tiktok | `tiktok.creativeCenterHashtags` | `tiktok-creative-center-hashtags` | `GET /tiktok/creative-center/hashtags` | `country_code` (query String required)<br>`period` (query String) | `ApiKeyAuth` | `TiktokCreativeCenterHashtagsResponse` |  |
@@ -1678,6 +2774,23 @@ Total operations: `1939`
 | tiktok | `tiktok.topAdsSpotlight` | `tiktok-top-ads-spotlight` | `GET /tiktok/top-ads/spotlight` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TiktokTopAdsSpotlightResponse` |  |
 | tiktok | `tiktok.topAdsSuggestions` | `tiktok-top-ads-suggestions` | `GET /tiktok/top-ads/suggestions` | `count` (query Integer)<br>`scenario` (query Integer) | `ApiKeyAuth` | `TiktokTopAdsSuggestionsResponse` |  |
 | tiktok | `tiktok.trending` | `tiktok-trending` | `GET /tiktok/trending` | none | `ApiKeyAuth` | `TiktokTrendingResponse` |  |
+| time | `time.article` | `time-article` | `GET /time/article` | `url` (query String required) | `ApiKeyAuth` | `TimeArticleResponse` |  |
+| time | `time.author` | `time-author` | `GET /time/author` | `url` (query String required) | `ApiKeyAuth` | `TimeAuthorResponse` |  |
+| time | `time.headlines` | `time-headlines` | `GET /time/headlines` | `section` (query String required) | `ApiKeyAuth` | `TimeHeadlinesResponse` |  |
+| time | `time.news` | `time-news` | `GET /time/news` | none | `ApiKeyAuth` | `TimeNewsResponse` |  |
+| time | `time.sections` | `time-sections` | `GET /time/sections` | none | `ApiKeyAuth` | `TimeSectionsResponse` |  |
+| timesOfIndia | `timesOfIndia.timesofindiaArticle` | `timesofindia-article` | `GET /timesofindia/article` | `url` (query String required) | `ApiKeyAuth` | `TimesOfIndiaTimesofindiaArticleResponse` |  |
+| timesOfIndia | `timesOfIndia.timesofindiaAuthor` | `timesofindia-author` | `GET /timesofindia/author` | `url` (query String required) | `ApiKeyAuth` | `TimesOfIndiaTimesofindiaAuthorResponse` |  |
+| timesOfIndia | `timesOfIndia.timesofindiaHeadlines` | `timesofindia-headlines` | `GET /timesofindia/headlines` | `section` (query String required) | `ApiKeyAuth` | `TimesOfIndiaTimesofindiaHeadlinesResponse` |  |
+| timesOfIndia | `timesOfIndia.timesofindiaNews` | `timesofindia-news` | `GET /timesofindia/news` | none | `ApiKeyAuth` | `TimesOfIndiaTimesofindiaNewsResponse` |  |
+| timesOfIndia | `timesOfIndia.timesofindiaSections` | `timesofindia-sections` | `GET /timesofindia/sections` | none | `ApiKeyAuth` | `TimesOfIndiaTimesofindiaSectionsResponse` |  |
+| timesOfIsrael | `timesOfIsrael.timesofisraelArticle` | `timesofisrael-article` | `GET /timesofisrael/article` | `url` (query String required) | `ApiKeyAuth` | `TimesOfIsraelTimesofisraelArticleResponse` |  |
+| timesOfIsrael | `timesOfIsrael.timesofisraelAuthor` | `timesofisrael-author` | `GET /timesofisrael/author` | `url` (query String required) | `ApiKeyAuth` | `TimesOfIsraelTimesofisraelAuthorResponse` |  |
+| timesOfIsrael | `timesOfIsrael.timesofisraelHeadlines` | `timesofisrael-headlines` | `GET /timesofisrael/headlines` | `section` (query String required) | `ApiKeyAuth` | `TimesOfIsraelTimesofisraelHeadlinesResponse` |  |
+| timesOfIsrael | `timesOfIsrael.timesofisraelNews` | `timesofisrael-news` | `GET /timesofisrael/news` | none | `ApiKeyAuth` | `TimesOfIsraelTimesofisraelNewsResponse` |  |
+| timesOfIsrael | `timesOfIsrael.timesofisraelSections` | `timesofisrael-sections` | `GET /timesofisrael/sections` | none | `ApiKeyAuth` | `TimesOfIsraelTimesofisraelSectionsResponse` |  |
+| tmdb | `tmdb.collection` | `tmdb-collection` | `GET /tmdb/collection/{id}` | `id` (path String required) | `ApiKeyAuth` | `TmdbCollectionResponse` |  |
+| tmdb | `tmdb.genres` | `tmdb-genres` | `GET /tmdb/genres` | none | `ApiKeyAuth` | `TmdbGenresResponse` |  |
 | tmdb | `tmdb.movieList` | `tmdb-movie-list` | `GET /tmdb/movie/list` | `category` (query String)<br>`page` (query Integer)<br>`sort_by` (query String)<br>`with_genres` (query String)<br>`original_language` (query String)<br>`date_from` (query String)<br>`date_to` (query String)<br>`min_rating` (query Double)<br>`max_rating` (query Double)<br>`min_votes` (query Integer)<br>`min_runtime` (query Integer)<br>`max_runtime` (query Integer)<br>`include_adult` (query Boolean)<br>`limit` (query Integer) | `ApiKeyAuth` | `TmdbMovieListResponse` |  |
 | tmdb | `tmdb.movie` | `tmdb-movie` | `GET /tmdb/movie/{id}` | `id` (path String required) | `ApiKeyAuth` | `TmdbMovieResponse` |  |
 | tmdb | `tmdb.personList` | `tmdb-person-list` | `GET /tmdb/person/list` | `page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TmdbPersonListResponse` |  |
@@ -1685,6 +2798,11 @@ Total operations: `1939`
 | tmdb | `tmdb.search` | `tmdb-search` | `GET /tmdb/search` | `query` (query String required)<br>`type` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `TmdbSearchResponse` |  |
 | tmdb | `tmdb.tvList` | `tmdb-tv-list` | `GET /tmdb/tv/list` | `category` (query String)<br>`page` (query Integer)<br>`sort_by` (query String)<br>`with_genres` (query String)<br>`original_language` (query String)<br>`date_from` (query String)<br>`date_to` (query String)<br>`min_rating` (query Double)<br>`max_rating` (query Double)<br>`min_votes` (query Integer)<br>`min_runtime` (query Integer)<br>`max_runtime` (query Integer)<br>`include_adult` (query Boolean)<br>`limit` (query Integer) | `ApiKeyAuth` | `TmdbTvListResponse` |  |
 | tmdb | `tmdb.tv` | `tmdb-tv` | `GET /tmdb/tv/{id}` | `id` (path String required) | `ApiKeyAuth` | `TmdbTvResponse` |  |
+| tmz | `tmz.article` | `tmz-article` | `GET /tmz/article` | `url` (query String required) | `ApiKeyAuth` | `TmzArticleResponse` |  |
+| tmz | `tmz.author` | `tmz-author` | `GET /tmz/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `TmzAuthorResponse` |  |
+| tmz | `tmz.headlines` | `tmz-headlines` | `GET /tmz/headlines` | `section` (query String required) | `ApiKeyAuth` | `TmzHeadlinesResponse` |  |
+| tmz | `tmz.news` | `tmz-news` | `GET /tmz/news` | none | `ApiKeyAuth` | `TmzNewsResponse` |  |
+| tmz | `tmz.sections` | `tmz-sections` | `GET /tmz/sections` | none | `ApiKeyAuth` | `TmzSectionsResponse` |  |
 | tokopedia | `tokopedia.autocomplete` | `tokopedia-autocomplete` | `GET /tokopedia/autocomplete` | `q` (query String required) | `ApiKeyAuth` | `TokopediaAutocompleteResponse` |  |
 | tokopedia | `tokopedia.category` | `tokopedia-category` | `GET /tokopedia/category` | `path` (query String required) | `ApiKeyAuth` | `TokopediaCategoryResponse` |  |
 | tokopedia | `tokopedia.home` | `tokopedia-home` | `GET /tokopedia/home` | `tab_id` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `TokopediaHomeResponse` |  |
@@ -1693,6 +2811,26 @@ Total operations: `1939`
 | tokopedia | `tokopedia.productReviewFilters` | `tokopedia-product-review-filters` | `GET /tokopedia/product/review-filters` | `product_id` (query String required) | `ApiKeyAuth` | `TokopediaProductReviewFiltersResponse` |  |
 | tokopedia | `tokopedia.search` | `tokopedia-search` | `GET /tokopedia/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String)<br>`filter` (query List<String>) | `ApiKeyAuth` | `TokopediaSearchResponse` |  |
 | tokopedia | `tokopedia.searchFilters` | `tokopedia-search-filters` | `GET /tokopedia/search/filters` | `q` (query String required) | `ApiKeyAuth` | `TokopediaSearchFiltersResponse` |  |
+| tomSGuide | `tomSGuide.tomsguideArticle` | `tomsguide-article` | `GET /tomsguide/article` | `url` (query String required) | `ApiKeyAuth` | `TomSguideTomsguideArticleResponse` |  |
+| tomSGuide | `tomSGuide.tomsguideAuthor` | `tomsguide-author` | `GET /tomsguide/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `TomSguideTomsguideAuthorResponse` |  |
+| tomSGuide | `tomSGuide.tomsguideHeadlines` | `tomsguide-headlines` | `GET /tomsguide/headlines` | `section` (query String required) | `ApiKeyAuth` | `TomSguideTomsguideHeadlinesResponse` |  |
+| tomSGuide | `tomSGuide.tomsguideNews` | `tomsguide-news` | `GET /tomsguide/news` | none | `ApiKeyAuth` | `TomSguideTomsguideNewsResponse` |  |
+| tomSGuide | `tomSGuide.tomsguideSections` | `tomsguide-sections` | `GET /tomsguide/sections` | none | `ApiKeyAuth` | `TomSguideTomsguideSectionsResponse` |  |
+| tomSHardware | `tomSHardware.tomshardwareArticle` | `tomshardware-article` | `GET /tomshardware/article` | `url` (query String required) | `ApiKeyAuth` | `TomShardwareTomshardwareArticleResponse` |  |
+| tomSHardware | `tomSHardware.tomshardwareAuthor` | `tomshardware-author` | `GET /tomshardware/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `TomShardwareTomshardwareAuthorResponse` |  |
+| tomSHardware | `tomSHardware.tomshardwareHeadlines` | `tomshardware-headlines` | `GET /tomshardware/headlines` | `section` (query String required) | `ApiKeyAuth` | `TomShardwareTomshardwareHeadlinesResponse` |  |
+| tomSHardware | `tomSHardware.tomshardwareNews` | `tomshardware-news` | `GET /tomshardware/news` | none | `ApiKeyAuth` | `TomShardwareTomshardwareNewsResponse` |  |
+| tomSHardware | `tomSHardware.tomshardwareSections` | `tomshardware-sections` | `GET /tomshardware/sections` | none | `ApiKeyAuth` | `TomShardwareTomshardwareSectionsResponse` |  |
+| torontoStar | `torontoStar.torontostarArticle` | `torontostar-article` | `GET /torontostar/article` | `url` (query String required) | `ApiKeyAuth` | `TorontoStarTorontostarArticleResponse` |  |
+| torontoStar | `torontoStar.torontostarAuthor` | `torontostar-author` | `GET /torontostar/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `TorontoStarTorontostarAuthorResponse` |  |
+| torontoStar | `torontoStar.torontostarHeadlines` | `torontostar-headlines` | `GET /torontostar/headlines` | `section` (query String required) | `ApiKeyAuth` | `TorontoStarTorontostarHeadlinesResponse` |  |
+| torontoStar | `torontoStar.torontostarNews` | `torontostar-news` | `GET /torontostar/news` | none | `ApiKeyAuth` | `TorontoStarTorontostarNewsResponse` |  |
+| torontoStar | `torontoStar.torontostarSections` | `torontostar-sections` | `GET /torontostar/sections` | none | `ApiKeyAuth` | `TorontoStarTorontostarSectionsResponse` |  |
+| townhall | `townhall.article` | `townhall-article` | `GET /townhall/article` | `url` (query String required) | `ApiKeyAuth` | `TownhallArticleResponse` |  |
+| townhall | `townhall.author` | `townhall-author` | `GET /townhall/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `TownhallAuthorResponse` |  |
+| townhall | `townhall.headlines` | `townhall-headlines` | `GET /townhall/headlines` | `section` (query String required) | `ApiKeyAuth` | `TownhallHeadlinesResponse` |  |
+| townhall | `townhall.news` | `townhall-news` | `GET /townhall/news` | none | `ApiKeyAuth` | `TownhallNewsResponse` |  |
+| townhall | `townhall.sections` | `townhall-sections` | `GET /townhall/sections` | none | `ApiKeyAuth` | `TownhallSectionsResponse` |  |
 | tripAdvisor | `tripAdvisor.tripadvisorAutocomplete` | `tripadvisor-autocomplete` | `GET /tripadvisor/autocomplete` | `q` (query String required)<br>`limit` (query Integer)<br>`locale` (query String)<br>`scope_geo_id` (query Integer)<br>`type` (query String)<br>`search_session_id` (query String)<br>`typeahead_id` (query String)<br>`route_uid` (query String) | `ApiKeyAuth` | `TripAdvisorTripadvisorAutocompleteResponse` |  |
 | tripAdvisor | `tripAdvisor.tripadvisorEnums` | `tripadvisor-enums` | `GET /tripadvisor/enums` | none | `ApiKeyAuth` | `TripAdvisorTripadvisorEnumsResponse` |  |
 | tripAdvisor | `tripAdvisor.tripadvisorHotels` | `tripadvisor-hotels` | `GET /tripadvisor/hotels` | `geo_id` (query Integer required)<br>`filter_id` (query String)<br>`class` (query Integer)<br>`amenities` (query List<Integer>)<br>`price_min` (query Integer)<br>`price_max` (query Integer)<br>`pricing_mode` (query String)<br>`travelers_choice` (query Boolean)<br>`travelers_choice_botb` (query Boolean)<br>`currency` (query String)<br>`offset` (query Integer)<br>`limit` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `TripAdvisorTripadvisorHotelsResponse` |  |
@@ -1745,6 +2883,11 @@ Total operations: `1939`
 | usage | `usage.meRecentIps` | `usage-me-recent-ips` | `GET /usage/me/recent-ips` | `range` (query String)<br>`limit` (query Integer)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeRecentIpsResponse` |  |
 | usage | `usage.meTimeseries` | `usage-me-timeseries` | `GET /usage/me/timeseries` | `range` (query String)<br>`bucket` (query String)<br>`endpoint` (query String)<br>`from` (query String)<br>`to` (query String) | `ApiKeyAuth` | `UsageMeTimeseriesResponse` |  |
 | usage | `usage.platformAdjacency` | `usage-platform-adjacency` | `GET /usage/platform-adjacency` | none | `ApiKeyAuth` | `UsagePlatformAdjacencyResponse` |  |
+| usaToday | `usaToday.usatodayArticle` | `usatoday-article` | `GET /usatoday/article` | `url` (query String required) | `ApiKeyAuth` | `UsaTodayUsatodayArticleResponse` |  |
+| usaToday | `usaToday.usatodayAuthor` | `usatoday-author` | `GET /usatoday/author` | `url` (query String required) | `ApiKeyAuth` | `UsaTodayUsatodayAuthorResponse` |  |
+| usaToday | `usaToday.usatodayHeadlines` | `usatoday-headlines` | `GET /usatoday/headlines` | `section` (query String required) | `ApiKeyAuth` | `UsaTodayUsatodayHeadlinesResponse` |  |
+| usaToday | `usaToday.usatodayNews` | `usatoday-news` | `GET /usatoday/news` | none | `ApiKeyAuth` | `UsaTodayUsatodayNewsResponse` |  |
+| usaToday | `usaToday.usatodaySections` | `usatoday-sections` | `GET /usatoday/sections` | none | `ApiKeyAuth` | `UsaTodayUsatodaySectionsResponse` |  |
 | user | `user.me` | `user-me` | `GET /user/me` | none | `JWTAuth` | `UserMeResponse` |  |
 | user | `user.meApiKeys` | `user-me-api-keys` | `GET /user/me/api-keys` | none | `JWTAuth` | `UserMeApiKeysResponse` |  |
 | user | `user.meApiKeysRotate` | `user-me-api-keys-rotate` | `POST /user/me/api-keys/rotate` | none | `JWTAuth` | `UserMeApiKeysRotateResponse` |  |
@@ -1753,8 +2896,41 @@ Total operations: `1939`
 | accountDeletion | `accountDeletion.cancel` | `account-deletion-cancel` | `DELETE /user/me/deletion-request` | none | `JWTAuth` | `AccountDeletionCancelResponse` |  |
 | accountDeletion | `accountDeletion.myRequest` | `account-deletion-my-request` | `GET /user/me/deletion-request` | none | `JWTAuth` | `AccountDeletionMyRequestResponse` |  |
 | accountDeletion | `accountDeletion.request` | `account-deletion-request` | `POST /user/me/deletion-request` | `request` (body String) | `JWTAuth` | `AccountDeletionRequestResponse` |  |
+| usWeekly | `usWeekly.usmagazineArticle` | `usmagazine-article` | `GET /usmagazine/article` | `url` (query String required) | `ApiKeyAuth` | `UsWeeklyUsmagazineArticleResponse` |  |
+| usWeekly | `usWeekly.usmagazineAuthor` | `usmagazine-author` | `GET /usmagazine/author` | `url` (query String required) | `ApiKeyAuth` | `UsWeeklyUsmagazineAuthorResponse` |  |
+| usWeekly | `usWeekly.usmagazineHeadlines` | `usmagazine-headlines` | `GET /usmagazine/headlines` | `section` (query String required) | `ApiKeyAuth` | `UsWeeklyUsmagazineHeadlinesResponse` |  |
+| usWeekly | `usWeekly.usmagazineNews` | `usmagazine-news` | `GET /usmagazine/news` | none | `ApiKeyAuth` | `UsWeeklyUsmagazineNewsResponse` |  |
+| usWeekly | `usWeekly.usmagazineSections` | `usmagazine-sections` | `GET /usmagazine/sections` | none | `ApiKeyAuth` | `UsWeeklyUsmagazineSectionsResponse` |  |
 | usptoPatentPublicSearch | `usptoPatentPublicSearch.usptoppubsDetail` | `usptoppubs-detail` | `GET /usptoppubs/detail` | `guid` (query String required)<br>`source` (query String required) | `ApiKeyAuth` | `UsptoPatentPublicSearchUsptoppubsDetailResponse` |  |
 | usptoPatentPublicSearch | `usptoPatentPublicSearch.usptoppubsSearch` | `usptoppubs-search` | `GET /usptoppubs/search` | `q` (query String required)<br>`databases` (query String)<br>`num` (query Integer)<br>`page` (query Integer) | `ApiKeyAuth` | `UsptoPatentPublicSearchUsptoppubsSearchResponse` |  |
+| vanguard | `vanguard.vanguardngArticle` | `vanguardng-article` | `GET /vanguardng/article` | `url` (query String required) | `ApiKeyAuth` | `VanguardVanguardngArticleResponse` |  |
+| vanguard | `vanguard.vanguardngAuthor` | `vanguardng-author` | `GET /vanguardng/author` | `name` (query String required)<br>`section` (query String) | `ApiKeyAuth` | `VanguardVanguardngAuthorResponse` |  |
+| vanguard | `vanguard.vanguardngHeadlines` | `vanguardng-headlines` | `GET /vanguardng/headlines` | `section` (query String required) | `ApiKeyAuth` | `VanguardVanguardngHeadlinesResponse` |  |
+| vanguard | `vanguard.vanguardngNews` | `vanguardng-news` | `GET /vanguardng/news` | none | `ApiKeyAuth` | `VanguardVanguardngNewsResponse` |  |
+| vanguard | `vanguard.vanguardngSections` | `vanguardng-sections` | `GET /vanguardng/sections` | none | `ApiKeyAuth` | `VanguardVanguardngSectionsResponse` |  |
+| vanityFair | `vanityFair.vanityfairArticle` | `vanityfair-article` | `GET /vanityfair/article` | `url` (query String required) | `ApiKeyAuth` | `VanityFairVanityfairArticleResponse` |  |
+| vanityFair | `vanityFair.vanityfairAuthor` | `vanityfair-author` | `GET /vanityfair/author` | `url` (query String required) | `ApiKeyAuth` | `VanityFairVanityfairAuthorResponse` |  |
+| vanityFair | `vanityFair.vanityfairHeadlines` | `vanityfair-headlines` | `GET /vanityfair/headlines` | `section` (query String required) | `ApiKeyAuth` | `VanityFairVanityfairHeadlinesResponse` |  |
+| vanityFair | `vanityFair.vanityfairNews` | `vanityfair-news` | `GET /vanityfair/news` | none | `ApiKeyAuth` | `VanityFairVanityfairNewsResponse` |  |
+| vanityFair | `vanityFair.vanityfairSections` | `vanityfair-sections` | `GET /vanityfair/sections` | none | `ApiKeyAuth` | `VanityFairVanityfairSectionsResponse` |  |
+| variety | `variety.article` | `variety-article` | `GET /variety/article` | `url` (query String required) | `ApiKeyAuth` | `VarietyArticleResponse` |  |
+| variety | `variety.author` | `variety-author` | `GET /variety/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VarietyAuthorResponse` |  |
+| variety | `variety.headlines` | `variety-headlines` | `GET /variety/headlines` | `section` (query String required) | `ApiKeyAuth` | `VarietyHeadlinesResponse` |  |
+| variety | `variety.news` | `variety-news` | `GET /variety/news` | none | `ApiKeyAuth` | `VarietyNewsResponse` |  |
+| variety | `variety.sections` | `variety-sections` | `GET /variety/sections` | none | `ApiKeyAuth` | `VarietySectionsResponse` |  |
+| vestiaire | `vestiaire.brands` | `vestiaire-brands` | `GET /vestiaire/brands` | none | `ApiKeyAuth` | `VestiaireBrandsResponse` |  |
+| vestiaire | `vestiaire.categories` | `vestiaire-categories` | `GET /vestiaire/categories` | none | `ApiKeyAuth` | `VestiaireCategoriesResponse` |  |
+| vestiaire | `vestiaire.conditions` | `vestiaire-conditions` | `GET /vestiaire/conditions` | none | `ApiKeyAuth` | `VestiaireConditionsResponse` |  |
+| vestiaire | `vestiaire.product` | `vestiaire-product` | `GET /vestiaire/product` | `path` (query String required) | `ApiKeyAuth` | `VestiaireProductResponse` |  |
+| vestiaire | `vestiaire.search` | `vestiaire-search` | `GET /vestiaire/search` | `q` (query String)<br>`category_id` (query String)<br>`brand_id` (query String)<br>`condition_id` (query String)<br>`sort` (query String)<br>`page` (query Integer)<br>`per_page` (query Integer) | `ApiKeyAuth` | `VestiaireSearchResponse` |  |
+| vestiaire | `vestiaire.searchSellers` | `vestiaire-search-sellers` | `GET /vestiaire/search-sellers` | `q` (query String required) | `ApiKeyAuth` | `VestiaireSearchSellersResponse` |  |
+| vestiaire | `vestiaire.seller` | `vestiaire-seller` | `GET /vestiaire/seller` | `id` (query String required) | `ApiKeyAuth` | `VestiaireSellerResponse` |  |
+| vestiaire | `vestiaire.suggest` | `vestiaire-suggest` | `GET /vestiaire/suggest` | `q` (query String required) | `ApiKeyAuth` | `VestiaireSuggestResponse` |  |
+| vice | `vice.article` | `vice-article` | `GET /vice/article` | `url` (query String required) | `ApiKeyAuth` | `ViceArticleResponse` |  |
+| vice | `vice.author` | `vice-author` | `GET /vice/author` | `url` (query String required) | `ApiKeyAuth` | `ViceAuthorResponse` |  |
+| vice | `vice.headlines` | `vice-headlines` | `GET /vice/headlines` | `section` (query String required) | `ApiKeyAuth` | `ViceHeadlinesResponse` |  |
+| vice | `vice.news` | `vice-news` | `GET /vice/news` | none | `ApiKeyAuth` | `ViceNewsResponse` |  |
+| vice | `vice.sections` | `vice-sections` | `GET /vice/sections` | none | `ApiKeyAuth` | `ViceSectionsResponse` |  |
 | vinted | `vinted.brand` | `vinted-brand` | `GET /vinted/brand` | `id` (query String required)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`order` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VintedBrandResponse` |  |
 | vinted | `vinted.brands` | `vinted-brands` | `GET /vinted/brands` | none | `ApiKeyAuth` | `VintedBrandsResponse` |  |
 | vinted | `vinted.catalog` | `vinted-catalog` | `GET /vinted/catalog` | `search_text` (query String required)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`order` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VintedCatalogResponse` |  |
@@ -1762,10 +2938,25 @@ Total operations: `1939`
 | vinted | `vinted.category` | `vinted-category` | `GET /vinted/category` | `id` (query String required)<br>`price_from` (query Double)<br>`price_to` (query Double)<br>`order` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `VintedCategoryResponse` |  |
 | vinted | `vinted.item` | `vinted-item` | `GET /vinted/item` | `id` (query String required) | `ApiKeyAuth` | `VintedItemResponse` |  |
 | vinted | `vinted.member` | `vinted-member` | `GET /vinted/member` | `id` (query String required) | `ApiKeyAuth` | `VintedMemberResponse` |  |
+| vox | `vox.article` | `vox-article` | `GET /vox/article` | `url` (query String required) | `ApiKeyAuth` | `VoxArticleResponse` |  |
+| vox | `vox.author` | `vox-author` | `GET /vox/author` | `url` (query String required) | `ApiKeyAuth` | `VoxAuthorResponse` |  |
+| vox | `vox.headlines` | `vox-headlines` | `GET /vox/headlines` | `section` (query String required) | `ApiKeyAuth` | `VoxHeadlinesResponse` |  |
+| vox | `vox.news` | `vox-news` | `GET /vox/news` | none | `ApiKeyAuth` | `VoxNewsResponse` |  |
+| vox | `vox.sections` | `vox-sections` | `GET /vox/sections` | none | `ApiKeyAuth` | `VoxSectionsResponse` |  |
+| walesOnline | `walesOnline.walesonlineArticle` | `walesonline-article` | `GET /walesonline/article` | `url` (query String required) | `ApiKeyAuth` | `WalesOnlineWalesonlineArticleResponse` |  |
+| walesOnline | `walesOnline.walesonlineAuthor` | `walesonline-author` | `GET /walesonline/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `WalesOnlineWalesonlineAuthorResponse` |  |
+| walesOnline | `walesOnline.walesonlineHeadlines` | `walesonline-headlines` | `GET /walesonline/headlines` | `section` (query String required) | `ApiKeyAuth` | `WalesOnlineWalesonlineHeadlinesResponse` |  |
+| walesOnline | `walesOnline.walesonlineNews` | `walesonline-news` | `GET /walesonline/news` | none | `ApiKeyAuth` | `WalesOnlineWalesonlineNewsResponse` |  |
+| walesOnline | `walesOnline.walesonlineSections` | `walesonline-sections` | `GET /walesonline/sections` | none | `ApiKeyAuth` | `WalesOnlineWalesonlineSectionsResponse` |  |
 | walgreens | `walgreens.stores` | `walgreens-stores` | `GET /walgreens/stores` | `latitude` (query Double)<br>`longitude` (query Double)<br>`zip` (query String) | `ApiKeyAuth` | `WalgreensStoresResponse` |  |
 | walmart | `walmart.product` | `walmart-product` | `GET /walmart/product/{item_id}` | `item_id` (path String required) | `ApiKeyAuth` | `WalmartProductResponse` |  |
 | walmart | `walmart.productReviews` | `walmart-product-reviews` | `GET /walmart/product/{item_id}/reviews` | `item_id` (path String required) | `ApiKeyAuth` | `WalmartProductReviewsResponse` |  |
 | walmart | `walmart.search` | `walmart-search` | `GET /walmart/search` | `q` (query String required)<br>`page` (query Integer)<br>`sort` (query String) | `ApiKeyAuth` | `WalmartSearchResponse` |  |
+| washingtonPost | `washingtonPost.wapoArticle` | `wapo-article` | `GET /wapo/article` | `url` (query String required) | `ApiKeyAuth` | `WashingtonPostWapoArticleResponse` |  |
+| washingtonPost | `washingtonPost.wapoAuthor` | `wapo-author` | `GET /wapo/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `WashingtonPostWapoAuthorResponse` |  |
+| washingtonPost | `washingtonPost.wapoHeadlines` | `wapo-headlines` | `GET /wapo/headlines` | `section` (query String required) | `ApiKeyAuth` | `WashingtonPostWapoHeadlinesResponse` |  |
+| washingtonPost | `washingtonPost.wapoNews` | `wapo-news` | `GET /wapo/news` | none | `ApiKeyAuth` | `WashingtonPostWapoNewsResponse` |  |
+| washingtonPost | `washingtonPost.wapoSections` | `wapo-sections` | `GET /wapo/sections` | none | `ApiKeyAuth` | `WashingtonPostWapoSectionsResponse` |  |
 | wayfair | `wayfair.categories` | `wayfair-categories` | `GET /wayfair/categories` | `q` (query String)<br>`page` (query Integer)<br>`page_size` (query Integer) | `ApiKeyAuth` | `WayfairCategoriesResponse` |  |
 | wayfair | `wayfair.category` | `wayfair-category` | `GET /wayfair/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `WayfairCategoryResponse` |  |
 | wayfair | `wayfair.product` | `wayfair-product` | `GET /wayfair/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `WayfairProductResponse` |  |
@@ -1790,6 +2981,11 @@ Total operations: `1939`
 | wingstop | `wingstop.menu` | `wingstop-menu` | `GET /wingstop/menu` | `path` (query String required)<br>`service_mode` (query String) | `ApiKeyAuth` | `WingstopMenuResponse` |  |
 | wingstop | `wingstop.nearby` | `wingstop-nearby` | `GET /wingstop/nearby` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer) | `ApiKeyAuth` | `WingstopNearbyResponse` |  |
 | wingstop | `wingstop.store` | `wingstop-store` | `GET /wingstop/store` | `path` (query String required) | `ApiKeyAuth` | `WingstopStoreResponse` |  |
+| wired | `wired.article` | `wired-article` | `GET /wired/article` | `url` (query String required) | `ApiKeyAuth` | `WiredArticleResponse` |  |
+| wired | `wired.author` | `wired-author` | `GET /wired/author` | `url` (query String required) | `ApiKeyAuth` | `WiredAuthorResponse` |  |
+| wired | `wired.headlines` | `wired-headlines` | `GET /wired/headlines` | `section` (query String required) | `ApiKeyAuth` | `WiredHeadlinesResponse` |  |
+| wired | `wired.news` | `wired-news` | `GET /wired/news` | none | `ApiKeyAuth` | `WiredNewsResponse` |  |
+| wired | `wired.sections` | `wired-sections` | `GET /wired/sections` | none | `ApiKeyAuth` | `WiredSectionsResponse` |  |
 | wish | `wish.categories` | `wish-categories` | `GET /wish/categories` | none | `ApiKeyAuth` | `WishCategoriesResponse` |  |
 | wish | `wish.product` | `wish-product` | `GET /wish/product/{id}` | `id` (path String required) | `ApiKeyAuth` | `WishProductResponse` |  |
 | wish | `wish.productRelated` | `wish-product-related` | `GET /wish/product/{id}/related` | `id` (path String required)<br>`count` (query Integer) | `ApiKeyAuth` | `WishProductRelatedResponse` |  |
@@ -1804,9 +3000,21 @@ Total operations: `1939`
 | wolt | `wolt.restaurantMenuSearch` | `wolt-restaurant-menu-search` | `GET /wolt/restaurant/menu/search` | `slug` (query String required)<br>`query` (query String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `WoltRestaurantMenuSearchResponse` |  |
 | wolt | `wolt.search` | `wolt-search` | `GET /wolt/search` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`query` (query String)<br>`category` (query String)<br>`limit` (query Integer)<br>`sort` (query String)<br>`product_line` (query String)<br>`open_now` (query Boolean) | `ApiKeyAuth` | `WoltSearchResponse` |  |
 | wolt | `wolt.searchFilters` | `wolt-search-filters` | `GET /wolt/search/filters` | `latitude` (query Double required)<br>`longitude` (query Double required) | `ApiKeyAuth` | `WoltSearchFiltersResponse` |  |
+| wallStreetJournal | `wallStreetJournal.wsjArticle` | `wsj-article` | `GET /wsj/article` | `url` (query String required) | `ApiKeyAuth` | `WallStreetJournalWsjArticleResponse` |  |
+| wallStreetJournal | `wallStreetJournal.wsjAuthor` | `wsj-author` | `GET /wsj/author` | `slug` (query String)<br>`url` (query String) | `ApiKeyAuth` | `WallStreetJournalWsjAuthorResponse` |  |
 | x | `x.post` | `x-post` | `GET /x/post/{id}` | `id` (path String required)<br>`username` (query String) | `ApiKeyAuth` | `XPostResponse` |  |
 | x | `x.profile` | `x-profile` | `GET /x/profile/{username}` | `username` (path String required) | `ApiKeyAuth` | `XProfileResponse` |  |
 | x | `x.profilePosts` | `x-profile-posts` | `GET /x/profile/{username}/posts` | `username` (path String required)<br>`limit` (query Integer) | `ApiKeyAuth` | `XProfilePostsResponse` |  |
+| xbox | `xbox.browse` | `xbox-browse` | `GET /xbox/browse` | `cursor` (query String)<br>`sort` (query String)<br>`genre` (query String)<br>`price` (query String)<br>`platform` (query String)<br>`subscription` (query String)<br>`age_rating` (query String)<br>`multiplayer` (query String)<br>`technical_features` (query String)<br>`handheld_compatibility` (query String)<br>`supported_language` (query String)<br>`accessibility` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `XboxBrowseResponse` |  |
+| xbox | `xbox.collection` | `xbox-collection` | `GET /xbox/collection` | `id` (query String required)<br>`cursor` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `XboxCollectionResponse` |  |
+| xbox | `xbox.game` | `xbox-game` | `GET /xbox/game` | `product_id` (query String required)<br>`locale` (query String) | `ApiKeyAuth` | `XboxGameResponse` |  |
+| xbox | `xbox.reviews` | `xbox-reviews` | `GET /xbox/reviews` | `product_id` (query String required)<br>`item_count` (query Integer)<br>`order_by` (query String)<br>`star_filter` (query Integer)<br>`locale` (query String) | `ApiKeyAuth` | `XboxReviewsResponse` |  |
+| xbox | `xbox.search` | `xbox-search` | `GET /xbox/search` | `query` (query String required)<br>`category` (query String)<br>`cursor` (query String)<br>`sort` (query String)<br>`genre` (query String)<br>`price` (query String)<br>`platform` (query String)<br>`subscription` (query String)<br>`age_rating` (query String)<br>`multiplayer` (query String)<br>`technical_features` (query String)<br>`handheld_compatibility` (query String)<br>`supported_language` (query String)<br>`accessibility` (query String)<br>`locale` (query String) | `ApiKeyAuth` | `XboxSearchResponse` |  |
+| xda | `xda.article` | `xda-article` | `GET /xda/article` | `url` (query String required) | `ApiKeyAuth` | `XdaArticleResponse` |  |
+| xda | `xda.author` | `xda-author` | `GET /xda/author` | `url` (query String required) | `ApiKeyAuth` | `XdaAuthorResponse` |  |
+| xda | `xda.headlines` | `xda-headlines` | `GET /xda/headlines` | `section` (query String required) | `ApiKeyAuth` | `XdaHeadlinesResponse` |  |
+| xda | `xda.news` | `xda-news` | `GET /xda/news` | none | `ApiKeyAuth` | `XdaNewsResponse` |  |
+| xda | `xda.sections` | `xda-sections` | `GET /xda/sections` | none | `ApiKeyAuth` | `XdaSectionsResponse` |  |
 | yahooAutos | `yahooAutos.article` | `yahoo-autos-article` | `GET /yahoo-autos/article` | `url` (query String required) | `ApiKeyAuth` | `YahooAutosArticleResponse` |  |
 | yahooAutos | `yahooAutos.category` | `yahoo-autos-category` | `GET /yahoo-autos/category` | `category` (query String required)<br>`page` (query Integer) | `ApiKeyAuth` | `YahooAutosCategoryResponse` |  |
 | yahooAutos | `yahooAutos.home` | `yahoo-autos-home` | `GET /yahoo-autos/home` | none | `ApiKeyAuth` | `YahooAutosHomeResponse` |  |
@@ -1862,6 +3070,7 @@ Total operations: `1939`
 | yahooNews | `yahooNews.comments` | `yahoo-news-comments` | `GET /yahoo-news/comments` | `content_id` (query String required)<br>`sort` (query String)<br>`cursor` (query String)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsCommentsResponse` |  |
 | yahooNews | `yahooNews.commentReplies` | `yahoo-news-comment-replies` | `GET /yahoo-news/comments/replies` | `content_id` (query String required)<br>`comment_id` (query String required)<br>`sort` (query String)<br>`cursor` (query String)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsCommentRepliesResponse` |  |
 | yahooNews | `yahooNews.home` | `yahoo-news-home` | `GET /yahoo-news/home` | none | `ApiKeyAuth` | `YahooNewsHomeResponse` |  |
+| yahooNews | `yahooNews.related` | `yahoo-news-related` | `GET /yahoo-news/related` | `content_id` (query String required)<br>`cursor` (query String)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsRelatedResponse` |  |
 | yahooNews | `yahooNews.suggest` | `yahoo-news-suggest` | `GET /yahoo-news/suggest` | `q` (query String required)<br>`count` (query Integer) | `ApiKeyAuth` | `YahooNewsSuggestResponse` |  |
 | yahooSearch | `yahooSearch.images` | `yahoo-search-images` | `GET /yahoo-search/images` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchImagesResponse` |  |
 | yahooSearch | `yahooSearch.local` | `yahoo-search-local` | `GET /yahoo-search/local` | `q` (query String required) | `ApiKeyAuth` | `YahooSearchLocalResponse` |  |
@@ -1905,6 +3114,10 @@ Total operations: `1939`
 | yelp | `yelp.businessReviewsSearch` | `yelp-business-reviews-search` | `GET /yelp/business/{id}/reviews/search` | `id` (path String required)<br>`term` (query String required) | `ApiKeyAuth` | `YelpBusinessReviewsSearchResponse` |  |
 | yelp | `yelp.geocode` | `yelp-geocode` | `GET /yelp/geocode` | `address` (query String required) | `ApiKeyAuth` | `YelpGeocodeResponse` |  |
 | yelp | `yelp.search` | `yelp-search` | `GET /yelp/search` | `term` (query String required)<br>`location` (query String required)<br>`limit` (query Integer)<br>`offset` (query Integer) | `ApiKeyAuth` | `YelpSearchResponse` |  |
+| yoox | `yoox.categories` | `yoox-categories` | `GET /yoox/categories` | none | `ApiKeyAuth` | `YooxCategoriesResponse` |  |
+| yoox | `yoox.designers` | `yoox-designers` | `GET /yoox/designers` | `department` (query String required) | `ApiKeyAuth` | `YooxDesignersResponse` |  |
+| yoox | `yoox.product` | `yoox-product` | `GET /yoox/product` | `id` (query String)<br>`url` (query String) | `ApiKeyAuth` | `YooxProductResponse` |  |
+| yoox | `yoox.search` | `yoox-search` | `GET /yoox/search` | `department` (query String required)<br>`q` (query String)<br>`category` (query String)<br>`designer` (query String)<br>`color` (query String)<br>`size` (query String)<br>`price_min` (query Double)<br>`price_max` (query Double)<br>`on_sale` (query Boolean)<br>`sort` (query String)<br>`page` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `YooxSearchResponse` |  |
 | youtube | `youtube.captions` | `youtube-captions` | `GET /youtube/captions/{id}` | `id` (path String required)<br>`lang` (query String) | `ApiKeyAuth` | `YoutubeCaptionsResponse` |  |
 | youtube | `youtube.channelPlaylists` | `youtube-channel-playlists` | `GET /youtube/channel/{id}/playlists` | `id` (path String required)<br>`continuation_token` (query String) | `ApiKeyAuth` | `YoutubeChannelPlaylistsResponse` |  |
 | youtube | `youtube.channelSearch` | `youtube-channel-search` | `GET /youtube/channel/{id}/search` | `id` (path String required)<br>`q` (query String required)<br>`continuation_token` (query String) | `ApiKeyAuth` | `YoutubeChannelSearchResponse` |  |
@@ -1913,11 +3126,12 @@ Total operations: `1939`
 | youtube | `youtube.comments` | `youtube-comments` | `GET /youtube/comments/{id}` | `id` (path String required)<br>`continuation_token` (query String) | `ApiKeyAuth` | `YoutubeCommentsResponse` |  |
 | youtube | `youtube.playlist` | `youtube-playlist` | `GET /youtube/playlist/{id}` | `id` (path String required)<br>`continuation_token` (query String) | `ApiKeyAuth` | `YoutubePlaylistResponse` |  |
 | youtube | `youtube.profile` | `youtube-profile` | `GET /youtube/profile/{id}` | `id` (path String required) | `ApiKeyAuth` | `YoutubeProfileResponse` |  |
-| youtube | `youtube.search` | `youtube-search` | `GET /youtube/search` | `q` (query String)<br>`search_query` (query String)<br>`continuation_token` (query String)<br>`type` (query String)<br>`sort_by` (query String)<br>`upload_date` (query String)<br>`duration` (query String)<br>`features` (query String)<br>`params` (query String) | `ApiKeyAuth` | `YoutubeSearchResponse` |  |
+| youtube | `youtube.search` | `youtube-search` | `GET /youtube/search` | `q` (query String)<br>`search_query` (query String)<br>`continuation_token` (query String)<br>`type` (query String)<br>`sort_by` (query String)<br>`upload_date` (query String)<br>`duration` (query String)<br>`features` (query String)<br>`hl` (query String)<br>`gl` (query String)<br>`params` (query String) | `ApiKeyAuth` | `YoutubeSearchResponse` |  |
 | youtube | `youtube.tag` | `youtube-tag` | `GET /youtube/tag/{tag}` | `tag` (path String required)<br>`type` (query String)<br>`continuation_token` (query String) | `ApiKeyAuth` | `YoutubeTagResponse` |  |
 | youtube | `youtube.transcript` | `youtube-transcript` | `GET /youtube/transcript/{id}` | `id` (path String required)<br>`lang` (query String)<br>`translate_to` (query String)<br>`format` (query String)<br>`timestamps` (query Boolean) | `ApiKeyAuth` | `YoutubeTranscriptResponse` | Supports text response mode. |
 | youtube | `youtube.transcriptLanguages` | `youtube-transcript-languages` | `GET /youtube/transcript/{id}/languages` | `id` (path String required) | `ApiKeyAuth` | `YoutubeTranscriptLanguagesResponse` |  |
 | youtube | `youtube.video` | `youtube-video` | `GET /youtube/video/{id}` | `id` (path String required) | `ApiKeyAuth` | `YoutubeVideoResponse` |  |
+| zalando | `zalando.categories` | `zalando-categories` | `GET /zalando/categories` | `market` (query String required)<br>`department` (query String) | `ApiKeyAuth` | `ZalandoCategoriesResponse` |  |
 | zalando | `zalando.category` | `zalando-category` | `GET /zalando/category` | `category` (query String required)<br>`market` (query String required) | `ApiKeyAuth` | `ZalandoCategoryResponse` |  |
 | zalando | `zalando.markets` | `zalando-markets` | `GET /zalando/markets` | none | `ApiKeyAuth` | `ZalandoMarketsResponse` |  |
 | zalando | `zalando.product` | `zalando-product` | `GET /zalando/product` | `sku` (query String required)<br>`market` (query String required) | `ApiKeyAuth` | `ZalandoProductResponse` |  |
@@ -1937,9 +3151,15 @@ Total operations: `1939`
 | zaxbys | `zaxbys.menu` | `zaxbys-menu` | `GET /zaxbys/menu` | none | `ApiKeyAuth` | `ZaxbysMenuResponse` |  |
 | zaxbys | `zaxbys.nearby` | `zaxbys-nearby` | `GET /zaxbys/nearby` | `latitude` (query Double required)<br>`longitude` (query Double required)<br>`radius` (query Integer)<br>`limit` (query Integer) | `ApiKeyAuth` | `ZaxbysNearbyResponse` |  |
 | zaxbys | `zaxbys.store` | `zaxbys-store` | `GET /zaxbys/store` | `store_id` (query Integer required) | `ApiKeyAuth` | `ZaxbysStoreResponse` |  |
+| zdnet | `zdnet.article` | `zdnet-article` | `GET /zdnet/article` | `url` (query String required) | `ApiKeyAuth` | `ZdnetArticleResponse` |  |
+| zdnet | `zdnet.author` | `zdnet-author` | `GET /zdnet/author` | `slug` (query String)<br>`url` (query String)<br>`page` (query Integer) | `ApiKeyAuth` | `ZdnetAuthorResponse` |  |
+| zdnet | `zdnet.headlines` | `zdnet-headlines` | `GET /zdnet/headlines` | `section` (query String required) | `ApiKeyAuth` | `ZdnetHeadlinesResponse` |  |
+| zdnet | `zdnet.news` | `zdnet-news` | `GET /zdnet/news` | none | `ApiKeyAuth` | `ZdnetNewsResponse` |  |
+| zdnet | `zdnet.sections` | `zdnet-sections` | `GET /zdnet/sections` | none | `ApiKeyAuth` | `ZdnetSectionsResponse` |  |
 | zillow | `zillow.autocomplete` | `zillow-autocomplete` | `GET /zillow/autocomplete` | `query` (query String required)<br>`limit` (query Integer)<br>`status` (query String) | `ApiKeyAuth` | `ZillowAutocompleteResponse` |  |
 | zillow | `zillow.property` | `zillow-property` | `GET /zillow/property/{zpid}` | `zpid` (path String required) | `ApiKeyAuth` | `ZillowPropertyResponse` |  |
 | zillow | `zillow.search` | `zillow-search` | `GET /zillow/search` | `location` (query String required)<br>`page` (query Integer)<br>`status` (query String)<br>`region_id` (query Integer)<br>`region_type` (query Integer)<br>`west` (query Double)<br>`east` (query Double)<br>`south` (query Double)<br>`north` (query Double) | `ApiKeyAuth` | `ZillowSearchResponse` |  |
+| zomato | `zomato.cities` | `zomato-cities` | `GET /zomato/cities` | `q` (query String) | `ApiKeyAuth` | `ZomatoCitiesResponse` |  |
 | zomato | `zomato.collection` | `zomato-collection` | `GET /zomato/collection` | `url` (query String required) | `ApiKeyAuth` | `ZomatoCollectionResponse` |  |
 | zomato | `zomato.collections` | `zomato-collections` | `GET /zomato/collections` | `city` (query String required) | `ApiKeyAuth` | `ZomatoCollectionsResponse` |  |
 | zomato | `zomato.restaurant` | `zomato-restaurant` | `GET /zomato/restaurant` | `url` (query String required) | `ApiKeyAuth` | `ZomatoRestaurantResponse` |  |

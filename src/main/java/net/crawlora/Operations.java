@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 1939;
+    public static final int OPERATION_COUNT = 3159;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -58,10 +58,100 @@ public final class Operations {
         putOperations30(m);
         putOperations31(m);
         putOperations32(m);
+        putOperations33(m);
+        putOperations34(m);
+        putOperations35(m);
+        putOperations36(m);
+        putOperations37(m);
+        putOperations38(m);
+        putOperations39(m);
+        putOperations40(m);
+        putOperations41(m);
+        putOperations42(m);
+        putOperations43(m);
+        putOperations44(m);
+        putOperations45(m);
+        putOperations46(m);
+        putOperations47(m);
+        putOperations48(m);
+        putOperations49(m);
+        putOperations50(m);
+        putOperations51(m);
+        putOperations52(m);
         return Map.copyOf(m);
     }
 
     private static void putOperations0(Map<String, Operation> m) {
+        m.put("firstdibs-categories", new Operation(
+            "firstdibs-categories",
+            "GET",
+            "/1stdibs/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("firstdibs-designers", new Operation(
+            "firstdibs-designers",
+            "GET",
+            "/1stdibs/designers",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("firstdibs-product", new Operation(
+            "firstdibs-product",
+            "GET",
+            "/1stdibs/product",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("firstdibs-search", new Operation(
+            "firstdibs-search",
+            "GET",
+            "/1stdibs/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("period", false, "string", List.of()),
+            new QueryParam("location", false, "string", List.of()),
+            new QueryParam("gender", false, "string", List.of()),
+            new QueryParam("origin", false, "string", List.of()),
+            new QueryParam("price", false, "string", List.of("all price", "[* TO 999]", "[* TO 1999]", "[* TO 4999]", "[5000 TO *]")),
+            new QueryParam("price_min", false, "number", List.of()),
+            new QueryParam("price_max", false, "number", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("measurements", false, "boolean", List.of()),
+            new QueryParam("this_week", false, "boolean", List.of()),
+            new QueryParam("returnable", false, "boolean", List.of()),
+            new QueryParam("recognized_seller", false, "boolean", List.of()),
+            new QueryParam("top_seller", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of("recommended", "newest", "price-high", "price-low", "popular")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("60", "120"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("7now-catalog", new Operation(
             "7now-catalog",
             "GET",
@@ -252,6 +342,132 @@ public final class Operations {
             List.of(
             new QueryParam("q", true, "string", List.of()),
             new QueryParam("vertical", false, "string", List.of("convenience", "restaurant", "global"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcau-article", new Operation(
+            "abcau-article",
+            "GET",
+            "/abcau/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcau-author", new Operation(
+            "abcau-author",
+            "GET",
+            "/abcau/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcau-headlines", new Operation(
+            "abcau-headlines",
+            "GET",
+            "/abcau/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("justin", "world", "politics", "business", "sport", "health", "entertainment", "science", "rural", "analysis-and-opinion", "indigenous", "environment", "backstory", "lifestyle", "australia"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcau-news", new Operation(
+            "abcau-news",
+            "GET",
+            "/abcau/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcau-sections", new Operation(
+            "abcau-sections",
+            "GET",
+            "/abcau/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcnews-article", new Operation(
+            "abcnews-article",
+            "GET",
+            "/abcnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcnews-author", new Operation(
+            "abcnews-author",
+            "GET",
+            "/abcnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcnews-headlines", new Operation(
+            "abcnews-headlines",
+            "GET",
+            "/abcnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("us", "world", "politics", "business", "technology", "entertainment", "health", "sports"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcnews-news", new Operation(
+            "abcnews-news",
+            "GET",
+            "/abcnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("abcnews-sections", new Operation(
+            "abcnews-sections",
+            "GET",
+            "/abcnews/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -693,6 +909,74 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("aljazeera-article", new Operation(
+            "aljazeera-article",
+            "GET",
+            "/aljazeera/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("aljazeera-author", new Operation(
+            "aljazeera-author",
+            "GET",
+            "/aljazeera/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aljazeera-categories", new Operation(
+            "aljazeera-categories",
+            "GET",
+            "/aljazeera/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations1(Map<String, Operation> m) {
+        m.put("aljazeera-headlines", new Operation(
+            "aljazeera-headlines",
+            "GET",
+            "/aljazeera/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("aljazeera-topic", new Operation(
+            "aljazeera-topic",
+            "GET",
+            "/aljazeera/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("allbirds-collections", new Operation(
             "allbirds-collections",
             "GET",
@@ -840,6 +1124,156 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("alt-asset", new Operation(
+            "alt-asset",
+            "GET",
+            "/alt/asset",
+            List.of(),
+            List.of(
+            new QueryParam("asset_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("alt-auctions", new Operation(
+            "alt-auctions",
+            "GET",
+            "/alt/auctions",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("BASEBALL_CARDS", "POKEMON_CARDS", "FOOTBALL_CARDS", "BASKETBALL_CARDS", "POP-CULTURE_CARDS", "HOCKEY_CARDS", "SOCCER_CARDS", "ONE_PIECE_CARDS", "OTHER_CARDS", "TCG_CARDS", "COMBAT_SPORTS_CARDS", "RACING_CARDS", "MAGIC_CARDS", "YUGIOH_CARDS", "GOLF_CARDS", "TENNIS_CARDS")),
+            new QueryParam("grading_company", false, "string", List.of("PSA", "CGC", "BGS", "CSG", "SGC", "PSA/DNA", "BVG", "BCCG", "Factory Sealed", "BAS", "AUTHENTIC", "TAG", "RELABEL", "RECASE", "JSA/BVG", "REVIEW", "INTERNAL", "NEW/", "BULK", "OTHERS", "UNGRADED")),
+            new QueryParam("sort", false, "string", List.of("recommended", "alt_value_desc", "alt_value_asc", "price_desc", "price_asc", "watched_desc", "ending_soonest_asc", "timestamp_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("alt-card-search", new Operation(
+            "alt-card-search",
+            "GET",
+            "/alt/card-search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("alt-categories", new Operation(
+            "alt-categories",
+            "GET",
+            "/alt/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("alt-listing", new Operation(
+            "alt-listing",
+            "GET",
+            "/alt/listing",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("listing_type", true, "string", List.of("AUCTION", "FIXED_PRICE", "EXTERNAL_AUCTION", "EXTERNAL_FIXED_PRICE"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("alt-market-trends", new Operation(
+            "alt-market-trends",
+            "GET",
+            "/alt/market-trends",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("alt-search", new Operation(
+            "alt-search",
+            "GET",
+            "/alt/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("BASEBALL_CARDS", "POKEMON_CARDS", "FOOTBALL_CARDS", "BASKETBALL_CARDS", "POP-CULTURE_CARDS", "HOCKEY_CARDS", "SOCCER_CARDS", "ONE_PIECE_CARDS", "OTHER_CARDS", "TCG_CARDS", "COMBAT_SPORTS_CARDS", "RACING_CARDS", "MAGIC_CARDS", "YUGIOH_CARDS", "GOLF_CARDS", "TENNIS_CARDS")),
+            new QueryParam("auction_house", false, "string", List.of("eBay", "Fanatics Collect", "Alt", "Pristine Auction", "Goldin", "CardHobby", "Memory Lane")),
+            new QueryParam("grading_company", false, "string", List.of("PSA", "CGC", "BGS", "CSG", "SGC", "PSA/DNA", "BVG", "BCCG", "Factory Sealed", "BAS", "AUTHENTIC", "TAG", "RELABEL", "RECASE", "JSA/BVG", "REVIEW", "INTERNAL", "NEW/", "BULK", "OTHERS", "UNGRADED")),
+            new QueryParam("listing_type", false, "string", List.of("AUCTION", "FIXED_PRICE", "EXTERNAL_AUCTION", "EXTERNAL_FIXED_PRICE")),
+            new QueryParam("sort", false, "string", List.of("recommended", "alt_value_desc", "alt_value_asc", "price_desc", "price_asc", "watched_desc", "ending_soonest_asc", "timestamp_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("alt-sold-listings", new Operation(
+            "alt-sold-listings",
+            "GET",
+            "/alt/sold-listings",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("BASEBALL_CARDS", "POKEMON_CARDS", "FOOTBALL_CARDS", "BASKETBALL_CARDS", "POP-CULTURE_CARDS", "HOCKEY_CARDS", "SOCCER_CARDS", "ONE_PIECE_CARDS", "OTHER_CARDS", "TCG_CARDS", "COMBAT_SPORTS_CARDS", "RACING_CARDS", "MAGIC_CARDS", "YUGIOH_CARDS", "GOLF_CARDS", "TENNIS_CARDS")),
+            new QueryParam("auction_house", false, "string", List.of("eBay", "Fanatics Collect", "Alt", "Pristine Auction", "Goldin", "CardHobby", "Memory Lane")),
+            new QueryParam("grading_company", false, "string", List.of("PSA", "CGC", "BGS", "CSG", "SGC", "PSA/DNA", "BVG", "BCCG", "Factory Sealed", "BAS", "AUTHENTIC", "TAG", "RELABEL", "RECASE", "JSA/BVG", "REVIEW", "INTERNAL", "NEW/", "BULK", "OTHERS", "UNGRADED")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("alt-top-movers", new Operation(
+            "alt-top-movers",
+            "GET",
+            "/alt/top-movers",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("subject", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("amazon-jobs-categories", new Operation(
+            "amazon-jobs-categories",
+            "GET",
+            "/amazon-jobs/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("amazon-jobs-job", new Operation(
             "amazon-jobs-job",
             "GET",
@@ -860,7 +1294,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("category", false, "string", List.of("administrative-support", "applied-science", "audio-video-photography-production", "business-intelligence-data-engineering", "business-merchant-development", "buying-planning-instock-management", "customer-service", "data-science", "database-administration", "design", "economics", "editorial-writing-content-management", "facilities-maintenance-real-estate", "fgbs", "fulfillment-center-warehouse-associate", "fulfillment-operations-management", "hardware-development", "human-resources", "investigation-loss-prevention", "leadership-development-training", "legal", "marketing", "medical-health-safety", "operations-it-support-engineering", "project-program-product-management-non-tech", "project-program-product-management-technical", "public-policy", "public-relations-communications", "research-science", "sales-advertising-account-management", "software-development", "solutions-architecture", "supply-chain-transportation-management", "systems-quality-security-engineering")),
+            new QueryParam("category", false, "string", List.of("administrative-support", "applied-science", "audio-video-photography-production", "business-intelligence", "business-merchant-development", "buying-planning-instock-management", "corporate-operations", "customer-service", "data-science", "database-administration", "design", "economics", "editorial-writing-content-management", "facilities-maintenance-real-estate", "finance-accounting", "fulfillment-associate", "fulfillment-operations-management", "fulfillment-warehouse-associate", "hardware-development", "human-resources", "investigation-loss-prevention", "leadership-development-training", "legal", "machine-learning-science", "marketing-pr", "medical-health-safety", "operations-it-support-engineering", "procurement", "project-program-product-management-non-tech", "project-program-product-management-technical", "public-policy", "public-relations", "research-science", "sales-advertising-account-management", "software-development", "solutions-architect", "supply-chain-transportation-management", "systems-quality-security-engineering")),
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of()),
@@ -870,6 +1304,37 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("amazon-charts", new Operation(
+            "amazon-charts",
+            "GET",
+            "/amazon/charts",
+            List.of(),
+            List.of(
+            new QueryParam("chart", true, "string", List.of("best_sellers", "new_releases", "most_wished_for")),
+            new QueryParam("department", true, "string", List.of()),
+            new QueryParam("node", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("amazon-charts-categories", new Operation(
+            "amazon-charts-categories",
+            "GET",
+            "/amazon/charts/categories",
+            List.of(),
+            List.of(
+            new QueryParam("chart", true, "string", List.of("best_sellers", "new_releases", "most_wished_for")),
+            new QueryParam("department", false, "string", List.of()),
+            new QueryParam("node", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("amazon-product", new Operation(
             "amazon-product",
@@ -912,6 +1377,56 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("androidauthority-article", new Operation(
+            "androidauthority-article",
+            "GET",
+            "/androidauthority/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("androidauthority-headlines", new Operation(
+            "androidauthority-headlines",
+            "GET",
+            "/androidauthority/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "reviews", "best", "how-to", "features", "deals", "authority-insights", "audio", "computers-pc", "gaming", "technology", "mobile", "smart-home", "streaming-entertainment", "wearables", "earbuds-headphones", "chromebook", "mac", "pc-windows", "emulation", "handhelds", "mobile-games", "nintendo", "playstation", "xbox", "smart-devices", "smart-speakers", "virtual-assistants", "streaming-hardware", "ai", "mobility", "privacy-security", "vr-ar", "fitness-trackers", "smartwatches", "android-apps", "android-os", "android-phones", "android-tablets", "carriers-plans", "ios-apps", "iphone-ipad", "accessories", "mobile-technology"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("androidauthority-news", new Operation(
+            "androidauthority-news",
+            "GET",
+            "/androidauthority/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("androidauthority-sections", new Operation(
+            "androidauthority-sections",
+            "GET",
+            "/androidauthority/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("anime-airing-schedule", new Operation(
             "anime-airing-schedule",
             "GET",
@@ -926,9 +1441,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations1(Map<String, Operation> m) {
         m.put("anime-character-search", new Operation(
             "anime-character-search",
             "GET",
@@ -1124,6 +1636,81 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("apnews-article", new Operation(
+            "apnews-article",
+            "GET",
+            "/apnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apnews-author", new Operation(
+            "apnews-author",
+            "GET",
+            "/apnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apnews-fact-check", new Operation(
+            "apnews-fact-check",
+            "GET",
+            "/apnews/fact-check",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apnews-headlines", new Operation(
+            "apnews-headlines",
+            "GET",
+            "/apnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ap-top-news", "us-news", "world-news", "politics", "business", "technology", "science", "health", "sports", "entertainment", "lifestyle"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apnews-news", new Operation(
+            "apnews-news",
+            "GET",
+            "/apnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apnews-sections", new Operation(
+            "apnews-sections",
+            "GET",
+            "/apnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("apple-books-audiobook-series", new Operation(
             "apple-books-audiobook-series",
             "GET",
@@ -1199,6 +1786,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("apple-books-author", new Operation(
             "apple-books-author",
             "GET",
@@ -1311,6 +1901,19 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("apple-jobs-locations", new Operation(
+            "apple-jobs-locations",
+            "GET",
+            "/apple-jobs/locations",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -1793,6 +2396,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("appstore-categories", new Operation(
+            "appstore-categories",
+            "GET",
+            "/appstore/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("appstore-developer", new Operation(
             "appstore-developer",
             "GET",
@@ -1857,9 +2472,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("appstore-privacy", new Operation(
             "appstore-privacy",
             "GET",
@@ -2041,6 +2653,72 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("arstechnica-article", new Operation(
+            "arstechnica-article",
+            "GET",
+            "/arstechnica/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("arstechnica-author", new Operation(
+            "arstechnica-author",
+            "GET",
+            "/arstechnica/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("arstechnica-headlines", new Operation(
+            "arstechnica-headlines",
+            "GET",
+            "/arstechnica/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ai", "apple", "cars", "culture", "features", "gadgets", "gaming", "health", "information-technology", "reviews", "science", "security", "space", "staff", "tech-policy"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("arstechnica-news", new Operation(
+            "arstechnica-news",
+            "GET",
+            "/arstechnica/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("arstechnica-sections", new Operation(
+            "arstechnica-sections",
+            "GET",
+            "/arstechnica/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("audible-categories", new Operation(
             "audible-categories",
             "GET",
@@ -2078,6 +2756,19 @@ public final class Operations {
             new QueryParam("language", false, "string", List.of("all", "danish", "english", "french", "german", "italian", "japanese", "polish", "portuguese", "russian", "spanish", "swedish")),
             new QueryParam("duration", false, "string", List.of("all", "oneHourLess", "oneToThreeHour", "threeToSixHour", "sixToTenHour", "tenToTwentyHour", "twentyHourMore")),
             new QueryParam("originals_only", false, "boolean", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("audible-author-charts", new Operation(
+            "audible-author-charts",
+            "GET",
+            "/audible/charts/authors",
+            List.of(),
+            List.of(
             new QueryParam("page", false, "integer", List.of())),
             List.of(),
             null,
@@ -2232,6 +2923,191 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("axios-article", new Operation(
+            "axios-article",
+            "GET",
+            "/axios/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("axios-categories", new Operation(
+            "axios-categories",
+            "GET",
+            "/axios/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("axios-headlines", new Operation(
+            "axios-headlines",
+            "GET",
+            "/axios/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("balenciaga-categories", new Operation(
+            "balenciaga-categories",
+            "GET",
+            "/balenciaga/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("balenciaga-category", new Operation(
+            "balenciaga-category",
+            "GET",
+            "/balenciaga/category",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "price_ascending", "price_descending")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("filters", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("balenciaga-product", new Operation(
+            "balenciaga-product",
+            "GET",
+            "/balenciaga/product",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("balenciaga-product-variants", new Operation(
+            "balenciaga-product-variants",
+            "GET",
+            "/balenciaga/product/variants",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("balenciaga-search", new Operation(
+            "balenciaga-search",
+            "GET",
+            "/balenciaga/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "price_ascending", "price_descending")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("filters", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("balenciaga-store-countries", new Operation(
+            "balenciaga-store-countries",
+            "GET",
+            "/balenciaga/store-countries",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("balenciaga-stores", new Operation(
+            "balenciaga-stores",
+            "GET",
+            "/balenciaga/stores",
+            List.of(),
+            List.of(
+            new QueryParam("country", true, "string", List.of("AE", "AT", "AU", "BE", "BR", "CA", "CN", "CZ", "DE", "DK", "ES", "FR", "GB", "HK", "IE", "IT", "JP", "KR", "KW", "MC", "MO", "MX", "MY", "NL", "NZ", "QA", "SA", "SG", "CH", "TH", "TW", "US"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("barrons-article", new Operation(
+            "barrons-article",
+            "GET",
+            "/barrons/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("barrons-headlines", new Operation(
+            "barrons-headlines",
+            "GET",
+            "/barrons/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("barrons-news", new Operation(
+            "barrons-news",
+            "GET",
+            "/barrons/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("barrons-topics", new Operation(
+            "barrons-topics",
+            "GET",
+            "/barrons/topics",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("bbb-business", new Operation(
             "bbb-business",
             "GET",
@@ -2364,6 +3240,19 @@ public final class Operations {
             "bbc-article",
             "GET",
             "/bbc/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bbc-author", new Operation(
+            "bbc-author",
+            "GET",
+            "/bbc/author",
             List.of(),
             List.of(
             new QueryParam("url", true, "string", List.of())),
@@ -2647,6 +3536,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("bilibili-popular", new Operation(
             "bilibili-popular",
             "GET",
@@ -2698,9 +3590,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
+        m.put("billboard-article", new Operation(
+            "billboard-article",
+            "GET",
+            "/billboard/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("billboard-author", new Operation(
+            "billboard-author",
+            "GET",
+            "/billboard/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("billboard-headlines", new Operation(
+            "billboard-headlines",
+            "GET",
+            "/billboard/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("music", "music-news", "chart-beat", "awards", "concerts", "country", "features", "latin", "lyrics", "pop", "rb-hip-hop", "reviews", "rock", "business", "business-news", "legal", "management", "publishing", "radio", "record-labels", "streaming", "tech", "touring", "culture", "events", "lifestyle", "politics", "pride", "product-recommendations", "tv-film", "media", "lists", "photos-media", "podcasts", "videos", "espanol", "cultura-entretenimiento", "musica", "negocios", "noticias", "pro"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("billboard-news", new Operation(
+            "billboard-news",
+            "GET",
+            "/billboard/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("billboard-sections", new Operation(
+            "billboard-sections",
+            "GET",
+            "/billboard/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("billing-me", new Operation(
             "billing-me",
             "GET",
@@ -2939,6 +3891,210 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("birminghammail-article", new Operation(
+            "birminghammail-article",
+            "GET",
+            "/birminghammail/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("birminghammail-author", new Operation(
+            "birminghammail-author",
+            "GET",
+            "/birminghammail/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("birminghammail-headlines", new Operation(
+            "birminghammail-headlines",
+            "GET",
+            "/birminghammail/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/midlands-news", "news/uk-news", "news/world-news", "news/showbiz-tv", "news/cost-of-living", "news/money", "news/health", "black-country", "motoring", "motoring/motoring-news", "sport", "sport/football", "sport/football/football-news", "sport/football/transfer-news", "whats-on", "whats-on/whats-on-news", "whats-on/family-kids-news", "whats-on/food-drink-news", "whats-on/music-nightlife-news", "whats-on/shopping", "travel", "special-features"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("birminghammail-news", new Operation(
+            "birminghammail-news",
+            "GET",
+            "/birminghammail/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("birminghammail-sections", new Operation(
+            "birminghammail-sections",
+            "GET",
+            "/birminghammail/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bleacherreport-article", new Operation(
+            "bleacherreport-article",
+            "GET",
+            "/bleacherreport/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bleacherreport-author", new Operation(
+            "bleacherreport-author",
+            "GET",
+            "/bleacherreport/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bleacherreport-headlines", new Operation(
+            "bleacherreport-headlines",
+            "GET",
+            "/bleacherreport/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("nba", "nfl", "mlb", "nhl", "wnba", "college-football", "college-basketball", "womens-college-basketball", "world-football", "tennis", "golf", "nascar", "formula-1", "mma", "boxing", "wwe", "all-elite-wrestling", "olympics", "nba-rumors", "nba-draft", "nfl-rumors", "nfl-draft", "fantasy-football", "mlb-rumors", "mlb-prospects", "nhl-rumors", "nhl-draft", "recruiting", "college-basketball-recruiting", "bracketology"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bleacherreport-news", new Operation(
+            "bleacherreport-news",
+            "GET",
+            "/bleacherreport/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bleacherreport-sections", new Operation(
+            "bleacherreport-sections",
+            "GET",
+            "/bleacherreport/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-article", new Operation(
+            "bloomberg-article",
+            "GET",
+            "/bloomberg/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-author", new Operation(
+            "bloomberg-author",
+            "GET",
+            "/bloomberg/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-categories", new Operation(
+            "bloomberg-categories",
+            "GET",
+            "/bloomberg/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-headlines", new Operation(
+            "bloomberg-headlines",
+            "GET",
+            "/bloomberg/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-news", new Operation(
+            "bloomberg-news",
+            "GET",
+            "/bloomberg/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bloomberg-news-sitemaps", new Operation(
+            "bloomberg-news-sitemaps",
+            "GET",
+            "/bloomberg/news-sitemaps",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("bluesky-author-feed", new Operation(
             "bluesky-author-feed",
             "GET",
@@ -2984,6 +4140,51 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+        m.put("bluesky-post-likes", new Operation(
+            "bluesky-post-likes",
+            "GET",
+            "/bluesky/post-likes",
+            List.of(),
+            List.of(
+            new QueryParam("uri", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("bluesky-post-quotes", new Operation(
+            "bluesky-post-quotes",
+            "GET",
+            "/bluesky/post-quotes",
+            List.of(),
+            List.of(
+            new QueryParam("uri", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("bluesky-post-reposted-by", new Operation(
+            "bluesky-post-reposted-by",
+            "GET",
+            "/bluesky/post-reposted-by",
+            List.of(),
+            List.of(
+            new QueryParam("uri", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
         m.put("bluesky-post-thread", new Operation(
             "bluesky-post-thread",
             "GET",
@@ -2992,6 +4193,19 @@ public final class Operations {
             List.of(
             new QueryParam("uri", true, "string", List.of()),
             new QueryParam("depth", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("bluesky-posts", new Operation(
+            "bluesky-posts",
+            "GET",
+            "/bluesky/posts",
+            List.of(),
+            List.of(
+            new QueryParam("uris", true, "array", List.of())),
             List.of(),
             null,
             false,
@@ -3146,6 +4360,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("booking-attractions-search", new Operation(
             "booking-attractions-search",
             "GET",
@@ -3592,9 +4809,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("brand-retrieve", new Operation(
             "brand-retrieve",
             "GET",
@@ -3703,6 +4917,71 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("breitbart-article", new Operation(
+            "breitbart-article",
+            "GET",
+            "/breitbart/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("breitbart-author", new Operation(
+            "breitbart-author",
+            "GET",
+            "/breitbart/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("breitbart-headlines", new Operation(
+            "breitbart-headlines",
+            "GET",
+            "/breitbart/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("politics", "economy", "border", "immigration", "national-security", "entertainment", "sports", "tech", "the-media", "radio", "clips", "faith", "world-news", "europe", "middle-east", "africa", "asia", "latin-america", "america250", "on-the-hill-exclusive-video", "news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("breitbart-news", new Operation(
+            "breitbart-news",
+            "GET",
+            "/breitbart/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("breitbart-sections", new Operation(
+            "breitbart-sections",
+            "GET",
+            "/breitbart/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("brooklinen-collections", new Operation(
             "brooklinen-collections",
@@ -3851,6 +5130,90 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("burberry-categories", new Operation(
+            "burberry-categories",
+            "GET",
+            "/burberry/categories",
+            List.of(),
+            List.of(
+            new QueryParam("department", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("burberry-category", new Operation(
+            "burberry-category",
+            "GET",
+            "/burberry/category",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("default", "price_asc", "price_desc", "newest")),
+            new QueryParam("facets", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("burberry-product", new Operation(
+            "burberry-product",
+            "GET",
+            "/burberry/product",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("burberry-related", new Operation(
+            "burberry-related",
+            "GET",
+            "/burberry/related",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("burberry-search", new Operation(
+            "burberry-search",
+            "GET",
+            "/burberry/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("default", "price_asc", "price_desc", "newest")),
+            new QueryParam("facets", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("burberry-suggest", new Operation(
+            "burberry-suggest",
+            "GET",
+            "/burberry/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("burgerking-availability", new Operation(
             "burgerking-availability",
             "GET",
@@ -3899,6 +5262,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("burgerking-product", new Operation(
             "burgerking-product",
             "GET",
@@ -3908,6 +5274,133 @@ public final class Operations {
             new QueryParam("store_id", true, "string", List.of()),
             new QueryParam("item_id", true, "string", List.of()),
             new QueryParam("market", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessinsider-article", new Operation(
+            "businessinsider-article",
+            "GET",
+            "/businessinsider/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessinsider-author", new Operation(
+            "businessinsider-author",
+            "GET",
+            "/businessinsider/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessinsider-headlines", new Operation(
+            "businessinsider-headlines",
+            "GET",
+            "/businessinsider/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "markets", "technology", "politics", "strategy", "finance", "science", "lifestyle", "reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessinsider-news", new Operation(
+            "businessinsider-news",
+            "GET",
+            "/businessinsider/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessinsider-sections", new Operation(
+            "businessinsider-sections",
+            "GET",
+            "/businessinsider/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessstandard-article", new Operation(
+            "businessstandard-article",
+            "GET",
+            "/businessstandard/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessstandard-author", new Operation(
+            "businessstandard-author",
+            "GET",
+            "/businessstandard/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessstandard-headlines", new Operation(
+            "businessstandard-headlines",
+            "GET",
+            "/businessstandard/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest-news", "companies", "economy", "finance", "opinion", "markets", "technology", "specials", "budget", "elections", "politics", "education", "health", "sports", "entertainment", "lifestyle", "india-news", "industry", "cricket", "book", "world-news", "external-affairs-defence-security", "immigration", "blueprint-defence-magazine", "todays-paper"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessstandard-news", new Operation(
+            "businessstandard-news",
+            "GET",
+            "/businessstandard/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("businessstandard-sections", new Operation(
+            "businessstandard-sections",
+            "GET",
+            "/businessstandard/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -4076,6 +5569,260 @@ public final class Operations {
             "GET",
             "/carsdotcom/vehicle/{listing_id}",
             List.of("listing_id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbc-article", new Operation(
+            "cbc-article",
+            "GET",
+            "/cbc/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbc-author", new Operation(
+            "cbc-author",
+            "GET",
+            "/cbc/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbc-headlines", new Operation(
+            "cbc-headlines",
+            "GET",
+            "/cbc/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("world", "canada", "politics", "business", "health", "arts", "technology", "indigenous", "british-columbia", "calgary", "edmonton", "hamilton", "kamloops", "kitchener-waterloo", "london", "manitoba", "montreal", "new-brunswick", "newfoundland-labrador", "north", "nova-scotia", "ottawa", "prince-edward-island", "saskatchewan", "saskatoon", "sudbury", "thunder-bay", "toronto", "windsor", "sports", "sports-golf", "sports-nhl", "sports-olympics", "sports-soccer", "sports-tennis"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbc-news", new Operation(
+            "cbc-news",
+            "GET",
+            "/cbc/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbc-sections", new Operation(
+            "cbc-sections",
+            "GET",
+            "/cbc/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbr-article", new Operation(
+            "cbr-article",
+            "GET",
+            "/cbr/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbr-author", new Operation(
+            "cbr-author",
+            "GET",
+            "/cbr/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbr-headlines", new Operation(
+            "cbr-headlines",
+            "GET",
+            "/cbr/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("movies", "movie-features", "news-movies", "reviews-movies", "movie-lists", "tv", "tv-features", "news-tv", "reviews-tv", "tv-lists", "comics", "comics-features", "comics/news", "comics/reviews", "comics-lists", "anime", "anime-features", "anime-news", "anime/reviews-anime", "anime-lists", "games", "game-features", "game-news", "games/reviews-games", "game-guides", "game-lists", "lists", "cbr-exclusives"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbr-news", new Operation(
+            "cbr-news",
+            "GET",
+            "/cbr/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbr-sections", new Operation(
+            "cbr-sections",
+            "GET",
+            "/cbr/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbsnews-article", new Operation(
+            "cbsnews-article",
+            "GET",
+            "/cbsnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbsnews-author", new Operation(
+            "cbsnews-author",
+            "GET",
+            "/cbsnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbsnews-headlines", new Operation(
+            "cbsnews-headlines",
+            "GET",
+            "/cbsnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("main", "us", "world", "politics", "moneywatch", "health", "entertainment", "science", "technology", "space"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbsnews-news", new Operation(
+            "cbsnews-news",
+            "GET",
+            "/cbsnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbsnews-sections", new Operation(
+            "cbsnews-sections",
+            "GET",
+            "/cbsnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbssports-article", new Operation(
+            "cbssports-article",
+            "GET",
+            "/cbssports/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbssports-author", new Operation(
+            "cbssports-author",
+            "GET",
+            "/cbssports/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbssports-headlines", new Operation(
+            "cbssports-headlines",
+            "GET",
+            "/cbssports/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("nfl", "college-football", "nba", "college-basketball", "womens-college-basketball", "wnba", "mlb", "nhl", "soccer", "golf", "tennis", "ufc", "mma", "boxing", "wwe", "nascar", "motor-sports", "olympics", "betting", "prediction", "general"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbssports-news", new Operation(
+            "cbssports-news",
+            "GET",
+            "/cbssports/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cbssports-sections", new Operation(
+            "cbssports-sections",
+            "GET",
+            "/cbssports/sections",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -4285,6 +6032,73 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("chicagotribune-article", new Operation(
+            "chicagotribune-article",
+            "GET",
+            "/chicagotribune/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chicagotribune-author", new Operation(
+            "chicagotribune-author",
+            "GET",
+            "/chicagotribune/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chicagotribune-headlines", new Operation(
+            "chicagotribune-headlines",
+            "GET",
+            "/chicagotribune/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "local-news", "crime-public-safety", "politics", "elections", "immigration", "investigations", "education", "environment", "health", "history", "marijuana", "national", "news-obituaries", "science", "weather", "world", "business", "real-estate", "transportation", "technology", "aurora-beacon-news", "daily-southtown", "elgin-courier-news", "lake-county-news-sun", "naperville-sun", "post-tribune", "opinion", "columnists", "commentary", "editorials", "letters-to-the-editor", "sports", "college-sports", "mlb", "chicago-cubs", "chicago-white-sox", "nfl", "chicago-bears", "nba", "chicago-bulls", "nhl", "chicago-blackhawks", "soccer", "wnba", "chicago-sky", "things-to-do", "arts", "books", "entertainment", "home-garden", "movies", "music-concerts", "restaurants-food-drink", "theater", "travel", "tv-streaming", "fitness", "advice", "best-reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
+        m.put("chicagotribune-news", new Operation(
+            "chicagotribune-news",
+            "GET",
+            "/chicagotribune/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chicagotribune-sections", new Operation(
+            "chicagotribune-sections",
+            "GET",
+            "/chicagotribune/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("chick-fil-a-content", new Operation(
             "chick-fil-a-content",
             "GET",
@@ -4475,9 +6289,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("chipotle-restaurant-meals", new Operation(
             "chipotle-restaurant-meals",
             "GET",
@@ -4708,6 +6519,308 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("chrono24-autocomplete", new Operation(
+            "chrono24-autocomplete",
+            "GET",
+            "/chrono24/autocomplete",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-brands", new Operation(
+            "chrono24-brands",
+            "GET",
+            "/chrono24/brands",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-dealer", new Operation(
+            "chrono24-dealer",
+            "GET",
+            "/chrono24/dealer",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-dealer-reviews", new Operation(
+            "chrono24-dealer-reviews",
+            "GET",
+            "/chrono24/dealer/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("min_stars", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "newest", "with_recommendation", "without_recommendation"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("chrono24-facets", new Operation(
+            "chrono24-facets",
+            "GET",
+            "/chrono24/facets",
+            List.of(),
+            List.of(
+            new QueryParam("group", true, "string", List.of("condition", "usedOrNew", "caseMaterial", "dialColor", "braceletMaterial", "movementType", "gender", "watchType", "stockInfo"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-listing", new Operation(
+            "chrono24-listing",
+            "GET",
+            "/chrono24/listing",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-models", new Operation(
+            "chrono24-models",
+            "GET",
+            "/chrono24/models",
+            List.of(),
+            List.of(
+            new QueryParam("brand", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chrono24-search", new Operation(
+            "chrono24-search",
+            "GET",
+            "/chrono24/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("brand", false, "string", List.of()),
+            new QueryParam("model", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "price_asc", "price_desc", "newest", "popularity")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("condition", false, "string", List.of("new", "like_new_unworn", "very_good", "good", "fair", "incomplete", "no_details")),
+            new QueryParam("used_or_new", false, "string", List.of("new", "used", "no_details")),
+            new QueryParam("case_material", false, "string", List.of("aluminum", "brass", "bronze", "carbon", "ceramic", "gold_steel", "gold_plated", "palladium", "plastic", "platinum", "rose_gold", "sapphire_crystal", "silver", "steel", "tantalum", "titanium", "tungsten", "white_gold", "yellow_gold", "no_details")),
+            new QueryParam("dial_color", false, "string", List.of("black", "blue", "bordeaux", "bronze", "brown", "champagne", "gold", "green", "grey", "meteorite", "mother_of_pearl", "orange", "pink", "purple", "red", "silver", "skeletonized", "turquoise", "white", "yellow", "no_details")),
+            new QueryParam("bracelet_material", false, "string", List.of("alligator_skin", "aluminium", "brass", "calf_skin", "ceramic", "crocodile_skin", "gold_steel", "gold_plated", "leather", "lizard_skin", "ostrich_skin", "plastic", "platinum", "red_gold", "rose_gold", "rubber", "satin", "shark_skin", "silicon", "silver", "snake_skin", "steel", "textile", "titanium", "white_gold", "yellow_gold", "no_details")),
+            new QueryParam("movement_type", false, "string", List.of("automatic", "manual_winding", "quartz", "solar", "smartwatch", "no_details")),
+            new QueryParam("gender", false, "string", List.of("mens_unisex", "womens")),
+            new QueryParam("watch_type", false, "string", List.of("watches", "parts_accessories")),
+            new QueryParam("stock_info", false, "string", List.of("in_stock", "on_order", "on_request"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("cna-article", new Operation(
+            "cna-article",
+            "GET",
+            "/cna/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cna-author", new Operation(
+            "cna-author",
+            "GET",
+            "/cna/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cna-headlines", new Operation(
+            "cna-headlines",
+            "GET",
+            "/cna/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("asia", "business", "singapore", "sport", "world"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cna-news", new Operation(
+            "cna-news",
+            "GET",
+            "/cna/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cna-sections", new Operation(
+            "cna-sections",
+            "GET",
+            "/cna/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnbc-article", new Operation(
+            "cnbc-article",
+            "GET",
+            "/cnbc/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnbc-author", new Operation(
+            "cnbc-author",
+            "GET",
+            "/cnbc/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnbc-categories", new Operation(
+            "cnbc-categories",
+            "GET",
+            "/cnbc/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnbc-headlines", new Operation(
+            "cnbc-headlines",
+            "GET",
+            "/cnbc/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnet-article", new Operation(
+            "cnet-article",
+            "GET",
+            "/cnet/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnet-author", new Operation(
+            "cnet-author",
+            "GET",
+            "/cnet/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("cnet-headlines", new Operation(
+            "cnet-headlines",
+            "GET",
+            "/cnet/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ai", "aircraft", "auto-tech", "automobiles", "biology", "car-accessories", "car-apps", "car-industry", "car-news", "climate", "computing", "culture", "deals", "electric-vehicles", "energy-and-utilities", "entertainment", "fashion", "fitness", "gaming", "health", "home", "home-entertainment", "internet", "kitchen-and-household", "live-blog", "medical", "mental", "mobile", "motorcycles", "news", "nutrition", "parenting", "personal-care", "personal-finance", "personal-mobility", "privacy", "rideshare", "roadshow", "science", "security", "services-and-software", "sleep", "smart-home", "social-media", "space", "sports", "tech", "tech-industry", "tv-and-movies", "watercraft", "yard-and-outdoors"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnet-news", new Operation(
+            "cnet-news",
+            "GET",
+            "/cnet/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnet-sections", new Operation(
+            "cnet-sections",
+            "GET",
+            "/cnet/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cnn-article", new Operation(
             "cnn-article",
             "GET",
@@ -4715,6 +6828,20 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cnn-author", new Operation(
+            "cnn-author",
+            "GET",
+            "/cnn/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -4804,6 +6931,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("coingecko-coin", new Operation(
             "coingecko-coin",
             "GET",
@@ -5194,6 +7324,113 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("collider-article", new Operation(
+            "collider-article",
+            "GET",
+            "/collider/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("collider-author", new Operation(
+            "collider-author",
+            "GET",
+            "/collider/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("collider-headlines", new Operation(
+            "collider-headlines",
+            "GET",
+            "/collider/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("movie-tv-news", "tv-movie-news", "movies", "movie-news", "movie-features", "movie-reviews", "movie-trailers", "tv", "tv-news", "tv-features", "tv-reviews", "tv-trailers", "all-reviews", "trailers", "features", "exclusives", "interviews", "fyc", "what-to-watch", "streaming-guides", "other-streaming-guides", "netflix", "amazon", "disney", "max", "hulu", "apple-tv-plus", "reality-tv", "music", "horror", "animation", "video-games", "gaming-news", "collectibles", "screening", "collider-signature", "authority", "collider-rewind", "collider-quiz", "podcasts", "cl-originals", "videos", "latest-videos", "video-originals", "video-interviews", "interview-videos", "exclusive-videos", "list-videos"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("collider-news", new Operation(
+            "collider-news",
+            "GET",
+            "/collider/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("collider-sections", new Operation(
+            "collider-sections",
+            "GET",
+            "/collider/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("comc-categories", new Operation(
+            "comc-categories",
+            "GET",
+            "/comc/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("comc-listing", new Operation(
+            "comc-listing",
+            "GET",
+            "/comc/listing",
+            List.of(),
+            List.of(
+            new QueryParam("handle", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("comc-search", new Operation(
+            "comc-search",
+            "GET",
+            "/comc/search",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("r", "c", "o", "n", "b", "h", "l", "d", "p", "q", "s", "m", "e")),
+            new QueryParam("attributes", false, "string", List.of()),
+            new QueryParam("condition", false, "string", List.of("aUngraded", "aGraded", "aAftermarketAuto", "aAfterAutoGraded")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of("6", "8", "10", "12", "14", "15", "16", "18", "20", "24", "30", "40", "50", "64", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("congress-report", new Operation(
             "congress-report",
             "GET",
@@ -5341,9 +7578,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("courtlistener-people", new Operation(
             "courtlistener-people",
             "GET",
@@ -5529,6 +7763,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
         m.put("cricinfo-series", new Operation(
             "cricinfo-series",
             "GET",
@@ -5665,6 +7902,69 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ctvnews-article", new Operation(
+            "ctvnews-article",
+            "GET",
+            "/ctvnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ctvnews-author", new Operation(
+            "ctvnews-author",
+            "GET",
+            "/ctvnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ctvnews-headlines", new Operation(
+            "ctvnews-headlines",
+            "GET",
+            "/ctvnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("canada", "politics", "world", "business", "health", "entertainment", "lifestyle", "climate-and-environment", "sci-tech", "sports", "opinion", "highly-engaged", "atlantic", "barrie", "calgary", "edmonton", "kitchener", "london", "montreal", "northern-ontario", "ottawa", "regina", "saskatoon", "toronto", "vancouver", "windsor", "winnipeg"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ctvnews-news", new Operation(
+            "ctvnews-news",
+            "GET",
+            "/ctvnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ctvnews-sections", new Operation(
+            "ctvnews-sections",
+            "GET",
+            "/ctvnews/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -5858,6 +8158,389 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("dailycaller-article", new Operation(
+            "dailycaller-article",
+            "GET",
+            "/dailycaller/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailycaller-author", new Operation(
+            "dailycaller-author",
+            "GET",
+            "/dailycaller/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailycaller-headlines", new Operation(
+            "dailycaller-headlines",
+            "GET",
+            "/dailycaller/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("politics", "us", "world", "national-security", "elections", "business", "energy", "education", "health", "tech", "media", "entertainment", "sports", "guns-and-gear", "investigative-group", "opinion", "analysis", "two-sides", "big-tent-ideas", "patriots", "satire", "video"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailycaller-news", new Operation(
+            "dailycaller-news",
+            "GET",
+            "/dailycaller/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailycaller-sections", new Operation(
+            "dailycaller-sections",
+            "GET",
+            "/dailycaller/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyexpress-article", new Operation(
+            "dailyexpress-article",
+            "GET",
+            "/dailyexpress/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyexpress-author", new Operation(
+            "dailyexpress-author",
+            "GET",
+            "/dailyexpress/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyexpress-headlines", new Operation(
+            "dailyexpress-headlines",
+            "GET",
+            "/dailyexpress/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "uk", "world", "politics", "royal", "us", "weather", "science", "history", "weird", "nature", "obituaries", "showbiz-tv", "sport", "football", "tennis", "formula-1", "finance", "city-business", "personal-finance", "retirement", "travel", "entertainment", "gaming", "lifestyle", "health", "property", "cars", "technology"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyexpress-news", new Operation(
+            "dailyexpress-news",
+            "GET",
+            "/dailyexpress/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyexpress-sections", new Operation(
+            "dailyexpress-sections",
+            "GET",
+            "/dailyexpress/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailymail-article", new Operation(
+            "dailymail-article",
+            "GET",
+            "/dailymail/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailymail-author", new Operation(
+            "dailymail-author",
+            "GET",
+            "/dailymail/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("dailymail-headlines", new Operation(
+            "dailymail-headlines",
+            "GET",
+            "/dailymail/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "news", "sport", "tvshowbiz", "health", "femail", "travel", "sciencetech", "money", "debate", "us", "australia"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailymail-news", new Operation(
+            "dailymail-news",
+            "GET",
+            "/dailymail/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailymail-sections", new Operation(
+            "dailymail-sections",
+            "GET",
+            "/dailymail/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyrecord-article", new Operation(
+            "dailyrecord-article",
+            "GET",
+            "/dailyrecord/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyrecord-author", new Operation(
+            "dailyrecord-author",
+            "GET",
+            "/dailyrecord/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyrecord-headlines", new Operation(
+            "dailyrecord-headlines",
+            "GET",
+            "/dailyrecord/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "scotland", "uk-world-news", "sport", "football", "showbiz", "lifestyle", "money", "travel", "in-your-area"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyrecord-news", new Operation(
+            "dailyrecord-news",
+            "GET",
+            "/dailyrecord/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailyrecord-sections", new Operation(
+            "dailyrecord-sections",
+            "GET",
+            "/dailyrecord/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailystaruk-article", new Operation(
+            "dailystaruk-article",
+            "GET",
+            "/dailystaruk/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailystaruk-author", new Operation(
+            "dailystaruk-author",
+            "GET",
+            "/dailystaruk/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("dailystaruk-headlines", new Operation(
+            "dailystaruk-headlines",
+            "GET",
+            "/dailystaruk/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/latest-news", "news/uk-news", "news/world-news", "news/us-news", "news/weird-news", "news/exclusive", "news/politics", "showbiz", "showbiz/us-showbiz", "tv", "music", "sport", "sport/football", "sport/transfer-news", "sport/boxing", "sport/ufc", "sport/f1", "sport/darts", "sport/snooker", "sport/other-sports", "sport/us-sport", "sport/motorsport", "tech", "tech/news", "tech/gaming", "tech/reviews", "life-style", "life-style/money", "life-style/competitions", "real-life", "love-sex", "health", "fashion-beauty", "diet-fitness", "travel", "travel/travel-news", "just-jane"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailystaruk-news", new Operation(
+            "dailystaruk-news",
+            "GET",
+            "/dailystaruk/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailystaruk-sections", new Operation(
+            "dailystaruk-sections",
+            "GET",
+            "/dailystaruk/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailywire-article", new Operation(
+            "dailywire-article",
+            "GET",
+            "/dailywire/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailywire-author", new Operation(
+            "dailywire-author",
+            "GET",
+            "/dailywire/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailywire-headlines", new Operation(
+            "dailywire-headlines",
+            "GET",
+            "/dailywire/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "opinion", "dw-opinion", "analysis", "news-and-commentary", "news-and-analysis", "exclusive", "entertainment", "original", "upstream", "sports", "mi-x-dw"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailywire-news", new Operation(
+            "dailywire-news",
+            "GET",
+            "/dailywire/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dailywire-sections", new Operation(
+            "dailywire-sections",
+            "GET",
+            "/dailywire/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("datasets-list", new Operation(
             "datasets-list",
             "GET",
@@ -5870,6 +8553,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("datasets-airbnb-markets-facets", new Operation(
             "datasets-airbnb-markets-facets",
             "GET",
@@ -6282,9 +8968,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("datasets-chrome-extensions-search", new Operation(
             "datasets-chrome-extensions-search",
             "GET",
@@ -6355,7 +9038,7 @@ public final class Operations {
             new QueryParam("has_email", false, "boolean", List.of()),
             new QueryParam("include_email", false, "boolean", List.of()),
             new QueryParam("include_inactive", false, "boolean", List.of()),
-            new QueryParam("sort", false, "string", List.of("followers_desc", "engagement_desc", "likes_desc", "relevance")),
+            new QueryParam("sort", false, "string", List.of("followers_desc", "engagement_desc", "engagement_qualified_desc", "likes_desc", "relevance")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -6370,6 +9053,9 @@ public final class Operations {
             "/datasets/facebook-pages/facets",
             List.of(),
             List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("order", false, "string", List.of("count_desc", "value_asc")),
+            new QueryParam("after", false, "string", List.of()),
             new QueryParam("facet", true, "string", List.of("category", "discovery_source")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("page_id", false, "string", List.of()),
@@ -7042,12 +9728,16 @@ public final class Operations {
             "/datasets/journalists/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of("outlet", "vertical", "topic", "contact_type")),
+            new QueryParam("facet", true, "string", List.of("outlet", "vertical", "topic", "contact_type", "record_type", "role_type", "email_kind", "outreach_readiness_band")),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("outlet", false, "string", List.of()),
             new QueryParam("vertical", false, "string", List.of("tech", "crypto", "marketing", "consumer_tech", "consumer_policy", "cybersecurity", "health", "gaming", "climate", "business", "entertainment", "sports", "legal", "science", "politics", "real_estate", "automotive", "travel", "food", "education", "design", "film_tv", "fashion", "music", "personal_finance", "tech_independent", "culture_independent", "local_news", "construction", "banking", "retail", "aerospace_defense", "energy", "agriculture", "local_business")),
             new QueryParam("topic", false, "string", List.of()),
-            new QueryParam("contact_type", false, "string", List.of("email", "social", "none"))),
+            new QueryParam("contact_type", false, "string", List.of("email", "social", "none")),
+            new QueryParam("record_type", false, "string", List.of("person", "desk", "organization", "syndicated_byline", "unknown")),
+            new QueryParam("role_type", false, "string", List.of("staff", "editor", "reporter", "contributor", "freelancer", "columnist", "non_editorial", "unknown")),
+            new QueryParam("email_kind", false, "string", List.of("individual_work", "individual_personal_public", "shared_desk", "tips_or_submissions", "outlet_generic", "unknown")),
+            new QueryParam("min_outreach_readiness", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -7077,7 +9767,11 @@ public final class Operations {
             new QueryParam("vertical", false, "string", List.of("tech", "crypto", "marketing", "consumer_tech", "consumer_policy", "cybersecurity", "health", "gaming", "climate", "business", "entertainment", "sports", "legal", "science", "politics", "real_estate", "automotive", "travel", "food", "education", "design", "film_tv", "fashion", "music", "personal_finance", "tech_independent", "culture_independent", "local_news", "construction", "banking", "retail", "aerospace_defense", "energy", "agriculture", "local_business")),
             new QueryParam("topic", false, "string", List.of()),
             new QueryParam("contact_type", false, "string", List.of("email", "social", "none")),
-            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "outlet_asc", "crawled_desc")),
+            new QueryParam("record_type", false, "string", List.of("person", "desk", "organization", "syndicated_byline", "unknown")),
+            new QueryParam("role_type", false, "string", List.of("staff", "editor", "reporter", "contributor", "freelancer", "columnist", "non_editorial", "unknown")),
+            new QueryParam("email_kind", false, "string", List.of("individual_work", "individual_personal_public", "shared_desk", "tips_or_submissions", "outlet_generic", "unknown")),
+            new QueryParam("min_outreach_readiness", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "outlet_asc", "crawled_desc", "readiness_desc")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
             List.of(),
@@ -7160,6 +9854,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("datasets-numbeo-countries-search", new Operation(
             "datasets-numbeo-countries-search",
             "GET",
@@ -7582,9 +10279,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("datasets-producthunt-makers-search", new Operation(
             "datasets-producthunt-makers-search",
             "GET",
@@ -8405,6 +11099,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("datasets-x-users-item", new Operation(
             "datasets-x-users-item",
             "GET",
@@ -8524,6 +11221,133 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("dawn-article", new Operation(
+            "dawn-article",
+            "GET",
+            "/dawn/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dawn-author", new Operation(
+            "dawn-author",
+            "GET",
+            "/dawn/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dawn-headlines", new Operation(
+            "dawn-headlines",
+            "GET",
+            "/dawn/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("pakistan", "pakistan-balochistan", "pakistan-ict", "pakistan-kp-fata", "pakistan-punjab", "pakistan-sindh", "world", "world-south-asia", "business", "business-finance", "sport", "sport-cricket", "opinion", "tech", "newspaper", "magazines", "prism"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dawn-news", new Operation(
+            "dawn-news",
+            "GET",
+            "/dawn/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dawn-sections", new Operation(
+            "dawn-sections",
+            "GET",
+            "/dawn/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("deadline-article", new Operation(
+            "deadline-article",
+            "GET",
+            "/deadline/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("deadline-author", new Operation(
+            "deadline-author",
+            "GET",
+            "/deadline/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("deadline-headlines", new Operation(
+            "deadline-headlines",
+            "GET",
+            "/deadline/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("acquisitions", "agencies", "album", "below-the-line", "books", "cancellations-renewals", "casting", "commentary", "culture", "documentary", "executives", "festivals", "late-night-tv", "legal", "news", "obituaries", "podcast", "politics", "predictions", "primetime-pilot-panic", "ratings", "recaps", "red-carpet-premieres", "reviews", "sports", "touring", "trailers", "video-games", "awards", "awards-news", "box-office", "business", "cover-stories", "crew-call", "dialogue", "feature", "film", "flash-mob", "hammond", "hero-nation", "international", "look-back-look-ahead", "music", "resident-advisor", "rough-cuts", "theater", "tv", "video"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("deadline-news", new Operation(
+            "deadline-news",
+            "GET",
+            "/deadline/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("deadline-sections", new Operation(
+            "deadline-sections",
+            "GET",
+            "/deadline/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("deliveroo-fulfillment-times", new Operation(
             "deliveroo-fulfillment-times",
@@ -8771,9 +11595,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("discogs-artist", new Operation(
             "discogs-artist",
             "GET",
@@ -9187,6 +12008,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("draftkings-futures", new Operation(
             "draftkings-futures",
             "GET",
@@ -9422,6 +12246,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("dw-article", new Operation(
+            "dw-article",
+            "GET",
+            "/dw/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dw-author", new Operation(
+            "dw-author",
+            "GET",
+            "/dw/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dw-headlines", new Operation(
+            "dw-headlines",
+            "GET",
+            "/dw/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("africa", "asia", "europe", "latin-america", "middle-east", "north-america", "germany", "climate", "equality", "health", "human-rights", "migration", "technology", "business", "science", "environment", "culture", "sports"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dw-news", new Operation(
+            "dw-news",
+            "GET",
+            "/dw/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("dw-sections", new Operation(
+            "dw-sections",
+            "GET",
+            "/dw/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("ebay-item", new Operation(
             "ebay-item",
             "GET",
@@ -9549,6 +12436,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("economictimes-article", new Operation(
+            "economictimes-article",
+            "GET",
+            "/economictimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("economictimes-author", new Operation(
+            "economictimes-author",
+            "GET",
+            "/economictimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("economictimes-headlines", new Operation(
+            "economictimes-headlines",
+            "GET",
+            "/economictimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("top-stories", "ai", "ai-ai-insights", "astrology-chalisa-bhajan", "astrology-horoscope", "astrology-love-horoscope", "astrology-numerology-predictions", "astrology-others", "astrology-panchang", "astrology-planets-transits", "astrology-tarot-readings", "astrology-us", "industry", "industry-auto", "industry-banking-finance", "industry-cons-products", "industry-csr", "industry-energy", "industry-healthcare-biotech", "industry-indl-goods-svs", "industry-media-entertainment", "industry-miscellaneous", "industry-renewables", "industry-services", "industry-telecom", "industry-transportation", "jobs", "jobs-c-suite", "jobs-exams-results", "jobs-fresher", "jobs-government-jobs", "jobs-hr-policies-trends", "jobs-mid-career", "magazines", "magazines-et-magazine", "magazines-luxury", "magazines-panache", "market-data", "market-data-etlearn", "markets", "markets-aif-pms", "markets-bonds", "markets-commodities", "markets-cryptocurrency", "markets-digital-real-estate", "markets-expert-view", "markets-forex", "markets-investment-ideas", "markets-ipos-fpos", "markets-market-moguls", "markets-mind-over-money", "markets-options", "markets-stocks", "markets-stocks-podcast", "markets-us-stocks", "markets-web-stories", "mf", "mf-analysis", "mf-elss", "mf-learn", "mf-mf-news", "mf-web-stories", "news", "news-top-trending-products", "news-bengaluru-news", "news-company", "news-defence", "news-economy", "news-elections", "news-environment", "news-et-evoke", "news-et-explains", "news-india", "news-international", "news-latest-news", "news-morning-brief-podcast", "news-mumbai-news", "news-new-updates", "news-newsblogs", "news-politics-and-nation", "news-pune-news", "news-science", "news-sports", "news-videos", "nri", "nri-country-pages", "nri-invest", "nri-latest-updates", "nri-migrate", "nri-study", "nri-test-guide", "nri-visit", "nri-web-stories", "nri-work", "opinion", "opinion-bliss-of-everyday-life", "opinion-et-commentary", "opinion-et-editorial", "opinion-et-view", "opinion-just-in-jest", "opinion-speaking-tree", "podcasts", "prime", "prime-collections", "prime-consumer", "prime-corporate-governance", "prime-economy-and-policy", "prime-energy", "prime-environment", "prime-fintech-and-bfsi", "prime-infrastructure", "prime-media-and-communications", "prime-money-and-markets", "prime-pharma-and-healthcare", "prime-prime-decoder", "prime-prime-vantage", "prime-primeshots", "prime-technology-and-startups", "prime-transportation", "small-biz", "small-biz-entrepreneurship", "small-biz-gst", "small-biz-hr-leadership", "small-biz-legal", "small-biz-marketing-branding", "small-biz-money", "small-biz-policy-trends", "small-biz-resources", "small-biz-security-tech", "small-biz-sme-sector", "small-biz-sme-summits", "small-biz-sustainability", "small-biz-trade", "tech", "tech-artificial-intelligence", "tech-catalysts", "tech-funding", "tech-information-tech", "tech-newsletters", "tech-startups", "tech-tech-and-gadgets", "tech-tech-bytes", "tech-technology", "wealth", "wealth-borrow", "wealth-earn", "wealth-et-wealth", "wealth-insure", "wealth-invest", "wealth-legal-will", "wealth-mutual-funds", "wealth-p2p", "wealth-personal-finance-news", "wealth-plan", "wealth-real-estate", "wealth-save", "wealth-spend", "wealth-tax"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("economictimes-news", new Operation(
+            "economictimes-news",
+            "GET",
+            "/economictimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("economictimes-sections", new Operation(
+            "economictimes-sections",
+            "GET",
+            "/economictimes/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("email-verify", new Operation(
             "email-verify",
             "POST",
@@ -9558,6 +12508,133 @@ public final class Operations {
             List.of(),
             "option",
             true,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("engadget-article", new Operation(
+            "engadget-article",
+            "GET",
+            "/engadget/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("engadget-author", new Operation(
+            "engadget-author",
+            "GET",
+            "/engadget/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("engadget-headlines", new Operation(
+            "engadget-headlines",
+            "GET",
+            "/engadget/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ai", "amazon", "apple", "apps", "best-tech", "big-tech", "computer-accessories", "computing", "cybersecurity", "entertainment", "features", "gaming", "gaming-reviews", "google", "headphones-buying-guides", "headphones-reviews", "home-product-reviews", "laptop-buying-guides", "laptop-pc-reviews", "laptops", "meta", "microsoft", "mobile", "news", "nintendo", "pc", "photography-reviews", "playstation", "reviews", "robotics", "samsung", "science", "smart-home-buying-guides", "smart-home-reviews", "smartphone-reviews", "smartphones", "social-media", "space", "streaming", "tablet-reviews", "tablets", "tomorrow", "transportation-evs", "tv-movies", "vpn", "wearable-reviews", "wearables", "xbox"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("engadget-news", new Operation(
+            "engadget-news",
+            "GET",
+            "/engadget/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("engadget-sections", new Operation(
+            "engadget-sections",
+            "GET",
+            "/engadget/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("eonline-article", new Operation(
+            "eonline-article",
+            "GET",
+            "/eonline/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("eonline-author", new Operation(
+            "eonline-author",
+            "GET",
+            "/eonline/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("eonline-headlines", new Operation(
+            "eonline-headlines",
+            "GET",
+            "/eonline/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("top_stories", "tv", "movies", "music", "celebrities", "couples", "royals", "red_carpet", "influencer", "style", "fashion", "shop"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("eonline-news", new Operation(
+            "eonline-news",
+            "GET",
+            "/eonline/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("eonline-sections", new Operation(
+            "eonline-sections",
+            "GET",
+            "/eonline/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
             List.of("ApiKeyAuth"),
             false,
             List.of()));
@@ -9605,9 +12682,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations10(Map<String, Operation> m) {
         m.put("espn-rankings", new Operation(
             "espn-rankings",
             "GET",
@@ -9740,6 +12814,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations14(Map<String, Operation> m) {
         m.put("etsy-shop-search", new Operation(
             "etsy-shop-search",
             "GET",
@@ -9794,6 +12871,69 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("euronews-article", new Operation(
+            "euronews-article",
+            "GET",
+            "/euronews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("euronews-author", new Operation(
+            "euronews-author",
+            "GET",
+            "/euronews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("euronews-headlines", new Operation(
+            "euronews-headlines",
+            "GET",
+            "/euronews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news-africa", "news-americas", "news-asia", "news-international", "news-middle-east", "news-oceania", "business", "business-business", "business-economy", "business-markets", "culture", "culture-art", "culture-lifestyle", "culture-news", "culture-design", "culture-food-and-drink", "earth", "earth-climate", "earth-news", "earth-ecotech", "earth-nature", "earth-water", "health", "health-news", "health-healthcare", "health-nutrition", "health-wellbeing", "my-europe", "my-europe-eu-xl", "my-europe-news", "next", "next-mobility", "next-money", "next-space", "next-tech-news", "next-work", "travel", "travel-destinations", "travel-moments", "travel-residences", "travel-news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("euronews-news", new Operation(
+            "euronews-news",
+            "GET",
+            "/euronews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("euronews-sections", new Operation(
+            "euronews-sections",
+            "GET",
+            "/euronews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("everlane-collections", new Operation(
             "everlane-collections",
@@ -9942,6 +13082,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("ew-article", new Operation(
+            "ew-article",
+            "GET",
+            "/ew/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ew-author", new Operation(
+            "ew-author",
+            "GET",
+            "/ew/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ew-headlines", new Operation(
+            "ew-headlines",
+            "GET",
+            "/ew/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("tv", "movies", "music", "what-to-watch", "binge", "celebrity", "awardist", "books", "theater"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ew-news", new Operation(
+            "ew-news",
+            "GET",
+            "/ew/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ew-sections", new Operation(
+            "ew-sections",
+            "GET",
+            "/ew/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("expedia-activities-search", new Operation(
             "expedia-activities-search",
             "POST",
@@ -10070,6 +13273,337 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("fanatics-categories", new Operation(
+            "fanatics-categories",
+            "GET",
+            "/fanatics/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanatics-category", new Operation(
+            "fanatics-category",
+            "GET",
+            "/fanatics/category",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page_number", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanatics-product", new Operation(
+            "fanatics-product",
+            "GET",
+            "/fanatics/product",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanatics-search", new Operation(
+            "fanatics-search",
+            "GET",
+            "/fanatics/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("page_number", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticscollect-auctions", new Operation(
+            "fanaticscollect-auctions",
+            "GET",
+            "/fanaticscollect/auctions",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticscollect-categories", new Operation(
+            "fanaticscollect-categories",
+            "GET",
+            "/fanaticscollect/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticscollect-instant-rips-categories", new Operation(
+            "fanaticscollect-instant-rips-categories",
+            "GET",
+            "/fanaticscollect/instant-rips/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticscollect-listing", new Operation(
+            "fanaticscollect-listing",
+            "GET",
+            "/fanaticscollect/listing/{id}",
+            List.of("id"),
+            List.of(
+            new QueryParam("type", false, "string", List.of("WEEKLY", "PREMIER", "FIXED"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticscollect-search", new Operation(
+            "fanaticscollect-search",
+            "GET",
+            "/fanaticscollect/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("marketplace", false, "string", List.of("WEEKLY", "PREMIER", "FIXED")),
+            new QueryParam("category_parent", false, "string", List.of("Sports Cards", "Trading Card Games", "Other", "Video Games", "Comics")),
+            new QueryParam("sub_category", false, "string", List.of()),
+            new QueryParam("grading_service", false, "string", List.of("Ungraded", "CGC", "PSA", "BGS", "SGC", "Other Approved", "PSA/DNA", "CSG", "MBA", "PSA_DNA", "BVG", "OTHER_APPROVED", "BCCG", "WATA", "GAI", "VGA", "CBCS", "UDA", "CAC", "KSA", "PCGS")),
+            new QueryParam("certified_seller", false, "string", List.of()),
+            new QueryParam("seller_id", false, "string", List.of()),
+            new QueryParam("brand", false, "string", List.of()),
+            new QueryParam("auction_urn", false, "string", List.of()),
+            new QueryParam("status", false, "string", List.of("LIVE", "SOLD", "ALL")),
+            new QueryParam("allow_offers", false, "boolean", List.of()),
+            new QueryParam("has_offers", false, "boolean", List.of()),
+            new QueryParam("great_price", false, "boolean", List.of()),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("min_year", false, "integer", List.of()),
+            new QueryParam("max_year", false, "integer", List.of()),
+            new QueryParam("min_grade", false, "number", List.of()),
+            new QueryParam("max_grade", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of("recommended", "recently_added", "best_deals", "lot_number", "lowest_price", "highest_price", "best_value", "earliest_year", "latest_year", "earliest_sale_date", "latest_sale_date")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fanaticscollect-sold-items", new Operation(
+            "fanaticscollect-sold-items",
+            "GET",
+            "/fanaticscollect/sold-items",
+            List.of(),
+            List.of(
+            new QueryParam("title", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("Trading Cards", "Baseball", "Basketball", "Football", "Hockey", "Golf", "Boxing & MMA", "Soccer", "Tennis", "Racing", "Misc Sports", "Non-Sport", "Yu-Gi-Oh!", "Magic The Gathering", "Pok\u00e9mon", "Collectible Card Games", "Miscellaneous", "Memorabilia", "Photos", "Comics", "Tickets", "Coins", "Video Games")),
+            new QueryParam("grading_service", false, "string", List.of("PSA", "SGC", "BGS", "BVG", "BCCG", "CGC", "CSG", "ungraded")),
+            new QueryParam("eye_appeal_grade", false, "string", List.of("Eye Appeal - A", "Eye Appeal - E", "Eye Appeal - S")),
+            new QueryParam("min_year", false, "integer", List.of()),
+            new QueryParam("max_year", false, "integer", List.of()),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of("sold_date_desc", "highest_price", "lowest_price")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fanaticscollect-trending-searches", new Operation(
+            "fanaticscollect-trending-searches",
+            "GET",
+            "/fanaticscollect/trending-searches",
+            List.of(),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-browse", new Operation(
+            "fanaticslive-browse",
+            "GET",
+            "/fanaticslive/browse",
+            List.of(),
+            List.of(
+            new QueryParam("league", true, "string", List.of("NFL", "NCAA_FB", "NBA", "MLB", "SOCCER", "NHL", "POKEMON", "STAR_WARS", "MLS", "UFC", "WWE", "F1", "NASCAR", "DISNEY", "GARBAGE_PAIL_KIDS", "MAGIC_THE_GATHERING", "WNBA", "NCAA_BK", "GOLF", "VEE_FRIENDS", "DUDE_PERFECT", "OTHER", "ORIGINALS"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-channel", new Operation(
+            "fanaticslive-channel",
+            "GET",
+            "/fanaticslive/channel/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-leagues", new Operation(
+            "fanaticslive-leagues",
+            "GET",
+            "/fanaticslive/leagues",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-shop", new Operation(
+            "fanaticslive-shop",
+            "GET",
+            "/fanaticslive/shop/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-shop-shows", new Operation(
+            "fanaticslive-shop-shows",
+            "GET",
+            "/fanaticslive/shop/{slug}/shows",
+            List.of("slug"),
+            List.of(
+            new QueryParam("status", true, "string", List.of("live", "replay")),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-shops", new Operation(
+            "fanaticslive-shops",
+            "GET",
+            "/fanaticslive/shops",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-show", new Operation(
+            "fanaticslive-show",
+            "GET",
+            "/fanaticslive/show/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fanaticslive-instant-rips", new Operation(
+            "fanaticslive-instant-rips",
+            "GET",
+            "/fanaticslive/show/{id}/instant-rips",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("farfetch-categories", new Operation(
+            "farfetch-categories",
+            "GET",
+            "/farfetch/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("farfetch-designers", new Operation(
+            "farfetch-designers",
+            "GET",
+            "/farfetch/designers",
+            List.of(),
+            List.of(
+            new QueryParam("gender", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("farfetch-product", new Operation(
+            "farfetch-product",
+            "GET",
+            "/farfetch/product",
+            List.of(),
+            List.of(
+            new QueryParam("gender", true, "string", List.of()),
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("farfetch-search", new Operation(
+            "farfetch-search",
+            "GET",
+            "/farfetch/search",
+            List.of(),
+            List.of(
+            new QueryParam("gender", true, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("fashionnova-collections", new Operation(
             "fashionnova-collections",
             "GET",
@@ -10098,6 +13632,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations15(Map<String, Operation> m) {
         m.put("fashionnova-pages", new Operation(
             "fashionnova-pages",
             "GET",
@@ -10209,6 +13746,235 @@ public final class Operations {
             "fashionnova-store",
             "GET",
             "/fashionnova/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-collections", new Operation(
+            "fashionphile-collections",
+            "GET",
+            "/fashionphile/collections",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fashionphile-collection-products", new Operation(
+            "fashionphile-collection-products",
+            "GET",
+            "/fashionphile/collections/{handle}/products",
+            List.of("handle"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fashionphile-pages", new Operation(
+            "fashionphile-pages",
+            "GET",
+            "/fashionphile/pages",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fashionphile-page", new Operation(
+            "fashionphile-page",
+            "GET",
+            "/fashionphile/pages/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-products", new Operation(
+            "fashionphile-products",
+            "GET",
+            "/fashionphile/products",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fashionphile-product", new Operation(
+            "fashionphile-product",
+            "GET",
+            "/fashionphile/products/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-product-recommendations", new Operation(
+            "fashionphile-product-recommendations",
+            "GET",
+            "/fashionphile/products/{handle}/recommendations",
+            List.of("handle"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("intent", false, "string", List.of("related", "complementary"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-search", new Operation(
+            "fashionphile-search",
+            "GET",
+            "/fashionphile/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("condition", false, "string", List.of("New", "Excellent", "Giftable", "Shows Wear", "Worn", "Flawed", "Fair")),
+            new QueryParam("availability", false, "string", List.of("available", "sold", "all")),
+            new QueryParam("vendor", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "newest", "price_asc", "price_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fashionphile-search-suggest", new Operation(
+            "fashionphile-search-suggest",
+            "GET",
+            "/fashionphile/search/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-sitemap-urls", new Operation(
+            "fashionphile-sitemap-urls",
+            "GET",
+            "/fashionphile/sitemap/urls",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("all", "products", "collections", "pages", "blogs", "agentic_discovery", "other")),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-sitemaps", new Operation(
+            "fashionphile-sitemaps",
+            "GET",
+            "/fashionphile/sitemaps",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fashionphile-store", new Operation(
+            "fashionphile-store",
+            "GET",
+            "/fashionphile/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fastcompany-article", new Operation(
+            "fastcompany-article",
+            "GET",
+            "/fastcompany/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fastcompany-author", new Operation(
+            "fastcompany-author",
+            "GET",
+            "/fastcompany/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fastcompany-headlines", new Operation(
+            "fastcompany-headlines",
+            "GET",
+            "/fastcompany/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fastcompany-news", new Operation(
+            "fastcompany-news",
+            "GET",
+            "/fastcompany/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fastcompany-sections", new Operation(
+            "fastcompany-sections",
+            "GET",
+            "/fastcompany/sections",
             List.of(),
             List.of(),
             List.of(),
@@ -10401,6 +14167,322 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("flashscore-calendar", new Operation(
+            "flashscore-calendar",
+            "GET",
+            "/flashscore/calendar",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of("tennis-atp", "tennis-wta", "golf-pga", "golf-dp-world", "badminton-bwf", "motorsport-f1"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-calendar-categories", new Operation(
+            "flashscore-calendar-categories",
+            "GET",
+            "/flashscore/calendar-categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-competitions", new Operation(
+            "flashscore-competitions",
+            "GET",
+            "/flashscore/competitions",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "tennis", "basketball", "hockey", "golf", "formula-1", "baseball", "snooker", "american-football", "aussie-rules", "badminton", "bandy", "beach-soccer", "beach-volleyball", "boxing", "cricket", "cycling", "darts", "esports", "field-hockey", "floorball", "futsal", "handball", "horse-racing", "kabaddi", "mma", "motorsport", "netball", "pesapallo", "rugby-league", "rugby-union", "table-tennis", "volleyball", "water-polo", "winter-sports")),
+            new QueryParam("day_offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-h2h", new Operation(
+            "flashscore-match-h2h",
+            "GET",
+            "/flashscore/match-h2h",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-highlights", new Operation(
+            "flashscore-match-highlights",
+            "GET",
+            "/flashscore/match-highlights",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-info", new Operation(
+            "flashscore-match-info",
+            "GET",
+            "/flashscore/match-info",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-lineups", new Operation(
+            "flashscore-match-lineups",
+            "GET",
+            "/flashscore/match-lineups",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-news", new Operation(
+            "flashscore-match-news",
+            "GET",
+            "/flashscore/match-news",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-standings", new Operation(
+            "flashscore-match-standings",
+            "GET",
+            "/flashscore/match-standings",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("view", false, "string", List.of("overall", "home", "away", "form_overall", "overunder_overall", "form_home", "form_away", "top_scorers", "htft_overall", "htft_home", "htft_away", "live_overall", "overunder_home", "overunder_away"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-match-stats", new Operation(
+            "flashscore-match-stats",
+            "GET",
+            "/flashscore/match-stats",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-navigation", new Operation(
+            "flashscore-navigation",
+            "GET",
+            "/flashscore/navigation",
+            List.of(),
+            List.of(
+            new QueryParam("path", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-news", new Operation(
+            "flashscore-news",
+            "GET",
+            "/flashscore/news",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of("all", "football", "uefa-nations-league", "tennis", "features", "premier-league", "nfl", "mlb", "nba", "nhl", "formula-1", "champions-league", "europa-league", "conference-league", "darts", "snooker", "golf", "road-cycling", "laliga", "bundesliga", "serie-a", "ligue-1", "badminton", "handball", "hockey", "basketball", "cricket", "rugby-union", "athletics", "baseball", "fifa", "rugby-league", "motorsport", "aussie-rules", "flashscore-ratings", "american-sports", "african-football", "combat-sports", "winter-sports", "transfer-news")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("flashscore-news-article", new Operation(
+            "flashscore-news-article",
+            "GET",
+            "/flashscore/news-article",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-news-categories", new Operation(
+            "flashscore-news-categories",
+            "GET",
+            "/flashscore/news-categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-ranking-categories", new Operation(
+            "flashscore-ranking-categories",
+            "GET",
+            "/flashscore/ranking-categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-rankings", new Operation(
+            "flashscore-rankings",
+            "GET",
+            "/flashscore/rankings",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of("fifa", "tennis-atp", "tennis-wta", "tennis-atp-race", "tennis-wta-race", "tennis-atp-doubles", "tennis-wta-doubles", "tennis-atp-doubles-race", "tennis-wta-doubles-race", "badminton-bwf-singles-men", "badminton-bwf-singles-women", "badminton-bwf-doubles-men", "badminton-bwf-doubles-women", "badminton-bwf-mixed-doubles", "golf-owgr", "golf-wwgr", "golf-pga-fedexcup", "golf-pga-money", "golf-dp-world-tour", "golf-lpga", "golf-asian-tour", "golf-japan-tour", "golf-sunshine-tour", "golf-korn-ferry", "golf-champions-tour", "darts-world-ranking", "snooker-world-ranking", "tennis-atp-live", "tennis-wta-live", "tennis-atp-race-live", "tennis-wta-race-live", "tennis-atp-doubles-live", "tennis-wta-doubles-live", "tennis-atp-doubles-race-live", "tennis-wta-doubles-race-live"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-scores", new Operation(
+            "flashscore-scores",
+            "GET",
+            "/flashscore/scores",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "tennis", "basketball", "hockey", "golf", "formula-1", "baseball", "snooker", "american-football", "aussie-rules", "badminton", "bandy", "beach-soccer", "beach-volleyball", "boxing", "cricket", "cycling", "darts", "esports", "field-hockey", "floorball", "futsal", "handball", "horse-racing", "kabaddi", "mma", "motorsport", "netball", "pesapallo", "rugby-league", "rugby-union", "table-tennis", "volleyball", "water-polo", "winter-sports")),
+            new QueryParam("day_offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-search", new Operation(
+            "flashscore-search",
+            "GET",
+            "/flashscore/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-sports", new Operation(
+            "flashscore-sports",
+            "GET",
+            "/flashscore/sports",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-top-search", new Operation(
+            "flashscore-top-search",
+            "GET",
+            "/flashscore/top-search",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-tournament-events", new Operation(
+            "flashscore-tournament-events",
+            "GET",
+            "/flashscore/tournament-events",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+    }
+
+    private static void putOperations16(Map<String, Operation> m) {
+        m.put("flashscore-tournament-seasons", new Operation(
+            "flashscore-tournament-seasons",
+            "GET",
+            "/flashscore/tournament-seasons",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-tournament-standings", new Operation(
+            "flashscore-tournament-standings",
+            "GET",
+            "/flashscore/tournament-standings",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of()),
+            new QueryParam("view", false, "string", List.of("overall", "home", "away", "form_overall", "form_home", "form_away", "overunder_overall", "overunder_home", "overunder_away", "htft_overall", "htft_home", "htft_away", "top_scorers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("flashscore-tournament-standings-views", new Operation(
+            "flashscore-tournament-standings-views",
+            "GET",
+            "/flashscore/tournament-standings-views",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("foodpanda-restaurant", new Operation(
             "foodpanda-restaurant",
             "GET",
@@ -10431,9 +14513,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("foodpanda-restaurant-reviews", new Operation(
             "foodpanda-restaurant-reviews",
             "GET",
@@ -10465,6 +14544,1098 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("foodpanda-search-cuisines", new Operation(
+            "foodpanda-search-cuisines",
+            "GET",
+            "/foodpanda/search/cuisines",
+            List.of(),
+            List.of(
+            new QueryParam("market", false, "string", List.of("sg", "pk", "bd", "hk", "my", "ph", "la", "kh", "tw", "mm")),
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("forbes-article", new Operation(
+            "forbes-article",
+            "GET",
+            "/forbes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("forbes-author", new Operation(
+            "forbes-author",
+            "GET",
+            "/forbes/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("forbes-billionaires", new Operation(
+            "forbes-billionaires",
+            "GET",
+            "/forbes/billionaires",
+            List.of(),
+            List.of(
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("start", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("start")));
+        m.put("forbes-categories", new Operation(
+            "forbes-categories",
+            "GET",
+            "/forbes/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("forbes-headlines", new Operation(
+            "forbes-headlines",
+            "GET",
+            "/forbes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("forbes-person", new Operation(
+            "forbes-person",
+            "GET",
+            "/forbes/person",
+            List.of(),
+            List.of(
+            new QueryParam("uri", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignaffairs-article", new Operation(
+            "foreignaffairs-article",
+            "GET",
+            "/foreignaffairs/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignaffairs-author", new Operation(
+            "foreignaffairs-author",
+            "GET",
+            "/foreignaffairs/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignaffairs-headlines", new Operation(
+            "foreignaffairs-headlines",
+            "GET",
+            "/foreignaffairs/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignaffairs-topic", new Operation(
+            "foreignaffairs-topic",
+            "GET",
+            "/foreignaffairs/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignaffairs-topics", new Operation(
+            "foreignaffairs-topics",
+            "GET",
+            "/foreignaffairs/topics",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-article", new Operation(
+            "foreignpolicy-article",
+            "GET",
+            "/foreignpolicy/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-author", new Operation(
+            "foreignpolicy-author",
+            "GET",
+            "/foreignpolicy/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-headlines", new Operation(
+            "foreignpolicy-headlines",
+            "GET",
+            "/foreignpolicy/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-live", new Operation(
+            "foreignpolicy-live",
+            "GET",
+            "/foreignpolicy/live",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-live-detail", new Operation(
+            "foreignpolicy-live-detail",
+            "GET",
+            "/foreignpolicy/live-detail",
+            List.of(),
+            List.of(
+            new QueryParam("live", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-project", new Operation(
+            "foreignpolicy-project",
+            "GET",
+            "/foreignpolicy/project",
+            List.of(),
+            List.of(
+            new QueryParam("project", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foreignpolicy-projects", new Operation(
+            "foreignpolicy-projects",
+            "GET",
+            "/foreignpolicy/projects",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("foreignpolicy-topic", new Operation(
+            "foreignpolicy-topic",
+            "GET",
+            "/foreignpolicy/topic",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("category", "tag")),
+            new QueryParam("topic", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fortune-article", new Operation(
+            "fortune-article",
+            "GET",
+            "/fortune/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-author", new Operation(
+            "fortune-author",
+            "GET",
+            "/fortune/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fortune-companies", new Operation(
+            "fortune-companies",
+            "GET",
+            "/fortune/companies",
+            List.of(),
+            List.of(
+            new QueryParam("search", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("industry", false, "string", List.of()),
+            new QueryParam("ranking", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("min_revenue", false, "integer", List.of()),
+            new QueryParam("max_revenue", false, "integer", List.of()),
+            new QueryParam("min_employees", false, "integer", List.of()),
+            new QueryParam("max_employees", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fortune-company-filters", new Operation(
+            "fortune-company-filters",
+            "GET",
+            "/fortune/companies/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-company", new Operation(
+            "fortune-company",
+            "GET",
+            "/fortune/company",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-headlines", new Operation(
+            "fortune-headlines",
+            "GET",
+            "/fortune/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest", "fortune-500", "finance", "tech", "leadership", "lifestyle", "economy", "newsletters", "success", "magazine", "real-estate", "investing", "asia", "politics", "artificial-intelligence", "workplace-culture", "personal-finance", "middle-east", "big-tech", "travel-and-leisure", "c-suite", "crypto", "health", "commentary", "retail", "mpw", "features", "conferences", "europe", "environment", "arts-and-entertainment", "cybersecurity", "global", "innovation", "news", "north-america"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-news", new Operation(
+            "fortune-news",
+            "GET",
+            "/fortune/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-ranking", new Operation(
+            "fortune-ranking",
+            "GET",
+            "/fortune/ranking",
+            List.of(),
+            List.of(
+            new QueryParam("list", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("search", false, "string", List.of()),
+            new QueryParam("filter", false, "array", List.of()),
+            new QueryParam("sector", false, "string", List.of()),
+            new QueryParam("industry", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("profitable", false, "string", List.of()),
+            new QueryParam("sort_by", false, "string", List.of()),
+            new QueryParam("sort_order", false, "string", List.of("asc", "desc")),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fortune-ranking-filters", new Operation(
+            "fortune-ranking-filters",
+            "GET",
+            "/fortune/ranking/filters",
+            List.of(),
+            List.of(
+            new QueryParam("list", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-ranking-lists", new Operation(
+            "fortune-ranking-lists",
+            "GET",
+            "/fortune/ranking/lists",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-ranking-years", new Operation(
+            "fortune-ranking-years",
+            "GET",
+            "/fortune/ranking/years",
+            List.of(),
+            List.of(
+            new QueryParam("list", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortune-sections", new Operation(
+            "fortune-sections",
+            "GET",
+            "/fortune/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-league", new Operation(
+            "fotmob-league",
+            "GET",
+            "/fotmob/league",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-leagues", new Operation(
+            "fotmob-leagues",
+            "GET",
+            "/fotmob/leagues",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-match", new Operation(
+            "fotmob-match",
+            "GET",
+            "/fotmob/match",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-matches", new Operation(
+            "fotmob-matches",
+            "GET",
+            "/fotmob/matches",
+            List.of(),
+            List.of(
+            new QueryParam("date", true, "string", List.of()),
+            new QueryParam("timezone", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-news", new Operation(
+            "fotmob-news",
+            "GET",
+            "/fotmob/news",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", true, "string", List.of()),
+            new QueryParam("start_index", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-player", new Operation(
+            "fotmob-player",
+            "GET",
+            "/fotmob/player",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("include_market_values", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-player-match-stats", new Operation(
+            "fotmob-player-match-stats",
+            "GET",
+            "/fotmob/player-match-stats",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "string", List.of()),
+            new QueryParam("match_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-player-matches", new Operation(
+            "fotmob-player-matches",
+            "GET",
+            "/fotmob/player-matches",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "string", List.of()),
+            new QueryParam("league_id", false, "string", List.of()),
+            new QueryParam("team_id", false, "string", List.of()),
+            new QueryParam("before", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-player-stats", new Operation(
+            "fotmob-player-stats",
+            "GET",
+            "/fotmob/player-stats",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "string", List.of()),
+            new QueryParam("season_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-search", new Operation(
+            "fotmob-search",
+            "GET",
+            "/fotmob/search",
+            List.of(),
+            List.of(
+            new QueryParam("term", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-stats", new Operation(
+            "fotmob-stats",
+            "GET",
+            "/fotmob/stats",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", true, "string", List.of()),
+            new QueryParam("season_id", false, "string", List.of()),
+            new QueryParam("type", true, "string", List.of("players", "teams")),
+            new QueryParam("stat", true, "string", List.of()),
+            new QueryParam("team_id", false, "string", List.of()),
+            new QueryParam("position", false, "string", List.of("all", "striker", "winger", "attackingMidfielder", "midfielder", "fullback", "centerBack"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-stats-categories", new Operation(
+            "fotmob-stats-categories",
+            "GET",
+            "/fotmob/stats-categories",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", true, "string", List.of()),
+            new QueryParam("season_id", false, "string", List.of()),
+            new QueryParam("type", true, "string", List.of("players", "teams"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-table", new Operation(
+            "fotmob-table",
+            "GET",
+            "/fotmob/table",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-team", new Operation(
+            "fotmob-team",
+            "GET",
+            "/fotmob/team",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-team-news", new Operation(
+            "fotmob-team-news",
+            "GET",
+            "/fotmob/team-news",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("start_index", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-transfers", new Operation(
+            "fotmob-transfers",
+            "GET",
+            "/fotmob/transfers",
+            List.of(),
+            List.of(
+            new QueryParam("mode", false, "string", List.of("all", "rumours", "popular")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("last", false, "string", List.of("6months", "1year", "2years", "3years")),
+            new QueryParam("direction", false, "string", List.of("all", "in", "out")),
+            new QueryParam("min_fee", false, "integer", List.of()),
+            new QueryParam("max_fee", false, "integer", List.of()),
+            new QueryParam("league_ids", false, "string", List.of()),
+            new QueryParam("team_ids", false, "string", List.of()),
+            new QueryParam("order_by", false, "string", List.of("lastModified", "fee", "date", "name", "fromClubName", "toClubName")),
+            new QueryParam("exclude_extensions", false, "boolean", List.of()),
+            new QueryParam("likely_only", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("foxnews-article", new Operation(
+            "foxnews-article",
+            "GET",
+            "/foxnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foxnews-author", new Operation(
+            "foxnews-author",
+            "GET",
+            "/foxnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foxnews-headlines", new Operation(
+            "foxnews-headlines",
+            "GET",
+            "/foxnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("us", "world", "politics", "science", "health", "sports", "travel", "tech", "opinion", "entertainment", "media", "lifestyle"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foxnews-news", new Operation(
+            "foxnews-news",
+            "GET",
+            "/foxnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("foxnews-search", new Operation(
+            "foxnews-search",
+            "GET",
+            "/foxnews/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("start", false, "integer", List.of()),
+            new QueryParam("type", false, "string", List.of("article", "video", "slideshow"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("start")));
+    }
+
+    private static void putOperations17(Map<String, Operation> m) {
+        m.put("foxnews-sections", new Operation(
+            "foxnews-sections",
+            "GET",
+            "/foxnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("france24-article", new Operation(
+            "france24-article",
+            "GET",
+            "/france24/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("france24-author", new Operation(
+            "france24-author",
+            "GET",
+            "/france24/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("france24-headlines", new Operation(
+            "france24-headlines",
+            "GET",
+            "/france24/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("africa", "americas", "asia-pacific", "europe", "france", "middle-east", "business-tech", "culture", "environment", "sport", "live-news", "tv-shows"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("france24-news", new Operation(
+            "france24-news",
+            "GET",
+            "/france24/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("france24-sections", new Operation(
+            "france24-sections",
+            "GET",
+            "/france24/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ft-article", new Operation(
+            "ft-article",
+            "GET",
+            "/ft/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ft-author", new Operation(
+            "ft-author",
+            "GET",
+            "/ft/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("ft-categories", new Operation(
+            "ft-categories",
+            "GET",
+            "/ft/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ft-headlines", new Operation(
+            "ft-headlines",
+            "GET",
+            "/ft/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("ft-news", new Operation(
+            "ft-news",
+            "GET",
+            "/ft/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ft-search", new Operation(
+            "ft-search",
+            "GET",
+            "/ft/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "date")),
+            new QueryParam("date_range", false, "string", List.of("now-24h", "now-7d", "now-30d", "now-1y"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gamerant-article", new Operation(
+            "gamerant-article",
+            "GET",
+            "/gamerant/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamerant-author", new Operation(
+            "gamerant-author",
+            "GET",
+            "/gamerant/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamerant-headlines", new Operation(
+            "gamerant-headlines",
+            "GET",
+            "/gamerant/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("games", "gaming", "pc-news", "steam-news", "core-news", "xbox-series-xs-news", "xbox-news", "xbox-one-news", "platforms", "lists", "strategy-guide", "anime", "anime-news", "nintendo-news", "legend-of-zelda-news", "originals", "features", "gaming-features", "exclusives", "ps5-news", "bethesda-news", "playstation-news", "pokemon-news", "animal-crossing-news", "activision-news", "call-of-duty-news", "grand-theft-auto-news", "epic-games-store-news", "nintendo-switch-news", "fortnite-news", "one-piece-news", "anime-editorial", "diablo-news", "pokemon-go-news", "mobile-news", "ios-news", "android-news", "tabletop", "dc-news", "mortal-kombat-news", "latest-videos", "game-rant-series", "gamerant-gaming-videos-original", "videos", "disney-news", "movies-tv", "movies-tv-news", "movies-tv-lists", "movies-tv-features", "giveaways-contests", "stardew-valley-articles", "grand-theft-auto-5-news", "cd-projekt-red-news", "halo-news", "persona-news", "death-stranding-news", "dragon-ball-z-news", "genshin-impact-guides", "lord-of-the-rings-news", "world-of-warcraft-news", "streaming", "the-witcher-franchise-news", "final-fantasy-news", "resident-evil-news", "final-fantasy-7-news", "ps4-news", "call-of-duty-warzone-news", "the-elder-scrolls-news", "destiny-news", "fallout-news", "red-dead-redemption-news", "game-reviews", "final-fantasy-14-news", "the-last-of-us-news", "nintendo-3ds-news", "fallout-76-news", "marvel-news", "featured", "editorial", "ps3-news", "xbox-360-news", "video-interviews", "assassins-creed-news", "pause-for-thought", "star-wars-news", "pokemon-scarlet-violet-news", "theme-parks", "bloodborne-news", "review-roundup", "apex-legends-news", "dungeons-and-dragons-news", "kingdom-hearts-franchise-news", "dragon-age-news", "overwatch-news", "overwatch-2-news", "pokemon-legends-z-a-news", "pokemon-videos", "minecraft-news", "game-previews", "elden-ring-news", "amazon-news", "doom-news", "no-mans-sky-news", "metroid-franchise-news", "league-of-legends-news", "borderlands-news", "super-smash-bros-news", "valheim-news", "spider-man-news", "wii-news", "pokemon-go-guides", "the-witcher-3-news", "red-dead-redemption-2-news", "battlefield-franchise-news", "gta-online-news", "cod-modern-warfare-news", "video-lists", "playstation-videos", "xbox-videos", "dark-souls-news", "video-originals", "genshin-impact-news", "elden-ring-videos", "mass-effect-news", "rainbow-six-siege-news", "rainbow-six-franchise-news", "god-of-war-news", "persona-5-news", "the-last-of-us-2-news", "explainer", "stardew-valley-guides", "halo-infinite-news", "hardware-reviews", "movie-review", "dead-by-daylight-news", "far-cry-franchise-news", "zelda-breath-of-the-wild-news", "pokemon-go-reading", "365-days-later", "dead-space-news", "acnh-news", "game-rant-advance", "nintendo-switch-reviews", "pokemon-scarlet-and-violet-features", "red-dead-online-news", "game-deals", "steam-videos", "psn-news", "complete-guides-walkthroughs", "horizon-forbidden-west-news", "tv-review", "game-trailers", "assassins-creed-videos", "wii-u-news", "pc-videos", "pubg-news", "buyers-guides", "cyberpunk-videos", "baldurs-gate-3-videos", "pokemon-legends-z-a-guides", "rantable", "pokemon-scarlet-and-violet-guides", "fallout-videos", "fallout-4-videos", "game-rant-mailbag", "video-news", "star-wars-outlaws-videos", "hype-train-videos", "borderlands-3-news", "bite-size-lore", "open-world-videos", "gamers-said", "red-dead-redemption-2-videos", "stardew-valley-videos", "have-you-heard-of", "creators-on-game-rant", "movies-tv-trailers", "indie-videos"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamerant-news", new Operation(
+            "gamerant-news",
+            "GET",
+            "/gamerant/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamerant-sections", new Operation(
+            "gamerant-sections",
+            "GET",
+            "/gamerant/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamesradar-article", new Operation(
+            "gamesradar-article",
+            "GET",
+            "/gamesradar/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamesradar-author", new Operation(
+            "gamesradar-author",
+            "GET",
+            "/gamesradar/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gamesradar-headlines", new Operation(
+            "gamesradar-headlines",
+            "GET",
+            "/gamesradar/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("games", "platforms", "entertainment", "comics", "hardware", "toys-collectibles", "tabletop-gaming", "buying-guides", "lego", "dungeons-and-dragons", "videos", "games-news", "games-features", "games-reviews", "games-guides", "hardware-news", "hardware-reviews", "hardware-features", "entertainment-tv", "entertainment-movies", "entertainment-streaming"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamesradar-news", new Operation(
+            "gamesradar-news",
+            "GET",
+            "/gamesradar/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gamesradar-sections", new Operation(
+            "gamesradar-sections",
+            "GET",
+            "/gamesradar/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gbnews-article", new Operation(
+            "gbnews-article",
+            "GET",
+            "/gbnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gbnews-author", new Operation(
+            "gbnews-author",
+            "GET",
+            "/gbnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gbnews-headlines", new Operation(
+            "gbnews-headlines",
+            "GET",
+            "/gbnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/animals", "news/army", "news/benefit-fraudsters", "news/best-of-britain", "news/christianity", "news/crime", "news/defence", "news/education", "news/energy", "news/environment", "news/falkland-islands", "news/fire", "news/free-speech", "news/fuel-crisis", "news/gibraltar", "news/grooming-gangs", "news/lgbt", "news/m25", "news/madeleine-mccann", "news/migrant-crisis", "news/national-lottery", "news/neighbour-rows", "news/oil", "news/police", "news/protests", "news/social-media", "news/taxpayer-waste", "news/tesco", "news/trains", "news/transport", "news/uk", "news/uk/birmingham", "news/uk/bristol", "news/uk/east-midlands", "news/uk/east-of-england", "news/uk/edinburgh", "news/uk/england", "news/uk/essex", "news/uk/glasgow", "news/uk/kent", "news/uk/liverpool", "news/uk/london", "news/uk/manchester", "news/uk/north-east", "news/uk/north-west", "news/uk/northern-ireland", "news/uk/scotland", "news/uk/south-east", "news/uk/south-west", "news/uk/wales", "news/uk/west-midlands", "news/uk/yorkshire", "news/us", "news/us/elon-musk", "news/us/melania-trump", "news/us/new-york", "news/video-news", "news/woke-madness", "news/world", "news/world/australia", "news/world/canada", "news/world/china", "news/world/emmanuel-macron", "news/world/europe", "news/world/france", "news/world/germany", "news/world/greece", "news/world/iran", "news/world/ireland", "news/world/isis", "news/world/israel", "news/world/italy", "news/world/nato", "news/world/poland", "news/world/portugal", "news/world/russia", "news/world/spain", "news/world/terrorism", "news/world/ukraine", "news/world/vladimir-putin", "news/world/volodymyr-zelenskyy", "news/world/war", "editorial", "politics", "politics/boris-johnson", "politics/brexit", "politics/ed-davey", "politics/elections", "politics/green-party", "politics/uk", "politics/uk/andy-burnham", "politics/uk/angela-rayner", "politics/uk/conservative-party", "politics/uk/government", "politics/uk/home-office", "politics/uk/house-of-commons", "politics/uk/john-healey", "politics/uk/keir-starmer", "politics/uk/kemi-badenoch", "politics/uk/labour-party", "politics/uk/liberal-democrats", "politics/uk/nicola-sturgeon", "politics/uk/pmqs", "politics/uk/rachel-reeves", "politics/uk/reform-uk", "politics/uk/robert-jenrick", "politics/uk/sadiq-khan", "politics/uk/snp", "politics/uk/suella-braverman", "politics/uk/tony-blair", "politics/us", "politics/us/donald-trump", "politics/us/jd-vance", "politics/us/joe-biden", "politics/world", "politics/world/eu", "us", "sport", "sport/boxing", "sport/boxing/anthony-joshua", "sport/boxing/tyson-fury", "sport/cricket", "sport/cricket/england-cricket", "sport/darts", "sport/darts/luke-littler", "sport/f1", "sport/f1/christian-horner", "sport/f1/george-russell", "sport/f1/lando-norris", "sport/f1/lewis-hamilton", "sport/f1/max-verstappen", "sport/f1/michael-schumacher", "sport/football", "sport/football/arsenal", "sport/football/champions-league", "sport/football/chelsea", "sport/football/cristiano-ronaldo", "sport/football/efl", "sport/football/england-football", "sport/football/liverpool", "sport/football/manchester-city", "sport/football/manchester-united", "sport/football/premier-league", "sport/football/scotland-football", "sport/football/tottenham-hotspur", "sport/football/world-cup", "sport/golf", "sport/golf/rory-mcilroy", "sport/golf/tiger-woods", "sport/horse-racing", "sport/nfl", "sport/olympics", "sport/other-sport", "sport/rugby", "sport/snooker", "sport/snooker/ronnie-osullivan", "sport/tennis", "sport/tennis/carlos-alcaraz", "sport/tennis/emma-raducanu", "sport/tennis/novak-djokovic", "sport/us-sport", "opinion", "celebrity", "celebrity/22-kids-and-counting", "celebrity/bbc", "celebrity/big-brother", "celebrity/britains-got-talent", "celebrity/brooklyn-beckham", "celebrity/channel-4", "celebrity/channel-5", "celebrity/clarksons-farm", "celebrity/coronation-street", "celebrity/david-beckham", "celebrity/disney", "celebrity/dragons-den", "celebrity/eurovision", "celebrity/film", "celebrity/gary-lineker", "celebrity/gogglebox", "celebrity/harry-potter", "celebrity/im-a-celebrity-get-me-out-of-here", "celebrity/itv", "celebrity/james-bond", "celebrity/jk-rowling", "celebrity/katie-price", "celebrity/music", "celebrity/netflix", "celebrity/ricky-gervais", "celebrity/rod-stewart", "celebrity/strictly-come-dancing", "celebrity/the-grand-tour", "celebrity/this-morning", "celebrity/tom-jones", "celebrity/tv", "royal", "royal/buckingham-palace", "royal/camilla", "royal/coronation", "royal/duchess-of-edinburgh", "royal/earl-charles-spencer", "royal/edoardo-mapelli-mozzi", "royal/invictus-games", "royal/james-middleton", "royal/kate-middleton", "royal/king-charles", "royal/king-frederik", "royal/lady-louise", "royal/lilibet", "royal/meghan-markle", "royal/mike-tindall", "royal/pippa-middleton", "royal/prince-albert", "royal/prince-andrew", "royal/prince-archie", "royal/prince-edward", "royal/prince-george", "royal/prince-harry", "royal/prince-louis", "royal/prince-philip", "royal/prince-william", "royal/princess-anne", "royal/princess-beatrice", "royal/princess-charlene", "royal/princess-charlotte", "royal/princess-diana", "royal/princess-eugenie", "royal/queen-elizabeth", "royal/sarah-ferguson", "royal/zara-tindall", "money", "money/amazon", "money/bank-branch-closures", "money/bank-of-england", "money/barclays", "money/cost-of-living", "money/coventry-building-society", "money/dwp", "money/economy", "money/energy-bills", "money/high-street", "money/hmrc", "money/inflation", "money/inheritance-tax", "money/interest-rates", "money/isa", "money/jobs", "money/lloyds-bank", "money/martin-lewis", "money/mortgage", "money/national-insurance", "money/nationwide-building-society", "money/net-zero", "money/nsi", "money/octopus-energy", "money/pension-credit", "money/pensions", "money/pip", "money/poundland", "money/premium-bonds", "money/royal-mail", "money/savings", "money/skipton-building-society", "money/state-pension", "money/store-closures", "money/student-loans", "money/tax", "money/universal-credit", "money/yorkshire-building-society", "lifestyle", "lifestyle/aldi", "lifestyle/asda", "lifestyle/beauty", "lifestyle/cars", "lifestyle/cars/bmw", "lifestyle/cars/byd", "lifestyle/cars/car-finance", "lifestyle/cars/car-insurance", "lifestyle/cars/car-tax", "lifestyle/cars/chery", "lifestyle/cars/classic-cars", "lifestyle/cars/diesel", "lifestyle/cars/driving-laws", "lifestyle/cars/driving-licences", "lifestyle/cars/dvla", "lifestyle/cars/dvsa", "lifestyle/cars/electric-bikes", "lifestyle/cars/electric-vehicles", "lifestyle/cars/ford", "lifestyle/cars/highway-code", "lifestyle/cars/hydrogen-vehicles", "lifestyle/cars/hyundai", "lifestyle/cars/jaguar", "lifestyle/cars/kia", "lifestyle/cars/land-rover", "lifestyle/cars/mercedes", "lifestyle/cars/mini", "lifestyle/cars/mot", "lifestyle/cars/nissan", "lifestyle/cars/parking", "lifestyle/cars/petrol", "lifestyle/cars/renault", "lifestyle/cars/roads", "lifestyle/cars/self-driving", "lifestyle/cars/tesla", "lifestyle/cars/toyota", "lifestyle/cars/ulez", "lifestyle/cars/vauxhall", "lifestyle/cars/volkswagen", "lifestyle/cars/volvo", "lifestyle/diet", "lifestyle/food", "lifestyle/hair", "lifestyle/how-to-look-younger", "lifestyle/lidl", "lifestyle/marks-spencer", "lifestyle/morrisons", "lifestyle/property", "lifestyle/sainsburys", "lifestyle/skin-care", "lifestyle/style", "lifestyle/tesco", "travel", "travel/british-airways", "travel/cruise", "travel/deals", "travel/egypt", "travel/france", "travel/greece", "travel/italy", "travel/jet2", "travel/spain", "travel/staycation", "travel/tui", "travel/turkey", "travel/wizz-air", "health", "health/cancer", "health/covid", "health/dementia", "health/diabetes", "health/nhs", "health/sleep", "health/vaccine", "health/world-health-organisation", "science", "science/archaeology", "science/space", "tech", "tech/ai", "tech/android", "tech/apple", "tech/broadband", "tech/chatgpt", "tech/deals", "tech/dyson", "tech/ee", "tech/fire-tv", "tech/freely", "tech/freeview", "tech/gemini", "tech/google", "tech/kindle", "tech/malware", "tech/meta", "tech/microsoft", "tech/nintendo", "tech/oura", "tech/playstation", "tech/prime-video", "tech/privacy", "tech/reviews", "tech/roku", "tech/samsung", "tech/sky-tv", "tech/streaming", "tech/virgin", "tech/vpn", "tech/whatsapp", "tech/windows", "weather", "weather/flood", "weather/heatwave", "weather/rain", "weather/storms", "traffic-travel", "reflections", "newsfromus", "watch", "watch/originals"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gbnews-news", new Operation(
+            "gbnews-news",
+            "GET",
+            "/gbnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gbnews-sections", new Operation(
+            "gbnews-sections",
+            "GET",
+            "/gbnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("gdelt-context", new Operation(
             "gdelt-context",
@@ -11028,6 +16199,248 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("gizmodo-article", new Operation(
+            "gizmodo-article",
+            "GET",
+            "/gizmodo/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations18(Map<String, Operation> m) {
+        m.put("gizmodo-author", new Operation(
+            "gizmodo-author",
+            "GET",
+            "/gizmodo/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gizmodo-headlines", new Operation(
+            "gizmodo-headlines",
+            "GET",
+            "/gizmodo/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("tech", "artificial-intelligence", "commerce", "crime", "cryptocurrencies", "culture", "gadgets", "internet", "politics", "privacy-and-security", "robots", "social-media", "sploid", "tech-policy", "transportation", "science", "biology", "health", "human-history", "physics", "space", "io9", "anime", "books-comics", "corporate-culture", "games", "io9-reviews", "movies", "television", "theme-parks-destinations", "toys-and-collectibles", "trailer-frenzy", "earther", "climate-change", "conservation", "earth-science", "energy", "environmental-justice", "reviews", "desktops", "gaming", "headphones", "home-entertainment", "laptops", "other-gadgets", "phones", "tablets", "wearables", "deals"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gizmodo-news", new Operation(
+            "gizmodo-news",
+            "GET",
+            "/gizmodo/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gizmodo-sections", new Operation(
+            "gizmodo-sections",
+            "GET",
+            "/gizmodo/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globalnews-article", new Operation(
+            "globalnews-article",
+            "GET",
+            "/globalnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globalnews-author", new Operation(
+            "globalnews-author",
+            "GET",
+            "/globalnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globalnews-headlines", new Operation(
+            "globalnews-headlines",
+            "GET",
+            "/globalnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("world", "canada", "politics", "money", "health", "entertainment", "environment", "lifestyle", "perspectives", "sports", "commentary", "us-news", "the-curator", "national", "barrie", "bc", "calgary", "edmonton", "guelph", "halifax", "hamilton", "kingston", "lethbridge", "london", "montreal", "new-brunswick", "okanagan", "ottawa", "peterborough", "regina", "saskatoon", "toronto", "winnipeg"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globalnews-news", new Operation(
+            "globalnews-news",
+            "GET",
+            "/globalnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globalnews-sections", new Operation(
+            "globalnews-sections",
+            "GET",
+            "/globalnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globeandmail-article", new Operation(
+            "globeandmail-article",
+            "GET",
+            "/globeandmail/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globeandmail-author", new Operation(
+            "globeandmail-author",
+            "GET",
+            "/globeandmail/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globeandmail-headlines", new Operation(
+            "globeandmail-headlines",
+            "GET",
+            "/globeandmail/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("canada", "world", "business", "investing", "personal-finance", "politics", "opinion", "culture", "sports", "life", "real-estate", "drive"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globeandmail-news", new Operation(
+            "globeandmail-news",
+            "GET",
+            "/globeandmail/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("globeandmail-sections", new Operation(
+            "globeandmail-sections",
+            "GET",
+            "/globeandmail/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gmanews-article", new Operation(
+            "gmanews-article",
+            "GET",
+            "/gmanews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gmanews-headlines", new Operation(
+            "gmanews-headlines",
+            "GET",
+            "/gmanews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("topstories", "topstories-metro", "topstories-nation", "topstories-opinion", "topstories-regions", "topstories-specialreports", "topstories-ulatfilipino", "topstories-world", "money", "money-companies", "money-economy", "money-motoring", "money-personalfinance", "sports", "sports-basketball", "sports-boxing", "sports-football", "sports-nba", "sports-othersports", "sports-volleyball", "showbiz", "showbiz-chikaminute", "showbiz-showbizabroad", "lifestyle", "lifestyle-artandculture", "lifestyle-familyandrelationships", "lifestyle-food", "lifestyle-healthandwellness", "lifestyle-hobbiesandactivities", "lifestyle-shoppingandfashion", "lifestyle-travel", "scitech", "scitech-science", "scitech-technology", "pinoyabroad", "pinoyabroad-dispatch", "pinoyabroad-pinoyachievers", "serbisyopubliko", "serbisyopubliko-missingpersons", "serbisyopubliko-transportation", "serbisyopubliko-walangpasok", "cbb", "publicaffairs", "weather"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gmanews-news", new Operation(
+            "gmanews-news",
+            "GET",
+            "/gmanews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gmanews-sections", new Operation(
+            "gmanews-sections",
+            "GET",
+            "/gmanews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("goat-collection", new Operation(
             "goat-collection",
             "GET",
@@ -11171,6 +16584,81 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("goldin-auctions", new Operation(
+            "goldin-auctions",
+            "GET",
+            "/goldin/auctions",
+            List.of(),
+            List.of(
+            new QueryParam("order", false, "string", List.of("asc", "desc"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("goldin-categories", new Operation(
+            "goldin-categories",
+            "GET",
+            "/goldin/categories",
+            List.of(),
+            List.of(
+            new QueryParam("auction_type", false, "string", List.of("Auction", "Fixed_Price"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("goldin-listing", new Operation(
+            "goldin-listing",
+            "GET",
+            "/goldin/listing",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("goldin-search", new Operation(
+            "goldin-search",
+            "GET",
+            "/goldin/search",
+            List.of(),
+            List.of(
+            new QueryParam("auction_type", false, "string", List.of("Auction", "Fixed_Price")),
+            new QueryParam("keyword", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("sub_category", false, "string", List.of()),
+            new QueryParam("certification", false, "string", List.of()),
+            new QueryParam("item_type", false, "string", List.of()),
+            new QueryParam("auction_id", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("Featured", "Ending_Soonest", "Highest_Bids", "Lowest_Bids", "Most_Bids", "Least_Bids", "Most_Recent_Bids", "Highest_Lot_Number", "Recently_Started", "Recently_Created")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("goldin-suggest", new Operation(
+            "goldin-suggest",
+            "GET",
+            "/goldin/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", false, "string", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
@@ -11382,9 +16870,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("google-finance-context", new Operation(
             "google-finance-context",
             "GET",
@@ -11526,6 +17011,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations19(Map<String, Operation> m) {
         m.put("google-finance-news", new Operation(
             "google-finance-news",
             "GET",
@@ -11668,10 +17156,10 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-        m.put("google-search", new Operation(
-            "google-search",
+        m.put("google-news-search", new Operation(
+            "google-news-search",
             "POST",
-            "/google/search",
+            "/google/news",
             List.of(),
             List.of(),
             List.of(),
@@ -12123,6 +17611,240 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("gq-article", new Operation(
+            "gq-article",
+            "GET",
+            "/gq/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gq-author", new Operation(
+            "gq-author",
+            "GET",
+            "/gq/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gq-headlines", new Operation(
+            "gq-headlines",
+            "GET",
+            "/gq/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("culture", "entertainment", "fitness", "gq-hype", "gq-recommends", "gqsports", "grooming", "politics", "style", "watches", "wellness"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gq-news", new Operation(
+            "gq-news",
+            "GET",
+            "/gq/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gq-sections", new Operation(
+            "gq-sections",
+            "GET",
+            "/gq/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-categories", new Operation(
+            "grailed-categories",
+            "GET",
+            "/grailed/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-collection", new Operation(
+            "grailed-collection",
+            "GET",
+            "/grailed/collection",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-collections", new Operation(
+            "grailed-collections",
+            "GET",
+            "/grailed/collections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-designers", new Operation(
+            "grailed-designers",
+            "GET",
+            "/grailed/designers",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("grailed-listing", new Operation(
+            "grailed-listing",
+            "GET",
+            "/grailed/listing",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-search", new Operation(
+            "grailed-search",
+            "GET",
+            "/grailed/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("department", false, "string", List.of("menswear", "womenswear")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("size", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("condition", false, "string", List.of("is_new", "is_gently_used", "is_used", "is_worn", "is_not_specified")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of("heat", "heat_recency", "followers", "newest", "price_asc", "price_desc", "recently_updated", "quality")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("grailed-seller", new Operation(
+            "grailed-seller",
+            "GET",
+            "/grailed/seller",
+            List.of(),
+            List.of(
+            new QueryParam("username", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("grailed-seller-reviews", new Operation(
+            "grailed-seller-reviews",
+            "GET",
+            "/grailed/seller-reviews",
+            List.of(),
+            List.of(
+            new QueryParam("username", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("grailed-similar-listings", new Operation(
+            "grailed-similar-listings",
+            "GET",
+            "/grailed/similar-listings",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("grailed-sold-listings", new Operation(
+            "grailed-sold-listings",
+            "GET",
+            "/grailed/sold-listings",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("department", false, "string", List.of("menswear", "womenswear")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("size", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("condition", false, "string", List.of("is_new", "is_gently_used", "is_used", "is_worn", "is_not_specified")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("sort", false, "string", List.of("recent", "price_asc", "price_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("grailed-suggest", new Operation(
+            "grailed-suggest",
+            "GET",
+            "/grailed/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("grubhub-availability", new Operation(
             "grubhub-availability",
             "GET",
@@ -12153,6 +17875,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations20(Map<String, Operation> m) {
         m.put("grubhub-restaurant", new Operation(
             "grubhub-restaurant",
             "GET",
@@ -12231,9 +17956,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("guardian-article", new Operation(
             "guardian-article",
             "GET",
@@ -12246,6 +17968,21 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("guardian-author", new Operation(
+            "guardian-author",
+            "GET",
+            "/guardian/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("guardian-headlines", new Operation(
             "guardian-headlines",
@@ -12286,6 +18023,212 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("gucci-categories", new Operation(
+            "gucci-categories",
+            "GET",
+            "/gucci/categories",
+            List.of(),
+            List.of(
+            new QueryParam("department", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-category", new Operation(
+            "gucci-category",
+            "GET",
+            "/gucci/category",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gucci-product", new Operation(
+            "gucci-product",
+            "GET",
+            "/gucci/product",
+            List.of(),
+            List.of(
+            new QueryParam("style_code", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-recommendations", new Operation(
+            "gucci-recommendations",
+            "GET",
+            "/gucci/recommendations",
+            List.of(),
+            List.of(
+            new QueryParam("style_code", false, "string", List.of()),
+            new QueryParam("max", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-search", new Operation(
+            "gucci-search",
+            "GET",
+            "/gucci/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("size", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gucci-size-guide", new Operation(
+            "gucci-size-guide",
+            "GET",
+            "/gucci/size-guide",
+            List.of(),
+            List.of(
+            new QueryParam("style_code", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-store", new Operation(
+            "gucci-store",
+            "GET",
+            "/gucci/store",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-stores", new Operation(
+            "gucci-stores",
+            "GET",
+            "/gucci/stores",
+            List.of(),
+            List.of(
+            new QueryParam("department", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-store-search", new Operation(
+            "gucci-store-search",
+            "GET",
+            "/gucci/stores/search",
+            List.of(),
+            List.of(
+            new QueryParam("market", true, "string", List.of("ca", "fr", "jp", "uk", "us")),
+            new QueryParam("north", true, "number", List.of()),
+            new QueryParam("west", true, "number", List.of()),
+            new QueryParam("south", true, "number", List.of()),
+            new QueryParam("east", true, "number", List.of()),
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gucci-suggest", new Operation(
+            "gucci-suggest",
+            "GET",
+            "/gucci/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gulfnews-article", new Operation(
+            "gulfnews-article",
+            "GET",
+            "/gulfnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gulfnews-author", new Operation(
+            "gulfnews-author",
+            "GET",
+            "/gulfnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gulfnews-headlines", new Operation(
+            "gulfnews-headlines",
+            "GET",
+            "/gulfnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest-news", "business", "best-buys", "uae", "entertainment", "world", "sport", "living-in-uae", "lifestyle", "opinion", "travel", "podcasts", "special-reports", "things-to-do", "friday", "the-kurator", "uae-success-stories", "photos", "your-money"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gulfnews-news", new Operation(
+            "gulfnews-news",
+            "GET",
+            "/gulfnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gulfnews-sections", new Operation(
+            "gulfnews-sections",
+            "GET",
+            "/gulfnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("gymshark-collections", new Operation(
             "gymshark-collections",
@@ -12419,6 +18362,236 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("hbr-article", new Operation(
+            "hbr-article",
+            "GET",
+            "/hbr/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hbr-categories", new Operation(
+            "hbr-categories",
+            "GET",
+            "/hbr/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hbr-headlines", new Operation(
+            "hbr-headlines",
+            "GET",
+            "/hbr/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hbr-topic", new Operation(
+            "hbr-topic",
+            "GET",
+            "/hbr/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hermes-categories", new Operation(
+            "hermes-categories",
+            "GET",
+            "/hermes/categories",
+            List.of(),
+            List.of(
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hermes-category", new Operation(
+            "hermes-category",
+            "GET",
+            "/hermes/category",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "priceasc", "pricedsc")),
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hermes-product", new Operation(
+            "hermes-product",
+            "GET",
+            "/hermes/product",
+            List.of(),
+            List.of(
+            new QueryParam("sku", true, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hermes-product-recommendations", new Operation(
+            "hermes-product-recommendations",
+            "GET",
+            "/hermes/product/recommendations",
+            List.of(),
+            List.of(
+            new QueryParam("sku", true, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hermes-products", new Operation(
+            "hermes-products",
+            "GET",
+            "/hermes/products",
+            List.of(),
+            List.of(
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("changed_since", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hermes-search", new Operation(
+            "hermes-search",
+            "GET",
+            "/hermes/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hermes-stores", new Operation(
+            "hermes-stores",
+            "GET",
+            "/hermes/stores",
+            List.of(),
+            List.of(
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en")),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hermes-suggest", new Operation(
+            "hermes-suggest",
+            "GET",
+            "/hermes/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of("at_de", "au_en", "be_en", "be_fr", "br_pt", "ca_en", "ca_fr", "ch_de", "ch_fr", "cz_en", "de_de", "dh_en", "dk_en", "es_es", "fi_en", "fr_fr", "gr_en", "hk_en", "ie_en", "it_it", "jp_ja", "kr_ko", "lu_fr", "mo_en", "mx_es", "my_en", "nl_en", "no_en", "pl_en", "pt_en", "ri_en", "se_en", "sg_en", "th_en", "tw_zh", "uk_en", "us_en"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hindustantimes-article", new Operation(
+            "hindustantimes-article",
+            "GET",
+            "/hindustantimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hindustantimes-author", new Operation(
+            "hindustantimes-author",
+            "GET",
+            "/hindustantimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hindustantimes-headlines", new Operation(
+            "hindustantimes-headlines",
+            "GET",
+            "/hindustantimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("india-news", "world-news", "cities", "business", "sports", "cricket", "entertainment", "lifestyle", "astrology", "education", "technology", "opinion", "science", "books", "real-estate", "car-bike", "nri", "htcity", "ht-insight", "ht-explainers", "editorials", "trending", "india-and-the-elections", "editors-pick"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hindustantimes-news", new Operation(
+            "hindustantimes-news",
+            "GET",
+            "/hindustantimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hindustantimes-sections", new Operation(
+            "hindustantimes-sections",
+            "GET",
+            "/hindustantimes/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("hm-categories", new Operation(
             "hm-categories",
             "GET",
@@ -12511,6 +18684,73 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lng", false, "number", List.of()),
             new QueryParam("radius_meters", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hollywoodreporter-article", new Operation(
+            "hollywoodreporter-article",
+            "GET",
+            "/hollywoodreporter/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations21(Map<String, Operation> m) {
+        m.put("hollywoodreporter-author", new Operation(
+            "hollywoodreporter-author",
+            "GET",
+            "/hollywoodreporter/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hollywoodreporter-headlines", new Operation(
+            "hollywoodreporter-headlines",
+            "GET",
+            "/hollywoodreporter/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("arts", "business", "business-news", "digital", "film-tv-music-news", "general-news", "lifestyle", "lifestyle-news", "local-news", "movie-features", "movie-news", "movie-reviews", "movie-videos", "movies", "music", "music-features", "music-industry-news", "music-news", "news", "politics-news", "real-estate", "shopping", "style", "tv", "tv-features", "tv-news", "tv-reviews", "tv-videos", "awards", "behind-the-screen", "heat-vision", "international", "live-feed", "rambling-reporter", "the-fien-print", "the-race", "thr-esq"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hollywoodreporter-news", new Operation(
+            "hollywoodreporter-news",
+            "GET",
+            "/hollywoodreporter/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hollywoodreporter-sections", new Operation(
+            "hollywoodreporter-sections",
+            "GET",
+            "/hollywoodreporter/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -12680,6 +18920,132 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("huffpost-article", new Operation(
+            "huffpost-article",
+            "GET",
+            "/huffpost/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("huffpost-author", new Operation(
+            "huffpost-author",
+            "GET",
+            "/huffpost/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("huffpost-headlines", new Operation(
+            "huffpost-headlines",
+            "GET",
+            "/huffpost/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/us-news", "news/world-news", "impact/business", "impact/green", "section/health", "impact/topic/social-justice", "news/crime", "news/politics", "news/topic/us-congress", "news/topic/extremism", "section/opinion", "entertainment", "entertainment/arts", "news/media", "entertainment/celebrity", "entertainment/tv", "section/sports", "life", "life/healthy-living", "life/travel", "life/technology", "life/taste", "life/style", "life/family", "life/relationships", "life/money", "life/huffpost-home", "life/worklife", "life/huffpost-shopping", "voices", "voices/black-voices", "voices/queer-voices", "voices/latino-voices", "voices/indigenous-voices", "voices/asian-voices", "voices/womens-voices", "voices/voices-of-disabled-people", "section/huffpost-personal", "section/video"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("huffpost-news", new Operation(
+            "huffpost-news",
+            "GET",
+            "/huffpost/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("huffpost-sections", new Operation(
+            "huffpost-sections",
+            "GET",
+            "/huffpost/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ign-article", new Operation(
+            "ign-article",
+            "GET",
+            "/ign/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ign-author", new Operation(
+            "ign-author",
+            "GET",
+            "/ign/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ign-headlines", new Operation(
+            "ign-headlines",
+            "GET",
+            "/ign/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "reviews", "games", "movies", "tv", "tech", "nintendo", "playstation", "xbox", "pc", "mobile", "comics"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ign-news", new Operation(
+            "ign-news",
+            "GET",
+            "/ign/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ign-sections", new Operation(
+            "ign-sections",
+            "GET",
+            "/ign/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("ikea-availability", new Operation(
             "ikea-availability",
             "GET",
@@ -12693,6 +19059,23 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("ikea-categories", new Operation(
+            "ikea-categories",
+            "GET",
+            "/ikea/categories",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("language", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("ikea-category", new Operation(
             "ikea-category",
@@ -12817,6 +19200,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("imdb-image-types", new Operation(
+            "imdb-image-types",
+            "GET",
+            "/imdb/image-types",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("imdb-name", new Operation(
             "imdb-name",
             "GET",
@@ -12853,6 +19248,37 @@ public final class Operations {
             List.of(
             new QueryParam("id", false, "string", List.of()),
             new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("imdb-name-images", new Operation(
+            "imdb-name-images",
+            "GET",
+            "/imdb/name/images",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("behind_the_scenes", "event", "poster", "product", "production_art", "publicity", "still_frame", "unknown")),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("imdb-name-videos", new Operation(
+            "imdb-name-videos",
+            "GET",
+            "/imdb/name/videos",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -12941,6 +19367,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("imdb-title-box-office", new Operation(
+            "imdb-title-box-office",
+            "GET",
+            "/imdb/title/box-office",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("imdb-title-company-credits", new Operation(
             "imdb-title-company-credits",
             "GET",
@@ -12949,6 +19389,21 @@ public final class Operations {
             List.of(
             new QueryParam("id", false, "string", List.of()),
             new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("imdb-title-connections", new Operation(
+            "imdb-title-connections",
+            "GET",
+            "/imdb/title/connections",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -13007,6 +19462,22 @@ public final class Operations {
             List.of(
             new QueryParam("id", false, "string", List.of()),
             new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("imdb-title-images", new Operation(
+            "imdb-title-images",
+            "GET",
+            "/imdb/title/images",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("behind_the_scenes", "event", "poster", "product", "production_art", "publicity", "still_frame", "unknown")),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -13085,7 +19556,7 @@ public final class Operations {
             List.of()));
     }
 
-    private static void putOperations14(Map<String, Operation> m) {
+    private static void putOperations22(Map<String, Operation> m) {
         m.put("imdb-title-release-info", new Operation(
             "imdb-title-release-info",
             "GET",
@@ -13151,6 +19622,21 @@ public final class Operations {
             List.of(
             new QueryParam("id", false, "string", List.of()),
             new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("imdb-title-videos", new Operation(
+            "imdb-title-videos",
+            "GET",
+            "/imdb/title/videos",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -13228,6 +19714,387 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("independent-article", new Operation(
+            "independent-article",
+            "GET",
+            "/independent/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("independent-author", new Operation(
+            "independent-author",
+            "GET",
+            "/independent/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("independent-headlines", new Operation(
+            "independent-headlines",
+            "GET",
+            "/independent/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/uk", "news/world", "news/business", "news/people", "news/science", "news/media", "news/education", "news/obituaries", "environment", "sport", "arts-entertainment", "life-style", "travel", "voices", "money", "bulletin"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("independent-news", new Operation(
+            "independent-news",
+            "GET",
+            "/independent/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("independent-sections", new Operation(
+            "independent-sections",
+            "GET",
+            "/independent/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indianexpress-article", new Operation(
+            "indianexpress-article",
+            "GET",
+            "/indianexpress/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indianexpress-author", new Operation(
+            "indianexpress-author",
+            "GET",
+            "/indianexpress/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indianexpress-headlines", new Operation(
+            "indianexpress-headlines",
+            "GET",
+            "/indianexpress/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("politics", "india", "world", "explained", "express-exclusive", "opinion", "opinion-columns", "business", "cities", "cities-delhi", "cities-mumbai", "cities-kolkata", "cities-pune", "cities-chandigarh", "cities-ahmedabad", "cities-lucknow", "cities-chennai", "cities-hyderabad", "cities-bangalore", "upsc-current-affairs", "entertainment", "entertainment-bollywood", "entertainment-hollywood", "entertainment-malayalam", "entertainment-movie-review", "entertainment-regional", "entertainment-tamil", "entertainment-television", "entertainment-telugu", "entertainment-web-series", "lifestyle", "lifestyle-art-and-culture", "lifestyle-destination-of-the-week", "lifestyle-fashion", "lifestyle-feelings", "lifestyle-fitness", "lifestyle-food-wine", "lifestyle-health", "lifestyle-pets-animals", "lifestyle-workplace", "technology", "technology-tech-news", "technology-tech-reviews", "sports", "sports-cricket", "sports-football", "sports-chess", "sports-asian-games", "health-wellness", "education", "research", "books-and-literature", "long-reads", "fresh-take", "political-pulse", "smart-stocks"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indianexpress-news", new Operation(
+            "indianexpress-news",
+            "GET",
+            "/indianexpress/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indianexpress-sections", new Operation(
+            "indianexpress-sections",
+            "GET",
+            "/indianexpress/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiatoday-article", new Operation(
+            "indiatoday-article",
+            "GET",
+            "/indiatoday/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiatoday-author", new Operation(
+            "indiatoday-author",
+            "GET",
+            "/indiatoday/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiatoday-headlines", new Operation(
+            "indiatoday-headlines",
+            "GET",
+            "/indiatoday/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("top-news", "india", "south-india", "law", "business", "markets", "world", "us-news", "sports", "cricket", "football", "technology", "science", "health", "environment", "lifestyle", "movies", "bollywood", "hollywood", "movie-reviews", "ott", "television", "education", "elections", "fact-check", "opinion", "trending", "sunday-special", "cities", "auto", "jobs", "horoscopes", "insight", "data-intelligence", "history-of-it"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiatoday-news", new Operation(
+            "indiatoday-news",
+            "GET",
+            "/indiatoday/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiatoday-sections", new Operation(
+            "indiatoday-sections",
+            "GET",
+            "/indiatoday/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiewire-article", new Operation(
+            "indiewire-article",
+            "GET",
+            "/indiewire/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiewire-author", new Operation(
+            "indiewire-author",
+            "GET",
+            "/indiewire/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("indiewire-headlines", new Operation(
+            "indiewire-headlines",
+            "GET",
+            "/indiewire/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("analysis", "animation", "awards", "awards-premium", "best-of", "box-office", "brand-content", "breaking-news", "business", "commentary", "consider-this", "craft", "criticism", "culture", "events", "features", "festivals", "film", "general", "general-news", "industry", "interviews", "movies", "news", "obituary", "podcast", "predictions", "results", "shop", "shows", "special-projects", "trailers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiewire-news", new Operation(
+            "indiewire-news",
+            "GET",
+            "/indiewire/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("indiewire-sections", new Operation(
+            "indiewire-sections",
+            "GET",
+            "/indiewire/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inews-article", new Operation(
+            "inews-article",
+            "GET",
+            "/inews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inews-author", new Operation(
+            "inews-author",
+            "GET",
+            "/inews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inews-headlines", new Operation(
+            "inews-headlines",
+            "GET",
+            "/inews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "news", "world", "technology", "politics", "science", "business", "education", "environment", "health", "media", "housing", "crime", "sport", "tennis", "football", "rugby-union", "golf", "cricket", "boxing", "olympics", "rugby-league", "opinion", "editor", "columnists", "comment", "culture", "television", "music", "film", "books", "arts", "radio", "comedy", "inews-lifestyle", "money", "property-and-mortgages", "saving-and-banking", "pensions-and-retirement", "investing", "small-business", "travel", "food-and-drink", "homes-and-gardens", "relationships"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inews-news", new Operation(
+            "inews-news",
+            "GET",
+            "/inews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inews-sections", new Operation(
+            "inews-sections",
+            "GET",
+            "/inews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inquirer-article", new Operation(
+            "inquirer-article",
+            "GET",
+            "/inquirer/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inquirer-author", new Operation(
+            "inquirer-author",
+            "GET",
+            "/inquirer/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("inquirer-headlines", new Operation(
+            "inquirer-headlines",
+            "GET",
+            "/inquirer/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("newsinfo", "globalnation", "business", "sports", "entertainment", "lifestyle", "technology", "opinion", "usa", "cebudailynews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inquirer-news", new Operation(
+            "inquirer-news",
+            "GET",
+            "/inquirer/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("inquirer-sections", new Operation(
+            "inquirer-sections",
+            "GET",
+            "/inquirer/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("instacart-departments", new Operation(
             "instacart-departments",
@@ -13347,6 +20214,262 @@ public final class Operations {
             List.of("id"),
             List.of(
             new QueryParam("max_id", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("investopedia-article", new Operation(
+            "investopedia-article",
+            "GET",
+            "/investopedia/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("investopedia-author", new Operation(
+            "investopedia-author",
+            "GET",
+            "/investopedia/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("investopedia-headlines", new Operation(
+            "investopedia-headlines",
+            "GET",
+            "/investopedia/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "markets-news", "company-news", "earnings-reports", "certificates-deposit-news", "mortgage-rates", "economic-news", "political-news", "cryptocurrency-news", "live-markets-news", "personal-finance-news", "investing", "stocks", "cryptocurrency", "bonds", "etfs", "options-and-derivatives-trading", "commodities", "trading", "financial-technology-and-automated-investing", "brokers", "fundamental-analysis", "banking", "savings-accounts", "certificate-of-deposits", "money-market-account", "checking-accounts", "personal-finance", "retirement-planning", "student-loans", "personal-loans", "budgeting-and-savings", "mortgage", "credit-and-debt", "taxes", "insurance", "financial-literacy-resource-center", "economy", "government-and-policy", "monetary-policy", "fiscal-policy", "economics", "financial-product-reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("investopedia-news", new Operation(
+            "investopedia-news",
+            "GET",
+            "/investopedia/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("investopedia-sections", new Operation(
+            "investopedia-sections",
+            "GET",
+            "/investopedia/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("iol-article", new Operation(
+            "iol-article",
+            "GET",
+            "/iol/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("iol-author", new Operation(
+            "iol-author",
+            "GET",
+            "/iol/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("iol-headlines", new Operation(
+            "iol-headlines",
+            "GET",
+            "/iol/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/africa", "news/brics", "news/crime-and-courts", "news/education", "news/energy", "news/environment", "news/feel-good", "news/opinion", "news/partnered", "news/politics", "news/politics/opinion", "news/south-africa", "news/south-africa/eastern-cape", "news/south-africa/free-state", "news/south-africa/gauteng", "news/south-africa/kwazulu-natal", "news/south-africa/limpopo", "news/south-africa/mpumalanga", "news/south-africa/north-west", "news/south-africa/northern-cape", "news/south-africa/western-cape", "news/world", "sport", "sport/athletics", "sport/betting", "sport/boxing", "sport/cricket", "sport/cricket/domestic", "sport/cricket/international", "sport/cricket/proteas", "sport/cricket/proteas-women", "sport/golf", "sport/horse-racing", "sport/mma", "sport/opinion", "sport/rugby", "sport/rugby/imbokodo", "sport/rugby/international", "sport/rugby/springboks", "sport/rugby/super-rugby", "sport/rugby/urc", "sport/soccer", "sport/soccer/bafana", "sport/soccer/la-liga", "sport/soccer/premier-league", "sport/soccer/psl", "sport/soccer/uefa-champions-league", "sport/swimming", "sport/tennis", "business", "business/economy", "business/jobs", "business/property", "business/window-on-china", "personal-finance", "opinion", "opinion/letters", "entertainment", "entertainment/books", "entertainment/celebrity-news", "entertainment/events", "entertainment/movies", "entertainment/music", "entertainment/opinion", "entertainment/royals", "entertainment/streaming", "entertainment/tv", "entertainment/whats-on", "entertainment/whats-on/cape-town", "entertainment/whats-on/durban", "entertainment/whats-on/joburg", "entertainment/whats-on/pretoria", "lifestyle", "lifestyle/competitions", "lifestyle/family", "lifestyle/family/parenting", "lifestyle/food-drink", "lifestyle/food-drink/recipes", "lifestyle/health", "lifestyle/love-sex", "lifestyle/love-sex/relationships", "lifestyle/opinion", "lifestyle/style-beauty", "lifestyle/style-beauty/beauty", "lifestyle/style-beauty/fashion", "technology", "technology/esports", "technology/gadgets", "technology/gaming", "technology/mobile-apps", "technology/opinion", "technology/software-and-internet", "motoring", "motoring/f1-grand-prix", "motoring/industry-news", "motoring/latest-launches", "motoring/motorsport", "motoring/partnered", "motoring/road-tests", "travel", "travel/africa", "travel/partnered", "travel/south-africa", "travel/travel-tips", "travel/world", "matric", "g20", "government-at-work", "capeargus", "capeargus/news", "capeargus/opinion", "weekend-argus", "weekend-argus/news", "dailynews", "dailynews/news", "the-star", "the-star/news", "sunday-tribune", "saturday-star", "pretoria-news", "pretoria-news/news", "pretoria-news/opinion"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("iol-news", new Operation(
+            "iol-news",
+            "GET",
+            "/iol/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("iol-sections", new Operation(
+            "iol-sections",
+            "GET",
+            "/iol/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations23(Map<String, Operation> m) {
+        m.put("irishindependent-article", new Operation(
+            "irishindependent-article",
+            "GET",
+            "/irishindependent/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishindependent-author", new Operation(
+            "irishindependent-author",
+            "GET",
+            "/irishindependent/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishindependent-headlines", new Operation(
+            "irishindependent-headlines",
+            "GET",
+            "/irishindependent/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "business", "business-commercial-property", "business-in-the-workplace", "business-irish-business", "business-jobs", "business-money", "business-small-business", "business-technology", "business-world", "comment", "comment-analysis", "comment-editorial", "comment-letters", "comment-opinion", "county", "county-cork", "county-cork-sport", "county-dublin", "county-galway", "county-kerry", "county-kerry-north-west-kerry-news", "county-kerry-south-kerry-news", "county-kerry-sport", "county-kerry-tralee-news", "county-louth", "county-louth-drogheda-news", "county-louth-dundalk-news", "county-louth-sport", "county-sligo", "county-sligo-sport", "county-wexford", "county-wexford-enniscorthy-news", "county-wexford-gorey-news", "county-wexford-new-ross-news", "county-wexford-sport", "county-wexford-wexford-district", "county-wicklow", "county-wicklow-arklow-news", "county-wicklow-bray-news", "county-wicklow-sport", "county-wicklow-west-wicklow-news", "county-wicklow-wicklow-district", "entertainment", "entertainment-books", "entertainment-celebrity", "entertainment-movies", "entertainment-music", "entertainment-radio", "entertainment-television", "entertainment-theatre-arts", "farming", "irish-news", "irish-news-courts", "irish-news-crime", "irish-news-education", "irish-news-health", "irish-news-politics", "latest", "lifestyle", "lifestyle-family", "lifestyle-family-learning", "lifestyle-family-mothers-babies", "lifestyle-family-parenting", "lifestyle-fashion-beauty", "lifestyle-food-drink", "lifestyle-food-drink-food-reviews", "lifestyle-food-drink-recipes", "lifestyle-food-drink-wine", "lifestyle-health-wellbeing", "lifestyle-health-wellbeing-baby-loss", "lifestyle-health-wellbeing-fitness", "lifestyle-health-wellbeing-healthy-eating", "lifestyle-health-wellbeing-mental-health", "lifestyle-home-garden", "lifestyle-home-garden-gardens", "lifestyle-home-garden-homes", "lifestyle-home-garden-interiors", "lifestyle-home-garden-new-homes", "lifestyle-motoring", "lifestyle-motoring-car-news", "lifestyle-motoring-car-reviews", "lifestyle-motoring-car-talk", "lifestyle-sex-relationships", "lifestyle-travel", "lifestyle-weddings", "seachtain", "sport", "sport-gaa", "sport-gaa-camogie", "sport-gaa-gaelic-football", "sport-gaa-hurling", "sport-gaa-ladies-football", "sport-gaa-u-20-gaelic-football", "sport-gaa-u-20-hurling", "sport-golf", "sport-horse-racing", "sport-other-sports", "sport-other-sports-american-football", "sport-other-sports-athletics", "sport-other-sports-basketball", "sport-other-sports-boxing", "sport-other-sports-cricket", "sport-other-sports-cycling", "sport-other-sports-darts", "sport-other-sports-hockey", "sport-other-sports-motor-sport", "sport-other-sports-rowing", "sport-other-sports-snooker", "sport-other-sports-swimming", "sport-other-sports-tennis", "sport-rugby", "sport-rugby-champions-cup", "sport-rugby-connacht-rugby", "sport-rugby-leinster-rugby", "sport-rugby-munster-rugby", "sport-rugby-six-nations", "sport-rugby-ulster-rugby", "sport-rugby-united-rugby-championship", "sport-soccer", "sport-soccer-champions-league", "sport-soccer-international-soccer", "sport-soccer-league-of-ireland", "sport-soccer-other-soccer", "sport-soccer-premier-league", "sport-womens-sport", "subscriber-exclusives", "world-news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishindependent-news", new Operation(
+            "irishindependent-news",
+            "GET",
+            "/irishindependent/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishindependent-sections", new Operation(
+            "irishindependent-sections",
+            "GET",
+            "/irishindependent/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishtimes-article", new Operation(
+            "irishtimes-article",
+            "GET",
+            "/irishtimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishtimes-author", new Operation(
+            "irishtimes-author",
+            "GET",
+            "/irishtimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishtimes-headlines", new Operation(
+            "irishtimes-headlines",
+            "GET",
+            "/irishtimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ireland", "opinion", "politics", "business", "your-money", "world", "sport", "life-style", "health", "technology", "culture", "property", "food", "motors", "history", "abroad"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishtimes-news", new Operation(
+            "irishtimes-news",
+            "GET",
+            "/irishtimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("irishtimes-sections", new Operation(
+            "irishtimes-sections",
+            "GET",
+            "/irishtimes/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -13975,9 +21098,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations15(Map<String, Operation> m) {
         m.put("jobs-workday-board", new Operation(
             "jobs-workday-board",
             "GET",
@@ -14054,6 +21174,19 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("justeat-search-filters", new Operation(
+            "justeat-search-filters",
+            "GET",
+            "/justeat/search/filters",
+            List.of(),
+            List.of(
+            new QueryParam("postcode", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("justwatch-age-certifications", new Operation(
             "justwatch-age-certifications",
             "GET",
@@ -14104,6 +21237,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations24(Map<String, Operation> m) {
         m.put("justwatch-episode-offers", new Operation(
             "justwatch-episode-offers",
             "GET",
@@ -14191,13 +21327,14 @@ public final class Operations {
             new QueryParam("country", false, "string", List.of()),
             new QueryParam("language", false, "string", List.of()),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("type", false, "string", List.of("all", "movie", "show"))),
+            new QueryParam("type", false, "string", List.of("all", "movie", "show")),
+            new QueryParam("cursor", false, "string", List.of())),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
-            List.of()));
+            true,
+            List.of("cursor")));
         m.put("justwatch-provider-titles", new Operation(
             "justwatch-provider-titles",
             "GET",
@@ -14800,6 +21937,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("khaleejtimes-article", new Operation(
+            "khaleejtimes-article",
+            "GET",
+            "/khaleejtimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("khaleejtimes-author", new Operation(
+            "khaleejtimes-author",
+            "GET",
+            "/khaleejtimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("khaleejtimes-headlines", new Operation(
+            "khaleejtimes-headlines",
+            "GET",
+            "/khaleejtimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "business-property", "metaverse", "metaverse-blockchain", "metaverse-web3", "business-auto", "business-aviation", "business-corporate", "business-cryptocurrency", "business-currency-exchange", "business-economy", "business-energy", "business-finance", "business-infrastructure", "business-markets", "business-personal-finance", "business-tech", "business-telecom", "entertainment", "entertainment-gaming", "entertainment-local-events", "entertainment-movies", "entertainment-music", "entertainment-ott", "entertainment-things-to-do-in-the-uae", "life-and-living", "life-and-living-banking-in-uae", "life-and-living-housing-in-uae", "life-and-living-public-transport-in-uae", "life-and-living-schooling-in-uae", "life-and-living-uae-holidays", "life-and-living-visa-and-immigration-in-uae", "lifestyle", "lifestyle-arts", "lifestyle-beauty", "lifestyle-books", "lifestyle-fashion", "lifestyle-food", "lifestyle-gadgets", "lifestyle-health", "lifestyle-home", "lifestyle-mental-health", "lifestyle-parenting", "lifestyle-restaurant-reviews", "lifestyle-shopping", "lifestyle-wellness", "lifestyle-women-and-money", "lifestyle-writers-corner", "opinion", "opinion-columnists", "opinion-editorial", "offbeat", "long-reads", "space", "reviews", "reviews-movie-reviews", "reviews-tech-reviews", "sports", "sports-cricket", "sports-f1", "sports-fifa-world-cup", "sports-football", "sports-golf", "sports-horse-racing", "sports-tennis", "sports-local-sports", "travel", "travel-uae-attractions", "uae", "uae-crime", "uae-education", "uae-emergencies", "uae-environment", "uae-expo-city-dubai", "uae-government", "uae-legal", "uae-transport", "uae-weather", "world", "world-africa", "world-americas", "world-asia", "world-europe", "world-gulf", "world-mena", "uae-eid-al-etihad", "metaverse-nfts", "leadership", "leadership-interviews", "leadership-breaking-bread", "leadership-stories", "leadership-contributors", "uae-schools-and-parents", "uae-global-indians"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("khaleejtimes-news", new Operation(
+            "khaleejtimes-news",
+            "GET",
+            "/khaleejtimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("khaleejtimes-sections", new Operation(
+            "khaleejtimes-sections",
+            "GET",
+            "/khaleejtimes/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("kickstarter-comments", new Operation(
             "kickstarter-comments",
             "GET",
@@ -14887,9 +22087,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations16(Map<String, Operation> m) {
         m.put("kohls-stores", new Operation(
             "kohls-stores",
             "GET",
@@ -14910,6 +22107,84 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("kotaku-article", new Operation(
+            "kotaku-article",
+            "GET",
+            "/kotaku/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations25(Map<String, Operation> m) {
+        m.put("kotaku-author", new Operation(
+            "kotaku-author",
+            "GET",
+            "/kotaku/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("kotaku-headlines", new Operation(
+            "kotaku-headlines",
+            "GET",
+            "/kotaku/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("entertainment", "action", "fantasy", "horror", "sci-fi", "superhero", "reviews", "news", "retro", "kotaku-game-diary", "youtube", "odds-and-ends", "feature", "fine-art", "game-tips", "games", "deals"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("kotaku-news", new Operation(
+            "kotaku-news",
+            "GET",
+            "/kotaku/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("kotaku-sections", new Operation(
+            "kotaku-sections",
+            "GET",
+            "/kotaku/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("kroger-categories", new Operation(
+            "kroger-categories",
+            "GET",
+            "/kroger/categories",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -15210,6 +22485,57 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("latimes-article", new Operation(
+            "latimes-article",
+            "GET",
+            "/latimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("latimes-author", new Operation(
+            "latimes-author",
+            "GET",
+            "/latimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("latimes-headlines", new Operation(
+            "latimes-headlines",
+            "GET",
+            "/latimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", false, "string", List.of("main", "business", "business/autos", "business/real-estate", "business/technology", "california", "california/orange-county", "entertainment-arts", "entertainment-arts/awards", "entertainment-arts/books", "entertainment-arts/business", "entertainment-arts/movies", "entertainment-arts/music", "entertainment-arts/tv", "environment", "espanol/comida", "espanol/deportes", "espanol/eeuu", "espanol/entretenimiento", "espanol/internacional", "espanol/mexico", "espanol/politica", "espanol/vida-y-estilo", "food", "lifestyle", "obituaries", "opinion", "politics", "science", "sports", "sports/angels", "sports/chargers", "sports/clippers", "sports/dodgers", "sports/highschool", "sports/hockey", "sports/lakers", "sports/rams", "sports/soccer", "sports/ucla", "sports/usc", "travel", "world-nation"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("latimes-sections", new Operation(
+            "latimes-sections",
+            "GET",
+            "/latimes/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("lazada-categories", new Operation(
             "lazada-categories",
             "GET",
@@ -15429,6 +22755,19 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("linkedin-product-categories", new Operation(
+            "linkedin-product-categories",
+            "GET",
+            "/linkedin/product/categories",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("linkedin-product", new Operation(
             "linkedin-product",
             "GET",
@@ -15441,12 +22780,400 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("linkedin-products-search", new Operation(
+            "linkedin-products-search",
+            "GET",
+            "/linkedin/products/search",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", false, "string", List.of()),
+            new QueryParam("category_id", false, "string", List.of()),
+            new QueryParam("start", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("start")));
         m.put("linkedin-showcase", new Operation(
             "linkedin-showcase",
             "GET",
             "/linkedin/showcase/{id}",
             List.of("id"),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livemint-article", new Operation(
+            "livemint-article",
+            "GET",
+            "/livemint/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livemint-author", new Operation(
+            "livemint-author",
+            "GET",
+            "/livemint/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livemint-headlines", new Operation(
+            "livemint-headlines",
+            "GET",
+            "/livemint/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("companies", "opinion", "money", "politics", "science", "industry", "education", "sports", "technology", "markets", "ai", "insurance", "budget", "elections", "videos"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livemint-news", new Operation(
+            "livemint-news",
+            "GET",
+            "/livemint/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livemint-sections", new Operation(
+            "livemint-sections",
+            "GET",
+            "/livemint/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liverpoolecho-article", new Operation(
+            "liverpoolecho-article",
+            "GET",
+            "/liverpoolecho/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liverpoolecho-author", new Operation(
+            "liverpoolecho-author",
+            "GET",
+            "/liverpoolecho/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("liverpoolecho-headlines", new Operation(
+            "liverpoolecho-headlines",
+            "GET",
+            "/liverpoolecho/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/liverpool-news", "news/uk-world-news", "news/showbiz-news", "news/tv", "news/nostalgia", "news/property", "news/motoring", "news/cost-of-living", "news/health", "sport", "sport/football", "sport/football/football-news", "sport/football/transfer-news", "sport/boxing", "sport/other-sport", "sport/other-sport/horse-racing", "sport/sport-opinion", "whats-on", "whats-on/whats-on-news", "whats-on/family-kids-news", "whats-on/food-drink-news", "whats-on/music-nightlife-news", "whats-on/shopping", "whats-on/theatre-news", "travel", "special-features", "in-your-area"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liverpoolecho-news", new Operation(
+            "liverpoolecho-news",
+            "GET",
+            "/liverpoolecho/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liverpoolecho-sections", new Operation(
+            "liverpoolecho-sections",
+            "GET",
+            "/liverpoolecho/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescience-article", new Operation(
+            "livescience-article",
+            "GET",
+            "/livescience/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations26(Map<String, Operation> m) {
+        m.put("livescience-author", new Operation(
+            "livescience-author",
+            "GET",
+            "/livescience/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("livescience-headlines", new Operation(
+            "livescience-headlines",
+            "GET",
+            "/livescience/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("animals", "archaeology", "chemistry", "features", "health", "human-behavior", "interviews", "news", "opinion", "physics-mathematics", "planet-earth", "products", "space", "technology"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescience-news", new Operation(
+            "livescience-news",
+            "GET",
+            "/livescience/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescience-sections", new Operation(
+            "livescience-sections",
+            "GET",
+            "/livescience/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-competition", new Operation(
+            "livescore-competition",
+            "GET",
+            "/livescore/competition",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-live-scores", new Operation(
+            "livescore-live-scores",
+            "GET",
+            "/livescore/live-scores",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("soccer", "hockey", "basketball", "tennis", "cricket")),
+            new QueryParam("timezone_offset", false, "integer", List.of()),
+            new QueryParam("paging", false, "boolean", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("direction", false, "string", List.of("down", "up"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("livescore-match", new Operation(
+            "livescore-match",
+            "GET",
+            "/livescore/match",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-match-stats", new Operation(
+            "livescore-match-stats",
+            "GET",
+            "/livescore/match-stats",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-news", new Operation(
+            "livescore-news",
+            "GET",
+            "/livescore/news",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-news-article", new Operation(
+            "livescore-news-article",
+            "GET",
+            "/livescore/news-article",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-news-categories", new Operation(
+            "livescore-news-categories",
+            "GET",
+            "/livescore/news-categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-news-feed", new Operation(
+            "livescore-news-feed",
+            "GET",
+            "/livescore/news-feed",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-player", new Operation(
+            "livescore-player",
+            "GET",
+            "/livescore/player",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-scores", new Operation(
+            "livescore-scores",
+            "GET",
+            "/livescore/scores",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("soccer", "hockey", "basketball", "tennis", "cricket")),
+            new QueryParam("date", true, "string", List.of()),
+            new QueryParam("timezone_offset", false, "integer", List.of()),
+            new QueryParam("paging", false, "boolean", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("direction", false, "string", List.of("down", "up"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("livescore-scores-toc", new Operation(
+            "livescore-scores-toc",
+            "GET",
+            "/livescore/scores-toc",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("soccer", "hockey", "basketball", "tennis", "cricket")),
+            new QueryParam("date", true, "string", List.of()),
+            new QueryParam("timezone_offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-sports", new Operation(
+            "livescore-sports",
+            "GET",
+            "/livescore/sports",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("livescore-team", new Operation(
+            "livescore-team",
+            "GET",
+            "/livescore/team",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -15519,6 +23246,70 @@ public final class Operations {
             new QueryParam("lat", false, "number", List.of()),
             new QueryParam("lng", false, "number", List.of()),
             new QueryParam("radius_miles", false, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("macrumors-article", new Operation(
+            "macrumors-article",
+            "GET",
+            "/macrumors/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("macrumors-author", new Operation(
+            "macrumors-author",
+            "GET",
+            "/macrumors/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("macrumors-headlines", new Operation(
+            "macrumors-headlines",
+            "GET",
+            "/macrumors/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("front-page", "guides", "how-to", "reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("macrumors-news", new Operation(
+            "macrumors-news",
+            "GET",
+            "/macrumors/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("macrumors-sections", new Operation(
+            "macrumors-sections",
+            "GET",
+            "/macrumors/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -15653,6 +23444,135 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("marketwatch-article", new Operation(
+            "marketwatch-article",
+            "GET",
+            "/marketwatch/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("marketwatch-author", new Operation(
+            "marketwatch-author",
+            "GET",
+            "/marketwatch/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("marketwatch-headlines", new Operation(
+            "marketwatch-headlines",
+            "GET",
+            "/marketwatch/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest-news", "markets", "investing", "personal-finance", "economy-politics", "technology", "retirement", "real-estate"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("marketwatch-news", new Operation(
+            "marketwatch-news",
+            "GET",
+            "/marketwatch/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("marketwatch-sections", new Operation(
+            "marketwatch-sections",
+            "GET",
+            "/marketwatch/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mashable-article", new Operation(
+            "mashable-article",
+            "GET",
+            "/mashable/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mashable-author", new Operation(
+            "mashable-author",
+            "GET",
+            "/mashable/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("mashable-headlines", new Operation(
+            "mashable-headlines",
+            "GET",
+            "/mashable/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("android", "animals", "apple", "cannabis", "celebrities", "climate-change", "covid-19", "desktops", "digital-culture", "education", "entertainment", "fitness", "games", "gaming", "gaming-consoles", "gender", "headphones", "health-wellness", "house-home", "laptops", "lgbtq", "life", "memes", "mental-health", "mobile", "movies", "podcasts", "science", "sex", "sex-dating-relationships", "smart-home", "social-good", "social-media", "space", "speakers", "tablets", "tech", "tech-industry", "transportation", "tv-shows", "tvs", "wifirouters"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mashable-news", new Operation(
+            "mashable-news",
+            "GET",
+            "/mashable/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mashable-sections", new Operation(
+            "mashable-sections",
+            "GET",
+            "/mashable/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("mcdonalds-categories", new Operation(
             "mcdonalds-categories",
             "GET",
@@ -15738,9 +23658,137 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("mediaite-article", new Operation(
+            "mediaite-article",
+            "GET",
+            "/mediaite/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mediaite-author", new Operation(
+            "mediaite-author",
+            "GET",
+            "/mediaite/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mediaite-headlines", new Operation(
+            "mediaite-headlines",
+            "GET",
+            "/mediaite/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("media", "tv", "news", "entertainment", "sports", "podcasts", "tech", "online", "politics", "trump", "election-2020", "opinion", "columnists", "crime", "premium"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mediaite-news", new Operation(
+            "mediaite-news",
+            "GET",
+            "/mediaite/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mediaite-sections", new Operation(
+            "mediaite-sections",
+            "GET",
+            "/mediaite/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("men-article", new Operation(
+            "men-article",
+            "GET",
+            "/men/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("men-author", new Operation(
+            "men-author",
+            "GET",
+            "/men/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("men-headlines", new Operation(
+            "men-headlines",
+            "GET",
+            "/men/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/uk-news", "news/greater-manchester-news", "news/local-news", "news/world-news", "news/health", "news/property", "news/cost-of-living", "news/money-saving", "news/parenting", "news/real-life", "news/showbiz-news", "news/tv", "sport", "sport/football", "sport/football/football-news", "sport/football/transfer-news", "sport/boxing", "sport/cricket", "whats-on", "whats-on/whats-on-news", "whats-on/family-kids-news", "whats-on/food-drink-news", "whats-on/music-nightlife-news", "whats-on/theatre-news", "whats-on/shopping", "trips-and-breaks"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
     }
 
-    private static void putOperations17(Map<String, Operation> m) {
+    private static void putOperations27(Map<String, Operation> m) {
+        m.put("men-news", new Operation(
+            "men-news",
+            "GET",
+            "/men/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("men-sections", new Operation(
+            "men-sections",
+            "GET",
+            "/men/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("mercari-autocomplete", new Operation(
             "mercari-autocomplete",
             "GET",
@@ -16136,6 +24184,364 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("metro-article", new Operation(
+            "metro-article",
+            "GET",
+            "/metro/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metro-author", new Operation(
+            "metro-author",
+            "GET",
+            "/metro/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metro-headlines", new Operation(
+            "metro-headlines",
+            "GET",
+            "/metro/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "news", "uk", "world", "us", "politics", "tech", "weird", "sport", "football", "boxing", "cricket", "f1", "golf", "snooker", "tennis", "entertainment", "showbiz", "tv", "film", "music", "gaming", "tv-soaps", "coronation-street", "eastenders", "emmerdale", "hollyoaks", "casualty", "lifestyle", "health", "food", "travel", "money", "property", "families", "beauty", "sex", "horoscopes", "shopping", "opinion", "letters", "cartoons"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metro-news", new Operation(
+            "metro-news",
+            "GET",
+            "/metro/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("metro-sections", new Operation(
+            "metro-sections",
+            "GET",
+            "/metro/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-categories", new Operation(
+            "microsoftstore-categories",
+            "GET",
+            "/microsoftstore/categories",
+            List.of(),
+            List.of(
+            new QueryParam("media_type", false, "string", List.of("apps", "games", "devices", "passes", "fonts", "themes", "tencent-android", "tencent-mini"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-category", new Operation(
+            "microsoftstore-category",
+            "GET",
+            "/microsoftstore/category",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("media_type", false, "string", List.of("apps", "games", "devices", "passes", "fonts", "themes", "tencent-android", "tencent-mini")),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("microsoftstore-charts", new Operation(
+            "microsoftstore-charts",
+            "GET",
+            "/microsoftstore/charts",
+            List.of(),
+            List.of(
+            new QueryParam("list", true, "string", List.of("TopFree", "TopPaid", "TopGrossing", "toptrending", "NewAndRising", "Deal", "GettingStartedApps", "MostPopular")),
+            new QueryParam("media_type", false, "string", List.of("apps", "games")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("subcategory", false, "string", List.of()),
+            new QueryParam("discount_filter", false, "string", List.of("onsale")),
+            new QueryParam("subscription_filter", false, "string", List.of("gamepass")),
+            new QueryParam("num_players_filter", false, "string", List.of("AllPlayers", "SinglePlayer", "OnlineMultiplayerWithGold", "LocalMultiplayer", "CoopSupportOnline", "CoopSupportLocal")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("microsoftstore-editorial", new Operation(
+            "microsoftstore-editorial",
+            "GET",
+            "/microsoftstore/editorial",
+            List.of(),
+            List.of(
+            new QueryParam("editorial_id", true, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-events", new Operation(
+            "microsoftstore-events",
+            "GET",
+            "/microsoftstore/events",
+            List.of(),
+            List.of(
+            new QueryParam("media_type", false, "string", List.of("apps", "games")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("microsoftstore-product", new Operation(
+            "microsoftstore-product",
+            "GET",
+            "/microsoftstore/product",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-publisher", new Operation(
+            "microsoftstore-publisher",
+            "GET",
+            "/microsoftstore/publisher",
+            List.of(),
+            List.of(
+            new QueryParam("publisher_name", true, "string", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("microsoftstore-recommended", new Operation(
+            "microsoftstore-recommended",
+            "GET",
+            "/microsoftstore/recommended",
+            List.of(),
+            List.of(
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-related", new Operation(
+            "microsoftstore-related",
+            "GET",
+            "/microsoftstore/related",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("product_type", false, "string", List.of("Application", "Game", "Passes")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("microsoftstore-reviews", new Operation(
+            "microsoftstore-reviews",
+            "GET",
+            "/microsoftstore/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("MostHelpful", "MostRecent")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("microsoftstore-reviews-summary", new Operation(
+            "microsoftstore-reviews-summary",
+            "GET",
+            "/microsoftstore/reviews/summary",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-search", new Operation(
+            "microsoftstore-search",
+            "GET",
+            "/microsoftstore/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("media_type", false, "string", List.of("all", "apps", "games", "devices", "passes", "fonts", "themes", "tencent-android", "tencent-mini")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("price", false, "string", List.of("all", "Free", "Paid", "Sale")),
+            new QueryParam("age", false, "string", List.of("all", "TO3", "TO4", "TO5", "TO6", "TO7", "TO8", "TO9", "TO10", "TO11", "TO12", "TO13", "TO14", "TO15", "TO16", "TO17")),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("microsoftstore-spotlight", new Operation(
+            "microsoftstore-spotlight",
+            "GET",
+            "/microsoftstore/spotlight",
+            List.of(),
+            List.of(
+            new QueryParam("media_type", false, "string", List.of("home", "apps", "games")),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("microsoftstore-suggest", new Operation(
+            "microsoftstore-suggest",
+            "GET",
+            "/microsoftstore/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("prefix", true, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mirror-article", new Operation(
+            "mirror-article",
+            "GET",
+            "/mirror/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mirror-author", new Operation(
+            "mirror-author",
+            "GET",
+            "/mirror/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mirror-headlines", new Operation(
+            "mirror-headlines",
+            "GET",
+            "/mirror/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/uk-news", "news/world-news", "news/politics", "news/weird-news", "news/royals", "news/health", "news/us-news", "news/real-life-stories", "sport", "sport/football", "sport/boxing", "sport/cricket", "sport/formula-1", "sport/golf", "sport/horse-racing", "sport/rugby-league", "sport/rugby-union", "3am", "3am/style", "3am/us-celebrity-news", "lifestyle", "lifestyle/family", "lifestyle/food-drink", "lifestyle/gardening", "lifestyle/motoring", "lifestyle/sex-relationships", "travel", "money", "money/shopping-deals", "tv", "film", "gaming", "tech"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mirror-news", new Operation(
+            "mirror-news",
+            "GET",
+            "/mirror/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mirror-sections", new Operation(
+            "mirror-sections",
+            "GET",
+            "/mirror/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("mlb-game", new Operation(
             "mlb-game",
             "GET",
@@ -16203,6 +24609,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations28(Map<String, Operation> m) {
         m.put("mlb-player-stats", new Operation(
             "mlb-player-stats",
             "GET",
@@ -16307,6 +24716,218 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("modaoperandi-categories", new Operation(
+            "modaoperandi-categories",
+            "GET",
+            "/modaoperandi/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("modaoperandi-designers", new Operation(
+            "modaoperandi-designers",
+            "GET",
+            "/modaoperandi/designers",
+            List.of(),
+            List.of(
+            new QueryParam("gender", true, "string", List.of("women", "men"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("modaoperandi-product", new Operation(
+            "modaoperandi-product",
+            "GET",
+            "/modaoperandi/product",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("modaoperandi-search", new Operation(
+            "modaoperandi-search",
+            "GET",
+            "/modaoperandi/search",
+            List.of(),
+            List.of(
+            new QueryParam("gender", true, "string", List.of("women", "men")),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("size", false, "string", List.of()),
+            new QueryParam("attribute", false, "string", List.of()),
+            new QueryParam("availability", false, "string", List.of("available_now", "preorder", "trunkshow")),
+            new QueryParam("price_min", false, "number", List.of()),
+            new QueryParam("price_max", false, "number", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of("default", "price_low_to_high", "price_high_to_low", "newest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("moncler-categories", new Operation(
+            "moncler-categories",
+            "GET",
+            "/moncler/categories",
+            List.of(),
+            List.of(
+            new QueryParam("levels", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moncler-category", new Operation(
+            "moncler-category",
+            "GET",
+            "/moncler/category",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("price-high-to-low", "price-low-to-high")),
+            new QueryParam("filter", false, "array", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("moncler-product", new Operation(
+            "moncler-product",
+            "GET",
+            "/moncler/product",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moncler-search", new Operation(
+            "moncler-search",
+            "GET",
+            "/moncler/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("price-high-to-low", "price-low-to-high")),
+            new QueryParam("filter", false, "array", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("moncler-stores", new Operation(
+            "moncler-stores",
+            "GET",
+            "/moncler/stores",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moncler-suggest", new Operation(
+            "moncler-suggest",
+            "GET",
+            "/moncler/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moneycontrol-article", new Operation(
+            "moneycontrol-article",
+            "GET",
+            "/moneycontrol/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moneycontrol-author", new Operation(
+            "moneycontrol-author",
+            "GET",
+            "/moneycontrol/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moneycontrol-headlines", new Operation(
+            "moneycontrol-headlines",
+            "GET",
+            "/moneycontrol/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "markets", "economy", "companies", "personal-finance", "ipo", "startup", "commodities", "earnings", "insurance", "banks", "stocks", "mutual-funds", "real-estate", "funding", "information-technology", "india", "politics", "trends", "interview", "opinion", "currency", "telecom", "world", "city", "banking", "explainers", "technology", "automobile", "sports", "cricket", "football", "entertainment", "bollywood", "hollywood", "ott", "tv", "regional", "music", "lifestyle", "beauty", "parenting", "relationship", "home-garden", "health-and-fitness", "education", "science", "astrology", "religion", "travel", "artificial-intelligence", "books"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moneycontrol-news", new Operation(
+            "moneycontrol-news",
+            "GET",
+            "/moneycontrol/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("moneycontrol-sections", new Operation(
+            "moneycontrol-sections",
+            "GET",
+            "/moneycontrol/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("monitors-list", new Operation(
             "monitors-list",
             "GET",
@@ -16372,6 +24993,630 @@ public final class Operations {
             "GET",
             "/monitors/{id}/checks",
             List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationafrica-article", new Operation(
+            "nationafrica-article",
+            "GET",
+            "/nationafrica/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationafrica-author", new Operation(
+            "nationafrica-author",
+            "GET",
+            "/nationafrica/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationafrica-headlines", new Operation(
+            "nationafrica-headlines",
+            "GET",
+            "/nationafrica/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "politics", "world", "gender", "education", "business", "companies", "enterprise", "finance-and-markets", "seeds-of-gold", "sports", "football", "athletics", "rugby", "motorsports", "other-sports", "talkup", "counties", "coast", "lake-region", "mountain", "nairobi-metro", "northern", "rift-valley", "blogs-opinion", "opinion", "editorials", "letters", "blogs", "cutting-edge", "life-and-style", "wellness", "travel", "relationships", "motoring", "family", "culture", "art-books", "health", "healthy-nation", "elections", "elections-news", "presidential", "governor-race", "constituencies", "explainers", "fact-checks"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationafrica-news", new Operation(
+            "nationafrica-news",
+            "GET",
+            "/nationafrica/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationafrica-sections", new Operation(
+            "nationafrica-sections",
+            "GET",
+            "/nationafrica/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationalpost-article", new Operation(
+            "nationalpost-article",
+            "GET",
+            "/nationalpost/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationalpost-author", new Operation(
+            "nationalpost-author",
+            "GET",
+            "/nationalpost/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationalpost-headlines", new Operation(
+            "nationalpost-headlines",
+            "GET",
+            "/nationalpost/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("canada", "true-crime", "politics", "health", "world", "israel-middle-east", "opinion", "longreads", "modern-life", "food", "horoscopes", "style-beauty", "travel", "travel-canada", "travel-usa", "travel-international", "travel-cruises", "travel-guide", "entertainment", "books", "celebrity", "movies", "music", "theatre", "television", "business-essentials", "shopping-essentials", "buy-canadian", "home-living", "outdoor-living", "kitchen-dining", "tech", "personal-care", "entertainment-hobbies", "gift-guide", "deals", "sports", "hockey", "baseball", "basketball", "football", "soccer", "golf", "tennis", "driving"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationalpost-news", new Operation(
+            "nationalpost-news",
+            "GET",
+            "/nationalpost/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nationalpost-sections", new Operation(
+            "nationalpost-sections",
+            "GET",
+            "/nationalpost/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nbc-article", new Operation(
+            "nbc-article",
+            "GET",
+            "/nbc/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nbc-author", new Operation(
+            "nbc-author",
+            "GET",
+            "/nbc/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nbc-headlines", new Operation(
+            "nbc-headlines",
+            "GET",
+            "/nbc/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "world", "us-news", "politics", "business", "science", "health"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nbc-news", new Operation(
+            "nbc-news",
+            "GET",
+            "/nbc/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nbc-sections", new Operation(
+            "nbc-sections",
+            "GET",
+            "/nbc/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ndtv-article", new Operation(
+            "ndtv-article",
+            "GET",
+            "/ndtv/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ndtv-author", new Operation(
+            "ndtv-author",
+            "GET",
+            "/ndtv/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ndtv-headlines", new Operation(
+            "ndtv-headlines",
+            "GET",
+            "/ndtv/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest", "india", "world", "world-india-global", "world-diaspora", "opinion", "spotlight", "business-news", "south", "cities", "bangalore-news", "chennai-news", "delhi-news", "mumbai-news", "others-news", "ahmedabad-news", "allahabad-news", "amritsar-news", "bhopal-news", "bhubaneshwar-news", "chandigarh-news", "ghaziabad-news", "goa-news", "gurgaon-news", "guwahati-news", "hyderabad-news", "jaipur-news", "kanpur-news", "kolkata-news", "lucknow-news", "noida-news", "patna-news", "pune-news", "srinagar-news", "thiruvananthapuram-news", "andhra-pradesh-news", "karnataka-news", "kerala-news", "tamil-nadu-news", "telangana-news", "education", "education-exams-news", "education-school-news", "education-campus-news", "education-study-abroad", "education-latest", "health", "entertainment", "lifestyle", "food", "travel", "auto", "science", "offbeat", "trends", "feature"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ndtv-news", new Operation(
+            "ndtv-news",
+            "GET",
+            "/ndtv/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ndtv-sections", new Operation(
+            "ndtv-sections",
+            "GET",
+            "/ndtv/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news18-article", new Operation(
+            "news18-article",
+            "GET",
+            "/news18/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news18-author", new Operation(
+            "news18-author",
+            "GET",
+            "/news18/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news18-headlines", new Operation(
+            "news18-headlines",
+            "GET",
+            "/news18/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("india", "world", "cricket", "business", "sports", "movies", "lifestyle", "tech", "auto", "opinion", "elections", "politics", "viral", "explainers", "education-career", "astrology", "cities", "breaking-news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news18-news", new Operation(
+            "news18-news",
+            "GET",
+            "/news18/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news18-sections", new Operation(
+            "news18-sections",
+            "GET",
+            "/news18/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news24-article", new Operation(
+            "news24-article",
+            "GET",
+            "/news24/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news24-headlines", new Operation(
+            "news24-headlines",
+            "GET",
+            "/news24/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "business/climate-future", "business/climate-future/energy", "business/climate-future/environment", "business/climate-future/news", "business/climate-future/solutions", "business/companies", "business/consumer-lookout", "business/economy", "business/markets", "business/money", "business/opinion", "business/tech", "investigations", "investigations/eskomfiles", "investigations/phala-phala", "investigations/silenced", "life", "life/arts-and-entertainment", "life/books", "life/food", "life/lifestyle-trends", "life/motoring", "life/relationships", "life/travel", "life/wellness", "life/wine", "opinions", "opinions/analysis", "opinions/cartoons", "opinions/columnists", "opinions/explainers", "opinions/fridaybriefing/editions", "opinions/letters", "opinions/reader-hub", "politics", "southafrica", "southafrica/crime-and-courts", "southafrica/debunking", "southafrica/education", "southafrica/good-news", "southafrica/good-news/outdoor", "southafrica/health-news", "southafrica/schools-hub", "southafrica/weather", "specialreports", "sport", "sport/columnists", "sport/cricket", "sport/cricket/proteas", "sport/cricket/sa20", "sport/golf", "sport/motorsport", "sport/motorsport/formula-one", "sport/other-sport", "sport/rugby", "sport/rugby/bulls", "sport/rugby/cheetahs", "sport/rugby/lions", "sport/rugby/pnpgoldcup", "sport/rugby/sharks", "sport/rugby/springboks", "sport/rugby/stormers", "sport/rugby/urc", "sport/soccer", "sport/soccer/bafana-bafana-and-banyana-banyana", "sport/soccer/english-premier-league", "sport/soccer/psl", "sport/soccer/worldcup", "sport/tennis", "sunday", "world", "world/africa"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news24-news", new Operation(
+            "news24-news",
+            "GET",
+            "/news24/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("news24-sections", new Operation(
+            "news24-sections",
+            "GET",
+            "/news24/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newscomau-article", new Operation(
+            "newscomau-article",
+            "GET",
+            "/newscomau/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newscomau-author", new Operation(
+            "newscomau-author",
+            "GET",
+            "/newscomau/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newscomau-headlines", new Operation(
+            "newscomau-headlines",
+            "GET",
+            "/newscomau/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations29(Map<String, Operation> m) {
+        m.put("newscomau-news", new Operation(
+            "newscomau-news",
+            "GET",
+            "/newscomau/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newscomau-sections", new Operation(
+            "newscomau-sections",
+            "GET",
+            "/newscomau/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsmax-article", new Operation(
+            "newsmax-article",
+            "GET",
+            "/newsmax/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsmax-author", new Operation(
+            "newsmax-author",
+            "GET",
+            "/newsmax/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsmax-headlines", new Operation(
+            "newsmax-headlines",
+            "GET",
+            "/newsmax/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("newsfront", "us", "politics", "thewire", "scitech", "health-news", "cancer", "brain-health", "diet-and-fitness", "diabetes", "natural-health", "anti-aging", "finance-headlines", "street-talk", "finance-news", "economy", "companies", "investing-analysis", "global-talk", "insiders"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsmax-news", new Operation(
+            "newsmax-news",
+            "GET",
+            "/newsmax/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsmax-sections", new Operation(
+            "newsmax-sections",
+            "GET",
+            "/newsmax/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsweek-article", new Operation(
+            "newsweek-article",
+            "GET",
+            "/newsweek/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsweek-author", new Operation(
+            "newsweek-author",
+            "GET",
+            "/newsweek/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("newsweek-headlines", new Operation(
+            "newsweek-headlines",
+            "GET",
+            "/newsweek/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "opinion", "politics", "world", "us", "business", "technology", "health", "entertainment", "sports", "fact-check", "better-planet", "life", "travel", "pets", "autos", "relationships", "tech-science", "personal-finance", "better-workplaces", "my-turn"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsweek-news", new Operation(
+            "newsweek-news",
+            "GET",
+            "/newsweek/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newsweek-sections", new Operation(
+            "newsweek-sections",
+            "GET",
+            "/newsweek/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newyorker-article", new Operation(
+            "newyorker-article",
+            "GET",
+            "/newyorker/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newyorker-author", new Operation(
+            "newyorker-author",
+            "GET",
+            "/newyorker/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newyorker-headlines", new Operation(
+            "newyorker-headlines",
+            "GET",
+            "/newyorker/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("everything", "news", "culture", "humor", "magazine", "business", "tech", "daily-comment", "news-desk", "cultural-comment", "photo-booth", "page-turner", "borowitz-report"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newyorker-news", new Operation(
+            "newyorker-news",
+            "GET",
+            "/newyorker/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("newyorker-sections", new Operation(
+            "newyorker-sections",
+            "GET",
+            "/newyorker/sections",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -16503,6 +25748,132 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("ninetofivemac-article", new Operation(
+            "ninetofivemac-article",
+            "GET",
+            "/ninetofivemac/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ninetofivemac-author", new Operation(
+            "ninetofivemac-author",
+            "GET",
+            "/ninetofivemac/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ninetofivemac-headlines", new Operation(
+            "ninetofivemac-headlines",
+            "GET",
+            "/ninetofivemac/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("iphone", "mac", "macbook-pro", "macbook-air", "imac", "mac-mini", "mac-studio", "mac-pro", "ipad-pro", "ipad-air", "ipad-mini", "ipad", "ipados", "apple-watch", "apple-watch-ultra", "apple-health", "apple-watch-se", "vision-pro", "visionos", "apple-music", "airpods", "homepod", "apple-tv", "review", "how-to", "aapl", "apple-store", "apple-arcade", "apple-card", "apple-silicon", "apple-one", "apple-fitness", "carplay", "siri", "homekit"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ninetofivemac-news", new Operation(
+            "ninetofivemac-news",
+            "GET",
+            "/ninetofivemac/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ninetofivemac-sections", new Operation(
+            "ninetofivemac-sections",
+            "GET",
+            "/ninetofivemac/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("npr-article", new Operation(
+            "npr-article",
+            "GET",
+            "/npr/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("npr-author", new Operation(
+            "npr-author",
+            "GET",
+            "/npr/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("npr-categories", new Operation(
+            "npr-categories",
+            "GET",
+            "/npr/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("npr-headlines", new Operation(
+            "npr-headlines",
+            "GET",
+            "/npr/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("npr-topic", new Operation(
+            "npr-topic",
+            "GET",
+            "/npr/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("numbeo-cost-of-living-city", new Operation(
             "numbeo-cost-of-living-city",
             "GET",
@@ -16554,9 +25925,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations18(Map<String, Operation> m) {
         m.put("numbeo-indices-city", new Operation(
             "numbeo-indices-city",
             "GET",
@@ -16606,6 +25974,325 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("index", true, "string", List.of("quality-of-life", "crime", "health-care", "pollution", "traffic", "property-investment"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nydailynews-article", new Operation(
+            "nydailynews-article",
+            "GET",
+            "/nydailynews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nydailynews-author", new Operation(
+            "nydailynews-author",
+            "GET",
+            "/nydailynews/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nydailynews-headlines", new Operation(
+            "nydailynews-headlines",
+            "GET",
+            "/nydailynews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "crime-public-safety", "politics", "new-york-politics", "business", "health", "national", "world", "local-news", "new-york-news", "education", "transportation", "news-obituaries", "sports", "mlb", "new-york-yankees", "new-york-mets", "nfl", "new-york-giants", "new-york-jets", "nba", "new-york-knicks", "brooklyn-nets", "wnba", "new-york-liberty", "nhl", "new-york-rangers", "new-york-islanders", "soccer", "opinion", "editorials", "viva", "things-to-do", "restaurants-food-drink", "horoscopes", "best-reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nydailynews-news", new Operation(
+            "nydailynews-news",
+            "GET",
+            "/nydailynews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nydailynews-sections", new Operation(
+            "nydailynews-sections",
+            "GET",
+            "/nydailynews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nymag-article", new Operation(
+            "nymag-article",
+            "GET",
+            "/nymag/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nymag-author", new Operation(
+            "nymag-author",
+            "GET",
+            "/nymag/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nymag-headlines", new Operation(
+            "nymag-headlines",
+            "GET",
+            "/nymag/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("intelligencer", "thecut", "vulture", "grub-street", "curbed", "strategist", "select-all", "science", "daily"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nymag-news", new Operation(
+            "nymag-news",
+            "GET",
+            "/nymag/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nymag-sections", new Operation(
+            "nymag-sections",
+            "GET",
+            "/nymag/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nypost-article", new Operation(
+            "nypost-article",
+            "GET",
+            "/nypost/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nypost-author", new Operation(
+            "nypost-author",
+            "GET",
+            "/nypost/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nypost-headlines", new Operation(
+            "nypost-headlines",
+            "GET",
+            "/nypost/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("us-news", "metro", "long-island", "politics", "world-news", "sports", "nfl", "mlb", "olympics", "nba", "nhl", "college-football", "college-basketball", "wnba", "sports-plus", "betting", "business", "opinion", "entertainment", "tv", "movies", "music", "celebrities", "awards", "theater", "shopping", "lifestyle", "weird-but-true", "sex-and-relationships", "viral-trends", "human-interest", "parenting", "fashion-and-beauty", "food-and-drink", "travel", "health", "wellness", "fitness", "health-care", "medicine", "mens-health", "womens-health", "mental-health", "nutrition", "real-estate", "alexa", "media", "tech", "science", "space", "environment", "wildlife", "archaeology", "astrology"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nypost-news", new Operation(
+            "nypost-news",
+            "GET",
+            "/nypost/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nypost-sections", new Operation(
+            "nypost-sections",
+            "GET",
+            "/nypost/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nyt-article", new Operation(
+            "nyt-article",
+            "GET",
+            "/nyt/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations30(Map<String, Operation> m) {
+        m.put("nyt-author", new Operation(
+            "nyt-author",
+            "GET",
+            "/nyt/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nyt-categories", new Operation(
+            "nyt-categories",
+            "GET",
+            "/nyt/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nyt-headlines", new Operation(
+            "nyt-headlines",
+            "GET",
+            "/nyt/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nyt-sections", new Operation(
+            "nyt-sections",
+            "GET",
+            "/nyt/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nzherald-article", new Operation(
+            "nzherald-article",
+            "GET",
+            "/nzherald/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nzherald-author", new Operation(
+            "nzherald-author",
+            "GET",
+            "/nzherald/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nzherald-headlines", new Operation(
+            "nzherald-headlines",
+            "GET",
+            "/nzherald/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "markets-with-madison", "media-insider", "business-reports", "small-business", "personal-finance", "economy", "companies", "markets", "entertainment", "lifestyle", "society-insider", "nz", "crime", "education", "politics", "trailblazers", "property", "sport", "commonwealth-games", "cricket", "olympics", "paralympics", "rugby", "rugby-league", "football", "basketball", "golf", "boxing", "netball", "athletics", "cycling", "motorsport", "racing", "sailing", "tennis", "ufc", "technology", "travel", "travel-news", "world", "kahu", "talanoa", "the-selection"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nzherald-news", new Operation(
+            "nzherald-news",
+            "GET",
+            "/nzherald/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nzherald-sections", new Operation(
+            "nzherald-sections",
+            "GET",
+            "/nzherald/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -17322,6 +27009,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations31(Map<String, Operation> m) {
         m.put("opensea-rankings", new Operation(
             "opensea-rankings",
             "GET",
@@ -17393,9 +27083,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations19(Map<String, Operation> m) {
         m.put("opentable-restaurant-reviews", new Operation(
             "opentable-restaurant-reviews",
             "GET",
@@ -17467,6 +27154,69 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("pagesix-article", new Operation(
+            "pagesix-article",
+            "GET",
+            "/pagesix/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pagesix-author", new Operation(
+            "pagesix-author",
+            "GET",
+            "/pagesix/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pagesix-headlines", new Operation(
+            "pagesix-headlines",
+            "GET",
+            "/pagesix/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("awards", "beauty", "california-society", "celebrity-news", "contributor-content", "entertainment", "fashion", "hollywood", "hollywood-awards-watch", "hollywood-media-news", "hollywood-studio-news", "lifestyle", "los-angeles-society", "media", "miami-society", "movies", "music", "new-york-city-society", "palm-beach-society", "parents", "real-estate", "royal-family", "shopping", "society", "sports", "style", "taylor-swift", "travel", "tv", "washington-dc-society"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pagesix-news", new Operation(
+            "pagesix-news",
+            "GET",
+            "/pagesix/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pagesix-sections", new Operation(
+            "pagesix-sections",
+            "GET",
+            "/pagesix/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("pandamart-search", new Operation(
             "pandamart-search",
@@ -18098,6 +27848,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations32(Map<String, Operation> m) {
         m.put("patreon-rss", new Operation(
             "patreon-rss",
             "GET",
@@ -18106,6 +27859,390 @@ public final class Operations {
             List.of(
             new QueryParam("campaign_id", true, "string", List.of()),
             new QueryParam("show_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcgamer-article", new Operation(
+            "pcgamer-article",
+            "GET",
+            "/pcgamer/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcgamer-author", new Operation(
+            "pcgamer-author",
+            "GET",
+            "/pcgamer/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pcgamer-headlines", new Operation(
+            "pcgamer-headlines",
+            "GET",
+            "/pcgamer/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("deals", "games", "gaming-industry", "guides", "hardware", "movies-tv", "news", "software"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcgamer-news", new Operation(
+            "pcgamer-news",
+            "GET",
+            "/pcgamer/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcgamer-sections", new Operation(
+            "pcgamer-sections",
+            "GET",
+            "/pcgamer/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcmag-article", new Operation(
+            "pcmag-article",
+            "GET",
+            "/pcmag/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcmag-author", new Operation(
+            "pcmag-author",
+            "GET",
+            "/pcmag/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcmag-headlines", new Operation(
+            "pcmag-headlines",
+            "GET",
+            "/pcmag/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("3d-printers", "accounting", "ai", "air-purifiers", "android", "android-apps", "anti-ransomware-for-business", "antivirus", "appliances", "applicant-tracking-systems", "application-performance-management", "asset-management", "audio", "audio-accessories", "audio-editing", "audio-recording", "background-check-services", "batteries-power", "benefits-administration-software", "billing-invoicing-software", "blu-ray-players", "bluetooth-headsets", "browsers", "business-card-printing", "business-plan-software", "call-center-features", "camera-accessories", "cameras", "car-accessories", "cars-auto", "cloud-backup-for-business", "cloud-file-storage-for-business", "cloud-infrastructure", "collaboration", "communications", "components", "computer-mice", "connected-kitchen", "contract-management-software", "credit-card-processors", "crm-software", "cryptocurrency", "dash-cams", "data-analytics", "data-visualization-tools", "database", "dating", "desktop-pcs", "digital-life", "digital-voice-recorders", "disaster-recovery", "dna-testing-kits", "document-management-software", "drones", "e-commerce-fulfillment-services", "e-commerce-payments", "e-commerce-software", "ebook-readers", "education", "elearning-authoring-tools", "electronic-health-record-management", "email-marketing", "employee-monitoring", "employee-monitoring-software", "employee-shift-scheduling", "enterprise-accounting-software", "erp-software", "expense-tracking-software", "fax-services", "file-sync-backup", "fitness", "fitness-trackers", "fleet-management", "game-controllers-accessories", "game-streaming-services", "games", "gaming", "gaming-systems", "gps-navigation", "graphic-design", "graphics-cards", "hard-drives", "headphones", "health-fitness", "heart-rate-monitors", "help-desk", "home-automation-hubs", "home-entertainment", "home-entertainment-accessories", "home-security", "home-security-cameras", "hosted-email-providers", "hosted-endpoint-protection", "hr-software", "human-resources", "identity-management", "infrastructure-management", "input-devices", "inventory-management-software", "ios", "ipad-apps", "iphone-apps", "it-management", "it-security", "keyboards", "language-learning", "laptop-accessories", "laptops", "lead-management", "lenses", "linux", "low-code-app-development", "macos", "malware-protection-removal", "marketing-automation-software", "meal-kits", "media-streaming-devices", "media-streaming-software", "medical-alert-systems", "membership-management", "microsoft-xbox-games", "mobile-apps", "mobile-device-management", "mobile-games", "mobile-payment-apps", "mobile-phone-accessories", "mobile-phones", "modems-hotspots", "monitors", "motherboards", "music-audio", "network-attached-storage", "network-management", "network-monitoring", "networking", "nintendo-games", "office-suites", "online-learning-platforms-for-business", "online-survey-tools", "onlinecloud-backup-services", "operating-systems", "operations", "parental-control", "password-managers", "payroll", "pc-cases", "pc-games", "performance-management", "personal-finance", "personal-finance-apps", "photo-design", "photo-editing", "photo-printing", "podcasting", "point-of-sale", "power-supplies", "printers", "processors", "productivity", "project-management", "projectors", "proxies", "ransomware-protection", "robot-vacuums", "sales-marketing", "scanners", "secure-file-transfer", "security", "security-suites", "self-service-business-intelligence-tools", "seo-tools", "shopping", "shredders", "sim-cards", "smart-displays", "smart-glasses", "smart-home", "smart-lawn-mowers", "smart-lighting", "smart-locks", "smart-plugs", "smart-scales", "smart-thermostats", "smartwatches", "smb-accounting", "social-listening-and-influencer-identification", "social-media", "social-media-management", "sony-playstation-games", "speakers", "spyware-protection", "ssds", "storage", "streaming-music-services", "styli", "subscription-services", "system-utilities", "tablet-accessories", "tablets", "tax-software", "team-messaging", "tech-for-kids", "time-tracking", "to-do-list-apps", "toys", "tracking-devices-for-kids", "tracking-devices-for-pets", "travel", "tune-up-utilities", "tvs", "universal-remotes", "video", "video-camera-accessories", "video-cameras", "video-conferencing-software", "video-editing", "video-streaming-services", "virtualization", "voip-phone-services", "vpn", "vr", "wearables", "web-hosting", "webcams", "website-app-building-tools", "website-builders", "website-monitoring", "wi-fi-mesh-networking-systems", "wi-fi-range-extenders", "windows", "wireless-carriers", "wireless-routers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcmag-news", new Operation(
+            "pcmag-news",
+            "GET",
+            "/pcmag/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pcmag-sections", new Operation(
+            "pcmag-sections",
+            "GET",
+            "/pcmag/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("people-article", new Operation(
+            "people-article",
+            "GET",
+            "/people/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("people-author", new Operation(
+            "people-author",
+            "GET",
+            "/people/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("people-headlines", new Operation(
+            "people-headlines",
+            "GET",
+            "/people/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("people-news", new Operation(
+            "people-news",
+            "GET",
+            "/people/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("people-sections", new Operation(
+            "people-sections",
+            "GET",
+            "/people/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phillyinquirer-article", new Operation(
+            "phillyinquirer-article",
+            "GET",
+            "/phillyinquirer/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phillyinquirer-author", new Operation(
+            "phillyinquirer-author",
+            "GET",
+            "/phillyinquirer/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phillyinquirer-headlines", new Operation(
+            "phillyinquirer-headlines",
+            "GET",
+            "/phillyinquirer/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("arts", "business", "college-sports", "crime", "eagles", "education", "entertainment", "flyers", "food", "health", "high-school-sports", "life", "news", "opinion", "phillies", "politics", "real-estate", "science", "sixers", "soccer", "south-jersey", "sports", "transportation", "weather"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phillyinquirer-news", new Operation(
+            "phillyinquirer-news",
+            "GET",
+            "/phillyinquirer/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phillyinquirer-sections", new Operation(
+            "phillyinquirer-sections",
+            "GET",
+            "/phillyinquirer/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("philstar-article", new Operation(
+            "philstar-article",
+            "GET",
+            "/philstar/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("philstar-author", new Operation(
+            "philstar-author",
+            "GET",
+            "/philstar/author",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("philstar-headlines", new Operation(
+            "philstar-headlines",
+            "GET",
+            "/philstar/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("headlines", "headlines-climate-and-environment", "headlines-weather", "opinion", "nation", "world", "business", "business-agriculture", "business-banking", "business-biz-memos", "business-business-as-usual", "business-motoring", "business-real-estate", "business-science-and-environment", "business-stock-commentary", "business-technology", "business-telecoms", "sports", "sports-deans-corner", "esport", "entertainment", "entertainment-korean-wave", "entertainment-movies", "entertainment-music", "movies", "music", "lifestyle", "lifestyle-arts-and-culture", "lifestyle-business-life", "lifestyle-fashion-and-beauty", "lifestyle-food-and-leisure", "lifestyle-gadgets", "lifestyle-health-and-family", "lifestyle-modern-living", "lifestyle-on-the-radar", "lifestyle-pet-life", "lifestyle-shopping-guide", "lifestyle-the-budgetarian", "lifestyle-travel-and-tourism", "news-commentary", "videos", "brandspace", "campus", "exam-results", "lotto-results", "other-sections-comics", "other-sections-daily-bread", "other-sections-education-and-home", "other-sections-exam-results", "other-sections-forex", "other-sections-letters-to-the-editor", "other-sections-lotto-results", "other-sections-newsmakers", "other-sections-star-cover", "other-sections-supplements", "other-sections-the-good-news", "other-sections-word-of-the-day", "pang-masa", "pang-masa-pang-movies", "pang-masa-para-malibang", "pang-masa-para-manalo", "pang-masa-pm-sports", "pang-masa-police-metro", "pang-masa-punto-mo", "pilipino-star-ngayon", "pilipino-star-ngayon-bansa", "pilipino-star-ngayon-dr-love", "pilipino-star-ngayon-komiks", "pilipino-star-ngayon-kutob", "pilipino-star-ngayon-litra-talk", "pilipino-star-ngayon-metro", "pilipino-star-ngayon-opinyon", "pilipino-star-ngayon-palaro", "pilipino-star-ngayon-probinsiya", "pilipino-star-ngayon-showbiz", "pilipino-star-ngayon-true-confessions", "banat", "banat-balita", "banat-imong-kapalaran", "banat-kalingawan", "banat-opinyon", "banat-palaro", "banat-punsoy", "banat-showbiz", "the-freeman", "the-freeman-cebu-business", "the-freeman-cebu-entertainment", "the-freeman-cebu-lifestyle", "the-freeman-cebu-news", "the-freeman-cebu-sports", "the-freeman-metro-cebu", "the-freeman-opinion", "the-freeman-region"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("philstar-news", new Operation(
+            "philstar-news",
+            "GET",
+            "/philstar/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("philstar-sections", new Operation(
+            "philstar-sections",
+            "GET",
+            "/philstar/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phonearena-article", new Operation(
+            "phonearena-article",
+            "GET",
+            "/phonearena/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phonearena-author", new Operation(
+            "phonearena-author",
+            "GET",
+            "/phonearena/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phonearena-headlines", new Operation(
+            "phonearena-headlines",
+            "GET",
+            "/phonearena/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news-month", "reviews"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phonearena-news", new Operation(
+            "phonearena-news",
+            "GET",
+            "/phonearena/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("phonearena-sections", new Operation(
+            "phonearena-sections",
+            "GET",
+            "/phonearena/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -18221,9 +28358,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations20(Map<String, Operation> m) {
         m.put("pitchbook-advisor", new Operation(
             "pitchbook-advisor",
             "GET",
@@ -18444,6 +28578,25 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("playstation-concept-reviews", new Operation(
+            "playstation-concept-reviews",
+            "GET",
+            "/playstation/concept/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "oldest", "helpful")),
+            new QueryParam("rating", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("playstation-deals", new Operation(
             "playstation-deals",
             "GET",
@@ -18518,6 +28671,152 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+    }
+
+    private static void putOperations33(Map<String, Operation> m) {
+        m.put("playstation-suggest", new Operation(
+            "playstation-suggest",
+            "GET",
+            "/playstation/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("term", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cc", false, "string", List.of()),
+            new QueryParam("l", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("politico-article", new Operation(
+            "politico-article",
+            "GET",
+            "/politico/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("politico-author", new Operation(
+            "politico-author",
+            "GET",
+            "/politico/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("politico-categories", new Operation(
+            "politico-categories",
+            "GET",
+            "/politico/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("politico-headlines", new Operation(
+            "politico-headlines",
+            "GET",
+            "/politico/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("politico-topic", new Operation(
+            "politico-topic",
+            "GET",
+            "/politico/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("polygon-article", new Operation(
+            "polygon-article",
+            "GET",
+            "/polygon/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("polygon-author", new Operation(
+            "polygon-author",
+            "GET",
+            "/polygon/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("polygon-headlines", new Operation(
+            "polygon-headlines",
+            "GET",
+            "/polygon/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("gaming-news", "gaming-reviews", "gaming-previews", "gaming-features", "entertainment-news", "movie-tv-reviews", "entertainment-features", "anime", "horror", "sci-fi", "fantasy", "what-to-play", "what-to-watch", "guides", "videos"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("polygon-news", new Operation(
+            "polygon-news",
+            "GET",
+            "/polygon/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("polygon-sections", new Operation(
+            "polygon-sections",
+            "GET",
+            "/polygon/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("polymarket-activity-trades", new Operation(
             "polymarket-activity-trades",
@@ -19109,9 +29408,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations21(Map<String, Operation> m) {
         m.put("polymarket-status", new Operation(
             "polymarket-status",
             "GET",
@@ -19228,6 +29524,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations34(Map<String, Operation> m) {
         m.put("polymarket-teams", new Operation(
             "polymarket-teams",
             "GET",
@@ -19661,6 +29960,317 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("prada-categories", new Operation(
+            "prada-categories",
+            "GET",
+            "/prada/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("prada-category", new Operation(
+            "prada-category",
+            "GET",
+            "/prada/category",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "string", List.of()),
+            new QueryParam("gender", false, "string", List.of("Woman", "Man")),
+            new QueryParam("sort", false, "string", List.of("suggested", "price_asc", "price_desc", "newest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("prada-product", new Operation(
+            "prada-product",
+            "GET",
+            "/prada/product",
+            List.of(),
+            List.of(
+            new QueryParam("pv", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("prada-search", new Operation(
+            "prada-search",
+            "GET",
+            "/prada/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("gender", false, "string", List.of("Woman", "Man")),
+            new QueryParam("sort", false, "string", List.of("suggested", "price_asc", "price_desc", "newest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("prada-stores", new Operation(
+            "prada-stores",
+            "GET",
+            "/prada/stores",
+            List.of(),
+            List.of(
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lng", false, "number", List.of()),
+            new QueryParam("radius_km", false, "number", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("prada-suggest", new Operation(
+            "prada-suggest",
+            "GET",
+            "/prada/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-auction-categories", new Operation(
+            "pristine-auction-categories",
+            "GET",
+            "/pristine-auction/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-auction-lot-detail", new Operation(
+            "pristine-auction-lot-detail",
+            "GET",
+            "/pristine-auction/lot/{lot_number}",
+            List.of("lot_number"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-auction-search", new Operation(
+            "pristine-auction-search",
+            "GET",
+            "/pristine-auction/search",
+            List.of(),
+            List.of(
+            new QueryParam("term", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("fine-art", "baseball", "basketball", "boxing-ufc", "coins-bullion", "comic-books", "football", "golf", "historical", "hockey", "music", "other-sports", "pop-culture", "racing", "soccer", "trading-cards", "wrestling")),
+            new QueryParam("auction_type", false, "string", List.of("previous_featured", "ten_minute", "daily", "classic", "fine_art", "jewelry", "pop_culture", "tcg", "helmet", "nascar_foundation", "sports_cards", "coin", "sports_gear", "jersey", "frame_it_up", "fall_showcase", "elite", "live_stream")),
+            new QueryParam("status", false, "string", List.of("future", "active", "canceled", "completed", "forfeited")),
+            new QueryParam("sort", false, "string", List.of("newly-listed", "bid-time-descending", "price-descending", "price-ascending", "ending-soonest", "ending-last", "bid-count-descending", "bid-count-ascending")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("15", "30", "60"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-collections", new Operation(
+            "pristine-marketplace-collections",
+            "GET",
+            "/pristine-marketplace/collections",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-collection-products", new Operation(
+            "pristine-marketplace-collection-products",
+            "GET",
+            "/pristine-marketplace/collections/{handle}/products",
+            List.of("handle"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-pages", new Operation(
+            "pristine-marketplace-pages",
+            "GET",
+            "/pristine-marketplace/pages",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-page", new Operation(
+            "pristine-marketplace-page",
+            "GET",
+            "/pristine-marketplace/pages/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-products", new Operation(
+            "pristine-marketplace-products",
+            "GET",
+            "/pristine-marketplace/products",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-product", new Operation(
+            "pristine-marketplace-product",
+            "GET",
+            "/pristine-marketplace/products/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-product-recommendations", new Operation(
+            "pristine-marketplace-product-recommendations",
+            "GET",
+            "/pristine-marketplace/products/{handle}/recommendations",
+            List.of("handle"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("intent", false, "string", List.of("related", "complementary"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-reviews", new Operation(
+            "pristine-marketplace-reviews",
+            "GET",
+            "/pristine-marketplace/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-search", new Operation(
+            "pristine-marketplace-search",
+            "GET",
+            "/pristine-marketplace/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pristine-marketplace-search-suggest", new Operation(
+            "pristine-marketplace-search-suggest",
+            "GET",
+            "/pristine-marketplace/search/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-sitemap-urls", new Operation(
+            "pristine-marketplace-sitemap-urls",
+            "GET",
+            "/pristine-marketplace/sitemap/urls",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("all", "products", "collections", "pages", "blogs", "agentic_discovery", "other")),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-sitemaps", new Operation(
+            "pristine-marketplace-sitemaps",
+            "GET",
+            "/pristine-marketplace/sitemaps",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pristine-marketplace-store", new Operation(
+            "pristine-marketplace-store",
+            "GET",
+            "/pristine-marketplace/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("producthunt-category", new Operation(
             "producthunt-category",
             "GET",
@@ -19752,6 +30362,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations35(Map<String, Operation> m) {
         m.put("producthunt-customers", new Operation(
             "producthunt-customers",
             "GET",
@@ -19822,6 +30435,526 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("propublica-article", new Operation(
+            "propublica-article",
+            "GET",
+            "/propublica/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("propublica-author", new Operation(
+            "propublica-author",
+            "GET",
+            "/propublica/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("propublica-headlines", new Operation(
+            "propublica-headlines",
+            "GET",
+            "/propublica/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("abortion", "biden-administration", "civil-rights", "courts", "criminal-justice", "debt", "democracy", "department-of-governmental-efficiency", "education", "environment", "health-care", "health-insurance", "immigration", "jan-6", "labor", "mental-health", "military", "nonprofits", "police", "politics", "pollution", "pregnancy", "prison", "racial-justice", "real-estate", "regulation", "sex-and-gender", "sports", "stock", "taxes", "technology", "trump-administration", "usaid"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("propublica-news", new Operation(
+            "propublica-news",
+            "GET",
+            "/propublica/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("propublica-sections", new Operation(
+            "propublica-sections",
+            "GET",
+            "/propublica/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-autographfacts-categories", new Operation(
+            "psa-autographfacts-categories",
+            "GET",
+            "/psa/autographfacts/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-autographfacts-gallery", new Operation(
+            "psa-autographfacts-gallery",
+            "GET",
+            "/psa/autographfacts/gallery",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-autographfacts-subject", new Operation(
+            "psa-autographfacts-subject",
+            "GET",
+            "/psa/autographfacts/subject",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-autographfacts-subjects", new Operation(
+            "psa-autographfacts-subjects",
+            "GET",
+            "/psa/autographfacts/subjects",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-cardfacts-categories", new Operation(
+            "psa-cardfacts-categories",
+            "GET",
+            "/psa/cardfacts/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-cardfacts-checklist", new Operation(
+            "psa-cardfacts-checklist",
+            "GET",
+            "/psa/cardfacts/checklist",
+            List.of(),
+            List.of(
+            new QueryParam("set_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-cardfacts-sets", new Operation(
+            "psa-cardfacts-sets",
+            "GET",
+            "/psa/cardfacts/sets",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-cert-lookup", new Operation(
+            "psa-cert-lookup",
+            "GET",
+            "/psa/cert-lookup",
+            List.of(),
+            List.of(
+            new QueryParam("cert_number", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-price-guide-categories", new Operation(
+            "psa-price-guide-categories",
+            "GET",
+            "/psa/price-guide/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-price-guide-search", new Operation(
+            "psa-price-guide-search",
+            "GET",
+            "/psa/price-guide/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("psa-price-guide-set", new Operation(
+            "psa-price-guide-set",
+            "GET",
+            "/psa/price-guide/set",
+            List.of(),
+            List.of(
+            new QueryParam("category_path", true, "string", List.of()),
+            new QueryParam("set_path", true, "string", List.of()),
+            new QueryParam("set_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-probatfacts-categories", new Operation(
+            "psa-probatfacts-categories",
+            "GET",
+            "/psa/probatfacts/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-probatfacts-gallery", new Operation(
+            "psa-probatfacts-gallery",
+            "GET",
+            "/psa/probatfacts/gallery",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-probatfacts-subject", new Operation(
+            "psa-probatfacts-subject",
+            "GET",
+            "/psa/probatfacts/subject",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-probatfacts-subjects", new Operation(
+            "psa-probatfacts-subjects",
+            "GET",
+            "/psa/probatfacts/subjects",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-ticketfacts-categories", new Operation(
+            "psa-ticketfacts-categories",
+            "GET",
+            "/psa/ticketfacts/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-ticketfacts-gallery", new Operation(
+            "psa-ticketfacts-gallery",
+            "GET",
+            "/psa/ticketfacts/gallery",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-ticketfacts-subject", new Operation(
+            "psa-ticketfacts-subject",
+            "GET",
+            "/psa/ticketfacts/subject",
+            List.of(),
+            List.of(
+            new QueryParam("subject_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psa-ticketfacts-subjects", new Operation(
+            "psa-ticketfacts-subjects",
+            "GET",
+            "/psa/ticketfacts/subjects",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-collections", new Operation(
+            "psastore-collections",
+            "GET",
+            "/psastore/collections",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("psastore-collection-products", new Operation(
+            "psastore-collection-products",
+            "GET",
+            "/psastore/collections/{handle}/products",
+            List.of("handle"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("psastore-pages", new Operation(
+            "psastore-pages",
+            "GET",
+            "/psastore/pages",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("psastore-page", new Operation(
+            "psastore-page",
+            "GET",
+            "/psastore/pages/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-products", new Operation(
+            "psastore-products",
+            "GET",
+            "/psastore/products",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("psastore-product", new Operation(
+            "psastore-product",
+            "GET",
+            "/psastore/products/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-product-recommendations", new Operation(
+            "psastore-product-recommendations",
+            "GET",
+            "/psastore/products/{handle}/recommendations",
+            List.of("handle"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("intent", false, "string", List.of("related", "complementary"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-search-suggest", new Operation(
+            "psastore-search-suggest",
+            "GET",
+            "/psastore/search/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-sitemap-urls", new Operation(
+            "psastore-sitemap-urls",
+            "GET",
+            "/psastore/sitemap/urls",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("all", "products", "collections", "pages", "blogs", "agentic_discovery", "other")),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-sitemaps", new Operation(
+            "psastore-sitemaps",
+            "GET",
+            "/psastore/sitemaps",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("psastore-store", new Operation(
+            "psastore-store",
+            "GET",
+            "/psastore/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("punch-article", new Operation(
+            "punch-article",
+            "GET",
+            "/punch/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("punch-author", new Operation(
+            "punch-author",
+            "GET",
+            "/punch/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("punch-headlines", new Operation(
+            "punch-headlines",
+            "GET",
+            "/punch/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "columns", "continuation-from-print", "diaspora", "editorial", "education", "entertainment", "feature", "featured", "foreign-news", "health", "healthwise", "information-technology", "interactive", "interview", "latest-news", "law-digest-2", "letters", "metro-plus", "news", "opinion", "osun-decides", "panorama", "politics", "punch-lite", "sex-relationship", "smart-tips", "society", "special-features", "spice", "sponsored", "sports", "technology", "top-stories", "video", "weekend-starter"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("punch-news", new Operation(
+            "punch-news",
+            "GET",
+            "/punch/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("punch-sections", new Operation(
+            "punch-sections",
+            "GET",
+            "/punch/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("quince-categories", new Operation(
             "quince-categories",
@@ -19947,9 +31080,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations22(Map<String, Operation> m) {
         m.put("raisingcanes-directory", new Operation(
             "raisingcanes-directory",
             "GET",
@@ -20030,6 +31160,137 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations36(Map<String, Operation> m) {
+        m.put("rappler-article", new Operation(
+            "rappler-article",
+            "GET",
+            "/rappler/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rappler-author", new Operation(
+            "rappler-author",
+            "GET",
+            "/rappler/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rappler-headlines", new Operation(
+            "rappler-headlines",
+            "GET",
+            "/rappler/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("about", "awards-recognition", "news-updates", "policies", "special-projects", "team", "brandrap", "announcements", "beyond-the-buy", "communicart", "data-stories", "detours", "finance-and-industries", "first-look", "food-drinks-dining", "get-ready-with-me", "goodrap", "health-beauty-and-wellness", "home-and-parenting", "lifestyle-and-entertainment", "profiles-and-advocacies", "reading-book-recommendations", "tech-and-innovation", "travel-and-food", "bulletin-board", "advisories", "campus", "contests-awards", "corrections", "events", "examination-results", "philippine-government-job-openings", "scholarships", "trainings-workshops", "business", "consumer-issues", "corporate", "economy", "industries", "infrastructure", "personal-finance", "stocks-banking", "culture-desk", "astrology", "careers", "food-drinks", "health-and-wellness", "literature", "noteworthy", "relationships", "style", "travel", "editors-pick", "elections-philippines-stories", "entertainment", "celebrities", "korean-popular-music", "live-jam", "movies", "music", "pageants", "series", "theater", "environment", "climate-change", "disasters", "nature", "pollution", "faith-religion", "hustle", "adulting", "food", "play", "purpose", "work", "moveph", "advocacies", "agos", "partners", "social-good-summit", "nation", "newsbreak", "data-documents", "explainers", "fact-check", "in-depth", "inside-track", "investigative", "iq", "podcasts-videos", "people", "actors", "artists", "athletes", "crimes", "human-interest", "neighbors", "newsmakers", "obituary", "profiles", "philippines", "elections", "government", "luzon", "metro-manila", "mindanao", "national-news", "overseas-filipinos", "rappler-talk", "special-coverage", "visayas", "weather", "plus-membership-program", "exclusive-content", "exclusive-events", "science", "discoveries-inventions", "earth-space", "life-health", "society-culture", "social-issues", "sports", "boxing", "fiba", "football", "gilas-pilipinas", "nba", "ncaa", "palarong-pambansa", "pba", "southeast-asian-games", "uaap", "volleyball", "technology", "apps", "features", "gadgets", "gaming", "innovations", "internet-culture", "reviews", "social-media", "the-wrap", "top-stories", "video", "act-one", "basagan-ng-trip", "daily-wrap", "documentaries", "editorial", "hold-the-line-maria-ressa-interview", "rappler-live-jam", "rappler-talk-video", "reporters-vlogs", "top-5-news-this-week", "video-explainers", "watch-now-live", "voices", "editorials", "imho", "ispeak", "new-school", "newsletters", "rappler-blogs", "thought-leaders", "world", "africa", "asia-pacific", "europe", "global-affairs", "indonesia", "latin-america", "middle-east", "south-central-asia", "us-canada"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rappler-news", new Operation(
+            "rappler-news",
+            "GET",
+            "/rappler/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rappler-sections", new Operation(
+            "rappler-sections",
+            "GET",
+            "/rappler/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rawstory-article", new Operation(
+            "rawstory-article",
+            "GET",
+            "/rawstory/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rawstory-author", new Operation(
+            "rawstory-author",
+            "GET",
+            "/rawstory/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rawstory-headlines", new Operation(
+            "rawstory-headlines",
+            "GET",
+            "/rawstory/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("us-news", "trump-news", "world", "enviro-science", "all-video", "raw-investigates", "also-read", "commentary", "blogs-media", "2026-midterm-elections-section", "presidential-campaign-issues", "smartnews", "super-head", "jd-vance", "supreme-court"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rawstory-news", new Operation(
+            "rawstory-news",
+            "GET",
+            "/rawstory/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rawstory-sections", new Operation(
+            "rawstory-sections",
+            "GET",
+            "/rawstory/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("ready", new Operation(
             "ready",
             "GET",
@@ -20040,6 +31301,169 @@ public final class Operations {
             null,
             false,
             List.of(),
+            false,
+            List.of()));
+        m.put("rebag-collections", new Operation(
+            "rebag-collections",
+            "GET",
+            "/rebag/collections",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("rebag-collection-products", new Operation(
+            "rebag-collection-products",
+            "GET",
+            "/rebag/collections/{handle}/products",
+            List.of("handle"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("rebag-pages", new Operation(
+            "rebag-pages",
+            "GET",
+            "/rebag/pages",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("rebag-page", new Operation(
+            "rebag-page",
+            "GET",
+            "/rebag/pages/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-products", new Operation(
+            "rebag-products",
+            "GET",
+            "/rebag/products",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("rebag-product", new Operation(
+            "rebag-product",
+            "GET",
+            "/rebag/products/{handle}",
+            List.of("handle"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-product-recommendations", new Operation(
+            "rebag-product-recommendations",
+            "GET",
+            "/rebag/products/{handle}/recommendations",
+            List.of("handle"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("intent", false, "string", List.of("related", "complementary"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-search", new Operation(
+            "rebag-search",
+            "GET",
+            "/rebag/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "price_asc", "price_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("rebag-search-suggest", new Operation(
+            "rebag-search-suggest",
+            "GET",
+            "/rebag/search/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-sitemap-urls", new Operation(
+            "rebag-sitemap-urls",
+            "GET",
+            "/rebag/sitemap/urls",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("all", "products", "collections", "pages", "blogs", "agentic_discovery", "other")),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-sitemaps", new Operation(
+            "rebag-sitemaps",
+            "GET",
+            "/rebag/sitemaps",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rebag-store", new Operation(
+            "rebag-store",
+            "GET",
+            "/rebag/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
             false,
             List.of()));
         m.put("reddit-comments", new Operation(
@@ -20263,7 +31687,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("region_id", true, "integer", List.of()),
-            new QueryParam("region_type", false, "integer", List.of())),
+            new QueryParam("region_type", false, "integer", List.of("1", "2", "5", "6"))),
             List.of(),
             null,
             false,
@@ -20279,7 +31703,7 @@ public final class Operations {
             new QueryParam("location", false, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("region_id", false, "integer", List.of()),
-            new QueryParam("region_type", false, "integer", List.of()),
+            new QueryParam("region_type", false, "integer", List.of("1", "2", "5", "6")),
             new QueryParam("status", false, "string", List.of("for_sale", "sold")),
             new QueryParam("min_price", false, "integer", List.of()),
             new QueryParam("max_price", false, "integer", List.of()),
@@ -20341,6 +31765,189 @@ public final class Operations {
             List.of("JWTAuth"),
             false,
             List.of()));
+        m.put("resy-availability", new Operation(
+            "resy-availability",
+            "GET",
+            "/resy/availability",
+            List.of(),
+            List.of(
+            new QueryParam("restaurant_id", true, "string", List.of()),
+            new QueryParam("date", true, "string", List.of()),
+            new QueryParam("party_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("resy-cuisines", new Operation(
+            "resy-cuisines",
+            "GET",
+            "/resy/cuisines",
+            List.of(),
+            List.of(
+            new QueryParam("location", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("resy-event-detail", new Operation(
+            "resy-event-detail",
+            "GET",
+            "/resy/event",
+            List.of(),
+            List.of(
+            new QueryParam("event_url_slug", true, "string", List.of()),
+            new QueryParam("restaurant_url_slug", true, "string", List.of()),
+            new QueryParam("location", true, "string", List.of()),
+            new QueryParam("party_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("resy-events", new Operation(
+            "resy-events",
+            "GET",
+            "/resy/events",
+            List.of(),
+            List.of(
+            new QueryParam("location", true, "string", List.of()),
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("resy-locations", new Operation(
+            "resy-locations",
+            "GET",
+            "/resy/locations",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("resy-restaurant", new Operation(
+            "resy-restaurant",
+            "GET",
+            "/resy/restaurant",
+            List.of(),
+            List.of(
+            new QueryParam("restaurant_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("resy-search", new Operation(
+            "resy-search",
+            "GET",
+            "/resy/search",
+            List.of(),
+            List.of(
+            new QueryParam("term", false, "string", List.of()),
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of()),
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("party_size", false, "integer", List.of()),
+            new QueryParam("size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reuters-article", new Operation(
+            "reuters-article",
+            "GET",
+            "/reuters/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reuters-articles", new Operation(
+            "reuters-articles",
+            "GET",
+            "/reuters/articles",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("reuters-author", new Operation(
+            "reuters-author",
+            "GET",
+            "/reuters/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reuters-news", new Operation(
+            "reuters-news",
+            "GET",
+            "/reuters/news",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("reuters-section", new Operation(
+            "reuters-section",
+            "GET",
+            "/reuters/section",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("world", "business", "markets", "technology", "sports", "legal", "sustainability", "commentary", "lifestyle", "science", "live", "podcasts", "media-center", "investigations", "fact-check", "wider-image", "city-memo", "data", "video")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("reuters-sections", new Operation(
+            "reuters-sections",
+            "GET",
+            "/reuters/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("rightmove-agents", new Operation(
             "rightmove-agents",
             "GET",
@@ -20394,13 +32001,16 @@ public final class Operations {
             new QueryParam("max_price", false, "integer", List.of()),
             new QueryParam("min_size", false, "integer", List.of()),
             new QueryParam("max_size", false, "integer", List.of()),
-            new QueryParam("property_type", false, "string", List.of())),
+            new QueryParam("property_type", false, "string", List.of("business-park", "office", "serviced-office", "convenience-store", "hairdresser-barber-shop", "post-office", "retail_property_high_street_", "retail_property_out_of_town_", "retail_property_pop_up_", "retail_property_retail_park_", "retail_property_shopping_centre_", "shop", "showroom", "trade-counter", "bar-nightclub", "cafe", "leisure-facility", "guest-house", "hotel", "hospitality", "pub", "restaurant", "takeaway", "other", "distribution-warehouse", "factory", "heavy-industrial", "industrial-park", "light-industrial", "storage", "warehouse", "workshop", "industrial-development", "land", "farm", "residential-development", "healthcare-facility", "childcare-facility", "commercial-property", "garage", "mixed-use", "commercial-development", "petrol_station", "place_of_worship"))),
             List.of(),
             null,
             false,
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations37(Map<String, Operation> m) {
         m.put("rightmove-new-homes-search", new Operation(
             "rightmove-new-homes-search",
             "GET",
@@ -20415,7 +32025,7 @@ public final class Operations {
             new QueryParam("max_bedrooms", false, "integer", List.of()),
             new QueryParam("min_bathrooms", false, "number", List.of()),
             new QueryParam("max_bathrooms", false, "number", List.of()),
-            new QueryParam("property_type", false, "string", List.of())),
+            new QueryParam("property_type", false, "string", List.of("detached", "semi-detached", "terraced", "flat", "bungalow", "land", "park-home"))),
             List.of(),
             null,
             false,
@@ -20449,7 +32059,12 @@ public final class Operations {
             new QueryParam("max_bedrooms", false, "integer", List.of()),
             new QueryParam("min_bathrooms", false, "number", List.of()),
             new QueryParam("max_bathrooms", false, "number", List.of()),
-            new QueryParam("property_type", false, "string", List.of())),
+            new QueryParam("property_type", false, "string", List.of("detached", "semi-detached", "terraced", "flat", "bungalow", "land", "park-home", "private-halls")),
+            new QueryParam("radius", false, "number", List.of("0", "0.25", "0.5", "1", "3", "5", "10", "15", "20", "30", "40")),
+            new QueryParam("must_have", false, "string", List.of("garden", "parking", "retirement", "newHome", "sharedOwnership", "auction")),
+            new QueryParam("dont_show", false, "string", List.of("newHome", "retirement", "sharedOwnership", "auction")),
+            new QueryParam("tenure_types", false, "string", List.of("FREEHOLD", "LEASEHOLD", "SHARE_OF_FREEHOLD")),
+            new QueryParam("sort", false, "string", List.of("lowest_price", "highest_price", "newest_listed", "oldest_listed"))),
             List.of(),
             null,
             false,
@@ -20474,6 +32089,70 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("rnz-article", new Operation(
+            "rnz-article",
+            "GET",
+            "/rnz/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rnz-author", new Operation(
+            "rnz-author",
+            "GET",
+            "/rnz/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rnz-headlines", new Operation(
+            "rnz-headlines",
+            "GET",
+            "/rnz/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "national", "world", "political", "business", "pacific", "sport", "health", "education", "community", "country", "regional", "te-manu-korihi", "on-the-inside", "in-depth", "indonz", "ldr", "chinese", "weather"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rnz-news", new Operation(
+            "rnz-news",
+            "GET",
+            "/rnz/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rnz-sections", new Operation(
+            "rnz-sections",
+            "GET",
+            "/rnz/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("roblox-badges", new Operation(
             "roblox-badges",
@@ -20529,6 +32208,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("page_token")));
+        m.put("rollingstone-article", new Operation(
+            "rollingstone-article",
+            "GET",
+            "/rollingstone/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rollingstone-author", new Operation(
+            "rollingstone-author",
+            "GET",
+            "/rollingstone/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rollingstone-headlines", new Operation(
+            "rollingstone-headlines",
+            "GET",
+            "/rollingstone/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("music", "music-news", "music-features", "music-lists", "music-album-reviews", "music-live-reviews", "music-country", "music-latin", "music-pictures", "politics", "politics-news", "politics-features", "politics-lists", "tv-movies", "tv-movie-news", "tv-movie-features", "tv-movie-lists", "tv-movie-recaps", "tv-movie-reviews", "culture", "culture-news", "culture-features", "culture-lists", "rs-gaming", "product-recommendations", "pro", "artist-you-need-to-know", "song-to-know", "photo-gallery", "creators", "rs-recommends", "rs-essentials", "audio-awards", "gift-guide"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rollingstone-news", new Operation(
+            "rollingstone-news",
+            "GET",
+            "/rollingstone/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rollingstone-sections", new Operation(
+            "rollingstone-sections",
+            "GET",
+            "/rollingstone/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("rothys-collections", new Operation(
             "rothys-collections",
             "GET",
@@ -20826,9 +32568,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations23(Map<String, Operation> m) {
         m.put("rover-sitter-profile", new Operation(
             "rover-sitter-profile",
             "GET",
@@ -20859,6 +32598,132 @@ public final class Operations {
             "GET",
             "/rover/trainer/{slug}",
             List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rte-article", new Operation(
+            "rte-article",
+            "GET",
+            "/rte/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rte-author", new Operation(
+            "rte-author",
+            "GET",
+            "/rte/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rte-headlines", new Operation(
+            "rte-headlines",
+            "GET",
+            "/rte/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ireland", "world", "politics", "business", "regional", "connacht", "dublin", "leinster", "munster", "ulster", "middle-east", "europe", "uk", "us", "ukraine", "a-european-perspective", "nuacht", "newslens", "analysis-and-comment", "investigations-unit", "crime", "courts", "education", "health", "environment", "science", "technology", "weather", "your-money"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rte-news", new Operation(
+            "rte-news",
+            "GET",
+            "/rte/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("rte-sections", new Operation(
+            "rte-sections",
+            "GET",
+            "/rte/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("salon-article", new Operation(
+            "salon-article",
+            "GET",
+            "/salon/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("salon-author", new Operation(
+            "salon-author",
+            "GET",
+            "/salon/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("salon-headlines", new Operation(
+            "salon-headlines",
+            "GET",
+            "/salon/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "audio", "blog", "business", "culture", "economy", "economy-and-innovation", "elections", "entertainment", "food", "guides", "innovation", "life", "life-stories", "media", "money", "news", "news-and-politics", "opinion", "oscars_2012", "politics", "satire", "science-and-health", "sex-and-love", "social", "sustainability", "sxsw_2013", "technology", "the_brief", "video", "vpn", "working_ahead"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("salon-news", new Operation(
+            "salon-news",
+            "GET",
+            "/salon/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("salon-sections", new Operation(
+            "salon-sections",
+            "GET",
+            "/salon/sections",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -20921,6 +32786,339 @@ public final class Operations {
             "GET",
             "/samsclub/product/{id}/related",
             List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("scmp-article", new Operation(
+            "scmp-article",
+            "GET",
+            "/scmp/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("scmp-author", new Operation(
+            "scmp-author",
+            "GET",
+            "/scmp/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("scmp-headlines", new Operation(
+            "scmp-headlines",
+            "GET",
+            "/scmp/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "business", "property", "tech", "lifestyle", "culture", "sport", "postmag", "style", "this-week-in-asia", "cooking", "hong-kong", "china", "asia", "world", "people-culture", "china-politics", "china-diplomacy", "china-economy", "hong-kong-politics", "hong-kong-economy", "hong-kong-health-environment", "hong-kong-education", "world-us-canada", "world-europe", "world-middle-east", "world-americas", "world-africa", "world-russia-central-asia", "asia-australasia", "asia-diplomacy", "asia-east-asia", "asia-southeast-asia", "asia-south-asia", "business-companies", "business-investor-relations", "business-global-economy", "business-money-wealth", "opinion-comment", "opinion-harrys-view", "opinion-blogs", "opinion-polls", "opinion-letters", "property-hong-kong-china", "property-international", "tech-big-tech", "tech-enterprises", "tech-innovation", "tech-leaders-founders", "tech-science-research", "lifestyle-fashion-beauty", "lifestyle-travel-leisure", "lifestyle-motoring", "lifestyle-food-drink", "lifestyle-health-wellness", "lifestyle-watches", "culture-books", "culture-music", "culture-film-tv", "culture-arts", "sport-hong-kong", "sport-china", "sport-golf", "sport-racing", "sport-rugby", "sport-football", "sport-tennis", "sport-other", "sport-boxing", "sport-hong-kong-sevens", "postmag-culture", "postmag-travel", "postmag-food-drink", "postmag-passions", "postmag-wellness", "postmag-design-interiors", "style-luxury", "style-fashion", "style-beauty", "style-people", "style-lifestyle", "this-week-in-asia-politics", "this-week-in-asia-geopolitics", "this-week-in-asia-economics", "this-week-in-asia-society", "this-week-in-asia-opinion", "this-week-in-asia-asia-buzz", "this-week-in-asia-people"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations38(Map<String, Operation> m) {
+        m.put("scmp-sections", new Operation(
+            "scmp-sections",
+            "GET",
+            "/scmp/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("screenrant-article", new Operation(
+            "screenrant-article",
+            "GET",
+            "/screenrant/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("screenrant-author", new Operation(
+            "screenrant-author",
+            "GET",
+            "/screenrant/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("screenrant-headlines", new Operation(
+            "screenrant-headlines",
+            "GET",
+            "/screenrant/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("movies", "movie-news", "movie-features", "movie-reviews", "movie-lists", "movie-trailers", "tv", "tv-news", "tv-features", "tv-reviews", "tv-lists", "network-tv", "reality-tv", "reality-tv-news", "reality-tv-features", "reality-tv-lists", "comics", "comics-news", "comics-features", "comics-reviews", "comics-lists", "gaming", "game-news", "game-features", "game-lists", "game-reviews", "anime", "books", "interviews", "lists", "videos", "podcasts", "exclusives", "streaming-movies-and-tv-guide"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("screenrant-news", new Operation(
+            "screenrant-news",
+            "GET",
+            "/screenrant/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("screenrant-sections", new Operation(
+            "screenrant-sections",
+            "GET",
+            "/screenrant/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-categories", new Operation(
+            "seatgeek-categories",
+            "GET",
+            "/seatgeek/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-cities", new Operation(
+            "seatgeek-cities",
+            "GET",
+            "/seatgeek/cities",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-event", new Operation(
+            "seatgeek-event",
+            "GET",
+            "/seatgeek/event",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-events-by-category", new Operation(
+            "seatgeek-events-by-category",
+            "GET",
+            "/seatgeek/events-by-category",
+            List.of(),
+            List.of(
+            new QueryParam("taxonomy_id", true, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("seatgeek-events-near", new Operation(
+            "seatgeek-events-near",
+            "GET",
+            "/seatgeek/events-near",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("seatgeek-performer", new Operation(
+            "seatgeek-performer",
+            "GET",
+            "/seatgeek/performer",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-performer-events", new Operation(
+            "seatgeek-performer-events",
+            "GET",
+            "/seatgeek/performer-events",
+            List.of(),
+            List.of(
+            new QueryParam("performer_id", true, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("seatgeek-search", new Operation(
+            "seatgeek-search",
+            "GET",
+            "/seatgeek/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-trending", new Operation(
+            "seatgeek-trending",
+            "GET",
+            "/seatgeek/trending",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-venue", new Operation(
+            "seatgeek-venue",
+            "GET",
+            "/seatgeek/venue",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seatgeek-venue-events", new Operation(
+            "seatgeek-venue-events",
+            "GET",
+            "/seatgeek/venue-events",
+            List.of(),
+            List.of(
+            new QueryParam("venue_id", true, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("seattletimes-article", new Operation(
+            "seattletimes-article",
+            "GET",
+            "/seattletimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seattletimes-author", new Operation(
+            "seattletimes-author",
+            "GET",
+            "/seattletimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seattletimes-headlines", new Operation(
+            "seattletimes-headlines",
+            "GET",
+            "/seattletimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("seattle-news", "law-justice", "politics", "transportation", "climate-lab", "environment", "weather", "health", "data", "homeless", "education-lab", "education", "times-watchdog", "mental-health", "eastside", "puget-sound", "business", "boeing-aerospace", "real-estate", "amazon", "technology", "microsoft", "alaska-airlines", "costco", "economy", "starbucks", "retail", "nation-world", "nation", "world", "nation-politics", "oddities", "sports", "seahawks", "mariners", "uw-huskies", "wsu-cougars", "storm", "kraken", "sounders", "reign", "torrent", "high-school", "entertainment", "music", "movies", "books", "tv", "theater", "visual-arts", "classical-music", "local-media", "events", "life", "food-drink", "travel", "outdoors", "wellness", "lifestyle", "fashion", "rant-and-rave", "op-eds", "opinion", "editorials", "letters-to-the-editor", "pacific-nw-magazine", "photo-video", "video", "photography", "at-home", "marijuana", "northwest", "obituaries", "science", "special-reports", "agriculture", "local-business", "markets", "auto-racing", "college", "wsu-cougar-basketball", "wsu-cougar-football", "golf", "gonzaga-bulldogs", "hockey", "horse-racing", "uw-husky-basketball", "nba", "ncaa-tournament", "pac-12", "seattle-university", "snow-sports", "world-cup", "dance", "video-games", "fitness", "garden", "home-decor"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seattletimes-news", new Operation(
+            "seattletimes-news",
+            "GET",
+            "/seattletimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("seattletimes-sections", new Operation(
+            "seattletimes-sections",
+            "GET",
+            "/seattletimes/sections",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -21092,6 +33290,31 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("sephora-brands", new Operation(
+            "sephora-brands",
+            "GET",
+            "/sephora/brands",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sephora-categories", new Operation(
+            "sephora-categories",
+            "GET",
+            "/sephora/categories",
+            List.of(),
+            List.of(
+            new QueryParam("department", false, "string", List.of("new", "makeup", "skincare", "fragrance", "hair", "bath-body", "mini-size", "brands", "gifts-value-sets", "sale-offers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("sephora-category", new Operation(
             "sephora-category",
             "GET",
@@ -21199,6 +33422,133 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sevennewsau-article", new Operation(
+            "sevennewsau-article",
+            "GET",
+            "/sevennewsau/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sevennewsau-author", new Operation(
+            "sevennewsau-author",
+            "GET",
+            "/sevennewsau/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sevennewsau-headlines", new Operation(
+            "sevennewsau-headlines",
+            "GET",
+            "/sevennewsau/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("7you", "7you-beauty", "7you-books", "7you-fashion", "7you-health-fitness", "7you-home", "7you-tech", "7you-travel", "business", "business-economy", "business-energy", "business-property", "business-retail", "entertainment", "entertainment-australian-idol", "entertainment-celebrity", "entertainment-farmer-wants-a-wife", "entertainment-home-and-away", "entertainment-movies", "entertainment-music", "entertainment-my-kitchen-rules", "entertainment-the-voice-australia", "entertainment-tv", "lifestyle", "lifestyle-fashion", "lifestyle-food", "lifestyle-health-wellbeing", "lifestyle-parenting", "lifestyle-personal-finance", "lifestyle-pets", "lifestyle-real-estate", "lifestyle-recipes", "lifestyle-relationships", "lifestyle-shopping", "lifestyle-sponsored", "motoring", "news", "news-act", "news-adelaide", "news-asia", "news-australia", "news-brisbane", "news-canberra", "news-conflict", "news-crime", "news-darwin", "news-disaster-and-emergency", "news-education", "news-europe", "news-gold-coast", "news-hobart", "news-israel", "news-melbourne", "news-middle-east", "news-missing-person", "news-new-zealand", "news-newcastle", "news-nsw", "news-nsw-police", "news-nt", "news-perth", "news-protest", "news-qld", "news-russia", "news-sa", "news-sydney", "news-ukraine", "news-united-states", "news-vic", "news-wa", "news-weather", "news-world", "opinion", "politics", "politics-federal-politics", "politics-state-politics", "sport", "sport-afl", "sport-aflw", "sport-baseball", "sport-basketball", "sport-boxing", "sport-cricket", "sport-cycling", "sport-f1", "sport-golf", "sport-horse-racing", "sport-mixed-martial-arts", "sport-motorsport", "sport-netball", "sport-nfl", "sport-olympics", "sport-rugby-league", "sport-rugby-union", "sport-soccer", "sport-supercars", "sport-tennis", "sport-ufc", "spotlight", "sunrise", "sunrise-cooking", "sunrise-cooking-with-coles", "sunrise-entertainment", "technology", "technology-gaming", "the-morning-show", "travel", "travel-jetstar", "travel-qantas"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sevennewsau-news", new Operation(
+            "sevennewsau-news",
+            "GET",
+            "/sevennewsau/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sevennewsau-sections", new Operation(
+            "sevennewsau-sections",
+            "GET",
+            "/sevennewsau/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sfgate-article", new Operation(
+            "sfgate-article",
+            "GET",
+            "/sfgate/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sfgate-author", new Operation(
+            "sfgate-author",
+            "GET",
+            "/sfgate/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sfgate-headlines", new Operation(
+            "sfgate-headlines",
+            "GET",
+            "/sfgate/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("top-news", "bay-area", "business-technology", "entertainment", "celebrity", "food-dining", "travel", "routes", "top-sports", "giants", "49ers", "warriors"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sfgate-news", new Operation(
+            "sfgate-news",
+            "GET",
+            "/sfgate/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sfgate-sections", new Operation(
+            "sfgate-sections",
+            "GET",
+            "/sfgate/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -21331,6 +33681,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations39(Map<String, Operation> m) {
         m.put("shein-products-search", new Operation(
             "shein-products-search",
             "POST",
@@ -21618,7 +33971,13 @@ public final class Operations {
             new QueryParam("url", true, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("sortBy", false, "string", List.of("sortLTH", "sortHTL", "newest"))),
+            new QueryParam("sortBy", false, "string", List.of("sortLTH", "sortHTL", "newest")),
+            new QueryParam("sort_by", false, "string", List.of("manual", "best-selling", "title-ascending", "title-descending", "price-ascending", "price-descending", "created-ascending", "created-descending")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("product_type", false, "string", List.of()),
+            new QueryParam("in_stock_only", false, "boolean", List.of()),
+            new QueryParam("option_size", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -21662,7 +34021,13 @@ public final class Operations {
             new QueryParam("url", true, "string", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("sortBy", false, "string", List.of("sortLTH", "sortHTL", "newest"))),
+            new QueryParam("sortBy", false, "string", List.of("sortLTH", "sortHTL", "newest")),
+            new QueryParam("sort_by", false, "string", List.of("manual", "best-selling", "title-ascending", "title-descending", "price-ascending", "price-descending", "created-ascending", "created-descending")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("product_type", false, "string", List.of()),
+            new QueryParam("in_stock_only", false, "boolean", List.of()),
+            new QueryParam("option_size", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -21697,9 +34062,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations24(Map<String, Operation> m) {
         m.put("shopify-search-suggest", new Operation(
             "shopify-search-suggest",
             "GET",
@@ -21921,6 +34283,414 @@ public final class Operations {
             "skims-store",
             "GET",
             "/skims/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-article", new Operation(
+            "skynews-article",
+            "GET",
+            "/skynews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-author", new Operation(
+            "skynews-author",
+            "GET",
+            "/skynews/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-headlines", new Operation(
+            "skynews-headlines",
+            "GET",
+            "/skynews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "uk", "world", "us", "business", "politics", "technology", "entertainment", "strange", "money", "science-climate-tech", "offbeat", "analysis", "data-and-forensics"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-news", new Operation(
+            "skynews-news",
+            "GET",
+            "/skynews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-sections", new Operation(
+            "skynews-sections",
+            "GET",
+            "/skynews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-video", new Operation(
+            "skynews-video",
+            "GET",
+            "/skynews/video",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skynews-videos", new Operation(
+            "skynews-videos",
+            "GET",
+            "/skynews/videos",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slate-article", new Operation(
+            "slate-article",
+            "GET",
+            "/slate/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slate-categories", new Operation(
+            "slate-categories",
+            "GET",
+            "/slate/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slate-headlines", new Operation(
+            "slate-headlines",
+            "GET",
+            "/slate/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", false, "string", List.of("all", "news-and-politics", "culture", "technology", "business", "life", "advice"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-categories", new Operation(
+            "slickdeals-categories",
+            "GET",
+            "/slickdeals/categories",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-category", new Operation(
+            "slickdeals-category",
+            "GET",
+            "/slickdeals/category",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-comments", new Operation(
+            "slickdeals-comments",
+            "GET",
+            "/slickdeals/comments",
+            List.of(),
+            List.of(
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("thread_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-deal", new Operation(
+            "slickdeals-deal",
+            "GET",
+            "/slickdeals/deal",
+            List.of(),
+            List.of(
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("thread_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-deal-types", new Operation(
+            "slickdeals-deal-types",
+            "GET",
+            "/slickdeals/deal-types",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-forums", new Operation(
+            "slickdeals-forums",
+            "GET",
+            "/slickdeals/forums",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-frontpage", new Operation(
+            "slickdeals-frontpage",
+            "GET",
+            "/slickdeals/frontpage",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+    }
+
+    private static void putOperations40(Map<String, Operation> m) {
+        m.put("slickdeals-primary-categories", new Operation(
+            "slickdeals-primary-categories",
+            "GET",
+            "/slickdeals/primary-categories",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-primary-category", new Operation(
+            "slickdeals-primary-category",
+            "GET",
+            "/slickdeals/primary-category",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-search", new Operation(
+            "slickdeals-search",
+            "GET",
+            "/slickdeals/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("forum_id", false, "integer", List.of()),
+            new QueryParam("deal_type_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("slickdeals-search-advanced", new Operation(
+            "slickdeals-search-advanced",
+            "GET",
+            "/slickdeals/search/advanced",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("category_id", false, "integer", List.of()),
+            new QueryParam("brand_id", false, "integer", List.of()),
+            new QueryParam("store_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("sloanreview-article", new Operation(
+            "sloanreview-article",
+            "GET",
+            "/sloanreview/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sloanreview-articles", new Operation(
+            "sloanreview-articles",
+            "GET",
+            "/sloanreview/articles",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("sloanreview-categories", new Operation(
+            "sloanreview-categories",
+            "GET",
+            "/sloanreview/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sloanreview-headlines", new Operation(
+            "sloanreview-headlines",
+            "GET",
+            "/sloanreview/headlines",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sloanreview-topic", new Operation(
+            "sloanreview-topic",
+            "GET",
+            "/sloanreview/topic",
+            List.of(),
+            List.of(
+            new QueryParam("topic", true, "string", List.of("ai-machine-learning", "analytics-business-intelligence", "automation", "boards-corporate-governance", "business-models-strategy", "climate-change", "collaboration", "corporate-social-responsibility-sustainability", "crisis-management", "culture", "customers", "data-ai-machine-learning", "data-culture", "developing-strategy", "digital-marketing", "disruption", "diversity-inclusion", "equality", "ethics", "executing-strategy", "financial-management-risk", "global-strategy", "innovation-3", "innovation-strategy", "it-governance-leadership", "leadership", "leadership-skills", "leading-change", "managing-technology", "managing-your-career", "marketing", "marketing-strategy", "new-product-development", "operations", "organizational-behavior", "organizational-structure", "organizational-transformation", "performance-management", "platforms-ecosystems", "project-management", "quality-service", "remote-work", "security-privacy", "skills-learning", "social-media", "social-responsibility", "strategy", "supply-chains-logistics", "sustainability-social-responsibility", "talent-management", "technology-implementation", "technology-innovation-strategy", "work-life-balance", "workplace-teams-culture"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("smh-article", new Operation(
+            "smh-article",
+            "GET",
+            "/smh/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("smh-author", new Operation(
+            "smh-author",
+            "GET",
+            "/smh/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("smh-headlines", new Operation(
+            "smh-headlines",
+            "GET",
+            "/smh/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("sydney-news", "national/nsw", "politics", "politics/federal", "politics/nsw", "politics/victoria", "politics/queensland", "politics/western-australia", "business", "business/companies", "business/markets", "business/bullsnbears", "business/the-economy", "business/banking-and-finance", "business/small-business", "business/workplace", "world", "world/north-america", "world/europe", "world/asia", "world/middle-east", "world/south-america", "world/africa", "national", "national/victoria", "national/queensland", "national/western-australia", "opinion", "property", "property/news", "property/living", "sport", "sport/nrl", "sport/rugby-union", "sport/cricket", "sport/soccer", "sport/afl", "sport/racing", "sport/tennis", "sport/netball", "sport/basketball", "sport/motorsport", "sport/cycling", "sport/golf", "sport/nfl", "sport/athletics", "sport/swimming", "sport/boxing", "goodfood", "goodfood/sydney-eating-out", "goodfood/recipes", "goodfood/tips-and-advice", "goodfood/drinks", "culture", "culture/movies", "culture/tv-and-radio", "culture/music", "culture/celebrity", "culture/books", "culture/comedy", "culture/dance", "culture/musicals", "culture/opera", "culture/theatre", "culture/art-and-design", "culture/live-reviews", "lifestyle", "lifestyle/health-and-wellness", "lifestyle/fashion", "lifestyle/life-and-relationships", "lifestyle/beauty", "traveller", "traveller/inspiration/destination-guides", "traveller/inspiration", "traveller/reviews-and-advice", "traveller/travel-news", "good-weekend", "sunday-life", "money", "money/super-and-retirement", "money/investing", "money/banking", "money/borrowing", "money/saving", "money/tax", "money/planning-and-budgeting", "education", "healthcare", "environment", "environment/conservation", "environment/climate-change", "environment/sustainability", "environment/weather", "technology", "technology/video-games", "australia-higher-education"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("smh-news", new Operation(
+            "smh-news",
+            "GET",
+            "/smh/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("smh-sections", new Operation(
+            "smh-sections",
+            "GET",
+            "/smh/sections",
             List.of(),
             List.of(),
             List.of(),
@@ -22362,6 +35132,70 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("space-article", new Operation(
+            "space-article",
+            "GET",
+            "/space/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("space-author", new Operation(
+            "space-author",
+            "GET",
+            "/space/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("space-headlines", new Operation(
+            "space-headlines",
+            "GET",
+            "/space/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("astronomy", "astronomy-black-holes", "astronomy-dark-universe", "astronomy-exoplanets", "astronomy-galaxies", "astronomy-hubble-space-telescope", "astronomy-james-webb-space-telescope", "astronomy-solar-system", "astronomy-solar-system-asteroids", "astronomy-solar-system-comets", "astronomy-solar-system-dwarf-planets", "astronomy-solar-system-earth", "astronomy-solar-system-jupiter", "astronomy-solar-system-mars", "astronomy-solar-system-mercury", "astronomy-solar-system-moon", "astronomy-solar-system-neptune", "astronomy-solar-system-pluto", "astronomy-solar-system-saturn", "astronomy-solar-system-sun", "astronomy-solar-system-uranus", "astronomy-solar-system-venus", "astronomy-stars", "entertainment", "entertainment-space-books", "entertainment-space-games", "entertainment-space-movies-shows", "entertainment-space-toys-lego", "science", "science-astrophysics", "science-climate-change", "science-particle-physics", "science-weather", "space-exploration", "space-exploration-human-spaceflight", "space-exploration-launches-spacecraft", "space-exploration-missions", "space-exploration-missions-apollo", "space-exploration-missions-artemis", "space-exploration-missions-asteroid-comet-missions", "space-exploration-missions-international-space-station", "space-exploration-missions-mars-rovers", "space-exploration-missions-new-horizons", "space-exploration-missions-parker-solar-probe", "space-exploration-missions-space-shuttle", "space-exploration-missions-voyager", "space-exploration-private-spaceflight", "space-exploration-satellites", "space-exploration-search-for-life", "stargazing", "stargazing-astrophotography", "stargazing-auroras", "stargazing-constellations", "stargazing-eclipses", "stargazing-eclipses-lunar-eclipses", "stargazing-eclipses-solar-eclipses", "stargazing-meteor-showers", "stargazing-skywatching-kit", "technology", "technology-aerospace", "technology-drones"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("space-news", new Operation(
+            "space-news",
+            "GET",
+            "/space/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("space-sections", new Operation(
+            "space-sections",
+            "GET",
+            "/space/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("sparkfun-categories", new Operation(
             "sparkfun-categories",
             "GET",
@@ -22419,6 +35253,73 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("sportingnews-article", new Operation(
+            "sportingnews-article",
+            "GET",
+            "/sportingnews/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportingnews-author", new Operation(
+            "sportingnews-author",
+            "GET",
+            "/sportingnews/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportingnews-headlines", new Operation(
+            "sportingnews-headlines",
+            "GET",
+            "/sportingnews/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("baseball", "basketball", "boxing", "bundesliga", "champions-league", "club-world-cup", "college", "cricket", "culture", "darts", "fantasy", "football", "formula-1", "golf", "high-school", "horse-racing", "la-liga", "liga-mx", "mlb", "mls", "mma", "nascar", "nba", "nba-draft", "ncaa", "ncaa-basketball", "ncaa-football", "nfl", "nfl-draft", "nhl", "olympics", "premier-league", "sec", "serie-a", "soccer", "softball", "tennis", "tickets", "tsn", "ufc", "watch", "wnba", "womens-college-basketball", "wwe"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportingnews-news", new Operation(
+            "sportingnews-news",
+            "GET",
+            "/sportingnews/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportingnews-sections", new Operation(
+            "sportingnews-sections",
+            "GET",
+            "/sportingnews/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations41(Map<String, Operation> m) {
         m.put("spotify-podcasts-categories", new Operation(
             "spotify-podcasts-categories",
             "GET",
@@ -22536,9 +35437,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations25(Map<String, Operation> m) {
         m.put("spotify-podcasts-show-recommendations", new Operation(
             "spotify-podcasts-show-recommendations",
             "GET",
@@ -23054,6 +35952,70 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("standard-article", new Operation(
+            "standard-article",
+            "GET",
+            "/standard/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("standard-author", new Operation(
+            "standard-author",
+            "GET",
+            "/standard/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("standard-headlines", new Operation(
+            "standard-headlines",
+            "GET",
+            "/standard/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/london", "news/politics", "news/transport", "news/crime", "news/world", "news/education", "news/health", "news/tech", "sport", "sport/football", "sport/rugby", "sport/cricket", "sport/boxing", "sport/formula-one", "sport/tennis", "business", "business/business-news", "business/markets", "business/economy", "business/technology-media", "business/leisure-retail", "business/money", "business/property", "lifestyle", "lifestyle/fashion", "lifestyle/beauty", "lifestyle/travel", "lifestyle/wellness", "lifestyle/dating", "culture", "culture/theatre", "culture/film", "culture/tvfilm", "culture/music", "culture/books", "going-out", "going-out/restaurants", "going-out/foodanddrink", "going-out/bars", "going-out/attractions", "going-out/events", "homesandproperty", "homesandproperty/property-news", "homesandproperty/buying-mortgages", "homesandproperty/renting", "homesandproperty/where-to-live", "homesandproperty/interiors", "homesandproperty/gardening", "comment", "comment/podcasts", "showbiz", "showbiz/celebrity-news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("standard-news", new Operation(
+            "standard-news",
+            "GET",
+            "/standard/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("standard-sections", new Operation(
+            "standard-sections",
+            "GET",
+            "/standard/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("starbucks-menu", new Operation(
             "starbucks-menu",
             "GET",
@@ -23306,6 +36268,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations42(Map<String, Operation> m) {
         m.put("steam-players", new Operation(
             "steam-players",
             "GET",
@@ -23498,9 +36463,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations26(Map<String, Operation> m) {
         m.put("stevemadden-page", new Operation(
             "stevemadden-page",
             "GET",
@@ -23683,6 +36645,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("straitstimes-article", new Operation(
+            "straitstimes-article",
+            "GET",
+            "/straitstimes/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("straitstimes-author", new Operation(
+            "straitstimes-author",
+            "GET",
+            "/straitstimes/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("straitstimes-headlines", new Operation(
+            "straitstimes-headlines",
+            "GET",
+            "/straitstimes/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("singapore", "singapore/housing", "singapore/health", "singapore/transport", "singapore/parenting-education", "singapore/politics", "singapore/jobs", "singapore/environment", "singapore/courts-crime", "singapore/community", "asia", "asia/se-asia", "asia/east-asia", "asia/south-asia", "asia/australianz", "world", "world/united-states", "world/europe", "world/middle-east", "opinion", "opinion/forum", "life", "life/entertainment", "life/travel", "life/food", "life/home-design", "life/style", "life/arts", "business", "business/economy", "business/banking", "business/companies-markets", "business/invest", "sport", "sport/basketball", "sport/football", "sport/formula-one", "sport/golf", "sport/schools", "sport/tennis", "sport/racing", "tech", "breaking-news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("straitstimes-news", new Operation(
+            "straitstimes-news",
+            "GET",
+            "/straitstimes/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("straitstimes-sections", new Operation(
+            "straitstimes-sections",
+            "GET",
+            "/straitstimes/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("strava-challenges", new Operation(
             "strava-challenges",
             "GET",
@@ -23735,6 +36760,511 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("stubhub-carousel", new Operation(
+            "stubhub-carousel",
+            "GET",
+            "/stubhub/carousel",
+            List.of(),
+            List.of(
+            new QueryParam("performer_slug", true, "string", List.of()),
+            new QueryParam("performer_id", true, "integer", List.of()),
+            new QueryParam("top_level_category_id", true, "integer", List.of("1", "2", "3")),
+            new QueryParam("category_id", true, "integer", List.of()),
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("max", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-categories", new Operation(
+            "stubhub-categories",
+            "GET",
+            "/stubhub/categories",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-category-events", new Operation(
+            "stubhub-category-events",
+            "GET",
+            "/stubhub/category-events",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of()),
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("radius_miles", false, "integer", List.of()),
+            new QueryParam("include_parking_passes", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("stubhub-explore", new Operation(
+            "stubhub-explore",
+            "GET",
+            "/stubhub/explore",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of()),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of()),
+            new QueryParam("price_min", false, "integer", List.of()),
+            new QueryParam("price_max", false, "integer", List.of()),
+            new QueryParam("top_level_category_id", false, "integer", List.of("0", "1", "2", "3")),
+            new QueryParam("category_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-navigation-categories", new Operation(
+            "stubhub-navigation-categories",
+            "GET",
+            "/stubhub/navigation-categories",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "integer", List.of("1", "2", "3"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-performer-events", new Operation(
+            "stubhub-performer-events",
+            "GET",
+            "/stubhub/performer-events",
+            List.of(),
+            List.of(
+            new QueryParam("performer_slug", true, "string", List.of()),
+            new QueryParam("performer_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-search", new Operation(
+            "stubhub-search",
+            "GET",
+            "/stubhub/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-suggested-searches", new Operation(
+            "stubhub-suggested-searches",
+            "GET",
+            "/stubhub/suggested-searches",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-trending", new Operation(
+            "stubhub-trending",
+            "GET",
+            "/stubhub/trending",
+            List.of(),
+            List.of(
+            new QueryParam("top_level_category_id", false, "integer", List.of("0", "1", "2", "3"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stubhub-trending-events", new Operation(
+            "stubhub-trending-events",
+            "GET",
+            "/stubhub/trending-events",
+            List.of(),
+            List.of(
+            new QueryParam("top_level_category_id", false, "integer", List.of("0", "1", "2", "3")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("stubhub-venue-events", new Operation(
+            "stubhub-venue-events",
+            "GET",
+            "/stubhub/venue-events",
+            List.of(),
+            List.of(
+            new QueryParam("venue_slug", true, "string", List.of()),
+            new QueryParam("venue_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stuff-article", new Operation(
+            "stuff-article",
+            "GET",
+            "/stuff/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stuff-author", new Operation(
+            "stuff-author",
+            "GET",
+            "/stuff/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stuff-headlines", new Operation(
+            "stuff-headlines",
+            "GET",
+            "/stuff/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("latest-news", "nz-news", "nz-news/auckland", "nz-news/wellington", "nz-news/canterbury", "nz-news/north-island", "nz-news/south-island", "world-news", "business", "money", "politics", "perspectives", "pou-tiaki", "forever-project", "sport", "sport/rugby", "sport/cricket", "sport/netball", "sport/football", "sport/rugby-league", "home-property", "home-property/good-life", "travel", "life-and-style", "wellbeing", "wellbeing/house-wellness", "food-drink", "culture", "motoring", "health", "quizzes"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stuff-news", new Operation(
+            "stuff-news",
+            "GET",
+            "/stuff/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("stuff-sections", new Operation(
+            "stuff-sections",
+            "GET",
+            "/stuff/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-categories", new Operation(
+            "substack-categories",
+            "GET",
+            "/substack/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-category", new Operation(
+            "substack-category",
+            "GET",
+            "/substack/category",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("paid", "free")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("substack-explore", new Operation(
+            "substack-explore",
+            "GET",
+            "/substack/explore",
+            List.of(),
+            List.of(
+            new QueryParam("tab", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("base", "secondary", "category")),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("substack-leaderboard", new Operation(
+            "substack-leaderboard",
+            "GET",
+            "/substack/leaderboard",
+            List.of(),
+            List.of(
+            new QueryParam("category_id", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("trending", "paid", "all")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("substack-note", new Operation(
+            "substack-note",
+            "GET",
+            "/substack/note",
+            List.of(),
+            List.of(
+            new QueryParam("note_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-note-replies", new Operation(
+            "substack-note-replies",
+            "GET",
+            "/substack/note/replies",
+            List.of(),
+            List.of(
+            new QueryParam("note_id", true, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("substack-note-restacks", new Operation(
+            "substack-note-restacks",
+            "GET",
+            "/substack/note/restacks",
+            List.of(),
+            List.of(
+            new QueryParam("note_id", true, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("substack-notes", new Operation(
+            "substack-notes",
+            "GET",
+            "/substack/notes",
+            List.of(),
+            List.of(
+            new QueryParam("tab", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("base", "secondary", "category")),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("substack-notes-tabs", new Operation(
+            "substack-notes-tabs",
+            "GET",
+            "/substack/notes/tabs",
+            List.of(),
+            List.of(
+            new QueryParam("surface", false, "string", List.of("feed", "explore"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-post", new Operation(
+            "substack-post",
+            "GET",
+            "/substack/post",
+            List.of(),
+            List.of(
+            new QueryParam("publication", true, "string", List.of()),
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations43(Map<String, Operation> m) {
+        m.put("substack-publication", new Operation(
+            "substack-publication",
+            "GET",
+            "/substack/publication",
+            List.of(),
+            List.of(
+            new QueryParam("publication", false, "string", List.of()),
+            new QueryParam("publication_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-publication-contributors", new Operation(
+            "substack-publication-contributors",
+            "GET",
+            "/substack/publication/contributors",
+            List.of(),
+            List.of(
+            new QueryParam("publication", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("substack-publication-posts", new Operation(
+            "substack-publication-posts",
+            "GET",
+            "/substack/publication/posts",
+            List.of(),
+            List.of(
+            new QueryParam("publication", true, "string", List.of()),
+            new QueryParam("search", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("new", "top", "community")),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("substack-publication-recommendations", new Operation(
+            "substack-publication-recommendations",
+            "GET",
+            "/substack/publication/recommendations",
+            List.of(),
+            List.of(
+            new QueryParam("publication_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-search", new Operation(
+            "substack-search",
+            "GET",
+            "/substack/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("focus_publication_id", false, "integer", List.of()),
+            new QueryParam("focus_limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("substack-user", new Operation(
+            "substack-user",
+            "GET",
+            "/substack/user",
+            List.of(),
+            List.of(
+            new QueryParam("handle", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-user-activity", new Operation(
+            "substack-user-activity",
+            "GET",
+            "/substack/user/activity",
+            List.of(),
+            List.of(
+            new QueryParam("user_id", true, "integer", List.of()),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("substack-user-connections", new Operation(
+            "substack-user-connections",
+            "GET",
+            "/substack/user/connections",
+            List.of(),
+            List.of(
+            new QueryParam("user_id", true, "integer", List.of()),
+            new QueryParam("list", false, "string", List.of("followers", "following", "subscribers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("substack-user-search", new Operation(
+            "substack-user-search",
+            "GET",
+            "/substack/user/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("subway-available-times", new Operation(
             "subway-available-times",
@@ -23818,6 +37348,69 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sun-article", new Operation(
+            "sun-article",
+            "GET",
+            "/sun/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sun-author", new Operation(
+            "sun-author",
+            "GET",
+            "/sun/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sun-headlines", new Operation(
+            "sun-headlines",
+            "GET",
+            "/sun/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "politics", "royal-family", "sport", "showbiz", "money", "tech", "fabulous", "travel", "health"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sun-news", new Operation(
+            "sun-news",
+            "GET",
+            "/sun/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sun-sections", new Operation(
+            "sun-sections",
+            "GET",
+            "/sun/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -24105,6 +37698,213 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("target-stores", new Operation(
+            "target-stores",
+            "GET",
+            "/target/stores",
+            List.of(),
+            List.of(
+            new QueryParam("place", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("within", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techcrunch-article", new Operation(
+            "techcrunch-article",
+            "GET",
+            "/techcrunch/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techcrunch-author", new Operation(
+            "techcrunch-author",
+            "GET",
+            "/techcrunch/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("techcrunch-headlines", new Operation(
+            "techcrunch-headlines",
+            "GET",
+            "/techcrunch/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("apps", "artificial-intelligence", "biotech-health", "climate", "commerce", "cryptocurrency", "enterprise", "fintech", "fundraising", "gadgets", "gaming", "government-policy", "hardware", "media-entertainment", "privacy", "robotics", "security", "social", "space", "startups", "transportation", "venture"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techcrunch-news", new Operation(
+            "techcrunch-news",
+            "GET",
+            "/techcrunch/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techcrunch-sections", new Operation(
+            "techcrunch-sections",
+            "GET",
+            "/techcrunch/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techradar-article", new Operation(
+            "techradar-article",
+            "GET",
+            "/techradar/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techradar-author", new Operation(
+            "techradar-author",
+            "GET",
+            "/techradar/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("techradar-headlines", new Operation(
+            "techradar-headlines",
+            "GET",
+            "/techradar/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ai-platforms-assistants", "audio", "best", "cameras", "computing", "deals", "gaming", "health-fitness", "home", "how-to", "how-to-watch", "news", "opinion", "phones", "pro", "reviews", "seasonal-sales", "streaming", "tablets", "tech", "tech-events", "televisions", "vehicle-tech", "versus", "vpn"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techradar-news", new Operation(
+            "techradar-news",
+            "GET",
+            "/techradar/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("techradar-sections", new Operation(
+            "techradar-sections",
+            "GET",
+            "/techradar/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("telegraph-article", new Operation(
+            "telegraph-article",
+            "GET",
+            "/telegraph/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("telegraph-author", new Operation(
+            "telegraph-author",
+            "GET",
+            "/telegraph/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("telegraph-headlines", new Operation(
+            "telegraph-headlines",
+            "GET",
+            "/telegraph/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("uk-news", "world-news", "politics", "business", "finance", "technology", "sport", "culture", "travel", "lifestyle", "health", "science", "opinion"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("telegraph-news", new Operation(
+            "telegraph-news",
+            "GET",
+            "/telegraph/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("telegraph-sections", new Operation(
+            "telegraph-sections",
+            "GET",
+            "/telegraph/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("tes-job-detail", new Operation(
             "tes-job-detail",
             "GET",
@@ -24189,6 +37989,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations44(Map<String, Operation> m) {
         m.put("tes-resource-shop", new Operation(
             "tes-resource-shop",
             "GET",
@@ -24247,6 +38050,120 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("theage-article", new Operation(
+            "theage-article",
+            "GET",
+            "/theage/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theage-author", new Operation(
+            "theage-author",
+            "GET",
+            "/theage/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theage-headlines", new Operation(
+            "theage-headlines",
+            "GET",
+            "/theage/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("melbourne-news", "national/victoria", "politics", "politics/federal", "politics/victoria", "politics/nsw", "politics/queensland", "politics/western-australia", "business", "business/companies", "business/markets", "business/bullsnbears", "business/the-economy", "business/banking-and-finance", "business/small-business", "business/workplace", "world", "world/north-america", "world/europe", "world/asia", "world/middle-east", "world/south-america", "world/africa", "national", "national/nsw", "national/queensland", "national/western-australia", "opinion", "property", "property/news", "property/living", "sport", "sport/afl", "sport/cricket", "sport/soccer", "sport/racing", "sport/tennis", "sport/nrl", "sport/rugby-union", "sport/netball", "sport/basketball", "sport/motorsport", "sport/cycling", "sport/golf", "sport/nfl", "sport/athletics", "sport/swimming", "sport/boxing", "goodfood", "goodfood/melbourne-eating-out", "goodfood/recipes", "goodfood/tips-and-advice", "goodfood/drinks", "culture", "culture/movies", "culture/tv-and-radio", "culture/music", "culture/celebrity", "culture/books", "culture/comedy", "culture/dance", "culture/musicals", "culture/opera", "culture/theatre", "culture/art-and-design", "culture/live-reviews", "lifestyle", "lifestyle/health-and-wellness", "lifestyle/fashion", "lifestyle/life-and-relationships", "lifestyle/beauty", "traveller", "traveller/inspiration/destination-guides", "traveller/inspiration", "traveller/reviews-and-advice", "traveller/travel-news", "good-weekend", "sunday-life", "money", "money/super-and-retirement", "money/investing", "money/banking", "money/borrowing", "money/saving", "money/tax", "money/planning-and-budgeting", "education", "healthcare", "environment", "environment/conservation", "environment/climate-change", "environment/sustainability", "environment/weather", "technology", "technology/video-games", "australia-higher-education"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theage-news", new Operation(
+            "theage-news",
+            "GET",
+            "/theage/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theage-sections", new Operation(
+            "theage-sections",
+            "GET",
+            "/theage/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theatlantic-article", new Operation(
+            "theatlantic-article",
+            "GET",
+            "/theatlantic/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theatlantic-author", new Operation(
+            "theatlantic-author",
+            "GET",
+            "/theatlantic/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theatlantic-headlines", new Operation(
+            "theatlantic-headlines",
+            "GET",
+            "/theatlantic/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ideas", "politics", "economy", "international", "national-security", "technology", "science", "health", "education", "culture", "family", "books", "photography"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theatlantic-sections", new Operation(
+            "theatlantic-sections",
+            "GET",
+            "/theatlantic/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("thebodyshop-collections", new Operation(
             "thebodyshop-collections",
@@ -24371,9 +38288,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations27(Map<String, Operation> m) {
         m.put("thebodyshop-sitemaps", new Operation(
             "thebodyshop-sitemaps",
             "GET",
@@ -24390,6 +38304,607 @@ public final class Operations {
             "thebodyshop-store",
             "GET",
             "/thebodyshop/store",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thedailybeast-article", new Operation(
+            "thedailybeast-article",
+            "GET",
+            "/thedailybeast/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thedailybeast-author", new Operation(
+            "thedailybeast-author",
+            "GET",
+            "/thedailybeast/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thedailybeast-headlines", new Operation(
+            "thedailybeast-headlines",
+            "GET",
+            "/thedailybeast/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("lifestyle", "lifestyle/body", "lifestyle/face", "lifestyle/wellness", "lifestyle/hair", "lifestyle/style", "travel", "entertainment", "entertainment/music", "entertainment/tv", "entertainment/movies", "entertainment/comedy", "entertainment/awards-shows", "archive", "media", "tech", "arts-and-culture", "arts-and-culture/theater", "arts-and-culture/royalist", "arts-and-culture/fashion", "arts-and-culture/books", "innovation", "innovation/science", "obsessed", "obsessed/shop", "obsessed/hot-takes", "obsessed/reviews", "obsessed/recaps", "obsessed/what-to-watch", "obsessed/trailers", "obsessed/interviews", "obsessed/industry", "obsessed/celebrity", "obsessed/media", "obsessed/media/shows", "obsessed/media/movies", "obsessed/media/music", "obsessed/media/books", "obsessed/rating", "obsessed/rating/see", "obsessed/rating/skip", "obsessed/the-last-laugh", "obsessed/obsessed-podcast", "obsessed/obsessed-newsletter", "politics", "politics/biden-world", "politics/congress", "politics/elections", "politics/national-security", "politics/opinion", "politics/trumpland", "politics/pay-dirt", "politics/trail-mix", "politics/the-new-abnormal", "scouted", "scouted/fitness", "scouted/wellness", "scouted/beauty", "scouted/bedroom", "scouted/clothing", "scouted/face-masks", "scouted/home", "scouted/kitchen", "scouted/outdoors", "scouted/technology", "scouted/new-kids-on-the-block", "scouted/the-case-for", "scouted/thisthat", "us-news", "us-news/crime-and-justice", "us-news/identities", "us-news/sports", "world", "world/china", "world/middle-east", "world/europe", "world/russia"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thedailybeast-news", new Operation(
+            "thedailybeast-news",
+            "GET",
+            "/thedailybeast/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thedailybeast-sections", new Operation(
+            "thedailybeast-sections",
+            "GET",
+            "/thedailybeast/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehill-article", new Operation(
+            "thehill-article",
+            "GET",
+            "/thehill/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehill-author", new Operation(
+            "thehill-author",
+            "GET",
+            "/thehill/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehill-headlines", new Operation(
+            "thehill-headlines",
+            "GET",
+            "/thehill/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("home", "homenews", "policy", "business", "opinion", "healthcare", "campaign", "national-security", "senate", "house", "administration", "regulation", "media", "defense", "technology", "transportation", "international", "economy", "policy-healthcare"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehill-news", new Operation(
+            "thehill-news",
+            "GET",
+            "/thehill/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehill-sections", new Operation(
+            "thehill-sections",
+            "GET",
+            "/thehill/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehindu-article", new Operation(
+            "thehindu-article",
+            "GET",
+            "/thehindu/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehindu-author", new Operation(
+            "thehindu-author",
+            "GET",
+            "/thehindu/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehindu-headlines", new Operation(
+            "thehindu-headlines",
+            "GET",
+            "/thehindu/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news-national", "news-international", "news-states", "news-cities", "opinion", "opinion-editorial", "opinion-cartoon", "opinion-columns", "opinion-op-ed", "opinion-interview", "opinion-lead", "opinion-letters", "opinion-open-page", "business", "business-agri-business", "business-economy", "business-industry", "business-markets", "business-budget", "sport", "sport-cricket", "sport-football", "sport-hockey", "sport-tennis", "sport-athletics", "sport-motorsport", "sport-races", "sport-other-sports", "entertainment", "entertainment-art", "entertainment-dance", "entertainment-movies", "entertainment-music", "entertainment-reviews", "entertainment-theatre", "data", "sci-tech-health", "sci-tech-science", "sci-tech-technology", "sci-tech-technology-gadgets", "sci-tech-technology-internet", "sci-tech-energy-and-environment", "sci-tech-agriculture", "education", "education-careers", "education-colleges", "education-schools", "life-and-style", "life-and-style-fashion", "life-and-style-fitness", "life-and-style-homes-and-gardens", "life-and-style-luxury", "life-and-style-motoring", "life-and-style-travel", "society", "society-faith", "society-history-and-culture", "books", "books-books-authors", "books-books-reviews", "children", "food", "food-dining", "food-features", "food-guides", "food-recipes", "real-estate"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehindu-news", new Operation(
+            "thehindu-news",
+            "GET",
+            "/thehindu/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thehindu-sections", new Operation(
+            "thehindu-sections",
+            "GET",
+            "/thehindu/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thejournal-article", new Operation(
+            "thejournal-article",
+            "GET",
+            "/thejournal/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thejournal-author", new Operation(
+            "thejournal-author",
+            "GET",
+            "/thejournal/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thejournal-headlines", new Operation(
+            "thejournal-headlines",
+            "GET",
+            "/thejournal/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("irish", "politics", "international", "business", "tech", "science", "environment", "voices", "investigates", "factcheck", "explainer", "gaeilge", "sport", "money-diaries", "quiz", "climate-change", "housing", "cost-of-living", "road-safety", "courts", "ukraine", "gaza"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thejournal-news", new Operation(
+            "thejournal-news",
+            "GET",
+            "/thejournal/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thejournal-sections", new Operation(
+            "thejournal-sections",
+            "GET",
+            "/thejournal/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-autocomplete", new Operation(
+            "therealreal-autocomplete",
+            "GET",
+            "/therealreal/autocomplete",
+            List.of(),
+            List.of(
+            new QueryParam("term", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-categories", new Operation(
+            "therealreal-categories",
+            "GET",
+            "/therealreal/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-category", new Operation(
+            "therealreal-category",
+            "GET",
+            "/therealreal/category",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("available", false, "boolean", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-collection", new Operation(
+            "therealreal-collection",
+            "GET",
+            "/therealreal/collection",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-collections", new Operation(
+            "therealreal-collections",
+            "GET",
+            "/therealreal/collections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-conditions", new Operation(
+            "therealreal-conditions",
+            "GET",
+            "/therealreal/conditions",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-designer", new Operation(
+            "therealreal-designer",
+            "GET",
+            "/therealreal/designer",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("available", false, "boolean", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-designers", new Operation(
+            "therealreal-designers",
+            "GET",
+            "/therealreal/designers",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-listing", new Operation(
+            "therealreal-listing",
+            "GET",
+            "/therealreal/listing",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-search", new Operation(
+            "therealreal-search",
+            "GET",
+            "/therealreal/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("category_id", false, "string", List.of()),
+            new QueryParam("designer_id", false, "string", List.of()),
+            new QueryParam("condition_id", false, "string", List.of()),
+            new QueryParam("price_from", false, "number", List.of()),
+            new QueryParam("price_to", false, "number", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("available", false, "boolean", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("therealreal-similar", new Operation(
+            "therealreal-similar",
+            "GET",
+            "/therealreal/similar",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thestarmy-article", new Operation(
+            "thestarmy-article",
+            "GET",
+            "/thestarmy/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thestarmy-author", new Operation(
+            "thestarmy-author",
+            "GET",
+            "/thestarmy/author",
+            List.of(),
+            List.of(
+            new QueryParam("name", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thestarmy-headlines", new Operation(
+            "thestarmy-headlines",
+            "GET",
+            "/thestarmy/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news-latest", "latest-nation", "latest-business", "latest-education", "latest-aseanplus", "latest-sport", "latest-metro", "latest-tech", "latest-world", "latest-lifestyle", "latest-food", "news-nation", "news-world", "news-environment", "news-in-other-media", "news-true-or-not", "news-focus", "aseanplus-aseanplus-news", "business-insight", "business-smebiz", "business-premium", "sport-athletics", "sport-hockey", "sport-football", "sport-golf", "sport-badminton", "sport-tennis", "sport-motorsport", "sport-other-sport", "sport-say-what", "sport-archery", "sport-basketball", "sport-bowling", "sport-boxing", "sport-cricket", "sport-cycling", "sport-diving", "sport-gymnastics", "sport-others", "sport-rugby", "sport-shooting", "sport-squash", "sport-swimming", "sport-wrestling", "metro-metro-news", "metro-community-sports", "metro-views", "lifestyle", "lifestyle-entertainment-and-style", "lifestyle-people-and-living", "lifestyle-health-and-family", "lifestyle-travel-and-culture", "lifestyle-viewpoints", "lifestyle-entertainment", "lifestyle-living", "lifestyle-style", "lifestyle-people", "lifestyle-health", "lifestyle-family", "lifestyle-travel", "lifestyle-culture", "lifestyle-design", "lifestyle-science", "lifestyle-wellness", "lifestyle-fitness", "lifestyle-mind", "lifestyle-nutrition", "lifestyle-animals", "lifestyle-children", "lifestyle-seniors", "lifestyle-beauty", "lifestyle-fashion", "lifestyle-malaysia", "lifestyle-global", "lifestyle-asia-oceania", "lifestyle-americas", "lifestyle-europe", "lifestyle-africa", "lifestyle-arts", "lifestyle-books", "lifestyle-climate", "lifestyle-movie-review", "lifestyle-music-review", "lifestyle-book-review", "food", "food-food-for-thought", "food-food-news", "food-eating-out", "tech-tech-news", "tech-tech-thoughts", "education-news", "opinion-columnists", "opinion-letters", "starpicks"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thestarmy-news", new Operation(
+            "thestarmy-news",
+            "GET",
+            "/thestarmy/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thestarmy-sections", new Operation(
+            "thestarmy-sections",
+            "GET",
+            "/thestarmy/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations45(Map<String, Operation> m) {
+        m.put("theverge-article", new Operation(
+            "theverge-article",
+            "GET",
+            "/theverge/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theverge-author", new Operation(
+            "theverge-author",
+            "GET",
+            "/theverge/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theverge-headlines", new Operation(
+            "theverge-headlines",
+            "GET",
+            "/theverge/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("tech", "reviews", "science", "entertainment", "ai", "policy", "gaming", "mobile", "apps", "features"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theverge-news", new Operation(
+            "theverge-news",
+            "GET",
+            "/theverge/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("theverge-sections", new Operation(
+            "theverge-sections",
+            "GET",
+            "/theverge/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thisismoney-article", new Operation(
+            "thisismoney-article",
+            "GET",
+            "/thisismoney/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thisismoney-author", new Operation(
+            "thisismoney-author",
+            "GET",
+            "/thisismoney/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thisismoney-headlines", new Operation(
+            "thisismoney-headlines",
+            "GET",
+            "/thisismoney/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("money", "markets", "investing", "savings", "pensions", "mortgages", "property", "cars", "travel", "consumer"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thisismoney-news", new Operation(
+            "thisismoney-news",
+            "GET",
+            "/thisismoney/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("thisismoney-sections", new Operation(
+            "thisismoney-sections",
+            "GET",
+            "/thisismoney/sections",
             List.of(),
             List.of(),
             List.of(),
@@ -24710,6 +39225,131 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("tiffany-categories", new Operation(
+            "tiffany-categories",
+            "GET",
+            "/tiffany/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tiffany-category", new Operation(
+            "tiffany-category",
+            "GET",
+            "/tiffany/category",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("recommended", "price_asc", "price_desc", "newest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("material", false, "string", List.of()),
+            new QueryParam("gemstone", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("product_type", false, "string", List.of()),
+            new QueryParam("gender", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tiffany-content-search", new Operation(
+            "tiffany-content-search",
+            "GET",
+            "/tiffany/content-search",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tiffany-filters", new Operation(
+            "tiffany-filters",
+            "GET",
+            "/tiffany/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tiffany-product", new Operation(
+            "tiffany-product",
+            "GET",
+            "/tiffany/product",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tiffany-search", new Operation(
+            "tiffany-search",
+            "GET",
+            "/tiffany/search",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("recommended", "price_asc", "price_desc", "newest")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of()),
+            new QueryParam("material", false, "string", List.of()),
+            new QueryParam("gemstone", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("product_type", false, "string", List.of()),
+            new QueryParam("gender", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tiffany-stores", new Operation(
+            "tiffany-stores",
+            "GET",
+            "/tiffany/stores",
+            List.of(),
+            List.of(
+            new QueryParam("latitude", true, "number", List.of()),
+            new QueryParam("longitude", true, "number", List.of()),
+            new QueryParam("radius", false, "number", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tiffany-suggest", new Operation(
+            "tiffany-suggest",
+            "GET",
+            "/tiffany/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("tiktok-category", new Operation(
             "tiktok-category",
             "GET",
@@ -24978,6 +39618,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations46(Map<String, Operation> m) {
         m.put("tiktok-top-ads-locations", new Operation(
             "tiktok-top-ads-locations",
             "GET",
@@ -25049,6 +39692,219 @@ public final class Operations {
             "tiktok-trending",
             "GET",
             "/tiktok/trending",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("time-article", new Operation(
+            "time-article",
+            "GET",
+            "/time/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("time-author", new Operation(
+            "time-author",
+            "GET",
+            "/time/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("time-headlines", new Operation(
+            "time-headlines",
+            "GET",
+            "/time/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "politics", "world", "business", "technology", "health", "entertainment", "sports", "ideas", "climate"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("time-news", new Operation(
+            "time-news",
+            "GET",
+            "/time/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("time-sections", new Operation(
+            "time-sections",
+            "GET",
+            "/time/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofindia-article", new Operation(
+            "timesofindia-article",
+            "GET",
+            "/timesofindia/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofindia-author", new Operation(
+            "timesofindia-author",
+            "GET",
+            "/timesofindia/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofindia-headlines", new Operation(
+            "timesofindia-headlines",
+            "GET",
+            "/timesofindia/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("top-stories", "india", "world", "nri", "business", "cricket", "sports", "science", "environment", "tech", "education", "entertainment", "life-style", "astrology", "auto", "mumbai", "delhi", "bangalore", "hyderabad", "chennai", "ahmedabad", "allahabad", "bhubaneswar", "coimbatore", "gurgaon", "guwahati", "hubli", "kanpur", "kolkata", "ludhiana", "mangalore", "mysore", "noida", "pune", "goa", "chandigarh", "lucknow", "patna", "jaipur", "nagpur", "rajkot", "ranchi", "surat", "vadodara", "varanasi", "thane", "thiruvananthapuram", "us", "pakistan", "south-asia", "uk", "europe", "china", "middle-east", "rest-of-world"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofindia-news", new Operation(
+            "timesofindia-news",
+            "GET",
+            "/timesofindia/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofindia-sections", new Operation(
+            "timesofindia-sections",
+            "GET",
+            "/timesofindia/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofisrael-article", new Operation(
+            "timesofisrael-article",
+            "GET",
+            "/timesofisrael/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofisrael-author", new Operation(
+            "timesofisrael-author",
+            "GET",
+            "/timesofisrael/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofisrael-headlines", new Operation(
+            "timesofisrael-headlines",
+            "GET",
+            "/timesofisrael/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("israel-and-the-region", "israel-inside", "jewish-times", "real-estate-israel", "tech-israel"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofisrael-news", new Operation(
+            "timesofisrael-news",
+            "GET",
+            "/timesofisrael/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("timesofisrael-sections", new Operation(
+            "timesofisrael-sections",
+            "GET",
+            "/timesofisrael/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmdb-collection", new Operation(
+            "tmdb-collection",
+            "GET",
+            "/tmdb/collection/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmdb-genres", new Operation(
+            "tmdb-genres",
+            "GET",
+            "/tmdb/genres",
             List.of(),
             List.of(),
             List.of(),
@@ -25129,7 +39985,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("query", true, "string", List.of()),
-            new QueryParam("type", false, "string", List.of("movie", "tv", "person")),
+            new QueryParam("type", false, "string", List.of("movie", "tv", "person", "collection")),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("limit", false, "integer", List.of())),
             List.of(),
@@ -25169,6 +40025,71 @@ public final class Operations {
             "GET",
             "/tmdb/tv/{id}",
             List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmz-article", new Operation(
+            "tmz-article",
+            "GET",
+            "/tmz/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmz-author", new Operation(
+            "tmz-author",
+            "GET",
+            "/tmz/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tmz-headlines", new Operation(
+            "tmz-headlines",
+            "GET",
+            "/tmz/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "sports"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmz-news", new Operation(
+            "tmz-news",
+            "GET",
+            "/tmz/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tmz-sections", new Operation(
+            "tmz-sections",
+            "GET",
+            "/tmz/sections",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -25216,9 +40137,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations28(Map<String, Operation> m) {
         m.put("tokopedia-home-tabs", new Operation(
             "tokopedia-home-tabs",
             "GET",
@@ -25281,6 +40199,267 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomsguide-article", new Operation(
+            "tomsguide-article",
+            "GET",
+            "/tomsguide/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomsguide-author", new Operation(
+            "tomsguide-author",
+            "GET",
+            "/tomsguide/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tomsguide-headlines", new Operation(
+            "tomsguide-headlines",
+            "GET",
+            "/tomsguide/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("ai", "audio", "best-picks", "cameras-photography", "computing", "deals", "entertainment", "face-off", "gaming", "home", "how-to", "mattresses", "news", "reference", "reviews", "sales-events", "tech", "tech-events", "tvs", "vehicle-tech", "wellness", "phones"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomsguide-news", new Operation(
+            "tomsguide-news",
+            "GET",
+            "/tomsguide/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomsguide-sections", new Operation(
+            "tomsguide-sections",
+            "GET",
+            "/tomsguide/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomshardware-article", new Operation(
+            "tomshardware-article",
+            "GET",
+            "/tomshardware/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomshardware-author", new Operation(
+            "tomshardware-author",
+            "GET",
+            "/tomshardware/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("tomshardware-headlines", new Operation(
+            "tomshardware-headlines",
+            "GET",
+            "/tomshardware/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("3d-printing", "best-picks", "cpus", "deals", "desktops", "features", "gpus", "laptops", "maker-stem", "monitors", "networking", "news", "news-analysis", "pc-components", "peripherals", "phones", "reviews", "service-providers", "software", "tech-industry"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomshardware-news", new Operation(
+            "tomshardware-news",
+            "GET",
+            "/tomshardware/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("tomshardware-sections", new Operation(
+            "tomshardware-sections",
+            "GET",
+            "/tomshardware/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("torontostar-article", new Operation(
+            "torontostar-article",
+            "GET",
+            "/torontostar/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("torontostar-author", new Operation(
+            "torontostar-author",
+            "GET",
+            "/torontostar/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("torontostar-headlines", new Operation(
+            "torontostar-headlines",
+            "GET",
+            "/torontostar/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/gta", "news/toronto-election", "news/police/project-south", "news/car-thefts", "news/canada", "news/ontario", "news/canada/british-columbia", "news/canada/alberta", "news/canada/quebec", "news/canada/nova-scotia", "news/investigations", "news/world", "news/world/united-states", "news/world/americas", "news/world/europe", "news/world/asia", "news/world/africa", "news/world/australia", "news/world/middle-east", "news/world/royals", "politics", "politics/federal", "politics/provincial", "politics/political-opinion", "opinion", "opinion/star-columnists", "opinion/editorials", "opinion/contributors", "opinion/letters-to-the-editor", "opinion/editorial-cartoons", "life", "life/relationships", "life/food-and-drink", "life/beauty-and-fashion", "life/health-wellness", "life/home-and-garden", "life/autos", "life/horoscopes", "sports", "sports/hockey", "sports/hockey/pwhl", "sports/basketball", "sports/basketball/wnba", "sports/baseball", "sports/football", "sports/football/cfl", "sports/golf", "sports/soccer", "sports/tennis", "sports/auto-racing", "sports/cricket", "sports/olympics-and-paralympics", "real-estate", "entertainment", "entertainment/stage", "entertainment/books", "entertainment/music", "entertainment/movies", "entertainment/television", "business", "business/small-business", "business/technology", "business/mars", "podcasts", "podcasts/this-matters", "podcasts/its-political", "podcasts/billionaire-murders", "podcasts/deep-left-field"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("torontostar-news", new Operation(
+            "torontostar-news",
+            "GET",
+            "/torontostar/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("torontostar-sections", new Operation(
+            "torontostar-sections",
+            "GET",
+            "/torontostar/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("townhall-article", new Operation(
+            "townhall-article",
+            "GET",
+            "/townhall/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("townhall-author", new Operation(
+            "townhall-author",
+            "GET",
+            "/townhall/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations47(Map<String, Operation> m) {
+        m.put("townhall-headlines", new Operation(
+            "townhall-headlines",
+            "GET",
+            "/townhall/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "columnists", "2026-elections", "congress", "donald-trump", "economy", "foreign-policy", "illegal-immigration", "iran", "supreme-court"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("townhall-news", new Operation(
+            "townhall-news",
+            "GET",
+            "/townhall/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("townhall-sections", new Operation(
+            "townhall-sections",
+            "GET",
+            "/townhall/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -26046,6 +41225,72 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("usatoday-article", new Operation(
+            "usatoday-article",
+            "GET",
+            "/usatoday/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usatoday-author", new Operation(
+            "usatoday-author",
+            "GET",
+            "/usatoday/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usatoday-headlines", new Operation(
+            "usatoday-headlines",
+            "GET",
+            "/usatoday/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "sports", "entertainment", "life", "money", "tech", "travel", "opinion", "cars", "shopping", "weather", "politics", "grocery"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usatoday-news", new Operation(
+            "usatoday-news",
+            "GET",
+            "/usatoday/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usatoday-sections", new Operation(
+            "usatoday-sections",
+            "GET",
+            "/usatoday/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations48(Map<String, Operation> m) {
         m.put("user-me", new Operation(
             "user-me",
             "GET",
@@ -26082,9 +41327,6 @@ public final class Operations {
             List.of("JWTAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations29(Map<String, Operation> m) {
         m.put("user-me-api-keys-reveal", new Operation(
             "user-me-api-keys-reveal",
             "POST",
@@ -26145,6 +41387,69 @@ public final class Operations {
             List.of("JWTAuth"),
             false,
             List.of()));
+        m.put("usmagazine-article", new Operation(
+            "usmagazine-article",
+            "GET",
+            "/usmagazine/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usmagazine-author", new Operation(
+            "usmagazine-author",
+            "GET",
+            "/usmagazine/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usmagazine-headlines", new Operation(
+            "usmagazine-headlines",
+            "GET",
+            "/usmagazine/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("celebrity-news", "entertainment", "sports", "shopping", "crime-news", "stylish", "celebrity-moms", "celebrity-body", "food", "reviews", "reality-tv", "royal-family"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usmagazine-news", new Operation(
+            "usmagazine-news",
+            "GET",
+            "/usmagazine/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("usmagazine-sections", new Operation(
+            "usmagazine-sections",
+            "GET",
+            "/usmagazine/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("usptoppubs-detail", new Operation(
             "usptoppubs-detail",
             "GET",
@@ -26174,6 +41479,368 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("vanguardng-article", new Operation(
+            "vanguardng-article",
+            "GET",
+            "/vanguardng/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanguardng-author", new Operation(
+            "vanguardng-author",
+            "GET",
+            "/vanguardng/author",
+            List.of(),
+            List.of(
+            new QueryParam("name", true, "string", List.of()),
+            new QueryParam("section", false, "string", List.of("national-news", "top-stories", "more-news", "politics", "business", "business/energy", "business/insurance-and-you", "sports", "entertainment", "health", "education-2", "technology", "innovation-2", "aviation", "agric", "motoring", "pension", "foreign", "editorial", "opinion", "columns", "viewpoints", "discourse", "features", "special-reports", "thearts", "cartoons", "romance-an-relationships", "homes-property", "travel-and-tourism", "style/allure/interviews", "tribute", "promoted", "videos", "top-podcasts", "national-news/icymi", "more", "more/education", "more/interview", "more/labour", "more/law-and-human-rights", "more/metro"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanguardng-headlines", new Operation(
+            "vanguardng-headlines",
+            "GET",
+            "/vanguardng/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("national-news", "top-stories", "more-news", "politics", "business", "business/energy", "business/insurance-and-you", "sports", "entertainment", "health", "education-2", "technology", "innovation-2", "aviation", "agric", "motoring", "pension", "foreign", "editorial", "opinion", "columns", "viewpoints", "discourse", "features", "special-reports", "thearts", "cartoons", "romance-an-relationships", "homes-property", "travel-and-tourism", "style/allure/interviews", "tribute", "promoted", "videos", "top-podcasts", "national-news/icymi", "more", "more/education", "more/interview", "more/labour", "more/law-and-human-rights", "more/metro"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanguardng-news", new Operation(
+            "vanguardng-news",
+            "GET",
+            "/vanguardng/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanguardng-sections", new Operation(
+            "vanguardng-sections",
+            "GET",
+            "/vanguardng/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanityfair-article", new Operation(
+            "vanityfair-article",
+            "GET",
+            "/vanityfair/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanityfair-author", new Operation(
+            "vanityfair-author",
+            "GET",
+            "/vanityfair/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanityfair-headlines", new Operation(
+            "vanityfair-headlines",
+            "GET",
+            "/vanityfair/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("hollywood", "movies", "television", "award-season", "what-is-cinema", "culture", "politics", "business", "style", "beauty", "fashion", "royals"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanityfair-news", new Operation(
+            "vanityfair-news",
+            "GET",
+            "/vanityfair/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vanityfair-sections", new Operation(
+            "vanityfair-sections",
+            "GET",
+            "/vanityfair/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("variety-article", new Operation(
+            "variety-article",
+            "GET",
+            "/variety/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("variety-author", new Operation(
+            "variety-author",
+            "GET",
+            "/variety/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("variety-headlines", new Operation(
+            "variety-headlines",
+            "GET",
+            "/variety/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("artisans", "awards", "biz", "data", "digital", "dirt", "film", "gaming", "global", "legit", "music", "politics", "scene", "shopping", "sports", "streaming", "theater", "tune-in", "tv", "video", "vintage", "vip", "vivant", "voices"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("variety-news", new Operation(
+            "variety-news",
+            "GET",
+            "/variety/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("variety-sections", new Operation(
+            "variety-sections",
+            "GET",
+            "/variety/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-brands", new Operation(
+            "vestiaire-brands",
+            "GET",
+            "/vestiaire/brands",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-categories", new Operation(
+            "vestiaire-categories",
+            "GET",
+            "/vestiaire/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-conditions", new Operation(
+            "vestiaire-conditions",
+            "GET",
+            "/vestiaire/conditions",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-product", new Operation(
+            "vestiaire-product",
+            "GET",
+            "/vestiaire/product",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-search", new Operation(
+            "vestiaire-search",
+            "GET",
+            "/vestiaire/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category_id", false, "string", List.of()),
+            new QueryParam("brand_id", false, "string", List.of()),
+            new QueryParam("condition_id", false, "string", List.of("1", "2", "3", "4", "5")),
+            new QueryParam("sort", false, "string", List.of("relevance", "price_asc", "price_desc", "recency")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("vestiaire-search-sellers", new Operation(
+            "vestiaire-search-sellers",
+            "GET",
+            "/vestiaire/search-sellers",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-seller", new Operation(
+            "vestiaire-seller",
+            "GET",
+            "/vestiaire/seller",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vestiaire-suggest", new Operation(
+            "vestiaire-suggest",
+            "GET",
+            "/vestiaire/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vice-article", new Operation(
+            "vice-article",
+            "GET",
+            "/vice/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vice-author", new Operation(
+            "vice-author",
+            "GET",
+            "/vice/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vice-headlines", new Operation(
+            "vice-headlines",
+            "GET",
+            "/vice/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "life", "tech", "music", "munchies", "waypoint", "rec-room", "membership", "via-vice", "spotlights", "theunstoppables", "eu"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vice-news", new Operation(
+            "vice-news",
+            "GET",
+            "/vice/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vice-sections", new Operation(
+            "vice-sections",
+            "GET",
+            "/vice/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("vinted-brand", new Operation(
             "vinted-brand",
@@ -26276,6 +41943,137 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("vox-article", new Operation(
+            "vox-article",
+            "GET",
+            "/vox/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vox-author", new Operation(
+            "vox-author",
+            "GET",
+            "/vox/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vox-headlines", new Operation(
+            "vox-headlines",
+            "GET",
+            "/vox/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("politics", "culture", "policy", "world", "money", "technology", "science-and-health", "climate", "future-perfect", "explainers"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vox-news", new Operation(
+            "vox-news",
+            "GET",
+            "/vox/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("vox-sections", new Operation(
+            "vox-sections",
+            "GET",
+            "/vox/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walesonline-article", new Operation(
+            "walesonline-article",
+            "GET",
+            "/walesonline/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walesonline-author", new Operation(
+            "walesonline-author",
+            "GET",
+            "/walesonline/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("walesonline-headlines", new Operation(
+            "walesonline-headlines",
+            "GET",
+            "/walesonline/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "news/wales-news", "news/uk-news", "news/world-news", "news/politics", "news/local-news", "news/education", "news/health", "news/cost-of-living", "news/homes-property", "news/motoring", "news/motoring/motoring-news", "news/news-opinion", "sport", "sport/football", "sport/football/football-news", "sport/football/transfer-news", "sport/rugby", "sport/rugby/rugby-news", "sport/boxing", "sport/other-sport", "sport/other-sport/athletics", "whats-on", "whats-on/whats-on-news", "whats-on/arts-culture-news", "whats-on/family-kids-news", "whats-on/food-drink-news", "whats-on/music-nightlife-news", "whats-on/restaurants-bars", "whats-on/shopping", "whats-on/travel", "lifestyle", "lifestyle/showbiz", "lifestyle/tv", "lifestyle/welsh-homes", "special-features", "in-your-area"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walesonline-news", new Operation(
+            "walesonline-news",
+            "GET",
+            "/walesonline/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("walesonline-sections", new Operation(
+            "walesonline-sections",
+            "GET",
+            "/walesonline/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations49(Map<String, Operation> m) {
         m.put("walgreens-stores", new Operation(
             "walgreens-stores",
             "GET",
@@ -26329,6 +42127,71 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("wapo-article", new Operation(
+            "wapo-article",
+            "GET",
+            "/wapo/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wapo-author", new Operation(
+            "wapo-author",
+            "GET",
+            "/wapo/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("wapo-headlines", new Operation(
+            "wapo-headlines",
+            "GET",
+            "/wapo/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wapo-news", new Operation(
+            "wapo-news",
+            "GET",
+            "/wapo/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wapo-sections", new Operation(
+            "wapo-sections",
+            "GET",
+            "/wapo/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("wayfair-categories", new Operation(
             "wayfair-categories",
@@ -26681,6 +42544,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("wired-article", new Operation(
+            "wired-article",
+            "GET",
+            "/wired/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wired-author", new Operation(
+            "wired-author",
+            "GET",
+            "/wired/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wired-headlines", new Operation(
+            "wired-headlines",
+            "GET",
+            "/wired/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("business", "culture", "gear", "politics", "science", "security"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wired-news", new Operation(
+            "wired-news",
+            "GET",
+            "/wired/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wired-sections", new Operation(
+            "wired-sections",
+            "GET",
+            "/wired/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("wish-categories", new Operation(
             "wish-categories",
             "GET",
@@ -26878,6 +42804,33 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("wsj-article", new Operation(
+            "wsj-article",
+            "GET",
+            "/wsj/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wsj-author", new Operation(
+            "wsj-author",
+            "GET",
+            "/wsj/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("x-post", new Operation(
             "x-post",
             "GET",
@@ -26903,9 +42856,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations30(Map<String, Operation> m) {
         m.put("x-profile-posts", new Operation(
             "x-profile-posts",
             "GET",
@@ -26913,6 +42863,170 @@ public final class Operations {
             List.of("username"),
             List.of(
             new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xbox-browse", new Operation(
+            "xbox-browse",
+            "GET",
+            "/xbox/browse",
+            List.of(),
+            List.of(
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "release_date_desc", "most_popular", "price_asc", "price_desc", "most_wishlisted", "discount_desc", "title_asc", "title_desc")),
+            new QueryParam("genre", false, "array", List.of("Action & adventure", "Card & board", "Casino", "Classics", "Companion", "Educational", "Family & kids", "Fighting", "Multi-Player Online Battle Arena", "Music", "Other", "Platformer", "Puzzle & trivia", "Racing & flying", "Role playing", "Shooter", "Simulation", "Sports", "Strategy", "Tools", "Word")),
+            new QueryParam("price", false, "array", List.of("OnSale", "0", "0.01To5", "5To10", "10To20", "20To40", "40To60", "60To")),
+            new QueryParam("platform", false, "array", List.of("XboxSeriesX|S", "XboxOne", "PC", "Handheld", "CloudGaming", "XboxPlayAnywhere")),
+            new QueryParam("subscription", false, "array", List.of("CFQ7TTC0KHS0", "CFQ7TTC0P85B", "CFQ7TTC0K5DJ", "CFQ7TTC0K6L8", "CFQ7TTC0KGQ8", "CFQ7TTC0K5DH", "CFQ7TTC0QH5H")),
+            new QueryParam("age_rating", false, "array", List.of("ESRB:EC", "ESRB:E", "ESRB:E10", "ESRB:T", "ESRB:M", "ESRB:AO", "ESRB:RPEveryone", "ESRB:RPMature", "ESRB:RPTeen", "ESRB:UR")),
+            new QueryParam("multiplayer", false, "array", List.of("CrossPlatformMultiplayer", "CrossPlatformCoop", "SinglePlayer", "OnlineMultiplayerWithGold", "CoopSupportOnline", "CoopSupportLocal", "LocalMultiplayer")),
+            new QueryParam("technical_features", false, "array", List.of("CapabilityXboxEnhanced", "ConsoleGen9Optimized", "ConsoleCrossGen", "Capability4k", "CapabilityHDR", "60fps", "120fps", "RayTracing")),
+            new QueryParam("handheld_compatibility", false, "array", List.of("VERIFIED", "PLAYABLE", "UNSUPPORTED", "UNKNOWN")),
+            new QueryParam("supported_language", false, "array", List.of("ar-SA", "zh-CN", "zh-TW", "cs-CZ", "da-DK", "nl-NL", "en-GB", "en-US", "fi-FI", "fr-FR", "de-DE", "el-GR", "he-IL", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nb-NO", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "es-MX", "es-ES", "sv-SE", "tr-TR")),
+            new QueryParam("accessibility", false, "array", List.of("AccessibilityOnLaunch", "AdjustableDifficulty", "OnDemandTutorials", "Pausable", "ProgressSavingOptions", "MonoSound", "CustomVolumeControls", "NarratedGameMenus", "StereoSound", "SpatialAudio", "SteadyCamera", "ContrastOptions", "ColorOptions", "SubtitleOptions", "AdjustableTextSize", "AdjustableInputSensitivity", "BasicInputRemapping", "TtsSttCommunications", "InputRemapping", "PlayableWithButtonsOnly", "FullKeyboardSupport", "PlayableWithMouseOnly", "PlayableWithTouchOnly", "NoButtonHolds", "PlayableWithoutMotionControls", "NoQuickTimeEvents", "PlayableWithoutTouchControls", "SingleStickGameplay", "StickInversion")),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+    }
+
+    private static void putOperations50(Map<String, Operation> m) {
+        m.put("xbox-collection", new Operation(
+            "xbox-collection",
+            "GET",
+            "/xbox/collection",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of("TopFreeGames", "TopPaidGames", "OptimizedSeriesXS", "XboxPlayAnywhere")),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("xbox-game", new Operation(
+            "xbox-game",
+            "GET",
+            "/xbox/game",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xbox-reviews", new Operation(
+            "xbox-reviews",
+            "GET",
+            "/xbox/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "string", List.of()),
+            new QueryParam("item_count", false, "integer", List.of()),
+            new QueryParam("order_by", false, "string", List.of("MostHelpful", "MostRecent")),
+            new QueryParam("star_filter", false, "integer", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xbox-search", new Operation(
+            "xbox-search",
+            "GET",
+            "/xbox/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("games", "addons", "hardware")),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "release_date_desc", "most_popular", "price_asc", "price_desc", "most_wishlisted", "discount_desc", "title_asc", "title_desc")),
+            new QueryParam("genre", false, "array", List.of("Action & adventure", "Card & board", "Casino", "Classics", "Companion", "Educational", "Family & kids", "Fighting", "Multi-Player Online Battle Arena", "Music", "Other", "Platformer", "Puzzle & trivia", "Racing & flying", "Role playing", "Shooter", "Simulation", "Sports", "Strategy", "Tools", "Word")),
+            new QueryParam("price", false, "array", List.of("OnSale", "0", "0.01To5", "5To10", "10To20", "20To40", "40To60", "60To")),
+            new QueryParam("platform", false, "array", List.of("XboxSeriesX|S", "XboxOne", "PC", "Handheld", "CloudGaming", "XboxPlayAnywhere")),
+            new QueryParam("subscription", false, "array", List.of("CFQ7TTC0KHS0", "CFQ7TTC0P85B", "CFQ7TTC0K5DJ", "CFQ7TTC0K6L8", "CFQ7TTC0KGQ8", "CFQ7TTC0K5DH", "CFQ7TTC0QH5H")),
+            new QueryParam("age_rating", false, "array", List.of("ESRB:EC", "ESRB:E", "ESRB:E10", "ESRB:T", "ESRB:M", "ESRB:AO", "ESRB:RPEveryone", "ESRB:RPMature", "ESRB:RPTeen", "ESRB:UR")),
+            new QueryParam("multiplayer", false, "array", List.of("CrossPlatformMultiplayer", "CrossPlatformCoop", "SinglePlayer", "OnlineMultiplayerWithGold", "CoopSupportOnline", "CoopSupportLocal", "LocalMultiplayer")),
+            new QueryParam("technical_features", false, "array", List.of("CapabilityXboxEnhanced", "ConsoleGen9Optimized", "ConsoleCrossGen", "Capability4k", "CapabilityHDR", "60fps", "120fps", "RayTracing")),
+            new QueryParam("handheld_compatibility", false, "array", List.of("VERIFIED", "PLAYABLE", "UNSUPPORTED", "UNKNOWN")),
+            new QueryParam("supported_language", false, "array", List.of("ar-SA", "zh-CN", "zh-TW", "cs-CZ", "da-DK", "nl-NL", "en-GB", "en-US", "fi-FI", "fr-FR", "de-DE", "el-GR", "he-IL", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nb-NO", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "es-MX", "es-ES", "sv-SE", "tr-TR")),
+            new QueryParam("accessibility", false, "array", List.of("AccessibilityOnLaunch", "AdjustableDifficulty", "OnDemandTutorials", "Pausable", "ProgressSavingOptions", "MonoSound", "CustomVolumeControls", "NarratedGameMenus", "StereoSound", "SpatialAudio", "SteadyCamera", "ContrastOptions", "ColorOptions", "SubtitleOptions", "AdjustableTextSize", "AdjustableInputSensitivity", "BasicInputRemapping", "TtsSttCommunications", "InputRemapping", "PlayableWithButtonsOnly", "FullKeyboardSupport", "PlayableWithMouseOnly", "PlayableWithTouchOnly", "NoButtonHolds", "PlayableWithoutMotionControls", "NoQuickTimeEvents", "PlayableWithoutTouchControls", "SingleStickGameplay", "StickInversion")),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("xda-article", new Operation(
+            "xda-article",
+            "GET",
+            "/xda/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xda-author", new Operation(
+            "xda-author",
+            "GET",
+            "/xda/author",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xda-headlines", new Operation(
+            "xda-headlines",
+            "GET",
+            "/xda/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("news", "features", "reviews", "buying-guides", "tutorials", "editorials", "editor-columns", "deals", "commerce", "evergreen", "performance", "beats", "awards", "hardware", "processor", "gpu", "storage", "monitors", "input-devices", "laptops", "devices", "single-board-computers", "gaming-handhelds", "prebuilt-pc", "networking", "smart-home", "home", "other-hardware", "headset", "cpu-cooler", "printer", "home-internet", "other-computing-devices", "phone-reviews", "3d-printing", "esp32", "home-lab", "self-hosting", "software", "software-and-services", "apps", "ai-tools", "claude", "notebooklm", "productivity", "os", "windows", "windows-tutorials", "linux-hub", "linux-tutorials", "macos", "macos-tutorials", "chromeos-tutorials", "microsoft-edge", "opera", "spotify", "bing", "gaming", "gaming-news", "gaming-reviews", "entertainment", "entertainment-segment"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xda-news", new Operation(
+            "xda-news",
+            "GET",
+            "/xda/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("xda-sections", new Operation(
+            "xda-sections",
+            "GET",
+            "/xda/sections",
+            List.of(),
+            List.of(),
             List.of(),
             null,
             false,
@@ -27581,6 +43695,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations51(Map<String, Operation> m) {
         m.put("yahoo-news-category", new Operation(
             "yahoo-news-category",
             "GET",
@@ -27639,6 +43756,21 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("yahoo-news-related", new Operation(
+            "yahoo-news-related",
+            "GET",
+            "/yahoo-news/related",
+            List.of(),
+            List.of(
+            new QueryParam("content_id", true, "string", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("count", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
         m.put("yahoo-news-suggest", new Operation(
             "yahoo-news-suggest",
             "GET",
@@ -27692,9 +43824,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations31(Map<String, Operation> m) {
         m.put("yahoo-search", new Operation(
             "yahoo-search",
             "GET",
@@ -28210,6 +44339,69 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("yoox-categories", new Operation(
+            "yoox-categories",
+            "GET",
+            "/yoox/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("yoox-designers", new Operation(
+            "yoox-designers",
+            "GET",
+            "/yoox/designers",
+            List.of(),
+            List.of(
+            new QueryParam("department", true, "string", List.of("women", "men", "kids"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("yoox-product", new Operation(
+            "yoox-product",
+            "GET",
+            "/yoox/product",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("yoox-search", new Operation(
+            "yoox-search",
+            "GET",
+            "/yoox/search",
+            List.of(),
+            List.of(
+            new QueryParam("department", true, "string", List.of("women", "men", "kids")),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("designer", false, "string", List.of()),
+            new QueryParam("color", false, "string", List.of()),
+            new QueryParam("size", false, "string", List.of()),
+            new QueryParam("price_min", false, "number", List.of()),
+            new QueryParam("price_max", false, "number", List.of()),
+            new QueryParam("on_sale", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "newest", "price_asc", "price_desc", "discount")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("youtube-captions", new Operation(
             "youtube-captions",
             "GET",
@@ -28313,6 +44505,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations52(Map<String, Operation> m) {
         m.put("youtube-search", new Operation(
             "youtube-search",
             "GET",
@@ -28322,11 +44517,13 @@ public final class Operations {
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("search_query", false, "string", List.of()),
             new QueryParam("continuation_token", false, "string", List.of()),
-            new QueryParam("type", false, "string", List.of("video", "channel", "playlist", "movie")),
-            new QueryParam("sort_by", false, "string", List.of("relevance", "upload_date", "view_count", "rating")),
+            new QueryParam("type", false, "string", List.of("video", "shorts", "channel", "playlist", "movie")),
+            new QueryParam("sort_by", false, "string", List.of("relevance", "upload_date", "view_count", "popularity", "rating")),
             new QueryParam("upload_date", false, "string", List.of("last_hour", "today", "this_week", "this_month", "this_year")),
-            new QueryParam("duration", false, "string", List.of("short", "medium", "long")),
+            new QueryParam("duration", false, "string", List.of("under_3_minutes", "three_to_20_minutes", "over_20_minutes", "under_3", "three_to_20", "over_20", "short", "medium", "long")),
             new QueryParam("features", false, "string", List.of()),
+            new QueryParam("hl", false, "string", List.of()),
+            new QueryParam("gl", false, "string", List.of()),
             new QueryParam("params", false, "string", List.of())),
             List.of(),
             null,
@@ -28382,6 +44579,20 @@ public final class Operations {
             "/youtube/video/{id}",
             List.of("id"),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zalando-categories", new Operation(
+            "zalando-categories",
+            "GET",
+            "/zalando/categories",
+            List.of(),
+            List.of(
+            new QueryParam("market", true, "string", List.of("at", "be", "ch", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "hr", "hu", "ie", "it", "lt", "lu", "lv", "nl", "no", "pl", "ro", "se", "si", "sk")),
+            new QueryParam("department", false, "string", List.of("women", "men", "kids"))),
             List.of(),
             null,
             false,
@@ -28498,9 +44709,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations32(Map<String, Operation> m) {
         m.put("zappos-search", new Operation(
             "zappos-search",
             "GET",
@@ -28651,6 +44859,71 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("zdnet-article", new Operation(
+            "zdnet-article",
+            "GET",
+            "/zdnet/article",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zdnet-author", new Operation(
+            "zdnet-author",
+            "GET",
+            "/zdnet/author",
+            List.of(),
+            List.of(
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("zdnet-headlines", new Operation(
+            "zdnet-headlines",
+            "GET",
+            "/zdnet/headlines",
+            List.of(),
+            List.of(
+            new QueryParam("section", true, "string", List.of("5g", "amazon", "android", "apple", "ar-vr", "artificial-intelligence", "broadband", "business", "cloud", "cloud-storage", "collaboration", "companies", "computers-tech", "computing", "creativity-software", "cyber-threats", "data-centers", "data-management", "deals", "digital-transformation", "e-commerce", "education", "energy", "enterprise-software", "events", "finance", "fitness-bands", "gaming", "gaming-accessories", "gaming-devices", "google", "hardware", "headphones", "health", "home-and-office", "home-entertainment", "home-networking", "home-security", "how-to", "innovation", "ios", "ipad", "iphone", "kitchen-household", "laptops", "linux", "mac-os", "magsafe-accessories", "microsoft", "mobile-accessories", "mobile-carriers", "mobile-os", "networking", "news", "office-hardware-appliances", "open-source", "operating-systems", "password-manager", "pcs", "photo-video", "power-banks-and-batteries", "productivity", "projectors", "quantum-computing", "robot-vacuums", "samsung", "security", "servers", "services-software", "sleep", "smart-assistants", "smart-glasses", "smart-home", "smart-rings", "smart-watches", "smartphones", "social-media", "space", "speakers", "storage", "streaming-devices", "streaming-services", "tablets", "taxes", "tech", "tools", "transportation", "tvs", "video-conferencing", "video-streaming-services", "vpn", "wearables", "web-hosting", "windows", "windows-11", "work-life", "yard-outdoors"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zdnet-news", new Operation(
+            "zdnet-news",
+            "GET",
+            "/zdnet/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zdnet-sections", new Operation(
+            "zdnet-sections",
+            "GET",
+            "/zdnet/sections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("zillow-autocomplete", new Operation(
             "zillow-autocomplete",
             "GET",
@@ -28698,6 +44971,19 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("zomato-cities", new Operation(
+            "zomato-cities",
+            "GET",
+            "/zomato/cities",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("zomato-collection", new Operation(
             "zomato-collection",
@@ -28775,6 +45061,14 @@ public final class Operations {
         Map<String, Map<String, String>> g = new LinkedHashMap<>();
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "firstdibs-categories");
+            group.put("designers", "firstdibs-designers");
+            group.put("product", "firstdibs-product");
+            group.put("search", "firstdibs-search");
+            g.put("firstDibs", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("catalog", "7now-catalog");
             group.put("categories", "7now-categories");
             group.put("category", "7now-category");
@@ -28789,6 +45083,24 @@ public final class Operations {
             group.put("stores", "7now-stores");
             group.put("suggest", "7now-suggest");
             g.put("sevenNow", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("abcauArticle", "abcau-article");
+            group.put("abcauAuthor", "abcau-author");
+            group.put("abcauHeadlines", "abcau-headlines");
+            group.put("abcauNews", "abcau-news");
+            group.put("abcauSections", "abcau-sections");
+            g.put("abcNewsAustralia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("abcnewsArticle", "abcnews-article");
+            group.put("abcnewsAuthor", "abcnews-author");
+            group.put("abcnewsHeadlines", "abcnews-headlines");
+            group.put("abcnewsNews", "abcnews-news");
+            group.put("abcnewsSections", "abcnews-sections");
+            g.put("abcNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -28838,6 +45150,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("aljazeeraArticle", "aljazeera-article");
+            group.put("aljazeeraAuthor", "aljazeera-author");
+            group.put("aljazeeraCategories", "aljazeera-categories");
+            group.put("aljazeeraHeadlines", "aljazeera-headlines");
+            group.put("aljazeeraTopic", "aljazeera-topic");
+            g.put("alJazeera", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "allbirds-collections");
             group.put("collectionProducts", "allbirds-collection-products");
             group.put("pages", "allbirds-pages");
@@ -28853,16 +45174,40 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("asset", "alt-asset");
+            group.put("auctions", "alt-auctions");
+            group.put("cardSearch", "alt-card-search");
+            group.put("categories", "alt-categories");
+            group.put("listing", "alt-listing");
+            group.put("marketTrends", "alt-market-trends");
+            group.put("search", "alt-search");
+            group.put("soldListings", "alt-sold-listings");
+            group.put("topMovers", "alt-top-movers");
+            g.put("alt", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "amazon-jobs-categories");
             group.put("job", "amazon-jobs-job");
             group.put("search", "amazon-jobs-search");
             g.put("amazonJobs", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("charts", "amazon-charts");
+            group.put("chartsCategories", "amazon-charts-categories");
             group.put("product", "amazon-product");
             group.put("search", "amazon-search");
             group.put("suggest", "amazon-suggest");
             g.put("amazon", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("androidauthorityArticle", "androidauthority-article");
+            group.put("androidauthorityHeadlines", "androidauthority-headlines");
+            group.put("androidauthorityNews", "androidauthority-news");
+            group.put("androidauthoritySections", "androidauthority-sections");
+            g.put("androidAuthority", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -28889,6 +45234,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("apnewsArticle", "apnews-article");
+            group.put("apnewsAuthor", "apnews-author");
+            group.put("apnewsFactCheck", "apnews-fact-check");
+            group.put("apnewsHeadlines", "apnews-headlines");
+            group.put("apnewsNews", "apnews-news");
+            group.put("apnewsSections", "apnews-sections");
+            g.put("apNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("audiobookSeries", "apple-books-audiobook-series");
             group.put("audiobookSearch", "apple-books-audiobook-search");
             group.put("audiobook", "apple-books-audiobook");
@@ -28906,6 +45261,7 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("job", "apple-jobs-job");
+            group.put("locations", "apple-jobs-locations");
             group.put("search", "apple-jobs-search");
             g.put("appleJobs", Map.copyOf(group));
         }
@@ -28947,6 +45303,7 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("app", "appstore-app");
+            group.put("categories", "appstore-categories");
             group.put("developer", "appstore-developer");
             group.put("editorial", "appstore-editorial");
             group.put("editorialCategory", "appstore-editorial-category");
@@ -28971,9 +45328,19 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("arstechnicaArticle", "arstechnica-article");
+            group.put("arstechnicaAuthor", "arstechnica-author");
+            group.put("arstechnicaHeadlines", "arstechnica-headlines");
+            group.put("arstechnicaNews", "arstechnica-news");
+            group.put("arstechnicaSections", "arstechnica-sections");
+            g.put("arsTechnica", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("categories", "audible-categories");
             group.put("category", "audible-category");
             group.put("charts", "audible-charts");
+            group.put("authorCharts", "audible-author-charts");
             group.put("editorialList", "audible-editorial-list");
             group.put("product", "audible-product");
             group.put("productRelated", "audible-product-related");
@@ -28992,6 +45359,32 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "axios-article");
+            group.put("categories", "axios-categories");
+            group.put("headlines", "axios-headlines");
+            g.put("axios", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "balenciaga-categories");
+            group.put("category", "balenciaga-category");
+            group.put("product", "balenciaga-product");
+            group.put("productVariants", "balenciaga-product-variants");
+            group.put("search", "balenciaga-search");
+            group.put("storeCountries", "balenciaga-store-countries");
+            group.put("stores", "balenciaga-stores");
+            g.put("balenciaga", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "barrons-article");
+            group.put("headlines", "barrons-headlines");
+            group.put("news", "barrons-news");
+            group.put("topics", "barrons-topics");
+            g.put("barrons", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("business", "bbb-business");
             group.put("businessComplaints", "bbb-business-complaints");
             group.put("businessMoreInfo", "bbb-business-more-info");
@@ -29006,6 +45399,7 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "bbc-article");
+            group.put("author", "bbc-author");
             group.put("headlines", "bbc-headlines");
             group.put("live", "bbc-live");
             group.put("search", "bbc-search");
@@ -29047,6 +45441,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "billboard-article");
+            group.put("author", "billboard-author");
+            group.put("headlines", "billboard-headlines");
+            group.put("news", "billboard-news");
+            group.put("sections", "billboard-sections");
+            g.put("billboard", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("me", "billing-me");
             group.put("meCheckout", "billing-me-checkout");
             group.put("meEvents", "billing-me-events");
@@ -29072,10 +45475,42 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("birminghammailArticle", "birminghammail-article");
+            group.put("birminghammailAuthor", "birminghammail-author");
+            group.put("birminghammailHeadlines", "birminghammail-headlines");
+            group.put("birminghammailNews", "birminghammail-news");
+            group.put("birminghammailSections", "birminghammail-sections");
+            g.put("birminghamMail", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("bleacherreportArticle", "bleacherreport-article");
+            group.put("bleacherreportAuthor", "bleacherreport-author");
+            group.put("bleacherreportHeadlines", "bleacherreport-headlines");
+            group.put("bleacherreportNews", "bleacherreport-news");
+            group.put("bleacherreportSections", "bleacherreport-sections");
+            g.put("bleacherReport", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "bloomberg-article");
+            group.put("author", "bloomberg-author");
+            group.put("categories", "bloomberg-categories");
+            group.put("headlines", "bloomberg-headlines");
+            group.put("news", "bloomberg-news");
+            group.put("newsSitemaps", "bloomberg-news-sitemaps");
+            g.put("bloomberg", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("authorFeed", "bluesky-author-feed");
             group.put("followers", "bluesky-followers");
             group.put("follows", "bluesky-follows");
+            group.put("postLikes", "bluesky-post-likes");
+            group.put("postQuotes", "bluesky-post-quotes");
+            group.put("postRepostedBy", "bluesky-post-reposted-by");
             group.put("postThread", "bluesky-post-thread");
+            group.put("posts", "bluesky-posts");
             group.put("profile", "bluesky-profile");
             group.put("searchActors", "bluesky-search-actors");
             group.put("trendingTopics", "bluesky-trending-topics");
@@ -29149,6 +45584,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "breitbart-article");
+            group.put("author", "breitbart-author");
+            group.put("headlines", "breitbart-headlines");
+            group.put("news", "breitbart-news");
+            group.put("sections", "breitbart-sections");
+            g.put("breitbart", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "brooklinen-collections");
             group.put("collectionProducts", "brooklinen-collection-products");
             group.put("pages", "brooklinen-pages");
@@ -29164,11 +45608,39 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "burberry-categories");
+            group.put("category", "burberry-category");
+            group.put("product", "burberry-product");
+            group.put("related", "burberry-related");
+            group.put("search", "burberry-search");
+            group.put("suggest", "burberry-suggest");
+            g.put("burberry", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("burgerkingAvailability", "burgerking-availability");
             group.put("burgerkingLocations", "burgerking-locations");
             group.put("burgerkingMenu", "burgerking-menu");
             group.put("burgerkingProduct", "burgerking-product");
             g.put("burgerKing", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("businessinsiderArticle", "businessinsider-article");
+            group.put("businessinsiderAuthor", "businessinsider-author");
+            group.put("businessinsiderHeadlines", "businessinsider-headlines");
+            group.put("businessinsiderNews", "businessinsider-news");
+            group.put("businessinsiderSections", "businessinsider-sections");
+            g.put("businessInsider", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("businessstandardArticle", "businessstandard-article");
+            group.put("businessstandardAuthor", "businessstandard-author");
+            group.put("businessstandardHeadlines", "businessstandard-headlines");
+            group.put("businessstandardNews", "businessstandard-news");
+            group.put("businessstandardSections", "businessstandard-sections");
+            g.put("businessStandard", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29196,6 +45668,42 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("cbcArticle", "cbc-article");
+            group.put("cbcAuthor", "cbc-author");
+            group.put("cbcHeadlines", "cbc-headlines");
+            group.put("call", "cbc-news");
+            group.put("cbcSections", "cbc-sections");
+            g.put("cbcNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "cbr-article");
+            group.put("author", "cbr-author");
+            group.put("headlines", "cbr-headlines");
+            group.put("news", "cbr-news");
+            group.put("sections", "cbr-sections");
+            g.put("cbr", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("cbsnewsArticle", "cbsnews-article");
+            group.put("cbsnewsAuthor", "cbsnews-author");
+            group.put("cbsnewsHeadlines", "cbsnews-headlines");
+            group.put("cbsnewsNews", "cbsnews-news");
+            group.put("cbsnewsSections", "cbsnews-sections");
+            g.put("cbsNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("cbssportsArticle", "cbssports-article");
+            group.put("cbssportsAuthor", "cbssports-author");
+            group.put("cbssportsHeadlines", "cbssports-headlines");
+            group.put("cbssportsNews", "cbssports-news");
+            group.put("cbssportsSections", "cbssports-sections");
+            g.put("cbsSports", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("brands", "chewy-brands");
             group.put("categories", "chewy-categories");
             group.put("category", "chewy-category");
@@ -29211,6 +45719,15 @@ public final class Operations {
             group.put("suggest", "chewy-suggest");
             group.put("variants", "chewy-variants");
             g.put("chewy", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("chicagotribuneArticle", "chicagotribune-article");
+            group.put("chicagotribuneAuthor", "chicagotribune-author");
+            group.put("chicagotribuneHeadlines", "chicagotribune-headlines");
+            group.put("chicagotribuneNews", "chicagotribune-news");
+            group.put("chicagotribuneSections", "chicagotribune-sections");
+            g.put("chicagoTribune", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29254,7 +45771,46 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("autocomplete", "chrono24-autocomplete");
+            group.put("brands", "chrono24-brands");
+            group.put("dealer", "chrono24-dealer");
+            group.put("dealerReviews", "chrono24-dealer-reviews");
+            group.put("facets", "chrono24-facets");
+            group.put("listing", "chrono24-listing");
+            group.put("models", "chrono24-models");
+            group.put("search", "chrono24-search");
+            g.put("chrono24", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "cna-article");
+            group.put("author", "cna-author");
+            group.put("headlines", "cna-headlines");
+            group.put("news", "cna-news");
+            group.put("sections", "cna-sections");
+            g.put("cna", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "cnbc-article");
+            group.put("author", "cnbc-author");
+            group.put("categories", "cnbc-categories");
+            group.put("headlines", "cnbc-headlines");
+            g.put("cnbc", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "cnet-article");
+            group.put("author", "cnet-author");
+            group.put("headlines", "cnet-headlines");
+            group.put("news", "cnet-news");
+            group.put("sections", "cnet-sections");
+            g.put("cnet", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "cnn-article");
+            group.put("author", "cnn-author");
             group.put("headlines", "cnn-headlines");
             group.put("liveStory", "cnn-live-story");
             g.put("cnn", Map.copyOf(group));
@@ -29298,6 +45854,22 @@ public final class Operations {
             group.put("colehaanSitemaps", "colehaan-sitemaps");
             group.put("colehaanStore", "colehaan-store");
             g.put("coleHaan", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "collider-article");
+            group.put("author", "collider-author");
+            group.put("headlines", "collider-headlines");
+            group.put("news", "collider-news");
+            group.put("sections", "collider-sections");
+            g.put("collider", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "comc-categories");
+            group.put("listing", "comc-listing");
+            group.put("search", "comc-search");
+            g.put("comc", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29360,6 +45932,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("ctvnewsArticle", "ctvnews-article");
+            group.put("ctvnewsAuthor", "ctvnews-author");
+            group.put("ctvnewsHeadlines", "ctvnews-headlines");
+            group.put("ctvnewsNews", "ctvnews-news");
+            group.put("ctvnewsSections", "ctvnews-sections");
+            g.put("ctvNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("calendar", "culvers-calendar");
             group.put("categories", "culvers-categories");
             group.put("directory", "culvers-directory");
@@ -29379,6 +45960,60 @@ public final class Operations {
             group.put("search", "cvs-search");
             group.put("storeLocator", "cvs-store-locator");
             g.put("cvs", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailycallerArticle", "dailycaller-article");
+            group.put("dailycallerAuthor", "dailycaller-author");
+            group.put("dailycallerHeadlines", "dailycaller-headlines");
+            group.put("dailycallerNews", "dailycaller-news");
+            group.put("dailycallerSections", "dailycaller-sections");
+            g.put("theDailyCaller", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailyexpressArticle", "dailyexpress-article");
+            group.put("dailyexpressAuthor", "dailyexpress-author");
+            group.put("dailyexpressHeadlines", "dailyexpress-headlines");
+            group.put("dailyexpressNews", "dailyexpress-news");
+            group.put("dailyexpressSections", "dailyexpress-sections");
+            g.put("dailyExpress", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailymailArticle", "dailymail-article");
+            group.put("dailymailAuthor", "dailymail-author");
+            group.put("dailymailHeadlines", "dailymail-headlines");
+            group.put("dailymailNews", "dailymail-news");
+            group.put("dailymailSections", "dailymail-sections");
+            g.put("dailyMail", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailyrecordArticle", "dailyrecord-article");
+            group.put("dailyrecordAuthor", "dailyrecord-author");
+            group.put("dailyrecordHeadlines", "dailyrecord-headlines");
+            group.put("dailyrecordNews", "dailyrecord-news");
+            group.put("dailyrecordSections", "dailyrecord-sections");
+            g.put("dailyRecord", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailystarukArticle", "dailystaruk-article");
+            group.put("dailystarukAuthor", "dailystaruk-author");
+            group.put("dailystarukHeadlines", "dailystaruk-headlines");
+            group.put("dailystarukNews", "dailystaruk-news");
+            group.put("dailystarukSections", "dailystaruk-sections");
+            g.put("dailyStarUk", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("dailywireArticle", "dailywire-article");
+            group.put("dailywireAuthor", "dailywire-author");
+            group.put("dailywireHeadlines", "dailywire-headlines");
+            group.put("dailywireNews", "dailywire-news");
+            group.put("dailywireSections", "dailywire-sections");
+            g.put("dailyWire", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29512,6 +46147,24 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "dawn-article");
+            group.put("author", "dawn-author");
+            group.put("headlines", "dawn-headlines");
+            group.put("news", "dawn-news");
+            group.put("sections", "dawn-sections");
+            g.put("dawn", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "deadline-article");
+            group.put("author", "deadline-author");
+            group.put("headlines", "deadline-headlines");
+            group.put("news", "deadline-news");
+            group.put("sections", "deadline-sections");
+            g.put("deadline", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("fulfillmentTimes", "deliveroo-fulfillment-times");
             group.put("restaurant", "deliveroo-restaurant");
             group.put("restaurantMenu", "deliveroo-restaurant-menu");
@@ -29605,6 +46258,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "dw-article");
+            group.put("author", "dw-author");
+            group.put("headlines", "dw-headlines");
+            group.put("news", "dw-news");
+            group.put("sections", "dw-sections");
+            g.put("dw", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("ebayItem", "ebay-item");
             group.put("ebayLiveStreams", "ebay-live-streams");
             group.put("ebayLiveStreamsBatch", "ebay-live-streams-batch");
@@ -29616,6 +46278,33 @@ public final class Operations {
             group.put("ebaySellerFeedback", "ebay-seller-feedback");
             group.put("ebaySellerShop", "ebay-seller-shop");
             g.put("eBay", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("economictimesArticle", "economictimes-article");
+            group.put("economictimesAuthor", "economictimes-author");
+            group.put("economictimesHeadlines", "economictimes-headlines");
+            group.put("economictimesNews", "economictimes-news");
+            group.put("economictimesSections", "economictimes-sections");
+            g.put("economicTimes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "engadget-article");
+            group.put("author", "engadget-author");
+            group.put("headlines", "engadget-headlines");
+            group.put("news", "engadget-news");
+            group.put("sections", "engadget-sections");
+            g.put("engadget", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("eonlineArticle", "eonline-article");
+            group.put("eonlineAuthor", "eonline-author");
+            group.put("eonlineHeadlines", "eonline-headlines");
+            group.put("eonlineNews", "eonline-news");
+            group.put("eonlineSections", "eonline-sections");
+            g.put("eNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29643,6 +46332,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "euronews-article");
+            group.put("author", "euronews-author");
+            group.put("headlines", "euronews-headlines");
+            group.put("news", "euronews-news");
+            group.put("sections", "euronews-sections");
+            g.put("euronews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "everlane-collections");
             group.put("collectionProducts", "everlane-collection-products");
             group.put("pages", "everlane-pages");
@@ -29655,6 +46353,15 @@ public final class Operations {
             group.put("sitemaps", "everlane-sitemaps");
             group.put("store", "everlane-store");
             g.put("everlane", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("ewArticle", "ew-article");
+            group.put("ewAuthor", "ew-author");
+            group.put("ewHeadlines", "ew-headlines");
+            group.put("ewNews", "ew-news");
+            group.put("ewSections", "ew-sections");
+            g.put("entertainmentWeekly", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29675,6 +46382,45 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "fanatics-categories");
+            group.put("category", "fanatics-category");
+            group.put("product", "fanatics-product");
+            group.put("search", "fanatics-search");
+            g.put("fanatics", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("fanaticscollectAuctions", "fanaticscollect-auctions");
+            group.put("fanaticscollectCategories", "fanaticscollect-categories");
+            group.put("fanaticscollectInstantRipsCategories", "fanaticscollect-instant-rips-categories");
+            group.put("fanaticscollectListing", "fanaticscollect-listing");
+            group.put("fanaticscollectSearch", "fanaticscollect-search");
+            group.put("fanaticscollectSoldItems", "fanaticscollect-sold-items");
+            group.put("fanaticscollectTrendingSearches", "fanaticscollect-trending-searches");
+            g.put("fanaticsCollect", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("fanaticsliveBrowse", "fanaticslive-browse");
+            group.put("fanaticsliveChannel", "fanaticslive-channel");
+            group.put("fanaticsliveLeagues", "fanaticslive-leagues");
+            group.put("fanaticsliveShop", "fanaticslive-shop");
+            group.put("fanaticsliveShopShows", "fanaticslive-shop-shows");
+            group.put("fanaticsliveShops", "fanaticslive-shops");
+            group.put("fanaticsliveShow", "fanaticslive-show");
+            group.put("fanaticsliveInstantRips", "fanaticslive-instant-rips");
+            g.put("fanaticsLive", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "farfetch-categories");
+            group.put("designers", "farfetch-designers");
+            group.put("product", "farfetch-product");
+            group.put("search", "farfetch-search");
+            g.put("farfetch", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("fashionnovaCollections", "fashionnova-collections");
             group.put("fashionnovaCollectionProducts", "fashionnova-collection-products");
             group.put("fashionnovaPages", "fashionnova-pages");
@@ -29687,6 +46433,31 @@ public final class Operations {
             group.put("fashionnovaSitemaps", "fashionnova-sitemaps");
             group.put("fashionnovaStore", "fashionnova-store");
             g.put("fashionNova", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("collections", "fashionphile-collections");
+            group.put("collectionProducts", "fashionphile-collection-products");
+            group.put("pages", "fashionphile-pages");
+            group.put("page", "fashionphile-page");
+            group.put("products", "fashionphile-products");
+            group.put("product", "fashionphile-product");
+            group.put("productRecommendations", "fashionphile-product-recommendations");
+            group.put("search", "fashionphile-search");
+            group.put("searchSuggest", "fashionphile-search-suggest");
+            group.put("sitemapUrls", "fashionphile-sitemap-urls");
+            group.put("sitemaps", "fashionphile-sitemaps");
+            group.put("store", "fashionphile-store");
+            g.put("fashionphile", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("fastcompanyArticle", "fastcompany-article");
+            group.put("fastcompanyAuthor", "fastcompany-author");
+            group.put("fastcompanyHeadlines", "fastcompany-headlines");
+            group.put("fastcompanyNews", "fastcompany-news");
+            group.put("fastcompanySections", "fastcompany-sections");
+            g.put("fastCompany", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29711,11 +46482,163 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("calendar", "flashscore-calendar");
+            group.put("calendarCategories", "flashscore-calendar-categories");
+            group.put("competitions", "flashscore-competitions");
+            group.put("matchH2h", "flashscore-match-h2h");
+            group.put("matchHighlights", "flashscore-match-highlights");
+            group.put("matchInfo", "flashscore-match-info");
+            group.put("matchLineups", "flashscore-match-lineups");
+            group.put("matchNews", "flashscore-match-news");
+            group.put("matchStandings", "flashscore-match-standings");
+            group.put("matchStats", "flashscore-match-stats");
+            group.put("navigation", "flashscore-navigation");
+            group.put("news", "flashscore-news");
+            group.put("newsArticle", "flashscore-news-article");
+            group.put("newsCategories", "flashscore-news-categories");
+            group.put("rankingCategories", "flashscore-ranking-categories");
+            group.put("rankings", "flashscore-rankings");
+            group.put("scores", "flashscore-scores");
+            group.put("search", "flashscore-search");
+            group.put("sports", "flashscore-sports");
+            group.put("topSearch", "flashscore-top-search");
+            group.put("tournamentEvents", "flashscore-tournament-events");
+            group.put("tournamentSeasons", "flashscore-tournament-seasons");
+            group.put("tournamentStandings", "flashscore-tournament-standings");
+            group.put("tournamentStandingsViews", "flashscore-tournament-standings-views");
+            g.put("flashscore", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("restaurant", "foodpanda-restaurant");
             group.put("restaurantMenu", "foodpanda-restaurant-menu");
             group.put("restaurantReviews", "foodpanda-restaurant-reviews");
             group.put("search", "foodpanda-search");
+            group.put("searchCuisines", "foodpanda-search-cuisines");
             g.put("foodpanda", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "forbes-article");
+            group.put("author", "forbes-author");
+            group.put("billionaires", "forbes-billionaires");
+            group.put("categories", "forbes-categories");
+            group.put("headlines", "forbes-headlines");
+            group.put("person", "forbes-person");
+            g.put("forbes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("foreignaffairsArticle", "foreignaffairs-article");
+            group.put("foreignaffairsAuthor", "foreignaffairs-author");
+            group.put("foreignaffairsHeadlines", "foreignaffairs-headlines");
+            group.put("foreignaffairsTopic", "foreignaffairs-topic");
+            group.put("foreignaffairsTopics", "foreignaffairs-topics");
+            g.put("foreignAffairs", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("foreignpolicyArticle", "foreignpolicy-article");
+            group.put("foreignpolicyAuthor", "foreignpolicy-author");
+            group.put("foreignpolicyHeadlines", "foreignpolicy-headlines");
+            group.put("foreignpolicyLive", "foreignpolicy-live");
+            group.put("foreignpolicyLiveDetail", "foreignpolicy-live-detail");
+            group.put("foreignpolicyProject", "foreignpolicy-project");
+            group.put("foreignpolicyProjects", "foreignpolicy-projects");
+            group.put("foreignpolicyTopic", "foreignpolicy-topic");
+            g.put("foreignPolicy", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "fortune-article");
+            group.put("author", "fortune-author");
+            group.put("companies", "fortune-companies");
+            group.put("companyFilters", "fortune-company-filters");
+            group.put("company", "fortune-company");
+            group.put("headlines", "fortune-headlines");
+            group.put("news", "fortune-news");
+            group.put("ranking", "fortune-ranking");
+            group.put("rankingFilters", "fortune-ranking-filters");
+            group.put("rankingLists", "fortune-ranking-lists");
+            group.put("rankingYears", "fortune-ranking-years");
+            group.put("sections", "fortune-sections");
+            g.put("fortune", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("fotmobLeague", "fotmob-league");
+            group.put("fotmobLeagues", "fotmob-leagues");
+            group.put("fotmobMatch", "fotmob-match");
+            group.put("fotmobMatches", "fotmob-matches");
+            group.put("fotmobNews", "fotmob-news");
+            group.put("fotmobPlayer", "fotmob-player");
+            group.put("fotmobPlayerMatchStats", "fotmob-player-match-stats");
+            group.put("fotmobPlayerMatches", "fotmob-player-matches");
+            group.put("fotmobPlayerStats", "fotmob-player-stats");
+            group.put("fotmobSearch", "fotmob-search");
+            group.put("fotmobStats", "fotmob-stats");
+            group.put("fotmobStatsCategories", "fotmob-stats-categories");
+            group.put("fotmobTable", "fotmob-table");
+            group.put("fotmobTeam", "fotmob-team");
+            group.put("fotmobTeamNews", "fotmob-team-news");
+            group.put("fotmobTransfers", "fotmob-transfers");
+            g.put("fotMob", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("foxnewsArticle", "foxnews-article");
+            group.put("foxnewsAuthor", "foxnews-author");
+            group.put("foxnewsHeadlines", "foxnews-headlines");
+            group.put("foxnewsNews", "foxnews-news");
+            group.put("foxnewsSearch", "foxnews-search");
+            group.put("foxnewsSections", "foxnews-sections");
+            g.put("foxNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("france24Article", "france24-article");
+            group.put("france24Author", "france24-author");
+            group.put("france24Headlines", "france24-headlines");
+            group.put("france24News", "france24-news");
+            group.put("france24Sections", "france24-sections");
+            g.put("france24", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "ft-article");
+            group.put("author", "ft-author");
+            group.put("categories", "ft-categories");
+            group.put("headlines", "ft-headlines");
+            group.put("news", "ft-news");
+            group.put("search", "ft-search");
+            g.put("ft", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gamerantArticle", "gamerant-article");
+            group.put("gamerantAuthor", "gamerant-author");
+            group.put("gamerantHeadlines", "gamerant-headlines");
+            group.put("gamerantNews", "gamerant-news");
+            group.put("gamerantSections", "gamerant-sections");
+            g.put("gameRant", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gamesradarArticle", "gamesradar-article");
+            group.put("gamesradarAuthor", "gamesradar-author");
+            group.put("gamesradarHeadlines", "gamesradar-headlines");
+            group.put("gamesradarNews", "gamesradar-news");
+            group.put("gamesradarSections", "gamesradar-sections");
+            g.put("gamesRadar", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gbnewsArticle", "gbnews-article");
+            group.put("gbnewsAuthor", "gbnews-author");
+            group.put("gbnewsHeadlines", "gbnews-headlines");
+            group.put("gbnewsNews", "gbnews-news");
+            group.put("gbnewsSections", "gbnews-sections");
+            g.put("gbNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29763,6 +46686,41 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "gizmodo-article");
+            group.put("author", "gizmodo-author");
+            group.put("headlines", "gizmodo-headlines");
+            group.put("news", "gizmodo-news");
+            group.put("sections", "gizmodo-sections");
+            g.put("gizmodo", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("globalnewsArticle", "globalnews-article");
+            group.put("globalnewsAuthor", "globalnews-author");
+            group.put("globalnewsHeadlines", "globalnews-headlines");
+            group.put("globalnewsNews", "globalnews-news");
+            group.put("globalnewsSections", "globalnews-sections");
+            g.put("globalNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("globeandmailArticle", "globeandmail-article");
+            group.put("globeandmailAuthor", "globeandmail-author");
+            group.put("globeandmailHeadlines", "globeandmail-headlines");
+            group.put("globeandmailNews", "globeandmail-news");
+            group.put("globeandmailSections", "globeandmail-sections");
+            g.put("globeAndMail", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gmanewsArticle", "gmanews-article");
+            group.put("gmanewsHeadlines", "gmanews-headlines");
+            group.put("gmanewsNews", "gmanews-news");
+            group.put("gmanewsSections", "gmanews-sections");
+            g.put("gmaNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("collection", "goat-collection");
             group.put("countries", "goat-countries");
             group.put("curated", "goat-curated");
@@ -29774,6 +46732,15 @@ public final class Operations {
             group.put("trendingSearches", "goat-trending-searches");
             group.put("suggest", "goat-suggest");
             g.put("goat", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("auctions", "goldin-auctions");
+            group.put("categories", "goldin-categories");
+            group.put("listing", "goldin-listing");
+            group.put("search", "goldin-search");
+            group.put("suggest", "goldin-suggest");
+            g.put("goldin", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29823,7 +46790,7 @@ public final class Operations {
             group.put("mapPlaceReviews", "google-map-place-reviews");
             group.put("mapSearch", "google-map-search");
             group.put("news", "google-news");
-            group.put("search", "google-search");
+            group.put("newsSearch", "google-news-search");
             group.put("suggest", "google-suggest");
             group.put("trendsCategories", "google-trends-categories");
             group.put("trendsEnums", "google-trends-enums");
@@ -29866,6 +46833,30 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "gq-article");
+            group.put("author", "gq-author");
+            group.put("headlines", "gq-headlines");
+            group.put("news", "gq-news");
+            group.put("sections", "gq-sections");
+            g.put("gq", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "grailed-categories");
+            group.put("collection", "grailed-collection");
+            group.put("collections", "grailed-collections");
+            group.put("designers", "grailed-designers");
+            group.put("listing", "grailed-listing");
+            group.put("search", "grailed-search");
+            group.put("seller", "grailed-seller");
+            group.put("sellerReviews", "grailed-seller-reviews");
+            group.put("similarListings", "grailed-similar-listings");
+            group.put("soldListings", "grailed-sold-listings");
+            group.put("suggest", "grailed-suggest");
+            g.put("grailed", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("availability", "grubhub-availability");
             group.put("offers", "grubhub-offers");
             group.put("restaurant", "grubhub-restaurant");
@@ -29878,10 +46869,34 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "guardian-article");
+            group.put("author", "guardian-author");
             group.put("headlines", "guardian-headlines");
             group.put("live", "guardian-live");
             group.put("topic", "guardian-topic");
             g.put("guardian", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "gucci-categories");
+            group.put("category", "gucci-category");
+            group.put("product", "gucci-product");
+            group.put("recommendations", "gucci-recommendations");
+            group.put("search", "gucci-search");
+            group.put("sizeGuide", "gucci-size-guide");
+            group.put("store", "gucci-store");
+            group.put("stores", "gucci-stores");
+            group.put("storeSearch", "gucci-store-search");
+            group.put("suggest", "gucci-suggest");
+            g.put("gucci", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gulfnewsArticle", "gulfnews-article");
+            group.put("gulfnewsAuthor", "gulfnews-author");
+            group.put("gulfnewsHeadlines", "gulfnews-headlines");
+            group.put("gulfnewsNews", "gulfnews-news");
+            group.put("gulfnewsSections", "gulfnews-sections");
+            g.put("gulfNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29899,6 +46914,35 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("hbrArticle", "hbr-article");
+            group.put("hbrCategories", "hbr-categories");
+            group.put("hbrHeadlines", "hbr-headlines");
+            group.put("hbrTopic", "hbr-topic");
+            g.put("harvardBusinessReview", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "hermes-categories");
+            group.put("category", "hermes-category");
+            group.put("product", "hermes-product");
+            group.put("productRecommendations", "hermes-product-recommendations");
+            group.put("products", "hermes-products");
+            group.put("search", "hermes-search");
+            group.put("stores", "hermes-stores");
+            group.put("suggest", "hermes-suggest");
+            g.put("hermes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("hindustantimesArticle", "hindustantimes-article");
+            group.put("hindustantimesAuthor", "hindustantimes-author");
+            group.put("hindustantimesHeadlines", "hindustantimes-headlines");
+            group.put("hindustantimesNews", "hindustantimes-news");
+            group.put("hindustantimesSections", "hindustantimes-sections");
+            g.put("hindustanTimes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("hmCategories", "hm-categories");
             group.put("hmListing", "hm-listing");
             group.put("hmProduct", "hm-product");
@@ -29907,6 +46951,15 @@ public final class Operations {
             group.put("hmSearchSuggestions", "hm-search-suggestions");
             group.put("hmStores", "hm-stores");
             g.put("hM", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("hollywoodreporterArticle", "hollywoodreporter-article");
+            group.put("hollywoodreporterAuthor", "hollywoodreporter-author");
+            group.put("hollywoodreporterHeadlines", "hollywoodreporter-headlines");
+            group.put("hollywoodreporterNews", "hollywoodreporter-news");
+            group.put("hollywoodreporterSections", "hollywoodreporter-sections");
+            g.put("hollywoodReporter", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -29931,7 +46984,26 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("huffpostArticle", "huffpost-article");
+            group.put("huffpostAuthor", "huffpost-author");
+            group.put("huffpostHeadlines", "huffpost-headlines");
+            group.put("huffpostNews", "huffpost-news");
+            group.put("huffpostSections", "huffpost-sections");
+            g.put("huffPost", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "ign-article");
+            group.put("author", "ign-author");
+            group.put("headlines", "ign-headlines");
+            group.put("news", "ign-news");
+            group.put("sections", "ign-sections");
+            g.put("ign", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("availability", "ikea-availability");
+            group.put("categories", "ikea-categories");
             group.put("category", "ikea-category");
             group.put("product", "ikea-product");
             group.put("reviews", "ikea-reviews");
@@ -29944,18 +47016,24 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("charts", "imdb-charts");
+            group.put("imageTypes", "imdb-image-types");
             group.put("name", "imdb-name");
             group.put("nameAwards", "imdb-name-awards");
             group.put("nameCredits", "imdb-name-credits");
+            group.put("nameImages", "imdb-name-images");
+            group.put("nameVideos", "imdb-name-videos");
             group.put("search", "imdb-search");
             group.put("searchTitle", "imdb-search-title");
             group.put("title", "imdb-title");
             group.put("titleAwards", "imdb-title-awards");
+            group.put("titleBoxOffice", "imdb-title-box-office");
             group.put("titleCompanyCredits", "imdb-title-company-credits");
+            group.put("titleConnections", "imdb-title-connections");
             group.put("titleCredits", "imdb-title-credits");
             group.put("titleEpisodes", "imdb-title-episodes");
             group.put("titleFilmingLocations", "imdb-title-filming-locations");
             group.put("titleGoofs", "imdb-title-goofs");
+            group.put("titleImages", "imdb-title-images");
             group.put("titleKeywords", "imdb-title-keywords");
             group.put("titleParentalGuide", "imdb-title-parental-guide");
             group.put("titlePublicFactsAnalysis", "imdb-title-public-facts-analysis");
@@ -29966,6 +47044,7 @@ public final class Operations {
             group.put("titleSimilar", "imdb-title-similar");
             group.put("titleTechnicalSpecs", "imdb-title-technical-specs");
             group.put("titleTrivia", "imdb-title-trivia");
+            group.put("titleVideos", "imdb-title-videos");
             g.put("imdb", Map.copyOf(group));
         }
         {
@@ -29983,6 +47062,60 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("independentArticle", "independent-article");
+            group.put("independentAuthor", "independent-author");
+            group.put("independentHeadlines", "independent-headlines");
+            group.put("independentNews", "independent-news");
+            group.put("independentSections", "independent-sections");
+            g.put("theIndependent", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("indianexpressArticle", "indianexpress-article");
+            group.put("indianexpressAuthor", "indianexpress-author");
+            group.put("indianexpressHeadlines", "indianexpress-headlines");
+            group.put("indianexpressNews", "indianexpress-news");
+            group.put("indianexpressSections", "indianexpress-sections");
+            g.put("theIndianExpress", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("indiatodayArticle", "indiatoday-article");
+            group.put("indiatodayAuthor", "indiatoday-author");
+            group.put("indiatodayHeadlines", "indiatoday-headlines");
+            group.put("indiatodayNews", "indiatoday-news");
+            group.put("indiatodaySections", "indiatoday-sections");
+            g.put("indiaToday", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("indiewireArticle", "indiewire-article");
+            group.put("indiewireAuthor", "indiewire-author");
+            group.put("indiewireHeadlines", "indiewire-headlines");
+            group.put("indiewireNews", "indiewire-news");
+            group.put("indiewireSections", "indiewire-sections");
+            g.put("indieWire", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("inewsArticle", "inews-article");
+            group.put("inewsAuthor", "inews-author");
+            group.put("inewsHeadlines", "inews-headlines");
+            group.put("inewsNews", "inews-news");
+            group.put("inewsSections", "inews-sections");
+            g.put("i", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("inquirerArticle", "inquirer-article");
+            group.put("inquirerAuthor", "inquirer-author");
+            group.put("inquirerHeadlines", "inquirer-headlines");
+            group.put("inquirerNews", "inquirer-news");
+            group.put("inquirerSections", "inquirer-sections");
+            g.put("philippineDailyInquirer", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("departments", "instacart-departments");
             group.put("item", "instacart-item");
             group.put("search", "instacart-search");
@@ -29997,6 +47130,42 @@ public final class Operations {
             group.put("profile", "instagram-profile");
             group.put("reels", "instagram-reels");
             g.put("instagram", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "investopedia-article");
+            group.put("author", "investopedia-author");
+            group.put("headlines", "investopedia-headlines");
+            group.put("news", "investopedia-news");
+            group.put("sections", "investopedia-sections");
+            g.put("investopedia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "iol-article");
+            group.put("author", "iol-author");
+            group.put("headlines", "iol-headlines");
+            group.put("news", "iol-news");
+            group.put("sections", "iol-sections");
+            g.put("iol", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("irishindependentArticle", "irishindependent-article");
+            group.put("irishindependentAuthor", "irishindependent-author");
+            group.put("irishindependentHeadlines", "irishindependent-headlines");
+            group.put("irishindependentNews", "irishindependent-news");
+            group.put("irishindependentSections", "irishindependent-sections");
+            g.put("irishIndependent", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("irishtimesArticle", "irishtimes-article");
+            group.put("irishtimesAuthor", "irishtimes-author");
+            group.put("irishtimesHeadlines", "irishtimes-headlines");
+            group.put("irishtimesNews", "irishtimes-news");
+            group.put("irishtimesSections", "irishtimes-sections");
+            g.put("irishTimes", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30058,6 +47227,7 @@ public final class Operations {
             group.put("justeatRestaurant", "justeat-restaurant");
             group.put("justeatRestaurantMenu", "justeat-restaurant-menu");
             group.put("justeatSearch", "justeat-search");
+            group.put("justeatSearchFilters", "justeat-search-filters");
             g.put("justEat", Map.copyOf(group));
         }
         {
@@ -30123,6 +47293,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("khaleejtimesArticle", "khaleejtimes-article");
+            group.put("khaleejtimesAuthor", "khaleejtimes-author");
+            group.put("khaleejtimesHeadlines", "khaleejtimes-headlines");
+            group.put("khaleejtimesNews", "khaleejtimes-news");
+            group.put("khaleejtimesSections", "khaleejtimes-sections");
+            g.put("khaleejTimes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("comments", "kickstarter-comments");
             group.put("discover", "kickstarter-discover");
             group.put("project", "kickstarter-project");
@@ -30139,6 +47318,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "kotaku-article");
+            group.put("author", "kotaku-author");
+            group.put("headlines", "kotaku-headlines");
+            group.put("news", "kotaku-news");
+            group.put("sections", "kotaku-sections");
+            g.put("kotaku", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "kroger-categories");
             group.put("category", "kroger-category");
             group.put("coupons", "kroger-coupons");
             group.put("product", "kroger-product");
@@ -30164,6 +47353,14 @@ public final class Operations {
             group.put("kyliecosmeticsSitemaps", "kyliecosmetics-sitemaps");
             group.put("kyliecosmeticsStore", "kyliecosmetics-store");
             g.put("kylieCosmetics", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("latimesArticle", "latimes-article");
+            group.put("latimesAuthor", "latimes-author");
+            group.put("latimesHeadlines", "latimes-headlines");
+            group.put("latimesSections", "latimes-sections");
+            g.put("losAngelesTimes", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30195,9 +47392,55 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("linkedinCompany", "linkedin-company");
+            group.put("linkedinProductCategories", "linkedin-product-categories");
             group.put("linkedinProduct", "linkedin-product");
+            group.put("linkedinProductsSearch", "linkedin-products-search");
             group.put("linkedinShowcase", "linkedin-showcase");
             g.put("linkedIn", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("livemintArticle", "livemint-article");
+            group.put("livemintAuthor", "livemint-author");
+            group.put("livemintHeadlines", "livemint-headlines");
+            group.put("livemintNews", "livemint-news");
+            group.put("livemintSections", "livemint-sections");
+            g.put("mint", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("liverpoolechoArticle", "liverpoolecho-article");
+            group.put("liverpoolechoAuthor", "liverpoolecho-author");
+            group.put("liverpoolechoHeadlines", "liverpoolecho-headlines");
+            group.put("liverpoolechoNews", "liverpoolecho-news");
+            group.put("liverpoolechoSections", "liverpoolecho-sections");
+            g.put("liverpoolEcho", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("livescienceArticle", "livescience-article");
+            group.put("livescienceAuthor", "livescience-author");
+            group.put("livescienceHeadlines", "livescience-headlines");
+            group.put("livescienceNews", "livescience-news");
+            group.put("livescienceSections", "livescience-sections");
+            g.put("liveScience", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("livescoreCompetition", "livescore-competition");
+            group.put("livescoreLiveScores", "livescore-live-scores");
+            group.put("livescoreMatch", "livescore-match");
+            group.put("livescoreMatchStats", "livescore-match-stats");
+            group.put("livescoreNews", "livescore-news");
+            group.put("livescoreNewsArticle", "livescore-news-article");
+            group.put("livescoreNewsCategories", "livescore-news-categories");
+            group.put("livescoreNewsFeed", "livescore-news-feed");
+            group.put("livescorePlayer", "livescore-player");
+            group.put("livescoreScores", "livescore-scores");
+            group.put("livescoreScoresToc", "livescore-scores-toc");
+            group.put("livescoreSports", "livescore-sports");
+            group.put("livescoreTeam", "livescore-team");
+            g.put("liveScore", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30207,6 +47450,15 @@ public final class Operations {
             group.put("product", "lululemon-product");
             group.put("stores", "lululemon-stores");
             g.put("lululemon", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("macrumorsArticle", "macrumors-article");
+            group.put("macrumorsAuthor", "macrumors-author");
+            group.put("macrumorsHeadlines", "macrumors-headlines");
+            group.put("macrumorsNews", "macrumors-news");
+            group.put("macrumorsSections", "macrumors-sections");
+            g.put("macRumors", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30227,6 +47479,24 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("marketwatchArticle", "marketwatch-article");
+            group.put("marketwatchAuthor", "marketwatch-author");
+            group.put("marketwatchHeadlines", "marketwatch-headlines");
+            group.put("marketwatchNews", "marketwatch-news");
+            group.put("marketwatchSections", "marketwatch-sections");
+            g.put("marketWatch", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "mashable-article");
+            group.put("author", "mashable-author");
+            group.put("headlines", "mashable-headlines");
+            group.put("news", "mashable-news");
+            group.put("sections", "mashable-sections");
+            g.put("mashable", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("mcdonaldsCategories", "mcdonalds-categories");
             group.put("mcdonaldsItem", "mcdonalds-item");
             group.put("mcdonaldsItemList", "mcdonalds-item-list");
@@ -30234,6 +47504,24 @@ public final class Operations {
             group.put("mcdonaldsRestaurantMenu", "mcdonalds-restaurant-menu");
             group.put("mcdonaldsRestaurants", "mcdonalds-restaurants");
             g.put("mcDonalds", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "mediaite-article");
+            group.put("author", "mediaite-author");
+            group.put("headlines", "mediaite-headlines");
+            group.put("news", "mediaite-news");
+            group.put("sections", "mediaite-sections");
+            g.put("mediaite", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("menArticle", "men-article");
+            group.put("menAuthor", "men-author");
+            group.put("menHeadlines", "men-headlines");
+            group.put("menNews", "men-news");
+            group.put("menSections", "men-sections");
+            g.put("manchesterEveningNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30282,6 +47570,42 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "metro-article");
+            group.put("author", "metro-author");
+            group.put("headlines", "metro-headlines");
+            group.put("news", "metro-news");
+            group.put("sections", "metro-sections");
+            g.put("metro", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("microsoftstoreCategories", "microsoftstore-categories");
+            group.put("microsoftstoreCategory", "microsoftstore-category");
+            group.put("microsoftstoreCharts", "microsoftstore-charts");
+            group.put("microsoftstoreEditorial", "microsoftstore-editorial");
+            group.put("microsoftstoreEvents", "microsoftstore-events");
+            group.put("microsoftstoreProduct", "microsoftstore-product");
+            group.put("microsoftstorePublisher", "microsoftstore-publisher");
+            group.put("microsoftstoreRecommended", "microsoftstore-recommended");
+            group.put("microsoftstoreRelated", "microsoftstore-related");
+            group.put("microsoftstoreReviews", "microsoftstore-reviews");
+            group.put("microsoftstoreReviewsSummary", "microsoftstore-reviews-summary");
+            group.put("microsoftstoreSearch", "microsoftstore-search");
+            group.put("microsoftstoreSpotlight", "microsoftstore-spotlight");
+            group.put("microsoftstoreSuggest", "microsoftstore-suggest");
+            g.put("microsoftStore", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "mirror-article");
+            group.put("author", "mirror-author");
+            group.put("headlines", "mirror-headlines");
+            group.put("news", "mirror-news");
+            group.put("sections", "mirror-sections");
+            g.put("mirror", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("game", "mlb-game");
             group.put("gameBoxscore", "mlb-game-boxscore");
             group.put("gamePlayByPlay", "mlb-game-play-by-play");
@@ -30298,6 +47622,33 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("modaoperandiCategories", "modaoperandi-categories");
+            group.put("modaoperandiDesigners", "modaoperandi-designers");
+            group.put("modaoperandiProduct", "modaoperandi-product");
+            group.put("modaoperandiSearch", "modaoperandi-search");
+            g.put("modaOperandi", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "moncler-categories");
+            group.put("category", "moncler-category");
+            group.put("product", "moncler-product");
+            group.put("search", "moncler-search");
+            group.put("stores", "moncler-stores");
+            group.put("suggest", "moncler-suggest");
+            g.put("moncler", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "moneycontrol-article");
+            group.put("author", "moneycontrol-author");
+            group.put("headlines", "moneycontrol-headlines");
+            group.put("news", "moneycontrol-news");
+            group.put("sections", "moneycontrol-sections");
+            g.put("moneycontrol", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("list", "monitors-list");
             group.put("create", "monitors-create");
             group.put("delete", "monitors-delete");
@@ -30305,6 +47656,95 @@ public final class Operations {
             group.put("update", "monitors-update");
             group.put("checks", "monitors-checks");
             g.put("monitors", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nationafricaArticle", "nationafrica-article");
+            group.put("nationafricaAuthor", "nationafrica-author");
+            group.put("nationafricaHeadlines", "nationafrica-headlines");
+            group.put("nationafricaNews", "nationafrica-news");
+            group.put("nationafricaSections", "nationafrica-sections");
+            g.put("nationAfrica", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nationalpostArticle", "nationalpost-article");
+            group.put("nationalpostAuthor", "nationalpost-author");
+            group.put("nationalpostHeadlines", "nationalpost-headlines");
+            group.put("nationalpostNews", "nationalpost-news");
+            group.put("nationalpostSections", "nationalpost-sections");
+            g.put("nationalPost", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nbcArticle", "nbc-article");
+            group.put("nbcAuthor", "nbc-author");
+            group.put("nbcHeadlines", "nbc-headlines");
+            group.put("call", "nbc-news");
+            group.put("nbcSections", "nbc-sections");
+            g.put("nbcNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "ndtv-article");
+            group.put("author", "ndtv-author");
+            group.put("headlines", "ndtv-headlines");
+            group.put("news", "ndtv-news");
+            group.put("sections", "ndtv-sections");
+            g.put("ndtv", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "news18-article");
+            group.put("author", "news18-author");
+            group.put("headlines", "news18-headlines");
+            group.put("news", "news18-news");
+            group.put("sections", "news18-sections");
+            g.put("news18", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "news24-article");
+            group.put("headlines", "news24-headlines");
+            group.put("news", "news24-news");
+            group.put("sections", "news24-sections");
+            g.put("news24", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("newscomauArticle", "newscomau-article");
+            group.put("newscomauAuthor", "newscomau-author");
+            group.put("newscomauHeadlines", "newscomau-headlines");
+            group.put("newscomauNews", "newscomau-news");
+            group.put("newscomauSections", "newscomau-sections");
+            g.put("newsComAu", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "newsmax-article");
+            group.put("author", "newsmax-author");
+            group.put("headlines", "newsmax-headlines");
+            group.put("news", "newsmax-news");
+            group.put("sections", "newsmax-sections");
+            g.put("newsmax", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "newsweek-article");
+            group.put("author", "newsweek-author");
+            group.put("headlines", "newsweek-headlines");
+            group.put("news", "newsweek-news");
+            group.put("sections", "newsweek-sections");
+            g.put("newsweek", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("newyorkerArticle", "newyorker-article");
+            group.put("newyorkerAuthor", "newyorker-author");
+            group.put("newyorkerHeadlines", "newyorker-headlines");
+            group.put("newyorkerNews", "newyorker-news");
+            group.put("newyorkerSections", "newyorker-sections");
+            g.put("theNewYorker", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30321,6 +47761,24 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "ninetofivemac-article");
+            group.put("author", "ninetofivemac-author");
+            group.put("headlines", "ninetofivemac-headlines");
+            group.put("news", "ninetofivemac-news");
+            group.put("sections", "ninetofivemac-sections");
+            g.put("nineToFiveMac", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "npr-article");
+            group.put("author", "npr-author");
+            group.put("categories", "npr-categories");
+            group.put("headlines", "npr-headlines");
+            group.put("topic", "npr-topic");
+            g.put("npr", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("costOfLivingCity", "numbeo-cost-of-living-city");
             group.put("costOfLivingCountry", "numbeo-cost-of-living-country");
             group.put("costOfLivingRankings", "numbeo-cost-of-living-rankings");
@@ -30330,6 +47788,51 @@ public final class Operations {
             group.put("indicesRankings", "numbeo-indices-rankings");
             group.put("indicesRankingsByCountry", "numbeo-indices-rankings-by-country");
             g.put("numbeo", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nydailynewsArticle", "nydailynews-article");
+            group.put("nydailynewsAuthor", "nydailynews-author");
+            group.put("nydailynewsHeadlines", "nydailynews-headlines");
+            group.put("nydailynewsNews", "nydailynews-news");
+            group.put("nydailynewsSections", "nydailynews-sections");
+            g.put("newYorkDailyNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nymagArticle", "nymag-article");
+            group.put("nymagAuthor", "nymag-author");
+            group.put("nymagHeadlines", "nymag-headlines");
+            group.put("nymagNews", "nymag-news");
+            group.put("nymagSections", "nymag-sections");
+            g.put("newYorkMagazine", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nypostArticle", "nypost-article");
+            group.put("nypostAuthor", "nypost-author");
+            group.put("nypostHeadlines", "nypost-headlines");
+            group.put("nypostNews", "nypost-news");
+            group.put("nypostSections", "nypost-sections");
+            g.put("newYorkPost", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nytArticle", "nyt-article");
+            group.put("nytAuthor", "nyt-author");
+            group.put("nytCategories", "nyt-categories");
+            group.put("nytHeadlines", "nyt-headlines");
+            group.put("nytSections", "nyt-sections");
+            g.put("newYorkTimes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("nzheraldArticle", "nzherald-article");
+            group.put("nzheraldAuthor", "nzherald-author");
+            group.put("nzheraldHeadlines", "nzherald-headlines");
+            group.put("nzheraldNews", "nzherald-news");
+            group.put("nzheraldSections", "nzherald-sections");
+            g.put("nzHerald", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30414,6 +47917,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("pagesixArticle", "pagesix-article");
+            group.put("pagesixAuthor", "pagesix-author");
+            group.put("pagesixHeadlines", "pagesix-headlines");
+            group.put("pagesixNews", "pagesix-news");
+            group.put("pagesixSections", "pagesix-sections");
+            g.put("pageSix", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("search", "pandamart-search");
             group.put("store", "pandamart-store");
             group.put("storeCategories", "pandamart-store-categories");
@@ -30476,6 +47988,60 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("pcgamerArticle", "pcgamer-article");
+            group.put("pcgamerAuthor", "pcgamer-author");
+            group.put("pcgamerHeadlines", "pcgamer-headlines");
+            group.put("pcgamerNews", "pcgamer-news");
+            group.put("pcgamerSections", "pcgamer-sections");
+            g.put("pcGamer", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "pcmag-article");
+            group.put("author", "pcmag-author");
+            group.put("headlines", "pcmag-headlines");
+            group.put("news", "pcmag-news");
+            group.put("sections", "pcmag-sections");
+            g.put("pcmag", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "people-article");
+            group.put("author", "people-author");
+            group.put("headlines", "people-headlines");
+            group.put("news", "people-news");
+            group.put("sections", "people-sections");
+            g.put("people", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("phillyinquirerArticle", "phillyinquirer-article");
+            group.put("phillyinquirerAuthor", "phillyinquirer-author");
+            group.put("phillyinquirerHeadlines", "phillyinquirer-headlines");
+            group.put("phillyinquirerNews", "phillyinquirer-news");
+            group.put("phillyinquirerSections", "phillyinquirer-sections");
+            g.put("philadelphiaInquirer", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "philstar-article");
+            group.put("author", "philstar-author");
+            group.put("headlines", "philstar-headlines");
+            group.put("news", "philstar-news");
+            group.put("sections", "philstar-sections");
+            g.put("philstar", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("phonearenaArticle", "phonearena-article");
+            group.put("phonearenaAuthor", "phonearena-author");
+            group.put("phonearenaHeadlines", "phonearena-headlines");
+            group.put("phonearenaNews", "phonearena-news");
+            group.put("phonearenaSections", "phonearena-sections");
+            g.put("phoneArena", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("ping", "ping");
             group.put("ready", "ready");
             g.put("meta", Map.copyOf(group));
@@ -30516,12 +48082,32 @@ public final class Operations {
             group.put("playstationBrowse", "playstation-browse");
             group.put("playstationCategory", "playstation-category");
             group.put("playstationConcept", "playstation-concept");
+            group.put("playstationConceptReviews", "playstation-concept-reviews");
             group.put("playstationDeals", "playstation-deals");
             group.put("playstationLatest", "playstation-latest");
             group.put("playstationPage", "playstation-page");
             group.put("playstationProduct", "playstation-product");
             group.put("playstationSearch", "playstation-search");
+            group.put("playstationSuggest", "playstation-suggest");
             g.put("playStation", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "politico-article");
+            group.put("author", "politico-author");
+            group.put("categories", "politico-categories");
+            group.put("headlines", "politico-headlines");
+            group.put("topic", "politico-topic");
+            g.put("politico", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "polygon-article");
+            group.put("author", "polygon-author");
+            group.put("headlines", "polygon-headlines");
+            group.put("news", "polygon-news");
+            group.put("sections", "polygon-sections");
+            g.put("polygon", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30618,6 +48204,40 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "prada-categories");
+            group.put("category", "prada-category");
+            group.put("product", "prada-product");
+            group.put("search", "prada-search");
+            group.put("stores", "prada-stores");
+            group.put("suggest", "prada-suggest");
+            g.put("prada", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "pristine-auction-categories");
+            group.put("lotDetail", "pristine-auction-lot-detail");
+            group.put("search", "pristine-auction-search");
+            g.put("pristineAuction", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("collections", "pristine-marketplace-collections");
+            group.put("collectionProducts", "pristine-marketplace-collection-products");
+            group.put("pages", "pristine-marketplace-pages");
+            group.put("page", "pristine-marketplace-page");
+            group.put("products", "pristine-marketplace-products");
+            group.put("product", "pristine-marketplace-product");
+            group.put("productRecommendations", "pristine-marketplace-product-recommendations");
+            group.put("reviews", "pristine-marketplace-reviews");
+            group.put("search", "pristine-marketplace-search");
+            group.put("searchSuggest", "pristine-marketplace-search-suggest");
+            group.put("sitemapUrls", "pristine-marketplace-sitemap-urls");
+            group.put("sitemaps", "pristine-marketplace-sitemaps");
+            group.put("store", "pristine-marketplace-store");
+            g.put("pristineMarketplace", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("category", "producthunt-category");
             group.put("categoryProducts", "producthunt-category-products");
             group.put("leaderboard", "producthunt-leaderboard");
@@ -30630,6 +48250,62 @@ public final class Operations {
             group.put("reviews", "producthunt-reviews");
             group.put("search", "producthunt-search");
             g.put("productHunt", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("propublicaArticle", "propublica-article");
+            group.put("propublicaAuthor", "propublica-author");
+            group.put("propublicaHeadlines", "propublica-headlines");
+            group.put("propublicaNews", "propublica-news");
+            group.put("propublicaSections", "propublica-sections");
+            g.put("proPublica", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("autographfactsCategories", "psa-autographfacts-categories");
+            group.put("autographfactsGallery", "psa-autographfacts-gallery");
+            group.put("autographfactsSubject", "psa-autographfacts-subject");
+            group.put("autographfactsSubjects", "psa-autographfacts-subjects");
+            group.put("cardfactsCategories", "psa-cardfacts-categories");
+            group.put("cardfactsChecklist", "psa-cardfacts-checklist");
+            group.put("cardfactsSets", "psa-cardfacts-sets");
+            group.put("certLookup", "psa-cert-lookup");
+            group.put("priceGuideCategories", "psa-price-guide-categories");
+            group.put("priceGuideSearch", "psa-price-guide-search");
+            group.put("priceGuideSet", "psa-price-guide-set");
+            group.put("probatfactsCategories", "psa-probatfacts-categories");
+            group.put("probatfactsGallery", "psa-probatfacts-gallery");
+            group.put("probatfactsSubject", "psa-probatfacts-subject");
+            group.put("probatfactsSubjects", "psa-probatfacts-subjects");
+            group.put("ticketfactsCategories", "psa-ticketfacts-categories");
+            group.put("ticketfactsGallery", "psa-ticketfacts-gallery");
+            group.put("ticketfactsSubject", "psa-ticketfacts-subject");
+            group.put("ticketfactsSubjects", "psa-ticketfacts-subjects");
+            g.put("psa", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("collections", "psastore-collections");
+            group.put("collectionProducts", "psastore-collection-products");
+            group.put("pages", "psastore-pages");
+            group.put("page", "psastore-page");
+            group.put("products", "psastore-products");
+            group.put("product", "psastore-product");
+            group.put("productRecommendations", "psastore-product-recommendations");
+            group.put("searchSuggest", "psastore-search-suggest");
+            group.put("sitemapUrls", "psastore-sitemap-urls");
+            group.put("sitemaps", "psastore-sitemaps");
+            group.put("store", "psastore-store");
+            g.put("psastore", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "punch-article");
+            group.put("author", "punch-author");
+            group.put("headlines", "punch-headlines");
+            group.put("news", "punch-news");
+            group.put("sections", "punch-sections");
+            g.put("punch", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30653,6 +48329,40 @@ public final class Operations {
             group.put("raisingcanesPromotions", "raisingcanes-promotions");
             group.put("raisingcanesStore", "raisingcanes-store");
             g.put("raisingCaneS", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "rappler-article");
+            group.put("author", "rappler-author");
+            group.put("headlines", "rappler-headlines");
+            group.put("news", "rappler-news");
+            group.put("sections", "rappler-sections");
+            g.put("rappler", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("rawstoryArticle", "rawstory-article");
+            group.put("rawstoryAuthor", "rawstory-author");
+            group.put("rawstoryHeadlines", "rawstory-headlines");
+            group.put("rawstoryNews", "rawstory-news");
+            group.put("rawstorySections", "rawstory-sections");
+            g.put("rawStory", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("collections", "rebag-collections");
+            group.put("collectionProducts", "rebag-collection-products");
+            group.put("pages", "rebag-pages");
+            group.put("page", "rebag-page");
+            group.put("products", "rebag-products");
+            group.put("product", "rebag-product");
+            group.put("productRecommendations", "rebag-product-recommendations");
+            group.put("search", "rebag-search");
+            group.put("searchSuggest", "rebag-search-suggest");
+            group.put("sitemapUrls", "rebag-sitemap-urls");
+            group.put("sitemaps", "rebag-sitemaps");
+            group.put("store", "rebag-store");
+            g.put("rebag", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30688,6 +48398,27 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("availability", "resy-availability");
+            group.put("cuisines", "resy-cuisines");
+            group.put("eventDetail", "resy-event-detail");
+            group.put("events", "resy-events");
+            group.put("locations", "resy-locations");
+            group.put("restaurant", "resy-restaurant");
+            group.put("search", "resy-search");
+            g.put("resy", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "reuters-article");
+            group.put("articles", "reuters-articles");
+            group.put("author", "reuters-author");
+            group.put("news", "reuters-news");
+            group.put("section", "reuters-section");
+            group.put("sections", "reuters-sections");
+            g.put("reuters", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("agents", "rightmove-agents");
             group.put("agentBranch", "rightmove-agent-branch");
             group.put("autocomplete", "rightmove-autocomplete");
@@ -30700,11 +48431,29 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "rnz-article");
+            group.put("author", "rnz-author");
+            group.put("headlines", "rnz-headlines");
+            group.put("news", "rnz-news");
+            group.put("sections", "rnz-sections");
+            g.put("rnz", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("badges", "roblox-badges");
             group.put("game", "roblox-game");
             group.put("rankings", "roblox-rankings");
             group.put("search", "roblox-search");
             g.put("roblox", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("rollingstoneArticle", "rollingstone-article");
+            group.put("rollingstoneAuthor", "rollingstone-author");
+            group.put("rollingstoneHeadlines", "rollingstone-headlines");
+            group.put("rollingstoneNews", "rollingstone-news");
+            group.put("rollingstoneSections", "rollingstone-sections");
+            g.put("rollingStone", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30744,12 +48493,71 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("rteArticle", "rte-article");
+            group.put("rteAuthor", "rte-author");
+            group.put("rteHeadlines", "rte-headlines");
+            group.put("rteNews", "rte-news");
+            group.put("rteSections", "rte-sections");
+            g.put("rtNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "salon-article");
+            group.put("author", "salon-author");
+            group.put("headlines", "salon-headlines");
+            group.put("news", "salon-news");
+            group.put("sections", "salon-sections");
+            g.put("salon", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("samsclubCategory", "samsclub-category");
             group.put("samsclubContent", "samsclub-content");
             group.put("samsclubDepartments", "samsclub-departments");
             group.put("samsclubProduct", "samsclub-product");
             group.put("samsclubProductRelated", "samsclub-product-related");
             g.put("samSClub", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "scmp-article");
+            group.put("author", "scmp-author");
+            group.put("headlines", "scmp-headlines");
+            group.put("sections", "scmp-sections");
+            g.put("scmp", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("screenrantArticle", "screenrant-article");
+            group.put("screenrantAuthor", "screenrant-author");
+            group.put("screenrantHeadlines", "screenrant-headlines");
+            group.put("screenrantNews", "screenrant-news");
+            group.put("screenrantSections", "screenrant-sections");
+            g.put("screenRant", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("seatgeekCategories", "seatgeek-categories");
+            group.put("seatgeekCities", "seatgeek-cities");
+            group.put("seatgeekEvent", "seatgeek-event");
+            group.put("seatgeekEventsByCategory", "seatgeek-events-by-category");
+            group.put("seatgeekEventsNear", "seatgeek-events-near");
+            group.put("seatgeekPerformer", "seatgeek-performer");
+            group.put("seatgeekPerformerEvents", "seatgeek-performer-events");
+            group.put("seatgeekSearch", "seatgeek-search");
+            group.put("seatgeekTrending", "seatgeek-trending");
+            group.put("seatgeekVenue", "seatgeek-venue");
+            group.put("seatgeekVenueEvents", "seatgeek-venue-events");
+            g.put("seatGeek", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("seattletimesArticle", "seattletimes-article");
+            group.put("seattletimesAuthor", "seattletimes-author");
+            group.put("seattletimesHeadlines", "seattletimes-headlines");
+            group.put("seattletimesNews", "seattletimes-news");
+            group.put("seattletimesSections", "seattletimes-sections");
+            g.put("seattleTimes", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30767,6 +48575,8 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("brands", "sephora-brands");
+            group.put("categories", "sephora-categories");
             group.put("category", "sephora-category");
             group.put("product", "sephora-product");
             group.put("productQuestions", "sephora-product-questions");
@@ -30775,6 +48585,24 @@ public final class Operations {
             group.put("stores", "sephora-stores");
             group.put("suggest", "sephora-suggest");
             g.put("sephora", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "sevennewsau-article");
+            group.put("author", "sevennewsau-author");
+            group.put("headlines", "sevennewsau-headlines");
+            group.put("news", "sevennewsau-news");
+            group.put("sections", "sevennewsau-sections");
+            g.put("sevenNewsAustralia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "sfgate-article");
+            group.put("author", "sfgate-author");
+            group.put("headlines", "sfgate-headlines");
+            group.put("news", "sfgate-news");
+            group.put("sections", "sfgate-sections");
+            g.put("sfgate", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30854,6 +48682,57 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("skynewsArticle", "skynews-article");
+            group.put("skynewsAuthor", "skynews-author");
+            group.put("skynewsHeadlines", "skynews-headlines");
+            group.put("skynewsNews", "skynews-news");
+            group.put("skynewsSections", "skynews-sections");
+            group.put("skynewsVideo", "skynews-video");
+            group.put("skynewsVideos", "skynews-videos");
+            g.put("skyNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "slate-article");
+            group.put("categories", "slate-categories");
+            group.put("headlines", "slate-headlines");
+            g.put("slate", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "slickdeals-categories");
+            group.put("category", "slickdeals-category");
+            group.put("comments", "slickdeals-comments");
+            group.put("deal", "slickdeals-deal");
+            group.put("dealTypes", "slickdeals-deal-types");
+            group.put("forums", "slickdeals-forums");
+            group.put("frontpage", "slickdeals-frontpage");
+            group.put("primaryCategories", "slickdeals-primary-categories");
+            group.put("primaryCategory", "slickdeals-primary-category");
+            group.put("search", "slickdeals-search");
+            group.put("searchAdvanced", "slickdeals-search-advanced");
+            g.put("slickdeals", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("sloanreviewArticle", "sloanreview-article");
+            group.put("sloanreviewArticles", "sloanreview-articles");
+            group.put("sloanreviewCategories", "sloanreview-categories");
+            group.put("sloanreviewHeadlines", "sloanreview-headlines");
+            group.put("sloanreviewTopic", "sloanreview-topic");
+            g.put("mitSloanManagementReview", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("smhArticle", "smh-article");
+            group.put("smhAuthor", "smh-author");
+            group.put("smhHeadlines", "smh-headlines");
+            group.put("smhNews", "smh-news");
+            group.put("smhSections", "smh-sections");
+            g.put("theSydneyMorningHerald", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("sofascoreEvent", "sofascore-event");
             group.put("sofascoreEventH2h", "sofascore-event-h2h");
             group.put("sofascoreEventIncidents", "sofascore-event-incidents");
@@ -30898,11 +48777,29 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "space-article");
+            group.put("author", "space-author");
+            group.put("headlines", "space-headlines");
+            group.put("news", "space-news");
+            group.put("sections", "space-sections");
+            g.put("space", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("sparkfunCategories", "sparkfun-categories");
             group.put("sparkfunCategory", "sparkfun-category");
             group.put("sparkfunProduct", "sparkfun-product");
             group.put("sparkfunSearch", "sparkfun-search");
             g.put("sparkFun", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("sportingnewsArticle", "sportingnews-article");
+            group.put("sportingnewsAuthor", "sportingnews-author");
+            group.put("sportingnewsHeadlines", "sportingnews-headlines");
+            group.put("sportingnewsNews", "sportingnews-news");
+            group.put("sportingnewsSections", "sportingnews-sections");
+            g.put("sportingNews", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -30949,6 +48846,15 @@ public final class Operations {
             group.put("trackSimilarAlbums", "spotify-track-similar-albums");
             group.put("tracksSearch", "spotify-tracks-search");
             g.put("spotify", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("standardArticle", "standard-article");
+            group.put("standardAuthor", "standard-author");
+            group.put("standardHeadlines", "standard-headlines");
+            group.put("standardNews", "standard-news");
+            group.put("standardSections", "standard-sections");
+            g.put("eveningStandard", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31010,11 +48916,67 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("straitstimesArticle", "straitstimes-article");
+            group.put("straitstimesAuthor", "straitstimes-author");
+            group.put("straitstimesHeadlines", "straitstimes-headlines");
+            group.put("straitstimesNews", "straitstimes-news");
+            group.put("straitstimesSections", "straitstimes-sections");
+            g.put("theStraitsTimes", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("challenges", "strava-challenges");
             group.put("club", "strava-club");
             group.put("routes", "strava-routes");
             group.put("routeDetail", "strava-route-detail");
             g.put("strava", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("stubhubCarousel", "stubhub-carousel");
+            group.put("stubhubCategories", "stubhub-categories");
+            group.put("stubhubCategoryEvents", "stubhub-category-events");
+            group.put("stubhubExplore", "stubhub-explore");
+            group.put("stubhubNavigationCategories", "stubhub-navigation-categories");
+            group.put("stubhubPerformerEvents", "stubhub-performer-events");
+            group.put("stubhubSearch", "stubhub-search");
+            group.put("stubhubSuggestedSearches", "stubhub-suggested-searches");
+            group.put("stubhubTrending", "stubhub-trending");
+            group.put("stubhubTrendingEvents", "stubhub-trending-events");
+            group.put("stubhubVenueEvents", "stubhub-venue-events");
+            g.put("stubHub", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "stuff-article");
+            group.put("author", "stuff-author");
+            group.put("headlines", "stuff-headlines");
+            group.put("news", "stuff-news");
+            group.put("sections", "stuff-sections");
+            g.put("stuff", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "substack-categories");
+            group.put("category", "substack-category");
+            group.put("explore", "substack-explore");
+            group.put("leaderboard", "substack-leaderboard");
+            group.put("note", "substack-note");
+            group.put("noteReplies", "substack-note-replies");
+            group.put("noteRestacks", "substack-note-restacks");
+            group.put("notes", "substack-notes");
+            group.put("notesTabs", "substack-notes-tabs");
+            group.put("post", "substack-post");
+            group.put("publication", "substack-publication");
+            group.put("publicationContributors", "substack-publication-contributors");
+            group.put("publicationPosts", "substack-publication-posts");
+            group.put("publicationRecommendations", "substack-publication-recommendations");
+            group.put("search", "substack-search");
+            group.put("user", "substack-user");
+            group.put("userActivity", "substack-user-activity");
+            group.put("userConnections", "substack-user-connections");
+            group.put("userSearch", "substack-user-search");
+            g.put("substack", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31025,6 +48987,15 @@ public final class Operations {
             group.put("sitemap", "subway-sitemap");
             group.put("store", "subway-store");
             g.put("subway", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("sunArticle", "sun-article");
+            group.put("sunAuthor", "sun-author");
+            group.put("sunHeadlines", "sun-headlines");
+            group.put("sunNews", "sun-news");
+            group.put("sunSections", "sun-sections");
+            g.put("theSun", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31055,7 +49026,35 @@ public final class Operations {
             group.put("questions", "target-questions");
             group.put("reviews", "target-reviews");
             group.put("search", "target-search");
+            group.put("stores", "target-stores");
             g.put("target", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("techcrunchArticle", "techcrunch-article");
+            group.put("techcrunchAuthor", "techcrunch-author");
+            group.put("techcrunchHeadlines", "techcrunch-headlines");
+            group.put("techcrunchNews", "techcrunch-news");
+            group.put("techcrunchSections", "techcrunch-sections");
+            g.put("techCrunch", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("techradarArticle", "techradar-article");
+            group.put("techradarAuthor", "techradar-author");
+            group.put("techradarHeadlines", "techradar-headlines");
+            group.put("techradarNews", "techradar-news");
+            group.put("techradarSections", "techradar-sections");
+            g.put("techRadar", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("telegraphArticle", "telegraph-article");
+            group.put("telegraphAuthor", "telegraph-author");
+            group.put("telegraphHeadlines", "telegraph-headlines");
+            group.put("telegraphNews", "telegraph-news");
+            group.put("telegraphSections", "telegraph-sections");
+            g.put("theTelegraph", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31076,6 +49075,23 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("theageArticle", "theage-article");
+            group.put("theageAuthor", "theage-author");
+            group.put("theageHeadlines", "theage-headlines");
+            group.put("theageNews", "theage-news");
+            group.put("theageSections", "theage-sections");
+            g.put("theAge", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("theatlanticArticle", "theatlantic-article");
+            group.put("theatlanticAuthor", "theatlantic-author");
+            group.put("theatlanticHeadlines", "theatlantic-headlines");
+            group.put("theatlanticSections", "theatlantic-sections");
+            g.put("theAtlantic", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("thebodyshopCollections", "thebodyshop-collections");
             group.put("thebodyshopCollectionProducts", "thebodyshop-collection-products");
             group.put("thebodyshopPages", "thebodyshop-pages");
@@ -31088,6 +49104,84 @@ public final class Operations {
             group.put("thebodyshopSitemaps", "thebodyshop-sitemaps");
             group.put("thebodyshopStore", "thebodyshop-store");
             g.put("theBodyShop", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thedailybeastArticle", "thedailybeast-article");
+            group.put("thedailybeastAuthor", "thedailybeast-author");
+            group.put("thedailybeastHeadlines", "thedailybeast-headlines");
+            group.put("thedailybeastNews", "thedailybeast-news");
+            group.put("thedailybeastSections", "thedailybeast-sections");
+            g.put("theDailyBeast", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thehillArticle", "thehill-article");
+            group.put("thehillAuthor", "thehill-author");
+            group.put("thehillHeadlines", "thehill-headlines");
+            group.put("thehillNews", "thehill-news");
+            group.put("thehillSections", "thehill-sections");
+            g.put("theHill", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thehinduArticle", "thehindu-article");
+            group.put("thehinduAuthor", "thehindu-author");
+            group.put("thehinduHeadlines", "thehindu-headlines");
+            group.put("thehinduNews", "thehindu-news");
+            group.put("thehinduSections", "thehindu-sections");
+            g.put("theHindu", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thejournalArticle", "thejournal-article");
+            group.put("thejournalAuthor", "thejournal-author");
+            group.put("thejournalHeadlines", "thejournal-headlines");
+            group.put("thejournalNews", "thejournal-news");
+            group.put("thejournalSections", "thejournal-sections");
+            g.put("theJournalIe", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("therealrealAutocomplete", "therealreal-autocomplete");
+            group.put("therealrealCategories", "therealreal-categories");
+            group.put("therealrealCategory", "therealreal-category");
+            group.put("therealrealCollection", "therealreal-collection");
+            group.put("therealrealCollections", "therealreal-collections");
+            group.put("therealrealConditions", "therealreal-conditions");
+            group.put("therealrealDesigner", "therealreal-designer");
+            group.put("therealrealDesigners", "therealreal-designers");
+            group.put("therealrealListing", "therealreal-listing");
+            group.put("therealrealSearch", "therealreal-search");
+            group.put("therealrealSimilar", "therealreal-similar");
+            g.put("theRealReal", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thestarmyArticle", "thestarmy-article");
+            group.put("thestarmyAuthor", "thestarmy-author");
+            group.put("thestarmyHeadlines", "thestarmy-headlines");
+            group.put("thestarmyNews", "thestarmy-news");
+            group.put("thestarmySections", "thestarmy-sections");
+            g.put("theStarMalaysia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thevergeArticle", "theverge-article");
+            group.put("thevergeAuthor", "theverge-author");
+            group.put("thevergeHeadlines", "theverge-headlines");
+            group.put("thevergeNews", "theverge-news");
+            group.put("thevergeSections", "theverge-sections");
+            g.put("theVerge", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("thisismoneyArticle", "thisismoney-article");
+            group.put("thisismoneyAuthor", "thisismoney-author");
+            group.put("thisismoneyHeadlines", "thisismoney-headlines");
+            group.put("thisismoneyNews", "thisismoney-news");
+            group.put("thisismoneySections", "thisismoney-sections");
+            g.put("thisIsMoney", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31126,6 +49220,18 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("tiffanyCategories", "tiffany-categories");
+            group.put("tiffanyCategory", "tiffany-category");
+            group.put("tiffanyContentSearch", "tiffany-content-search");
+            group.put("tiffanyFilters", "tiffany-filters");
+            group.put("tiffanyProduct", "tiffany-product");
+            group.put("tiffanySearch", "tiffany-search");
+            group.put("tiffanyStores", "tiffany-stores");
+            group.put("tiffanySuggest", "tiffany-suggest");
+            g.put("tiffanyCo", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("category", "tiktok-category");
             group.put("videoComments", "tiktok-video-comments");
             group.put("creativeCenterHashtags", "tiktok-creative-center-hashtags");
@@ -31155,6 +49261,35 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "time-article");
+            group.put("author", "time-author");
+            group.put("headlines", "time-headlines");
+            group.put("news", "time-news");
+            group.put("sections", "time-sections");
+            g.put("time", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("timesofindiaArticle", "timesofindia-article");
+            group.put("timesofindiaAuthor", "timesofindia-author");
+            group.put("timesofindiaHeadlines", "timesofindia-headlines");
+            group.put("timesofindiaNews", "timesofindia-news");
+            group.put("timesofindiaSections", "timesofindia-sections");
+            g.put("timesOfIndia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("timesofisraelArticle", "timesofisrael-article");
+            group.put("timesofisraelAuthor", "timesofisrael-author");
+            group.put("timesofisraelHeadlines", "timesofisrael-headlines");
+            group.put("timesofisraelNews", "timesofisrael-news");
+            group.put("timesofisraelSections", "timesofisrael-sections");
+            g.put("timesOfIsrael", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("collection", "tmdb-collection");
+            group.put("genres", "tmdb-genres");
             group.put("movieList", "tmdb-movie-list");
             group.put("movie", "tmdb-movie");
             group.put("personList", "tmdb-person-list");
@@ -31163,6 +49298,15 @@ public final class Operations {
             group.put("tvList", "tmdb-tv-list");
             group.put("tv", "tmdb-tv");
             g.put("tmdb", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "tmz-article");
+            group.put("author", "tmz-author");
+            group.put("headlines", "tmz-headlines");
+            group.put("news", "tmz-news");
+            group.put("sections", "tmz-sections");
+            g.put("tmz", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31175,6 +49319,42 @@ public final class Operations {
             group.put("search", "tokopedia-search");
             group.put("searchFilters", "tokopedia-search-filters");
             g.put("tokopedia", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("tomsguideArticle", "tomsguide-article");
+            group.put("tomsguideAuthor", "tomsguide-author");
+            group.put("tomsguideHeadlines", "tomsguide-headlines");
+            group.put("tomsguideNews", "tomsguide-news");
+            group.put("tomsguideSections", "tomsguide-sections");
+            g.put("tomSGuide", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("tomshardwareArticle", "tomshardware-article");
+            group.put("tomshardwareAuthor", "tomshardware-author");
+            group.put("tomshardwareHeadlines", "tomshardware-headlines");
+            group.put("tomshardwareNews", "tomshardware-news");
+            group.put("tomshardwareSections", "tomshardware-sections");
+            g.put("tomSHardware", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("torontostarArticle", "torontostar-article");
+            group.put("torontostarAuthor", "torontostar-author");
+            group.put("torontostarHeadlines", "torontostar-headlines");
+            group.put("torontostarNews", "torontostar-news");
+            group.put("torontostarSections", "torontostar-sections");
+            g.put("torontoStar", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "townhall-article");
+            group.put("author", "townhall-author");
+            group.put("headlines", "townhall-headlines");
+            group.put("news", "townhall-news");
+            group.put("sections", "townhall-sections");
+            g.put("townhall", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31266,6 +49446,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("usatodayArticle", "usatoday-article");
+            group.put("usatodayAuthor", "usatoday-author");
+            group.put("usatodayHeadlines", "usatoday-headlines");
+            group.put("usatodayNews", "usatoday-news");
+            group.put("usatodaySections", "usatoday-sections");
+            g.put("usaToday", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("me", "user-me");
             group.put("meApiKeys", "user-me-api-keys");
             group.put("meApiKeysRotate", "user-me-api-keys-rotate");
@@ -31282,9 +49471,66 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("usmagazineArticle", "usmagazine-article");
+            group.put("usmagazineAuthor", "usmagazine-author");
+            group.put("usmagazineHeadlines", "usmagazine-headlines");
+            group.put("usmagazineNews", "usmagazine-news");
+            group.put("usmagazineSections", "usmagazine-sections");
+            g.put("usWeekly", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("usptoppubsDetail", "usptoppubs-detail");
             group.put("usptoppubsSearch", "usptoppubs-search");
             g.put("usptoPatentPublicSearch", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("vanguardngArticle", "vanguardng-article");
+            group.put("vanguardngAuthor", "vanguardng-author");
+            group.put("vanguardngHeadlines", "vanguardng-headlines");
+            group.put("vanguardngNews", "vanguardng-news");
+            group.put("vanguardngSections", "vanguardng-sections");
+            g.put("vanguard", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("vanityfairArticle", "vanityfair-article");
+            group.put("vanityfairAuthor", "vanityfair-author");
+            group.put("vanityfairHeadlines", "vanityfair-headlines");
+            group.put("vanityfairNews", "vanityfair-news");
+            group.put("vanityfairSections", "vanityfair-sections");
+            g.put("vanityFair", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "variety-article");
+            group.put("author", "variety-author");
+            group.put("headlines", "variety-headlines");
+            group.put("news", "variety-news");
+            group.put("sections", "variety-sections");
+            g.put("variety", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("brands", "vestiaire-brands");
+            group.put("categories", "vestiaire-categories");
+            group.put("conditions", "vestiaire-conditions");
+            group.put("product", "vestiaire-product");
+            group.put("search", "vestiaire-search");
+            group.put("searchSellers", "vestiaire-search-sellers");
+            group.put("seller", "vestiaire-seller");
+            group.put("suggest", "vestiaire-suggest");
+            g.put("vestiaire", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "vice-article");
+            group.put("author", "vice-author");
+            group.put("headlines", "vice-headlines");
+            group.put("news", "vice-news");
+            group.put("sections", "vice-sections");
+            g.put("vice", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31299,6 +49545,24 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "vox-article");
+            group.put("author", "vox-author");
+            group.put("headlines", "vox-headlines");
+            group.put("news", "vox-news");
+            group.put("sections", "vox-sections");
+            g.put("vox", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("walesonlineArticle", "walesonline-article");
+            group.put("walesonlineAuthor", "walesonline-author");
+            group.put("walesonlineHeadlines", "walesonline-headlines");
+            group.put("walesonlineNews", "walesonline-news");
+            group.put("walesonlineSections", "walesonline-sections");
+            g.put("walesOnline", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("stores", "walgreens-stores");
             g.put("walgreens", Map.copyOf(group));
         }
@@ -31308,6 +49572,15 @@ public final class Operations {
             group.put("productReviews", "walmart-product-reviews");
             group.put("search", "walmart-search");
             g.put("walmart", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("wapoArticle", "wapo-article");
+            group.put("wapoAuthor", "wapo-author");
+            group.put("wapoHeadlines", "wapo-headlines");
+            group.put("wapoNews", "wapo-news");
+            group.put("wapoSections", "wapo-sections");
+            g.put("washingtonPost", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31355,6 +49628,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "wired-article");
+            group.put("author", "wired-author");
+            group.put("headlines", "wired-headlines");
+            group.put("news", "wired-news");
+            group.put("sections", "wired-sections");
+            g.put("wired", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("categories", "wish-categories");
             group.put("product", "wish-product");
             group.put("productRelated", "wish-product-related");
@@ -31377,10 +49659,34 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("wsjArticle", "wsj-article");
+            group.put("wsjAuthor", "wsj-author");
+            g.put("wallStreetJournal", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("post", "x-post");
             group.put("profile", "x-profile");
             group.put("profilePosts", "x-profile-posts");
             g.put("x", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("browse", "xbox-browse");
+            group.put("collection", "xbox-collection");
+            group.put("game", "xbox-game");
+            group.put("reviews", "xbox-reviews");
+            group.put("search", "xbox-search");
+            g.put("xbox", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "xda-article");
+            group.put("author", "xda-author");
+            group.put("headlines", "xda-headlines");
+            group.put("news", "xda-news");
+            group.put("sections", "xda-sections");
+            g.put("xda", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -31459,6 +49765,7 @@ public final class Operations {
             group.put("comments", "yahoo-news-comments");
             group.put("commentReplies", "yahoo-news-comment-replies");
             group.put("home", "yahoo-news-home");
+            group.put("related", "yahoo-news-related");
             group.put("suggest", "yahoo-news-suggest");
             g.put("yahooNews", Map.copyOf(group));
         }
@@ -31526,6 +49833,14 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "yoox-categories");
+            group.put("designers", "yoox-designers");
+            group.put("product", "yoox-product");
+            group.put("search", "yoox-search");
+            g.put("yoox", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("captions", "youtube-captions");
             group.put("channelPlaylists", "youtube-channel-playlists");
             group.put("channelSearch", "youtube-channel-search");
@@ -31543,6 +49858,7 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "zalando-categories");
             group.put("category", "zalando-category");
             group.put("markets", "zalando-markets");
             group.put("product", "zalando-product");
@@ -31578,6 +49894,15 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("article", "zdnet-article");
+            group.put("author", "zdnet-author");
+            group.put("headlines", "zdnet-headlines");
+            group.put("news", "zdnet-news");
+            group.put("sections", "zdnet-sections");
+            g.put("zdnet", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("autocomplete", "zillow-autocomplete");
             group.put("property", "zillow-property");
             group.put("search", "zillow-search");
@@ -31585,6 +49910,7 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("cities", "zomato-cities");
             group.put("collection", "zomato-collection");
             group.put("collections", "zomato-collections");
             group.put("restaurant", "zomato-restaurant");

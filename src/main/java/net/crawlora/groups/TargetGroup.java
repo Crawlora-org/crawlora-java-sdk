@@ -190,4 +190,26 @@ public final class TargetGroup {
         return client.request("target-search", params, options);
     }
 
+    /**
+     * target-stores (GET /target/stores).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object stores(Map<String, Object> params) {
+        return stores(params, null);
+    }
+
+    /**
+     * target-stores (GET /target/stores). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object stores(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("target-stores", params);
+        return client.request("target-stores", params, options);
+    }
+
 }

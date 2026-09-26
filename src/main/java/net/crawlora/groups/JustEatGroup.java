@@ -84,4 +84,26 @@ public final class JustEatGroup {
         return client.request("justeat-search", params, options);
     }
 
+    /**
+     * justeat-search-filters (GET /justeat/search/filters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object justeatSearchFilters(Map<String, Object> params) {
+        return justeatSearchFilters(params, null);
+    }
+
+    /**
+     * justeat-search-filters (GET /justeat/search/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object justeatSearchFilters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("justeat-search-filters", params);
+        return client.request("justeat-search-filters", params, options);
+    }
+
 }

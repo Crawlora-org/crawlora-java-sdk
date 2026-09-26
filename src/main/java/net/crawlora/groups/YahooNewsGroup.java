@@ -138,6 +138,28 @@ public final class YahooNewsGroup {
     }
 
     /**
+     * yahoo-news-related (GET /yahoo-news/related).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object related(Map<String, Object> params) {
+        return related(params, null);
+    }
+
+    /**
+     * yahoo-news-related (GET /yahoo-news/related). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object related(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-news-related", params);
+        return client.request("yahoo-news-related", params, options);
+    }
+
+    /**
      * yahoo-news-suggest (GET /yahoo-news/suggest).
      *
      * @param params operation parameters

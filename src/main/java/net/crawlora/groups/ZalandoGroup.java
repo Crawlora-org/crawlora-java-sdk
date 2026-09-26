@@ -19,6 +19,28 @@ public final class ZalandoGroup {
     }
 
     /**
+     * zalando-categories (GET /zalando/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * zalando-categories (GET /zalando/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("zalando-categories", params);
+        return client.request("zalando-categories", params, options);
+    }
+
+    /**
      * zalando-category (GET /zalando/category).
      *
      * @param params operation parameters

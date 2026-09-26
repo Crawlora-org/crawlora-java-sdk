@@ -19,6 +19,37 @@ public final class AmazonJobsGroup {
     }
 
     /**
+     * amazon-jobs-categories (GET /amazon-jobs/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * amazon-jobs-categories (GET /amazon-jobs/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("amazon-jobs-categories", params);
+        return client.request("amazon-jobs-categories", params, options);
+    }
+
+    /**
+     * amazon-jobs-categories (GET /amazon-jobs/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * amazon-jobs-job (GET /amazon-jobs/job).
      *
      * @param params operation parameters

@@ -19,6 +19,50 @@ public final class AmazonGroup {
     }
 
     /**
+     * amazon-charts (GET /amazon/charts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object charts(Map<String, Object> params) {
+        return charts(params, null);
+    }
+
+    /**
+     * amazon-charts (GET /amazon/charts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object charts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("amazon-charts", params);
+        return client.request("amazon-charts", params, options);
+    }
+
+    /**
+     * amazon-charts-categories (GET /amazon/charts/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsCategories(Map<String, Object> params) {
+        return chartsCategories(params, null);
+    }
+
+    /**
+     * amazon-charts-categories (GET /amazon/charts/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object chartsCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("amazon-charts-categories", params);
+        return client.request("amazon-charts-categories", params, options);
+    }
+
+    /**
      * amazon-product (GET /amazon/product/{asin}).
      *
      * @param params operation parameters

@@ -50,6 +50,37 @@ public final class AppStoreGroup {
     }
 
     /**
+     * appstore-categories (GET /appstore/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * appstore-categories (GET /appstore/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("appstore-categories", params);
+        return client.request("appstore-categories", params, options);
+    }
+
+    /**
+     * appstore-categories (GET /appstore/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * appstore-developer (GET /appstore/developer/{dev_id}).
      *
      * @param params operation parameters

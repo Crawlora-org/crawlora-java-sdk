@@ -41,6 +41,37 @@ public final class AppleJobsGroup {
     }
 
     /**
+     * apple-jobs-locations (GET /apple-jobs/locations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object locations(Map<String, Object> params) {
+        return locations(params, null);
+    }
+
+    /**
+     * apple-jobs-locations (GET /apple-jobs/locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object locations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-jobs-locations", params);
+        return client.request("apple-jobs-locations", params, options);
+    }
+
+    /**
+     * apple-jobs-locations (GET /apple-jobs/locations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object locations() {
+        return locations(Map.of(), null);
+    }
+
+    /**
      * apple-jobs-search (GET /apple-jobs/search).
      *
      * @param params operation parameters

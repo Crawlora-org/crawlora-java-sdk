@@ -106,4 +106,26 @@ public final class FoodpandaGroup {
         return client.request("foodpanda-search", params, options);
     }
 
+    /**
+     * foodpanda-search-cuisines (GET /foodpanda/search/cuisines).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchCuisines(Map<String, Object> params) {
+        return searchCuisines(params, null);
+    }
+
+    /**
+     * foodpanda-search-cuisines (GET /foodpanda/search/cuisines). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchCuisines(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("foodpanda-search-cuisines", params);
+        return client.request("foodpanda-search-cuisines", params, options);
+    }
+
 }

@@ -94,6 +94,28 @@ public final class PlayStationGroup {
     }
 
     /**
+     * playstation-concept-reviews (GET /playstation/concept/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationConceptReviews(Map<String, Object> params) {
+        return playstationConceptReviews(params, null);
+    }
+
+    /**
+     * playstation-concept-reviews (GET /playstation/concept/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationConceptReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("playstation-concept-reviews", params);
+        return client.request("playstation-concept-reviews", params, options);
+    }
+
+    /**
      * playstation-deals (GET /playstation/deals).
      *
      * @param params operation parameters
@@ -219,6 +241,28 @@ public final class PlayStationGroup {
     public Object playstationSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("playstation-search", params);
         return client.request("playstation-search", params, options);
+    }
+
+    /**
+     * playstation-suggest (GET /playstation/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationSuggest(Map<String, Object> params) {
+        return playstationSuggest(params, null);
+    }
+
+    /**
+     * playstation-suggest (GET /playstation/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playstationSuggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("playstation-suggest", params);
+        return client.request("playstation-suggest", params, options);
     }
 
 }

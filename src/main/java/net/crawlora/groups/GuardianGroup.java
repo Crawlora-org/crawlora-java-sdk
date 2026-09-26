@@ -41,6 +41,37 @@ public final class GuardianGroup {
     }
 
     /**
+     * guardian-author (GET /guardian/author).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params) {
+        return author(params, null);
+    }
+
+    /**
+     * guardian-author (GET /guardian/author). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("guardian-author", params);
+        return client.request("guardian-author", params, options);
+    }
+
+    /**
+     * guardian-author (GET /guardian/author). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author() {
+        return author(Map.of(), null);
+    }
+
+    /**
      * guardian-headlines (GET /guardian/headlines).
      *
      * @param params operation parameters

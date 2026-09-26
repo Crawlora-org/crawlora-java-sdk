@@ -50,6 +50,37 @@ public final class ImdbGroup {
     }
 
     /**
+     * imdb-image-types (GET /imdb/image-types).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object imageTypes(Map<String, Object> params) {
+        return imageTypes(params, null);
+    }
+
+    /**
+     * imdb-image-types (GET /imdb/image-types). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object imageTypes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-image-types", params);
+        return client.request("imdb-image-types", params, options);
+    }
+
+    /**
+     * imdb-image-types (GET /imdb/image-types). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object imageTypes() {
+        return imageTypes(Map.of(), null);
+    }
+
+    /**
      * imdb-name (GET /imdb/name).
      *
      * @param params operation parameters
@@ -140,6 +171,68 @@ public final class ImdbGroup {
      */
     public Object nameCredits() {
         return nameCredits(Map.of(), null);
+    }
+
+    /**
+     * imdb-name-images (GET /imdb/name/images).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameImages(Map<String, Object> params) {
+        return nameImages(params, null);
+    }
+
+    /**
+     * imdb-name-images (GET /imdb/name/images). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameImages(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-name-images", params);
+        return client.request("imdb-name-images", params, options);
+    }
+
+    /**
+     * imdb-name-images (GET /imdb/name/images). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameImages() {
+        return nameImages(Map.of(), null);
+    }
+
+    /**
+     * imdb-name-videos (GET /imdb/name/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameVideos(Map<String, Object> params) {
+        return nameVideos(params, null);
+    }
+
+    /**
+     * imdb-name-videos (GET /imdb/name/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-name-videos", params);
+        return client.request("imdb-name-videos", params, options);
+    }
+
+    /**
+     * imdb-name-videos (GET /imdb/name/videos). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nameVideos() {
+        return nameVideos(Map.of(), null);
     }
 
     /**
@@ -258,6 +351,37 @@ public final class ImdbGroup {
     }
 
     /**
+     * imdb-title-box-office (GET /imdb/title/box-office).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleBoxOffice(Map<String, Object> params) {
+        return titleBoxOffice(params, null);
+    }
+
+    /**
+     * imdb-title-box-office (GET /imdb/title/box-office). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleBoxOffice(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-box-office", params);
+        return client.request("imdb-title-box-office", params, options);
+    }
+
+    /**
+     * imdb-title-box-office (GET /imdb/title/box-office). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleBoxOffice() {
+        return titleBoxOffice(Map.of(), null);
+    }
+
+    /**
      * imdb-title-company-credits (GET /imdb/title/company-credits).
      *
      * @param params operation parameters
@@ -286,6 +410,37 @@ public final class ImdbGroup {
      */
     public Object titleCompanyCredits() {
         return titleCompanyCredits(Map.of(), null);
+    }
+
+    /**
+     * imdb-title-connections (GET /imdb/title/connections).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleConnections(Map<String, Object> params) {
+        return titleConnections(params, null);
+    }
+
+    /**
+     * imdb-title-connections (GET /imdb/title/connections). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleConnections(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-connections", params);
+        return client.request("imdb-title-connections", params, options);
+    }
+
+    /**
+     * imdb-title-connections (GET /imdb/title/connections). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleConnections() {
+        return titleConnections(Map.of(), null);
     }
 
     /**
@@ -410,6 +565,37 @@ public final class ImdbGroup {
      */
     public Object titleGoofs() {
         return titleGoofs(Map.of(), null);
+    }
+
+    /**
+     * imdb-title-images (GET /imdb/title/images).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleImages(Map<String, Object> params) {
+        return titleImages(params, null);
+    }
+
+    /**
+     * imdb-title-images (GET /imdb/title/images). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleImages(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-images", params);
+        return client.request("imdb-title-images", params, options);
+    }
+
+    /**
+     * imdb-title-images (GET /imdb/title/images). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleImages() {
+        return titleImages(Map.of(), null);
     }
 
     /**
@@ -720,6 +906,37 @@ public final class ImdbGroup {
      */
     public Object titleTrivia() {
         return titleTrivia(Map.of(), null);
+    }
+
+    /**
+     * imdb-title-videos (GET /imdb/title/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleVideos(Map<String, Object> params) {
+        return titleVideos(params, null);
+    }
+
+    /**
+     * imdb-title-videos (GET /imdb/title/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("imdb-title-videos", params);
+        return client.request("imdb-title-videos", params, options);
+    }
+
+    /**
+     * imdb-title-videos (GET /imdb/title/videos). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object titleVideos() {
+        return titleVideos(Map.of(), null);
     }
 
 }

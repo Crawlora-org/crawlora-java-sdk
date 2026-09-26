@@ -60,7 +60,10 @@ POLICY = core.NamingPolicy(
     dedup_sep="",
     keywords=JAVA_KEYWORDS,
     tag_group_overrides={
+        "1stDibs": "firstDibs",
         "7NOW": "sevenNow",
+        "7NEWS Australia": "sevenNewsAustralia",
+        "9to5Mac": "nineToFiveMac",
         "AppStore": "appStore",
         "CoinGecko": "coinGecko",
         "GooglePlay": "googlePlay",

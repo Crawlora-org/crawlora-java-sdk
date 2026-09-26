@@ -103,6 +103,37 @@ public final class AudibleGroup {
     }
 
     /**
+     * audible-author-charts (GET /audible/charts/authors).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object authorCharts(Map<String, Object> params) {
+        return authorCharts(params, null);
+    }
+
+    /**
+     * audible-author-charts (GET /audible/charts/authors). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object authorCharts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("audible-author-charts", params);
+        return client.request("audible-author-charts", params, options);
+    }
+
+    /**
+     * audible-author-charts (GET /audible/charts/authors). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object authorCharts() {
+        return authorCharts(Map.of(), null);
+    }
+
+    /**
      * audible-editorial-list (GET /audible/list/{list}).
      *
      * @param params operation parameters

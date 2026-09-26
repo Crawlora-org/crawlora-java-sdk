@@ -85,6 +85,72 @@ public final class BlueskyGroup {
     }
 
     /**
+     * bluesky-post-likes (GET /bluesky/post-likes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postLikes(Map<String, Object> params) {
+        return postLikes(params, null);
+    }
+
+    /**
+     * bluesky-post-likes (GET /bluesky/post-likes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postLikes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bluesky-post-likes", params);
+        return client.request("bluesky-post-likes", params, options);
+    }
+
+    /**
+     * bluesky-post-quotes (GET /bluesky/post-quotes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postQuotes(Map<String, Object> params) {
+        return postQuotes(params, null);
+    }
+
+    /**
+     * bluesky-post-quotes (GET /bluesky/post-quotes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postQuotes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bluesky-post-quotes", params);
+        return client.request("bluesky-post-quotes", params, options);
+    }
+
+    /**
+     * bluesky-post-reposted-by (GET /bluesky/post-reposted-by).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postRepostedBy(Map<String, Object> params) {
+        return postRepostedBy(params, null);
+    }
+
+    /**
+     * bluesky-post-reposted-by (GET /bluesky/post-reposted-by). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postRepostedBy(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bluesky-post-reposted-by", params);
+        return client.request("bluesky-post-reposted-by", params, options);
+    }
+
+    /**
      * bluesky-post-thread (GET /bluesky/post-thread).
      *
      * @param params operation parameters
@@ -104,6 +170,28 @@ public final class BlueskyGroup {
     public Object postThread(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bluesky-post-thread", params);
         return client.request("bluesky-post-thread", params, options);
+    }
+
+    /**
+     * bluesky-posts (GET /bluesky/posts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object posts(Map<String, Object> params) {
+        return posts(params, null);
+    }
+
+    /**
+     * bluesky-posts (GET /bluesky/posts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object posts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bluesky-posts", params);
+        return client.request("bluesky-posts", params, options);
     }
 
     /**

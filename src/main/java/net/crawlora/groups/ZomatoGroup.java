@@ -19,6 +19,37 @@ public final class ZomatoGroup {
     }
 
     /**
+     * zomato-cities (GET /zomato/cities).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cities(Map<String, Object> params) {
+        return cities(params, null);
+    }
+
+    /**
+     * zomato-cities (GET /zomato/cities). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cities(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("zomato-cities", params);
+        return client.request("zomato-cities", params, options);
+    }
+
+    /**
+     * zomato-cities (GET /zomato/cities). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cities() {
+        return cities(Map.of(), null);
+    }
+
+    /**
      * zomato-collection (GET /zomato/collection).
      *
      * @param params operation parameters

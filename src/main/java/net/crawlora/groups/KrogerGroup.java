@@ -19,6 +19,37 @@ public final class KrogerGroup {
     }
 
     /**
+     * kroger-categories (GET /kroger/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * kroger-categories (GET /kroger/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("kroger-categories", params);
+        return client.request("kroger-categories", params, options);
+    }
+
+    /**
+     * kroger-categories (GET /kroger/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * kroger-category (GET /kroger/category).
      *
      * @param params operation parameters

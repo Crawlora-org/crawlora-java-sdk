@@ -41,6 +41,37 @@ public final class IkeaGroup {
     }
 
     /**
+     * ikea-categories (GET /ikea/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * ikea-categories (GET /ikea/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ikea-categories", params);
+        return client.request("ikea-categories", params, options);
+    }
+
+    /**
+     * ikea-categories (GET /ikea/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * ikea-category (GET /ikea/category).
      *
      * @param params operation parameters

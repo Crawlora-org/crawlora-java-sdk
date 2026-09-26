@@ -41,6 +41,37 @@ public final class CnnGroup {
     }
 
     /**
+     * cnn-author (GET /cnn/author).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params) {
+        return author(params, null);
+    }
+
+    /**
+     * cnn-author (GET /cnn/author). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cnn-author", params);
+        return client.request("cnn-author", params, options);
+    }
+
+    /**
+     * cnn-author (GET /cnn/author). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author() {
+        return author(Map.of(), null);
+    }
+
+    /**
      * cnn-headlines (GET /cnn/headlines).
      *
      * @param params operation parameters

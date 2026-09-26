@@ -19,6 +19,68 @@ public final class SephoraGroup {
     }
 
     /**
+     * sephora-brands (GET /sephora/brands).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params) {
+        return brands(params, null);
+    }
+
+    /**
+     * sephora-brands (GET /sephora/brands). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sephora-brands", params);
+        return client.request("sephora-brands", params, options);
+    }
+
+    /**
+     * sephora-brands (GET /sephora/brands). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands() {
+        return brands(Map.of(), null);
+    }
+
+    /**
+     * sephora-categories (GET /sephora/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * sephora-categories (GET /sephora/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sephora-categories", params);
+        return client.request("sephora-categories", params, options);
+    }
+
+    /**
+     * sephora-categories (GET /sephora/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * sephora-category (GET /sephora/category).
      *
      * @param params operation parameters

@@ -41,6 +41,28 @@ public final class BbcGroup {
     }
 
     /**
+     * bbc-author (GET /bbc/author).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params) {
+        return author(params, null);
+    }
+
+    /**
+     * bbc-author (GET /bbc/author). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbc-author", params);
+        return client.request("bbc-author", params, options);
+    }
+
+    /**
      * bbc-headlines (GET /bbc/headlines).
      *
      * @param params operation parameters
