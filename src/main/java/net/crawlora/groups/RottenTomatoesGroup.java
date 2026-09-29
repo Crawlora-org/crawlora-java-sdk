@@ -143,6 +143,50 @@ public final class RottenTomatoesGroup {
     }
 
     /**
+     * rottentomatoes-editorial-content (GET /rottentomatoes/editorial/content).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialContent(Map<String, Object> params) {
+        return rottentomatoesEditorialContent(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-content (GET /rottentomatoes/editorial/content). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialContent(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-content", params);
+        return client.request("rottentomatoes-editorial-content", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-detail (GET /rottentomatoes/editorial/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialDetail(Map<String, Object> params) {
+        return rottentomatoesEditorialDetail(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-detail (GET /rottentomatoes/editorial/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-detail", params);
+        return client.request("rottentomatoes-editorial-detail", params, options);
+    }
+
+    /**
      * rottentomatoes-editorial-search (GET /rottentomatoes/editorial/search).
      *
      * @param params operation parameters
@@ -162,6 +206,112 @@ public final class RottenTomatoesGroup {
     public Object rottentomatoesEditorialSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("rottentomatoes-editorial-search", params);
         return client.request("rottentomatoes-editorial-search", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-section (GET /rottentomatoes/editorial/section).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialSection(Map<String, Object> params) {
+        return rottentomatoesEditorialSection(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-section (GET /rottentomatoes/editorial/section). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialSection(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-section", params);
+        return client.request("rottentomatoes-editorial-section", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-taxonomies (GET /rottentomatoes/editorial/taxonomies).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTaxonomies(Map<String, Object> params) {
+        return rottentomatoesEditorialTaxonomies(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-taxonomies (GET /rottentomatoes/editorial/taxonomies). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTaxonomies(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-taxonomies", params);
+        return client.request("rottentomatoes-editorial-taxonomies", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-taxonomies (GET /rottentomatoes/editorial/taxonomies). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTaxonomies() {
+        return rottentomatoesEditorialTaxonomies(Map.of(), null);
+    }
+
+    /**
+     * rottentomatoes-editorial-terms (GET /rottentomatoes/editorial/terms).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTerms(Map<String, Object> params) {
+        return rottentomatoesEditorialTerms(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-terms (GET /rottentomatoes/editorial/terms). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTerms(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-terms", params);
+        return client.request("rottentomatoes-editorial-terms", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-types (GET /rottentomatoes/editorial/types).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTypes(Map<String, Object> params) {
+        return rottentomatoesEditorialTypes(params, null);
+    }
+
+    /**
+     * rottentomatoes-editorial-types (GET /rottentomatoes/editorial/types). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTypes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("rottentomatoes-editorial-types", params);
+        return client.request("rottentomatoes-editorial-types", params, options);
+    }
+
+    /**
+     * rottentomatoes-editorial-types (GET /rottentomatoes/editorial/types). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rottentomatoesEditorialTypes() {
+        return rottentomatoesEditorialTypes(Map.of(), null);
     }
 
     /**

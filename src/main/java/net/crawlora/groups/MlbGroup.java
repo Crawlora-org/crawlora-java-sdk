@@ -19,6 +19,59 @@ public final class MlbGroup {
     }
 
     /**
+     * mlb-discovery (GET /mlb/discovery).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object discovery(Map<String, Object> params) {
+        return discovery(params, null);
+    }
+
+    /**
+     * mlb-discovery (GET /mlb/discovery). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object discovery(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-discovery", params);
+        return client.request("mlb-discovery", params, options);
+    }
+
+    /**
+     * mlb-discovery (GET /mlb/discovery). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object discovery() {
+        return discovery(Map.of(), null);
+    }
+
+    /**
+     * mlb-editorial-feed (GET /mlb/editorial-feed).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorialFeed(Map<String, Object> params) {
+        return editorialFeed(params, null);
+    }
+
+    /**
+     * mlb-editorial-feed (GET /mlb/editorial-feed). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object editorialFeed(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-editorial-feed", params);
+        return client.request("mlb-editorial-feed", params, options);
+    }
+
+    /**
      * mlb-game (GET /mlb/game).
      *
      * @param params operation parameters
@@ -82,6 +135,28 @@ public final class MlbGroup {
     public Object gamePlayByPlay(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("mlb-game-play-by-play", params);
         return client.request("mlb-game-play-by-play", params, options);
+    }
+
+    /**
+     * mlb-league-leaders (GET /mlb/league-leaders).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagueLeaders(Map<String, Object> params) {
+        return leagueLeaders(params, null);
+    }
+
+    /**
+     * mlb-league-leaders (GET /mlb/league-leaders). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagueLeaders(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-league-leaders", params);
+        return client.request("mlb-league-leaders", params, options);
     }
 
     /**
@@ -151,6 +226,37 @@ public final class MlbGroup {
     }
 
     /**
+     * mlb-prospect-stats (GET /mlb/prospect-stats).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object prospectStats(Map<String, Object> params) {
+        return prospectStats(params, null);
+    }
+
+    /**
+     * mlb-prospect-stats (GET /mlb/prospect-stats). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object prospectStats(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-prospect-stats", params);
+        return client.request("mlb-prospect-stats", params, options);
+    }
+
+    /**
+     * mlb-prospect-stats (GET /mlb/prospect-stats). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object prospectStats() {
+        return prospectStats(Map.of(), null);
+    }
+
+    /**
      * mlb-schedule (GET /mlb/schedule).
      *
      * @param params operation parameters
@@ -182,6 +288,28 @@ public final class MlbGroup {
     }
 
     /**
+     * mlb-search (GET /mlb/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params) {
+        return search(params, null);
+    }
+
+    /**
+     * mlb-search (GET /mlb/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-search", params);
+        return client.request("mlb-search", params, options);
+    }
+
+    /**
      * mlb-standings (GET /mlb/standings).
      *
      * @param params operation parameters
@@ -210,6 +338,99 @@ public final class MlbGroup {
      */
     public Object standings() {
         return standings(Map.of(), null);
+    }
+
+    /**
+     * mlb-statcast-expected (GET /mlb/statcast-expected).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastExpected(Map<String, Object> params) {
+        return statcastExpected(params, null);
+    }
+
+    /**
+     * mlb-statcast-expected (GET /mlb/statcast-expected). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastExpected(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-statcast-expected", params);
+        return client.request("mlb-statcast-expected", params, options);
+    }
+
+    /**
+     * mlb-statcast-expected (GET /mlb/statcast-expected). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastExpected() {
+        return statcastExpected(Map.of(), null);
+    }
+
+    /**
+     * mlb-statcast (GET /mlb/statcast-leaders).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcast(Map<String, Object> params) {
+        return statcast(params, null);
+    }
+
+    /**
+     * mlb-statcast (GET /mlb/statcast-leaders). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcast(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-statcast", params);
+        return client.request("mlb-statcast", params, options);
+    }
+
+    /**
+     * mlb-statcast (GET /mlb/statcast-leaders). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcast() {
+        return statcast(Map.of(), null);
+    }
+
+    /**
+     * mlb-statcast-oaa (GET /mlb/statcast-oaa).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastOaa(Map<String, Object> params) {
+        return statcastOaa(params, null);
+    }
+
+    /**
+     * mlb-statcast-oaa (GET /mlb/statcast-oaa). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastOaa(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("mlb-statcast-oaa", params);
+        return client.request("mlb-statcast-oaa", params, options);
+    }
+
+    /**
+     * mlb-statcast-oaa (GET /mlb/statcast-oaa). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statcastOaa() {
+        return statcastOaa(Map.of(), null);
     }
 
     /**

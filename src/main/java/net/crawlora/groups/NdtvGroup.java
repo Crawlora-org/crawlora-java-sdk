@@ -116,6 +116,28 @@ public final class NdtvGroup {
     }
 
     /**
+     * ndtv-search (GET /ndtv/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params) {
+        return search(params, null);
+    }
+
+    /**
+     * ndtv-search (GET /ndtv/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object search(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-search", params);
+        return client.request("ndtv-search", params, options);
+    }
+
+    /**
      * ndtv-sections (GET /ndtv/sections).
      *
      * @param params operation parameters

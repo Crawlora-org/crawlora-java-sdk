@@ -19,6 +19,112 @@ public final class FotMobGroup {
     }
 
     /**
+     * fotmob-audio-matches (GET /fotmob/audio-matches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobAudioMatches(Map<String, Object> params) {
+        return fotmobAudioMatches(params, null);
+    }
+
+    /**
+     * fotmob-audio-matches (GET /fotmob/audio-matches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobAudioMatches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-audio-matches", params);
+        return client.request("fotmob-audio-matches", params, options);
+    }
+
+    /**
+     * fotmob-audio-matches (GET /fotmob/audio-matches). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobAudioMatches() {
+        return fotmobAudioMatches(Map.of(), null);
+    }
+
+    /**
+     * fotmob-fifa-ranking-periods (GET /fotmob/fifa-ranking-periods).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobFifaRankingPeriods(Map<String, Object> params) {
+        return fotmobFifaRankingPeriods(params, null);
+    }
+
+    /**
+     * fotmob-fifa-ranking-periods (GET /fotmob/fifa-ranking-periods). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobFifaRankingPeriods(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-fifa-ranking-periods", params);
+        return client.request("fotmob-fifa-ranking-periods", params, options);
+    }
+
+    /**
+     * fotmob-fifa-rankings (GET /fotmob/fifa-rankings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobFifaRankings(Map<String, Object> params) {
+        return fotmobFifaRankings(params, null);
+    }
+
+    /**
+     * fotmob-fifa-rankings (GET /fotmob/fifa-rankings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobFifaRankings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-fifa-rankings", params);
+        return client.request("fotmob-fifa-rankings", params, options);
+    }
+
+    /**
+     * fotmob-latest-news (GET /fotmob/latest-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLatestNews(Map<String, Object> params) {
+        return fotmobLatestNews(params, null);
+    }
+
+    /**
+     * fotmob-latest-news (GET /fotmob/latest-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLatestNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-latest-news", params);
+        return client.request("fotmob-latest-news", params, options);
+    }
+
+    /**
+     * fotmob-latest-news (GET /fotmob/latest-news). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLatestNews() {
+        return fotmobLatestNews(Map.of(), null);
+    }
+
+    /**
      * fotmob-league (GET /fotmob/league).
      *
      * @param params operation parameters
@@ -72,6 +178,50 @@ public final class FotMobGroup {
     }
 
     /**
+     * fotmob-lineup-builder-players (GET /fotmob/lineup-builder-players).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLineupBuilderPlayers(Map<String, Object> params) {
+        return fotmobLineupBuilderPlayers(params, null);
+    }
+
+    /**
+     * fotmob-lineup-builder-players (GET /fotmob/lineup-builder-players). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLineupBuilderPlayers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-lineup-builder-players", params);
+        return client.request("fotmob-lineup-builder-players", params, options);
+    }
+
+    /**
+     * fotmob-lineup-builder-team (GET /fotmob/lineup-builder-team).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLineupBuilderTeam(Map<String, Object> params) {
+        return fotmobLineupBuilderTeam(params, null);
+    }
+
+    /**
+     * fotmob-lineup-builder-team (GET /fotmob/lineup-builder-team). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobLineupBuilderTeam(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-lineup-builder-team", params);
+        return client.request("fotmob-lineup-builder-team", params, options);
+    }
+
+    /**
      * fotmob-match (GET /fotmob/match).
      *
      * @param params operation parameters
@@ -91,6 +241,28 @@ public final class FotMobGroup {
     public Object fotmobMatch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("fotmob-match", params);
         return client.request("fotmob-match", params, options);
+    }
+
+    /**
+     * fotmob-match-media (GET /fotmob/match-media).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobMatchMedia(Map<String, Object> params) {
+        return fotmobMatchMedia(params, null);
+    }
+
+    /**
+     * fotmob-match-media (GET /fotmob/match-media). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobMatchMedia(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-match-media", params);
+        return client.request("fotmob-match-media", params, options);
     }
 
     /**
@@ -135,6 +307,28 @@ public final class FotMobGroup {
     public Object fotmobNews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("fotmob-news", params);
         return client.request("fotmob-news", params, options);
+    }
+
+    /**
+     * fotmob-news-article (GET /fotmob/news-article).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobNewsArticle(Map<String, Object> params) {
+        return fotmobNewsArticle(params, null);
+    }
+
+    /**
+     * fotmob-news-article (GET /fotmob/news-article). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobNewsArticle(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-news-article", params);
+        return client.request("fotmob-news-article", params, options);
     }
 
     /**
@@ -248,6 +442,28 @@ public final class FotMobGroup {
     }
 
     /**
+     * fotmob-seasons (GET /fotmob/seasons).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobSeasons(Map<String, Object> params) {
+        return fotmobSeasons(params, null);
+    }
+
+    /**
+     * fotmob-seasons (GET /fotmob/seasons). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobSeasons(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-seasons", params);
+        return client.request("fotmob-seasons", params, options);
+    }
+
+    /**
      * fotmob-stats (GET /fotmob/stats).
      *
      * @param params operation parameters
@@ -336,6 +552,28 @@ public final class FotMobGroup {
     }
 
     /**
+     * fotmob-team-fixtures (GET /fotmob/team-fixtures).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTeamFixtures(Map<String, Object> params) {
+        return fotmobTeamFixtures(params, null);
+    }
+
+    /**
+     * fotmob-team-fixtures (GET /fotmob/team-fixtures). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTeamFixtures(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-team-fixtures", params);
+        return client.request("fotmob-team-fixtures", params, options);
+    }
+
+    /**
      * fotmob-team-news (GET /fotmob/team-news).
      *
      * @param params operation parameters
@@ -386,6 +624,143 @@ public final class FotMobGroup {
      */
     public Object fotmobTransfers() {
         return fotmobTransfers(Map.of(), null);
+    }
+
+    /**
+     * fotmob-trending-news (GET /fotmob/trending-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingNews(Map<String, Object> params) {
+        return fotmobTrendingNews(params, null);
+    }
+
+    /**
+     * fotmob-trending-news (GET /fotmob/trending-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-trending-news", params);
+        return client.request("fotmob-trending-news", params, options);
+    }
+
+    /**
+     * fotmob-trending-news (GET /fotmob/trending-news). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingNews() {
+        return fotmobTrendingNews(Map.of(), null);
+    }
+
+    /**
+     * fotmob-trending-searches (GET /fotmob/trending-searches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingSearches(Map<String, Object> params) {
+        return fotmobTrendingSearches(params, null);
+    }
+
+    /**
+     * fotmob-trending-searches (GET /fotmob/trending-searches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingSearches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-trending-searches", params);
+        return client.request("fotmob-trending-searches", params, options);
+    }
+
+    /**
+     * fotmob-trending-searches (GET /fotmob/trending-searches). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTrendingSearches() {
+        return fotmobTrendingSearches(Map.of(), null);
+    }
+
+    /**
+     * fotmob-tv-guide (GET /fotmob/tv-guide).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuide(Map<String, Object> params) {
+        return fotmobTvGuide(params, null);
+    }
+
+    /**
+     * fotmob-tv-guide (GET /fotmob/tv-guide). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuide(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-tv-guide", params);
+        return client.request("fotmob-tv-guide", params, options);
+    }
+
+    /**
+     * fotmob-tv-guide-channels (GET /fotmob/tv-guide-channels).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuideChannels(Map<String, Object> params) {
+        return fotmobTvGuideChannels(params, null);
+    }
+
+    /**
+     * fotmob-tv-guide-channels (GET /fotmob/tv-guide-channels). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuideChannels(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-tv-guide-channels", params);
+        return client.request("fotmob-tv-guide-channels", params, options);
+    }
+
+    /**
+     * fotmob-tv-guide-countries (GET /fotmob/tv-guide-countries).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuideCountries(Map<String, Object> params) {
+        return fotmobTvGuideCountries(params, null);
+    }
+
+    /**
+     * fotmob-tv-guide-countries (GET /fotmob/tv-guide-countries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuideCountries(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-tv-guide-countries", params);
+        return client.request("fotmob-tv-guide-countries", params, options);
+    }
+
+    /**
+     * fotmob-tv-guide-countries (GET /fotmob/tv-guide-countries). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobTvGuideCountries() {
+        return fotmobTvGuideCountries(Map.of(), null);
     }
 
 }

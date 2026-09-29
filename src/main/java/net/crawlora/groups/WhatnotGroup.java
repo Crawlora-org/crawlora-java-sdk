@@ -93,4 +93,26 @@ public final class WhatnotGroup {
         return client.request("whatnot-live", params, options);
     }
 
+    /**
+     * whatnot-seller (GET /whatnot/seller/{username}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seller(Map<String, Object> params) {
+        return seller(params, null);
+    }
+
+    /**
+     * whatnot-seller (GET /whatnot/seller/{username}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seller(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("whatnot-seller", params);
+        return client.request("whatnot-seller", params, options);
+    }
+
 }

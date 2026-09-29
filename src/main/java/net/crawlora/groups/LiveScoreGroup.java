@@ -41,6 +41,37 @@ public final class LiveScoreGroup {
     }
 
     /**
+     * livescore-competitions (GET /livescore/competitions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreCompetitions(Map<String, Object> params) {
+        return livescoreCompetitions(params, null);
+    }
+
+    /**
+     * livescore-competitions (GET /livescore/competitions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreCompetitions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("livescore-competitions", params);
+        return client.request("livescore-competitions", params, options);
+    }
+
+    /**
+     * livescore-competitions (GET /livescore/competitions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreCompetitions() {
+        return livescoreCompetitions(Map.of(), null);
+    }
+
+    /**
      * livescore-live-scores (GET /livescore/live-scores).
      *
      * @param params operation parameters
@@ -307,6 +338,28 @@ public final class LiveScoreGroup {
     public Object livescoreScoresToc(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("livescore-scores-toc", params);
         return client.request("livescore-scores-toc", params, options);
+    }
+
+    /**
+     * livescore-search (GET /livescore/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreSearch(Map<String, Object> params) {
+        return livescoreSearch(params, null);
+    }
+
+    /**
+     * livescore-search (GET /livescore/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object livescoreSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("livescore-search", params);
+        return client.request("livescore-search", params, options);
     }
 
     /**
