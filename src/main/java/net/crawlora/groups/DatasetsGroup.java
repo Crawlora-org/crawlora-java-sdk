@@ -686,6 +686,103 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-doordash-stores-facets (GET /datasets/doordash-stores/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresFacets(Map<String, Object> params) {
+        return doordashStoresFacets(params, null);
+    }
+
+    /**
+     * datasets-doordash-stores-facets (GET /datasets/doordash-stores/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-doordash-stores-facets", params);
+        return client.request("datasets-doordash-stores-facets", params, options);
+    }
+
+    /**
+     * datasets-doordash-stores-item (GET /datasets/doordash-stores/items/{store_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresItem(Map<String, Object> params) {
+        return doordashStoresItem(params, null);
+    }
+
+    /**
+     * datasets-doordash-stores-item (GET /datasets/doordash-stores/items/{store_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-doordash-stores-item", params);
+        return client.request("datasets-doordash-stores-item", params, options);
+    }
+
+    /**
+     * datasets-doordash-stores-nearby (GET /datasets/doordash-stores/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresNearby(Map<String, Object> params) {
+        return doordashStoresNearby(params, null);
+    }
+
+    /**
+     * datasets-doordash-stores-nearby (GET /datasets/doordash-stores/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-doordash-stores-nearby", params);
+        return client.request("datasets-doordash-stores-nearby", params, options);
+    }
+
+    /**
+     * datasets-doordash-stores-search (GET /datasets/doordash-stores/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresSearch(Map<String, Object> params) {
+        return doordashStoresSearch(params, null);
+    }
+
+    /**
+     * datasets-doordash-stores-search (GET /datasets/doordash-stores/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-doordash-stores-search", params);
+        return client.request("datasets-doordash-stores-search", params, options);
+    }
+
+    /**
+     * datasets-doordash-stores-search (GET /datasets/doordash-stores/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object doordashStoresSearch() {
+        return doordashStoresSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-facebook-pages-facets (GET /datasets/facebook-pages/facets).
      *
      * @param params operation parameters

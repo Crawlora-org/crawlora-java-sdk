@@ -5,5 +5,5 @@ public final class Version {
     private Version() {}
 
     /** The released SDK version. */
-    public static final String VERSION = "1.44.0-sdk.2";
+    public static final String VERSION = "1.45.0-sdk.1";
 }

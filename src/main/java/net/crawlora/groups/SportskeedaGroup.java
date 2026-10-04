@@ -81,6 +81,103 @@ public final class SportskeedaGroup {
     }
 
     /**
+     * sportskeeda-college-basketball-schedule (GET /sportskeeda/college-basketball-schedule).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeBasketballSchedule(Map<String, Object> params) {
+        return collegeBasketballSchedule(params, null);
+    }
+
+    /**
+     * sportskeeda-college-basketball-schedule (GET /sportskeeda/college-basketball-schedule). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeBasketballSchedule(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-college-basketball-schedule", params);
+        return client.request("sportskeeda-college-basketball-schedule", params, options);
+    }
+
+    /**
+     * sportskeeda-college-basketball-schedule-options (GET /sportskeeda/college-basketball-schedule-options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeBasketballScheduleOptions(Map<String, Object> params) {
+        return collegeBasketballScheduleOptions(params, null);
+    }
+
+    /**
+     * sportskeeda-college-basketball-schedule-options (GET /sportskeeda/college-basketball-schedule-options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeBasketballScheduleOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-college-basketball-schedule-options", params);
+        return client.request("sportskeeda-college-basketball-schedule-options", params, options);
+    }
+
+    /**
+     * sportskeeda-college-basketball-schedule-options (GET /sportskeeda/college-basketball-schedule-options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeBasketballScheduleOptions() {
+        return collegeBasketballScheduleOptions(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-cricket-commentary (GET /sportskeeda/cricket-commentary).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cricketCommentary(Map<String, Object> params) {
+        return cricketCommentary(params, null);
+    }
+
+    /**
+     * sportskeeda-cricket-commentary (GET /sportskeeda/cricket-commentary). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cricketCommentary(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-cricket-commentary", params);
+        return client.request("sportskeeda-cricket-commentary", params, options);
+    }
+
+    /**
+     * sportskeeda-cricket-match (GET /sportskeeda/cricket-match).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cricketMatch(Map<String, Object> params) {
+        return cricketMatch(params, null);
+    }
+
+    /**
+     * sportskeeda-cricket-match (GET /sportskeeda/cricket-match). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object cricketMatch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-cricket-match", params);
+        return client.request("sportskeeda-cricket-match", params, options);
+    }
+
+    /**
      * sportskeeda-depth-chart (GET /sportskeeda/depth-chart).
      *
      * @param params operation parameters
@@ -100,6 +197,112 @@ public final class SportskeedaGroup {
     public Object depthChart(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("sportskeeda-depth-chart", params);
         return client.request("sportskeeda-depth-chart", params, options);
+    }
+
+    /**
+     * sportskeeda-draft-picks (GET /sportskeeda/draft-picks).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draftPicks(Map<String, Object> params) {
+        return draftPicks(params, null);
+    }
+
+    /**
+     * sportskeeda-draft-picks (GET /sportskeeda/draft-picks). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draftPicks(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-draft-picks", params);
+        return client.request("sportskeeda-draft-picks", params, options);
+    }
+
+    /**
+     * sportskeeda-draft-picks-options (GET /sportskeeda/draft-picks-options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draftPicksOptions(Map<String, Object> params) {
+        return draftPicksOptions(params, null);
+    }
+
+    /**
+     * sportskeeda-draft-picks-options (GET /sportskeeda/draft-picks-options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draftPicksOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-draft-picks-options", params);
+        return client.request("sportskeeda-draft-picks-options", params, options);
+    }
+
+    /**
+     * sportskeeda-event-calendar (GET /sportskeeda/event-calendar).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendar(Map<String, Object> params) {
+        return eventCalendar(params, null);
+    }
+
+    /**
+     * sportskeeda-event-calendar (GET /sportskeeda/event-calendar). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendar(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-event-calendar", params);
+        return client.request("sportskeeda-event-calendar", params, options);
+    }
+
+    /**
+     * sportskeeda-event-calendar (GET /sportskeeda/event-calendar). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendar() {
+        return eventCalendar(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-event-calendar-options (GET /sportskeeda/event-calendar-options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendarOptions(Map<String, Object> params) {
+        return eventCalendarOptions(params, null);
+    }
+
+    /**
+     * sportskeeda-event-calendar-options (GET /sportskeeda/event-calendar-options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendarOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-event-calendar-options", params);
+        return client.request("sportskeeda-event-calendar-options", params, options);
+    }
+
+    /**
+     * sportskeeda-event-calendar-options (GET /sportskeeda/event-calendar-options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object eventCalendarOptions() {
+        return eventCalendarOptions(Map.of(), null);
     }
 
     /**
@@ -175,6 +378,112 @@ public final class SportskeedaGroup {
      */
     public Object footballOptions() {
         return footballOptions(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-guessing-game (GET /sportskeeda/guessing-game).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGame(Map<String, Object> params) {
+        return guessingGame(params, null);
+    }
+
+    /**
+     * sportskeeda-guessing-game (GET /sportskeeda/guessing-game). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGame(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-guessing-game", params);
+        return client.request("sportskeeda-guessing-game", params, options);
+    }
+
+    /**
+     * sportskeeda-guessing-game-entities (GET /sportskeeda/guessing-game-entities).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGameEntities(Map<String, Object> params) {
+        return guessingGameEntities(params, null);
+    }
+
+    /**
+     * sportskeeda-guessing-game-entities (GET /sportskeeda/guessing-game-entities). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGameEntities(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-guessing-game-entities", params);
+        return client.request("sportskeeda-guessing-game-entities", params, options);
+    }
+
+    /**
+     * sportskeeda-guessing-games (GET /sportskeeda/guessing-games).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGames(Map<String, Object> params) {
+        return guessingGames(params, null);
+    }
+
+    /**
+     * sportskeeda-guessing-games (GET /sportskeeda/guessing-games). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGames(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-guessing-games", params);
+        return client.request("sportskeeda-guessing-games", params, options);
+    }
+
+    /**
+     * sportskeeda-guessing-games (GET /sportskeeda/guessing-games). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object guessingGames() {
+        return guessingGames(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-nba-queries (GET /sportskeeda/nba-queries).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nbaQueries(Map<String, Object> params) {
+        return nbaQueries(params, null);
+    }
+
+    /**
+     * sportskeeda-nba-queries (GET /sportskeeda/nba-queries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nbaQueries(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-nba-queries", params);
+        return client.request("sportskeeda-nba-queries", params, options);
+    }
+
+    /**
+     * sportskeeda-nba-queries (GET /sportskeeda/nba-queries). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object nbaQueries() {
+        return nbaQueries(Map.of(), null);
     }
 
     /**
@@ -294,6 +603,103 @@ public final class SportskeedaGroup {
     public Object profile(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("sportskeeda-profile", params);
         return client.request("sportskeeda-profile", params, options);
+    }
+
+    /**
+     * sportskeeda-quiz (GET /sportskeeda/quiz).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quiz(Map<String, Object> params) {
+        return quiz(params, null);
+    }
+
+    /**
+     * sportskeeda-quiz (GET /sportskeeda/quiz). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quiz(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-quiz", params);
+        return client.request("sportskeeda-quiz", params, options);
+    }
+
+    /**
+     * sportskeeda-quiz-categories (GET /sportskeeda/quiz-categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quizCategories(Map<String, Object> params) {
+        return quizCategories(params, null);
+    }
+
+    /**
+     * sportskeeda-quiz-categories (GET /sportskeeda/quiz-categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quizCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-quiz-categories", params);
+        return client.request("sportskeeda-quiz-categories", params, options);
+    }
+
+    /**
+     * sportskeeda-quiz-categories (GET /sportskeeda/quiz-categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quizCategories() {
+        return quizCategories(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-quizzes (GET /sportskeeda/quizzes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quizzes(Map<String, Object> params) {
+        return quizzes(params, null);
+    }
+
+    /**
+     * sportskeeda-quizzes (GET /sportskeeda/quizzes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object quizzes(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-quizzes", params);
+        return client.request("sportskeeda-quizzes", params, options);
+    }
+
+    /**
+     * sportskeeda-salary-cap (GET /sportskeeda/salary-cap).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object salaryCap(Map<String, Object> params) {
+        return salaryCap(params, null);
+    }
+
+    /**
+     * sportskeeda-salary-cap (GET /sportskeeda/salary-cap). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object salaryCap(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-salary-cap", params);
+        return client.request("sportskeeda-salary-cap", params, options);
     }
 
     /**
@@ -478,6 +884,28 @@ public final class SportskeedaGroup {
     }
 
     /**
+     * sportskeeda-topic (GET /sportskeeda/topic).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topic(Map<String, Object> params) {
+        return topic(params, null);
+    }
+
+    /**
+     * sportskeeda-topic (GET /sportskeeda/topic). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topic(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-topic", params);
+        return client.request("sportskeeda-topic", params, options);
+    }
+
+    /**
      * sportskeeda-trade-values (GET /sportskeeda/trade-values).
      *
      * @param params operation parameters
@@ -497,6 +925,59 @@ public final class SportskeedaGroup {
     public Object tradeValues(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("sportskeeda-trade-values", params);
         return client.request("sportskeeda-trade-values", params, options);
+    }
+
+    /**
+     * sportskeeda-transactions (GET /sportskeeda/transactions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactions(Map<String, Object> params) {
+        return transactions(params, null);
+    }
+
+    /**
+     * sportskeeda-transactions (GET /sportskeeda/transactions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-transactions", params);
+        return client.request("sportskeeda-transactions", params, options);
+    }
+
+    /**
+     * sportskeeda-transactions-options (GET /sportskeeda/transactions-options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactionsOptions(Map<String, Object> params) {
+        return transactionsOptions(params, null);
+    }
+
+    /**
+     * sportskeeda-transactions-options (GET /sportskeeda/transactions-options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactionsOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-transactions-options", params);
+        return client.request("sportskeeda-transactions-options", params, options);
+    }
+
+    /**
+     * sportskeeda-transactions-options (GET /sportskeeda/transactions-options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactionsOptions() {
+        return transactionsOptions(Map.of(), null);
     }
 
     /**
@@ -550,6 +1031,191 @@ public final class SportskeedaGroup {
      */
     public Object videos() {
         return videos(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-wiki-activity (GET /sportskeeda/wiki-activity).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiActivity(Map<String, Object> params) {
+        return wikiActivity(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-activity (GET /sportskeeda/wiki-activity). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiActivity(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-activity", params);
+        return client.request("sportskeeda-wiki-activity", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-article (GET /sportskeeda/wiki-article).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiArticle(Map<String, Object> params) {
+        return wikiArticle(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-article (GET /sportskeeda/wiki-article). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiArticle(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-article", params);
+        return client.request("sportskeeda-wiki-article", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-categories (GET /sportskeeda/wiki-categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiCategories(Map<String, Object> params) {
+        return wikiCategories(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-categories (GET /sportskeeda/wiki-categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-categories", params);
+        return client.request("sportskeeda-wiki-categories", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-contributors (GET /sportskeeda/wiki-contributors).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiContributors(Map<String, Object> params) {
+        return wikiContributors(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-contributors (GET /sportskeeda/wiki-contributors). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiContributors(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-contributors", params);
+        return client.request("sportskeeda-wiki-contributors", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-issues (GET /sportskeeda/wiki-issues).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiIssues(Map<String, Object> params) {
+        return wikiIssues(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-issues (GET /sportskeeda/wiki-issues). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiIssues(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-issues", params);
+        return client.request("sportskeeda-wiki-issues", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-options (GET /sportskeeda/wiki-options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiOptions(Map<String, Object> params) {
+        return wikiOptions(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-options (GET /sportskeeda/wiki-options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-options", params);
+        return client.request("sportskeeda-wiki-options", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-options (GET /sportskeeda/wiki-options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiOptions() {
+        return wikiOptions(Map.of(), null);
+    }
+
+    /**
+     * sportskeeda-wiki-pages (GET /sportskeeda/wiki-pages).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiPages(Map<String, Object> params) {
+        return wikiPages(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-pages (GET /sportskeeda/wiki-pages). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiPages(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-pages", params);
+        return client.request("sportskeeda-wiki-pages", params, options);
+    }
+
+    /**
+     * sportskeeda-wiki-summary (GET /sportskeeda/wiki-summary).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiSummary(Map<String, Object> params) {
+        return wikiSummary(params, null);
+    }
+
+    /**
+     * sportskeeda-wiki-summary (GET /sportskeeda/wiki-summary). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object wikiSummary(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sportskeeda-wiki-summary", params);
+        return client.request("sportskeeda-wiki-summary", params, options);
     }
 
 }

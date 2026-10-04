@@ -85,6 +85,90 @@ public final class NdtvGroup {
     }
 
     /**
+     * ndtv-latest-videos (GET /ndtv/latest-videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object latestVideos(Map<String, Object> params) {
+        return latestVideos(params, null);
+    }
+
+    /**
+     * ndtv-latest-videos (GET /ndtv/latest-videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object latestVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-latest-videos", params);
+        return client.request("ndtv-latest-videos", params, options);
+    }
+
+    /**
+     * ndtv-latest-videos (GET /ndtv/latest-videos). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object latestVideos() {
+        return latestVideos(Map.of(), null);
+    }
+
+    /**
+     * ndtv-live-blog (GET /ndtv/live-blog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object liveBlog(Map<String, Object> params) {
+        return liveBlog(params, null);
+    }
+
+    /**
+     * ndtv-live-blog (GET /ndtv/live-blog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object liveBlog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-live-blog", params);
+        return client.request("ndtv-live-blog", params, options);
+    }
+
+    /**
+     * ndtv-live-blogs (GET /ndtv/live-blogs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object liveBlogs(Map<String, Object> params) {
+        return liveBlogs(params, null);
+    }
+
+    /**
+     * ndtv-live-blogs (GET /ndtv/live-blogs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object liveBlogs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-live-blogs", params);
+        return client.request("ndtv-live-blogs", params, options);
+    }
+
+    /**
+     * ndtv-live-blogs (GET /ndtv/live-blogs). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object liveBlogs() {
+        return liveBlogs(Map.of(), null);
+    }
+
+    /**
      * ndtv-news (GET /ndtv/news).
      *
      * @param params operation parameters
@@ -166,6 +250,81 @@ public final class NdtvGroup {
      */
     public Object sections() {
         return sections(Map.of(), null);
+    }
+
+    /**
+     * ndtv-video (GET /ndtv/video).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object video(Map<String, Object> params) {
+        return video(params, null);
+    }
+
+    /**
+     * ndtv-video (GET /ndtv/video). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object video(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-video", params);
+        return client.request("ndtv-video", params, options);
+    }
+
+    /**
+     * ndtv-video-categories (GET /ndtv/video-categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoCategories(Map<String, Object> params) {
+        return videoCategories(params, null);
+    }
+
+    /**
+     * ndtv-video-categories (GET /ndtv/video-categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-video-categories", params);
+        return client.request("ndtv-video-categories", params, options);
+    }
+
+    /**
+     * ndtv-video-categories (GET /ndtv/video-categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoCategories() {
+        return videoCategories(Map.of(), null);
+    }
+
+    /**
+     * ndtv-videos (GET /ndtv/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params) {
+        return videos(params, null);
+    }
+
+    /**
+     * ndtv-videos (GET /ndtv/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("ndtv-videos", params);
+        return client.request("ndtv-videos", params, options);
     }
 
 }

@@ -81,6 +81,50 @@ public final class AppStoreGroup {
     }
 
     /**
+     * appstore-collection (GET /appstore/collection).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collection(Map<String, Object> params) {
+        return collection(params, null);
+    }
+
+    /**
+     * appstore-collection (GET /appstore/collection). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collection(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("appstore-collection", params);
+        return client.request("appstore-collection", params, options);
+    }
+
+    /**
+     * appstore-collections (GET /appstore/collections).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collections(Map<String, Object> params) {
+        return collections(params, null);
+    }
+
+    /**
+     * appstore-collections (GET /appstore/collections). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collections(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("appstore-collections", params);
+        return client.request("appstore-collections", params, options);
+    }
+
+    /**
      * appstore-developer (GET /appstore/developer/{dev_id}).
      *
      * @param params operation parameters
