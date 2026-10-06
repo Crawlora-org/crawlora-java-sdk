@@ -251,6 +251,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "baidu" operation group.
+     * @return a new {@link BaiduGroup} bound to this client
+     */
+    public BaiduGroup baidu() {
+        return new BaiduGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "balenciaga" operation group.
      * @return a new {@link BalenciagaGroup} bound to this client
      */
@@ -2467,6 +2475,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "qwant" operation group.
+     * @return a new {@link QwantGroup} bound to this client
+     */
+    public QwantGroup qwant() {
+        return new QwantGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "raisingCaneS" operation group.
      * @return a new {@link RaisingCaneSGroup} bound to this client
      */
@@ -2888,6 +2904,14 @@ public abstract class ClientGroups {
      */
     public StarbucksGroup starbucks() {
         return new StarbucksGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "startpage" operation group.
+     * @return a new {@link StartpageGroup} bound to this client
+     */
+    public StartpageGroup startpage() {
+        return new StartpageGroup((CrawloraClient) this);
     }
 
     /**
@@ -3672,6 +3696,14 @@ public abstract class ClientGroups {
      */
     public YahooTechGroup yahooTech() {
         return new YahooTechGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "yandex" operation group.
+     * @return a new {@link YandexGroup} bound to this client
+     */
+    public YandexGroup yandex() {
+        return new YandexGroup((CrawloraClient) this);
     }
 
     /**

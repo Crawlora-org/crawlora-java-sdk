@@ -261,4 +261,66 @@ public final class GreystarGroup {
         return search(Map.of(), null);
     }
 
+    /**
+     * greystar-unit-locations (GET /greystar/unit-locations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object unitLocations(Map<String, Object> params) {
+        return unitLocations(params, null);
+    }
+
+    /**
+     * greystar-unit-locations (GET /greystar/unit-locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object unitLocations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("greystar-unit-locations", params);
+        return client.request("greystar-unit-locations", params, options);
+    }
+
+    /**
+     * greystar-unit-locations (GET /greystar/unit-locations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object unitLocations() {
+        return unitLocations(Map.of(), null);
+    }
+
+    /**
+     * greystar-units (GET /greystar/units).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object units(Map<String, Object> params) {
+        return units(params, null);
+    }
+
+    /**
+     * greystar-units (GET /greystar/units). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object units(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("greystar-units", params);
+        return client.request("greystar-units", params, options);
+    }
+
+    /**
+     * greystar-units (GET /greystar/units). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object units() {
+        return units(Map.of(), null);
+    }
+
 }

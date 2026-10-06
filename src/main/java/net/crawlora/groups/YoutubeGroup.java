@@ -226,6 +226,28 @@ public final class YoutubeGroup {
     }
 
     /**
+     * youtube-suggest (GET /youtube/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params) {
+        return suggest(params, null);
+    }
+
+    /**
+     * youtube-suggest (GET /youtube/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("youtube-suggest", params);
+        return client.request("youtube-suggest", params, options);
+    }
+
+    /**
      * youtube-tag (GET /youtube/tag/{tag}).
      *
      * @param params operation parameters
