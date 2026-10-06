@@ -107,6 +107,28 @@ public final class DuckDuckGoSearchGroup {
     }
 
     /**
+     * duckduckgo-suggest (GET /duckduckgo/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object duckduckgoSuggest(Map<String, Object> params) {
+        return duckduckgoSuggest(params, null);
+    }
+
+    /**
+     * duckduckgo-suggest (GET /duckduckgo/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object duckduckgoSuggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("duckduckgo-suggest", params);
+        return client.request("duckduckgo-suggest", params, options);
+    }
+
+    /**
      * duckduckgo-video (GET /duckduckgo/video).
      *
      * @param params operation parameters

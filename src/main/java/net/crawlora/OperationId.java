@@ -205,6 +205,8 @@ public final class OperationId {
     public static final String AXIOS_ARTICLE = "axios-article";
     public static final String AXIOS_CATEGORIES = "axios-categories";
     public static final String AXIOS_HEADLINES = "axios-headlines";
+    public static final String BAIDU_SEARCH = "baidu-search";
+    public static final String BAIDU_SUGGEST = "baidu-suggest";
     public static final String BALENCIAGA_CATEGORIES = "balenciaga-categories";
     public static final String BALENCIAGA_CATEGORY = "balenciaga-category";
     public static final String BALENCIAGA_PRODUCT = "balenciaga-product";
@@ -817,6 +819,7 @@ public final class OperationId {
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_NEWS = "duckduckgo-news";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_SEARCH = "duckduckgo-search";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_SHOPPING = "duckduckgo-shopping";
+    public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_SUGGEST = "duckduckgo-suggest";
     public static final String DUCK_DUCK_GO_SEARCH_DUCKDUCKGO_VIDEO = "duckduckgo-video";
     public static final String DUNKIN_DIRECTORY = "dunkin-directory";
     public static final String DUNKIN_MENU = "dunkin-menu";
@@ -1289,6 +1292,8 @@ public final class OperationId {
     public static final String GREYSTAR_NEWSROOM_ARTICLE = "greystar-newsroom-article";
     public static final String GREYSTAR_PROPERTY = "greystar-property";
     public static final String GREYSTAR_SEARCH = "greystar-search";
+    public static final String GREYSTAR_UNIT_LOCATIONS = "greystar-unit-locations";
+    public static final String GREYSTAR_UNITS = "greystar-units";
     public static final String GRUBHUB_AVAILABILITY = "grubhub-availability";
     public static final String GRUBHUB_OFFERS = "grubhub-offers";
     public static final String GRUBHUB_RESTAURANT = "grubhub-restaurant";
@@ -2355,6 +2360,7 @@ public final class OperationId {
     public static final String QUINCE_SITEMAP_URLS = "quince-sitemap-urls";
     public static final String QUINCE_SITEMAPS = "quince-sitemaps";
     public static final String QUINCE_SUGGEST = "quince-suggest";
+    public static final String QWANT_SUGGEST = "qwant-suggest";
     public static final String RAISING_CANE_SRAISINGCANES_DIRECTORY = "raisingcanes-directory";
     public static final String RAISING_CANE_SRAISINGCANES_MENU = "raisingcanes-menu";
     public static final String RAISING_CANE_SRAISINGCANES_NEARBY = "raisingcanes-nearby";
@@ -2793,6 +2799,7 @@ public final class OperationId {
     public static final String STARBUCKS_NUTRITION = "starbucks-nutrition";
     public static final String STARBUCKS_PRODUCT = "starbucks-product";
     public static final String STARBUCKS_STORES = "starbucks-stores";
+    public static final String STARTPAGE_SUGGEST = "startpage-suggest";
     public static final String STEAM_ACHIEVEMENTS = "steam-achievements";
     public static final String STEAM_APP = "steam-app";
     public static final String STEAM_CATEGORY = "steam-category";
@@ -3474,6 +3481,8 @@ public final class OperationId {
     public static final String YAHOO_TECH_ARTICLE = "yahoo-tech-article";
     public static final String YAHOO_TECH_CATEGORY = "yahoo-tech-category";
     public static final String YAHOO_TECH_HOME = "yahoo-tech-home";
+    public static final String YANDEX_SEARCH = "yandex-search";
+    public static final String YANDEX_SUGGEST = "yandex-suggest";
     public static final String YARDBARKER_ARTICLE = "yardbarker-article";
     public static final String YARDBARKER_AUTHOR = "yardbarker-author";
     public static final String YARDBARKER_HEADLINES = "yardbarker-headlines";
@@ -3500,6 +3509,7 @@ public final class OperationId {
     public static final String YOUTUBE_PLAYLIST = "youtube-playlist";
     public static final String YOUTUBE_PROFILE = "youtube-profile";
     public static final String YOUTUBE_SEARCH = "youtube-search";
+    public static final String YOUTUBE_SUGGEST = "youtube-suggest";
     public static final String YOUTUBE_TAG = "youtube-tag";
     public static final String YOUTUBE_TRANSCRIPT = "youtube-transcript";
     public static final String YOUTUBE_TRANSCRIPT_LANGUAGES = "youtube-transcript-languages";
