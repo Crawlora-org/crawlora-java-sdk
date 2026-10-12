@@ -390,6 +390,81 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-bbb-scamtracker-reports-facets (GET /datasets/bbb-scamtracker-reports/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsFacets(Map<String, Object> params) {
+        return bbbScamtrackerReportsFacets(params, null);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-facets (GET /datasets/bbb-scamtracker-reports/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-bbb-scamtracker-reports-facets", params);
+        return client.request("datasets-bbb-scamtracker-reports-facets", params, options);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-item (GET /datasets/bbb-scamtracker-reports/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsItem(Map<String, Object> params) {
+        return bbbScamtrackerReportsItem(params, null);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-item (GET /datasets/bbb-scamtracker-reports/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-bbb-scamtracker-reports-item", params);
+        return client.request("datasets-bbb-scamtracker-reports-item", params, options);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-search (GET /datasets/bbb-scamtracker-reports/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsSearch(Map<String, Object> params) {
+        return bbbScamtrackerReportsSearch(params, null);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-search (GET /datasets/bbb-scamtracker-reports/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-bbb-scamtracker-reports-search", params);
+        return client.request("datasets-bbb-scamtracker-reports-search", params, options);
+    }
+
+    /**
+     * datasets-bbb-scamtracker-reports-search (GET /datasets/bbb-scamtracker-reports/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object bbbScamtrackerReportsSearch() {
+        return bbbScamtrackerReportsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-boxofficemojo-facets (GET /datasets/boxofficemojo/facets).
      *
      * @param params operation parameters
@@ -1583,6 +1658,81 @@ public final class DatasetsGroup {
      */
     public Object journalistsSearch() {
         return journalistsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-llms-facets (GET /datasets/llms/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsFacets(Map<String, Object> params) {
+        return llmsFacets(params, null);
+    }
+
+    /**
+     * datasets-llms-facets (GET /datasets/llms/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-llms-facets", params);
+        return client.request("datasets-llms-facets", params, options);
+    }
+
+    /**
+     * datasets-llms-item (GET /datasets/llms/items/{domain}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsItem(Map<String, Object> params) {
+        return llmsItem(params, null);
+    }
+
+    /**
+     * datasets-llms-item (GET /datasets/llms/items/{domain}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-llms-item", params);
+        return client.request("datasets-llms-item", params, options);
+    }
+
+    /**
+     * datasets-llms-search (GET /datasets/llms/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsSearch(Map<String, Object> params) {
+        return llmsSearch(params, null);
+    }
+
+    /**
+     * datasets-llms-search (GET /datasets/llms/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-llms-search", params);
+        return client.request("datasets-llms-search", params, options);
+    }
+
+    /**
+     * datasets-llms-search (GET /datasets/llms/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object llmsSearch() {
+        return llmsSearch(Map.of(), null);
     }
 
     /**

@@ -19,6 +19,28 @@ public final class BbbGroup {
     }
 
     /**
+     * bbb-article (GET /bbb/article).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object article(Map<String, Object> params) {
+        return article(params, null);
+    }
+
+    /**
+     * bbb-article (GET /bbb/article). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object article(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-article", params);
+        return client.request("bbb-article", params, options);
+    }
+
+    /**
      * bbb-business (GET /bbb/business).
      *
      * @param params operation parameters
@@ -129,6 +151,125 @@ public final class BbbGroup {
     }
 
     /**
+     * bbb-local-bbb (GET /bbb/local-bbb).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object localBbb(Map<String, Object> params) {
+        return localBbb(params, null);
+    }
+
+    /**
+     * bbb-local-bbb (GET /bbb/local-bbb). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object localBbb(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-local-bbb", params);
+        return client.request("bbb-local-bbb", params, options);
+    }
+
+    /**
+     * bbb-local-bbbs (GET /bbb/local-bbbs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object localBbbs(Map<String, Object> params) {
+        return localBbbs(params, null);
+    }
+
+    /**
+     * bbb-local-bbbs (GET /bbb/local-bbbs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object localBbbs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-local-bbbs", params);
+        return client.request("bbb-local-bbbs", params, options);
+    }
+
+    /**
+     * bbb-news (GET /bbb/news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params) {
+        return news(params, null);
+    }
+
+    /**
+     * bbb-news (GET /bbb/news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object news(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-news", params);
+        return client.request("bbb-news", params, options);
+    }
+
+    /**
+     * bbb-news-topics (GET /bbb/news/topics).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsTopics(Map<String, Object> params) {
+        return newsTopics(params, null);
+    }
+
+    /**
+     * bbb-news-topics (GET /bbb/news/topics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsTopics(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-news-topics", params);
+        return client.request("bbb-news-topics", params, options);
+    }
+
+    /**
+     * bbb-regions (GET /bbb/regions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object regions(Map<String, Object> params) {
+        return regions(params, null);
+    }
+
+    /**
+     * bbb-regions (GET /bbb/regions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object regions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-regions", params);
+        return client.request("bbb-regions", params, options);
+    }
+
+    /**
+     * bbb-regions (GET /bbb/regions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object regions() {
+        return regions(Map.of(), null);
+    }
+
+    /**
      * bbb-scamtracker-search (GET /bbb/scamtracker/search).
      *
      * @param params operation parameters
@@ -232,6 +373,37 @@ public final class BbbGroup {
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("bbb-search", params);
         return client.request("bbb-search", params, options);
+    }
+
+    /**
+     * bbb-search-filters (GET /bbb/search/filters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchFilters(Map<String, Object> params) {
+        return searchFilters(params, null);
+    }
+
+    /**
+     * bbb-search-filters (GET /bbb/search/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchFilters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-search-filters", params);
+        return client.request("bbb-search-filters", params, options);
+    }
+
+    /**
+     * bbb-search-filters (GET /bbb/search/filters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchFilters() {
+        return searchFilters(Map.of(), null);
     }
 
 }

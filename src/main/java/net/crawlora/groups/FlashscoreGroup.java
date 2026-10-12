@@ -94,6 +94,72 @@ public final class FlashscoreGroup {
     }
 
     /**
+     * flashscore-entity-news (GET /flashscore/entity-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object entityNews(Map<String, Object> params) {
+        return entityNews(params, null);
+    }
+
+    /**
+     * flashscore-entity-news (GET /flashscore/entity-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object entityNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-entity-news", params);
+        return client.request("flashscore-entity-news", params, options);
+    }
+
+    /**
+     * flashscore-match-box-score (GET /flashscore/match-box-score).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchBoxScore(Map<String, Object> params) {
+        return matchBoxScore(params, null);
+    }
+
+    /**
+     * flashscore-match-box-score (GET /flashscore/match-box-score). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchBoxScore(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-box-score", params);
+        return client.request("flashscore-match-box-score", params, options);
+    }
+
+    /**
+     * flashscore-match-darts (GET /flashscore/match-darts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchDarts(Map<String, Object> params) {
+        return matchDarts(params, null);
+    }
+
+    /**
+     * flashscore-match-darts (GET /flashscore/match-darts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchDarts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-darts", params);
+        return client.request("flashscore-match-darts", params, options);
+    }
+
+    /**
      * flashscore-match-h2h (GET /flashscore/match-h2h).
      *
      * @param params operation parameters
@@ -182,6 +248,50 @@ public final class FlashscoreGroup {
     }
 
     /**
+     * flashscore-match-missing-players (GET /flashscore/match-missing-players).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchMissingPlayers(Map<String, Object> params) {
+        return matchMissingPlayers(params, null);
+    }
+
+    /**
+     * flashscore-match-missing-players (GET /flashscore/match-missing-players). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchMissingPlayers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-missing-players", params);
+        return client.request("flashscore-match-missing-players", params, options);
+    }
+
+    /**
+     * flashscore-match-momentum (GET /flashscore/match-momentum).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchMomentum(Map<String, Object> params) {
+        return matchMomentum(params, null);
+    }
+
+    /**
+     * flashscore-match-momentum (GET /flashscore/match-momentum). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchMomentum(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-momentum", params);
+        return client.request("flashscore-match-momentum", params, options);
+    }
+
+    /**
      * flashscore-match-news (GET /flashscore/match-news).
      *
      * @param params operation parameters
@@ -201,6 +311,116 @@ public final class FlashscoreGroup {
     public Object matchNews(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("flashscore-match-news", params);
         return client.request("flashscore-match-news", params, options);
+    }
+
+    /**
+     * flashscore-match-odds (GET /flashscore/match-odds).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchOdds(Map<String, Object> params) {
+        return matchOdds(params, null);
+    }
+
+    /**
+     * flashscore-match-odds (GET /flashscore/match-odds). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchOdds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-odds", params);
+        return client.request("flashscore-match-odds", params, options);
+    }
+
+    /**
+     * flashscore-match-player-stats (GET /flashscore/match-player-stats).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPlayerStats(Map<String, Object> params) {
+        return matchPlayerStats(params, null);
+    }
+
+    /**
+     * flashscore-match-player-stats (GET /flashscore/match-player-stats). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPlayerStats(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-player-stats", params);
+        return client.request("flashscore-match-player-stats", params, options);
+    }
+
+    /**
+     * flashscore-match-point-by-point (GET /flashscore/match-point-by-point).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPointByPoint(Map<String, Object> params) {
+        return matchPointByPoint(params, null);
+    }
+
+    /**
+     * flashscore-match-point-by-point (GET /flashscore/match-point-by-point). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPointByPoint(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-point-by-point", params);
+        return client.request("flashscore-match-point-by-point", params, options);
+    }
+
+    /**
+     * flashscore-match-predicted-lineups (GET /flashscore/match-predicted-lineups).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPredictedLineups(Map<String, Object> params) {
+        return matchPredictedLineups(params, null);
+    }
+
+    /**
+     * flashscore-match-predicted-lineups (GET /flashscore/match-predicted-lineups). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchPredictedLineups(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-predicted-lineups", params);
+        return client.request("flashscore-match-predicted-lineups", params, options);
+    }
+
+    /**
+     * flashscore-match-report (GET /flashscore/match-report).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchReport(Map<String, Object> params) {
+        return matchReport(params, null);
+    }
+
+    /**
+     * flashscore-match-report (GET /flashscore/match-report). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchReport(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-report", params);
+        return client.request("flashscore-match-report", params, options);
     }
 
     /**
@@ -245,6 +465,28 @@ public final class FlashscoreGroup {
     public Object matchStats(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("flashscore-match-stats", params);
         return client.request("flashscore-match-stats", params, options);
+    }
+
+    /**
+     * flashscore-match-tv (GET /flashscore/match-tv).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchTv(Map<String, Object> params) {
+        return matchTv(params, null);
+    }
+
+    /**
+     * flashscore-match-tv (GET /flashscore/match-tv). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchTv(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-match-tv", params);
+        return client.request("flashscore-match-tv", params, options);
     }
 
     /**
@@ -332,6 +574,28 @@ public final class FlashscoreGroup {
     }
 
     /**
+     * flashscore-news-article-body (GET /flashscore/news-article-body).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsArticleBody(Map<String, Object> params) {
+        return newsArticleBody(params, null);
+    }
+
+    /**
+     * flashscore-news-article-body (GET /flashscore/news-article-body). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsArticleBody(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-news-article-body", params);
+        return client.request("flashscore-news-article-body", params, options);
+    }
+
+    /**
      * flashscore-news-categories (GET /flashscore/news-categories).
      *
      * @param params operation parameters
@@ -360,6 +624,222 @@ public final class FlashscoreGroup {
      */
     public Object newsCategories() {
         return newsCategories(Map.of(), null);
+    }
+
+    /**
+     * flashscore-news-most-read (GET /flashscore/news-most-read).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsMostRead(Map<String, Object> params) {
+        return newsMostRead(params, null);
+    }
+
+    /**
+     * flashscore-news-most-read (GET /flashscore/news-most-read). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsMostRead(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-news-most-read", params);
+        return client.request("flashscore-news-most-read", params, options);
+    }
+
+    /**
+     * flashscore-news-most-read (GET /flashscore/news-most-read). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsMostRead() {
+        return newsMostRead(Map.of(), null);
+    }
+
+    /**
+     * flashscore-odds-geos (GET /flashscore/odds-geos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGeos(Map<String, Object> params) {
+        return oddsGeos(params, null);
+    }
+
+    /**
+     * flashscore-odds-geos (GET /flashscore/odds-geos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGeos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-odds-geos", params);
+        return client.request("flashscore-odds-geos", params, options);
+    }
+
+    /**
+     * flashscore-odds-geos (GET /flashscore/odds-geos). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGeos() {
+        return oddsGeos(Map.of(), null);
+    }
+
+    /**
+     * flashscore-player (GET /flashscore/player).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object player(Map<String, Object> params) {
+        return player(params, null);
+    }
+
+    /**
+     * flashscore-player (GET /flashscore/player). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object player(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player", params);
+        return client.request("flashscore-player", params, options);
+    }
+
+    /**
+     * flashscore-player-fixtures (GET /flashscore/player-fixtures).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerFixtures(Map<String, Object> params) {
+        return playerFixtures(params, null);
+    }
+
+    /**
+     * flashscore-player-fixtures (GET /flashscore/player-fixtures). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerFixtures(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-fixtures", params);
+        return client.request("flashscore-player-fixtures", params, options);
+    }
+
+    /**
+     * flashscore-player-injuries (GET /flashscore/player-injuries).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerInjuries(Map<String, Object> params) {
+        return playerInjuries(params, null);
+    }
+
+    /**
+     * flashscore-player-injuries (GET /flashscore/player-injuries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerInjuries(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-injuries", params);
+        return client.request("flashscore-player-injuries", params, options);
+    }
+
+    /**
+     * flashscore-player-match-log (GET /flashscore/player-match-log).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerMatchLog(Map<String, Object> params) {
+        return playerMatchLog(params, null);
+    }
+
+    /**
+     * flashscore-player-match-log (GET /flashscore/player-match-log). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerMatchLog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-match-log", params);
+        return client.request("flashscore-player-match-log", params, options);
+    }
+
+    /**
+     * flashscore-player-news (GET /flashscore/player-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerNews(Map<String, Object> params) {
+        return playerNews(params, null);
+    }
+
+    /**
+     * flashscore-player-news (GET /flashscore/player-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-news", params);
+        return client.request("flashscore-player-news", params, options);
+    }
+
+    /**
+     * flashscore-player-results (GET /flashscore/player-results).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerResults(Map<String, Object> params) {
+        return playerResults(params, null);
+    }
+
+    /**
+     * flashscore-player-results (GET /flashscore/player-results). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerResults(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-results", params);
+        return client.request("flashscore-player-results", params, options);
+    }
+
+    /**
+     * flashscore-player-transfers (GET /flashscore/player-transfers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerTransfers(Map<String, Object> params) {
+        return playerTransfers(params, null);
+    }
+
+    /**
+     * flashscore-player-transfers (GET /flashscore/player-transfers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerTransfers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-player-transfers", params);
+        return client.request("flashscore-player-transfers", params, options);
     }
 
     /**
@@ -491,6 +971,160 @@ public final class FlashscoreGroup {
     }
 
     /**
+     * flashscore-team (GET /flashscore/team).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object team(Map<String, Object> params) {
+        return team(params, null);
+    }
+
+    /**
+     * flashscore-team (GET /flashscore/team). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object team(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team", params);
+        return client.request("flashscore-team", params, options);
+    }
+
+    /**
+     * flashscore-team-fixtures (GET /flashscore/team-fixtures).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamFixtures(Map<String, Object> params) {
+        return teamFixtures(params, null);
+    }
+
+    /**
+     * flashscore-team-fixtures (GET /flashscore/team-fixtures). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamFixtures(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-fixtures", params);
+        return client.request("flashscore-team-fixtures", params, options);
+    }
+
+    /**
+     * flashscore-team-news (GET /flashscore/team-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamNews(Map<String, Object> params) {
+        return teamNews(params, null);
+    }
+
+    /**
+     * flashscore-team-news (GET /flashscore/team-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-news", params);
+        return client.request("flashscore-team-news", params, options);
+    }
+
+    /**
+     * flashscore-team-outright-odds (GET /flashscore/team-outright-odds).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamOutrightOdds(Map<String, Object> params) {
+        return teamOutrightOdds(params, null);
+    }
+
+    /**
+     * flashscore-team-outright-odds (GET /flashscore/team-outright-odds). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamOutrightOdds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-outright-odds", params);
+        return client.request("flashscore-team-outright-odds", params, options);
+    }
+
+    /**
+     * flashscore-team-results (GET /flashscore/team-results).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamResults(Map<String, Object> params) {
+        return teamResults(params, null);
+    }
+
+    /**
+     * flashscore-team-results (GET /flashscore/team-results). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamResults(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-results", params);
+        return client.request("flashscore-team-results", params, options);
+    }
+
+    /**
+     * flashscore-team-squad (GET /flashscore/team-squad).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamSquad(Map<String, Object> params) {
+        return teamSquad(params, null);
+    }
+
+    /**
+     * flashscore-team-squad (GET /flashscore/team-squad). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamSquad(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-squad", params);
+        return client.request("flashscore-team-squad", params, options);
+    }
+
+    /**
+     * flashscore-team-transfers (GET /flashscore/team-transfers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamTransfers(Map<String, Object> params) {
+        return teamTransfers(params, null);
+    }
+
+    /**
+     * flashscore-team-transfers (GET /flashscore/team-transfers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamTransfers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-team-transfers", params);
+        return client.request("flashscore-team-transfers", params, options);
+    }
+
+    /**
      * flashscore-top-search (GET /flashscore/top-search).
      *
      * @param params operation parameters
@@ -522,6 +1156,28 @@ public final class FlashscoreGroup {
     }
 
     /**
+     * flashscore-tournament-archive-seasons (GET /flashscore/tournament-archive-seasons).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tournamentArchiveSeasons(Map<String, Object> params) {
+        return tournamentArchiveSeasons(params, null);
+    }
+
+    /**
+     * flashscore-tournament-archive-seasons (GET /flashscore/tournament-archive-seasons). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tournamentArchiveSeasons(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-tournament-archive-seasons", params);
+        return client.request("flashscore-tournament-archive-seasons", params, options);
+    }
+
+    /**
      * flashscore-tournament-events (GET /flashscore/tournament-events).
      *
      * @param params operation parameters
@@ -541,6 +1197,28 @@ public final class FlashscoreGroup {
     public Object tournamentEvents(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("flashscore-tournament-events", params);
         return client.request("flashscore-tournament-events", params, options);
+    }
+
+    /**
+     * flashscore-tournament-outright-odds (GET /flashscore/tournament-outright-odds).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tournamentOutrightOdds(Map<String, Object> params) {
+        return tournamentOutrightOdds(params, null);
+    }
+
+    /**
+     * flashscore-tournament-outright-odds (GET /flashscore/tournament-outright-odds). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object tournamentOutrightOdds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("flashscore-tournament-outright-odds", params);
+        return client.request("flashscore-tournament-outright-odds", params, options);
     }
 
     /**

@@ -843,6 +843,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "retrieval" operation group.
+     * @return a new {@link RetrievalGroup} bound to this client
+     */
+    public RetrievalGroup retrieval() {
+        return new RetrievalGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "discogs" operation group.
      * @return a new {@link DiscogsGroup} bound to this client
      */
@@ -2536,6 +2544,22 @@ public abstract class ClientGroups {
      */
     public ReferralsGroup referrals() {
         return new ReferralsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "researchJobs" operation group.
+     * @return a new {@link ResearchJobsGroup} bound to this client
+     */
+    public ResearchJobsGroup researchJobs() {
+        return new ResearchJobsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "research" operation group.
+     * @return a new {@link ResearchGroup} bound to this client
+     */
+    public ResearchGroup research() {
+        return new ResearchGroup((CrawloraClient) this);
     }
 
     /**
