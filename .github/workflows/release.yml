@@ -31,7 +31,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           tag="${GITHUB_REF_NAME#v}"   # e.g. 1.5.0-sdk.1
-          pom_version="$(mvn -q -DforceStdout help:evaluate -Dexpression=project.version)"
+          pom_version="$(./mvnw -q -DforceStdout help:evaluate -Dexpression=project.version)"
           java_version="$(grep -oP 'VERSION = "\K[^"]+' src/main/java/net/crawlora/Version.java)"
           if [ "$pom_version" != "$tag" ]; then
             echo "tag $tag != pom version $pom_version" >&2
@@ -46,13 +46,13 @@ jobs:
           python3 scripts/generate.py
           git diff --exit-code
       - name: Test
-        run: mvn -B test
+        run: ./mvnw -B test
       # GitHub Packages works with the built-in GITHUB_TOKEN — no external
       # account needed. The central-publishing plugin is confined to the
       # `release` profile, so a plain `deploy` only targets GitHub Packages.
       - name: Publish to GitHub Packages
         run: >
-          mvn -B -DskipTests deploy
+          ./mvnw -B -DskipTests deploy
           -s .github/settings.xml
           -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/Crawlora-org/crawlora-java-sdk
         env:
@@ -63,7 +63,7 @@ jobs:
       # Until then this step is skipped so the release stays green.
       - name: Publish to Maven Central
         if: ${{ vars.PUBLISH_CENTRAL == 'true' }}
-        run: mvn -B -P release -DskipTests deploy
+        run: ./mvnw -B -P release -DskipTests deploy
         env:
           MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
