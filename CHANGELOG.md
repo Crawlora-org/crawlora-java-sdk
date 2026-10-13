@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.47.1-sdk.1
+
+- Regenerated Go, TypeScript, Python, Ruby, Java, and PHP clients from the public API contract (3,695 operations; operation set unchanged).
+- Added BBB response fields for profile-review state and notices, local chapter newsroom URLs, and expanded BBB news, topic, and business-facet schemas.
+- Refreshed the affected BBB and dataset endpoint descriptions and parameter metadata from the current Swagger contract.
+
 ## v1.47.0-sdk.2
 
 - First 1.47.0 release on Maven Central. 1.47.0-sdk.1 reached GitHub Packages only: the Central upload was rejected after the build environment moved to a newer Maven. Releases now build with the Maven Wrapper, pinned to Maven 3.9.16. No API or client change from 1.47.0-sdk.1.
