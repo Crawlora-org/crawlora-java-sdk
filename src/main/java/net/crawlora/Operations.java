@@ -9351,12 +9351,16 @@ public final class Operations {
             "/datasets/bbb-businesses/facets",
             List.of(),
             List.of(
-            new QueryParam("facet", true, "string", List.of("category", "state", "city", "rating", "accredited", "entity_type", "run_id", "alert_title", "has_alerts")),
+            new QueryParam("facet", true, "string", List.of("country", "category", "state", "city", "rating", "accredited", "entity_type", "run_id", "alert_title", "has_alerts")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of("us", "ca")),
             new QueryParam("state", false, "string", List.of()),
             new QueryParam("city", false, "string", List.of()),
             new QueryParam("rating", false, "string", List.of("A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F")),
+            new QueryParam("min_rating_rank", false, "integer", List.of()),
             new QueryParam("accredited", false, "boolean", List.of()),
             new QueryParam("has_alerts", false, "boolean", List.of()),
             new QueryParam("alert_title", false, "string", List.of()),
@@ -9367,7 +9371,7 @@ public final class Operations {
             null,
             false,
             List.of("ApiKeyAuth"),
-            false,
+            true,
             List.of()));
         m.put("datasets-bbb-businesses-item", new Operation(
             "datasets-bbb-businesses-item",
@@ -9389,6 +9393,7 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("category", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of("us", "ca")),
             new QueryParam("state", false, "string", List.of()),
             new QueryParam("city", false, "string", List.of()),
             new QueryParam("rating", false, "string", List.of("A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F")),
