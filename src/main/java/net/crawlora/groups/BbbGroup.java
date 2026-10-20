@@ -239,6 +239,28 @@ public final class BbbGroup {
     }
 
     /**
+     * bbb-page (GET /bbb/page).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object page(Map<String, Object> params) {
+        return page(params, null);
+    }
+
+    /**
+     * bbb-page (GET /bbb/page). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object page(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("bbb-page", params);
+        return client.request("bbb-page", params, options);
+    }
+
+    /**
      * bbb-regions (GET /bbb/regions).
      *
      * @param params operation parameters
