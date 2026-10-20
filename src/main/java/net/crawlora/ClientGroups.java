@@ -2587,6 +2587,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "reverb" operation group.
+     * @return a new {@link ReverbGroup} bound to this client
+     */
+    public ReverbGroup reverb() {
+        return new ReverbGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "rightmove" operation group.
      * @return a new {@link RightmoveGroup} bound to this client
      */
