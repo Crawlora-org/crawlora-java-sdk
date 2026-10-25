@@ -275,6 +275,72 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-collection-detail (GET /tiktok/mobile/collection/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionDetail(Map<String, Object> params) {
+        return mobileCollectionDetail(params, null);
+    }
+
+    /**
+     * tiktok-mobile-collection-detail (GET /tiktok/mobile/collection/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-collection-detail", params);
+        return client.request("tiktok-mobile-collection-detail", params, options);
+    }
+
+    /**
+     * tiktok-mobile-collection-list (GET /tiktok/mobile/collection/list).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionList(Map<String, Object> params) {
+        return mobileCollectionList(params, null);
+    }
+
+    /**
+     * tiktok-mobile-collection-list (GET /tiktok/mobile/collection/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionList(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-collection-list", params);
+        return client.request("tiktok-mobile-collection-list", params, options);
+    }
+
+    /**
+     * tiktok-mobile-collection-videos (GET /tiktok/mobile/collection/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionVideos(Map<String, Object> params) {
+        return mobileCollectionVideos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-collection-videos (GET /tiktok/mobile/collection/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileCollectionVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-collection-videos", params);
+        return client.request("tiktok-mobile-collection-videos", params, options);
+    }
+
+    /**
      * tiktok-mobile-comment-replies (GET /tiktok/mobile/comment/replies).
      *
      * @param params operation parameters
@@ -347,6 +413,37 @@ public final class TiktokGroup {
      */
     public Object mobileFeed() {
         return mobileFeed(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-feed-offline (GET /tiktok/mobile/feed/offline).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileFeedOffline(Map<String, Object> params) {
+        return mobileFeedOffline(params, null);
+    }
+
+    /**
+     * tiktok-mobile-feed-offline (GET /tiktok/mobile/feed/offline). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileFeedOffline(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-feed-offline", params);
+        return client.request("tiktok-mobile-feed-offline", params, options);
+    }
+
+    /**
+     * tiktok-mobile-feed-offline (GET /tiktok/mobile/feed/offline). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileFeedOffline() {
+        return mobileFeedOffline(Map.of(), null);
     }
 
     /**
@@ -509,6 +606,81 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-live-hashtags (GET /tiktok/mobile/live/hashtags).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveHashtags(Map<String, Object> params) {
+        return mobileLiveHashtags(params, null);
+    }
+
+    /**
+     * tiktok-mobile-live-hashtags (GET /tiktok/mobile/live/hashtags). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveHashtags(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-live-hashtags", params);
+        return client.request("tiktok-mobile-live-hashtags", params, options);
+    }
+
+    /**
+     * tiktok-mobile-live-hashtags (GET /tiktok/mobile/live/hashtags). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveHashtags() {
+        return mobileLiveHashtags(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-live-room (GET /tiktok/mobile/live/room).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveRoom(Map<String, Object> params) {
+        return mobileLiveRoom(params, null);
+    }
+
+    /**
+     * tiktok-mobile-live-room (GET /tiktok/mobile/live/room). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveRoom(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-live-room", params);
+        return client.request("tiktok-mobile-live-room", params, options);
+    }
+
+    /**
+     * tiktok-mobile-live-room-by-user (GET /tiktok/mobile/live/room-by-user).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveRoomByUser(Map<String, Object> params) {
+        return mobileLiveRoomByUser(params, null);
+    }
+
+    /**
+     * tiktok-mobile-live-room-by-user (GET /tiktok/mobile/live/room-by-user). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveRoomByUser(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-live-room-by-user", params);
+        return client.request("tiktok-mobile-live-room-by-user", params, options);
+    }
+
+    /**
      * tiktok-mobile-live-search (GET /tiktok/mobile/live/search).
      *
      * @param params operation parameters
@@ -528,6 +700,37 @@ public final class TiktokGroup {
     public Object mobileLiveSearch(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-mobile-live-search", params);
         return client.request("tiktok-mobile-live-search", params, options);
+    }
+
+    /**
+     * tiktok-mobile-live-tabs (GET /tiktok/mobile/live/tabs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveTabs(Map<String, Object> params) {
+        return mobileLiveTabs(params, null);
+    }
+
+    /**
+     * tiktok-mobile-live-tabs (GET /tiktok/mobile/live/tabs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveTabs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-live-tabs", params);
+        return client.request("tiktok-mobile-live-tabs", params, options);
+    }
+
+    /**
+     * tiktok-mobile-live-tabs (GET /tiktok/mobile/live/tabs). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileLiveTabs() {
+        return mobileLiveTabs(Map.of(), null);
     }
 
     /**
@@ -562,6 +765,99 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-music-chart (GET /tiktok/mobile/music/chart).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChart(Map<String, Object> params) {
+        return mobileMusicChart(params, null);
+    }
+
+    /**
+     * tiktok-mobile-music-chart (GET /tiktok/mobile/music/chart). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChart(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-music-chart", params);
+        return client.request("tiktok-mobile-music-chart", params, options);
+    }
+
+    /**
+     * tiktok-mobile-music-chart (GET /tiktok/mobile/music/chart). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChart() {
+        return mobileMusicChart(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-music-choices (GET /tiktok/mobile/music/choices).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChoices(Map<String, Object> params) {
+        return mobileMusicChoices(params, null);
+    }
+
+    /**
+     * tiktok-mobile-music-choices (GET /tiktok/mobile/music/choices). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChoices(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-music-choices", params);
+        return client.request("tiktok-mobile-music-choices", params, options);
+    }
+
+    /**
+     * tiktok-mobile-music-choices (GET /tiktok/mobile/music/choices). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicChoices() {
+        return mobileMusicChoices(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-music-collection-list (GET /tiktok/mobile/music/collection-list).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicCollectionList(Map<String, Object> params) {
+        return mobileMusicCollectionList(params, null);
+    }
+
+    /**
+     * tiktok-mobile-music-collection-list (GET /tiktok/mobile/music/collection-list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicCollectionList(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-music-collection-list", params);
+        return client.request("tiktok-mobile-music-collection-list", params, options);
+    }
+
+    /**
+     * tiktok-mobile-music-collection-list (GET /tiktok/mobile/music/collection-list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicCollectionList() {
+        return mobileMusicCollectionList(Map.of(), null);
+    }
+
+    /**
      * tiktok-mobile-music-collections (GET /tiktok/mobile/music/collections).
      *
      * @param params operation parameters
@@ -590,6 +886,28 @@ public final class TiktokGroup {
      */
     public Object mobileMusicCollections() {
         return mobileMusicCollections(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-music-detail (GET /tiktok/mobile/music/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicDetail(Map<String, Object> params) {
+        return mobileMusicDetail(params, null);
+    }
+
+    /**
+     * tiktok-mobile-music-detail (GET /tiktok/mobile/music/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMusicDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-music-detail", params);
+        return client.request("tiktok-mobile-music-detail", params, options);
     }
 
     /**
@@ -699,6 +1017,235 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-mv-videos (GET /tiktok/mobile/mv/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMvVideos(Map<String, Object> params) {
+        return mobileMvVideos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-mv-videos (GET /tiktok/mobile/mv/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileMvVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-mv-videos", params);
+        return client.request("tiktok-mobile-mv-videos", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-detail (GET /tiktok/mobile/place/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceDetail(Map<String, Object> params) {
+        return mobilePlaceDetail(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-detail (GET /tiktok/mobile/place/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-detail", params);
+        return client.request("tiktok-mobile-place-detail", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-info (GET /tiktok/mobile/place/info).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceInfo(Map<String, Object> params) {
+        return mobilePlaceInfo(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-info (GET /tiktok/mobile/place/info). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceInfo(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-info", params);
+        return client.request("tiktok-mobile-place-info", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-media (GET /tiktok/mobile/place/media).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceMedia(Map<String, Object> params) {
+        return mobilePlaceMedia(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-media (GET /tiktok/mobile/place/media). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceMedia(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-media", params);
+        return client.request("tiktok-mobile-place-media", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-photos (GET /tiktok/mobile/place/photos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlacePhotos(Map<String, Object> params) {
+        return mobilePlacePhotos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-photos (GET /tiktok/mobile/place/photos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlacePhotos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-photos", params);
+        return client.request("tiktok-mobile-place-photos", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-reviews (GET /tiktok/mobile/place/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceReviews(Map<String, Object> params) {
+        return mobilePlaceReviews(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-reviews (GET /tiktok/mobile/place/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceReviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-reviews", params);
+        return client.request("tiktok-mobile-place-reviews", params, options);
+    }
+
+    /**
+     * tiktok-mobile-place-videos (GET /tiktok/mobile/place/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceVideos(Map<String, Object> params) {
+        return mobilePlaceVideos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-place-videos (GET /tiktok/mobile/place/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaceVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-place-videos", params);
+        return client.request("tiktok-mobile-place-videos", params, options);
+    }
+
+    /**
+     * tiktok-mobile-playlist-detail (GET /tiktok/mobile/playlist/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistDetail(Map<String, Object> params) {
+        return mobilePlaylistDetail(params, null);
+    }
+
+    /**
+     * tiktok-mobile-playlist-detail (GET /tiktok/mobile/playlist/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-playlist-detail", params);
+        return client.request("tiktok-mobile-playlist-detail", params, options);
+    }
+
+    /**
+     * tiktok-mobile-playlist-list (GET /tiktok/mobile/playlist/list).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistList(Map<String, Object> params) {
+        return mobilePlaylistList(params, null);
+    }
+
+    /**
+     * tiktok-mobile-playlist-list (GET /tiktok/mobile/playlist/list). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistList(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-playlist-list", params);
+        return client.request("tiktok-mobile-playlist-list", params, options);
+    }
+
+    /**
+     * tiktok-mobile-playlist-list (GET /tiktok/mobile/playlist/list). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistList() {
+        return mobilePlaylistList(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-playlist-videos (GET /tiktok/mobile/playlist/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistVideos(Map<String, Object> params) {
+        return mobilePlaylistVideos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-playlist-videos (GET /tiktok/mobile/playlist/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobilePlaylistVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-playlist-videos", params);
+        return client.request("tiktok-mobile-playlist-videos", params, options);
+    }
+
+    /**
      * tiktok-mobile-search (GET /tiktok/mobile/search).
      *
      * @param params operation parameters
@@ -721,6 +1268,50 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-search-effects (GET /tiktok/mobile/search/effects).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchEffects(Map<String, Object> params) {
+        return mobileSearchEffects(params, null);
+    }
+
+    /**
+     * tiktok-mobile-search-effects (GET /tiktok/mobile/search/effects). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchEffects(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-search-effects", params);
+        return client.request("tiktok-mobile-search-effects", params, options);
+    }
+
+    /**
+     * tiktok-mobile-search-hashtags (GET /tiktok/mobile/search/hashtags).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchHashtags(Map<String, Object> params) {
+        return mobileSearchHashtags(params, null);
+    }
+
+    /**
+     * tiktok-mobile-search-hashtags (GET /tiktok/mobile/search/hashtags). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchHashtags(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-search-hashtags", params);
+        return client.request("tiktok-mobile-search-hashtags", params, options);
+    }
+
+    /**
      * tiktok-mobile-search-music (GET /tiktok/mobile/search/music).
      *
      * @param params operation parameters
@@ -740,6 +1331,28 @@ public final class TiktokGroup {
     public Object mobileSearchMusic(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("tiktok-mobile-search-music", params);
         return client.request("tiktok-mobile-search-music", params, options);
+    }
+
+    /**
+     * tiktok-mobile-search-photos (GET /tiktok/mobile/search/photos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchPhotos(Map<String, Object> params) {
+        return mobileSearchPhotos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-search-photos (GET /tiktok/mobile/search/photos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchPhotos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-search-photos", params);
+        return client.request("tiktok-mobile-search-photos", params, options);
     }
 
     /**
@@ -793,6 +1406,28 @@ public final class TiktokGroup {
      */
     public Object mobileSearchPreInfo() {
         return mobileSearchPreInfo(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-search-stream (GET /tiktok/mobile/search/stream).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchStream(Map<String, Object> params) {
+        return mobileSearchStream(params, null);
+    }
+
+    /**
+     * tiktok-mobile-search-stream (GET /tiktok/mobile/search/stream). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchStream(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-search-stream", params);
+        return client.request("tiktok-mobile-search-stream", params, options);
     }
 
     /**
@@ -862,6 +1497,50 @@ public final class TiktokGroup {
     }
 
     /**
+     * tiktok-mobile-search-videos (GET /tiktok/mobile/search/videos).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchVideos(Map<String, Object> params) {
+        return mobileSearchVideos(params, null);
+    }
+
+    /**
+     * tiktok-mobile-search-videos (GET /tiktok/mobile/search/videos). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileSearchVideos(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-search-videos", params);
+        return client.request("tiktok-mobile-search-videos", params, options);
+    }
+
+    /**
+     * tiktok-mobile-translation-description (GET /tiktok/mobile/translation/description).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileTranslationDescription(Map<String, Object> params) {
+        return mobileTranslationDescription(params, null);
+    }
+
+    /**
+     * tiktok-mobile-translation-description (GET /tiktok/mobile/translation/description). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileTranslationDescription(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-translation-description", params);
+        return client.request("tiktok-mobile-translation-description", params, options);
+    }
+
+    /**
      * tiktok-mobile-trending-categories (GET /tiktok/mobile/trending/categories).
      *
      * @param params operation parameters
@@ -921,6 +1600,231 @@ public final class TiktokGroup {
      */
     public Object mobileTrendingEffects() {
         return mobileTrendingEffects(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-user-followers (GET /tiktok/mobile/user/followers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserFollowers(Map<String, Object> params) {
+        return mobileUserFollowers(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-followers (GET /tiktok/mobile/user/followers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserFollowers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-followers", params);
+        return client.request("tiktok-mobile-user-followers", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-following (GET /tiktok/mobile/user/following).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserFollowing(Map<String, Object> params) {
+        return mobileUserFollowing(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-following (GET /tiktok/mobile/user/following). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserFollowing(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-following", params);
+        return client.request("tiktok-mobile-user-following", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-original-effects (GET /tiktok/mobile/user/original-effects).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserOriginalEffects(Map<String, Object> params) {
+        return mobileUserOriginalEffects(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-original-effects (GET /tiktok/mobile/user/original-effects). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserOriginalEffects(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-original-effects", params);
+        return client.request("tiktok-mobile-user-original-effects", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-original-music (GET /tiktok/mobile/user/original-music).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserOriginalMusic(Map<String, Object> params) {
+        return mobileUserOriginalMusic(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-original-music (GET /tiktok/mobile/user/original-music). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserOriginalMusic(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-original-music", params);
+        return client.request("tiktok-mobile-user-original-music", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-posts (GET /tiktok/mobile/user/posts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserPosts(Map<String, Object> params) {
+        return mobileUserPosts(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-posts (GET /tiktok/mobile/user/posts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserPosts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-posts", params);
+        return client.request("tiktok-mobile-user-posts", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-posts (GET /tiktok/mobile/user/posts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserPosts() {
+        return mobileUserPosts(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-user-profile (GET /tiktok/mobile/user/profile).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserProfile(Map<String, Object> params) {
+        return mobileUserProfile(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-profile (GET /tiktok/mobile/user/profile). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserProfile(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-profile", params);
+        return client.request("tiktok-mobile-user-profile", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-profile (GET /tiktok/mobile/user/profile). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserProfile() {
+        return mobileUserProfile(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-user-recommendations (GET /tiktok/mobile/user/recommendations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserRecommendations(Map<String, Object> params) {
+        return mobileUserRecommendations(params, null);
+    }
+
+    /**
+     * tiktok-mobile-user-recommendations (GET /tiktok/mobile/user/recommendations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserRecommendations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-user-recommendations", params);
+        return client.request("tiktok-mobile-user-recommendations", params, options);
+    }
+
+    /**
+     * tiktok-mobile-user-recommendations (GET /tiktok/mobile/user/recommendations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileUserRecommendations() {
+        return mobileUserRecommendations(Map.of(), null);
+    }
+
+    /**
+     * tiktok-mobile-video-detail (GET /tiktok/mobile/video/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileVideoDetail(Map<String, Object> params) {
+        return mobileVideoDetail(params, null);
+    }
+
+    /**
+     * tiktok-mobile-video-detail (GET /tiktok/mobile/video/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileVideoDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-video-detail", params);
+        return client.request("tiktok-mobile-video-detail", params, options);
+    }
+
+    /**
+     * tiktok-mobile-video-subtitles (GET /tiktok/mobile/video/subtitles).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileVideoSubtitles(Map<String, Object> params) {
+        return mobileVideoSubtitles(params, null);
+    }
+
+    /**
+     * tiktok-mobile-video-subtitles (GET /tiktok/mobile/video/subtitles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object mobileVideoSubtitles(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("tiktok-mobile-video-subtitles", params);
+        return client.request("tiktok-mobile-video-subtitles", params, options);
     }
 
     /**

@@ -19,6 +19,178 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-archive-comments-ids (GET /reddit/archive/comments/ids).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsIds(Map<String, Object> params) {
+        return archiveCommentsIds(params, null);
+    }
+
+    /**
+     * reddit-archive-comments-ids (GET /reddit/archive/comments/ids). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsIds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-comments-ids", params);
+        return client.request("reddit-archive-comments-ids", params, options);
+    }
+
+    /**
+     * reddit-archive-comments-search (GET /reddit/archive/comments/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsSearch(Map<String, Object> params) {
+        return archiveCommentsSearch(params, null);
+    }
+
+    /**
+     * reddit-archive-comments-search (GET /reddit/archive/comments/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-comments-search", params);
+        return client.request("reddit-archive-comments-search", params, options);
+    }
+
+    /**
+     * reddit-archive-comments-search (GET /reddit/archive/comments/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsSearch() {
+        return archiveCommentsSearch(Map.of(), null);
+    }
+
+    /**
+     * reddit-archive-comments-tree (GET /reddit/archive/comments/{id}/tree).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsTree(Map<String, Object> params) {
+        return archiveCommentsTree(params, null);
+    }
+
+    /**
+     * reddit-archive-comments-tree (GET /reddit/archive/comments/{id}/tree). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveCommentsTree(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-comments-tree", params);
+        return client.request("reddit-archive-comments-tree", params, options);
+    }
+
+    /**
+     * reddit-archive-posts-ids (GET /reddit/archive/posts/ids).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archivePostsIds(Map<String, Object> params) {
+        return archivePostsIds(params, null);
+    }
+
+    /**
+     * reddit-archive-posts-ids (GET /reddit/archive/posts/ids). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archivePostsIds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-posts-ids", params);
+        return client.request("reddit-archive-posts-ids", params, options);
+    }
+
+    /**
+     * reddit-archive-posts-search (GET /reddit/archive/posts/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archivePostsSearch(Map<String, Object> params) {
+        return archivePostsSearch(params, null);
+    }
+
+    /**
+     * reddit-archive-posts-search (GET /reddit/archive/posts/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archivePostsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-posts-search", params);
+        return client.request("reddit-archive-posts-search", params, options);
+    }
+
+    /**
+     * reddit-archive-posts-search (GET /reddit/archive/posts/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archivePostsSearch() {
+        return archivePostsSearch(Map.of(), null);
+    }
+
+    /**
+     * reddit-archive-subreddits-search (GET /reddit/archive/subreddits/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveSubredditsSearch(Map<String, Object> params) {
+        return archiveSubredditsSearch(params, null);
+    }
+
+    /**
+     * reddit-archive-subreddits-search (GET /reddit/archive/subreddits/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveSubredditsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-subreddits-search", params);
+        return client.request("reddit-archive-subreddits-search", params, options);
+    }
+
+    /**
+     * reddit-archive-time-series (GET /reddit/archive/time-series).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveTimeSeries(Map<String, Object> params) {
+        return archiveTimeSeries(params, null);
+    }
+
+    /**
+     * reddit-archive-time-series (GET /reddit/archive/time-series). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object archiveTimeSeries(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-archive-time-series", params);
+        return client.request("reddit-archive-time-series", params, options);
+    }
+
+    /**
      * reddit-comments (GET /reddit/comments/{id}).
      *
      * @param params operation parameters

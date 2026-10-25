@@ -875,6 +875,46 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "draftKingsCasino" operation group.
+     * @return a new {@link DraftKingsCasinoGroup} bound to this client
+     */
+    public DraftKingsCasinoGroup draftKingsCasino() {
+        return new DraftKingsCasinoGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "draftKingsDailyFantasySports" operation group.
+     * @return a new {@link DraftKingsDailyFantasySportsGroup} bound to this client
+     */
+    public DraftKingsDailyFantasySportsGroup draftKingsDailyFantasySports() {
+        return new DraftKingsDailyFantasySportsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "draftKingsPick6" operation group.
+     * @return a new {@link DraftKingsPick6Group} bound to this client
+     */
+    public DraftKingsPick6Group draftKingsPick6() {
+        return new DraftKingsPick6Group((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "draftKingsPredictions" operation group.
+     * @return a new {@link DraftKingsPredictionsGroup} bound to this client
+     */
+    public DraftKingsPredictionsGroup draftKingsPredictions() {
+        return new DraftKingsPredictionsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "draftKingsRacing" operation group.
+     * @return a new {@link DraftKingsRacingGroup} bound to this client
+     */
+    public DraftKingsRacingGroup draftKingsRacing() {
+        return new DraftKingsRacingGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "draftKingsSportsbook" operation group.
      * @return a new {@link DraftKingsSportsbookGroup} bound to this client
      */
@@ -1027,6 +1067,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "fanDuel" operation group.
+     * @return a new {@link FanDuelGroup} bound to this client
+     */
+    public FanDuelGroup fanDuel() {
+        return new FanDuelGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "farfetch" operation group.
      * @return a new {@link FarfetchGroup} bound to this client
      */
@@ -1168,6 +1216,14 @@ public abstract class ClientGroups {
      */
     public FtGroup ft() {
         return new FtGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "fussballDe" operation group.
+     * @return a new {@link FussballDeGroup} bound to this client
+     */
+    public FussballDeGroup fussballDe() {
+        return new FussballDeGroup((CrawloraClient) this);
     }
 
     /**
@@ -1648,6 +1704,14 @@ public abstract class ClientGroups {
      */
     public JobsGroup jobs() {
         return new JobsGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "jumia" operation group.
+     * @return a new {@link JumiaGroup} bound to this client
+     */
+    public JumiaGroup jumia() {
+        return new JumiaGroup((CrawloraClient) this);
     }
 
     /**

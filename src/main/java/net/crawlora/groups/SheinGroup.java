@@ -19,6 +19,68 @@ public final class SheinGroup {
     }
 
     /**
+     * shein-brands (GET /shein/brands).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params) {
+        return brands(params, null);
+    }
+
+    /**
+     * shein-brands (GET /shein/brands). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-brands", params);
+        return client.request("shein-brands", params, options);
+    }
+
+    /**
+     * shein-brands (GET /shein/brands). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object brands() {
+        return brands(Map.of(), null);
+    }
+
+    /**
+     * shein-categories (GET /shein/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * shein-categories (GET /shein/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-categories", params);
+        return client.request("shein-categories", params, options);
+    }
+
+    /**
+     * shein-categories (GET /shein/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * shein-category-filters (GET /shein/category/filters).
      *
      * @param params operation parameters
@@ -82,6 +144,68 @@ public final class SheinGroup {
     public Object categoryNav(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("shein-category-nav", params);
         return client.request("shein-category-nav", params, options);
+    }
+
+    /**
+     * shein-deals-products (GET /shein/deals/products).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsProducts(Map<String, Object> params) {
+        return dealsProducts(params, null);
+    }
+
+    /**
+     * shein-deals-products (GET /shein/deals/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsProducts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-deals-products", params);
+        return client.request("shein-deals-products", params, options);
+    }
+
+    /**
+     * shein-deals-products (GET /shein/deals/products). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsProducts() {
+        return dealsProducts(Map.of(), null);
+    }
+
+    /**
+     * shein-deals-tabs (GET /shein/deals/tabs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsTabs(Map<String, Object> params) {
+        return dealsTabs(params, null);
+    }
+
+    /**
+     * shein-deals-tabs (GET /shein/deals/tabs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsTabs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-deals-tabs", params);
+        return client.request("shein-deals-tabs", params, options);
+    }
+
+    /**
+     * shein-deals-tabs (GET /shein/deals/tabs). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dealsTabs() {
+        return dealsTabs(Map.of(), null);
     }
 
     /**
@@ -201,6 +325,112 @@ public final class SheinGroup {
      */
     public Object searchKeywords() {
         return searchKeywords(Map.of(), null);
+    }
+
+    /**
+     * shein-store (GET /shein/store).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object store(Map<String, Object> params) {
+        return store(params, null);
+    }
+
+    /**
+     * shein-store (GET /shein/store). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object store(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-store", params);
+        return client.request("shein-store", params, options);
+    }
+
+    /**
+     * shein-store-products (GET /shein/store/products).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object storeProducts(Map<String, Object> params) {
+        return storeProducts(params, null);
+    }
+
+    /**
+     * shein-store-products (GET /shein/store/products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object storeProducts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-store-products", params);
+        return client.request("shein-store-products", params, options);
+    }
+
+    /**
+     * shein-trending-categories (GET /shein/trending/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingCategories(Map<String, Object> params) {
+        return trendingCategories(params, null);
+    }
+
+    /**
+     * shein-trending-categories (GET /shein/trending/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-trending-categories", params);
+        return client.request("shein-trending-categories", params, options);
+    }
+
+    /**
+     * shein-trending-categories (GET /shein/trending/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingCategories() {
+        return trendingCategories(Map.of(), null);
+    }
+
+    /**
+     * shein-trending-filters (GET /shein/trending/filters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingFilters(Map<String, Object> params) {
+        return trendingFilters(params, null);
+    }
+
+    /**
+     * shein-trending-filters (GET /shein/trending/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingFilters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("shein-trending-filters", params);
+        return client.request("shein-trending-filters", params, options);
+    }
+
+    /**
+     * shein-trending-filters (GET /shein/trending/filters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendingFilters() {
+        return trendingFilters(Map.of(), null);
     }
 
 }

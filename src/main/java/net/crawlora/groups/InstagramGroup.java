@@ -19,6 +19,28 @@ public final class InstagramGroup {
     }
 
     /**
+     * instagram-comments (GET /instagram/post/comments).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object comments(Map<String, Object> params) {
+        return comments(params, null);
+    }
+
+    /**
+     * instagram-comments (GET /instagram/post/comments). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object comments(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("instagram-comments", params);
+        return client.request("instagram-comments", params, options);
+    }
+
+    /**
      * instagram-post (GET /instagram/post/{id}/{post_id}).
      *
      * @param params operation parameters
@@ -82,6 +104,28 @@ public final class InstagramGroup {
     public Object reels(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("instagram-reels", params);
         return client.request("instagram-reels", params, options);
+    }
+
+    /**
+     * instagram-user-posts (GET /instagram/user/{username}/posts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object userPosts(Map<String, Object> params) {
+        return userPosts(params, null);
+    }
+
+    /**
+     * instagram-user-posts (GET /instagram/user/{username}/posts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object userPosts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("instagram-user-posts", params);
+        return client.request("instagram-user-posts", params, options);
     }
 
 }

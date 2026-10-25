@@ -151,6 +151,28 @@ public final class YoutubeGroup {
     }
 
     /**
+     * youtube-comment-replies (GET /youtube/comments/{id}/replies).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentReplies(Map<String, Object> params) {
+        return commentReplies(params, null);
+    }
+
+    /**
+     * youtube-comment-replies (GET /youtube/comments/{id}/replies). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentReplies(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("youtube-comment-replies", params);
+        return client.request("youtube-comment-replies", params, options);
+    }
+
+    /**
      * youtube-playlist (GET /youtube/playlist/{id}).
      *
      * @param params operation parameters
