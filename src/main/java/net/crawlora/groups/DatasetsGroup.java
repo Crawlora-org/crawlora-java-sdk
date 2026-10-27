@@ -147,6 +147,103 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-apple-maps-places-facets (GET /datasets/apple-maps-places/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesFacets(Map<String, Object> params) {
+        return appleMapsPlacesFacets(params, null);
+    }
+
+    /**
+     * datasets-apple-maps-places-facets (GET /datasets/apple-maps-places/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-maps-places-facets", params);
+        return client.request("datasets-apple-maps-places-facets", params, options);
+    }
+
+    /**
+     * datasets-apple-maps-places-item (GET /datasets/apple-maps-places/items/{place_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesItem(Map<String, Object> params) {
+        return appleMapsPlacesItem(params, null);
+    }
+
+    /**
+     * datasets-apple-maps-places-item (GET /datasets/apple-maps-places/items/{place_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-maps-places-item", params);
+        return client.request("datasets-apple-maps-places-item", params, options);
+    }
+
+    /**
+     * datasets-apple-maps-places-nearby (GET /datasets/apple-maps-places/nearby).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesNearby(Map<String, Object> params) {
+        return appleMapsPlacesNearby(params, null);
+    }
+
+    /**
+     * datasets-apple-maps-places-nearby (GET /datasets/apple-maps-places/nearby). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesNearby(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-maps-places-nearby", params);
+        return client.request("datasets-apple-maps-places-nearby", params, options);
+    }
+
+    /**
+     * datasets-apple-maps-places-search (GET /datasets/apple-maps-places/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesSearch(Map<String, Object> params) {
+        return appleMapsPlacesSearch(params, null);
+    }
+
+    /**
+     * datasets-apple-maps-places-search (GET /datasets/apple-maps-places/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-maps-places-search", params);
+        return client.request("datasets-apple-maps-places-search", params, options);
+    }
+
+    /**
+     * datasets-apple-maps-places-search (GET /datasets/apple-maps-places/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleMapsPlacesSearch() {
+        return appleMapsPlacesSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-apple-podcasts-shows-facets (GET /datasets/apple-podcasts-shows/facets).
      *
      * @param params operation parameters

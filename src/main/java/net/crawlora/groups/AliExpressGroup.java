@@ -19,6 +19,90 @@ public final class AliExpressGroup {
     }
 
     /**
+     * aliexpress-categories (GET /aliexpress/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategories(Map<String, Object> params) {
+        return aliexpressCategories(params, null);
+    }
+
+    /**
+     * aliexpress-categories (GET /aliexpress/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("aliexpress-categories", params);
+        return client.request("aliexpress-categories", params, options);
+    }
+
+    /**
+     * aliexpress-categories (GET /aliexpress/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategories() {
+        return aliexpressCategories(Map.of(), null);
+    }
+
+    /**
+     * aliexpress-category-ids (GET /aliexpress/category-ids).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategoryIds(Map<String, Object> params) {
+        return aliexpressCategoryIds(params, null);
+    }
+
+    /**
+     * aliexpress-category-ids (GET /aliexpress/category-ids). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategoryIds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("aliexpress-category-ids", params);
+        return client.request("aliexpress-category-ids", params, options);
+    }
+
+    /**
+     * aliexpress-category-ids (GET /aliexpress/category-ids). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategoryIds() {
+        return aliexpressCategoryIds(Map.of(), null);
+    }
+
+    /**
+     * aliexpress-category-products (GET /aliexpress/category-products).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategoryProducts(Map<String, Object> params) {
+        return aliexpressCategoryProducts(params, null);
+    }
+
+    /**
+     * aliexpress-category-products (GET /aliexpress/category-products). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressCategoryProducts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("aliexpress-category-products", params);
+        return client.request("aliexpress-category-products", params, options);
+    }
+
+    /**
      * aliexpress-reviews (GET /aliexpress/reviews).
      *
      * @param params operation parameters
@@ -82,6 +166,59 @@ public final class AliExpressGroup {
     public Object aliexpressSearchFilters(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("aliexpress-search-filters", params);
         return client.request("aliexpress-search-filters", params, options);
+    }
+
+    /**
+     * aliexpress-suggest (GET /aliexpress/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressSuggest(Map<String, Object> params) {
+        return aliexpressSuggest(params, null);
+    }
+
+    /**
+     * aliexpress-suggest (GET /aliexpress/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressSuggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("aliexpress-suggest", params);
+        return client.request("aliexpress-suggest", params, options);
+    }
+
+    /**
+     * aliexpress-trending-searches (GET /aliexpress/trending-searches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressTrendingSearches(Map<String, Object> params) {
+        return aliexpressTrendingSearches(params, null);
+    }
+
+    /**
+     * aliexpress-trending-searches (GET /aliexpress/trending-searches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressTrendingSearches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("aliexpress-trending-searches", params);
+        return client.request("aliexpress-trending-searches", params, options);
+    }
+
+    /**
+     * aliexpress-trending-searches (GET /aliexpress/trending-searches). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object aliexpressTrendingSearches() {
+        return aliexpressTrendingSearches(Map.of(), null);
     }
 
 }
