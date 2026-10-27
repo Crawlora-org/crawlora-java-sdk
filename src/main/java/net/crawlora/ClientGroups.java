@@ -923,6 +923,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "dramaBox" operation group.
+     * @return a new {@link DramaBoxGroup} bound to this client
+     */
+    public DramaBoxGroup dramaBox() {
+        return new DramaBoxGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "duckDuckGoSearch" operation group.
      * @return a new {@link DuckDuckGoSearchGroup} bound to this client
      */
@@ -1755,6 +1763,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "kick" operation group.
+     * @return a new {@link KickGroup} bound to this client
+     */
+    public KickGroup kick() {
+        return new KickGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "kickstarter" operation group.
      * @return a new {@link KickstarterGroup} bound to this client
      */
@@ -2483,6 +2499,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "priceCharting" operation group.
+     * @return a new {@link PriceChartingGroup} bound to this client
+     */
+    public PriceChartingGroup priceCharting() {
+        return new PriceChartingGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "pristineAuction" operation group.
      * @return a new {@link PristineAuctionGroup} bound to this client
      */
@@ -2600,6 +2624,14 @@ public abstract class ClientGroups {
      */
     public RedfinGroup redfin() {
         return new RedfinGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "reelShort" operation group.
+     * @return a new {@link ReelShortGroup} bound to this client
+     */
+    public ReelShortGroup reelShort() {
+        return new ReelShortGroup((CrawloraClient) this);
     }
 
     /**
@@ -3131,6 +3163,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "tcgplayer" operation group.
+     * @return a new {@link TcgplayerGroup} bound to this client
+     */
+    public TcgplayerGroup tcgplayer() {
+        return new TcgplayerGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "techCrunch" operation group.
      * @return a new {@link TechCrunchGroup} bound to this client
      */
@@ -3144,6 +3184,14 @@ public abstract class ClientGroups {
      */
     public TechRadarGroup techRadar() {
         return new TechRadarGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "telegram" operation group.
+     * @return a new {@link TelegramGroup} bound to this client
+     */
+    public TelegramGroup telegram() {
+        return new TelegramGroup((CrawloraClient) this);
     }
 
     /**
@@ -3595,6 +3643,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "wallapop" operation group.
+     * @return a new {@link WallapopGroup} bound to this client
+     */
+    public WallapopGroup wallapop() {
+        return new WallapopGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "walmart" operation group.
      * @return a new {@link WalmartGroup} bound to this client
      */
@@ -3608,6 +3664,14 @@ public abstract class ClientGroups {
      */
     public WashingtonPostGroup washingtonPost() {
         return new WashingtonPostGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "wattpad" operation group.
+     * @return a new {@link WattpadGroup} bound to this client
+     */
+    public WattpadGroup wattpad() {
+        return new WattpadGroup((CrawloraClient) this);
     }
 
     /**

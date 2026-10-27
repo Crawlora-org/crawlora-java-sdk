@@ -116,6 +116,28 @@ public final class JumiaGroup {
     }
 
     /**
+     * jumia-reviews (GET /jumia/reviews).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object reviews(Map<String, Object> params) {
+        return reviews(params, null);
+    }
+
+    /**
+     * jumia-reviews (GET /jumia/reviews). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object reviews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jumia-reviews", params);
+        return client.request("jumia-reviews", params, options);
+    }
+
+    /**
      * jumia-search (GET /jumia/search).
      *
      * @param params operation parameters
@@ -135,6 +157,50 @@ public final class JumiaGroup {
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("jumia-search", params);
         return client.request("jumia-search", params, options);
+    }
+
+    /**
+     * jumia-sitemap-urls (GET /jumia/sitemap-urls).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemapUrls(Map<String, Object> params) {
+        return sitemapUrls(params, null);
+    }
+
+    /**
+     * jumia-sitemap-urls (GET /jumia/sitemap-urls). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemapUrls(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jumia-sitemap-urls", params);
+        return client.request("jumia-sitemap-urls", params, options);
+    }
+
+    /**
+     * jumia-sitemaps (GET /jumia/sitemaps).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params) {
+        return sitemaps(params, null);
+    }
+
+    /**
+     * jumia-sitemaps (GET /jumia/sitemaps). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("jumia-sitemaps", params);
+        return client.request("jumia-sitemaps", params, options);
     }
 
 }
