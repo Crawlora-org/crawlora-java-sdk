@@ -1059,6 +1059,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "epicGamesStore" operation group.
+     * @return a new {@link EpicGamesStoreGroup} bound to this client
+     */
+    public EpicGamesStoreGroup epicGamesStore() {
+        return new EpicGamesStoreGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "espn" operation group.
      * @return a new {@link EspnGroup} bound to this client
      */
@@ -1600,6 +1608,14 @@ public abstract class ClientGroups {
      */
     public HealthgradesGroup healthgrades() {
         return new HealthgradesGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "hearthstone" operation group.
+     * @return a new {@link HearthstoneGroup} bound to this client
+     */
+    public HearthstoneGroup hearthstone() {
+        return new HearthstoneGroup((CrawloraClient) this);
     }
 
     /**
@@ -2411,6 +2427,14 @@ public abstract class ClientGroups {
     }
 
     /**
+     * Typed accessor for the "nhl" operation group.
+     * @return a new {@link NhlGroup} bound to this client
+     */
+    public NhlGroup nhl() {
+        return new NhlGroup((CrawloraClient) this);
+    }
+
+    /**
      * Typed accessor for the "nike" operation group.
      * @return a new {@link NikeGroup} bound to this client
      */
@@ -3120,6 +3144,14 @@ public abstract class ClientGroups {
      */
     public SephoraGroup sephora() {
         return new SephoraGroup((CrawloraClient) this);
+    }
+
+    /**
+     * Typed accessor for the "serebii" operation group.
+     * @return a new {@link SerebiiGroup} bound to this client
+     */
+    public SerebiiGroup serebii() {
+        return new SerebiiGroup((CrawloraClient) this);
     }
 
     /**

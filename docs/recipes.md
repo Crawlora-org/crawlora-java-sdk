@@ -42,6 +42,29 @@ Object taxonomy = client.request("boardgamegeek-taxonomy", Map.of());
 Object navigation = client.request("cricbuzz-navigation", Map.of());
 ```
 
+## Epic Games, Hearthstone, NHL, and Serebii
+
+The contract now includes free-game promotions, card filters, NHL season discovery,
+and Pokémon GO event listings. See [`operations.md`](operations.md) for the full
+operation reference.
+
+```java
+Object promotions = client.request("epicgames-free-promotions", Map.of());
+Object filters = client.request("hearthstone-filters", Map.of());
+Object seasons = client.request("nhl-seasons", Map.of());
+Object events = client.request("serebii-pokemongo-events", Map.of("category", "events.shtml"));
+```
+
+## NBA and HLTV
+
+Use the new basketball catalog/standings endpoints alongside competitive Counter-Strike rankings.
+
+```java
+Object enums = client.request("nba-enums", Map.of());
+Object standings = client.request("nba-standings", Map.of());
+Object rankings = client.request("hltv-rankings", Map.of());
+```
+
 ## Company Job Searches
 
 Search public job listings directly from employer career sites:
