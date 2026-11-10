@@ -41,6 +41,59 @@ public final class YahooShoppingGroup {
     }
 
     /**
+     * yahoo-shopping-author (GET /yahoo-shopping/author).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params) {
+        return author(params, null);
+    }
+
+    /**
+     * yahoo-shopping-author (GET /yahoo-shopping/author). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object author(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-author", params);
+        return client.request("yahoo-shopping-author", params, options);
+    }
+
+    /**
+     * yahoo-shopping-categories (GET /yahoo-shopping/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params) {
+        return categories(params, null);
+    }
+
+    /**
+     * yahoo-shopping-categories (GET /yahoo-shopping/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-categories", params);
+        return client.request("yahoo-shopping-categories", params, options);
+    }
+
+    /**
+     * yahoo-shopping-categories (GET /yahoo-shopping/categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object categories() {
+        return categories(Map.of(), null);
+    }
+
+    /**
      * yahoo-shopping-category (GET /yahoo-shopping/category).
      *
      * @param params operation parameters
@@ -60,6 +113,37 @@ public final class YahooShoppingGroup {
     public Object category(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-shopping-category", params);
         return client.request("yahoo-shopping-category", params, options);
+    }
+
+    /**
+     * yahoo-shopping-experts (GET /yahoo-shopping/experts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object experts(Map<String, Object> params) {
+        return experts(params, null);
+    }
+
+    /**
+     * yahoo-shopping-experts (GET /yahoo-shopping/experts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object experts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-experts", params);
+        return client.request("yahoo-shopping-experts", params, options);
+    }
+
+    /**
+     * yahoo-shopping-experts (GET /yahoo-shopping/experts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object experts() {
+        return experts(Map.of(), null);
     }
 
     /**
@@ -147,6 +231,59 @@ public final class YahooShoppingGroup {
     }
 
     /**
+     * yahoo-shopping-sitemap (GET /yahoo-shopping/sitemap).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemap(Map<String, Object> params) {
+        return sitemap(params, null);
+    }
+
+    /**
+     * yahoo-shopping-sitemap (GET /yahoo-shopping/sitemap). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemap(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-sitemap", params);
+        return client.request("yahoo-shopping-sitemap", params, options);
+    }
+
+    /**
+     * yahoo-shopping-sitemaps (GET /yahoo-shopping/sitemaps).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params) {
+        return sitemaps(params, null);
+    }
+
+    /**
+     * yahoo-shopping-sitemaps (GET /yahoo-shopping/sitemaps). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-sitemaps", params);
+        return client.request("yahoo-shopping-sitemaps", params, options);
+    }
+
+    /**
+     * yahoo-shopping-sitemaps (GET /yahoo-shopping/sitemaps). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sitemaps() {
+        return sitemaps(Map.of(), null);
+    }
+
+    /**
      * yahoo-shopping-store (GET /yahoo-shopping/store).
      *
      * @param params operation parameters
@@ -197,6 +334,28 @@ public final class YahooShoppingGroup {
      */
     public Object stores() {
         return stores(Map.of(), null);
+    }
+
+    /**
+     * yahoo-shopping-suggest (GET /yahoo-shopping/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params) {
+        return suggest(params, null);
+    }
+
+    /**
+     * yahoo-shopping-suggest (GET /yahoo-shopping/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object suggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-shopping-suggest", params);
+        return client.request("yahoo-shopping-suggest", params, options);
     }
 
 }
