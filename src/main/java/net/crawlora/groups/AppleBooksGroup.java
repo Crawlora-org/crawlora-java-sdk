@@ -41,6 +41,37 @@ public final class AppleBooksGroup {
     }
 
     /**
+     * apple-books-audiobook-charts (GET /apple-books/audiobook/charts).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object audiobookCharts(Map<String, Object> params) {
+        return audiobookCharts(params, null);
+    }
+
+    /**
+     * apple-books-audiobook-charts (GET /apple-books/audiobook/charts). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object audiobookCharts(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-books-audiobook-charts", params);
+        return client.request("apple-books-audiobook-charts", params, options);
+    }
+
+    /**
+     * apple-books-audiobook-charts (GET /apple-books/audiobook/charts). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object audiobookCharts() {
+        return audiobookCharts(Map.of(), null);
+    }
+
+    /**
      * apple-books-audiobook-search (GET /apple-books/audiobook/search).
      *
      * @param params operation parameters
@@ -245,6 +276,28 @@ public final class AppleBooksGroup {
      */
     public Object charts() {
         return charts(Map.of(), null);
+    }
+
+    /**
+     * apple-books-genres (GET /apple-books/genres).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genres(Map<String, Object> params) {
+        return genres(params, null);
+    }
+
+    /**
+     * apple-books-genres (GET /apple-books/genres). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object genres(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("apple-books-genres", params);
+        return client.request("apple-books-genres", params, options);
     }
 
     /**

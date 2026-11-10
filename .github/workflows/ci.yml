@@ -22,6 +22,8 @@ jobs:
           cache: maven
       - name: Regenerate SDK
         run: python3 scripts/generate.py
+      - name: Test generator edge cases
+        run: python3 scripts/test_generate.py
       - name: Check generated files
         run: git diff --exit-code
       - name: Test

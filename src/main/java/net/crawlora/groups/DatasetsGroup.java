@@ -50,6 +50,81 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-airbnb-hosts-facets (GET /datasets/airbnb-hosts/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsFacets(Map<String, Object> params) {
+        return airbnbHostsFacets(params, null);
+    }
+
+    /**
+     * datasets-airbnb-hosts-facets (GET /datasets/airbnb-hosts/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-hosts-facets", params);
+        return client.request("datasets-airbnb-hosts-facets", params, options);
+    }
+
+    /**
+     * datasets-airbnb-hosts-item (GET /datasets/airbnb-hosts/items/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsItem(Map<String, Object> params) {
+        return airbnbHostsItem(params, null);
+    }
+
+    /**
+     * datasets-airbnb-hosts-item (GET /datasets/airbnb-hosts/items/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-hosts-item", params);
+        return client.request("datasets-airbnb-hosts-item", params, options);
+    }
+
+    /**
+     * datasets-airbnb-hosts-search (GET /datasets/airbnb-hosts/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsSearch(Map<String, Object> params) {
+        return airbnbHostsSearch(params, null);
+    }
+
+    /**
+     * datasets-airbnb-hosts-search (GET /datasets/airbnb-hosts/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-airbnb-hosts-search", params);
+        return client.request("datasets-airbnb-hosts-search", params, options);
+    }
+
+    /**
+     * datasets-airbnb-hosts-search (GET /datasets/airbnb-hosts/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object airbnbHostsSearch() {
+        return airbnbHostsSearch(Map.of(), null);
+    }
+
+    /**
      * datasets-airbnb-markets-facets (GET /datasets/airbnb-markets/facets).
      *
      * @param params operation parameters
@@ -144,6 +219,81 @@ public final class DatasetsGroup {
      */
     public Object airbnbMarketsSearch() {
         return airbnbMarketsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-apple-books-facets (GET /datasets/apple-books/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksFacets(Map<String, Object> params) {
+        return appleBooksFacets(params, null);
+    }
+
+    /**
+     * datasets-apple-books-facets (GET /datasets/apple-books/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-books-facets", params);
+        return client.request("datasets-apple-books-facets", params, options);
+    }
+
+    /**
+     * datasets-apple-books-item (GET /datasets/apple-books/items/{kind}/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksItem(Map<String, Object> params) {
+        return appleBooksItem(params, null);
+    }
+
+    /**
+     * datasets-apple-books-item (GET /datasets/apple-books/items/{kind}/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-books-item", params);
+        return client.request("datasets-apple-books-item", params, options);
+    }
+
+    /**
+     * datasets-apple-books-search (GET /datasets/apple-books/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksSearch(Map<String, Object> params) {
+        return appleBooksSearch(params, null);
+    }
+
+    /**
+     * datasets-apple-books-search (GET /datasets/apple-books/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apple-books-search", params);
+        return client.request("datasets-apple-books-search", params, options);
+    }
+
+    /**
+     * datasets-apple-books-search (GET /datasets/apple-books/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appleBooksSearch() {
+        return appleBooksSearch(Map.of(), null);
     }
 
     /**
@@ -319,6 +469,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-apps-charts-facets (GET /datasets/apps-charts/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsFacets(Map<String, Object> params) {
+        return appsChartsFacets(params, null);
+    }
+
+    /**
+     * datasets-apps-charts-facets (GET /datasets/apps-charts/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-charts-facets", params);
+        return client.request("datasets-apps-charts-facets", params, options);
+    }
+
+    /**
+     * datasets-apps-charts-item (GET /datasets/apps-charts/items/{chart_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsItem(Map<String, Object> params) {
+        return appsChartsItem(params, null);
+    }
+
+    /**
+     * datasets-apps-charts-item (GET /datasets/apps-charts/items/{chart_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsChartsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-charts-item", params);
+        return client.request("datasets-apps-charts-item", params, options);
+    }
+
+    /**
      * datasets-apps-charts-search (GET /datasets/apps-charts/search).
      *
      * @param params operation parameters
@@ -350,6 +544,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-apps-reviews-facets (GET /datasets/apps-reviews/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsFacets(Map<String, Object> params) {
+        return appsReviewsFacets(params, null);
+    }
+
+    /**
+     * datasets-apps-reviews-facets (GET /datasets/apps-reviews/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-reviews-facets", params);
+        return client.request("datasets-apps-reviews-facets", params, options);
+    }
+
+    /**
+     * datasets-apps-reviews-item (GET /datasets/apps-reviews/items/{review_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsItem(Map<String, Object> params) {
+        return appsReviewsItem(params, null);
+    }
+
+    /**
+     * datasets-apps-reviews-item (GET /datasets/apps-reviews/items/{review_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsReviewsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-reviews-item", params);
+        return client.request("datasets-apps-reviews-item", params, options);
+    }
+
+    /**
      * datasets-apps-reviews-search (GET /datasets/apps-reviews/search).
      *
      * @param params operation parameters
@@ -378,6 +616,50 @@ public final class DatasetsGroup {
      */
     public Object appsReviewsSearch() {
         return appsReviewsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-apps-facets (GET /datasets/apps/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsFacets(Map<String, Object> params) {
+        return appsFacets(params, null);
+    }
+
+    /**
+     * datasets-apps-facets (GET /datasets/apps/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-facets", params);
+        return client.request("datasets-apps-facets", params, options);
+    }
+
+    /**
+     * datasets-apps-item (GET /datasets/apps/items/{app_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsItem(Map<String, Object> params) {
+        return appsItem(params, null);
+    }
+
+    /**
+     * datasets-apps-item (GET /datasets/apps/items/{app_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object appsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-apps-item", params);
+        return client.request("datasets-apps-item", params, options);
     }
 
     /**
@@ -824,6 +1106,50 @@ public final class DatasetsGroup {
      */
     public Object chromeExtensionsTrending() {
         return chromeExtensionsTrending(Map.of(), null);
+    }
+
+    /**
+     * datasets-creators-facets (GET /datasets/creators/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsFacets(Map<String, Object> params) {
+        return creatorsFacets(params, null);
+    }
+
+    /**
+     * datasets-creators-facets (GET /datasets/creators/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-creators-facets", params);
+        return client.request("datasets-creators-facets", params, options);
+    }
+
+    /**
+     * datasets-creators-item (GET /datasets/creators/items/{creator_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsItem(Map<String, Object> params) {
+        return creatorsItem(params, null);
+    }
+
+    /**
+     * datasets-creators-item (GET /datasets/creators/items/{creator_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object creatorsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-creators-item", params);
+        return client.request("datasets-creators-item", params, options);
     }
 
     /**
@@ -2614,6 +2940,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-reddit-trending-facets (GET /datasets/reddit-trending/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingFacets(Map<String, Object> params) {
+        return redditTrendingFacets(params, null);
+    }
+
+    /**
+     * datasets-reddit-trending-facets (GET /datasets/reddit-trending/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-reddit-trending-facets", params);
+        return client.request("datasets-reddit-trending-facets", params, options);
+    }
+
+    /**
+     * datasets-reddit-trending-item (GET /datasets/reddit-trending/items/{post_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingItem(Map<String, Object> params) {
+        return redditTrendingItem(params, null);
+    }
+
+    /**
+     * datasets-reddit-trending-item (GET /datasets/reddit-trending/items/{post_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object redditTrendingItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-reddit-trending-item", params);
+        return client.request("datasets-reddit-trending-item", params, options);
+    }
+
+    /**
      * datasets-reddit-trending-search (GET /datasets/reddit-trending/search).
      *
      * @param params operation parameters
@@ -2914,6 +3284,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-steam-achievements-facets (GET /datasets/steam-achievements/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsFacets(Map<String, Object> params) {
+        return steamAchievementsFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-achievements-facets (GET /datasets/steam-achievements/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-achievements-facets", params);
+        return client.request("datasets-steam-achievements-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-achievements-item (GET /datasets/steam-achievements/items/{app_id}/{name}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsItem(Map<String, Object> params) {
+        return steamAchievementsItem(params, null);
+    }
+
+    /**
+     * datasets-steam-achievements-item (GET /datasets/steam-achievements/items/{app_id}/{name}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamAchievementsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-achievements-item", params);
+        return client.request("datasets-steam-achievements-item", params, options);
+    }
+
+    /**
      * datasets-steam-achievements-search (GET /datasets/steam-achievements/search).
      *
      * @param params operation parameters
@@ -2942,6 +3356,50 @@ public final class DatasetsGroup {
      */
     public Object steamAchievementsSearch() {
         return steamAchievementsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-charts-facets (GET /datasets/steam-charts/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsFacets(Map<String, Object> params) {
+        return steamChartsFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-charts-facets (GET /datasets/steam-charts/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-charts-facets", params);
+        return client.request("datasets-steam-charts-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-charts-item (GET /datasets/steam-charts/items/{chart_uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsItem(Map<String, Object> params) {
+        return steamChartsItem(params, null);
+    }
+
+    /**
+     * datasets-steam-charts-item (GET /datasets/steam-charts/items/{chart_uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamChartsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-charts-item", params);
+        return client.request("datasets-steam-charts-item", params, options);
     }
 
     /**
@@ -3051,6 +3509,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-steam-news-facets (GET /datasets/steam-news/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsFacets(Map<String, Object> params) {
+        return steamNewsFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-news-facets (GET /datasets/steam-news/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-news-facets", params);
+        return client.request("datasets-steam-news-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-news-item (GET /datasets/steam-news/items/{app_id}/{gid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsItem(Map<String, Object> params) {
+        return steamNewsItem(params, null);
+    }
+
+    /**
+     * datasets-steam-news-item (GET /datasets/steam-news/items/{app_id}/{gid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamNewsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-news-item", params);
+        return client.request("datasets-steam-news-item", params, options);
+    }
+
+    /**
      * datasets-steam-news-search (GET /datasets/steam-news/search).
      *
      * @param params operation parameters
@@ -3079,6 +3581,50 @@ public final class DatasetsGroup {
      */
     public Object steamNewsSearch() {
         return steamNewsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-steam-playercounts-facets (GET /datasets/steam-playercounts/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsFacets(Map<String, Object> params) {
+        return steamPlayercountsFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-playercounts-facets (GET /datasets/steam-playercounts/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-playercounts-facets", params);
+        return client.request("datasets-steam-playercounts-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-playercounts-item (GET /datasets/steam-playercounts/items/{app_id}/{snapshot_date}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsItem(Map<String, Object> params) {
+        return steamPlayercountsItem(params, null);
+    }
+
+    /**
+     * datasets-steam-playercounts-item (GET /datasets/steam-playercounts/items/{app_id}/{snapshot_date}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPlayercountsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-playercounts-item", params);
+        return client.request("datasets-steam-playercounts-item", params, options);
     }
 
     /**
@@ -3113,6 +3659,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-steam-prices-facets (GET /datasets/steam-prices/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesFacets(Map<String, Object> params) {
+        return steamPricesFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-prices-facets (GET /datasets/steam-prices/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-prices-facets", params);
+        return client.request("datasets-steam-prices-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-prices-item (GET /datasets/steam-prices/items/{app_id}/{snapshot_date}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesItem(Map<String, Object> params) {
+        return steamPricesItem(params, null);
+    }
+
+    /**
+     * datasets-steam-prices-item (GET /datasets/steam-prices/items/{app_id}/{snapshot_date}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamPricesItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-prices-item", params);
+        return client.request("datasets-steam-prices-item", params, options);
+    }
+
+    /**
      * datasets-steam-prices-search (GET /datasets/steam-prices/search).
      *
      * @param params operation parameters
@@ -3144,6 +3734,50 @@ public final class DatasetsGroup {
     }
 
     /**
+     * datasets-steam-reviews-facets (GET /datasets/steam-reviews/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsFacets(Map<String, Object> params) {
+        return steamReviewsFacets(params, null);
+    }
+
+    /**
+     * datasets-steam-reviews-facets (GET /datasets/steam-reviews/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-reviews-facets", params);
+        return client.request("datasets-steam-reviews-facets", params, options);
+    }
+
+    /**
+     * datasets-steam-reviews-item (GET /datasets/steam-reviews/items/{app_id}/{recommendation_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsItem(Map<String, Object> params) {
+        return steamReviewsItem(params, null);
+    }
+
+    /**
+     * datasets-steam-reviews-item (GET /datasets/steam-reviews/items/{app_id}/{recommendation_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object steamReviewsItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-steam-reviews-item", params);
+        return client.request("datasets-steam-reviews-item", params, options);
+    }
+
+    /**
      * datasets-steam-reviews-search (GET /datasets/steam-reviews/search).
      *
      * @param params operation parameters
@@ -3172,6 +3806,81 @@ public final class DatasetsGroup {
      */
     public Object steamReviewsSearch() {
         return steamReviewsSearch(Map.of(), null);
+    }
+
+    /**
+     * datasets-substack-facets (GET /datasets/substack/facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackFacets(Map<String, Object> params) {
+        return substackFacets(params, null);
+    }
+
+    /**
+     * datasets-substack-facets (GET /datasets/substack/facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-substack-facets", params);
+        return client.request("datasets-substack-facets", params, options);
+    }
+
+    /**
+     * datasets-substack-item (GET /datasets/substack/items/{uid}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackItem(Map<String, Object> params) {
+        return substackItem(params, null);
+    }
+
+    /**
+     * datasets-substack-item (GET /datasets/substack/items/{uid}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackItem(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-substack-item", params);
+        return client.request("datasets-substack-item", params, options);
+    }
+
+    /**
+     * datasets-substack-search (GET /datasets/substack/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackSearch(Map<String, Object> params) {
+        return substackSearch(params, null);
+    }
+
+    /**
+     * datasets-substack-search (GET /datasets/substack/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("datasets-substack-search", params);
+        return client.request("datasets-substack-search", params, options);
+    }
+
+    /**
+     * datasets-substack-search (GET /datasets/substack/search). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object substackSearch() {
+        return substackSearch(Map.of(), null);
     }
 
     /**

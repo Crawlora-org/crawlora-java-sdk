@@ -200,24 +200,33 @@ def render_operations(model):
             lines.append(f"        m.put({java_string(operation_id)}, {_operation_literal(op)});")
         lines.append("    }")
         lines.append("")
+    group_items = list(model.groups.items())
+    group_chunk_size = 30
+    group_chunk_count = (len(group_items) + group_chunk_size - 1) // group_chunk_size
     lines.extend([
         "",
         "    private static Map<String, Map<String, String>> buildGroups() {",
         "        Map<String, Map<String, String>> g = new LinkedHashMap<>();",
     ])
-    for group_name, methods in model.groups.items():
-        lines.append("        {")
-        lines.append("            Map<String, String> group = new LinkedHashMap<>();")
-        for method_name, operation_id in methods.items():
-            lines.append(f"            group.put({java_string(method_name)}, {java_string(operation_id)});")
-        lines.append(f"            g.put({java_string(group_name)}, Map.copyOf(group));")
-        lines.append("        }")
+    for chunk_index in range(group_chunk_count):
+        lines.append(f"        putGroups{chunk_index}(g);")
     lines.extend([
         "        return Map.copyOf(g);",
         "    }",
-        "}",
         "",
     ])
+    for chunk_index in range(group_chunk_count):
+        lines.append(f"    private static void putGroups{chunk_index}(Map<String, Map<String, String>> g) {{")
+        for group_name, methods in group_items[chunk_index * group_chunk_size:(chunk_index + 1) * group_chunk_size]:
+            lines.append("        {")
+            lines.append("            Map<String, String> group = new LinkedHashMap<>();")
+            for method_name, operation_id in methods.items():
+                lines.append(f"            group.put({java_string(method_name)}, {java_string(operation_id)});")
+            lines.append(f"            g.put({java_string(group_name)}, Map.copyOf(group));")
+            lines.append("        }")
+        lines.append("    }")
+        lines.append("")
+    lines.extend(["}", ""])
     return "\n".join(lines)
 
 

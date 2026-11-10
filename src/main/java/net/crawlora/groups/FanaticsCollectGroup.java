@@ -81,6 +81,59 @@ public final class FanaticsCollectGroup {
     }
 
     /**
+     * fanaticscollect-instant-pack-release (GET /fanaticscollect/instant-packs/release).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantPackRelease(Map<String, Object> params) {
+        return fanaticscollectInstantPackRelease(params, null);
+    }
+
+    /**
+     * fanaticscollect-instant-pack-release (GET /fanaticscollect/instant-packs/release). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantPackRelease(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-instant-pack-release", params);
+        return client.request("fanaticscollect-instant-pack-release", params, options);
+    }
+
+    /**
+     * fanaticscollect-instant-pack-releases (GET /fanaticscollect/instant-packs/releases).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantPackReleases(Map<String, Object> params) {
+        return fanaticscollectInstantPackReleases(params, null);
+    }
+
+    /**
+     * fanaticscollect-instant-pack-releases (GET /fanaticscollect/instant-packs/releases). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantPackReleases(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-instant-pack-releases", params);
+        return client.request("fanaticscollect-instant-pack-releases", params, options);
+    }
+
+    /**
+     * fanaticscollect-instant-pack-releases (GET /fanaticscollect/instant-packs/releases). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantPackReleases() {
+        return fanaticscollectInstantPackReleases(Map.of(), null);
+    }
+
+    /**
      * fanaticscollect-instant-rips-categories (GET /fanaticscollect/instant-rips/categories).
      *
      * @param params operation parameters
@@ -112,6 +165,112 @@ public final class FanaticsCollectGroup {
     }
 
     /**
+     * fanaticscollect-instant-rips-pack-categories (GET /fanaticscollect/instant-rips/pack-categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPackCategories(Map<String, Object> params) {
+        return fanaticscollectInstantRipsPackCategories(params, null);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-pack-categories (GET /fanaticscollect/instant-rips/pack-categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPackCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-instant-rips-pack-categories", params);
+        return client.request("fanaticscollect-instant-rips-pack-categories", params, options);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-pack-categories (GET /fanaticscollect/instant-rips/pack-categories). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPackCategories() {
+        return fanaticscollectInstantRipsPackCategories(Map.of(), null);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-pack-checklist (GET /fanaticscollect/instant-rips/pack-checklist).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPackChecklist(Map<String, Object> params) {
+        return fanaticscollectInstantRipsPackChecklist(params, null);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-pack-checklist (GET /fanaticscollect/instant-rips/pack-checklist). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPackChecklist(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-instant-rips-pack-checklist", params);
+        return client.request("fanaticscollect-instant-rips-pack-checklist", params, options);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-packs (GET /fanaticscollect/instant-rips/packs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPacks(Map<String, Object> params) {
+        return fanaticscollectInstantRipsPacks(params, null);
+    }
+
+    /**
+     * fanaticscollect-instant-rips-packs (GET /fanaticscollect/instant-rips/packs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectInstantRipsPacks(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-instant-rips-packs", params);
+        return client.request("fanaticscollect-instant-rips-packs", params, options);
+    }
+
+    /**
+     * fanaticscollect-recently-ripped (GET /fanaticscollect/instant-rips/recently-ripped).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectRecentlyRipped(Map<String, Object> params) {
+        return fanaticscollectRecentlyRipped(params, null);
+    }
+
+    /**
+     * fanaticscollect-recently-ripped (GET /fanaticscollect/instant-rips/recently-ripped). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectRecentlyRipped(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-recently-ripped", params);
+        return client.request("fanaticscollect-recently-ripped", params, options);
+    }
+
+    /**
+     * fanaticscollect-recently-ripped (GET /fanaticscollect/instant-rips/recently-ripped). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectRecentlyRipped() {
+        return fanaticscollectRecentlyRipped(Map.of(), null);
+    }
+
+    /**
      * fanaticscollect-listing (GET /fanaticscollect/listing/{id}).
      *
      * @param params operation parameters
@@ -131,6 +290,68 @@ public final class FanaticsCollectGroup {
     public Object fanaticscollectListing(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("fanaticscollect-listing", params);
         return client.request("fanaticscollect-listing", params, options);
+    }
+
+    /**
+     * fanaticscollect-newsroom (GET /fanaticscollect/newsroom).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroom(Map<String, Object> params) {
+        return fanaticscollectNewsroom(params, null);
+    }
+
+    /**
+     * fanaticscollect-newsroom (GET /fanaticscollect/newsroom). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroom(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-newsroom", params);
+        return client.request("fanaticscollect-newsroom", params, options);
+    }
+
+    /**
+     * fanaticscollect-newsroom (GET /fanaticscollect/newsroom). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroom() {
+        return fanaticscollectNewsroom(Map.of(), null);
+    }
+
+    /**
+     * fanaticscollect-newsroom-filters (GET /fanaticscollect/newsroom/filters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroomFilters(Map<String, Object> params) {
+        return fanaticscollectNewsroomFilters(params, null);
+    }
+
+    /**
+     * fanaticscollect-newsroom-filters (GET /fanaticscollect/newsroom/filters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroomFilters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fanaticscollect-newsroom-filters", params);
+        return client.request("fanaticscollect-newsroom-filters", params, options);
+    }
+
+    /**
+     * fanaticscollect-newsroom-filters (GET /fanaticscollect/newsroom/filters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fanaticscollectNewsroomFilters() {
+        return fanaticscollectNewsroomFilters(Map.of(), null);
     }
 
     /**

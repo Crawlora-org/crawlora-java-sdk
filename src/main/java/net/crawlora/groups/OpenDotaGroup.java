@@ -94,6 +94,68 @@ public final class OpenDotaGroup {
     }
 
     /**
+     * opendota-find-matches (GET /opendota/find-matches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaFindMatches(Map<String, Object> params) {
+        return opendotaFindMatches(params, null);
+    }
+
+    /**
+     * opendota-find-matches (GET /opendota/find-matches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaFindMatches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("opendota-find-matches", params);
+        return client.request("opendota-find-matches", params, options);
+    }
+
+    /**
+     * opendota-find-matches (GET /opendota/find-matches). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaFindMatches() {
+        return opendotaFindMatches(Map.of(), null);
+    }
+
+    /**
+     * opendota-hero-descriptions (GET /opendota/hero-descriptions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaHeroDescriptions(Map<String, Object> params) {
+        return opendotaHeroDescriptions(params, null);
+    }
+
+    /**
+     * opendota-hero-descriptions (GET /opendota/hero-descriptions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaHeroDescriptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("opendota-hero-descriptions", params);
+        return client.request("opendota-hero-descriptions", params, options);
+    }
+
+    /**
+     * opendota-hero-descriptions (GET /opendota/hero-descriptions). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaHeroDescriptions() {
+        return opendotaHeroDescriptions(Map.of(), null);
+    }
+
+    /**
      * opendota-hero-durations (GET /opendota/hero-durations).
      *
      * @param params operation parameters
@@ -135,6 +197,28 @@ public final class OpenDotaGroup {
     public Object opendotaHeroItems(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("opendota-hero-items", params);
         return client.request("opendota-hero-items", params, options);
+    }
+
+    /**
+     * opendota-hero-matches (GET /opendota/hero-matches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaHeroMatches(Map<String, Object> params) {
+        return opendotaHeroMatches(params, null);
+    }
+
+    /**
+     * opendota-hero-matches (GET /opendota/hero-matches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaHeroMatches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("opendota-hero-matches", params);
+        return client.request("opendota-hero-matches", params, options);
     }
 
     /**
@@ -493,6 +577,37 @@ public final class OpenDotaGroup {
      */
     public Object opendotaProPlayers() {
         return opendotaProPlayers(Map.of(), null);
+    }
+
+    /**
+     * opendota-public-matches (GET /opendota/public-matches).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaPublicMatches(Map<String, Object> params) {
+        return opendotaPublicMatches(params, null);
+    }
+
+    /**
+     * opendota-public-matches (GET /opendota/public-matches). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaPublicMatches(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("opendota-public-matches", params);
+        return client.request("opendota-public-matches", params, options);
+    }
+
+    /**
+     * opendota-public-matches (GET /opendota/public-matches). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object opendotaPublicMatches() {
+        return opendotaPublicMatches(Map.of(), null);
     }
 
     /**

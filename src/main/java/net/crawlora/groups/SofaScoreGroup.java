@@ -481,6 +481,28 @@ public final class SofaScoreGroup {
     }
 
     /**
+     * sofascore-event-player-actions (GET /sofascore/event-player-actions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sofascoreEventPlayerActions(Map<String, Object> params) {
+        return sofascoreEventPlayerActions(params, null);
+    }
+
+    /**
+     * sofascore-event-player-actions (GET /sofascore/event-player-actions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sofascoreEventPlayerActions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sofascore-event-player-actions", params);
+        return client.request("sofascore-event-player-actions", params, options);
+    }
+
+    /**
      * sofascore-event-player-heatmap (GET /sofascore/event-player-heatmap).
      *
      * @param params operation parameters
@@ -632,6 +654,28 @@ public final class SofaScoreGroup {
     public Object sofascoreEventTeamHeatmap(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("sofascore-event-team-heatmap", params);
         return client.request("sofascore-event-team-heatmap", params, options);
+    }
+
+    /**
+     * sofascore-event-team-shotmap (GET /sofascore/event-team-shotmap).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sofascoreEventTeamShotmap(Map<String, Object> params) {
+        return sofascoreEventTeamShotmap(params, null);
+    }
+
+    /**
+     * sofascore-event-team-shotmap (GET /sofascore/event-team-shotmap). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sofascoreEventTeamShotmap(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("sofascore-event-team-shotmap", params);
+        return client.request("sofascore-event-team-shotmap", params, options);
     }
 
     /**

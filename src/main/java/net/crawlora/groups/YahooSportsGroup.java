@@ -19,6 +19,81 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-college-rankings (GET /yahoo-sports/college-rankings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeRankings(Map<String, Object> params) {
+        return collegeRankings(params, null);
+    }
+
+    /**
+     * yahoo-sports-college-rankings (GET /yahoo-sports/college-rankings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object collegeRankings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-college-rankings", params);
+        return client.request("yahoo-sports-college-rankings", params, options);
+    }
+
+    /**
+     * yahoo-sports-draft (GET /yahoo-sports/draft).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draft(Map<String, Object> params) {
+        return draft(params, null);
+    }
+
+    /**
+     * yahoo-sports-draft (GET /yahoo-sports/draft). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object draft(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-draft", params);
+        return client.request("yahoo-sports-draft", params, options);
+    }
+
+    /**
+     * yahoo-sports-dropdown-catalog (GET /yahoo-sports/dropdown-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dropdownCatalog(Map<String, Object> params) {
+        return dropdownCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-dropdown-catalog (GET /yahoo-sports/dropdown-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dropdownCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-dropdown-catalog", params);
+        return client.request("yahoo-sports-dropdown-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-dropdown-catalog (GET /yahoo-sports/dropdown-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object dropdownCatalog() {
+        return dropdownCatalog(Map.of(), null);
+    }
+
+    /**
      * yahoo-sports-game (GET /yahoo-sports/game).
      *
      * @param params operation parameters
@@ -63,6 +138,81 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-golf-player (GET /yahoo-sports/golf-player).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayer(Map<String, Object> params) {
+        return golfPlayer(params, null);
+    }
+
+    /**
+     * yahoo-sports-golf-player (GET /yahoo-sports/golf-player). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayer(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-golf-player", params);
+        return client.request("yahoo-sports-golf-player", params, options);
+    }
+
+    /**
+     * yahoo-sports-golf-player-news (GET /yahoo-sports/golf-player-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayerNews(Map<String, Object> params) {
+        return golfPlayerNews(params, null);
+    }
+
+    /**
+     * yahoo-sports-golf-player-news (GET /yahoo-sports/golf-player-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayerNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-golf-player-news", params);
+        return client.request("yahoo-sports-golf-player-news", params, options);
+    }
+
+    /**
+     * yahoo-sports-golf-players (GET /yahoo-sports/golf-players).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayers(Map<String, Object> params) {
+        return golfPlayers(params, null);
+    }
+
+    /**
+     * yahoo-sports-golf-players (GET /yahoo-sports/golf-players). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-golf-players", params);
+        return client.request("yahoo-sports-golf-players", params, options);
+    }
+
+    /**
+     * yahoo-sports-golf-players (GET /yahoo-sports/golf-players). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object golfPlayers() {
+        return golfPlayers(Map.of(), null);
+    }
+
+    /**
      * yahoo-sports-golf-schedule (GET /yahoo-sports/golf-schedule).
      *
      * @param params operation parameters
@@ -82,6 +232,112 @@ public final class YahooSportsGroup {
     public Object golfSchedule(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-sports-golf-schedule", params);
         return client.request("yahoo-sports-golf-schedule", params, options);
+    }
+
+    /**
+     * yahoo-sports-home (GET /yahoo-sports/home).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object home(Map<String, Object> params) {
+        return home(params, null);
+    }
+
+    /**
+     * yahoo-sports-home (GET /yahoo-sports/home). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object home(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-home", params);
+        return client.request("yahoo-sports-home", params, options);
+    }
+
+    /**
+     * yahoo-sports-home (GET /yahoo-sports/home). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object home() {
+        return home(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-injury-report (GET /yahoo-sports/injury-report).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object injuryReport(Map<String, Object> params) {
+        return injuryReport(params, null);
+    }
+
+    /**
+     * yahoo-sports-injury-report (GET /yahoo-sports/injury-report). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object injuryReport(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-injury-report", params);
+        return client.request("yahoo-sports-injury-report", params, options);
+    }
+
+    /**
+     * yahoo-sports-league-schedule (GET /yahoo-sports/league-schedule).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagueSchedule(Map<String, Object> params) {
+        return leagueSchedule(params, null);
+    }
+
+    /**
+     * yahoo-sports-league-schedule (GET /yahoo-sports/league-schedule). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagueSchedule(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-league-schedule", params);
+        return client.request("yahoo-sports-league-schedule", params, options);
+    }
+
+    /**
+     * yahoo-sports-leagues (GET /yahoo-sports/leagues).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagues(Map<String, Object> params) {
+        return leagues(params, null);
+    }
+
+    /**
+     * yahoo-sports-leagues (GET /yahoo-sports/leagues). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagues(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-leagues", params);
+        return client.request("yahoo-sports-leagues", params, options);
+    }
+
+    /**
+     * yahoo-sports-leagues (GET /yahoo-sports/leagues). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object leagues() {
+        return leagues(Map.of(), null);
     }
 
     /**
@@ -147,6 +403,37 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-more-news (GET /yahoo-sports/more-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object moreNews(Map<String, Object> params) {
+        return moreNews(params, null);
+    }
+
+    /**
+     * yahoo-sports-more-news (GET /yahoo-sports/more-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object moreNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-more-news", params);
+        return client.request("yahoo-sports-more-news", params, options);
+    }
+
+    /**
+     * yahoo-sports-more-news (GET /yahoo-sports/more-news). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object moreNews() {
+        return moreNews(Map.of(), null);
+    }
+
+    /**
      * yahoo-sports-motorsports-race (GET /yahoo-sports/motorsports-race).
      *
      * @param params operation parameters
@@ -191,6 +478,68 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-navigation (GET /yahoo-sports/navigation).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation(Map<String, Object> params) {
+        return navigation(params, null);
+    }
+
+    /**
+     * yahoo-sports-navigation (GET /yahoo-sports/navigation). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-navigation", params);
+        return client.request("yahoo-sports-navigation", params, options);
+    }
+
+    /**
+     * yahoo-sports-navigation (GET /yahoo-sports/navigation). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object navigation() {
+        return navigation(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-network-catalog (GET /yahoo-sports/network-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object networkCatalog(Map<String, Object> params) {
+        return networkCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-network-catalog (GET /yahoo-sports/network-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object networkCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-network-catalog", params);
+        return client.request("yahoo-sports-network-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-network-catalog (GET /yahoo-sports/network-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object networkCatalog() {
+        return networkCatalog(Map.of(), null);
+    }
+
+    /**
      * yahoo-sports-news (GET /yahoo-sports/news).
      *
      * @param params operation parameters
@@ -210,6 +559,165 @@ public final class YahooSportsGroup {
     public Object news(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-sports-news", params);
         return client.request("yahoo-sports-news", params, options);
+    }
+
+    /**
+     * yahoo-sports-newsletter-archive (GET /yahoo-sports/newsletter-archive).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsletterArchive(Map<String, Object> params) {
+        return newsletterArchive(params, null);
+    }
+
+    /**
+     * yahoo-sports-newsletter-archive (GET /yahoo-sports/newsletter-archive). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsletterArchive(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-newsletter-archive", params);
+        return client.request("yahoo-sports-newsletter-archive", params, options);
+    }
+
+    /**
+     * yahoo-sports-newsletters (GET /yahoo-sports/newsletters).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsletters(Map<String, Object> params) {
+        return newsletters(params, null);
+    }
+
+    /**
+     * yahoo-sports-newsletters (GET /yahoo-sports/newsletters). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsletters(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-newsletters", params);
+        return client.request("yahoo-sports-newsletters", params, options);
+    }
+
+    /**
+     * yahoo-sports-newsletters (GET /yahoo-sports/newsletters). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object newsletters() {
+        return newsletters(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-odds-featured (GET /yahoo-sports/odds-featured).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsFeatured(Map<String, Object> params) {
+        return oddsFeatured(params, null);
+    }
+
+    /**
+     * yahoo-sports-odds-featured (GET /yahoo-sports/odds-featured). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsFeatured(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-odds-featured", params);
+        return client.request("yahoo-sports-odds-featured", params, options);
+    }
+
+    /**
+     * yahoo-sports-odds-featured (GET /yahoo-sports/odds-featured). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsFeatured() {
+        return oddsFeatured(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-odds-game (GET /yahoo-sports/odds-game).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGame(Map<String, Object> params) {
+        return oddsGame(params, null);
+    }
+
+    /**
+     * yahoo-sports-odds-game (GET /yahoo-sports/odds-game). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGame(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-odds-game", params);
+        return client.request("yahoo-sports-odds-game", params, options);
+    }
+
+    /**
+     * yahoo-sports-odds-games (GET /yahoo-sports/odds-games).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGames(Map<String, Object> params) {
+        return oddsGames(params, null);
+    }
+
+    /**
+     * yahoo-sports-odds-games (GET /yahoo-sports/odds-games). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsGames(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-odds-games", params);
+        return client.request("yahoo-sports-odds-games", params, options);
+    }
+
+    /**
+     * yahoo-sports-odds-trending (GET /yahoo-sports/odds-trending).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsTrending(Map<String, Object> params) {
+        return oddsTrending(params, null);
+    }
+
+    /**
+     * yahoo-sports-odds-trending (GET /yahoo-sports/odds-trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsTrending(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-odds-trending", params);
+        return client.request("yahoo-sports-odds-trending", params, options);
+    }
+
+    /**
+     * yahoo-sports-odds-trending (GET /yahoo-sports/odds-trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oddsTrending() {
+        return oddsTrending(Map.of(), null);
     }
 
     /**
@@ -266,6 +774,147 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-player-search (GET /yahoo-sports/player-search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerSearch(Map<String, Object> params) {
+        return playerSearch(params, null);
+    }
+
+    /**
+     * yahoo-sports-player-search (GET /yahoo-sports/player-search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-player-search", params);
+        return client.request("yahoo-sports-player-search", params, options);
+    }
+
+    /**
+     * yahoo-sports-playoff-bracket (GET /yahoo-sports/playoff-bracket).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playoffBracket(Map<String, Object> params) {
+        return playoffBracket(params, null);
+    }
+
+    /**
+     * yahoo-sports-playoff-bracket (GET /yahoo-sports/playoff-bracket). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playoffBracket(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-playoff-bracket", params);
+        return client.request("yahoo-sports-playoff-bracket", params, options);
+    }
+
+    /**
+     * yahoo-sports-playoff-bracket-catalog (GET /yahoo-sports/playoff-bracket-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playoffBracketCatalog(Map<String, Object> params) {
+        return playoffBracketCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-playoff-bracket-catalog (GET /yahoo-sports/playoff-bracket-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playoffBracketCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-playoff-bracket-catalog", params);
+        return client.request("yahoo-sports-playoff-bracket-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-rss-catalog (GET /yahoo-sports/rss-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rssCatalog(Map<String, Object> params) {
+        return rssCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-rss-catalog (GET /yahoo-sports/rss-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rssCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-rss-catalog", params);
+        return client.request("yahoo-sports-rss-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-rss-catalog (GET /yahoo-sports/rss-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rssCatalog() {
+        return rssCatalog(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-rss-feed (GET /yahoo-sports/rss-feed).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rssFeed(Map<String, Object> params) {
+        return rssFeed(params, null);
+    }
+
+    /**
+     * yahoo-sports-rss-feed (GET /yahoo-sports/rss-feed). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object rssFeed(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-rss-feed", params);
+        return client.request("yahoo-sports-rss-feed", params, options);
+    }
+
+    /**
+     * yahoo-sports-schedule-catalog (GET /yahoo-sports/schedule-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object scheduleCatalog(Map<String, Object> params) {
+        return scheduleCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-schedule-catalog (GET /yahoo-sports/schedule-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object scheduleCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-schedule-catalog", params);
+        return client.request("yahoo-sports-schedule-catalog", params, options);
+    }
+
+    /**
      * yahoo-sports-scoreboard (GET /yahoo-sports/scoreboard).
      *
      * @param params operation parameters
@@ -288,6 +937,90 @@ public final class YahooSportsGroup {
     }
 
     /**
+     * yahoo-sports-section-stream (GET /yahoo-sports/section-stream).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sectionStream(Map<String, Object> params) {
+        return sectionStream(params, null);
+    }
+
+    /**
+     * yahoo-sports-section-stream (GET /yahoo-sports/section-stream). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sectionStream(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-section-stream", params);
+        return client.request("yahoo-sports-section-stream", params, options);
+    }
+
+    /**
+     * yahoo-sports-soccer-scoreboard (GET /yahoo-sports/soccer-scoreboard).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object soccerScoreboard(Map<String, Object> params) {
+        return soccerScoreboard(params, null);
+    }
+
+    /**
+     * yahoo-sports-soccer-scoreboard (GET /yahoo-sports/soccer-scoreboard). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object soccerScoreboard(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-soccer-scoreboard", params);
+        return client.request("yahoo-sports-soccer-scoreboard", params, options);
+    }
+
+    /**
+     * yahoo-sports-soccer-scoreboard (GET /yahoo-sports/soccer-scoreboard). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object soccerScoreboard() {
+        return soccerScoreboard(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-sportsbook-catalog (GET /yahoo-sports/sportsbook-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sportsbookCatalog(Map<String, Object> params) {
+        return sportsbookCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-sportsbook-catalog (GET /yahoo-sports/sportsbook-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sportsbookCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-sportsbook-catalog", params);
+        return client.request("yahoo-sports-sportsbook-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-sportsbook-catalog (GET /yahoo-sports/sportsbook-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object sportsbookCatalog() {
+        return sportsbookCatalog(Map.of(), null);
+    }
+
+    /**
      * yahoo-sports-standings (GET /yahoo-sports/standings).
      *
      * @param params operation parameters
@@ -307,6 +1040,81 @@ public final class YahooSportsGroup {
     public Object standings(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("yahoo-sports-standings", params);
         return client.request("yahoo-sports-standings", params, options);
+    }
+
+    /**
+     * yahoo-sports-stats (GET /yahoo-sports/stats).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object stats(Map<String, Object> params) {
+        return stats(params, null);
+    }
+
+    /**
+     * yahoo-sports-stats (GET /yahoo-sports/stats). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object stats(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-stats", params);
+        return client.request("yahoo-sports-stats", params, options);
+    }
+
+    /**
+     * yahoo-sports-stats-catalog (GET /yahoo-sports/stats-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statsCatalog(Map<String, Object> params) {
+        return statsCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-stats-catalog (GET /yahoo-sports/stats-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statsCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-stats-catalog", params);
+        return client.request("yahoo-sports-stats-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-stats-catalog (GET /yahoo-sports/stats-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statsCatalog() {
+        return statsCatalog(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-stats-discovery (GET /yahoo-sports/stats-discovery).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statsDiscovery(Map<String, Object> params) {
+        return statsDiscovery(params, null);
+    }
+
+    /**
+     * yahoo-sports-stats-discovery (GET /yahoo-sports/stats-discovery). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object statsDiscovery(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-stats-discovery", params);
+        return client.request("yahoo-sports-stats-discovery", params, options);
     }
 
     /**
@@ -457,6 +1265,121 @@ public final class YahooSportsGroup {
      */
     public Object tennisScoreboard() {
         return tennisScoreboard(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-topic-news (GET /yahoo-sports/topic-news).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicNews(Map<String, Object> params) {
+        return topicNews(params, null);
+    }
+
+    /**
+     * yahoo-sports-topic-news (GET /yahoo-sports/topic-news). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicNews(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-topic-news", params);
+        return client.request("yahoo-sports-topic-news", params, options);
+    }
+
+    /**
+     * yahoo-sports-topic-news (GET /yahoo-sports/topic-news). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicNews() {
+        return topicNews(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-video-headlines (GET /yahoo-sports/video-headlines).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoHeadlines(Map<String, Object> params) {
+        return videoHeadlines(params, null);
+    }
+
+    /**
+     * yahoo-sports-video-headlines (GET /yahoo-sports/video-headlines). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoHeadlines(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-video-headlines", params);
+        return client.request("yahoo-sports-video-headlines", params, options);
+    }
+
+    /**
+     * yahoo-sports-video-list-catalog (GET /yahoo-sports/video-list-catalog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoListCatalog(Map<String, Object> params) {
+        return videoListCatalog(params, null);
+    }
+
+    /**
+     * yahoo-sports-video-list-catalog (GET /yahoo-sports/video-list-catalog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoListCatalog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-video-list-catalog", params);
+        return client.request("yahoo-sports-video-list-catalog", params, options);
+    }
+
+    /**
+     * yahoo-sports-video-list-catalog (GET /yahoo-sports/video-list-catalog). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object videoListCatalog() {
+        return videoListCatalog(Map.of(), null);
+    }
+
+    /**
+     * yahoo-sports-watch-schedule (GET /yahoo-sports/watch-schedule).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object watchSchedule(Map<String, Object> params) {
+        return watchSchedule(params, null);
+    }
+
+    /**
+     * yahoo-sports-watch-schedule (GET /yahoo-sports/watch-schedule). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object watchSchedule(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("yahoo-sports-watch-schedule", params);
+        return client.request("yahoo-sports-watch-schedule", params, options);
+    }
+
+    /**
+     * yahoo-sports-watch-schedule (GET /yahoo-sports/watch-schedule). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object watchSchedule() {
+        return watchSchedule(Map.of(), null);
     }
 
 }

@@ -19,6 +19,59 @@ public final class GosuGamersGroup {
     }
 
     /**
+     * gosugamers-article (GET /gosugamers/article).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gosugamersArticle(Map<String, Object> params) {
+        return gosugamersArticle(params, null);
+    }
+
+    /**
+     * gosugamers-article (GET /gosugamers/article). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gosugamersArticle(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("gosugamers-article", params);
+        return client.request("gosugamers-article", params, options);
+    }
+
+    /**
+     * gosugamers-articles (GET /gosugamers/articles).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gosugamersArticles(Map<String, Object> params) {
+        return gosugamersArticles(params, null);
+    }
+
+    /**
+     * gosugamers-articles (GET /gosugamers/articles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gosugamersArticles(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("gosugamers-articles", params);
+        return client.request("gosugamers-articles", params, options);
+    }
+
+    /**
+     * gosugamers-articles (GET /gosugamers/articles). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object gosugamersArticles() {
+        return gosugamersArticles(Map.of(), null);
+    }
+
+    /**
      * gosugamers-encounters (GET /gosugamers/encounters).
      *
      * @param params operation parameters
