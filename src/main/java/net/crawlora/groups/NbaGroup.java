@@ -394,6 +394,37 @@ public final class NbaGroup {
     }
 
     /**
+     * nba-hustle-team (GET /nba/hustle-team).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hustleTeam(Map<String, Object> params) {
+        return hustleTeam(params, null);
+    }
+
+    /**
+     * nba-hustle-team (GET /nba/hustle-team). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hustleTeam(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-hustle-team", params);
+        return client.request("nba-hustle-team", params, options);
+    }
+
+    /**
+     * nba-hustle-team (GET /nba/hustle-team). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object hustleTeam() {
+        return hustleTeam(Map.of(), null);
+    }
+
+    /**
      * nba-league-game-log (GET /nba/league-game-log).
      *
      * @param params operation parameters
@@ -484,6 +515,37 @@ public final class NbaGroup {
      */
     public Object news() {
         return news(Map.of(), null);
+    }
+
+    /**
+     * nba-opp-pt-shot (GET /nba/opp-pt-shot).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oppPtShot(Map<String, Object> params) {
+        return oppPtShot(params, null);
+    }
+
+    /**
+     * nba-opp-pt-shot (GET /nba/opp-pt-shot). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oppPtShot(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-opp-pt-shot", params);
+        return client.request("nba-opp-pt-shot", params, options);
+    }
+
+    /**
+     * nba-opp-pt-shot (GET /nba/opp-pt-shot). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object oppPtShot() {
+        return oppPtShot(Map.of(), null);
     }
 
     /**
@@ -584,6 +646,37 @@ public final class NbaGroup {
     }
 
     /**
+     * nba-player-clutch (GET /nba/player-clutch).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerClutch(Map<String, Object> params) {
+        return playerClutch(params, null);
+    }
+
+    /**
+     * nba-player-clutch (GET /nba/player-clutch). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerClutch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-player-clutch", params);
+        return client.request("nba-player-clutch", params, options);
+    }
+
+    /**
+     * nba-player-clutch (GET /nba/player-clutch). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerClutch() {
+        return playerClutch(Map.of(), null);
+    }
+
+    /**
      * nba-player-dash-pt-shots (GET /nba/player-dash-pt-shots).
      *
      * @param params operation parameters
@@ -606,6 +699,28 @@ public final class NbaGroup {
     }
 
     /**
+     * nba-player-game-logs (GET /nba/player-game-logs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerGameLogs(Map<String, Object> params) {
+        return playerGameLogs(params, null);
+    }
+
+    /**
+     * nba-player-game-logs (GET /nba/player-game-logs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerGameLogs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-player-game-logs", params);
+        return client.request("nba-player-game-logs", params, options);
+    }
+
+    /**
      * nba-player-info (GET /nba/player-info).
      *
      * @param params operation parameters
@@ -625,6 +740,59 @@ public final class NbaGroup {
     public Object playerInfo(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("nba-player-info", params);
         return client.request("nba-player-info", params, options);
+    }
+
+    /**
+     * nba-player-profile-v2 (GET /nba/player-profile-v2).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerProfileV2(Map<String, Object> params) {
+        return playerProfileV2(params, null);
+    }
+
+    /**
+     * nba-player-profile-v2 (GET /nba/player-profile-v2). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerProfileV2(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-player-profile-v2", params);
+        return client.request("nba-player-profile-v2", params, options);
+    }
+
+    /**
+     * nba-player-pt-shot (GET /nba/player-pt-shot).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerPtShot(Map<String, Object> params) {
+        return playerPtShot(params, null);
+    }
+
+    /**
+     * nba-player-pt-shot (GET /nba/player-pt-shot). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerPtShot(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-player-pt-shot", params);
+        return client.request("nba-player-pt-shot", params, options);
+    }
+
+    /**
+     * nba-player-pt-shot (GET /nba/player-pt-shot). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerPtShot() {
+        return playerPtShot(Map.of(), null);
     }
 
     /**
@@ -656,6 +824,37 @@ public final class NbaGroup {
      */
     public Object playerStats() {
         return playerStats(Map.of(), null);
+    }
+
+    /**
+     * nba-player-streak-finder (GET /nba/player-streak-finder).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerStreakFinder(Map<String, Object> params) {
+        return playerStreakFinder(params, null);
+    }
+
+    /**
+     * nba-player-streak-finder (GET /nba/player-streak-finder). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerStreakFinder(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-player-streak-finder", params);
+        return client.request("nba-player-streak-finder", params, options);
+    }
+
+    /**
+     * nba-player-streak-finder (GET /nba/player-streak-finder). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object playerStreakFinder() {
+        return playerStreakFinder(Map.of(), null);
     }
 
     /**
@@ -876,6 +1075,50 @@ public final class NbaGroup {
     }
 
     /**
+     * nba-team-dash-pt-pass (GET /nba/team-dash-pt-pass).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamDashPtPass(Map<String, Object> params) {
+        return teamDashPtPass(params, null);
+    }
+
+    /**
+     * nba-team-dash-pt-pass (GET /nba/team-dash-pt-pass). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamDashPtPass(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-dash-pt-pass", params);
+        return client.request("nba-team-dash-pt-pass", params, options);
+    }
+
+    /**
+     * nba-team-dash-pt-shots (GET /nba/team-dash-pt-shots).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamDashPtShots(Map<String, Object> params) {
+        return teamDashPtShots(params, null);
+    }
+
+    /**
+     * nba-team-dash-pt-shots (GET /nba/team-dash-pt-shots). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamDashPtShots(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-dash-pt-shots", params);
+        return client.request("nba-team-dash-pt-shots", params, options);
+    }
+
+    /**
      * nba-team-details (GET /nba/team-details).
      *
      * @param params operation parameters
@@ -895,6 +1138,103 @@ public final class NbaGroup {
     public Object teamDetails(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("nba-team-details", params);
         return client.request("nba-team-details", params, options);
+    }
+
+    /**
+     * nba-team-game-logs (GET /nba/team-game-logs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamGameLogs(Map<String, Object> params) {
+        return teamGameLogs(params, null);
+    }
+
+    /**
+     * nba-team-game-logs (GET /nba/team-game-logs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamGameLogs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-game-logs", params);
+        return client.request("nba-team-game-logs", params, options);
+    }
+
+    /**
+     * nba-team-info-common (GET /nba/team-info-common).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamInfoCommon(Map<String, Object> params) {
+        return teamInfoCommon(params, null);
+    }
+
+    /**
+     * nba-team-info-common (GET /nba/team-info-common). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamInfoCommon(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-info-common", params);
+        return client.request("nba-team-info-common", params, options);
+    }
+
+    /**
+     * nba-team-on-off (GET /nba/team-on-off).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamOnOff(Map<String, Object> params) {
+        return teamOnOff(params, null);
+    }
+
+    /**
+     * nba-team-on-off (GET /nba/team-on-off). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamOnOff(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-on-off", params);
+        return client.request("nba-team-on-off", params, options);
+    }
+
+    /**
+     * nba-team-pt-shot (GET /nba/team-pt-shot).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamPtShot(Map<String, Object> params) {
+        return teamPtShot(params, null);
+    }
+
+    /**
+     * nba-team-pt-shot (GET /nba/team-pt-shot). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamPtShot(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-pt-shot", params);
+        return client.request("nba-team-pt-shot", params, options);
+    }
+
+    /**
+     * nba-team-pt-shot (GET /nba/team-pt-shot). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamPtShot() {
+        return teamPtShot(Map.of(), null);
     }
 
     /**
@@ -1001,6 +1341,37 @@ public final class NbaGroup {
     public Object teamStatsLeaders(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("nba-team-stats-leaders", params);
         return client.request("nba-team-stats-leaders", params, options);
+    }
+
+    /**
+     * nba-team-years (GET /nba/team-years).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamYears(Map<String, Object> params) {
+        return teamYears(params, null);
+    }
+
+    /**
+     * nba-team-years (GET /nba/team-years). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamYears(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("nba-team-years", params);
+        return client.request("nba-team-years", params, options);
+    }
+
+    /**
+     * nba-team-years (GET /nba/team-years). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamYears() {
+        return teamYears(Map.of(), null);
     }
 
 }
