@@ -19,6 +19,28 @@ public final class HltvGroup {
     }
 
     /**
+     * hltv-coach (GET /hltv/coach).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object coach(Map<String, Object> params) {
+        return coach(params, null);
+    }
+
+    /**
+     * hltv-coach (GET /hltv/coach). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object coach(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hltv-coach", params);
+        return client.request("hltv-coach", params, options);
+    }
+
+    /**
      * hltv-event (GET /hltv/event).
      *
      * @param params operation parameters
@@ -250,6 +272,99 @@ public final class HltvGroup {
     public Object team(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("hltv-team", params);
         return client.request("hltv-team", params, options);
+    }
+
+    /**
+     * hltv-transfers (GET /hltv/transfers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transfers(Map<String, Object> params) {
+        return transfers(params, null);
+    }
+
+    /**
+     * hltv-transfers (GET /hltv/transfers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transfers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hltv-transfers", params);
+        return client.request("hltv-transfers", params, options);
+    }
+
+    /**
+     * hltv-transfers (GET /hltv/transfers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transfers() {
+        return transfers(Map.of(), null);
+    }
+
+    /**
+     * hltv-valve-ranking (GET /hltv/valve-ranking).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRanking(Map<String, Object> params) {
+        return valveRanking(params, null);
+    }
+
+    /**
+     * hltv-valve-ranking (GET /hltv/valve-ranking). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRanking(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hltv-valve-ranking", params);
+        return client.request("hltv-valve-ranking", params, options);
+    }
+
+    /**
+     * hltv-valve-ranking (GET /hltv/valve-ranking). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRanking() {
+        return valveRanking(Map.of(), null);
+    }
+
+    /**
+     * hltv-valve-ranking-details (GET /hltv/valve-ranking-details).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRankingDetails(Map<String, Object> params) {
+        return valveRankingDetails(params, null);
+    }
+
+    /**
+     * hltv-valve-ranking-details (GET /hltv/valve-ranking-details). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRankingDetails(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("hltv-valve-ranking-details", params);
+        return client.request("hltv-valve-ranking-details", params, options);
+    }
+
+    /**
+     * hltv-valve-ranking-details (GET /hltv/valve-ranking-details). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object valveRankingDetails() {
+        return valveRankingDetails(Map.of(), null);
     }
 
 }

@@ -41,6 +41,28 @@ public final class XGroup {
     }
 
     /**
+     * x-post-detail (GET /x/post/{id}/detail).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postDetail(Map<String, Object> params) {
+        return postDetail(params, null);
+    }
+
+    /**
+     * x-post-detail (GET /x/post/{id}/detail). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postDetail(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("x-post-detail", params);
+        return client.request("x-post-detail", params, options);
+    }
+
+    /**
      * x-profile (GET /x/profile/{username}).
      *
      * @param params operation parameters
@@ -63,6 +85,28 @@ public final class XGroup {
     }
 
     /**
+     * x-profile-highlights (GET /x/profile/{username}/highlights).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object profileHighlights(Map<String, Object> params) {
+        return profileHighlights(params, null);
+    }
+
+    /**
+     * x-profile-highlights (GET /x/profile/{username}/highlights). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object profileHighlights(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("x-profile-highlights", params);
+        return client.request("x-profile-highlights", params, options);
+    }
+
+    /**
      * x-profile-posts (GET /x/profile/{username}/posts).
      *
      * @param params operation parameters
@@ -82,6 +126,99 @@ public final class XGroup {
     public Object profilePosts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("x-profile-posts", params);
         return client.request("x-profile-posts", params, options);
+    }
+
+    /**
+     * x-trending (GET /x/trending).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trending(Map<String, Object> params) {
+        return trending(params, null);
+    }
+
+    /**
+     * x-trending (GET /x/trending). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trending(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("x-trending", params);
+        return client.request("x-trending", params, options);
+    }
+
+    /**
+     * x-trending (GET /x/trending). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trending() {
+        return trending(Map.of(), null);
+    }
+
+    /**
+     * x-trends (GET /x/trends).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trends(Map<String, Object> params) {
+        return trends(params, null);
+    }
+
+    /**
+     * x-trends (GET /x/trends). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trends(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("x-trends", params);
+        return client.request("x-trends", params, options);
+    }
+
+    /**
+     * x-trends (GET /x/trends). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trends() {
+        return trends(Map.of(), null);
+    }
+
+    /**
+     * x-trends-locations (GET /x/trends/locations).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendsLocations(Map<String, Object> params) {
+        return trendsLocations(params, null);
+    }
+
+    /**
+     * x-trends-locations (GET /x/trends/locations). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendsLocations(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("x-trends-locations", params);
+        return client.request("x-trends-locations", params, options);
+    }
+
+    /**
+     * x-trends-locations (GET /x/trends/locations). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object trendsLocations() {
+        return trendsLocations(Map.of(), null);
     }
 
 }

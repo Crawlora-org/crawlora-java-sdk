@@ -425,6 +425,28 @@ public final class CricbuzzGroup {
     }
 
     /**
+     * cricbuzz-commentary (GET /cricbuzz/commentary).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentary(Map<String, Object> params) {
+        return commentary(params, null);
+    }
+
+    /**
+     * cricbuzz-commentary (GET /cricbuzz/commentary). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentary(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricbuzz-commentary", params);
+        return client.request("cricbuzz-commentary", params, options);
+    }
+
+    /**
      * cricbuzz-match-facts (GET /cricbuzz/match-facts).
      *
      * @param params operation parameters
@@ -606,6 +628,28 @@ public final class CricbuzzGroup {
     }
 
     /**
+     * cricbuzz-player (GET /cricbuzz/player).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object player(Map<String, Object> params) {
+        return player(params, null);
+    }
+
+    /**
+     * cricbuzz-player (GET /cricbuzz/player). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object player(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricbuzz-player", params);
+        return client.request("cricbuzz-player", params, options);
+    }
+
+    /**
      * cricbuzz-rankings (GET /cricbuzz/rankings).
      *
      * @param params operation parameters
@@ -752,6 +796,28 @@ public final class CricbuzzGroup {
     }
 
     /**
+     * cricbuzz-series-squads (GET /cricbuzz/series/squads).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seriesSquads(Map<String, Object> params) {
+        return seriesSquads(params, null);
+    }
+
+    /**
+     * cricbuzz-series-squads (GET /cricbuzz/series/squads). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seriesSquads(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricbuzz-series-squads", params);
+        return client.request("cricbuzz-series-squads", params, options);
+    }
+
+    /**
      * cricbuzz-series-stats (GET /cricbuzz/series/stats).
      *
      * @param params operation parameters
@@ -771,6 +837,28 @@ public final class CricbuzzGroup {
     public Object seriesStats(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("cricbuzz-series-stats", params);
         return client.request("cricbuzz-series-stats", params, options);
+    }
+
+    /**
+     * cricbuzz-team-players (GET /cricbuzz/team/players).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamPlayers(Map<String, Object> params) {
+        return teamPlayers(params, null);
+    }
+
+    /**
+     * cricbuzz-team-players (GET /cricbuzz/team/players). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamPlayers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricbuzz-team-players", params);
+        return client.request("cricbuzz-team-players", params, options);
     }
 
     /**

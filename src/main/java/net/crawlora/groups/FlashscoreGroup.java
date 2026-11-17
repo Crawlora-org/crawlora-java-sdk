@@ -187,8 +187,8 @@ public final class FlashscoreGroup {
      * @param params operation parameters
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object matchH2h(Map<String, Object> params) {
-        return matchH2h(params, null);
+    public Object matchH2H(Map<String, Object> params) {
+        return matchH2H(params, null);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class FlashscoreGroup {
      * @param options per-request options, or {@code null} for defaults
      * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
      */
-    public Object matchH2h(Map<String, Object> params, RequestOptions options) {
+    public Object matchH2H(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("flashscore-match-h2h", params);
         return client.request("flashscore-match-h2h", params, options);
     }

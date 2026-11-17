@@ -19,6 +19,81 @@ public final class PgaTourGroup {
     }
 
     /**
+     * pgatour-cups (GET /pgatour/cups).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCups(Map<String, Object> params) {
+        return pgatourCups(params, null);
+    }
+
+    /**
+     * pgatour-cups (GET /pgatour/cups). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCups(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("pgatour-cups", params);
+        return client.request("pgatour-cups", params, options);
+    }
+
+    /**
+     * pgatour-cups (GET /pgatour/cups). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCups() {
+        return pgatourCups(Map.of(), null);
+    }
+
+    /**
+     * pgatour-cup-standings (GET /pgatour/cups/{cup_id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCupStandings(Map<String, Object> params) {
+        return pgatourCupStandings(params, null);
+    }
+
+    /**
+     * pgatour-cup-standings (GET /pgatour/cups/{cup_id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCupStandings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("pgatour-cup-standings", params);
+        return client.request("pgatour-cup-standings", params, options);
+    }
+
+    /**
+     * pgatour-cup-options (GET /pgatour/cups/{cup_id}/options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCupOptions(Map<String, Object> params) {
+        return pgatourCupOptions(params, null);
+    }
+
+    /**
+     * pgatour-cup-options (GET /pgatour/cups/{cup_id}/options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pgatourCupOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("pgatour-cup-options", params);
+        return client.request("pgatour-cup-options", params, options);
+    }
+
+    /**
      * pgatour-leaderboard (GET /pgatour/leaderboard).
      *
      * @param params operation parameters

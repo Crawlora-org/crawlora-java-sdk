@@ -19,6 +19,28 @@ public final class CricinfoGroup {
     }
 
     /**
+     * cricinfo-ball-by-ball (GET /cricinfo/ball-by-ball).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ballByBall(Map<String, Object> params) {
+        return ballByBall(params, null);
+    }
+
+    /**
+     * cricinfo-ball-by-ball (GET /cricinfo/ball-by-ball). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object ballByBall(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricinfo-ball-by-ball", params);
+        return client.request("cricinfo-ball-by-ball", params, options);
+    }
+
+    /**
      * cricinfo-calendar (GET /cricinfo/calendar).
      *
      * @param params operation parameters
@@ -153,6 +175,50 @@ public final class CricinfoGroup {
     public Object match(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("cricinfo-match", params);
         return client.request("cricinfo-match", params, options);
+    }
+
+    /**
+     * cricinfo-match-impact-player (GET /cricinfo/match-impact-player).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchImpactPlayer(Map<String, Object> params) {
+        return matchImpactPlayer(params, null);
+    }
+
+    /**
+     * cricinfo-match-impact-player (GET /cricinfo/match-impact-player). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchImpactPlayer(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricinfo-match-impact-player", params);
+        return client.request("cricinfo-match-impact-player", params, options);
+    }
+
+    /**
+     * cricinfo-match-statistics (GET /cricinfo/match-statistics).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchStatistics(Map<String, Object> params) {
+        return matchStatistics(params, null);
+    }
+
+    /**
+     * cricinfo-match-statistics (GET /cricinfo/match-statistics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object matchStatistics(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("cricinfo-match-statistics", params);
+        return client.request("cricinfo-match-statistics", params, options);
     }
 
     /**
