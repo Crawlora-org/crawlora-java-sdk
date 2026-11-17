@@ -4,6 +4,12 @@ on:
   push:
     tags: ["v*"]
   workflow_dispatch:
+    inputs:
+      central_only:
+        description: "Retry Maven Central only; skip the already-published GitHub Packages version"
+        type: boolean
+        required: true
+        default: true
 
 permissions:
   contents: read
@@ -27,6 +33,15 @@ jobs:
           server-password: MAVEN_CENTRAL_PASSWORD
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
+      - name: Require Central publishing for manual retry
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.central_only }}
+        env:
+          PUBLISH_CENTRAL: ${{ vars.PUBLISH_CENTRAL }}
+        run: |
+          if [ "$PUBLISH_CENTRAL" != "true" ]; then
+            echo "Central-only retry requested, but PUBLISH_CENTRAL is not enabled." >&2
+            exit 1
+          fi
       - name: Verify tag matches version
         if: startsWith(github.ref, 'refs/tags/')
         run: |
@@ -51,6 +66,7 @@ jobs:
       # account needed. The central-publishing plugin is confined to the
       # `release` profile, so a plain `deploy` only targets GitHub Packages.
       - name: Publish to GitHub Packages
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.central_only }}
         run: >
           ./mvnw -B -DskipTests deploy
           -s .github/settings.xml
