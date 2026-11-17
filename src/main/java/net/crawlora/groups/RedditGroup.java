@@ -191,6 +191,50 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-comment (GET /reddit/comment/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object comment(Map<String, Object> params) {
+        return comment(params, null);
+    }
+
+    /**
+     * reddit-comment (GET /reddit/comment/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object comment(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-comment", params);
+        return client.request("reddit-comment", params, options);
+    }
+
+    /**
+     * reddit-comment-awards (GET /reddit/comment/{id}/awards).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentAwards(Map<String, Object> params) {
+        return commentAwards(params, null);
+    }
+
+    /**
+     * reddit-comment-awards (GET /reddit/comment/{id}/awards). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object commentAwards(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-comment-awards", params);
+        return client.request("reddit-comment-awards", params, options);
+    }
+
+    /**
      * reddit-comments (GET /reddit/comments/{id}).
      *
      * @param params operation parameters
@@ -257,6 +301,37 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-popular (GET /reddit/popular).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object popular(Map<String, Object> params) {
+        return popular(params, null);
+    }
+
+    /**
+     * reddit-popular (GET /reddit/popular). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object popular(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-popular", params);
+        return client.request("reddit-popular", params, options);
+    }
+
+    /**
+     * reddit-popular (GET /reddit/popular). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object popular() {
+        return popular(Map.of(), null);
+    }
+
+    /**
      * reddit-post (GET /reddit/post/{id}).
      *
      * @param params operation parameters
@@ -279,6 +354,50 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-post-awards (GET /reddit/post/{id}/awards).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postAwards(Map<String, Object> params) {
+        return postAwards(params, null);
+    }
+
+    /**
+     * reddit-post-awards (GET /reddit/post/{id}/awards). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postAwards(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-post-awards", params);
+        return client.request("reddit-post-awards", params, options);
+    }
+
+    /**
+     * reddit-posts-by-ids (GET /reddit/posts/ids).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postsByIds(Map<String, Object> params) {
+        return postsByIds(params, null);
+    }
+
+    /**
+     * reddit-posts-by-ids (GET /reddit/posts/ids). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object postsByIds(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-posts-by-ids", params);
+        return client.request("reddit-posts-by-ids", params, options);
+    }
+
+    /**
      * reddit-search (GET /reddit/search).
      *
      * @param params operation parameters
@@ -298,6 +417,50 @@ public final class RedditGroup {
     public Object search(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("reddit-search", params);
         return client.request("reddit-search", params, options);
+    }
+
+    /**
+     * reddit-search-comments (GET /reddit/search/comments).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchComments(Map<String, Object> params) {
+        return searchComments(params, null);
+    }
+
+    /**
+     * reddit-search-comments (GET /reddit/search/comments). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchComments(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-search-comments", params);
+        return client.request("reddit-search-comments", params, options);
+    }
+
+    /**
+     * reddit-search-people (GET /reddit/search/people).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchPeople(Map<String, Object> params) {
+        return searchPeople(params, null);
+    }
+
+    /**
+     * reddit-search-people (GET /reddit/search/people). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object searchPeople(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-search-people", params);
+        return client.request("reddit-search-people", params, options);
     }
 
     /**
@@ -345,6 +508,72 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-subreddit-flairs (GET /reddit/subreddit/{subreddit}/flairs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditFlairs(Map<String, Object> params) {
+        return subredditFlairs(params, null);
+    }
+
+    /**
+     * reddit-subreddit-flairs (GET /reddit/subreddit/{subreddit}/flairs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditFlairs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-flairs", params);
+        return client.request("reddit-subreddit-flairs", params, options);
+    }
+
+    /**
+     * reddit-subreddit-highlights (GET /reddit/subreddit/{subreddit}/highlights).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditHighlights(Map<String, Object> params) {
+        return subredditHighlights(params, null);
+    }
+
+    /**
+     * reddit-subreddit-highlights (GET /reddit/subreddit/{subreddit}/highlights). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditHighlights(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-highlights", params);
+        return client.request("reddit-subreddit-highlights", params, options);
+    }
+
+    /**
+     * reddit-subreddit-leaderboard-categories (GET /reddit/subreddit/{subreddit}/leaderboard/categories).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditLeaderboardCategories(Map<String, Object> params) {
+        return subredditLeaderboardCategories(params, null);
+    }
+
+    /**
+     * reddit-subreddit-leaderboard-categories (GET /reddit/subreddit/{subreddit}/leaderboard/categories). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditLeaderboardCategories(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-leaderboard-categories", params);
+        return client.request("reddit-subreddit-leaderboard-categories", params, options);
+    }
+
+    /**
      * reddit-subreddit-posts (GET /reddit/subreddit/{subreddit}/posts).
      *
      * @param params operation parameters
@@ -367,6 +596,103 @@ public final class RedditGroup {
     }
 
     /**
+     * reddit-subreddit-rules (GET /reddit/subreddit/{subreddit}/rules).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditRules(Map<String, Object> params) {
+        return subredditRules(params, null);
+    }
+
+    /**
+     * reddit-subreddit-rules (GET /reddit/subreddit/{subreddit}/rules). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditRules(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-rules", params);
+        return client.request("reddit-subreddit-rules", params, options);
+    }
+
+    /**
+     * reddit-subreddit-user-flairs (GET /reddit/subreddit/{subreddit}/user-flairs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditUserFlairs(Map<String, Object> params) {
+        return subredditUserFlairs(params, null);
+    }
+
+    /**
+     * reddit-subreddit-user-flairs (GET /reddit/subreddit/{subreddit}/user-flairs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditUserFlairs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-user-flairs", params);
+        return client.request("reddit-subreddit-user-flairs", params, options);
+    }
+
+    /**
+     * reddit-subreddit-wiki (GET /reddit/subreddit/{subreddit}/wiki).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditWiki(Map<String, Object> params) {
+        return subredditWiki(params, null);
+    }
+
+    /**
+     * reddit-subreddit-wiki (GET /reddit/subreddit/{subreddit}/wiki). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditWiki(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddit-wiki", params);
+        return client.request("reddit-subreddit-wiki", params, options);
+    }
+
+    /**
+     * reddit-subreddits-discover (GET /reddit/subreddits/discover).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsDiscover(Map<String, Object> params) {
+        return subredditsDiscover(params, null);
+    }
+
+    /**
+     * reddit-subreddits-discover (GET /reddit/subreddits/discover). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsDiscover(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddits-discover", params);
+        return client.request("reddit-subreddits-discover", params, options);
+    }
+
+    /**
+     * reddit-subreddits-discover (GET /reddit/subreddits/discover). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsDiscover() {
+        return subredditsDiscover(Map.of(), null);
+    }
+
+    /**
      * reddit-subreddits-posts (GET /reddit/subreddits/posts).
      *
      * @param params operation parameters
@@ -386,6 +712,134 @@ public final class RedditGroup {
     public Object subredditsPosts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("reddit-subreddits-posts", params);
         return client.request("reddit-subreddits-posts", params, options);
+    }
+
+    /**
+     * reddit-subreddits-search (GET /reddit/subreddits/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsSearch(Map<String, Object> params) {
+        return subredditsSearch(params, null);
+    }
+
+    /**
+     * reddit-subreddits-search (GET /reddit/subreddits/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddits-search", params);
+        return client.request("reddit-subreddits-search", params, options);
+    }
+
+    /**
+     * reddit-subreddits-suggest (GET /reddit/subreddits/suggest).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsSuggest(Map<String, Object> params) {
+        return subredditsSuggest(params, null);
+    }
+
+    /**
+     * reddit-subreddits-suggest (GET /reddit/subreddits/suggest). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object subredditsSuggest(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-subreddits-suggest", params);
+        return client.request("reddit-subreddits-suggest", params, options);
+    }
+
+    /**
+     * reddit-topics (GET /reddit/topics).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topics(Map<String, Object> params) {
+        return topics(params, null);
+    }
+
+    /**
+     * reddit-topics (GET /reddit/topics). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topics(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-topics", params);
+        return client.request("reddit-topics", params, options);
+    }
+
+    /**
+     * reddit-topics (GET /reddit/topics). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topics() {
+        return topics(Map.of(), null);
+    }
+
+    /**
+     * reddit-topics-broad (GET /reddit/topics/broad).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicsBroad(Map<String, Object> params) {
+        return topicsBroad(params, null);
+    }
+
+    /**
+     * reddit-topics-broad (GET /reddit/topics/broad). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicsBroad(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-topics-broad", params);
+        return client.request("reddit-topics-broad", params, options);
+    }
+
+    /**
+     * reddit-topics-broad (GET /reddit/topics/broad). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicsBroad() {
+        return topicsBroad(Map.of(), null);
+    }
+
+    /**
+     * reddit-topics-search (GET /reddit/topics/search).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicsSearch(Map<String, Object> params) {
+        return topicsSearch(params, null);
+    }
+
+    /**
+     * reddit-topics-search (GET /reddit/topics/search). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object topicsSearch(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-topics-search", params);
+        return client.request("reddit-topics-search", params, options);
     }
 
     /**
@@ -461,6 +915,28 @@ public final class RedditGroup {
     public Object userPosts(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("reddit-user-posts", params);
         return client.request("reddit-user-posts", params, options);
+    }
+
+    /**
+     * reddit-user-profile (GET /reddit/user/{username}/profile).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object userProfile(Map<String, Object> params) {
+        return userProfile(params, null);
+    }
+
+    /**
+     * reddit-user-profile (GET /reddit/user/{username}/profile). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object userProfile(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("reddit-user-profile", params);
+        return client.request("reddit-user-profile", params, options);
     }
 
 }

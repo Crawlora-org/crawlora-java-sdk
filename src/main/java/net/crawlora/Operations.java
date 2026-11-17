@@ -15,7 +15,7 @@ public final class Operations {
     private Operations() {}
 
     /** Total number of operations in the contract. */
-    public static final int OPERATION_COUNT = 4769;
+    public static final int OPERATION_COUNT = 5106;
 
     /** Immutable map of operation id to its runtime metadata. */
     public static final Map<String, Operation> OPERATIONS = buildOperations();
@@ -105,6 +105,12 @@ public final class Operations {
         putOperations77(m);
         putOperations78(m);
         putOperations79(m);
+        putOperations80(m);
+        putOperations81(m);
+        putOperations82(m);
+        putOperations83(m);
+        putOperations84(m);
+        putOperations85(m);
         return Map.copyOf(m);
     }
 
@@ -178,6 +184,104 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
+            List.of()));
+        m.put("7brew-categories", new Operation(
+            "7brew-categories",
+            "GET",
+            "/7brew/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("7brew-directory", new Operation(
+            "7brew-directory",
+            "GET",
+            "/7brew/directory",
+            List.of(),
+            List.of(
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("7brew-item", new Operation(
+            "7brew-item",
+            "GET",
+            "/7brew/item",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("7brew-menu", new Operation(
+            "7brew-menu",
+            "GET",
+            "/7brew/menu",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("menu", false, "string", List.of()),
+            new QueryParam("section", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("7brew-nearby", new Operation(
+            "7brew-nearby",
+            "GET",
+            "/7brew/nearby",
+            List.of(),
+            List.of(
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lng", false, "number", List.of()),
+            new QueryParam("radius", false, "integer", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("7brew-options", new Operation(
+            "7brew-options",
+            "GET",
+            "/7brew/options",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("7brew-store", new Operation(
+            "7brew-store",
+            "GET",
+            "/7brew/store",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
             List.of()));
         m.put("7now-catalog", new Operation(
             "7now-catalog",
@@ -876,6 +980,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations1(Map<String, Operation> m) {
         m.put("airbnb-room", new Operation(
             "airbnb-room",
             "GET",
@@ -973,9 +1080,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations1(Map<String, Operation> m) {
         m.put("aliexpress-categories", new Operation(
             "aliexpress-categories",
             "GET",
@@ -1732,6 +1836,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations2(Map<String, Operation> m) {
         m.put("anime-rankings", new Operation(
             "anime-rankings",
             "GET",
@@ -1837,9 +1944,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations2(Map<String, Operation> m) {
         m.put("apkTeardownDiff", new Operation(
             "apkTeardownDiff",
             "GET",
@@ -2641,6 +2745,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations3(Map<String, Operation> m) {
         m.put("apple-podcasts-show-episodes", new Operation(
             "apple-podcasts-show-episodes",
             "GET",
@@ -2745,9 +2852,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations3(Map<String, Operation> m) {
         m.put("appstore-editorial", new Operation(
             "appstore-editorial",
             "GET",
@@ -2907,6 +3011,152 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("aptoide-app", new Operation(
+            "aptoide-app",
+            "GET",
+            "/aptoide/app",
+            List.of(),
+            List.of(
+            new QueryParam("package", false, "string", List.of()),
+            new QueryParam("app_id", false, "integer", List.of()),
+            new QueryParam("md5", false, "string", List.of()),
+            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("language", false, "string", List.of("en_US", "ar_SA", "bg_BG", "bn_BD", "de_DE", "el_GR", "es_ES", "fa_IR", "fr_FR", "hi_IN", "hu_HU", "id_ID", "it_IT", "mr_IN", "ms_MY", "my_MM", "nl_NL", "pa_IN", "pl_PL", "pt_BR", "pt_PT", "ro_RO", "ru_RU", "sr_CS", "th_TH", "tr_TR", "vi_VN", "zh_CN", "es_MX", "ja_JP", "ko_KR", "uk_UA"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("aptoide-categories", new Operation(
+            "aptoide-categories",
+            "GET",
+            "/aptoide/categories",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("applications", "games"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("aptoide-collections", new Operation(
+            "aptoide-collections",
+            "GET",
+            "/aptoide/collections",
+            List.of(),
+            List.of(
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-list", new Operation(
+            "aptoide-list",
+            "GET",
+            "/aptoide/list",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("collection", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "added", "downloads", "rating", "trending7d", "trending30d", "trending90d")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-reviews", new Operation(
+            "aptoide-reviews",
+            "GET",
+            "/aptoide/reviews",
+            List.of(),
+            List.of(
+            new QueryParam("package", true, "string", List.of()),
+            new QueryParam("source", false, "string", List.of("reviews", "comments")),
+            new QueryParam("sort", false, "string", List.of("relevance", "latest", "points", "rating")),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-search", new Operation(
+            "aptoide-search",
+            "GET",
+            "/aptoide/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("apps", "stores")),
+            new QueryParam("trusted", false, "boolean", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-similar", new Operation(
+            "aptoide-similar",
+            "GET",
+            "/aptoide/similar",
+            List.of(),
+            List.of(
+            new QueryParam("package", false, "string", List.of()),
+            new QueryParam("app_id", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-store", new Operation(
+            "aptoide-store",
+            "GET",
+            "/aptoide/store",
+            List.of(),
+            List.of(
+            new QueryParam("store", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "added", "downloads", "rating", "trending7d", "trending30d", "trending90d")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("aptoide-versions", new Operation(
+            "aptoide-versions",
+            "GET",
+            "/aptoide/versions",
+            List.of(),
+            List.of(
+            new QueryParam("package", false, "string", List.of()),
+            new QueryParam("app_id", false, "integer", List.of()),
+            new QueryParam("store", false, "string", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("arbys-categories", new Operation(
             "arbys-categories",
@@ -3195,6 +3445,172 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("autoscout24-dealer", new Operation(
+            "autoscout24-dealer",
+            "GET",
+            "/autoscout24/dealer",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl")),
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("autoscout24-filters", new Operation(
+            "autoscout24-filters",
+            "GET",
+            "/autoscout24/filters",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("autoscout24-listing", new Operation(
+            "autoscout24-listing",
+            "GET",
+            "/autoscout24/listing",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl")),
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("autoscout24-makes", new Operation(
+            "autoscout24-makes",
+            "GET",
+            "/autoscout24/makes",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("autoscout24-models", new Operation(
+            "autoscout24-models",
+            "GET",
+            "/autoscout24/models",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl")),
+            new QueryParam("make", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("autoscout24-search", new Operation(
+            "autoscout24-search",
+            "GET",
+            "/autoscout24/search",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl")),
+            new QueryParam("make", false, "integer", List.of()),
+            new QueryParam("model", false, "integer", List.of()),
+            new QueryParam("model_line", false, "integer", List.of()),
+            new QueryParam("version", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("keyword", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of("A", "B", "D", "E", "F", "I", "L", "NL")),
+            new QueryParam("zip", false, "string", List.of()),
+            new QueryParam("radius", false, "integer", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of()),
+            new QueryParam("price_from", false, "integer", List.of()),
+            new QueryParam("price_to", false, "integer", List.of()),
+            new QueryParam("year_from", false, "integer", List.of()),
+            new QueryParam("year_to", false, "integer", List.of()),
+            new QueryParam("mileage_from", false, "integer", List.of()),
+            new QueryParam("mileage_to", false, "integer", List.of()),
+            new QueryParam("power_from", false, "integer", List.of()),
+            new QueryParam("power_to", false, "integer", List.of()),
+            new QueryParam("engine_size_from", false, "integer", List.of()),
+            new QueryParam("engine_size_to", false, "integer", List.of()),
+            new QueryParam("electric_range_from", false, "integer", List.of()),
+            new QueryParam("electric_range_to", false, "integer", List.of()),
+            new QueryParam("doors_from", false, "integer", List.of()),
+            new QueryParam("doors_to", false, "integer", List.of()),
+            new QueryParam("seats_from", false, "integer", List.of()),
+            new QueryParam("seats_to", false, "integer", List.of()),
+            new QueryParam("fuel", false, "string", List.of("2", "3", "B", "C", "D", "E", "H", "L", "M", "O")),
+            new QueryParam("gear", false, "string", List.of("A", "M", "S")),
+            new QueryParam("drivetrain", false, "string", List.of("4", "F", "R")),
+            new QueryParam("cylinders", false, "string", List.of("3", "4", "6", "8", "10plus")),
+            new QueryParam("body", false, "string", List.of("1", "2", "3", "4", "5", "6", "7", "12", "13")),
+            new QueryParam("body_color", false, "string", List.of("1", "2", "3", "4", "5", "6", "7", "10", "11", "12", "13", "14", "15", "16")),
+            new QueryParam("paint", false, "string", List.of("M", "O")),
+            new QueryParam("interior_color", false, "string", List.of("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11")),
+            new QueryParam("upholstery", false, "string", List.of("AL", "CL", "FL", "OT", "PL", "VL")),
+            new QueryParam("offer", false, "string", List.of("N", "U", "J", "O", "D", "S")),
+            new QueryParam("equipment", false, "string", List.of()),
+            new QueryParam("seals", false, "string", List.of()),
+            new QueryParam("price_evaluation", false, "string", List.of("1", "2", "3", "4", "5", "99")),
+            new QueryParam("emission_class", false, "string", List.of("1", "2", "3", "4", "5", "6", "11", "7", "8", "9", "10")),
+            new QueryParam("emission_sticker", false, "string", List.of("2", "3", "4")),
+            new QueryParam("seller_type", false, "string", List.of("D", "P")),
+            new QueryParam("dealer_id", false, "integer", List.of()),
+            new QueryParam("damage", false, "string", List.of("exclude", "include", "only")),
+            new QueryParam("previous_owners", false, "string", List.of("1", "2", "3", "4")),
+            new QueryParam("online_since", false, "string", List.of("1", "2", "3", "4", "5", "6", "7", "14")),
+            new QueryParam("battery_ownership", false, "string", List.of("1", "2", "3")),
+            new QueryParam("vat_deductible", false, "boolean", List.of()),
+            new QueryParam("super_deal", false, "boolean", List.of()),
+            new QueryParam("new_driver", false, "boolean", List.of()),
+            new QueryParam("finance_rate_from", false, "integer", List.of()),
+            new QueryParam("finance_rate_to", false, "integer", List.of()),
+            new QueryParam("leasing", false, "boolean", List.of()),
+            new QueryParam("leasing_rate_from", false, "integer", List.of()),
+            new QueryParam("leasing_rate_to", false, "integer", List.of()),
+            new QueryParam("leasing_duration_from", false, "integer", List.of()),
+            new QueryParam("leasing_duration_to", false, "integer", List.of()),
+            new QueryParam("leasing_mileage_from", false, "integer", List.of()),
+            new QueryParam("leasing_target_group", false, "string", List.of("P", "B")),
+            new QueryParam("leasing_available_now", false, "boolean", List.of()),
+            new QueryParam("leasing_trade_in_bonus", false, "boolean", List.of()),
+            new QueryParam("leasing_environment_bonus", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of("standard", "price", "financerate", "leasing_rate", "year", "model_year", "mileage", "power", "age", "distance")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("autoscout24-suggest", new Operation(
+            "autoscout24-suggest",
+            "GET",
+            "/autoscout24/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("site", false, "string", List.of("com", "de", "at", "it", "fr", "es", "nl", "lu", "be-fr", "be-nl")),
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("autotrader-dealer", new Operation(
             "autotrader-dealer",
             "GET",
@@ -3284,6 +3700,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations4(Map<String, Operation> m) {
         m.put("baidu-search", new Operation(
             "baidu-search",
             "GET",
@@ -3597,9 +4016,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations4(Map<String, Operation> m) {
         m.put("bbb-business-reviews", new Operation(
             "bbb-business-reviews",
             "GET",
@@ -4123,6 +4539,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations5(Map<String, Operation> m) {
         m.put("bilibili-anime-home", new Operation(
             "bilibili-anime-home",
             "GET",
@@ -4416,9 +4835,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations5(Map<String, Operation> m) {
         m.put("billing-me-subscription-change-cancel", new Operation(
             "billing-me-subscription-change-cancel",
             "POST",
@@ -4931,6 +5347,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations6(Map<String, Operation> m) {
         m.put("bo3-match", new Operation(
             "bo3-match",
             "GET",
@@ -5290,9 +5709,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations6(Map<String, Operation> m) {
         m.put("bo3-transfers", new Operation(
             "bo3-transfers",
             "GET",
@@ -5876,6 +6292,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations7(Map<String, Operation> m) {
         m.put("boxofficemojo-brands", new Operation(
             "boxofficemojo-brands",
             "GET",
@@ -6215,9 +6634,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations7(Map<String, Operation> m) {
         m.put("brave-search", new Operation(
             "brave-search",
             "GET",
@@ -6767,6 +7183,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations8(Map<String, Operation> m) {
         m.put("burberry-suggest", new Operation(
             "burberry-suggest",
             "GET",
@@ -7087,9 +7506,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations8(Map<String, Operation> m) {
         m.put("carmax-search", new Operation(
             "carmax-search",
             "GET",
@@ -7466,6 +7882,321 @@ public final class Operations {
             "GET",
             "/cbssports/sections",
             List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-club", new Operation(
+            "chesscom-club",
+            "GET",
+            "/chesscom/club/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-club-matches", new Operation(
+            "chesscom-club-matches",
+            "GET",
+            "/chesscom/club/{slug}/matches",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-club-members", new Operation(
+            "chesscom-club-members",
+            "GET",
+            "/chesscom/club/{slug}/members",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-country", new Operation(
+            "chesscom-country",
+            "GET",
+            "/chesscom/country/{iso}",
+            List.of("iso"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-match-live", new Operation(
+            "chesscom-match-live",
+            "GET",
+            "/chesscom/live-match/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-match-live-board", new Operation(
+            "chesscom-match-live-board",
+            "GET",
+            "/chesscom/live-match/{id}/{board}",
+            List.of("id", "board"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-match", new Operation(
+            "chesscom-match",
+            "GET",
+            "/chesscom/match/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-match-board", new Operation(
+            "chesscom-match-board",
+            "GET",
+            "/chesscom/match/{id}/{board}",
+            List.of("id", "board"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations9(Map<String, Operation> m) {
+        m.put("chesscom-player", new Operation(
+            "chesscom-player",
+            "GET",
+            "/chesscom/player/{username}",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-clubs", new Operation(
+            "chesscom-player-clubs",
+            "GET",
+            "/chesscom/player/{username}/clubs",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-games", new Operation(
+            "chesscom-player-games",
+            "GET",
+            "/chesscom/player/{username}/games",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-game-month", new Operation(
+            "chesscom-player-game-month",
+            "GET",
+            "/chesscom/player/{username}/games/archive/{year}/{month}",
+            List.of("username", "year", "month"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-game-month-pgn", new Operation(
+            "chesscom-player-game-month-pgn",
+            "GET",
+            "/chesscom/player/{username}/games/archive/{year}/{month}/pgn",
+            List.of("username", "year", "month"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-game-archives", new Operation(
+            "chesscom-player-game-archives",
+            "GET",
+            "/chesscom/player/{username}/games/archives",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-live-games-base-time", new Operation(
+            "chesscom-player-live-games-base-time",
+            "GET",
+            "/chesscom/player/{username}/games/live/{base_time}",
+            List.of("username", "base_time"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-live-games", new Operation(
+            "chesscom-player-live-games",
+            "GET",
+            "/chesscom/player/{username}/games/live/{base_time}/{increment}",
+            List.of("username", "base_time", "increment"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-games-to-move", new Operation(
+            "chesscom-player-games-to-move",
+            "GET",
+            "/chesscom/player/{username}/games/to-move",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-is-online", new Operation(
+            "chesscom-player-is-online",
+            "GET",
+            "/chesscom/player/{username}/is-online",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-matches", new Operation(
+            "chesscom-player-matches",
+            "GET",
+            "/chesscom/player/{username}/matches",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-stats", new Operation(
+            "chesscom-player-stats",
+            "GET",
+            "/chesscom/player/{username}/stats",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-player-tournaments", new Operation(
+            "chesscom-player-tournaments",
+            "GET",
+            "/chesscom/player/{username}/tournaments",
+            List.of("username"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-puzzle", new Operation(
+            "chesscom-puzzle",
+            "GET",
+            "/chesscom/puzzle",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-puzzle-random", new Operation(
+            "chesscom-puzzle-random",
+            "GET",
+            "/chesscom/puzzle/random",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-tournament", new Operation(
+            "chesscom-tournament",
+            "GET",
+            "/chesscom/tournament/{slug}",
+            List.of("slug"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-tournament-round", new Operation(
+            "chesscom-tournament-round",
+            "GET",
+            "/chesscom/tournament/{slug}/{round}",
+            List.of("slug", "round"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("chesscom-tournament-round-group", new Operation(
+            "chesscom-tournament-round-group",
+            "GET",
+            "/chesscom/tournament/{slug}/{round}/{group}",
+            List.of("slug", "round", "group"),
             List.of(),
             List.of(),
             null,
@@ -7916,9 +8647,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations9(Map<String, Operation> m) {
         m.put("chipotle-restaurant", new Operation(
             "chipotle-restaurant",
             "GET",
@@ -8083,6 +8811,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations10(Map<String, Operation> m) {
         m.put("chromewebstore-privacy", new Operation(
             "chromewebstore-privacy",
             "GET",
@@ -8287,6 +9018,226 @@ public final class Operations {
             "clevelandcom-news",
             "GET",
             "/clevelandcom/news",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-stats-field-sizes", new Operation(
+            "clinicaltrials-stats-field-sizes",
+            "GET",
+            "/clinicaltrials/stats/field-sizes",
+            List.of(),
+            List.of(
+            new QueryParam("fields", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-stats-field-values", new Operation(
+            "clinicaltrials-stats-field-values",
+            "GET",
+            "/clinicaltrials/stats/field-values",
+            List.of(),
+            List.of(
+            new QueryParam("fields", false, "string", List.of()),
+            new QueryParam("types", false, "string", List.of("ENUM", "STRING", "DATE", "INTEGER", "NUMBER", "BOOLEAN"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-stats-size", new Operation(
+            "clinicaltrials-stats-size",
+            "GET",
+            "/clinicaltrials/stats/size",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-studies", new Operation(
+            "clinicaltrials-studies",
+            "GET",
+            "/clinicaltrials/studies",
+            List.of(),
+            List.of(
+            new QueryParam("cond", false, "string", List.of()),
+            new QueryParam("term", false, "string", List.of()),
+            new QueryParam("locn", false, "string", List.of()),
+            new QueryParam("titles", false, "string", List.of()),
+            new QueryParam("intr", false, "string", List.of()),
+            new QueryParam("outc", false, "string", List.of()),
+            new QueryParam("spons", false, "string", List.of()),
+            new QueryParam("lead", false, "string", List.of()),
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("patient", false, "string", List.of()),
+            new QueryParam("overall_status", false, "string", List.of("ACTIVE_NOT_RECRUITING", "COMPLETED", "ENROLLING_BY_INVITATION", "NOT_YET_RECRUITING", "RECRUITING", "SUSPENDED", "TERMINATED", "WITHDRAWN", "AVAILABLE", "NO_LONGER_AVAILABLE", "TEMPORARILY_NOT_AVAILABLE", "APPROVED_FOR_MARKETING", "WITHHELD", "UNKNOWN")),
+            new QueryParam("latitude", false, "number", List.of()),
+            new QueryParam("longitude", false, "number", List.of()),
+            new QueryParam("distance", false, "string", List.of()),
+            new QueryParam("geo_decay", false, "string", List.of()),
+            new QueryParam("ids", false, "string", List.of()),
+            new QueryParam("advanced", false, "string", List.of()),
+            new QueryParam("synonyms", false, "string", List.of()),
+            new QueryParam("agg_filters", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of()),
+            new QueryParam("start_from", false, "string", List.of()),
+            new QueryParam("start_to", false, "string", List.of()),
+            new QueryParam("primary_completion_from", false, "string", List.of()),
+            new QueryParam("primary_completion_to", false, "string", List.of()),
+            new QueryParam("completion_from", false, "string", List.of()),
+            new QueryParam("completion_to", false, "string", List.of()),
+            new QueryParam("first_posted_from", false, "string", List.of()),
+            new QueryParam("first_posted_to", false, "string", List.of()),
+            new QueryParam("results_first_posted_from", false, "string", List.of()),
+            new QueryParam("results_first_posted_to", false, "string", List.of()),
+            new QueryParam("last_update_posted_from", false, "string", List.of()),
+            new QueryParam("last_update_posted_to", false, "string", List.of()),
+            new QueryParam("age_from", false, "string", List.of()),
+            new QueryParam("age_to", false, "string", List.of()),
+            new QueryParam("fields", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("count_total", false, "boolean", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("page_token", false, "string", List.of()),
+            new QueryParam("markup_format", false, "string", List.of("markdown", "legacy"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("page_token")));
+        m.put("clinicaltrials-studies-enums", new Operation(
+            "clinicaltrials-studies-enums",
+            "GET",
+            "/clinicaltrials/studies/enums",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-studies-facets", new Operation(
+            "clinicaltrials-studies-facets",
+            "GET",
+            "/clinicaltrials/studies/facets",
+            List.of(),
+            List.of(
+            new QueryParam("cond", false, "string", List.of()),
+            new QueryParam("term", false, "string", List.of()),
+            new QueryParam("locn", false, "string", List.of()),
+            new QueryParam("titles", false, "string", List.of()),
+            new QueryParam("intr", false, "string", List.of()),
+            new QueryParam("outc", false, "string", List.of()),
+            new QueryParam("spons", false, "string", List.of()),
+            new QueryParam("lead", false, "string", List.of()),
+            new QueryParam("id", false, "string", List.of()),
+            new QueryParam("patient", false, "string", List.of()),
+            new QueryParam("overall_status", false, "string", List.of("ACTIVE_NOT_RECRUITING", "COMPLETED", "ENROLLING_BY_INVITATION", "NOT_YET_RECRUITING", "RECRUITING", "SUSPENDED", "TERMINATED", "WITHDRAWN", "AVAILABLE", "NO_LONGER_AVAILABLE", "TEMPORARILY_NOT_AVAILABLE", "APPROVED_FOR_MARKETING", "WITHHELD", "UNKNOWN")),
+            new QueryParam("latitude", false, "number", List.of()),
+            new QueryParam("longitude", false, "number", List.of()),
+            new QueryParam("distance", false, "string", List.of()),
+            new QueryParam("geo_decay", false, "string", List.of()),
+            new QueryParam("ids", false, "string", List.of()),
+            new QueryParam("advanced", false, "string", List.of()),
+            new QueryParam("synonyms", false, "string", List.of()),
+            new QueryParam("agg_filters", false, "string", List.of()),
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("city", false, "string", List.of()),
+            new QueryParam("start_from", false, "string", List.of()),
+            new QueryParam("start_to", false, "string", List.of()),
+            new QueryParam("primary_completion_from", false, "string", List.of()),
+            new QueryParam("primary_completion_to", false, "string", List.of()),
+            new QueryParam("completion_from", false, "string", List.of()),
+            new QueryParam("completion_to", false, "string", List.of()),
+            new QueryParam("first_posted_from", false, "string", List.of()),
+            new QueryParam("first_posted_to", false, "string", List.of()),
+            new QueryParam("results_first_posted_from", false, "string", List.of()),
+            new QueryParam("results_first_posted_to", false, "string", List.of()),
+            new QueryParam("last_update_posted_from", false, "string", List.of()),
+            new QueryParam("last_update_posted_to", false, "string", List.of()),
+            new QueryParam("age_from", false, "string", List.of()),
+            new QueryParam("age_to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-studies-metadata", new Operation(
+            "clinicaltrials-studies-metadata",
+            "GET",
+            "/clinicaltrials/studies/metadata",
+            List.of(),
+            List.of(
+            new QueryParam("include_indexed_only", false, "boolean", List.of()),
+            new QueryParam("include_historic_only", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-studies-search-areas", new Operation(
+            "clinicaltrials-studies-search-areas",
+            "GET",
+            "/clinicaltrials/studies/search-areas",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-study", new Operation(
+            "clinicaltrials-study",
+            "GET",
+            "/clinicaltrials/study",
+            List.of(),
+            List.of(
+            new QueryParam("nct_id", true, "string", List.of()),
+            new QueryParam("fields", false, "string", List.of()),
+            new QueryParam("markup_format", false, "string", List.of("markdown", "legacy"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-suggest", new Operation(
+            "clinicaltrials-suggest",
+            "GET",
+            "/clinicaltrials/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("input", true, "string", List.of()),
+            new QueryParam("dictionary", false, "string", List.of("Condition", "InterventionName", "LeadSponsorName", "LocationFacility"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("clinicaltrials-version", new Operation(
+            "clinicaltrials-version",
+            "GET",
+            "/clinicaltrials/version",
             List.of(),
             List.of(),
             List.of(),
@@ -8774,7 +9725,7 @@ public final class Operations {
             List.of()));
     }
 
-    private static void putOperations10(Map<String, Operation> m) {
+    private static void putOperations11(Map<String, Operation> m) {
         m.put("coingecko-search", new Operation(
             "coingecko-search",
             "GET",
@@ -9140,6 +10091,136 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("copart-auctions", new Operation(
+            "copart-auctions",
+            "GET",
+            "/copart/auctions",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("copart-filters", new Operation(
+            "copart-filters",
+            "GET",
+            "/copart/filters",
+            List.of(),
+            List.of(
+            new QueryParam("make", false, "array", List.of()),
+            new QueryParam("model", false, "array", List.of()),
+            new QueryParam("yard", false, "array", List.of()),
+            new QueryParam("vehicle_type", false, "array", List.of()),
+            new QueryParam("query", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("copart-locations", new Operation(
+            "copart-locations",
+            "GET",
+            "/copart/locations",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("copart-lot", new Operation(
+            "copart-lot",
+            "GET",
+            "/copart/lot",
+            List.of(),
+            List.of(
+            new QueryParam("lot_number", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("copart-lot-images", new Operation(
+            "copart-lot-images",
+            "GET",
+            "/copart/lot-images",
+            List.of(),
+            List.of(
+            new QueryParam("lot_number", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("copart-search", new Operation(
+            "copart-search",
+            "GET",
+            "/copart/search",
+            List.of(),
+            List.of(
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("make", false, "array", List.of()),
+            new QueryParam("model", false, "array", List.of()),
+            new QueryParam("model_group", false, "array", List.of()),
+            new QueryParam("year", false, "array", List.of()),
+            new QueryParam("engine", false, "array", List.of()),
+            new QueryParam("transmission", false, "array", List.of()),
+            new QueryParam("fuel", false, "array", List.of()),
+            new QueryParam("drive", false, "array", List.of()),
+            new QueryParam("cylinders", false, "array", List.of()),
+            new QueryParam("body_style", false, "array", List.of()),
+            new QueryParam("yard", false, "array", List.of()),
+            new QueryParam("auction_name", false, "array", List.of()),
+            new QueryParam("sale_date", false, "array", List.of()),
+            new QueryParam("featured", false, "array", List.of()),
+            new QueryParam("title", false, "array", List.of()),
+            new QueryParam("damage", false, "array", List.of()),
+            new QueryParam("vehicle_type", false, "array", List.of()),
+            new QueryParam("source", false, "array", List.of()),
+            new QueryParam("odometer_band", false, "array", List.of()),
+            new QueryParam("newly_added", false, "string", List.of("last-24-hours", "last-7-days")),
+            new QueryParam("wholesale", false, "boolean", List.of()),
+            new QueryParam("year_from", false, "integer", List.of()),
+            new QueryParam("year_to", false, "integer", List.of()),
+            new QueryParam("odometer_min", false, "integer", List.of()),
+            new QueryParam("odometer_max", false, "integer", List.of()),
+            new QueryParam("sale_date_from", false, "string", List.of()),
+            new QueryParam("sale_date_to", false, "string", List.of()),
+            new QueryParam("autograde_min", false, "number", List.of()),
+            new QueryParam("autograde_max", false, "number", List.of()),
+            new QueryParam("sale_light", false, "array", List.of("green", "yellow", "red")),
+            new QueryParam("latitude", false, "number", List.of()),
+            new QueryParam("longitude", false, "number", List.of()),
+            new QueryParam("radius_miles", false, "integer", List.of("25", "50", "75", "100", "125", "150", "175", "200")),
+            new QueryParam("sort", false, "string", List.of("auction_date", "odometer", "year", "make", "model", "item_number", "buy_it_now", "current_bid", "sale_light", "damage")),
+            new QueryParam("sort_order", false, "string", List.of("asc", "desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("copart-suggest", new Operation(
+            "copart-suggest",
+            "GET",
+            "/copart/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("costco-categories", new Operation(
             "costco-categories",
             "GET",
@@ -9261,6 +10342,153 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+        m.put("craigslist-areas", new Operation(
+            "craigslist-areas",
+            "GET",
+            "/craigslist/areas",
+            List.of(),
+            List.of(
+            new QueryParam("group", false, "string", List.of("US", "Canada", "Europe", "Asia/Pacific/Middle East", "Oceania", "Latin America", "Africa")),
+            new QueryParam("region", false, "string", List.of()),
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-categories", new Operation(
+            "craigslist-categories",
+            "GET",
+            "/craigslist/categories",
+            List.of(),
+            List.of(
+            new QueryParam("area", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-category-counts", new Operation(
+            "craigslist-category-counts",
+            "GET",
+            "/craigslist/category-counts",
+            List.of(),
+            List.of(
+            new QueryParam("area", true, "string", List.of()),
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("postal", false, "string", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of()),
+            new QueryParam("search_distance", false, "integer", List.of()),
+            new QueryParam("subarea", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-category-filters", new Operation(
+            "craigslist-category-filters",
+            "GET",
+            "/craigslist/category-filters",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("area", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-likely-categories", new Operation(
+            "craigslist-likely-categories",
+            "GET",
+            "/craigslist/likely-categories",
+            List.of(),
+            List.of(
+            new QueryParam("area", true, "string", List.of()),
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-locations", new Operation(
+            "craigslist-locations",
+            "GET",
+            "/craigslist/locations",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lon", true, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-posting", new Operation(
+            "craigslist-posting",
+            "GET",
+            "/craigslist/posting",
+            List.of(),
+            List.of(
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("uuid", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-search", new Operation(
+            "craigslist-search",
+            "GET",
+            "/craigslist/search",
+            List.of(),
+            List.of(
+            new QueryParam("area", true, "string", List.of()),
+            new QueryParam("category", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("date", "dateoldest", "rel", "priceasc", "pricedsc", "dist")),
+            new QueryParam("min_price", false, "integer", List.of()),
+            new QueryParam("max_price", false, "integer", List.of()),
+            new QueryParam("has_pic", false, "boolean", List.of()),
+            new QueryParam("posted_today", false, "boolean", List.of()),
+            new QueryParam("title_only", false, "boolean", List.of()),
+            new QueryParam("postal", false, "string", List.of()),
+            new QueryParam("search_distance", false, "integer", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("craigslist-suggest", new Operation(
+            "craigslist-suggest",
+            "GET",
+            "/craigslist/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("type", true, "string", List.of("search", "makemodel", "location")),
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("area", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("lon", false, "number", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cricbuzz-archives", new Operation(
             "cricbuzz-archives",
             "GET",
@@ -9400,6 +10628,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations12(Map<String, Operation> m) {
         m.put("cricbuzz-auction-seasons", new Operation(
             "cricbuzz-auction-seasons",
             "GET",
@@ -9506,6 +10737,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("cricbuzz-commentary", new Operation(
+            "cricbuzz-commentary",
+            "GET",
+            "/cricbuzz/commentary",
+            List.of(),
+            List.of(
+            new QueryParam("match_url", true, "string", List.of()),
+            new QueryParam("innings_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cricbuzz-match-facts", new Operation(
             "cricbuzz-match-facts",
             "GET",
@@ -9597,6 +10842,19 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("cricbuzz-player", new Operation(
+            "cricbuzz-player",
+            "GET",
+            "/cricbuzz/player",
+            List.of(),
+            List.of(
+            new QueryParam("player_url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cricbuzz-rankings", new Operation(
             "cricbuzz-rankings",
             "GET",
@@ -9629,9 +10887,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations11(Map<String, Operation> m) {
         m.put("cricbuzz-schedule", new Operation(
             "cricbuzz-schedule",
             "GET",
@@ -9674,6 +10929,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("cricbuzz-series-squads", new Operation(
+            "cricbuzz-series-squads",
+            "GET",
+            "/cricbuzz/series/squads",
+            List.of(),
+            List.of(
+            new QueryParam("series_url", true, "string", List.of()),
+            new QueryParam("squad_id", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cricbuzz-series-stats", new Operation(
             "cricbuzz-series-stats",
             "GET",
@@ -9683,6 +10952,20 @@ public final class Operations {
             new QueryParam("series_url", true, "string", List.of()),
             new QueryParam("stat", false, "string", List.of("mostRuns", "highestScore", "highestAvg", "highestSr", "mostHundreds", "mostFifties", "mostFours", "mostSixes", "mostNineties", "mostWickets", "lowestAvg", "bestBowlingInnings", "mostFiveWickets", "lowestEcon", "lowestSr")),
             new QueryParam("format", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cricbuzz-team-players", new Operation(
+            "cricbuzz-team-players",
+            "GET",
+            "/cricbuzz/team/players",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of("international", "domestic", "league", "women")),
+            new QueryParam("team_id", true, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -9771,6 +11054,19 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("cricinfo-ball-by-ball", new Operation(
+            "cricinfo-ball-by-ball",
+            "GET",
+            "/cricinfo/ball-by-ball",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("cricinfo-calendar", new Operation(
             "cricinfo-calendar",
             "GET",
@@ -9826,6 +11122,32 @@ public final class Operations {
             "cricinfo-match",
             "GET",
             "/cricinfo/match",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cricinfo-match-impact-player", new Operation(
+            "cricinfo-match-impact-player",
+            "GET",
+            "/cricinfo/match-impact-player",
+            List.of(),
+            List.of(
+            new QueryParam("url", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("cricinfo-match-statistics", new Operation(
+            "cricinfo-match-statistics",
+            "GET",
+            "/cricinfo/match-statistics",
             List.of(),
             List.of(
             new QueryParam("url", true, "string", List.of())),
@@ -10133,6 +11455,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations13(Map<String, Operation> m) {
         m.put("culvers-calendar", new Operation(
             "culvers-calendar",
             "GET",
@@ -10434,9 +11759,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations12(Map<String, Operation> m) {
         m.put("dailyexpress-sections", new Operation(
             "dailyexpress-sections",
             "GET",
@@ -10959,6 +12281,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations14(Map<String, Operation> m) {
         m.put("datasets-apple-books-facets", new Operation(
             "datasets-apple-books-facets",
             "GET",
@@ -11436,9 +12761,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations13(Map<String, Operation> m) {
         m.put("datasets-bbb-scamtracker-reports-item", new Operation(
             "datasets-bbb-scamtracker-reports-item",
             "GET",
@@ -12269,6 +13591,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations15(Map<String, Operation> m) {
         m.put("datasets-housing-markets-item", new Operation(
             "datasets-housing-markets-item",
             "GET",
@@ -12402,7 +13727,7 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("q", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs", "breezy", "jazzhr", "phenom", "ibm-jobs", "adp", "successfactors", "talentbrew")),
             new QueryParam("status", false, "string", List.of("active", "empty", "gone", "blocked", "pending", "invalid")),
             new QueryParam("min_open_roles", false, "integer", List.of()),
             new QueryParam("sponsors_visa", false, "boolean", List.of()),
@@ -12461,7 +13786,7 @@ public final class Operations {
             new QueryParam("lat", true, "number", List.of()),
             new QueryParam("lon", true, "number", List.of()),
             new QueryParam("radius_km", false, "number", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs", "breezy", "jazzhr", "phenom", "ibm-jobs", "adp", "successfactors", "talentbrew")),
             new QueryParam("include_closed", false, "boolean", List.of()),
             new QueryParam("page", false, "integer", List.of()),
             new QueryParam("page_size", false, "integer", List.of())),
@@ -12479,7 +13804,7 @@ public final class Operations {
             List.of(
             new QueryParam("q", false, "string", List.of()),
             new QueryParam("company", false, "string", List.of()),
-            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs")),
+            new QueryParam("provider", false, "string", List.of("greenhouse", "lever", "ashby", "workday", "smartrecruiters", "workable", "recruitee", "rippling", "personio", "teamtailor", "oracle", "ukg", "icims", "eightfold", "gem", "pinpoint", "amazon-jobs", "apple-jobs", "google-jobs", "meta-jobs", "tesla-jobs", "breezy", "jazzhr", "phenom", "ibm-jobs", "adp", "successfactors", "talentbrew")),
             new QueryParam("department", false, "string", List.of()),
             new QueryParam("location", false, "string", List.of()),
             new QueryParam("city", false, "string", List.of()),
@@ -12773,9 +14098,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations14(Map<String, Operation> m) {
         m.put("datasets-pitchbook-advisors-item", new Operation(
             "datasets-pitchbook-advisors-item",
             "GET",
@@ -13485,6 +14807,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations16(Map<String, Operation> m) {
         m.put("datasets-starbucks-stores-nearby", new Operation(
             "datasets-starbucks-stores-nearby",
             "GET",
@@ -13910,9 +15235,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations15(Map<String, Operation> m) {
         m.put("datasets-substack-facets", new Operation(
             "datasets-substack-facets",
             "GET",
@@ -14601,6 +15923,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations17(Map<String, Operation> m) {
         m.put("denverpost-headlines", new Operation(
             "denverpost-headlines",
             "GET",
@@ -14916,9 +16241,47 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations16(Map<String, Operation> m) {
+        m.put("discord-invite", new Operation(
+            "discord-invite",
+            "GET",
+            "/discord/invite",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("discord-server", new Operation(
+            "discord-server",
+            "GET",
+            "/discord/server",
+            List.of(),
+            List.of(
+            new QueryParam("guild_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("discord-servers", new Operation(
+            "discord-servers",
+            "GET",
+            "/discord/servers",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of("all", "gaming", "music", "education", "science_tech", "entertainment")),
+            new QueryParam("query", false, "string", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("dollartree-blog-article", new Operation(
             "dollartree-blog-article",
             "GET",
@@ -15396,6 +16759,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations18(Map<String, Operation> m) {
         m.put("doordash-store-menu", new Operation(
             "doordash-store-menu",
             "GET",
@@ -15718,9 +17084,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations17(Map<String, Operation> m) {
         m.put("draftkings-league-events", new Operation(
             "draftkings-league-events",
             "GET",
@@ -16195,6 +17558,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations19(Map<String, Operation> m) {
         m.put("dw-author", new Operation(
             "dw-author",
             "GET",
@@ -16524,9 +17890,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations18(Map<String, Operation> m) {
         m.put("eonline-author", new Operation(
             "eonline-author",
             "GET",
@@ -16601,6 +17964,40 @@ public final class Operations {
             new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey", "soccer")),
             new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl", "eng.1", "esp.1", "ita.1", "ger.1", "fra.1", "usa.1", "uefa.champions")),
             new QueryParam("athlete", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("espn-athlete-gamelog", new Operation(
+            "espn-athlete-gamelog",
+            "GET",
+            "/espn/athlete-gamelog",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey", "soccer")),
+            new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl", "eng.1", "esp.1", "ita.1", "ger.1", "fra.1", "usa.1", "uefa.champions")),
+            new QueryParam("athlete", true, "string", List.of()),
+            new QueryParam("season", false, "integer", List.of()),
+            new QueryParam("category", false, "string", List.of("batting", "pitching"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("espn-athlete-splits", new Operation(
+            "espn-athlete-splits",
+            "GET",
+            "/espn/athlete-splits",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey")),
+            new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl")),
+            new QueryParam("athlete", true, "string", List.of()),
+            new QueryParam("season", false, "integer", List.of()),
+            new QueryParam("category", false, "string", List.of("batting", "pitching", "per_game", "total", "per_48"))),
             List.of(),
             null,
             false,
@@ -16713,6 +18110,41 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("espn-team-schedule", new Operation(
+            "espn-team-schedule",
+            "GET",
+            "/espn/team-schedule",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey", "soccer")),
+            new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl", "eng.1", "esp.1", "ita.1", "ger.1", "fra.1", "usa.1", "uefa.champions")),
+            new QueryParam("team", true, "string", List.of()),
+            new QueryParam("season", false, "integer", List.of()),
+            new QueryParam("seasontype", false, "integer", List.of("1", "2", "3", "4")),
+            new QueryParam("fixture", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("espn-team-stats", new Operation(
+            "espn-team-stats",
+            "GET",
+            "/espn/team-stats",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey")),
+            new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl")),
+            new QueryParam("team", true, "string", List.of()),
+            new QueryParam("season", false, "integer", List.of()),
+            new QueryParam("seasontype", false, "integer", List.of("1", "2", "3", "4"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("espn-teams", new Operation(
             "espn-teams",
             "GET",
@@ -16726,6 +18158,24 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("espn-transactions", new Operation(
+            "espn-transactions",
+            "GET",
+            "/espn/transactions",
+            List.of(),
+            List.of(
+            new QueryParam("sport", true, "string", List.of("football", "basketball", "baseball", "hockey", "soccer")),
+            new QueryParam("league", true, "string", List.of("nfl", "college-football", "nba", "wnba", "mens-college-basketball", "womens-college-basketball", "mlb", "nhl", "eng.1", "esp.1", "ita.1", "ger.1", "fra.1", "usa.1", "uefa.champions")),
+            new QueryParam("team", false, "string", List.of()),
+            new QueryParam("season", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("etsy-listing", new Operation(
             "etsy-listing",
@@ -16928,6 +18378,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations20(Map<String, Operation> m) {
         m.put("everlane-page", new Operation(
             "everlane-page",
             "GET",
@@ -17327,9 +18780,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations19(Map<String, Operation> m) {
         m.put("faceit-best-clips", new Operation(
             "faceit-best-clips",
             "GET",
@@ -17751,6 +19201,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations21(Map<String, Operation> m) {
         m.put("faceit-team", new Operation(
             "faceit-team",
             "GET",
@@ -18188,9 +19641,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations20(Map<String, Operation> m) {
         m.put("fanduel-casino-category", new Operation(
             "fanduel-casino-category",
             "GET",
@@ -18650,6 +20100,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations22(Map<String, Operation> m) {
         m.put("fanduel-research-sub-categories", new Operation(
             "fanduel-research-sub-categories",
             "GET",
@@ -19119,9 +20572,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations21(Map<String, Operation> m) {
         m.put("fanduel-sportsbook-sports", new Operation(
             "fanduel-sportsbook-sports",
             "GET",
@@ -19520,6 +20970,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations23(Map<String, Operation> m) {
         m.put("fashionphile-page", new Operation(
             "fashionphile-page",
             "GET",
@@ -19706,6 +21159,96 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("fdroid-anti-features", new Operation(
+            "fdroid-anti-features",
+            "GET",
+            "/fdroid/anti-features",
+            List.of(),
+            List.of(
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fdroid-app", new Operation(
+            "fdroid-app",
+            "GET",
+            "/fdroid/app",
+            List.of(),
+            List.of(
+            new QueryParam("package", true, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fdroid-apps", new Operation(
+            "fdroid-apps",
+            "GET",
+            "/fdroid/apps",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("license", false, "string", List.of()),
+            new QueryParam("anti_feature", false, "array", List.of("Ads", "DisabledAlgorithm", "KnownVuln", "NoSourceSince", "NonFreeAdd", "NonFreeAssets", "NonFreeDep", "NonFreeNet", "TetheredNet", "Tracking")),
+            new QueryParam("exclude_anti_feature", false, "array", List.of("any", "Ads", "DisabledAlgorithm", "KnownVuln", "NoSourceSince", "NonFreeAdd", "NonFreeAssets", "NonFreeDep", "NonFreeNet", "TetheredNet", "Tracking")),
+            new QueryParam("added_since", false, "string", List.of()),
+            new QueryParam("updated_since", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("last_updated", "added", "name")),
+            new QueryParam("order", false, "string", List.of("asc", "desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("fdroid-categories", new Operation(
+            "fdroid-categories",
+            "GET",
+            "/fdroid/categories",
+            List.of(),
+            List.of(
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fdroid-licenses", new Operation(
+            "fdroid-licenses",
+            "GET",
+            "/fdroid/licenses",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fdroid-search", new Operation(
+            "fdroid-search",
+            "GET",
+            "/fdroid/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("lang", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("fever-cities", new Operation(
             "fever-cities",
@@ -19954,9 +21497,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations22(Map<String, Operation> m) {
         m.put("fiverr-search", new Operation(
             "fiverr-search",
             "GET",
@@ -20263,6 +21803,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations24(Map<String, Operation> m) {
         m.put("flashscore-match-standings", new Operation(
             "flashscore-match-standings",
             "GET",
@@ -20761,9 +22304,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations23(Map<String, Operation> m) {
         m.put("flickreels-classify", new Operation(
             "flickreels-classify",
             "GET",
@@ -21085,6 +22625,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations25(Map<String, Operation> m) {
         m.put("foreignpolicy-headlines", new Operation(
             "foreignpolicy-headlines",
             "GET",
@@ -21539,6 +23082,156 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("fortnite-ecosystem-metric", new Operation(
+            "fortnite-ecosystem-metric",
+            "GET",
+            "/fortnite/ecosystem-metric",
+            List.of(),
+            List.of(
+            new QueryParam("interval", true, "string", List.of("day", "hour", "minute")),
+            new QueryParam("metric", true, "string", List.of("in-client-peak-ccu", "in-match-peak-ccu")),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-ecosystem-metrics", new Operation(
+            "fortnite-ecosystem-metrics",
+            "GET",
+            "/fortnite/ecosystem-metrics",
+            List.of(),
+            List.of(
+            new QueryParam("interval", true, "string", List.of("day", "hour", "minute")),
+            new QueryParam("metrics", false, "array", List.of("inMatchPeakCCU", "inClientPeakCCU")),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-enums", new Operation(
+            "fortnite-enums",
+            "GET",
+            "/fortnite/enums",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-genre-rankings", new Operation(
+            "fortnite-genre-rankings",
+            "GET",
+            "/fortnite/genre-rankings",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("at", false, "string", List.of()),
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("before", false, "string", List.of()),
+            new QueryParam("size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-genres", new Operation(
+            "fortnite-genres",
+            "GET",
+            "/fortnite/genres",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-island", new Operation(
+            "fortnite-island",
+            "GET",
+            "/fortnite/island",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-island-metric", new Operation(
+            "fortnite-island-metric",
+            "GET",
+            "/fortnite/island-metric",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("interval", true, "string", List.of("day", "hour", "minute")),
+            new QueryParam("metric", true, "string", List.of("peak-ccu", "favorites", "minutes-played", "average-minutes-per-player", "recommendations", "unique-players", "plays", "retention")),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-island-metrics", new Operation(
+            "fortnite-island-metrics",
+            "GET",
+            "/fortnite/island-metrics",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("interval", false, "string", List.of("day", "hour", "minute")),
+            new QueryParam("metrics", false, "array", List.of("averageMinutesPerPlayer", "peakCCU", "favorites", "minutesPlayed", "recommendations", "plays", "uniquePlayers", "retention")),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-island-rankings", new Operation(
+            "fortnite-island-rankings",
+            "GET",
+            "/fortnite/island-rankings",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fortnite-islands", new Operation(
+            "fortnite-islands",
+            "GET",
+            "/fortnite/islands",
+            List.of(),
+            List.of(
+            new QueryParam("after", false, "string", List.of()),
+            new QueryParam("before", false, "string", List.of()),
+            new QueryParam("size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("fortune-article", new Operation(
             "fortune-article",
             "GET",
@@ -21589,9 +23282,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations24(Map<String, Operation> m) {
         m.put("fortune-company-filters", new Operation(
             "fortune-company-filters",
             "GET",
@@ -21770,6 +23460,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations26(Map<String, Operation> m) {
         m.put("fotmob-league", new Operation(
             "fotmob-league",
             "GET",
@@ -21830,6 +23523,19 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-match-heatmap", new Operation(
+            "fotmob-match-heatmap",
+            "GET",
+            "/fotmob/match-heatmap",
+            List.of(),
+            List.of(
+            new QueryParam("match_id", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -21898,6 +23604,19 @@ public final class Operations {
             List.of(
             new QueryParam("id", true, "string", List.of()),
             new QueryParam("include_market_values", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("fotmob-player-injuries", new Operation(
+            "fotmob-player-injuries",
+            "GET",
+            "/fotmob/player-injuries",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -22417,9 +24136,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("start")));
-    }
-
-    private static void putOperations25(Map<String, Operation> m) {
         m.put("fresha-venue", new Operation(
             "fresha-venue",
             "GET",
@@ -22583,6 +24299,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations27(Map<String, Operation> m) {
         m.put("fussballde-competition-options", new Operation(
             "fussballde-competition-options",
             "GET",
@@ -22925,10 +24644,34 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("futgg-fc27-campaign-squads", new Operation(
+            "futgg-fc27-campaign-squads",
+            "GET",
+            "/futgg/fc27/campaign-squads",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("futgg-fc27-catalog", new Operation(
             "futgg-fc27-catalog",
             "GET",
             "/futgg/fc27/catalog",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-chemistry-style-roles", new Operation(
+            "futgg-fc27-chemistry-style-roles",
+            "GET",
+            "/futgg/fc27/chemistry-style-roles",
             List.of(),
             List.of(),
             List.of(),
@@ -22998,6 +24741,77 @@ public final class Operations {
             "/futgg/fc27/gg-ratings",
             List.of(),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-manager-facets", new Operation(
+            "futgg-fc27-manager-facets",
+            "GET",
+            "/futgg/fc27/manager-facets",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-manager-leagues", new Operation(
+            "futgg-fc27-manager-leagues",
+            "GET",
+            "/futgg/fc27/manager-leagues",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-managers", new Operation(
+            "futgg-fc27-managers",
+            "GET",
+            "/futgg/fc27/managers",
+            List.of(),
+            List.of(
+            new QueryParam("platform", false, "string", List.of("ps5", "pc")),
+            new QueryParam("quality", false, "string", List.of("all", "bronze", "silver", "gold")),
+            new QueryParam("extinct", false, "string", List.of("all", "only", "hide")),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("nation", false, "integer", List.of()),
+            new QueryParam("league", false, "integer", List.of()),
+            new QueryParam("min_price", false, "integer", List.of()),
+            new QueryParam("max_price", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("futgg-fc27-manager", new Operation(
+            "futgg-fc27-manager",
+            "GET",
+            "/futgg/fc27/managers/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-misc-prices", new Operation(
+            "futgg-fc27-misc-prices",
+            "GET",
+            "/futgg/fc27/misc-prices",
+            List.of(),
+            List.of(
+            new QueryParam("platform", true, "string", List.of("ps5", "pc"))),
             List.of(),
             null,
             false,
@@ -23093,6 +24907,8 @@ public final class Operations {
             new QueryParam("league_id", false, "integer", List.of()),
             new QueryParam("club_id", false, "integer", List.of()),
             new QueryParam("rarity_id", false, "integer", List.of()),
+            new QueryParam("rarity_squad_id", false, "array", List.of()),
+            new QueryParam("excluded_rarity_squad_id", false, "array", List.of()),
             new QueryParam("positions", false, "array", List.of("0", "3", "5", "7", "10", "12", "14", "16", "18", "23", "25", "27")),
             new QueryParam("foot", false, "array", List.of("1", "2")),
             new QueryParam("gender", false, "array", List.of("1", "2")),
@@ -23136,6 +24952,21 @@ public final class Operations {
             "/futgg/fc27/price-index",
             List.of(),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("futgg-fc27-price-range-changes", new Operation(
+            "futgg-fc27-price-range-changes",
+            "GET",
+            "/futgg/fc27/price-range-changes",
+            List.of(),
+            List.of(
+            new QueryParam("platform", false, "string", List.of("ps5", "pc")),
+            new QueryParam("extinct", false, "string", List.of("yes")),
+            new QueryParam("before", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -23297,9 +25128,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations26(Map<String, Operation> m) {
         m.put("gamesradar-article", new Operation(
             "gamesradar-article",
             "GET",
@@ -23341,6 +25169,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations28(Map<String, Operation> m) {
         m.put("gamesradar-news", new Operation(
             "gamesradar-news",
             "GET",
@@ -23688,6 +25519,180 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("gemrate-card", new Operation(
+            "gemrate-card",
+            "GET",
+            "/gemrate/card",
+            List.of(),
+            List.of(
+            new QueryParam("gemrate_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-categories", new Operation(
+            "gemrate-categories",
+            "GET",
+            "/gemrate/categories",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-grading-trends", new Operation(
+            "gemrate-grading-trends",
+            "GET",
+            "/gemrate/grading-trends",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-leaders", new Operation(
+            "gemrate-leaders",
+            "GET",
+            "/gemrate/leaders",
+            List.of(),
+            List.of(
+            new QueryParam("segment", false, "string", List.of("sports", "tcg", "combined")),
+            new QueryParam("type", false, "string", List.of("athletes", "sets", "cards")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-report", new Operation(
+            "gemrate-report",
+            "GET",
+            "/gemrate/report",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gemrate-reports", new Operation(
+            "gemrate-reports",
+            "GET",
+            "/gemrate/reports",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-sales-trends", new Operation(
+            "gemrate-sales-trends",
+            "GET",
+            "/gemrate/sales-trends",
+            List.of(),
+            List.of(
+            new QueryParam("segment", false, "string", List.of("athletes", "pokemon")),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("ytd", "latest_month", "name")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gemrate-search-presets", new Operation(
+            "gemrate-search-presets",
+            "GET",
+            "/gemrate/search/presets",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-pop-collection", new Operation(
+            "gemrate-pop-collection",
+            "GET",
+            "/gemrate/universal-pop-report/collection",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gemrate-pop-collections", new Operation(
+            "gemrate-pop-collections",
+            "GET",
+            "/gemrate/universal-pop-report/collections",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("gemrate-pop-set", new Operation(
+            "gemrate-pop-set",
+            "GET",
+            "/gemrate/universal-pop-report/set",
+            List.of(),
+            List.of(
+            new QueryParam("set_id", true, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("gemrate-pop-sets", new Operation(
+            "gemrate-pop-sets",
+            "GET",
+            "/gemrate/universal-pop-report/sets",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("geocoding-lookup", new Operation(
             "geocoding-lookup",
@@ -24106,6 +26111,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations29(Map<String, Operation> m) {
         m.put("gizmodo-article", new Operation(
             "gizmodo-article",
             "GET",
@@ -24220,9 +26228,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations27(Map<String, Operation> m) {
         m.put("globalnews-sections", new Operation(
             "globalnews-sections",
             "GET",
@@ -24940,6 +26945,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations30(Map<String, Operation> m) {
         m.put("goodrx-comparisons", new Operation(
             "goodrx-comparisons",
             "GET",
@@ -25066,9 +27074,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations28(Map<String, Operation> m) {
         m.put("goodrx-drugs", new Operation(
             "goodrx-drugs",
             "GET",
@@ -25736,6 +27741,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations31(Map<String, Operation> m) {
         m.put("googlepatents-search", new Operation(
             "googlepatents-search",
             "GET",
@@ -25885,9 +27893,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations29(Map<String, Operation> m) {
         m.put("googleplay-reviews", new Operation(
             "googleplay-reviews",
             "GET",
@@ -26649,6 +28654,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations32(Map<String, Operation> m) {
         m.put("grubhub-restaurant-menu", new Operation(
             "grubhub-restaurant-menu",
             "GET",
@@ -26782,9 +28790,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations30(Map<String, Operation> m) {
         m.put("gucci-categories", new Operation(
             "gucci-categories",
             "GET",
@@ -27533,6 +29538,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations33(Map<String, Operation> m) {
         m.put("hermes-product-recommendations", new Operation(
             "hermes-product-recommendations",
             "GET",
@@ -27658,15 +29666,115 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations31(Map<String, Operation> m) {
         m.put("hindustantimes-sections", new Operation(
             "hindustantimes-sections",
             "GET",
             "/hindustantimes/sections",
             List.of(),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltb-filters", new Operation(
+            "hltb-filters",
+            "GET",
+            "/hltb/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltb-game", new Operation(
+            "hltb-game",
+            "GET",
+            "/hltb/game/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltb-popular", new Operation(
+            "hltb-popular",
+            "GET",
+            "/hltb/popular",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltb-search", new Operation(
+            "hltb-search",
+            "GET",
+            "/hltb/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("size", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of()),
+            new QueryParam("range_category", false, "string", List.of()),
+            new QueryParam("min_hours", false, "integer", List.of()),
+            new QueryParam("max_hours", false, "integer", List.of()),
+            new QueryParam("platform", false, "string", List.of()),
+            new QueryParam("platform_mode", false, "string", List.of()),
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("genre_mode", false, "string", List.of()),
+            new QueryParam("perspective", false, "string", List.of()),
+            new QueryParam("perspective_mode", false, "string", List.of()),
+            new QueryParam("flow", false, "string", List.of()),
+            new QueryParam("flow_mode", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("year_mode", false, "string", List.of()),
+            new QueryParam("modifier", false, "string", List.of()),
+            new QueryParam("game_pass", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hltb-stats", new Operation(
+            "hltb-stats",
+            "GET",
+            "/hltb/stats",
+            List.of(),
+            List.of(
+            new QueryParam("genre", false, "string", List.of()),
+            new QueryParam("genre_mode", false, "string", List.of()),
+            new QueryParam("perspective", false, "string", List.of()),
+            new QueryParam("perspective_mode", false, "string", List.of()),
+            new QueryParam("flow", false, "string", List.of()),
+            new QueryParam("flow_mode", false, "string", List.of()),
+            new QueryParam("platform", false, "string", List.of()),
+            new QueryParam("platform_mode", false, "string", List.of()),
+            new QueryParam("year", false, "string", List.of()),
+            new QueryParam("year_mode", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltv-coach", new Operation(
+            "hltv-coach",
+            "GET",
+            "/hltv/coach",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "integer", List.of()),
+            new QueryParam("slug", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -27760,7 +29868,10 @@ public final class Operations {
             List.of(),
             List.of(
             new QueryParam("offset", false, "integer", List.of()),
-            new QueryParam("event", false, "integer", List.of())),
+            new QueryParam("event", false, "integer", List.of()),
+            new QueryParam("team", false, "integer", List.of()),
+            new QueryParam("map", false, "string", List.of()),
+            new QueryParam("stars", false, "integer", List.of("1", "2", "3", "4", "5"))),
             List.of(),
             null,
             false,
@@ -27788,6 +29899,48 @@ public final class Operations {
             List.of(
             new QueryParam("id", true, "integer", List.of()),
             new QueryParam("slug", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltv-transfers", new Operation(
+            "hltv-transfers",
+            "GET",
+            "/hltv/transfers",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("hltv-valve-ranking", new Operation(
+            "hltv-valve-ranking",
+            "GET",
+            "/hltv/valve-ranking",
+            List.of(),
+            List.of(
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("region", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("hltv-valve-ranking-details", new Operation(
+            "hltv-valve-ranking-details",
+            "GET",
+            "/hltv/valve-ranking-details",
+            List.of(),
+            List.of(
+            new QueryParam("date", false, "string", List.of()),
+            new QueryParam("team_id", false, "integer", List.of()),
+            new QueryParam("lineup", false, "string", List.of())),
             List.of(),
             null,
             false,
@@ -28207,6 +30360,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations34(Map<String, Operation> m) {
         m.put("huffpost-author", new Operation(
             "huffpost-author",
             "GET",
@@ -28256,6 +30412,51 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("ibm-jobs-filters", new Operation(
+            "ibm-jobs-filters",
+            "GET",
+            "/ibm-jobs/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ibm-jobs-job", new Operation(
+            "ibm-jobs-job",
+            "GET",
+            "/ibm-jobs/job",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("ibm-jobs-search", new Operation(
+            "ibm-jobs-search",
+            "GET",
+            "/ibm-jobs/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("team", false, "array", List.of("Cloud", "Consulting", "Data & Analytics", "Design & UX", "Enterprise Operations", "Infrastructure & Technology", "Product Management", "Project Management", "Research", "Sales", "Security", "Software Engineering")),
+            new QueryParam("experience_level", false, "array", List.of("Entry Level", "Internship", "Professional")),
+            new QueryParam("work_arrangement", false, "array", List.of("Hybrid", "Remote")),
+            new QueryParam("country", false, "array", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "newest", "oldest", "title_asc", "title_desc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("ign-article", new Operation(
             "ign-article",
@@ -28460,9 +30661,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations32(Map<String, Operation> m) {
         m.put("imdb-charts", new Operation(
             "imdb-charts",
             "GET",
@@ -29041,6 +31239,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations35(Map<String, Operation> m) {
         m.put("independent-sections", new Operation(
             "independent-sections",
             "GET",
@@ -29306,9 +31507,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations33(Map<String, Operation> m) {
         m.put("inquirer-article", new Operation(
             "inquirer-article",
             "GET",
@@ -29816,6 +32014,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations36(Map<String, Operation> m) {
         m.put("itchio-top-rated", new Operation(
             "itchio-top-rated",
             "GET",
@@ -30098,9 +32299,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations34(Map<String, Operation> m) {
         m.put("jcrew-size-chart", new Operation(
             "jcrew-size-chart",
             "GET",
@@ -30674,6 +32872,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations37(Map<String, Operation> m) {
         m.put("jobs-ukg-board", new Operation(
             "jobs-ukg-board",
             "GET",
@@ -30990,9 +33191,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations35(Map<String, Operation> m) {
         m.put("justwatch-genre-titles", new Operation(
             "justwatch-genre-titles",
             "GET",
@@ -31583,6 +33781,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations38(Map<String, Operation> m) {
         m.put("kfc-menu", new Operation(
             "kfc-menu",
             "GET",
@@ -31869,9 +34070,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations36(Map<String, Operation> m) {
         m.put("kick-clips", new Operation(
             "kick-clips",
             "GET",
@@ -32418,6 +34616,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations39(Map<String, Operation> m) {
         m.put("kotaku-headlines", new Operation(
             "kotaku-headlines",
             "GET",
@@ -32723,9 +34924,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations37(Map<String, Operation> m) {
         m.put("kyliecosmetics-sitemap-urls", new Operation(
             "kyliecosmetics-sitemap-urls",
             "GET",
@@ -33022,6 +35220,447 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("lichess-cloud-eval", new Operation(
+            "lichess-cloud-eval",
+            "GET",
+            "/lichess/cloud-eval",
+            List.of(),
+            List.of(
+            new QueryParam("fen", true, "string", List.of()),
+            new QueryParam("multiPv", false, "integer", List.of()),
+            new QueryParam("variant", false, "string", List.of("standard", "chess960", "crazyhouse", "antichess", "atomic", "horde", "kingOfTheHill", "racingKings", "threeCheck", "fromPosition"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-enums", new Operation(
+            "lichess-enums",
+            "GET",
+            "/lichess/enums",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle", new Operation(
+            "lichess-puzzle",
+            "GET",
+            "/lichess/puzzle",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle-batch", new Operation(
+            "lichess-puzzle-batch",
+            "GET",
+            "/lichess/puzzle/batch",
+            List.of(),
+            List.of(
+            new QueryParam("angle", true, "string", List.of()),
+            new QueryParam("difficulty", false, "string", List.of("easiest", "easier", "normal", "harder", "hardest")),
+            new QueryParam("nb", false, "integer", List.of()),
+            new QueryParam("color", false, "string", List.of("white", "black"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle-daily", new Operation(
+            "lichess-puzzle-daily",
+            "GET",
+            "/lichess/puzzle/daily",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle-many", new Operation(
+            "lichess-puzzle-many",
+            "GET",
+            "/lichess/puzzle/many",
+            List.of(),
+            List.of(
+            new QueryParam("ids", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle-next", new Operation(
+            "lichess-puzzle-next",
+            "GET",
+            "/lichess/puzzle/next",
+            List.of(),
+            List.of(
+            new QueryParam("angle", false, "string", List.of()),
+            new QueryParam("difficulty", false, "string", List.of("easiest", "easier", "normal", "harder", "hardest")),
+            new QueryParam("color", false, "string", List.of("white", "black"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-puzzle-themes", new Operation(
+            "lichess-puzzle-themes",
+            "GET",
+            "/lichess/puzzle/themes",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-simuls", new Operation(
+            "lichess-simuls",
+            "GET",
+            "/lichess/simuls",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-tablebase", new Operation(
+            "lichess-tablebase",
+            "GET",
+            "/lichess/tablebase",
+            List.of(),
+            List.of(
+            new QueryParam("variant", true, "string", List.of("standard", "atomic", "antichess")),
+            new QueryParam("fen", true, "string", List.of()),
+            new QueryParam("dtc", false, "string", List.of("never", "auxiliary", "always"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("lichess-version", new Operation(
+            "lichess-version",
+            "GET",
+            "/lichess/version",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-card", new Operation(
+            "limitless-card",
+            "GET",
+            "/limitless/card",
+            List.of(),
+            List.of(
+            new QueryParam("set", true, "string", List.of()),
+            new QueryParam("number", true, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of("en", "de", "fr", "it", "es", "la", "pt", "jp", "jp-en"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-cards", new Operation(
+            "limitless-cards",
+            "GET",
+            "/limitless/cards",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("lang", false, "string", List.of("en", "de", "fr", "it", "es", "la", "pt", "jp", "jp-en", "all")),
+            new QueryParam("unique", false, "string", List.of("prints", "cards", "text")),
+            new QueryParam("sort", false, "string", List.of("set", "name", "type", "usd", "eur", "pokedex", "rarity")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-deck", new Operation(
+            "limitless-deck",
+            "GET",
+            "/limitless/deck",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("variant", false, "string", List.of()),
+            new QueryParam("format", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-decklist", new Operation(
+            "limitless-decklist",
+            "GET",
+            "/limitless/decklist",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("source", false, "string", List.of("global", "japan")),
+            new QueryParam("lang", false, "string", List.of("en", "jp", "de", "fr", "it", "es", "la", "pt")),
+            new QueryParam("mode", false, "string", List.of("regular", "bling", "cheapest", "chaos"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-decklists", new Operation(
+            "limitless-decklists",
+            "GET",
+            "/limitless/decklists",
+            List.of(),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("last", "rank")),
+            new QueryParam("time", false, "string", List.of()),
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other")),
+            new QueryParam("division", false, "array", List.of("ma", "sr", "jr")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-decks", new Operation(
+            "limitless-decks",
+            "GET",
+            "/limitless/decks",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("rank", false, "string", List.of("points", "money", "day2s", "cuts", "wins")),
+            new QueryParam("time", false, "string", List.of()),
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other")),
+            new QueryParam("division", false, "array", List.of("ma", "sr", "jr")),
+            new QueryParam("variants", false, "boolean", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+    }
+
+    private static void putOperations40(Map<String, Operation> m) {
+        m.put("limitless-filters", new Operation(
+            "limitless-filters",
+            "GET",
+            "/limitless/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-games", new Operation(
+            "limitless-games",
+            "GET",
+            "/limitless/games",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-online-pairings", new Operation(
+            "limitless-online-pairings",
+            "GET",
+            "/limitless/online/pairings",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-online-standings", new Operation(
+            "limitless-online-standings",
+            "GET",
+            "/limitless/online/standings",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-online-tournament", new Operation(
+            "limitless-online-tournament",
+            "GET",
+            "/limitless/online/tournament",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-online-tournaments", new Operation(
+            "limitless-online-tournaments",
+            "GET",
+            "/limitless/online/tournaments",
+            List.of(),
+            List.of(
+            new QueryParam("game", false, "string", List.of("PTCG", "VGC", "OP", "DCG", "FW", "DBS", "BSS", "GUNDAM", "LORCANA", "SWU", "RB", "POCKET", "PGO", "other")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("organizer_id", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-player", new Operation(
+            "limitless-player",
+            "GET",
+            "/limitless/player",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("source", false, "string", List.of("global", "japan")),
+            new QueryParam("all_results", false, "boolean", List.of()),
+            new QueryParam("time", false, "string", List.of()),
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other")),
+            new QueryParam("division", false, "array", List.of("ma", "sr", "jr"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-players", new Operation(
+            "limitless-players",
+            "GET",
+            "/limitless/players",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("rank", false, "string", List.of("points", "money", "day2s", "cuts", "wins", "awards")),
+            new QueryParam("zone", false, "string", List.of()),
+            new QueryParam("time", false, "string", List.of()),
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other")),
+            new QueryParam("division", false, "array", List.of("ma", "sr", "jr")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-tournament", new Operation(
+            "limitless-tournament",
+            "GET",
+            "/limitless/tournament",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("source", false, "string", List.of("global", "japan")),
+            new QueryParam("division", false, "string", List.of("masters", "seniors", "juniors"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("limitless-tournaments", new Operation(
+            "limitless-tournaments",
+            "GET",
+            "/limitless/tournaments",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("time", false, "string", List.of()),
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-tournaments-japan", new Operation(
+            "limitless-tournaments-japan",
+            "GET",
+            "/limitless/tournaments/japan",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("25", "50", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("limitless-tournaments-upcoming", new Operation(
+            "limitless-tournaments-upcoming",
+            "GET",
+            "/limitless/tournaments/upcoming",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "array", List.of("regional", "international", "worlds", "special", "national", "cl", "rl", "pbl", "mbl", "online", "players_cup", "invitational")),
+            new QueryParam("format", false, "string", List.of()),
+            new QueryParam("region", false, "array", List.of("eu", "na", "la", "oc", "asia", "other"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("linkedin-company", new Operation(
             "linkedin-company",
             "GET",
@@ -33079,6 +35718,264 @@ public final class Operations {
             "GET",
             "/linkedin/showcase/{id}",
             List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-all-pages", new Operation(
+            "liquipedia-all-pages",
+            "GET",
+            "/liquipedia/all-pages",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("apfrom", false, "string", List.of()),
+            new QueryParam("apto", false, "string", List.of()),
+            new QueryParam("apprefix", false, "string", List.of()),
+            new QueryParam("apnamespace", false, "integer", List.of()),
+            new QueryParam("apfilterredir", false, "string", List.of("all", "nonredirects", "redirects")),
+            new QueryParam("apfilterlanglinks", false, "string", List.of("all", "withlanglinks", "withoutlanglinks")),
+            new QueryParam("apminsize", false, "integer", List.of()),
+            new QueryParam("apmaxsize", false, "integer", List.of()),
+            new QueryParam("apprtype", false, "array", List.of("edit", "move", "upload")),
+            new QueryParam("apprlevel", false, "string", List.of("autoconfirmed", "sysop")),
+            new QueryParam("apprfiltercascade", false, "string", List.of("all", "cascading", "noncascading")),
+            new QueryParam("apprexpiry", false, "string", List.of("all", "definite", "indefinite")),
+            new QueryParam("aplimit", false, "string", List.of()),
+            new QueryParam("apdir", false, "string", List.of("ascending", "descending")),
+            new QueryParam("apcontinue", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-backlinks", new Operation(
+            "liquipedia-backlinks",
+            "GET",
+            "/liquipedia/backlinks",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("bltitle", false, "string", List.of()),
+            new QueryParam("blpageid", false, "integer", List.of()),
+            new QueryParam("blnamespace", false, "array", List.of()),
+            new QueryParam("bldir", false, "string", List.of("ascending", "descending")),
+            new QueryParam("blfilterredir", false, "string", List.of("all", "nonredirects", "redirects")),
+            new QueryParam("bllimit", false, "string", List.of()),
+            new QueryParam("blredirect", false, "boolean", List.of()),
+            new QueryParam("blcontinue", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-categories", new Operation(
+            "liquipedia-categories",
+            "GET",
+            "/liquipedia/categories",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("acfrom", false, "string", List.of()),
+            new QueryParam("acto", false, "string", List.of()),
+            new QueryParam("acprefix", false, "string", List.of()),
+            new QueryParam("acdir", false, "string", List.of("ascending", "descending")),
+            new QueryParam("acmin", false, "integer", List.of()),
+            new QueryParam("acmax", false, "integer", List.of()),
+            new QueryParam("aclimit", false, "string", List.of()),
+            new QueryParam("acprop", false, "array", List.of("size", "hidden")),
+            new QueryParam("accontinue", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-category-members", new Operation(
+            "liquipedia-category-members",
+            "GET",
+            "/liquipedia/category-members",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("cmtitle", false, "string", List.of()),
+            new QueryParam("cmpageid", false, "integer", List.of()),
+            new QueryParam("cmnamespace", false, "array", List.of()),
+            new QueryParam("cmtype", false, "array", List.of("file", "page", "subcat")),
+            new QueryParam("cmprop", false, "array", List.of("ids", "title", "sortkey", "sortkeyprefix", "type", "timestamp")),
+            new QueryParam("cmlimit", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of()),
+            new QueryParam("cmcontinue", false, "string", List.of()),
+            new QueryParam("cmsort", false, "string", List.of("sortkey", "timestamp")),
+            new QueryParam("cmdir", false, "string", List.of("asc", "ascending", "desc", "descending", "newer", "older")),
+            new QueryParam("cmstart", false, "string", List.of()),
+            new QueryParam("cmend", false, "string", List.of()),
+            new QueryParam("cmstarthexsortkey", false, "string", List.of()),
+            new QueryParam("cmendhexsortkey", false, "string", List.of()),
+            new QueryParam("cmstartsortkeyprefix", false, "string", List.of()),
+            new QueryParam("cmendsortkeyprefix", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-enums", new Operation(
+            "liquipedia-enums",
+            "GET",
+            "/liquipedia/enums",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-links", new Operation(
+            "liquipedia-links",
+            "GET",
+            "/liquipedia/links",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("titles", false, "array", List.of()),
+            new QueryParam("pageids", false, "array", List.of()),
+            new QueryParam("revids", false, "array", List.of()),
+            new QueryParam("plnamespace", false, "array", List.of()),
+            new QueryParam("pllimit", false, "string", List.of()),
+            new QueryParam("plcontinue", false, "string", List.of()),
+            new QueryParam("pltitles", false, "array", List.of()),
+            new QueryParam("pldir", false, "string", List.of("ascending", "descending")),
+            new QueryParam("redirects", false, "boolean", List.of()),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-page", new Operation(
+            "liquipedia-page",
+            "GET",
+            "/liquipedia/page",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("page", false, "string", List.of()),
+            new QueryParam("pageid", false, "integer", List.of()),
+            new QueryParam("oldid", false, "integer", List.of()),
+            new QueryParam("section", false, "string", List.of()),
+            new QueryParam("redirects", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("liquipedia-prefix-search", new Operation(
+            "liquipedia-prefix-search",
+            "GET",
+            "/liquipedia/prefix-search",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("pssearch", true, "string", List.of()),
+            new QueryParam("psnamespace", false, "array", List.of()),
+            new QueryParam("pslimit", false, "string", List.of()),
+            new QueryParam("psoffset", false, "integer", List.of()),
+            new QueryParam("psprofile", false, "string", List.of("classic", "engine_autoselect", "fast-fuzzy", "fuzzy", "fuzzy-subphrases", "normal", "normal-subphrases", "strict")),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-recent-changes", new Operation(
+            "liquipedia-recent-changes",
+            "GET",
+            "/liquipedia/recent-changes",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("rcstart", false, "string", List.of()),
+            new QueryParam("rcend", false, "string", List.of()),
+            new QueryParam("rcdir", false, "string", List.of("newer", "older")),
+            new QueryParam("rcnamespace", false, "array", List.of()),
+            new QueryParam("rctag", false, "string", List.of()),
+            new QueryParam("rcprop", false, "array", List.of("flags", "ids", "redirect", "sha1", "sizes", "tags", "timestamp", "title")),
+            new QueryParam("rcshow", false, "array", List.of("!anon", "!autopatrolled", "!bot", "!minor", "!patrolled", "!redirect", "anon", "autopatrolled", "bot", "minor", "patrolled", "redirect", "unpatrolled")),
+            new QueryParam("rclimit", false, "string", List.of()),
+            new QueryParam("rctype", false, "array", List.of("categorize", "edit", "external", "log", "new")),
+            new QueryParam("rctoponly", false, "boolean", List.of()),
+            new QueryParam("rctitle", false, "string", List.of()),
+            new QueryParam("rccontinue", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of()),
+            new QueryParam("rcslot", false, "string", List.of("main"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-search", new Operation(
+            "liquipedia-search",
+            "GET",
+            "/liquipedia/search",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("srnamespace", false, "array", List.of()),
+            new QueryParam("srwhat", false, "string", List.of("nearmatch", "text", "title")),
+            new QueryParam("srlimit", false, "string", List.of()),
+            new QueryParam("sroffset", false, "integer", List.of()),
+            new QueryParam("continue", false, "string", List.of()),
+            new QueryParam("srsort", false, "string", List.of("create_timestamp_asc", "create_timestamp_desc", "incoming_links_asc", "incoming_links_desc", "just_match", "last_edit_asc", "last_edit_desc", "none", "random", "relevance", "title_natural_asc", "title_natural_desc", "user_random")),
+            new QueryParam("srinfo", false, "array", List.of("rewrittenquery", "suggestion", "totalhits")),
+            new QueryParam("srprop", false, "array", List.of("size", "wordcount", "timestamp", "snippet", "titlesnippet", "redirecttitle", "redirectsnippet", "sectiontitle", "sectionsnippet", "isfilematch", "categorysnippet", "extensiondata")),
+            new QueryParam("srinterwiki", false, "boolean", List.of()),
+            new QueryParam("srenablerewrites", false, "boolean", List.of()),
+            new QueryParam("srqiprofile", false, "string", List.of("classic", "classic_noboostlinks", "empty", "wsum_inclinks", "wsum_inclinks_pv", "popular_inclinks_pv", "popular_inclinks", "engine_autoselect")),
+            new QueryParam("srqdprofile", false, "string", List.of("default", "perfield_builder", "perfield_builder_relaxed", "perfield_builder_title_filter", "engine_autoselect"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-tags", new Operation(
+            "liquipedia-tags",
+            "GET",
+            "/liquipedia/tags",
+            List.of(),
+            List.of(
+            new QueryParam("wiki", true, "string", List.of()),
+            new QueryParam("tgprop", false, "array", List.of("active", "defined", "description", "displayname", "hitcount", "source")),
+            new QueryParam("tglimit", false, "string", List.of()),
+            new QueryParam("tgcontinue", false, "string", List.of()),
+            new QueryParam("continue", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("liquipedia-wikis", new Operation(
+            "liquipedia-wikis",
+            "GET",
+            "/liquipedia/wikis",
+            List.of(),
             List.of(),
             List.of(),
             null,
@@ -33496,6 +36393,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations41(Map<String, Operation> m) {
         m.put("lolesports-completed-events", new Operation(
             "lolesports-completed-events",
             "GET",
@@ -33524,9 +36424,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations38(Map<String, Operation> m) {
         m.put("lolesports-game-details", new Operation(
             "lolesports-game-details",
             "GET",
@@ -34325,6 +37222,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations42(Map<String, Operation> m) {
         m.put("maxpreps-rankings-groupings", new Operation(
             "maxpreps-rankings-groupings",
             "GET",
@@ -34351,9 +37251,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations39(Map<String, Operation> m) {
         m.put("maxpreps-school", new Operation(
             "maxpreps-school",
             "GET",
@@ -35178,6 +38075,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations43(Map<String, Operation> m) {
         m.put("metaculus-comments-feed", new Operation(
             "metaculus-comments-feed",
             "GET",
@@ -35205,9 +38105,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations40(Map<String, Operation> m) {
         m.put("metaculus-question", new Operation(
             "metaculus-question",
             "GET",
@@ -36199,6 +39096,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations44(Map<String, Operation> m) {
         m.put("mlb-statcast-catcher-blocking-details", new Operation(
             "mlb-statcast-catcher-blocking-details",
             "GET",
@@ -36251,9 +39151,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations41(Map<String, Operation> m) {
         m.put("mlb-statcast-catcher-framing-details", new Operation(
             "mlb-statcast-catcher-framing-details",
             "GET",
@@ -37379,6 +40276,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations45(Map<String, Operation> m) {
         m.put("modrinth-projects", new Operation(
             "modrinth-projects",
             "GET",
@@ -37405,9 +40305,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations42(Map<String, Operation> m) {
         m.put("modrinth-search", new Operation(
             "modrinth-search",
             "GET",
@@ -38166,6 +41063,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations46(Map<String, Operation> m) {
         m.put("motogp-starting-grid", new Operation(
             "motogp-starting-grid",
             "GET",
@@ -38181,6 +41081,254 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("motogp-world-standings", new Operation(
+            "motogp-world-standings",
+            "GET",
+            "/motogp/world-standings",
+            List.of(),
+            List.of(
+            new QueryParam("type", true, "string", List.of("team", "constructor")),
+            new QueryParam("season_uuid", true, "string", List.of()),
+            new QueryParam("category_uuid", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-archetype", new Operation(
+            "mtggoldfish-archetype",
+            "GET",
+            "/mtggoldfish/archetype",
+            List.of(),
+            List.of(
+            new QueryParam("archetype", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-autocomplete", new Operation(
+            "mtggoldfish-autocomplete",
+            "GET",
+            "/mtggoldfish/autocomplete",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-card", new Operation(
+            "mtggoldfish-card",
+            "GET",
+            "/mtggoldfish/card",
+            List.of(),
+            List.of(
+            new QueryParam("path", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-deck", new Operation(
+            "mtggoldfish-deck",
+            "GET",
+            "/mtggoldfish/deck",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("paper", "online", "arena"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-deck-search", new Operation(
+            "mtggoldfish-deck-search",
+            "GET",
+            "/mtggoldfish/deck-search",
+            List.of(),
+            List.of(
+            new QueryParam("name", false, "string", List.of()),
+            new QueryParam("format", false, "string", List.of("standard", "modern", "pioneer", "historic", "explorer", "timeless", "alchemy", "pauper", "legacy", "vintage", "penny_dreadful", "premodern", "duel_commander", "commander", "brawl", "arena_singleton", "gladiator", "artisan_historic", "cascade", "oathbreaker", "canadian_highlander", "old_school", "no_banned_list_modern", "frontier", "tiny_leaders", "limited", "block", "free_form")),
+            new QueryParam("types", false, "string", List.of()),
+            new QueryParam("player", false, "string", List.of()),
+            new QueryParam("date_from", false, "string", List.of()),
+            new QueryParam("date_to", false, "string", List.of()),
+            new QueryParam("card", false, "string", List.of()),
+            new QueryParam("card_quantity", false, "integer", List.of()),
+            new QueryParam("card_board", false, "string", List.of("maindeck", "sideboard", "commander")),
+            new QueryParam("card2", false, "string", List.of()),
+            new QueryParam("card2_quantity", false, "integer", List.of()),
+            new QueryParam("card2_board", false, "string", List.of("maindeck", "sideboard", "commander")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("mtggoldfish-filters", new Operation(
+            "mtggoldfish-filters",
+            "GET",
+            "/mtggoldfish/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-metagame", new Operation(
+            "mtggoldfish-metagame",
+            "GET",
+            "/mtggoldfish/metagame",
+            List.of(),
+            List.of(
+            new QueryParam("format", true, "string", List.of("standard", "modern", "pioneer", "historic", "explorer", "timeless", "alchemy", "pauper", "legacy", "vintage", "penny_dreadful", "premodern", "duel_commander", "commander", "brawl")),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("mtggoldfish-movers", new Operation(
+            "mtggoldfish-movers",
+            "GET",
+            "/mtggoldfish/movers",
+            List.of(),
+            List.of(
+            new QueryParam("type", false, "string", List.of("paper", "online")),
+            new QueryParam("scope", false, "string", List.of()),
+            new QueryParam("direction", false, "string", List.of("winners", "losers")),
+            new QueryParam("period", false, "string", List.of("dod", "wow"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-price-history", new Operation(
+            "mtggoldfish-price-history",
+            "GET",
+            "/mtggoldfish/price-history",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("kind", false, "string", List.of("card", "set")),
+            new QueryParam("type", false, "string", List.of("paper", "online"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-price-index", new Operation(
+            "mtggoldfish-price-index",
+            "GET",
+            "/mtggoldfish/price-index",
+            List.of(),
+            List.of(
+            new QueryParam("index", true, "string", List.of("WOE_EOE", "pioneer", "modern", "legacy", "vintage", "PAUPER", "RESERVED_LIST")),
+            new QueryParam("type", false, "string", List.of("paper", "online"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-price-list", new Operation(
+            "mtggoldfish-price-list",
+            "GET",
+            "/mtggoldfish/price-list",
+            List.of(),
+            List.of(
+            new QueryParam("list", true, "string", List.of("standard", "pioneer", "modern_one", "modern_two", "legacy_one", "legacy_two", "special", "boosters")),
+            new QueryParam("type", false, "string", List.of("paper", "online"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-set", new Operation(
+            "mtggoldfish-set",
+            "GET",
+            "/mtggoldfish/set",
+            List.of(),
+            List.of(
+            new QueryParam("set", true, "string", List.of()),
+            new QueryParam("subset", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-sets", new Operation(
+            "mtggoldfish-sets",
+            "GET",
+            "/mtggoldfish/sets",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-staples", new Operation(
+            "mtggoldfish-staples",
+            "GET",
+            "/mtggoldfish/staples",
+            List.of(),
+            List.of(
+            new QueryParam("format", true, "string", List.of("standard", "modern", "pioneer", "historic", "explorer", "timeless", "alchemy", "pauper", "legacy", "vintage", "penny_dreadful", "premodern", "duel_commander")),
+            new QueryParam("category", false, "string", List.of("all", "creatures", "spells", "lands"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-tournament", new Operation(
+            "mtggoldfish-tournament",
+            "GET",
+            "/mtggoldfish/tournament",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("mtggoldfish-tournaments", new Operation(
+            "mtggoldfish-tournaments",
+            "GET",
+            "/mtggoldfish/tournaments",
+            List.of(),
+            List.of(
+            new QueryParam("name", false, "string", List.of()),
+            new QueryParam("format", false, "string", List.of("standard", "modern", "pioneer", "historic", "explorer", "timeless", "alchemy", "pauper", "legacy", "vintage", "penny_dreadful", "premodern")),
+            new QueryParam("date_from", false, "string", List.of()),
+            new QueryParam("date_to", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("nascar-live-feed", new Operation(
             "nascar-live-feed",
             "GET",
@@ -38193,9 +41341,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations43(Map<String, Operation> m) {
         m.put("nascar-races", new Operation(
             "nascar-races",
             "GET",
@@ -38469,6 +41614,19 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-box-score-defensive", new Operation(
+            "nba-box-score-defensive",
+            "GET",
+            "/nba/box-score-defensive",
+            List.of(),
+            List.of(
+            new QueryParam("game_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("nba-box-score-four-factors", new Operation(
             "nba-box-score-four-factors",
             "GET",
@@ -38524,6 +41682,19 @@ public final class Operations {
             new QueryParam("league_id", false, "string", List.of("00")),
             new QueryParam("start_period", false, "integer", List.of()),
             new QueryParam("end_period", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-box-score-summary", new Operation(
+            "nba-box-score-summary",
+            "GET",
+            "/nba/box-score-summary",
+            List.of(),
+            List.of(
+            new QueryParam("game_id", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -38643,6 +41814,41 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-homepage-v2", new Operation(
+            "nba-homepage-v2",
+            "GET",
+            "/nba/homepage-v2",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("game_scope", false, "string", List.of("Season")),
+            new QueryParam("player_scope", false, "string", List.of()),
+            new QueryParam("player_or_team", false, "string", List.of("Player")),
+            new QueryParam("stat_type", false, "string", List.of("Traditional"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-hustle-player", new Operation(
+            "nba-hustle-player",
+            "GET",
+            "/nba/hustle-player",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("nba-hustle-stats", new Operation(
             "nba-hustle-stats",
             "GET",
@@ -38690,6 +41896,28 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-lineup-shot-chart", new Operation(
+            "nba-lineup-shot-chart",
+            "GET",
+            "/nba/lineup-shot-chart",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("context_measure", false, "string", List.of("FGA", "FG_PCT")),
+            new QueryParam("group_quantity", false, "integer", List.of("5")),
+            new QueryParam("period", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations47(Map<String, Operation> m) {
         m.put("nba-lineups", new Operation(
             "nba-lineups",
             "GET",
@@ -38809,6 +42037,131 @@ public final class Operations {
             new QueryParam("clutch_time", false, "string", List.of("Last 5 Minutes")),
             new QueryParam("ahead_behind", false, "string", List.of("Ahead or Behind")),
             new QueryParam("point_diff", false, "integer", List.of("5"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-compare", new Operation(
+            "nba-player-compare",
+            "GET",
+            "/nba/player-compare",
+            List.of(),
+            List.of(
+            new QueryParam("player_ids", true, "array", List.of()),
+            new QueryParam("vs_player_ids", true, "array", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season", "Playoffs", "Pre Season", "All Star")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame", "Totals", "Per36", "Per48", "Per100Possessions", "MinutesPer", "PerPossession")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-by-clutch", new Operation(
+            "nba-player-dash-by-clutch",
+            "GET",
+            "/nba/player-dash-by-clutch",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-by-game-splits", new Operation(
+            "nba-player-dash-by-game-splits",
+            "GET",
+            "/nba/player-dash-by-game-splits",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-by-last-n-games", new Operation(
+            "nba-player-dash-by-last-n-games",
+            "GET",
+            "/nba/player-dash-by-last-n-games",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-by-opponent", new Operation(
+            "nba-player-dash-by-opponent",
+            "GET",
+            "/nba/player-dash-by-opponent",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-pt-pass", new Operation(
+            "nba-player-dash-pt-pass",
+            "GET",
+            "/nba/player-dash-pt-pass",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-player-dash-pt-reb", new Operation(
+            "nba-player-dash-pt-reb",
+            "GET",
+            "/nba/player-dash-pt-reb",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame"))),
             List.of(),
             null,
             false,
@@ -38956,6 +42309,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-playoff-series", new Operation(
+            "nba-playoff-series",
+            "GET",
+            "/nba/playoff-series",
+            List.of(),
+            List.of(
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("nba-pt-defend", new Operation(
             "nba-pt-defend",
             "GET",
@@ -39005,6 +42372,24 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-shot-chart", new Operation(
+            "nba-shot-chart",
+            "GET",
+            "/nba/shot-chart",
+            List.of(),
+            List.of(
+            new QueryParam("player_id", false, "integer", List.of()),
+            new QueryParam("team_id", false, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("context_measure", false, "string", List.of("FGA", "FG_PCT"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("nba-standings", new Operation(
             "nba-standings",
             "GET",
@@ -39039,6 +42424,78 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("nba-team-dash-by-clutch", new Operation(
+            "nba-team-dash-by-clutch",
+            "GET",
+            "/nba/team-dash-by-clutch",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-team-dash-by-game-splits", new Operation(
+            "nba-team-dash-by-game-splits",
+            "GET",
+            "/nba/team-dash-by-game-splits",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-team-dash-by-last-n-games", new Operation(
+            "nba-team-dash-by-last-n-games",
+            "GET",
+            "/nba/team-dash-by-last-n-games",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-team-dash-by-opponent", new Operation(
+            "nba-team-dash-by-opponent",
+            "GET",
+            "/nba/team-dash-by-opponent",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame")),
+            new QueryParam("measure_type", false, "string", List.of("Base", "Advanced", "Misc", "Scoring", "Defense", "Opponent"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("nba-team-dash-pt-pass", new Operation(
             "nba-team-dash-pt-pass",
             "GET",
@@ -39050,6 +42507,23 @@ public final class Operations {
             new QueryParam("season_type", false, "string", List.of("Regular Season", "Playoffs", "Pre Season", "All Star")),
             new QueryParam("per_mode", false, "string", List.of("PerGame", "Totals", "Per36", "Per48", "Per100Possessions", "MinutesPer", "PerPossession")),
             new QueryParam("team_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("nba-team-dash-pt-reb", new Operation(
+            "nba-team-dash-pt-reb",
+            "GET",
+            "/nba/team-dash-pt-reb",
+            List.of(),
+            List.of(
+            new QueryParam("team_id", true, "integer", List.of()),
+            new QueryParam("league_id", false, "string", List.of("00")),
+            new QueryParam("season", false, "string", List.of()),
+            new QueryParam("season_type", false, "string", List.of("Regular Season")),
+            new QueryParam("per_mode", false, "string", List.of("PerGame"))),
             List.of(),
             null,
             false,
@@ -39073,9 +42547,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations44(Map<String, Operation> m) {
         m.put("nba-team-details", new Operation(
             "nba-team-details",
             "GET",
@@ -39391,6 +42862,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations48(Map<String, Operation> m) {
         m.put("ndtv-search", new Operation(
             "ndtv-search",
             "GET",
@@ -39885,9 +43359,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations45(Map<String, Operation> m) {
         m.put("newyorker-author", new Operation(
             "newyorker-author",
             "GET",
@@ -40210,6 +43681,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations49(Map<String, Operation> m) {
         m.put("nhl-gamecenter-play-by-play", new Operation(
             "nhl-gamecenter-play-by-play",
             "GET",
@@ -40705,9 +44179,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations46(Map<String, Operation> m) {
         m.put("nydailynews-author", new Operation(
             "nydailynews-author",
             "GET",
@@ -40987,6 +44458,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations50(Map<String, Operation> m) {
         m.put("nzherald-news", new Operation(
             "nzherald-news",
             "GET",
@@ -41510,9 +44984,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations47(Map<String, Operation> m) {
         m.put("opendota-patch-notes", new Operation(
             "opendota-patch-notes",
             "GET",
@@ -41886,6 +45357,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations51(Map<String, Operation> m) {
         m.put("openf1-position", new Operation(
             "openf1-position",
             "GET",
@@ -42470,9 +45944,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations48(Map<String, Operation> m) {
         m.put("opensea-collection-holders", new Operation(
             "opensea-collection-holders",
             "GET",
@@ -42780,6 +46251,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
+    }
+
+    private static void putOperations52(Map<String, Operation> m) {
         m.put("opensea-profile-created", new Operation(
             "opensea-profile-created",
             "GET",
@@ -43025,6 +46499,96 @@ public final class Operations {
             "/pagesix/sections",
             List.of(),
             List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pandaexpress-categories", new Operation(
+            "pandaexpress-categories",
+            "GET",
+            "/pandaexpress/categories",
+            List.of(),
+            List.of(
+            new QueryParam("store_id", true, "integer", List.of()),
+            new QueryParam("include_single_use", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pandaexpress-directory", new Operation(
+            "pandaexpress-directory",
+            "GET",
+            "/pandaexpress/directory",
+            List.of(),
+            List.of(
+            new QueryParam("country", false, "string", List.of()),
+            new QueryParam("state", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pandaexpress-item", new Operation(
+            "pandaexpress-item",
+            "GET",
+            "/pandaexpress/item",
+            List.of(),
+            List.of(
+            new QueryParam("store_id", true, "integer", List.of()),
+            new QueryParam("product_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pandaexpress-menu", new Operation(
+            "pandaexpress-menu",
+            "GET",
+            "/pandaexpress/menu",
+            List.of(),
+            List.of(
+            new QueryParam("store_id", true, "integer", List.of()),
+            new QueryParam("category_id", false, "integer", List.of()),
+            new QueryParam("include_single_use", false, "boolean", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pandaexpress-nearby", new Operation(
+            "pandaexpress-nearby",
+            "GET",
+            "/pandaexpress/nearby",
+            List.of(),
+            List.of(
+            new QueryParam("lat", true, "number", List.of()),
+            new QueryParam("lng", true, "number", List.of()),
+            new QueryParam("radius", false, "number", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pandaexpress-store", new Operation(
+            "pandaexpress-store",
+            "GET",
+            "/pandaexpress/store",
+            List.of(),
+            List.of(
+            new QueryParam("store_id", false, "integer", List.of()),
+            new QueryParam("store_number", false, "string", List.of()),
+            new QueryParam("include_hours", false, "boolean", List.of())),
             List.of(),
             null,
             false,
@@ -43309,9 +46873,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations49(Map<String, Operation> m) {
         m.put("papajohns-colombia-menu", new Operation(
             "papajohns-colombia-menu",
             "GET",
@@ -43543,6 +47104,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations53(Map<String, Operation> m) {
         m.put("papajohns-nearby", new Operation(
             "papajohns-nearby",
             "GET",
@@ -43859,6 +47423,86 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("peacock-channels", new Operation(
+            "peacock-channels",
+            "GET",
+            "/peacock/channels",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("peacock-collection", new Operation(
+            "peacock-collection",
+            "GET",
+            "/peacock/collection",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of("24", "30", "100"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("peacock-genres", new Operation(
+            "peacock-genres",
+            "GET",
+            "/peacock/genres",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of("tv", "movies", "kids", "latino", "news"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("peacock-page", new Operation(
+            "peacock-page",
+            "GET",
+            "/peacock/page",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("peacock-season", new Operation(
+            "peacock-season",
+            "GET",
+            "/peacock/season",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of()),
+            new QueryParam("season", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("peacock-title", new Operation(
+            "peacock-title",
+            "GET",
+            "/peacock/title",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("people-article", new Operation(
             "people-article",
             "GET",
@@ -44031,6 +47675,46 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("pgatour-cups", new Operation(
+            "pgatour-cups",
+            "GET",
+            "/pgatour/cups",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pgatour-cup-standings", new Operation(
+            "pgatour-cup-standings",
+            "GET",
+            "/pgatour/cups/{cup_id}",
+            List.of("cup_id"),
+            List.of(
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("query_type", false, "string", List.of("THROUGH_EVENT", "EVENT_ONLY")),
+            new QueryParam("tournament_id", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pgatour-cup-options", new Operation(
+            "pgatour-cup-options",
+            "GET",
+            "/pgatour/cups/{cup_id}/options",
+            List.of("cup_id"),
+            List.of(
+            new QueryParam("year", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("pgatour-leaderboard", new Operation(
             "pgatour-leaderboard",
             "GET",
@@ -44151,9 +47835,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations50(Map<String, Operation> m) {
         m.put("pgatour-tournament-course-stats", new Operation(
             "pgatour-tournament-course-stats",
             "GET",
@@ -44239,6 +47920,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations54(Map<String, Operation> m) {
         m.put("phillyinquirer-author", new Operation(
             "phillyinquirer-author",
             "GET",
@@ -44907,6 +48591,337 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("pokedata-card-sales", new Operation(
+            "pokedata-card-sales",
+            "GET",
+            "/pokedata/card/sales",
+            List.of(),
+            List.of(
+            new QueryParam("card_id", true, "integer", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pokedata-card-stats", new Operation(
+            "pokedata-card-stats",
+            "GET",
+            "/pokedata/card/stats",
+            List.of(),
+            List.of(
+            new QueryParam("card_ids", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-marketplace-listing", new Operation(
+            "pokedata-marketplace-listing",
+            "GET",
+            "/pokedata/marketplace/listing",
+            List.of(),
+            List.of(
+            new QueryParam("listing_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-marketplace-search", new Operation(
+            "pokedata-marketplace-search",
+            "GET",
+            "/pokedata/marketplace/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-portfolio", new Operation(
+            "pokedata-portfolio",
+            "GET",
+            "/pokedata/portfolio",
+            List.of(),
+            List.of(
+            new QueryParam("portfolio_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-portfolio-value", new Operation(
+            "pokedata-portfolio-value",
+            "GET",
+            "/pokedata/portfolio/value",
+            List.of(),
+            List.of(
+            new QueryParam("portfolio_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-portfolios", new Operation(
+            "pokedata-portfolios",
+            "GET",
+            "/pokedata/portfolios",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("featured", "value", "views")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pokedata-product-sales", new Operation(
+            "pokedata-product-sales",
+            "GET",
+            "/pokedata/product/sales",
+            List.of(),
+            List.of(
+            new QueryParam("product_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-product-stats", new Operation(
+            "pokedata-product-stats",
+            "GET",
+            "/pokedata/product/stats",
+            List.of(),
+            List.of(
+            new QueryParam("product_ids", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-products", new Operation(
+            "pokedata-products",
+            "GET",
+            "/pokedata/products",
+            List.of(),
+            List.of(
+            new QueryParam("tcg", false, "string", List.of("Pokemon", "Magic the Gathering", "Yugioh", "One Piece", "Digimon Card Game", "Flesh and Blood", "Union Arena", "MetaZoo", "Lorcana", "Dragon Ball Super Fusion World", "Gundam Card Game", "Star Wars Unlimited", "Sorcery Contested Realm", "Dragon Ball Z TCG", "Grand Archive")),
+            new QueryParam("language", false, "string", List.of("ENGLISH", "JAPANESE", "CHINESE")),
+            new QueryParam("type", false, "string", List.of("BATTLEBOX", "BLISTERPACK", "BOOSTERBOX", "BOOSTERPACK", "COLLECTIONBOX", "COLLECTIONCHEST", "DECK", "DECKBUILDBOX", "ELITETRAINERBOX", "JUMBOPACK", "LIMITEDSET", "MISCELLANEOUS", "PINCOLLECTION", "PREMIUMTRAINERBOX", "SHEET", "SPECIALBOX", "SPECIALPACK", "SPECIALSET", "STARTERSET", "STARTPACK", "TIN", "TRAINERCARDCOLLECTION")),
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pokedata-products-facets", new Operation(
+            "pokedata-products-facets",
+            "GET",
+            "/pokedata/products/facets",
+            List.of(),
+            List.of(
+            new QueryParam("tcg", false, "string", List.of("Pokemon", "Magic the Gathering", "Yugioh", "One Piece", "Digimon Card Game", "Flesh and Blood", "Union Arena", "MetaZoo", "Lorcana", "Dragon Ball Super Fusion World", "Gundam Card Game", "Star Wars Unlimited", "Sorcery Contested Realm", "Dragon Ball Z TCG", "Grand Archive"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-search", new Operation(
+            "pokedata-search",
+            "GET",
+            "/pokedata/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("cards", "products")),
+            new QueryParam("tcg", false, "string", List.of("Pokemon", "Magic the Gathering", "Yugioh", "One Piece", "Digimon Card Game", "Flesh and Blood", "Union Arena", "MetaZoo", "Lorcana", "Dragon Ball Super Fusion World", "Gundam Card Game", "Star Wars Unlimited", "Sorcery Contested Realm", "Dragon Ball Z TCG", "Grand Archive")),
+            new QueryParam("language", false, "string", List.of("ENGLISH", "JAPANESE", "CHINESE")),
+            new QueryParam("set_id", false, "integer", List.of()),
+            new QueryParam("secret", false, "string", List.of("true", "false")),
+            new QueryParam("product_type", false, "string", List.of("BATTLEBOX", "BLISTERPACK", "BOOSTERBOX", "BOOSTERPACK", "COLLECTIONBOX", "COLLECTIONCHEST", "DECK", "DECKBUILDBOX", "ELITETRAINERBOX", "JUMBOPACK", "LIMITEDSET", "MISCELLANEOUS", "PINCOLLECTION", "PREMIUMTRAINERBOX", "SHEET", "SPECIALBOX", "SPECIALPACK", "SPECIALSET", "STARTERSET", "STARTPACK", "TIN", "TRAINERCARDCOLLECTION")),
+            new QueryParam("year", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "name_asc", "name_desc", "release_date_desc", "release_date_asc")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+    }
+
+    private static void putOperations55(Map<String, Operation> m) {
+        m.put("pokedata-set", new Operation(
+            "pokedata-set",
+            "GET",
+            "/pokedata/set",
+            List.of(),
+            List.of(
+            new QueryParam("set_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-set-cards", new Operation(
+            "pokedata-set-cards",
+            "GET",
+            "/pokedata/set/cards",
+            List.of(),
+            List.of(
+            new QueryParam("set_id", true, "integer", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pokedata-set-products", new Operation(
+            "pokedata-set-products",
+            "GET",
+            "/pokedata/set/products",
+            List.of(),
+            List.of(
+            new QueryParam("set_id", true, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-sets", new Operation(
+            "pokedata-sets",
+            "GET",
+            "/pokedata/sets",
+            List.of(),
+            List.of(
+            new QueryParam("tcg", false, "string", List.of("Pokemon", "Magic the Gathering", "Yugioh", "One Piece", "Digimon Card Game", "Flesh and Blood", "Union Arena", "MetaZoo", "Lorcana", "Dragon Ball Super Fusion World", "Gundam Card Game", "Star Wars Unlimited", "Sorcery Contested Realm", "Dragon Ball Z TCG", "Grand Archive")),
+            new QueryParam("language", false, "string", List.of("ENGLISH", "JAPANESE", "CHINESE")),
+            new QueryParam("series", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("pokedata-sources", new Operation(
+            "pokedata-sources",
+            "GET",
+            "/pokedata/sources",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("pokedata-tcgs", new Operation(
+            "pokedata-tcgs",
+            "GET",
+            "/pokedata/tcgs",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("poketrace-card", new Operation(
+            "poketrace-card",
+            "GET",
+            "/poketrace/card",
+            List.of(),
+            List.of(
+            new QueryParam("slug", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("poketrace-catalog", new Operation(
+            "poketrace-catalog",
+            "GET",
+            "/poketrace/catalog",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("set", false, "string", List.of()),
+            new QueryParam("market", false, "string", List.of("US", "EU")),
+            new QueryParam("product_type", false, "string", List.of("single", "sealed", "code_card", "accessory")),
+            new QueryParam("product_family", false, "string", List.of("card", "code_card", "booster_box", "booster_pack", "booster_bundle", "elite_trainer_box", "tin", "deck", "box_collection", "blister", "sealed_case", "other_sealed", "coin", "accessory", "other")),
+            new QueryParam("tier", false, "string", List.of()),
+            new QueryParam("trend", false, "string", List.of("up", "down", "stable")),
+            new QueryParam("confidence", false, "string", List.of("very_low", "low", "medium", "high", "very_high")),
+            new QueryParam("min_price", false, "number", List.of()),
+            new QueryParam("max_price", false, "number", List.of()),
+            new QueryParam("graded", false, "string", List.of("true", "false")),
+            new QueryParam("variant", false, "string", List.of("Normal", "Holofoil", "Reverse_Holofoil", "1st_Edition", "1st_Edition_Holofoil", "Unlimited", "Unlimited_Holofoil")),
+            new QueryParam("game", false, "string", List.of("pokemon", "pokemon-japanese", "pokemon-chinese", "pokemon-thai", "pokemon-indonesian")),
+            new QueryParam("sort", false, "string", List.of("recent", "sale_count", "price_desc", "price_asc", "name")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("poketrace-filters", new Operation(
+            "poketrace-filters",
+            "GET",
+            "/poketrace/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("poketrace-sets", new Operation(
+            "poketrace-sets",
+            "GET",
+            "/poketrace/sets",
+            List.of(),
+            List.of(
+            new QueryParam("game", false, "string", List.of("pokemon", "pokemon-japanese", "pokemon-chinese", "pokemon-thai", "pokemon-indonesian")),
+            new QueryParam("market", false, "string", List.of("US", "EU")),
+            new QueryParam("product_type", false, "string", List.of("single", "sealed", "code_card", "accessory")),
+            new QueryParam("product_family", false, "string", List.of("card", "code_card", "booster_box", "booster_pack", "booster_bundle", "elite_trainer_box", "tin", "deck", "box_collection", "blister", "sealed_case", "other_sealed", "coin", "accessory", "other")),
+            new QueryParam("graded", false, "string", List.of("true", "false")),
+            new QueryParam("variant", false, "string", List.of("Normal", "Holofoil", "Reverse_Holofoil", "1st_Edition", "1st_Edition_Holofoil", "Unlimited", "Unlimited_Holofoil"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("politico-article", new Operation(
             "politico-article",
             "GET",
@@ -44971,9 +48986,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations51(Map<String, Operation> m) {
         m.put("polygon-article", new Operation(
             "polygon-article",
             "GET",
@@ -45045,6 +49057,7 @@ public final class Operations {
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
             new QueryParam("taker_only", false, "string", List.of("true", "false")),
             new QueryParam("filter_type", false, "string", List.of("CASH")),
             new QueryParam("filter_amount", false, "string", List.of("1", "5", "10", "100", "1000", "10000", "100000")),
@@ -45055,7 +49068,7 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
-            List.of()));
+            List.of("cursor")));
         m.put("polymarket-clob-market", new Operation(
             "polymarket-clob-market",
             "GET",
@@ -45148,6 +49161,7 @@ public final class Operations {
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
             new QueryParam("taker_only", false, "string", List.of("true", "false")),
             new QueryParam("filter_type", false, "string", List.of("CASH")),
             new QueryParam("filter_amount", false, "string", List.of("1", "5", "10", "100", "1000", "10000", "100000"))),
@@ -45156,7 +49170,7 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
-            List.of()));
+            List.of("cursor")));
         m.put("polymarket-event-detail", new Operation(
             "polymarket-event-detail",
             "GET",
@@ -45177,6 +49191,7 @@ public final class Operations {
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
             new QueryParam("taker_only", false, "string", List.of("true", "false")),
             new QueryParam("filter_type", false, "string", List.of("CASH")),
             new QueryParam("filter_amount", false, "string", List.of("1", "5", "10", "100", "1000", "10000", "100000"))),
@@ -45185,7 +49200,7 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
-            List.of()));
+            List.of("cursor")));
         m.put("polymarket-events", new Operation(
             "polymarket-events",
             "GET",
@@ -45334,6 +49349,7 @@ public final class Operations {
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
             new QueryParam("taker_only", false, "string", List.of("true", "false")),
             new QueryParam("filter_type", false, "string", List.of("CASH")),
             new QueryParam("filter_amount", false, "string", List.of("1", "5", "10", "100", "1000", "10000", "100000"))),
@@ -45342,7 +49358,7 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             true,
-            List.of()));
+            List.of("cursor")));
         m.put("polymarket-market-liquidity-by-condition", new Operation(
             "polymarket-market-liquidity-by-condition",
             "GET",
@@ -45615,6 +49631,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations56(Map<String, Operation> m) {
         m.put("polymarket-spotlight", new Operation(
             "polymarket-spotlight",
             "GET",
@@ -45825,9 +49844,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations52(Map<String, Operation> m) {
         m.put("polymarket-token-orderbook", new Operation(
             "polymarket-token-orderbook",
             "GET",
@@ -46460,6 +50476,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations57(Map<String, Operation> m) {
         m.put("pristine-marketplace-page", new Operation(
             "pristine-marketplace-page",
             "GET",
@@ -46668,9 +50687,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations53(Map<String, Operation> m) {
         m.put("producthunt-alternatives", new Operation(
             "producthunt-alternatives",
             "GET",
@@ -47270,6 +51286,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations58(Map<String, Operation> m) {
         m.put("punch-news", new Operation(
             "punch-news",
             "GET",
@@ -47475,9 +51494,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations54(Map<String, Operation> m) {
         m.put("raisingcanes-promotion", new Operation(
             "raisingcanes-promotion",
             "GET",
@@ -47939,6 +51955,30 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("reddit-comment", new Operation(
+            "reddit-comment",
+            "GET",
+            "/reddit/comment/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-comment-awards", new Operation(
+            "reddit-comment-awards",
+            "GET",
+            "/reddit/comment/{id}/awards",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("reddit-comments", new Operation(
             "reddit-comments",
             "GET",
@@ -47947,8 +51987,7 @@ public final class Operations {
             List.of(
             new QueryParam("sort", false, "string", List.of("confidence", "top", "new", "controversial", "old", "qa")),
             new QueryParam("limit", false, "integer", List.of()),
-            new QueryParam("depth", false, "integer", List.of()),
-            new QueryParam("include_metrics", false, "boolean", List.of())),
+            new QueryParam("depth", false, "integer", List.of())),
             List.of(),
             null,
             false,
@@ -47990,13 +52029,53 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("reddit-popular", new Operation(
+            "reddit-popular",
+            "GET",
+            "/reddit/popular",
+            List.of(),
+            List.of(
+            new QueryParam("sort", false, "string", List.of("hot", "top")),
+            new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("reddit-post", new Operation(
             "reddit-post",
             "GET",
             "/reddit/post/{id}",
             List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-post-awards", new Operation(
+            "reddit-post-awards",
+            "GET",
+            "/reddit/post/{id}/awards",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-posts-by-ids", new Operation(
+            "reddit-posts-by-ids",
+            "GET",
+            "/reddit/posts/ids",
+            List.of(),
             List.of(
-            new QueryParam("include_metrics", false, "boolean", List.of())),
+            new QueryParam("ids", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -48021,6 +52100,43 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("reddit-search-comments", new Operation(
+            "reddit-search-comments",
+            "GET",
+            "/reddit/search/comments",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("subreddit", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "hot", "new", "top", "comments")),
+            new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-search-people", new Operation(
+            "reddit-search-people",
+            "GET",
+            "/reddit/search/people",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevance", "hot", "new", "top", "comments")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations59(Map<String, Operation> m) {
         m.put("reddit-subreddit-about", new Operation(
             "reddit-subreddit-about",
             "GET",
@@ -48048,14 +52164,102 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("reddit-subreddit-flairs", new Operation(
+            "reddit-subreddit-flairs",
+            "GET",
+            "/reddit/subreddit/{subreddit}/flairs",
+            List.of("subreddit"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-highlights", new Operation(
+            "reddit-subreddit-highlights",
+            "GET",
+            "/reddit/subreddit/{subreddit}/highlights",
+            List.of("subreddit"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-leaderboard-categories", new Operation(
+            "reddit-subreddit-leaderboard-categories",
+            "GET",
+            "/reddit/subreddit/{subreddit}/leaderboard/categories",
+            List.of("subreddit"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("reddit-subreddit-posts", new Operation(
             "reddit-subreddit-posts",
             "GET",
             "/reddit/subreddit/{subreddit}/posts",
             List.of("subreddit"),
             List.of(
-            new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising")),
+            new QueryParam("sort", false, "string", List.of("hot", "new", "top", "rising", "controversial")),
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-rules", new Operation(
+            "reddit-subreddit-rules",
+            "GET",
+            "/reddit/subreddit/{subreddit}/rules",
+            List.of("subreddit"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-user-flairs", new Operation(
+            "reddit-subreddit-user-flairs",
+            "GET",
+            "/reddit/subreddit/{subreddit}/user-flairs",
+            List.of("subreddit"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddit-wiki", new Operation(
+            "reddit-subreddit-wiki",
+            "GET",
+            "/reddit/subreddit/{subreddit}/wiki",
+            List.of("subreddit"),
+            List.of(
+            new QueryParam("page", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("reddit-subreddits-discover", new Operation(
+            "reddit-subreddits-discover",
+            "GET",
+            "/reddit/subreddits/discover",
+            List.of(),
+            List.of(
+            new QueryParam("feed", false, "string", List.of("popular", "new", "default")),
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("after", false, "string", List.of())),
             List.of(),
@@ -48075,6 +52279,73 @@ public final class Operations {
             new QueryParam("time", false, "string", List.of("hour", "day", "week", "month", "year", "all")),
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddits-search", new Operation(
+            "reddit-subreddits-search",
+            "GET",
+            "/reddit/subreddits/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-subreddits-suggest", new Operation(
+            "reddit-subreddits-suggest",
+            "GET",
+            "/reddit/subreddits/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-topics", new Operation(
+            "reddit-topics",
+            "GET",
+            "/reddit/topics",
+            List.of(),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-topics-broad", new Operation(
+            "reddit-topics-broad",
+            "GET",
+            "/reddit/topics/broad",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-topics-search", new Operation(
+            "reddit-topics-search",
+            "GET",
+            "/reddit/topics/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of())),
             List.of(),
             null,
             false,
@@ -48119,6 +52390,18 @@ public final class Operations {
             List.of(
             new QueryParam("limit", false, "integer", List.of()),
             new QueryParam("after", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("reddit-user-profile", new Operation(
+            "reddit-user-profile",
+            "GET",
+            "/reddit/user/{username}/profile",
+            List.of("username"),
+            List.of(),
             List.of(),
             null,
             false,
@@ -48337,9 +52620,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations55(Map<String, Operation> m) {
         m.put("reelshort-search", new Operation(
             "reelshort-search",
             "GET",
@@ -48685,6 +52965,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations60(Map<String, Operation> m) {
         m.put("retailmenot-autocomplete", new Operation(
             "retailmenot-autocomplete",
             "GET",
@@ -49195,9 +53478,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations56(Map<String, Operation> m) {
         m.put("rnz-article", new Operation(
             "rnz-article",
             "GET",
@@ -49526,6 +53806,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations61(Map<String, Operation> m) {
         m.put("rottentomatoes-browse-filters", new Operation(
             "rottentomatoes-browse-filters",
             "GET",
@@ -50058,9 +54341,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations57(Map<String, Operation> m) {
         m.put("rte-headlines", new Operation(
             "rte-headlines",
             "GET",
@@ -50376,6 +54656,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations62(Map<String, Operation> m) {
         m.put("scmp-headlines", new Operation(
             "scmp-headlines",
             "GET",
@@ -50869,9 +55152,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations58(Map<String, Operation> m) {
         m.put("sephora-category", new Operation(
             "sephora-category",
             "GET",
@@ -50997,6 +55277,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("serebii-pokemongo-eggs", new Operation(
+            "serebii-pokemongo-eggs",
+            "GET",
+            "/serebii/pokemongo/eggs",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("serebii-pokemongo-event-categories", new Operation(
             "serebii-pokemongo-event-categories",
             "GET",
@@ -51106,6 +55398,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("serebii-pokemongo-raid-bosses", new Operation(
+            "serebii-pokemongo-raid-bosses",
+            "GET",
+            "/serebii/pokemongo/raid-bosses",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("serebii-pokemongo-event-detail-raid-day", new Operation(
             "serebii-pokemongo-event-detail-raid-day",
             "GET",
@@ -51179,6 +55483,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations63(Map<String, Operation> m) {
         m.put("sevennewsau-author", new Operation(
             "sevennewsau-author",
             "GET",
@@ -51672,9 +55979,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations59(Map<String, Operation> m) {
         m.put("shop-app-search", new Operation(
             "shop-app-search",
             "GET",
@@ -51996,6 +56300,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations64(Map<String, Operation> m) {
         m.put("shopify-collections", new Operation(
             "shopify-collections",
             "GET",
@@ -52428,6 +56735,172 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("skyscanner-currencies", new Operation(
+            "skyscanner-currencies",
+            "GET",
+            "/skyscanner/currencies",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-flights-explore", new Operation(
+            "skyscanner-flights-explore",
+            "GET",
+            "/skyscanner/flights/explore",
+            List.of(),
+            List.of(
+            new QueryParam("origin", true, "string", List.of()),
+            new QueryParam("destination", false, "string", List.of()),
+            new QueryParam("depart", false, "string", List.of()),
+            new QueryParam("return", false, "string", List.of()),
+            new QueryParam("adults", false, "integer", List.of()),
+            new QueryParam("child_ages", false, "string", List.of()),
+            new QueryParam("cabin_class", false, "string", List.of("economy", "premium_economy", "business", "first")),
+            new QueryParam("bucket", false, "string", List.of("CHEAPEST_FLIGHTS", "DIRECT", "POPULAR", "UNDERRATED_DESTINATIONS", "BEACH", "ART_AND_CULTURE", "GREAT_FOOD", "OUTDOOR_ADVENTURES", "NIGHTLIFE_AND_ENTERTAINMENT")),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of()),
+            new QueryParam("currency", false, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("skyscanner-flights-options", new Operation(
+            "skyscanner-flights-options",
+            "GET",
+            "/skyscanner/flights/options",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-flights-price-calendar", new Operation(
+            "skyscanner-flights-price-calendar",
+            "GET",
+            "/skyscanner/flights/price-calendar",
+            List.of(),
+            List.of(
+            new QueryParam("origin", true, "string", List.of()),
+            new QueryParam("destination", true, "string", List.of()),
+            new QueryParam("from", false, "string", List.of()),
+            new QueryParam("to", false, "string", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of()),
+            new QueryParam("currency", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-flights-price-calendar-months", new Operation(
+            "skyscanner-flights-price-calendar-months",
+            "GET",
+            "/skyscanner/flights/price-calendar/months",
+            List.of(),
+            List.of(
+            new QueryParam("origin", true, "string", List.of()),
+            new QueryParam("destination", true, "string", List.of()),
+            new QueryParam("direct_only", false, "boolean", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of()),
+            new QueryParam("currency", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-flights-search", new Operation(
+            "skyscanner-flights-search",
+            "GET",
+            "/skyscanner/flights/search",
+            List.of(),
+            List.of(
+            new QueryParam("origin", false, "string", List.of()),
+            new QueryParam("destination", false, "string", List.of()),
+            new QueryParam("depart_date", false, "string", List.of()),
+            new QueryParam("return_date", false, "string", List.of()),
+            new QueryParam("legs", false, "string", List.of()),
+            new QueryParam("adults", false, "integer", List.of()),
+            new QueryParam("child_ages", false, "string", List.of()),
+            new QueryParam("cabin_class", false, "string", List.of("economy", "premium_economy", "business", "first")),
+            new QueryParam("nearby_origin_airports", false, "boolean", List.of()),
+            new QueryParam("nearby_destination_airports", false, "boolean", List.of()),
+            new QueryParam("bags", false, "string", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of()),
+            new QueryParam("currency", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("best", "cheapest", "fastest", "departure_outbound_asc", "departure_inbound_asc")),
+            new QueryParam("stops", false, "string", List.of()),
+            new QueryParam("airlines", false, "string", List.of()),
+            new QueryParam("alliances", false, "string", List.of()),
+            new QueryParam("max_duration", false, "integer", List.of()),
+            new QueryParam("outbound_departure", false, "string", List.of()),
+            new QueryParam("inbound_departure", false, "string", List.of()),
+            new QueryParam("layover_airports", false, "string", List.of()),
+            new QueryParam("max_layover", false, "integer", List.of()),
+            new QueryParam("greener_only", false, "boolean", List.of()),
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("skyscanner-locales", new Operation(
+            "skyscanner-locales",
+            "GET",
+            "/skyscanner/locales",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-markets", new Operation(
+            "skyscanner-markets",
+            "GET",
+            "/skyscanner/markets",
+            List.of(),
+            List.of(
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("skyscanner-places-autosuggest", new Operation(
+            "skyscanner-places-autosuggest",
+            "GET",
+            "/skyscanner/places/autosuggest",
+            List.of(),
+            List.of(
+            new QueryParam("query", true, "string", List.of()),
+            new QueryParam("destination", false, "boolean", List.of()),
+            new QueryParam("cities_airports_only", false, "boolean", List.of()),
+            new QueryParam("market", false, "string", List.of()),
+            new QueryParam("locale", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("skysports-article", new Operation(
             "skysports-article",
             "GET",
@@ -52504,9 +56977,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations60(Map<String, Operation> m) {
         m.put("slate-categories", new Operation(
             "slate-categories",
             "GET",
@@ -52697,6 +57167,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations65(Map<String, Operation> m) {
         m.put("sloanreview-articles", new Operation(
             "sloanreview-articles",
             "GET",
@@ -52810,6 +57283,196 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("snkrdunk-brands", new Operation(
+            "snkrdunk-brands",
+            "GET",
+            "/snkrdunk/brands",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-categories", new Operation(
+            "snkrdunk-categories",
+            "GET",
+            "/snkrdunk/categories",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-filters", new Operation(
+            "snkrdunk-filters",
+            "GET",
+            "/snkrdunk/filters",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-product", new Operation(
+            "snkrdunk-product",
+            "GET",
+            "/snkrdunk/product",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-product-listings", new Operation(
+            "snkrdunk-product-listings",
+            "GET",
+            "/snkrdunk/product/listings",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("used", "new")),
+            new QueryParam("condition", false, "string", List.of("like_new", "minor_scratches", "moderate_scratches", "significant_damage", "psa_10", "psa_9", "psa_8_below", "bgs_10_black", "bgs_10_gold", "bgs_9_5", "bgs_9_below", "ars_10_plus", "ars_10", "ars_9", "ars_8_below", "other_grading_company")),
+            new QueryParam("size_id", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("latest", "price_asc")),
+            new QueryParam("on_sale_only", false, "boolean", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("snkrdunk-price-chart", new Operation(
+            "snkrdunk-price-chart",
+            "GET",
+            "/snkrdunk/product/price-chart",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("market", false, "string", List.of("used", "new")),
+            new QueryParam("range", false, "string", List.of("all", "oneWeek", "oneMonth", "threeMonths")),
+            new QueryParam("condition", false, "string", List.of("like_new", "minor_scratches", "moderate_scratches", "significant_damage", "psa_10", "psa_9", "psa_8_below", "bgs_10_black", "bgs_10_gold", "bgs_9_5", "bgs_9_below", "ars_10_plus", "ars_10", "ars_9", "ars_8_below", "other_grading_company")),
+            new QueryParam("size_id", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-product-related", new Operation(
+            "snkrdunk-product-related",
+            "GET",
+            "/snkrdunk/product/related",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("type", false, "string", List.of("single", "box")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("snkrdunk-sales-history", new Operation(
+            "snkrdunk-sales-history",
+            "GET",
+            "/snkrdunk/product/sales-history",
+            List.of(),
+            List.of(
+            new QueryParam("code", true, "string", List.of()),
+            new QueryParam("condition", false, "string", List.of("like_new", "minor_scratches", "moderate_scratches", "significant_damage", "psa_10", "psa_9", "psa_8_below", "bgs_10_black", "bgs_10_gold", "bgs_9_5", "bgs_9_below", "ars_10_plus", "ars_10", "ars_9", "ars_8_below", "other_grading_company")),
+            new QueryParam("size_id", false, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("snkrdunk-search", new Operation(
+            "snkrdunk-search",
+            "GET",
+            "/snkrdunk/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", false, "string", List.of()),
+            new QueryParam("brand_ids", false, "string", List.of()),
+            new QueryParam("category_ids", false, "string", List.of()),
+            new QueryParam("conditions", false, "string", List.of()),
+            new QueryParam("stock", false, "string", List.of("any", "in_stock")),
+            new QueryParam("sort", false, "string", List.of("default", "conversion", "registered_at", "launched_at", "favorite_count")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("snkrdunk-suggest", new Operation(
+            "snkrdunk-suggest",
+            "GET",
+            "/snkrdunk/suggest",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("snkrdunk-trading-cards", new Operation(
+            "snkrdunk-trading-cards",
+            "GET",
+            "/snkrdunk/trading-cards",
+            List.of(),
+            List.of(
+            new QueryParam("brand_id", true, "string", List.of()),
+            new QueryParam("category_id", false, "string", List.of("0", "14", "25")),
+            new QueryParam("order", false, "string", List.of("popular", "release")),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("snkrdunk-trading-cards-used", new Operation(
+            "snkrdunk-trading-cards-used",
+            "GET",
+            "/snkrdunk/trading-cards/used",
+            List.of(),
+            List.of(
+            new QueryParam("brand_id", true, "string", List.of()),
+            new QueryParam("category_id", false, "string", List.of("0", "14", "25")),
+            new QueryParam("sort", false, "string", List.of("latest", "price_asc")),
+            new QueryParam("on_sale_only", false, "boolean", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("per_page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("sofascore-categories", new Operation(
             "sofascore-categories",
@@ -53304,9 +57967,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations61(Map<String, Operation> m) {
         m.put("sofascore-mma-card", new Operation(
             "sofascore-mma-card",
             "GET",
@@ -53336,6 +57996,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations66(Map<String, Operation> m) {
         m.put("sofascore-odds-dropping", new Operation(
             "sofascore-odds-dropping",
             "GET",
@@ -53503,6 +58166,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("sofascore-player-statistics", new Operation(
+            "sofascore-player-statistics",
+            "GET",
+            "/sofascore/player-statistics",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("match_type", false, "string", List.of("overall", "home", "away"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("sofascore-player-statistics-seasons", new Operation(
             "sofascore-player-statistics-seasons",
             "GET",
@@ -53515,6 +58192,21 @@ public final class Operations {
             false,
             List.of("ApiKeyAuth"),
             false,
+            List.of()));
+        m.put("sofascore-player-tournament-events", new Operation(
+            "sofascore-player-tournament-events",
+            "GET",
+            "/sofascore/player-tournament-events",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of()),
+            new QueryParam("tournament_id", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
             List.of()));
         m.put("sofascore-player-tournaments", new Operation(
             "sofascore-player-tournaments",
@@ -54153,7 +58845,7 @@ public final class Operations {
             List.of()));
     }
 
-    private static void putOperations62(Map<String, Operation> m) {
+    private static void putOperations67(Map<String, Operation> m) {
         m.put("sofascore-tournament-rounds", new Operation(
             "sofascore-tournament-rounds",
             "GET",
@@ -54986,6 +59678,58 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("speedrun-runs", new Operation(
+            "speedrun-runs",
+            "GET",
+            "/speedrun/runs",
+            List.of(),
+            List.of(
+            new QueryParam("game", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of()),
+            new QueryParam("level", false, "string", List.of()),
+            new QueryParam("platform", false, "string", List.of()),
+            new QueryParam("region", false, "string", List.of()),
+            new QueryParam("emulated", false, "boolean", List.of()),
+            new QueryParam("status", false, "string", List.of("new", "verified", "rejected")),
+            new QueryParam("orderby", false, "string", List.of("game", "category", "level", "platform", "region", "emulated", "date", "submitted", "status", "verify-date")),
+            new QueryParam("direction", false, "string", List.of("asc", "desc")),
+            new QueryParam("max", false, "integer", List.of()),
+            new QueryParam("offset", false, "integer", List.of()),
+            new QueryParam("embed", false, "array", List.of("game", "category", "level", "platform", "region"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("speedrun-runs-options", new Operation(
+            "speedrun-runs-options",
+            "GET",
+            "/speedrun/runs/options",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("speedrun-run", new Operation(
+            "speedrun-run",
+            "GET",
+            "/speedrun/runs/{id}",
+            List.of("id"),
+            List.of(
+            new QueryParam("embed", false, "array", List.of("game", "category", "level", "platform", "region"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations68(Map<String, Operation> m) {
         m.put("sportingnews-article", new Operation(
             "sportingnews-article",
             "GET",
@@ -55026,9 +59770,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations63(Map<String, Operation> m) {
         m.put("sportingnews-news", new Operation(
             "sportingnews-news",
             "GET",
@@ -55053,6 +59794,101 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("sportscardspro-brand", new Operation(
+            "sportscardspro-brand",
+            "GET",
+            "/sportscardspro/brand",
+            List.of(),
+            List.of(
+            new QueryParam("category", true, "string", List.of("baseball-cards", "basketball-cards", "football-cards", "hockey-cards", "racing-cards", "soccer-cards", "ufc-cards", "wrestling-cards", "tennis-cards", "golf-cards", "boxing-cards")),
+            new QueryParam("brand", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportscardspro-categories", new Operation(
+            "sportscardspro-categories",
+            "GET",
+            "/sportscardspro/categories",
+            List.of(),
+            List.of(
+            new QueryParam("category", false, "string", List.of("baseball-cards", "basketball-cards", "football-cards", "hockey-cards", "racing-cards", "soccer-cards", "ufc-cards", "wrestling-cards", "tennis-cards", "golf-cards", "boxing-cards"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportscardspro-price-history", new Operation(
+            "sportscardspro-price-history",
+            "GET",
+            "/sportscardspro/price-history",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "integer", List.of()),
+            new QueryParam("url", false, "string", List.of()),
+            new QueryParam("set", false, "string", List.of()),
+            new QueryParam("slug", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportscardspro-product", new Operation(
+            "sportscardspro-product",
+            "GET",
+            "/sportscardspro/product",
+            List.of(),
+            List.of(
+            new QueryParam("id", false, "integer", List.of()),
+            new QueryParam("set", false, "string", List.of()),
+            new QueryParam("slug", false, "string", List.of()),
+            new QueryParam("url", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportscardspro-search", new Operation(
+            "sportscardspro-search",
+            "GET",
+            "/sportscardspro/search",
+            List.of(),
+            List.of(
+            new QueryParam("q", true, "string", List.of()),
+            new QueryParam("set_uid", false, "string", List.of()),
+            new QueryParam("category", false, "string", List.of("baseball-cards", "basketball-cards", "football-cards", "hockey-cards", "racing-cards", "soccer-cards", "ufc-cards", "wrestling-cards", "tennis-cards", "golf-cards", "boxing-cards")),
+            new QueryParam("exclude_variants", false, "boolean", List.of()),
+            new QueryParam("sort", false, "string", List.of("popularity", "highest-price", "name"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("sportscardspro-set", new Operation(
+            "sportscardspro-set",
+            "GET",
+            "/sportscardspro/set",
+            List.of(),
+            List.of(
+            new QueryParam("set", true, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("popularity", "name", "card-number", "highest-price", "lowest-price")),
+            new QueryParam("rookies_only", false, "boolean", List.of()),
+            new QueryParam("exclude_variants", false, "boolean", List.of()),
+            new QueryParam("sealed", false, "string", List.of("include", "exclude", "only")),
+            new QueryParam("card_number", false, "string", List.of()),
+            new QueryParam("cursor", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
         m.put("sportskeeda-article", new Operation(
             "sportskeeda-article",
             "GET",
@@ -55727,6 +60563,50 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("spothero-monthly-search", new Operation(
+            "spothero-monthly-search",
+            "GET",
+            "/spothero/monthly-search",
+            List.of(),
+            List.of(
+            new QueryParam("oversize", false, "string", List.of()),
+            new QueryParam("page_size", false, "string", List.of()),
+            new QueryParam("include_walking_distance", false, "string", List.of()),
+            new QueryParam("sort_by", false, "string", List.of()),
+            new QueryParam("lat", false, "string", List.of()),
+            new QueryParam("lon", false, "string", List.of()),
+            new QueryParam("starts", false, "string", List.of()),
+            new QueryParam("show_unavailable", false, "string", List.of()),
+            new QueryParam("max_distance_meters", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+    }
+
+    private static void putOperations69(Map<String, Operation> m) {
+        m.put("spothero-transient-search", new Operation(
+            "spothero-transient-search",
+            "GET",
+            "/spothero/transient-search",
+            List.of(),
+            List.of(
+            new QueryParam("oversize", false, "string", List.of()),
+            new QueryParam("page_size", false, "string", List.of()),
+            new QueryParam("max_distance_meters", false, "string", List.of()),
+            new QueryParam("lat", false, "string", List.of()),
+            new QueryParam("lon", false, "string", List.of()),
+            new QueryParam("include_walking_distance", false, "string", List.of()),
+            new QueryParam("starts", false, "string", List.of()),
+            new QueryParam("ends", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("spotify-podcasts-categories", new Operation(
             "spotify-podcasts-categories",
             "GET",
@@ -55889,9 +60769,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations64(Map<String, Operation> m) {
         m.put("spotify-albums-search", new Operation(
             "spotify-albums-search",
             "GET",
@@ -56659,6 +61536,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations70(Map<String, Operation> m) {
         m.put("steam-items", new Operation(
             "steam-items",
             "GET",
@@ -56840,9 +61720,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations65(Map<String, Operation> m) {
         m.put("steam-top-sellers", new Operation(
             "steam-top-sellers",
             "GET",
@@ -57575,6 +62452,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations71(Map<String, Operation> m) {
         m.put("stuff-author", new Operation(
             "stuff-author",
             "GET",
@@ -57724,9 +62604,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations66(Map<String, Operation> m) {
         m.put("substack-notes", new Operation(
             "substack-notes",
             "GET",
@@ -58050,6 +62927,117 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("suno-contest", new Operation(
+            "suno-contest",
+            "GET",
+            "/suno/contest",
+            List.of(),
+            List.of(
+            new QueryParam("contest_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("suno-contests", new Operation(
+            "suno-contests",
+            "GET",
+            "/suno/contests",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("suno-explore", new Operation(
+            "suno-explore",
+            "GET",
+            "/suno/explore",
+            List.of(),
+            List.of(
+            new QueryParam("collection", false, "string", List.of("explore", "combined", "homepage", "mobile")),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("page_size", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("suno-feed", new Operation(
+            "suno-feed",
+            "GET",
+            "/suno/feed",
+            List.of(),
+            List.of(
+            new QueryParam("feed_id", true, "string", List.of()),
+            new QueryParam("cursor", false, "string", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("target_user_id", false, "string", List.of()),
+            new QueryParam("sort_by", false, "string", List.of("created_at", "upvote_count", "play_count"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
+        m.put("suno-genres", new Operation(
+            "suno-genres",
+            "GET",
+            "/suno/genres",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("suno-playlist", new Operation(
+            "suno-playlist",
+            "GET",
+            "/suno/playlist",
+            List.of(),
+            List.of(
+            new QueryParam("playlist_id", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("suno-profile", new Operation(
+            "suno-profile",
+            "GET",
+            "/suno/profile",
+            List.of(),
+            List.of(
+            new QueryParam("handle", true, "string", List.of()),
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("clips_sort_by", false, "string", List.of("created_at", "upvote_count", "play_count"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("suno-song", new Operation(
+            "suno-song",
+            "GET",
+            "/suno/song",
+            List.of(),
+            List.of(
+            new QueryParam("song_id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("swiggy-collections", new Operation(
             "swiggy-collections",
             "GET",
@@ -58225,6 +63213,56 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("taptap-app", new Operation(
+            "taptap-app",
+            "GET",
+            "/taptap/app/{id}",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("taptap-genres", new Operation(
+            "taptap-genres",
+            "GET",
+            "/taptap/genres",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("taptap-tag-games", new Operation(
+            "taptap-tag-games",
+            "GET",
+            "/taptap/tag/{tag_slug}",
+            List.of("tag_slug"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
+        m.put("taptap-top-charts", new Operation(
+            "taptap-top-charts",
+            "GET",
+            "/taptap/top-charts",
+            List.of(),
+            List.of(
+            new QueryParam("page", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("target-categories", new Operation(
             "target-categories",
             "GET",
@@ -58254,6 +63292,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations72(Map<String, Operation> m) {
         m.put("target-filter-options", new Operation(
             "target-filter-options",
             "GET",
@@ -58593,9 +63634,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations67(Map<String, Operation> m) {
         m.put("techradar-news", new Operation(
             "techradar-news",
             "GET",
@@ -59100,6 +64138,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations73(Map<String, Operation> m) {
         m.put("thebodyshop-pages", new Operation(
             "thebodyshop-pages",
             "GET",
@@ -59396,9 +64437,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations68(Map<String, Operation> m) {
         m.put("thehindu-sections", new Operation(
             "thehindu-sections",
             "GET",
@@ -59884,6 +64922,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations74(Map<String, Operation> m) {
         m.put("threads-post", new Operation(
             "threads-post",
             "GET",
@@ -60190,9 +65231,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations69(Map<String, Operation> m) {
         m.put("ticketmaster-venue-enhanced-details", new Operation(
             "ticketmaster-venue-enhanced-details",
             "GET",
@@ -60715,6 +65753,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations75(Map<String, Operation> m) {
         m.put("tiktok-mobile-live-room", new Operation(
             "tiktok-mobile-live-room",
             "GET",
@@ -61042,9 +66083,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations70(Map<String, Operation> m) {
         m.put("tiktok-mobile-playlist-videos", new Operation(
             "tiktok-mobile-playlist-videos",
             "GET",
@@ -61593,6 +66631,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations76(Map<String, Operation> m) {
         m.put("tiktok-top-ads-locations", new Operation(
             "tiktok-top-ads-locations",
             "GET",
@@ -61887,9 +66928,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations71(Map<String, Operation> m) {
         m.put("timesofisrael-news", new Operation(
             "timesofisrael-news",
             "GET",
@@ -62400,6 +67438,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations77(Map<String, Operation> m) {
         m.put("torontostar-news", new Operation(
             "torontostar-news",
             "GET",
@@ -62743,9 +67784,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
-    }
-
-    private static void putOperations72(Map<String, Operation> m) {
         m.put("trustpilot-business", new Operation(
             "trustpilot-business",
             "GET",
@@ -63024,6 +68062,21 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("ufcstats-stat-leaders", new Operation(
+            "ufcstats-stat-leaders",
+            "GET",
+            "/ufcstats/stat-leaders/{category}",
+            List.of("category"),
+            List.of(
+            new QueryParam("fighter_status", false, "string", List.of("0", "1")),
+            new QueryParam("weight_class", false, "string", List.of("HW", "LHW", "MW", "WW", "LW", "FTW", "BW", "FLW", "WBW", "WFLW", "WSW")),
+            new QueryParam("country", false, "string", List.of("aus", "bra", "can", "chn", "jpn", "kor", "mex", "nzl", "rus", "swe", "gbr", "usa"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("ulta-categories", new Operation(
             "ulta-categories",
             "GET",
@@ -63250,6 +68303,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations78(Map<String, Operation> m) {
         m.put("usatoday-article", new Operation(
             "usatoday-article",
             "GET",
@@ -63554,9 +68610,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations73(Map<String, Operation> m) {
         m.put("vanguardng-sections", new Operation(
             "vanguardng-sections",
             "GET",
@@ -64045,6 +69098,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations79(Map<String, Operation> m) {
         m.put("vlr-forum-categories", new Operation(
             "vlr-forum-categories",
             "GET",
@@ -64375,9 +69431,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations74(Map<String, Operation> m) {
         m.put("vrbo-property", new Operation(
             "vrbo-property",
             "GET",
@@ -64875,6 +69928,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations80(Map<String, Operation> m) {
         m.put("wayfair-categories", new Operation(
             "wayfair-categories",
             "GET",
@@ -65184,9 +70240,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations75(Map<String, Operation> m) {
         m.put("wendys-directory", new Operation(
             "wendys-directory",
             "GET",
@@ -65672,6 +70725,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations81(Map<String, Operation> m) {
         m.put("wolt-restaurant-menu", new Operation(
             "wolt-restaurant-menu",
             "GET",
@@ -65803,6 +70859,33 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+        m.put("wta-season-stats-options", new Operation(
+            "wta-season-stats-options",
+            "GET",
+            "/wta/season-stats/options",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("wta-season-stats", new Operation(
+            "wta-season-stats",
+            "GET",
+            "/wta/season-stats/{year}/{metric}",
+            List.of("year", "metric"),
+            List.of(
+            new QueryParam("page", false, "integer", List.of()),
+            new QueryParam("page_size", false, "integer", List.of()),
+            new QueryParam("sort", false, "string", List.of("asc", "desc"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of()));
         m.put("wta-tournament-seasons", new Operation(
             "wta-tournament-seasons",
             "GET",
@@ -65908,6 +70991,18 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("x-post-detail", new Operation(
+            "x-post-detail",
+            "GET",
+            "/x/post/{id}/detail",
+            List.of("id"),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("x-profile", new Operation(
             "x-profile",
             "GET",
@@ -65920,6 +71015,20 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("x-profile-highlights", new Operation(
+            "x-profile-highlights",
+            "GET",
+            "/x/profile/{username}/highlights",
+            List.of("username"),
+            List.of(
+            new QueryParam("limit", false, "integer", List.of()),
+            new QueryParam("cursor", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("cursor")));
         m.put("x-profile-posts", new Operation(
             "x-profile-posts",
             "GET",
@@ -65927,6 +71036,45 @@ public final class Operations {
             List.of("username"),
             List.of(
             new QueryParam("limit", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("x-trending", new Operation(
+            "x-trending",
+            "GET",
+            "/x/trending",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("x-trends", new Operation(
+            "x-trends",
+            "GET",
+            "/x/trends",
+            List.of(),
+            List.of(
+            new QueryParam("woeid", false, "integer", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("x-trends-locations", new Operation(
+            "x-trends-locations",
+            "GET",
+            "/x/trends/locations",
+            List.of(),
+            List.of(
+            new QueryParam("lat", false, "number", List.of()),
+            new QueryParam("long", false, "number", List.of())),
             List.of(),
             null,
             false,
@@ -66031,9 +71179,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of("cursor")));
-    }
-
-    private static void putOperations76(Map<String, Operation> m) {
         m.put("xda-article", new Operation(
             "xda-article",
             "GET",
@@ -66103,7 +71248,8 @@ public final class Operations {
             "/xiaohongshu/explore",
             List.of(),
             List.of(
-            new QueryParam("channel_id", false, "string", List.of())),
+            new QueryParam("channel_id", false, "string", List.of()),
+            new QueryParam("source", false, "string", List.of("mainland", "international", "auto"))),
             List.of(),
             null,
             false,
@@ -66420,6 +71566,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations82(Map<String, Operation> m) {
         m.put("yahoo-finance-ticker-actions", new Operation(
             "yahoo-finance-ticker-actions",
             "GET",
@@ -66816,9 +71965,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations77(Map<String, Operation> m) {
         m.put("yahoo-news-category", new Operation(
             "yahoo-news-category",
             "GET",
@@ -67212,6 +72358,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations83(Map<String, Operation> m) {
         m.put("yahoo-sports-golf-leaderboard", new Operation(
             "yahoo-sports-golf-leaderboard",
             "GET",
@@ -67621,9 +72770,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations78(Map<String, Operation> m) {
         m.put("yahoo-sports-scoreboard", new Operation(
             "yahoo-sports-scoreboard",
             "GET",
@@ -68018,6 +73164,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+    }
+
+    private static void putOperations84(Map<String, Operation> m) {
         m.put("yelp-business-menu", new Operation(
             "yelp-business-menu",
             "GET",
@@ -68453,9 +73602,6 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
-    }
-
-    private static void putOperations79(Map<String, Operation> m) {
         m.put("zalando-suggest", new Operation(
             "zalando-suggest",
             "GET",
@@ -68727,6 +73873,97 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             false,
             List.of()));
+        m.put("zedge-browse", new Operation(
+            "zedge-browse",
+            "GET",
+            "/zedge/browse",
+            List.of(),
+            List.of(
+            new QueryParam("item_type", false, "string", List.of("wallpaper", "ringtone", "notification_sound")),
+            new QueryParam("categories", false, "string", List.of()),
+            new QueryParam("tags", false, "string", List.of()),
+            new QueryParam("colors", false, "string", List.of()),
+            new QueryParam("sort", false, "string", List.of("relevant", "newest", "popular", "price_asc", "price_desc")),
+            new QueryParam("price", false, "string", List.of("free", "paid")),
+            new QueryParam("min_price", false, "integer", List.of()),
+            new QueryParam("max_price", false, "integer", List.of()),
+            new QueryParam("min_duration", false, "integer", List.of()),
+            new QueryParam("max_duration", false, "integer", List.of()),
+            new QueryParam("profile_type", false, "string", List.of("any", "premium", "ugc")),
+            new QueryParam("size", false, "integer", List.of()),
+            new QueryParam("next", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("next")));
+        m.put("zedge-categories", new Operation(
+            "zedge-categories",
+            "GET",
+            "/zedge/categories",
+            List.of(),
+            List.of(
+            new QueryParam("item_type", false, "string", List.of("wallpaper", "ringtone", "notification_sound"))),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zedge-creators", new Operation(
+            "zedge-creators",
+            "GET",
+            "/zedge/creators",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", false, "string", List.of()),
+            new QueryParam("size", false, "integer", List.of()),
+            new QueryParam("next", false, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            true,
+            List.of("next")));
+        m.put("zedge-item", new Operation(
+            "zedge-item",
+            "GET",
+            "/zedge/item",
+            List.of(),
+            List.of(
+            new QueryParam("id", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zedge-tags", new Operation(
+            "zedge-tags",
+            "GET",
+            "/zedge/tags",
+            List.of(),
+            List.of(
+            new QueryParam("keyword", true, "string", List.of())),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
+        m.put("zedge-trending-searches", new Operation(
+            "zedge-trending-searches",
+            "GET",
+            "/zedge/trending-searches",
+            List.of(),
+            List.of(),
+            List.of(),
+            null,
+            false,
+            List.of("ApiKeyAuth"),
+            false,
+            List.of()));
         m.put("zillow-autocomplete", new Operation(
             "zillow-autocomplete",
             "GET",
@@ -68775,6 +74012,9 @@ public final class Operations {
             List.of("ApiKeyAuth"),
             true,
             List.of()));
+    }
+
+    private static void putOperations85(Map<String, Operation> m) {
         m.put("zomato-cities", new Operation(
             "zomato-cities",
             "GET",
@@ -68880,6 +74120,7 @@ public final class Operations {
         putGroups15(g);
         putGroups16(g);
         putGroups17(g);
+        putGroups18(g);
         return Map.copyOf(g);
     }
 
@@ -68891,6 +74132,17 @@ public final class Operations {
             group.put("product", "firstdibs-product");
             group.put("search", "firstdibs-search");
             g.put("firstDibs", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("categories", "7brew-categories");
+            group.put("directory", "7brew-directory");
+            group.put("item", "7brew-item");
+            group.put("menu", "7brew-menu");
+            group.put("nearby", "7brew-nearby");
+            group.put("options", "7brew-options");
+            group.put("store", "7brew-store");
+            g.put("Platform7Brew", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -69176,6 +74428,19 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("app", "aptoide-app");
+            group.put("categories", "aptoide-categories");
+            group.put("collections", "aptoide-collections");
+            group.put("list", "aptoide-list");
+            group.put("reviews", "aptoide-reviews");
+            group.put("search", "aptoide-search");
+            group.put("similar", "aptoide-similar");
+            group.put("store", "aptoide-store");
+            group.put("versions", "aptoide-versions");
+            g.put("aptoide", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("categories", "arbys-categories");
             group.put("directory", "arbys-directory");
             group.put("location", "arbys-location");
@@ -69207,6 +74472,20 @@ public final class Operations {
             group.put("series", "audible-series");
             g.put("audible", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups1(Map<String, Map<String, String>> g) {
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("autoscout24Dealer", "autoscout24-dealer");
+            group.put("autoscout24Filters", "autoscout24-filters");
+            group.put("autoscout24Listing", "autoscout24-listing");
+            group.put("autoscout24Makes", "autoscout24-makes");
+            group.put("autoscout24Models", "autoscout24-models");
+            group.put("autoscout24Search", "autoscout24-search");
+            group.put("autoscout24Suggest", "autoscout24-suggest");
+            g.put("autoScout24", Map.copyOf(group));
+        }
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("dealer", "autotrader-dealer");
@@ -69221,9 +74500,6 @@ public final class Operations {
             group.put("headlines", "axios-headlines");
             g.put("axios", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups1(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("search", "baidu-search");
@@ -69538,6 +74814,9 @@ public final class Operations {
             group.put("videos", "brave-videos");
             g.put("brave", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups2(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "breitbart-article");
@@ -69568,9 +74847,6 @@ public final class Operations {
             group.put("brisbanetimesSections", "brisbanetimes-sections");
             g.put("brisbaneTimes", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups2(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "brooklinen-collections");
@@ -69693,6 +74969,36 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("chesscomClub", "chesscom-club");
+            group.put("chesscomClubMatches", "chesscom-club-matches");
+            group.put("chesscomClubMembers", "chesscom-club-members");
+            group.put("chesscomCountry", "chesscom-country");
+            group.put("chesscomMatchLive", "chesscom-match-live");
+            group.put("chesscomMatchLiveBoard", "chesscom-match-live-board");
+            group.put("chesscomMatch", "chesscom-match");
+            group.put("chesscomMatchBoard", "chesscom-match-board");
+            group.put("chesscomPlayer", "chesscom-player");
+            group.put("chesscomPlayerClubs", "chesscom-player-clubs");
+            group.put("chesscomPlayerGames", "chesscom-player-games");
+            group.put("chesscomPlayerGameMonth", "chesscom-player-game-month");
+            group.put("chesscomPlayerGameMonthPgn", "chesscom-player-game-month-pgn");
+            group.put("chesscomPlayerGameArchives", "chesscom-player-game-archives");
+            group.put("chesscomPlayerLiveGamesBaseTime", "chesscom-player-live-games-base-time");
+            group.put("chesscomPlayerLiveGames", "chesscom-player-live-games");
+            group.put("chesscomPlayerGamesToMove", "chesscom-player-games-to-move");
+            group.put("chesscomPlayerIsOnline", "chesscom-player-is-online");
+            group.put("chesscomPlayerMatches", "chesscom-player-matches");
+            group.put("chesscomPlayerStats", "chesscom-player-stats");
+            group.put("chesscomPlayerTournaments", "chesscom-player-tournaments");
+            group.put("chesscomPuzzle", "chesscom-puzzle");
+            group.put("chesscomPuzzleRandom", "chesscom-puzzle-random");
+            group.put("chesscomTournament", "chesscom-tournament");
+            group.put("chesscomTournamentRound", "chesscom-tournament-round");
+            group.put("chesscomTournamentRoundGroup", "chesscom-tournament-round-group");
+            g.put("chessCom", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("brands", "chewy-brands");
             group.put("categories", "chewy-categories");
             group.put("category", "chewy-category");
@@ -69777,6 +75083,21 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("clinicaltrialsStatsFieldSizes", "clinicaltrials-stats-field-sizes");
+            group.put("clinicaltrialsStatsFieldValues", "clinicaltrials-stats-field-values");
+            group.put("clinicaltrialsStatsSize", "clinicaltrials-stats-size");
+            group.put("clinicaltrialsStudies", "clinicaltrials-studies");
+            group.put("clinicaltrialsStudiesEnums", "clinicaltrials-studies-enums");
+            group.put("clinicaltrialsStudiesFacets", "clinicaltrials-studies-facets");
+            group.put("clinicaltrialsStudiesMetadata", "clinicaltrials-studies-metadata");
+            group.put("clinicaltrialsStudiesSearchAreas", "clinicaltrials-studies-search-areas");
+            group.put("clinicaltrialsStudy", "clinicaltrials-study");
+            group.put("clinicaltrialsSuggest", "clinicaltrials-suggest");
+            group.put("clinicaltrialsVersion", "clinicaltrials-version");
+            g.put("clinicalTrialsGov", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "cna-article");
             group.put("author", "cna-author");
             group.put("headlines", "cna-headlines");
@@ -69834,6 +75155,9 @@ public final class Operations {
             group.put("trending", "coingecko-trending");
             g.put("coinGecko", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups3(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("colehaanCollections", "colehaan-collections");
@@ -69881,9 +75205,17 @@ public final class Operations {
             group.put("techstack", "web-techstack");
             g.put("web", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups3(Map<String, Map<String, String>> g) {
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("auctions", "copart-auctions");
+            group.put("filters", "copart-filters");
+            group.put("locations", "copart-locations");
+            group.put("lot", "copart-lot");
+            group.put("lotImages", "copart-lot-images");
+            group.put("search", "copart-search");
+            group.put("suggest", "copart-suggest");
+            g.put("copart", Map.copyOf(group));
+        }
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("categories", "costco-categories");
@@ -69903,6 +75235,19 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("areas", "craigslist-areas");
+            group.put("categories", "craigslist-categories");
+            group.put("categoryCounts", "craigslist-category-counts");
+            group.put("categoryFilters", "craigslist-category-filters");
+            group.put("likelyCategories", "craigslist-likely-categories");
+            group.put("locations", "craigslist-locations");
+            group.put("posting", "craigslist-posting");
+            group.put("search", "craigslist-search");
+            group.put("suggest", "craigslist-suggest");
+            g.put("craigslist", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("archives", "cricbuzz-archives");
             group.put("auctionInfo", "cricbuzz-auction-info");
             group.put("auctionLive", "cricbuzz-auction-live");
@@ -69919,6 +75264,7 @@ public final class Operations {
             group.put("auctionUpcoming", "cricbuzz-auction-upcoming");
             group.put("auctionUpcomingOptions", "cricbuzz-auction-upcoming-options");
             group.put("auctionVideos", "cricbuzz-auction-videos");
+            group.put("commentary", "cricbuzz-commentary");
             group.put("matchFacts", "cricbuzz-match-facts");
             group.put("matchGraphs", "cricbuzz-match-graphs");
             group.put("matchOvers", "cricbuzz-match-overs");
@@ -69926,12 +75272,15 @@ public final class Operations {
             group.put("navigation", "cricbuzz-navigation");
             group.put("newsStory", "cricbuzz-news-story");
             group.put("newsTopics", "cricbuzz-news-topics");
+            group.put("player", "cricbuzz-player");
             group.put("rankings", "cricbuzz-rankings");
             group.put("records", "cricbuzz-records");
             group.put("schedule", "cricbuzz-schedule");
             group.put("scorecard", "cricbuzz-scorecard");
             group.put("series", "cricbuzz-series");
+            group.put("seriesSquads", "cricbuzz-series-squads");
             group.put("seriesStats", "cricbuzz-series-stats");
+            group.put("teamPlayers", "cricbuzz-team-players");
             group.put("teamStats", "cricbuzz-team-stats");
             group.put("teamStatsOptions", "cricbuzz-team-stats-options");
             group.put("teams", "cricbuzz-teams");
@@ -69942,11 +75291,14 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("ballByBall", "cricinfo-ball-by-ball");
             group.put("calendar", "cricinfo-calendar");
             group.put("commentary", "cricinfo-commentary");
             group.put("grounds", "cricinfo-grounds");
             group.put("liveMatches", "cricinfo-live-matches");
             group.put("match", "cricinfo-match");
+            group.put("matchImpactPlayer", "cricinfo-match-impact-player");
+            group.put("matchStatistics", "cricinfo-match-statistics");
             group.put("news", "cricinfo-news");
             group.put("photos", "cricinfo-photos");
             group.put("rankings", "cricinfo-rankings");
@@ -70316,6 +75668,16 @@ public final class Operations {
             group.put("search", "discogs-search");
             g.put("discogs", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups4(Map<String, Map<String, String>> g) {
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("invite", "discord-invite");
+            group.put("server", "discord-server");
+            group.put("servers", "discord-servers");
+            g.put("discord", Map.copyOf(group));
+        }
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("dollartreeBlogArticle", "dollartree-blog-article");
@@ -70393,9 +75755,6 @@ public final class Operations {
             group.put("draftkingsPick6Sports", "draftkings-pick6-sports");
             g.put("draftKingsPick6", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups4(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("draftkingsPredictionsAvailability", "draftkings-predictions-availability");
@@ -70522,6 +75881,8 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("athlete", "espn-athlete");
+            group.put("athleteGamelog", "espn-athlete-gamelog");
+            group.put("athleteSplits", "espn-athlete-splits");
             group.put("gameSummary", "espn-game-summary");
             group.put("news", "espn-news");
             group.put("rankings", "espn-rankings");
@@ -70529,7 +75890,10 @@ public final class Operations {
             group.put("standings", "espn-standings");
             group.put("team", "espn-team");
             group.put("teamRoster", "espn-team-roster");
+            group.put("teamSchedule", "espn-team-schedule");
+            group.put("teamStats", "espn-team-stats");
             group.put("teams", "espn-teams");
+            group.put("transactions", "espn-transactions");
             g.put("espn", Map.copyOf(group));
         }
         {
@@ -70649,6 +76013,9 @@ public final class Operations {
             group.put("search", "fanatics-search");
             g.put("fanatics", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups5(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("fanaticscollectAuctions", "fanaticscollect-auctions");
@@ -70806,6 +76173,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("fdroidAntiFeatures", "fdroid-anti-features");
+            group.put("fdroidApp", "fdroid-app");
+            group.put("fdroidApps", "fdroid-apps");
+            group.put("fdroidCategories", "fdroid-categories");
+            group.put("fdroidLicenses", "fdroid-licenses");
+            group.put("fdroidSearch", "fdroid-search");
+            g.put("fDroid", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("cities", "fever-cities");
             group.put("feed", "fever-feed");
             group.put("filters", "fever-filters");
@@ -70814,9 +76191,6 @@ public final class Operations {
             group.put("topCities", "fever-top-cities");
             g.put("fever", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups5(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("fiveguysDirectory", "fiveguys-directory");
@@ -70847,7 +76221,7 @@ public final class Operations {
             group.put("matchBoxScore", "flashscore-match-box-score");
             group.put("matchCommentary", "flashscore-match-commentary");
             group.put("matchDarts", "flashscore-match-darts");
-            group.put("matchH2h", "flashscore-match-h2h");
+            group.put("matchH2H", "flashscore-match-h2h");
             group.put("matchHighlights", "flashscore-match-highlights");
             group.put("matchIncidents", "flashscore-match-incidents");
             group.put("matchInfo", "flashscore-match-info");
@@ -70983,6 +76357,20 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("ecosystemMetric", "fortnite-ecosystem-metric");
+            group.put("ecosystemMetrics", "fortnite-ecosystem-metrics");
+            group.put("enums", "fortnite-enums");
+            group.put("genreRankings", "fortnite-genre-rankings");
+            group.put("genres", "fortnite-genres");
+            group.put("island", "fortnite-island");
+            group.put("islandMetric", "fortnite-island-metric");
+            group.put("islandMetrics", "fortnite-island-metrics");
+            group.put("islandRankings", "fortnite-island-rankings");
+            group.put("islands", "fortnite-islands");
+            g.put("fortnite", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "fortune-article");
             group.put("author", "fortune-author");
             group.put("companies", "fortune-companies");
@@ -71008,11 +76396,13 @@ public final class Operations {
             group.put("fotmobLineupBuilderPlayers", "fotmob-lineup-builder-players");
             group.put("fotmobLineupBuilderTeam", "fotmob-lineup-builder-team");
             group.put("fotmobMatch", "fotmob-match");
+            group.put("fotmobMatchHeatmap", "fotmob-match-heatmap");
             group.put("fotmobMatchMedia", "fotmob-match-media");
             group.put("fotmobMatches", "fotmob-matches");
             group.put("fotmobNews", "fotmob-news");
             group.put("fotmobNewsArticle", "fotmob-news-article");
             group.put("fotmobPlayer", "fotmob-player");
+            group.put("fotmobPlayerInjuries", "fotmob-player-injuries");
             group.put("fotmobPlayerMatchStats", "fotmob-player-match-stats");
             group.put("fotmobPlayerMatches", "fotmob-player-matches");
             group.put("fotmobPlayerStats", "fotmob-player-stats");
@@ -71116,12 +76506,19 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("futggFc27CampaignSquads", "futgg-fc27-campaign-squads");
             group.put("futggFc27Catalog", "futgg-fc27-catalog");
+            group.put("futggFc27ChemistryStyleRoles", "futgg-fc27-chemistry-style-roles");
             group.put("futggFc27Definitions", "futgg-fc27-definitions");
             group.put("futggFc27Evolutions", "futgg-fc27-evolutions");
             group.put("futggFc27Evolution", "futgg-fc27-evolution");
             group.put("futggFc27GgRatingRanks", "futgg-fc27-gg-rating-ranks");
             group.put("futggFc27GgRatings", "futgg-fc27-gg-ratings");
+            group.put("futggFc27ManagerFacets", "futgg-fc27-manager-facets");
+            group.put("futggFc27ManagerLeagues", "futgg-fc27-manager-leagues");
+            group.put("futggFc27Managers", "futgg-fc27-managers");
+            group.put("futggFc27Manager", "futgg-fc27-manager");
+            group.put("futggFc27MiscPrices", "futgg-fc27-misc-prices");
             group.put("futggFc27ObjectiveCategories", "futgg-fc27-objective-categories");
             group.put("futggFc27ObjectiveGroups", "futgg-fc27-objective-groups");
             group.put("futggFc27ObjectiveGroupByEa", "futgg-fc27-objective-group-by-ea");
@@ -71130,6 +76527,7 @@ public final class Operations {
             group.put("futggFc27PlayerSorts", "futgg-fc27-player-sorts");
             group.put("futggFc27Players", "futgg-fc27-players");
             group.put("futggFc27PriceIndex", "futgg-fc27-price-index");
+            group.put("futggFc27PriceRangeChanges", "futgg-fc27-price-range-changes");
             group.put("futggFc27Prices", "futgg-fc27-prices");
             group.put("futggFc27SbcCategories", "futgg-fc27-sbc-categories");
             group.put("futggFc27SbcSets", "futgg-fc27-sbc-sets");
@@ -71148,6 +76546,9 @@ public final class Operations {
             group.put("gamerantSections", "gamerant-sections");
             g.put("gameRant", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups6(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("gamesradarArticle", "gamesradar-article");
@@ -71181,6 +76582,22 @@ public final class Operations {
             group.put("tvVisualEntities", "gdelt-tv-visual-entities");
             group.put("tvWordcloud", "gdelt-tv-wordcloud");
             g.put("gdelt", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("gemrateCard", "gemrate-card");
+            group.put("gemrateCategories", "gemrate-categories");
+            group.put("gemrateGradingTrends", "gemrate-grading-trends");
+            group.put("gemrateLeaders", "gemrate-leaders");
+            group.put("gemrateReport", "gemrate-report");
+            group.put("gemrateReports", "gemrate-reports");
+            group.put("gemrateSalesTrends", "gemrate-sales-trends");
+            group.put("gemrateSearchPresets", "gemrate-search-presets");
+            group.put("gemratePopCollection", "gemrate-pop-collection");
+            group.put("gemratePopCollections", "gemrate-pop-collections");
+            group.put("gemratePopSet", "gemrate-pop-set");
+            group.put("gemratePopSets", "gemrate-pop-sets");
+            g.put("gemRate", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -71264,9 +76681,6 @@ public final class Operations {
             group.put("storesFilters", "glovo-stores-filters");
             g.put("glovo", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups6(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("gmanewsArticle", "gmanews-article");
@@ -71536,6 +76950,9 @@ public final class Operations {
             group.put("hbrTopic", "hbr-topic");
             g.put("harvardBusinessReview", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups7(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("autocomplete", "healthgrades-autocomplete");
@@ -71586,6 +77003,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("hltbFilters", "hltb-filters");
+            group.put("hltbGame", "hltb-game");
+            group.put("hltbPopular", "hltb-popular");
+            group.put("hltbSearch", "hltb-search");
+            group.put("hltbStats", "hltb-stats");
+            g.put("howLongToBeat", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("coach", "hltv-coach");
             group.put("event", "hltv-event");
             group.put("events", "hltv-events");
             group.put("match", "hltv-match");
@@ -71595,6 +77022,9 @@ public final class Operations {
             group.put("results", "hltv-results");
             group.put("search", "hltv-search");
             group.put("team", "hltv-team");
+            group.put("transfers", "hltv-transfers");
+            group.put("valveRanking", "hltv-valve-ranking");
+            group.put("valveRankingDetails", "hltv-valve-ranking-details");
             g.put("hltv", Map.copyOf(group));
         }
         {
@@ -71652,9 +77082,6 @@ public final class Operations {
             group.put("howtogeekNews", "howtogeek-news");
             g.put("howToGeek", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups7(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("huffpostArticle", "huffpost-article");
@@ -71663,6 +77090,13 @@ public final class Operations {
             group.put("huffpostNews", "huffpost-news");
             group.put("huffpostSections", "huffpost-sections");
             g.put("huffPost", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("filters", "ibm-jobs-filters");
+            group.put("job", "ibm-jobs-job");
+            group.put("search", "ibm-jobs-search");
+            g.put("ibmJobs", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -71833,6 +77267,9 @@ public final class Operations {
             group.put("irishindependentSections", "irishindependent-sections");
             g.put("irishIndependent", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups8(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("irishtimesArticle", "irishtimes-article");
@@ -72024,9 +77461,6 @@ public final class Operations {
             group.put("khaleejtimesSections", "khaleejtimes-sections");
             g.put("khaleejTimes", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups8(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("categories", "kick-categories");
@@ -72165,12 +77599,65 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("cloudEval", "lichess-cloud-eval");
+            group.put("enums", "lichess-enums");
+            group.put("puzzle", "lichess-puzzle");
+            group.put("puzzleBatch", "lichess-puzzle-batch");
+            group.put("puzzleDaily", "lichess-puzzle-daily");
+            group.put("puzzleMany", "lichess-puzzle-many");
+            group.put("puzzleNext", "lichess-puzzle-next");
+            group.put("puzzleThemes", "lichess-puzzle-themes");
+            group.put("simuls", "lichess-simuls");
+            group.put("tablebase", "lichess-tablebase");
+            group.put("version", "lichess-version");
+            g.put("lichess", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("limitlessCard", "limitless-card");
+            group.put("limitlessCards", "limitless-cards");
+            group.put("limitlessDeck", "limitless-deck");
+            group.put("limitlessDecklist", "limitless-decklist");
+            group.put("limitlessDecklists", "limitless-decklists");
+            group.put("limitlessDecks", "limitless-decks");
+            group.put("limitlessFilters", "limitless-filters");
+            group.put("limitlessGames", "limitless-games");
+            group.put("limitlessOnlinePairings", "limitless-online-pairings");
+            group.put("limitlessOnlineStandings", "limitless-online-standings");
+            group.put("limitlessOnlineTournament", "limitless-online-tournament");
+            group.put("limitlessOnlineTournaments", "limitless-online-tournaments");
+            group.put("limitlessPlayer", "limitless-player");
+            group.put("limitlessPlayers", "limitless-players");
+            group.put("limitlessTournament", "limitless-tournament");
+            group.put("limitlessTournaments", "limitless-tournaments");
+            group.put("limitlessTournamentsJapan", "limitless-tournaments-japan");
+            group.put("limitlessTournamentsUpcoming", "limitless-tournaments-upcoming");
+            g.put("limitlessTcg", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("linkedinCompany", "linkedin-company");
             group.put("linkedinProductCategories", "linkedin-product-categories");
             group.put("linkedinProduct", "linkedin-product");
             group.put("linkedinProductsSearch", "linkedin-products-search");
             group.put("linkedinShowcase", "linkedin-showcase");
             g.put("linkedIn", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("allPages", "liquipedia-all-pages");
+            group.put("backlinks", "liquipedia-backlinks");
+            group.put("categories", "liquipedia-categories");
+            group.put("categoryMembers", "liquipedia-category-members");
+            group.put("enums", "liquipedia-enums");
+            group.put("links", "liquipedia-links");
+            group.put("page", "liquipedia-page");
+            group.put("prefixSearch", "liquipedia-prefix-search");
+            group.put("recentChanges", "liquipedia-recent-changes");
+            group.put("search", "liquipedia-search");
+            group.put("tags", "liquipedia-tags");
+            group.put("wikis", "liquipedia-wikis");
+            g.put("liquipedia", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -72190,6 +77677,9 @@ public final class Operations {
             group.put("liverpoolechoSections", "liverpoolecho-sections");
             g.put("liverpoolEcho", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups9(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("livescienceArticle", "livescience-article");
@@ -72371,9 +77861,6 @@ public final class Operations {
             group.put("medicalnewstodaySections", "medicalnewstoday-sections");
             g.put("medicalNewsToday", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups9(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("menArticle", "men-article");
@@ -72604,6 +78091,9 @@ public final class Operations {
             group.put("sections", "moneycontrol-sections");
             g.put("moneycontrol", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups10(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("list", "monitors-list");
@@ -72645,7 +78135,28 @@ public final class Operations {
             group.put("motogpStandings", "motogp-standings");
             group.put("motogpStandingsFiles", "motogp-standings-files");
             group.put("motogpStartingGrid", "motogp-starting-grid");
+            group.put("motogpWorldStandings", "motogp-world-standings");
             g.put("motoGp", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("archetype", "mtggoldfish-archetype");
+            group.put("autocomplete", "mtggoldfish-autocomplete");
+            group.put("card", "mtggoldfish-card");
+            group.put("deck", "mtggoldfish-deck");
+            group.put("deckSearch", "mtggoldfish-deck-search");
+            group.put("filters", "mtggoldfish-filters");
+            group.put("metagame", "mtggoldfish-metagame");
+            group.put("movers", "mtggoldfish-movers");
+            group.put("priceHistory", "mtggoldfish-price-history");
+            group.put("priceIndex", "mtggoldfish-price-index");
+            group.put("priceList", "mtggoldfish-price-list");
+            group.put("set", "mtggoldfish-set");
+            group.put("sets", "mtggoldfish-sets");
+            group.put("staples", "mtggoldfish-staples");
+            group.put("tournament", "mtggoldfish-tournament");
+            group.put("tournaments", "mtggoldfish-tournaments");
+            g.put("mtggoldfish", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -72687,10 +78198,12 @@ public final class Operations {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("boxScore", "nba-box-score");
             group.put("boxScoreAdvanced", "nba-box-score-advanced");
+            group.put("boxScoreDefensive", "nba-box-score-defensive");
             group.put("boxScoreFourFactors", "nba-box-score-four-factors");
             group.put("boxScoreMisc", "nba-box-score-misc");
             group.put("boxScorePlayerTrack", "nba-box-score-player-track");
             group.put("boxScoreScoring", "nba-box-score-scoring");
+            group.put("boxScoreSummary", "nba-box-score-summary");
             group.put("boxScoreUsage", "nba-box-score-usage");
             group.put("commonAllPlayers", "nba-common-all-players");
             group.put("draftCombineAnthro", "nba-draft-combine-anthro");
@@ -72699,9 +78212,12 @@ public final class Operations {
             group.put("gameDetail", "nba-game-detail");
             group.put("games", "nba-games");
             group.put("homepageLeaders", "nba-homepage-leaders");
+            group.put("homepageV2", "nba-homepage-v2");
+            group.put("hustlePlayer", "nba-hustle-player");
             group.put("hustleStats", "nba-hustle-stats");
             group.put("hustleTeam", "nba-hustle-team");
             group.put("leagueGameLog", "nba-league-game-log");
+            group.put("lineupShotChart", "nba-lineup-shot-chart");
             group.put("lineups", "nba-lineups");
             group.put("news", "nba-news");
             group.put("oppPtShot", "nba-opp-pt-shot");
@@ -72710,6 +78226,13 @@ public final class Operations {
             group.put("playerBioStats", "nba-player-bio-stats");
             group.put("playerCareerStats", "nba-player-career-stats");
             group.put("playerClutch", "nba-player-clutch");
+            group.put("playerCompare", "nba-player-compare");
+            group.put("playerDashByClutch", "nba-player-dash-by-clutch");
+            group.put("playerDashByGameSplits", "nba-player-dash-by-game-splits");
+            group.put("playerDashByLastNGames", "nba-player-dash-by-last-n-games");
+            group.put("playerDashByOpponent", "nba-player-dash-by-opponent");
+            group.put("playerDashPtPass", "nba-player-dash-pt-pass");
+            group.put("playerDashPtReb", "nba-player-dash-pt-reb");
             group.put("playerDashPtShots", "nba-player-dash-pt-shots");
             group.put("playerGameLogs", "nba-player-game-logs");
             group.put("playerInfo", "nba-player-info");
@@ -72719,12 +78242,19 @@ public final class Operations {
             group.put("playerStreakFinder", "nba-player-streak-finder");
             group.put("players", "nba-players");
             group.put("playoffPicture", "nba-playoff-picture");
+            group.put("playoffSeries", "nba-playoff-series");
             group.put("ptDefend", "nba-pt-defend");
             group.put("ptStats", "nba-pt-stats");
             group.put("scoreboard", "nba-scoreboard");
+            group.put("shotChart", "nba-shot-chart");
             group.put("standings", "nba-standings");
             group.put("synergyPlayTypes", "nba-synergy-play-types");
+            group.put("teamDashByClutch", "nba-team-dash-by-clutch");
+            group.put("teamDashByGameSplits", "nba-team-dash-by-game-splits");
+            group.put("teamDashByLastNGames", "nba-team-dash-by-last-n-games");
+            group.put("teamDashByOpponent", "nba-team-dash-by-opponent");
             group.put("teamDashPtPass", "nba-team-dash-pt-pass");
+            group.put("teamDashPtReb", "nba-team-dash-pt-reb");
             group.put("teamDashPtShots", "nba-team-dash-pt-shots");
             group.put("teamDetails", "nba-team-details");
             group.put("teamGameLogs", "nba-team-game-logs");
@@ -72819,9 +78349,6 @@ public final class Operations {
             group.put("sections", "newsweek-sections");
             g.put("newsweek", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups10(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("newyorkerArticle", "newyorker-article");
@@ -72954,6 +78481,9 @@ public final class Operations {
             group.put("nytSections", "nyt-sections");
             g.put("newYorkTimes", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups11(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("nzheraldArticle", "nzherald-article");
@@ -73137,6 +78667,16 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("pandaexpressCategories", "pandaexpress-categories");
+            group.put("pandaexpressDirectory", "pandaexpress-directory");
+            group.put("pandaexpressItem", "pandaexpress-item");
+            group.put("pandaexpressMenu", "pandaexpress-menu");
+            group.put("pandaexpressNearby", "pandaexpress-nearby");
+            group.put("pandaexpressStore", "pandaexpress-store");
+            g.put("pandaExpress", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("search", "pandamart-search");
             group.put("store", "pandamart-store");
             group.put("storeCategories", "pandamart-store-categories");
@@ -73223,9 +78763,16 @@ public final class Operations {
             group.put("sections", "pcmag-sections");
             g.put("pcmag", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups11(Map<String, Map<String, String>> g) {
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("channels", "peacock-channels");
+            group.put("collection", "peacock-collection");
+            group.put("genres", "peacock-genres");
+            group.put("page", "peacock-page");
+            group.put("season", "peacock-season");
+            group.put("title", "peacock-title");
+            g.put("peacock", Map.copyOf(group));
+        }
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "people-article");
@@ -73247,6 +78794,9 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("pgatourCups", "pgatour-cups");
+            group.put("pgatourCupStandings", "pgatour-cup-standings");
+            group.put("pgatourCupOptions", "pgatour-cup-options");
             group.put("pgatourLeaderboard", "pgatour-leaderboard");
             group.put("pgatourPlayers", "pgatour-players");
             group.put("pgatourSchedule", "pgatour-schedule");
@@ -73336,6 +78886,9 @@ public final class Operations {
             group.put("pizzahutStores", "pizzahut-stores");
             g.put("pizzaHut", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups12(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("playstationBrowse", "playstation-browse");
@@ -73349,6 +78902,36 @@ public final class Operations {
             group.put("playstationSearch", "playstation-search");
             group.put("playstationSuggest", "playstation-suggest");
             g.put("playStation", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("pokedataCardSales", "pokedata-card-sales");
+            group.put("pokedataCardStats", "pokedata-card-stats");
+            group.put("pokedataMarketplaceListing", "pokedata-marketplace-listing");
+            group.put("pokedataMarketplaceSearch", "pokedata-marketplace-search");
+            group.put("pokedataPortfolio", "pokedata-portfolio");
+            group.put("pokedataPortfolioValue", "pokedata-portfolio-value");
+            group.put("pokedataPortfolios", "pokedata-portfolios");
+            group.put("pokedataProductSales", "pokedata-product-sales");
+            group.put("pokedataProductStats", "pokedata-product-stats");
+            group.put("pokedataProducts", "pokedata-products");
+            group.put("pokedataProductsFacets", "pokedata-products-facets");
+            group.put("pokedataSearch", "pokedata-search");
+            group.put("pokedataSet", "pokedata-set");
+            group.put("pokedataSetCards", "pokedata-set-cards");
+            group.put("pokedataSetProducts", "pokedata-set-products");
+            group.put("pokedataSets", "pokedata-sets");
+            group.put("pokedataSources", "pokedata-sources");
+            group.put("pokedataTcgs", "pokedata-tcgs");
+            g.put("pokeData", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("poketraceCard", "poketrace-card");
+            group.put("poketraceCatalog", "poketrace-catalog");
+            group.put("poketraceFilters", "poketrace-filters");
+            group.put("poketraceSets", "poketrace-sets");
+            g.put("pokeTrace", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -73610,9 +79193,6 @@ public final class Operations {
             group.put("raisingcanesStore", "raisingcanes-store");
             g.put("raisingCaneS", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups12(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("article", "rappler-article");
@@ -73656,18 +79236,38 @@ public final class Operations {
             group.put("archivePostsSearch", "reddit-archive-posts-search");
             group.put("archiveSubredditsSearch", "reddit-archive-subreddits-search");
             group.put("archiveTimeSeries", "reddit-archive-time-series");
+            group.put("comment", "reddit-comment");
+            group.put("commentAwards", "reddit-comment-awards");
             group.put("comments", "reddit-comments");
             group.put("domainPosts", "reddit-domain-posts");
             group.put("leads", "reddit-leads");
+            group.put("popular", "reddit-popular");
             group.put("post", "reddit-post");
+            group.put("postAwards", "reddit-post-awards");
+            group.put("postsByIds", "reddit-posts-by-ids");
             group.put("search", "reddit-search");
+            group.put("searchComments", "reddit-search-comments");
+            group.put("searchPeople", "reddit-search-people");
             group.put("subredditAbout", "reddit-subreddit-about");
             group.put("subredditComments", "reddit-subreddit-comments");
+            group.put("subredditFlairs", "reddit-subreddit-flairs");
+            group.put("subredditHighlights", "reddit-subreddit-highlights");
+            group.put("subredditLeaderboardCategories", "reddit-subreddit-leaderboard-categories");
             group.put("subredditPosts", "reddit-subreddit-posts");
+            group.put("subredditRules", "reddit-subreddit-rules");
+            group.put("subredditUserFlairs", "reddit-subreddit-user-flairs");
+            group.put("subredditWiki", "reddit-subreddit-wiki");
+            group.put("subredditsDiscover", "reddit-subreddits-discover");
             group.put("subredditsPosts", "reddit-subreddits-posts");
+            group.put("subredditsSearch", "reddit-subreddits-search");
+            group.put("subredditsSuggest", "reddit-subreddits-suggest");
+            group.put("topics", "reddit-topics");
+            group.put("topicsBroad", "reddit-topics-broad");
+            group.put("topicsSearch", "reddit-topics-search");
             group.put("trends", "reddit-trends");
             group.put("userComments", "reddit-user-comments");
             group.put("userPosts", "reddit-user-posts");
+            group.put("userProfile", "reddit-user-profile");
             g.put("reddit", Map.copyOf(group));
         }
         {
@@ -73718,6 +79318,9 @@ public final class Operations {
             group.put("researchResults", "research-results");
             g.put("researchJobs", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups13(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("inspectPaper", "research-inspect-paper");
@@ -73957,9 +79560,6 @@ public final class Operations {
             group.put("seattletimesSections", "seattletimes-sections");
             g.put("seattleTimes", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups13(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("secCompanyIntelligence", "sec-company-intelligence");
@@ -73990,6 +79590,7 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("pokemongoEventDetailCommunityDay", "serebii-pokemongo-event-detail-community-day");
+            group.put("pokemongoEggs", "serebii-pokemongo-eggs");
             group.put("pokemongoEventCategories", "serebii-pokemongo-event-categories");
             group.put("pokemongoEventOnlyMoves", "serebii-pokemongo-event-only-moves");
             group.put("pokemongoEventOnlyResearch", "serebii-pokemongo-event-only-research");
@@ -73999,6 +79600,7 @@ public final class Operations {
             group.put("pokemongoEventDetailIncenseDay", "serebii-pokemongo-event-detail-incense-day");
             group.put("pokemongoEventDetailResearchDay", "serebii-pokemongo-event-detail-research-day");
             group.put("pokemongoEventDetailMaxBattleDay", "serebii-pokemongo-event-detail-max-battle-day");
+            group.put("pokemongoRaidBosses", "serebii-pokemongo-raid-bosses");
             group.put("pokemongoEventDetailRaidDay", "serebii-pokemongo-event-detail-raid-day");
             group.put("pokemongoEventDetailRealLife", "serebii-pokemongo-event-detail-real-life");
             group.put("pokemongoSpotlightHours", "serebii-pokemongo-spotlight-hours");
@@ -74091,6 +79693,9 @@ public final class Operations {
             group.put("suggest", "shopee-suggest");
             g.put("shopee", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups14(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "shopify-collections");
@@ -74137,6 +79742,19 @@ public final class Operations {
             group.put("skynewsVideo", "skynews-video");
             group.put("skynewsVideos", "skynews-videos");
             g.put("skyNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("currencies", "skyscanner-currencies");
+            group.put("flightsExplore", "skyscanner-flights-explore");
+            group.put("flightsOptions", "skyscanner-flights-options");
+            group.put("flightsPriceCalendar", "skyscanner-flights-price-calendar");
+            group.put("flightsPriceCalendarMonths", "skyscanner-flights-price-calendar-months");
+            group.put("flightsSearch", "skyscanner-flights-search");
+            group.put("locales", "skyscanner-locales");
+            group.put("markets", "skyscanner-markets");
+            group.put("placesAutosuggest", "skyscanner-places-autosuggest");
+            g.put("skyscanner", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -74189,6 +79807,22 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("brands", "snkrdunk-brands");
+            group.put("categories", "snkrdunk-categories");
+            group.put("filters", "snkrdunk-filters");
+            group.put("product", "snkrdunk-product");
+            group.put("productListings", "snkrdunk-product-listings");
+            group.put("priceChart", "snkrdunk-price-chart");
+            group.put("productRelated", "snkrdunk-product-related");
+            group.put("salesHistory", "snkrdunk-sales-history");
+            group.put("search", "snkrdunk-search");
+            group.put("suggest", "snkrdunk-suggest");
+            group.put("tradingCards", "snkrdunk-trading-cards");
+            group.put("tradingCardsUsed", "snkrdunk-trading-cards-used");
+            g.put("snkrdunk", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("sofascoreCategories", "sofascore-categories");
             group.put("sofascoreCategoryTournaments", "sofascore-category-tournaments");
             group.put("sofascoreDraft", "sofascore-draft");
@@ -74203,7 +79837,7 @@ public final class Operations {
             group.put("sofascoreEventComments", "sofascore-event-comments");
             group.put("sofascoreEventEsportsGames", "sofascore-event-esports-games");
             group.put("sofascoreEventGraph", "sofascore-event-graph");
-            group.put("sofascoreEventH2h", "sofascore-event-h2h");
+            group.put("sofascoreEventH2H", "sofascore-event-h2h");
             group.put("sofascoreEventHighlights", "sofascore-event-highlights");
             group.put("sofascoreEventIncidents", "sofascore-event-incidents");
             group.put("sofascoreEventInnings", "sofascore-event-innings");
@@ -74240,7 +79874,9 @@ public final class Operations {
             group.put("sofascorePlayerSeasonHeatmap", "sofascore-player-season-heatmap");
             group.put("sofascorePlayerSeasonStatistics", "sofascore-player-season-statistics");
             group.put("sofascorePlayerStatisticalRankings", "sofascore-player-statistical-rankings");
+            group.put("sofascorePlayerStatistics", "sofascore-player-statistics");
             group.put("sofascorePlayerStatisticsSeasons", "sofascore-player-statistics-seasons");
+            group.put("sofascorePlayerTournamentEvents", "sofascore-player-tournament-events");
             group.put("sofascorePlayerTournaments", "sofascore-player-tournaments");
             group.put("sofascorePlayerTransfers", "sofascore-player-transfers");
             group.put("sofascoreRankingTypes", "sofascore-ranking-types");
@@ -74363,6 +79999,9 @@ public final class Operations {
             group.put("speedrunLevelRecords", "speedrun-level-records");
             group.put("speedrunLevelVariables", "speedrun-level-variables");
             group.put("speedrunResourceOptions", "speedrun-resource-options");
+            group.put("speedrunRuns", "speedrun-runs");
+            group.put("speedrunRunsOptions", "speedrun-runs-options");
+            group.put("speedrunRun", "speedrun-run");
             g.put("speedrunCom", Map.copyOf(group));
         }
         {
@@ -74373,6 +80012,16 @@ public final class Operations {
             group.put("sportingnewsNews", "sportingnews-news");
             group.put("sportingnewsSections", "sportingnews-sections");
             g.put("sportingNews", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("sportscardsproBrand", "sportscardspro-brand");
+            group.put("sportscardsproCategories", "sportscardspro-categories");
+            group.put("sportscardsproPriceHistory", "sportscardspro-price-history");
+            group.put("sportscardsproProduct", "sportscardspro-product");
+            group.put("sportscardsproSearch", "sportscardspro-search");
+            group.put("sportscardsproSet", "sportscardspro-set");
+            g.put("sportsCardsPro", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -74425,6 +80074,12 @@ public final class Operations {
             group.put("wikiPages", "sportskeeda-wiki-pages");
             group.put("wikiSummary", "sportskeeda-wiki-summary");
             g.put("sportskeeda", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("spotheroMonthlySearch", "spothero-monthly-search");
+            group.put("spotheroTransientSearch", "spothero-transient-search");
+            g.put("spotHero", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -74490,9 +80145,6 @@ public final class Operations {
             group.put("stores", "starbucks-stores");
             g.put("starbucks", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups14(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("suggest", "startpage-suggest");
@@ -74552,6 +80204,9 @@ public final class Operations {
             group.put("stockxSearch", "stockx-search");
             g.put("stockX", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups15(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("straitstimesArticle", "straitstimes-article");
@@ -74652,6 +80307,18 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("contest", "suno-contest");
+            group.put("contests", "suno-contests");
+            group.put("explore", "suno-explore");
+            group.put("feed", "suno-feed");
+            group.put("genres", "suno-genres");
+            group.put("playlist", "suno-playlist");
+            group.put("profile", "suno-profile");
+            group.put("song", "suno-song");
+            g.put("suno", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("collections", "swiggy-collections");
             group.put("restaurant", "swiggy-restaurant");
             group.put("restaurantMenu", "swiggy-restaurant-menu");
@@ -74669,6 +80336,14 @@ public final class Operations {
             group.put("storeMenu", "taco-bell-store-menu");
             group.put("stores", "taco-bell-stores");
             g.put("tacoBell", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("taptapApp", "taptap-app");
+            group.put("taptapGenres", "taptap-genres");
+            group.put("taptapTagGames", "taptap-tag-games");
+            group.put("taptapTopCharts", "taptap-top-charts");
+            g.put("tapTap", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
@@ -74816,9 +80491,6 @@ public final class Operations {
             group.put("thehinduSections", "thehindu-sections");
             g.put("theHindu", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups15(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("thejournalArticle", "thejournal-article");
@@ -74852,6 +80524,9 @@ public final class Operations {
             group.put("therealrealSimilar", "therealreal-similar");
             g.put("theRealReal", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups16(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("thestarmyArticle", "thestarmy-article");
@@ -75192,6 +80867,11 @@ public final class Operations {
         }
         {
             Map<String, String> group = new LinkedHashMap<>();
+            group.put("statLeaders", "ufcstats-stat-leaders");
+            g.put("ufcstats", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
             group.put("ultaCategories", "ulta-categories");
             group.put("ultaCategory", "ulta-category");
             group.put("ultaProductQuestions", "ulta-product-questions");
@@ -75209,9 +80889,6 @@ public final class Operations {
             group.put("search", "upwork-search");
             g.put("upwork", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups16(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("meEndpoints", "usage-me-endpoints");
@@ -75230,6 +80907,9 @@ public final class Operations {
             group.put("usatodaySections", "usatoday-sections");
             g.put("usaToday", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups17(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("me", "user-me");
@@ -75504,9 +81184,6 @@ public final class Operations {
             group.put("suggest", "wish-suggest");
             g.put("wish", Map.copyOf(group));
         }
-    }
-
-    private static void putGroups17(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("cities", "wolt-cities");
@@ -75525,11 +81202,16 @@ public final class Operations {
             group.put("wsjAuthor", "wsj-author");
             g.put("wallStreetJournal", Map.copyOf(group));
         }
+    }
+
+    private static void putGroups18(Map<String, Map<String, String>> g) {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("countries", "wta-countries");
             group.put("matchStates", "wta-match-states");
             group.put("rankings", "wta-rankings");
+            group.put("seasonStatsOptions", "wta-season-stats-options");
+            group.put("seasonStats", "wta-season-stats");
             group.put("tournamentSeasons", "wta-tournament-seasons");
             group.put("tournaments", "wta-tournaments");
             group.put("tournament", "wta-tournament");
@@ -75542,8 +81224,13 @@ public final class Operations {
         {
             Map<String, String> group = new LinkedHashMap<>();
             group.put("post", "x-post");
+            group.put("postDetail", "x-post-detail");
             group.put("profile", "x-profile");
+            group.put("profileHighlights", "x-profile-highlights");
             group.put("profilePosts", "x-profile-posts");
+            group.put("trending", "x-trending");
+            group.put("trends", "x-trends");
+            group.put("trendsLocations", "x-trends-locations");
             g.put("x", Map.copyOf(group));
         }
         {
@@ -75842,6 +81529,16 @@ public final class Operations {
             group.put("news", "zdnet-news");
             group.put("sections", "zdnet-sections");
             g.put("zdnet", Map.copyOf(group));
+        }
+        {
+            Map<String, String> group = new LinkedHashMap<>();
+            group.put("browse", "zedge-browse");
+            group.put("categories", "zedge-categories");
+            group.put("creators", "zedge-creators");
+            group.put("item", "zedge-item");
+            group.put("tags", "zedge-tags");
+            group.put("trendingSearches", "zedge-trending-searches");
+            g.put("zedge", Map.copyOf(group));
         }
         {
             Map<String, String> group = new LinkedHashMap<>();

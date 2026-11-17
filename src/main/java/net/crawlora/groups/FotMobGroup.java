@@ -244,6 +244,28 @@ public final class FotMobGroup {
     }
 
     /**
+     * fotmob-match-heatmap (GET /fotmob/match-heatmap).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobMatchHeatmap(Map<String, Object> params) {
+        return fotmobMatchHeatmap(params, null);
+    }
+
+    /**
+     * fotmob-match-heatmap (GET /fotmob/match-heatmap). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobMatchHeatmap(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-match-heatmap", params);
+        return client.request("fotmob-match-heatmap", params, options);
+    }
+
+    /**
      * fotmob-match-media (GET /fotmob/match-media).
      *
      * @param params operation parameters
@@ -351,6 +373,28 @@ public final class FotMobGroup {
     public Object fotmobPlayer(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("fotmob-player", params);
         return client.request("fotmob-player", params, options);
+    }
+
+    /**
+     * fotmob-player-injuries (GET /fotmob/player-injuries).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobPlayerInjuries(Map<String, Object> params) {
+        return fotmobPlayerInjuries(params, null);
+    }
+
+    /**
+     * fotmob-player-injuries (GET /fotmob/player-injuries). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object fotmobPlayerInjuries(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("fotmob-player-injuries", params);
+        return client.request("fotmob-player-injuries", params, options);
     }
 
     /**

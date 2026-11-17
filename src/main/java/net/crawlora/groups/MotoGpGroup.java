@@ -494,4 +494,26 @@ public final class MotoGpGroup {
         return client.request("motogp-starting-grid", params, options);
     }
 
+    /**
+     * motogp-world-standings (GET /motogp/world-standings).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object motogpWorldStandings(Map<String, Object> params) {
+        return motogpWorldStandings(params, null);
+    }
+
+    /**
+     * motogp-world-standings (GET /motogp/world-standings). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object motogpWorldStandings(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("motogp-world-standings", params);
+        return client.request("motogp-world-standings", params, options);
+    }
+
 }

@@ -41,6 +41,50 @@ public final class EspnGroup {
     }
 
     /**
+     * espn-athlete-gamelog (GET /espn/athlete-gamelog).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object athleteGamelog(Map<String, Object> params) {
+        return athleteGamelog(params, null);
+    }
+
+    /**
+     * espn-athlete-gamelog (GET /espn/athlete-gamelog). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object athleteGamelog(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("espn-athlete-gamelog", params);
+        return client.request("espn-athlete-gamelog", params, options);
+    }
+
+    /**
+     * espn-athlete-splits (GET /espn/athlete-splits).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object athleteSplits(Map<String, Object> params) {
+        return athleteSplits(params, null);
+    }
+
+    /**
+     * espn-athlete-splits (GET /espn/athlete-splits). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object athleteSplits(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("espn-athlete-splits", params);
+        return client.request("espn-athlete-splits", params, options);
+    }
+
+    /**
      * espn-game-summary (GET /espn/game-summary).
      *
      * @param params operation parameters
@@ -195,6 +239,50 @@ public final class EspnGroup {
     }
 
     /**
+     * espn-team-schedule (GET /espn/team-schedule).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamSchedule(Map<String, Object> params) {
+        return teamSchedule(params, null);
+    }
+
+    /**
+     * espn-team-schedule (GET /espn/team-schedule). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamSchedule(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("espn-team-schedule", params);
+        return client.request("espn-team-schedule", params, options);
+    }
+
+    /**
+     * espn-team-stats (GET /espn/team-stats).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamStats(Map<String, Object> params) {
+        return teamStats(params, null);
+    }
+
+    /**
+     * espn-team-stats (GET /espn/team-stats). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object teamStats(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("espn-team-stats", params);
+        return client.request("espn-team-stats", params, options);
+    }
+
+    /**
      * espn-teams (GET /espn/teams).
      *
      * @param params operation parameters
@@ -214,6 +302,28 @@ public final class EspnGroup {
     public Object teams(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("espn-teams", params);
         return client.request("espn-teams", params, options);
+    }
+
+    /**
+     * espn-transactions (GET /espn/transactions).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactions(Map<String, Object> params) {
+        return transactions(params, null);
+    }
+
+    /**
+     * espn-transactions (GET /espn/transactions). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object transactions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("espn-transactions", params);
+        return client.request("espn-transactions", params, options);
     }
 
 }

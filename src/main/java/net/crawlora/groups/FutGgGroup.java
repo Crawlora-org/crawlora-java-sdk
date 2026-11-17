@@ -19,6 +19,37 @@ public final class FutGgGroup {
     }
 
     /**
+     * futgg-fc27-campaign-squads (GET /futgg/fc27/campaign-squads).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27CampaignSquads(Map<String, Object> params) {
+        return futggFc27CampaignSquads(params, null);
+    }
+
+    /**
+     * futgg-fc27-campaign-squads (GET /futgg/fc27/campaign-squads). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27CampaignSquads(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-campaign-squads", params);
+        return client.request("futgg-fc27-campaign-squads", params, options);
+    }
+
+    /**
+     * futgg-fc27-campaign-squads (GET /futgg/fc27/campaign-squads). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27CampaignSquads() {
+        return futggFc27CampaignSquads(Map.of(), null);
+    }
+
+    /**
      * futgg-fc27-catalog (GET /futgg/fc27/catalog).
      *
      * @param params operation parameters
@@ -47,6 +78,37 @@ public final class FutGgGroup {
      */
     public Object futggFc27Catalog() {
         return futggFc27Catalog(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-chemistry-style-roles (GET /futgg/fc27/chemistry-style-roles).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ChemistryStyleRoles(Map<String, Object> params) {
+        return futggFc27ChemistryStyleRoles(params, null);
+    }
+
+    /**
+     * futgg-fc27-chemistry-style-roles (GET /futgg/fc27/chemistry-style-roles). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ChemistryStyleRoles(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-chemistry-style-roles", params);
+        return client.request("futgg-fc27-chemistry-style-roles", params, options);
+    }
+
+    /**
+     * futgg-fc27-chemistry-style-roles (GET /futgg/fc27/chemistry-style-roles). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ChemistryStyleRoles() {
+        return futggFc27ChemistryStyleRoles(Map.of(), null);
     }
 
     /**
@@ -184,6 +246,143 @@ public final class FutGgGroup {
      */
     public Object futggFc27GgRatings() {
         return futggFc27GgRatings(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-manager-facets (GET /futgg/fc27/manager-facets).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerFacets(Map<String, Object> params) {
+        return futggFc27ManagerFacets(params, null);
+    }
+
+    /**
+     * futgg-fc27-manager-facets (GET /futgg/fc27/manager-facets). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerFacets(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-manager-facets", params);
+        return client.request("futgg-fc27-manager-facets", params, options);
+    }
+
+    /**
+     * futgg-fc27-manager-facets (GET /futgg/fc27/manager-facets). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerFacets() {
+        return futggFc27ManagerFacets(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-manager-leagues (GET /futgg/fc27/manager-leagues).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerLeagues(Map<String, Object> params) {
+        return futggFc27ManagerLeagues(params, null);
+    }
+
+    /**
+     * futgg-fc27-manager-leagues (GET /futgg/fc27/manager-leagues). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerLeagues(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-manager-leagues", params);
+        return client.request("futgg-fc27-manager-leagues", params, options);
+    }
+
+    /**
+     * futgg-fc27-manager-leagues (GET /futgg/fc27/manager-leagues). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27ManagerLeagues() {
+        return futggFc27ManagerLeagues(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-managers (GET /futgg/fc27/managers).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27Managers(Map<String, Object> params) {
+        return futggFc27Managers(params, null);
+    }
+
+    /**
+     * futgg-fc27-managers (GET /futgg/fc27/managers). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27Managers(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-managers", params);
+        return client.request("futgg-fc27-managers", params, options);
+    }
+
+    /**
+     * futgg-fc27-managers (GET /futgg/fc27/managers). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27Managers() {
+        return futggFc27Managers(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-manager (GET /futgg/fc27/managers/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27Manager(Map<String, Object> params) {
+        return futggFc27Manager(params, null);
+    }
+
+    /**
+     * futgg-fc27-manager (GET /futgg/fc27/managers/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27Manager(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-manager", params);
+        return client.request("futgg-fc27-manager", params, options);
+    }
+
+    /**
+     * futgg-fc27-misc-prices (GET /futgg/fc27/misc-prices).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27MiscPrices(Map<String, Object> params) {
+        return futggFc27MiscPrices(params, null);
+    }
+
+    /**
+     * futgg-fc27-misc-prices (GET /futgg/fc27/misc-prices). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27MiscPrices(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-misc-prices", params);
+        return client.request("futgg-fc27-misc-prices", params, options);
     }
 
     /**
@@ -405,6 +604,37 @@ public final class FutGgGroup {
      */
     public Object futggFc27PriceIndex() {
         return futggFc27PriceIndex(Map.of(), null);
+    }
+
+    /**
+     * futgg-fc27-price-range-changes (GET /futgg/fc27/price-range-changes).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27PriceRangeChanges(Map<String, Object> params) {
+        return futggFc27PriceRangeChanges(params, null);
+    }
+
+    /**
+     * futgg-fc27-price-range-changes (GET /futgg/fc27/price-range-changes). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27PriceRangeChanges(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("futgg-fc27-price-range-changes", params);
+        return client.request("futgg-fc27-price-range-changes", params, options);
+    }
+
+    /**
+     * futgg-fc27-price-range-changes (GET /futgg/fc27/price-range-changes). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object futggFc27PriceRangeChanges() {
+        return futggFc27PriceRangeChanges(Map.of(), null);
     }
 
     /**

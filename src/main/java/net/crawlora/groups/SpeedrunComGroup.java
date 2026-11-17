@@ -410,4 +410,88 @@ public final class SpeedrunComGroup {
         return speedrunResourceOptions(Map.of(), null);
     }
 
+    /**
+     * speedrun-runs (GET /speedrun/runs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRuns(Map<String, Object> params) {
+        return speedrunRuns(params, null);
+    }
+
+    /**
+     * speedrun-runs (GET /speedrun/runs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRuns(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("speedrun-runs", params);
+        return client.request("speedrun-runs", params, options);
+    }
+
+    /**
+     * speedrun-runs (GET /speedrun/runs). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRuns() {
+        return speedrunRuns(Map.of(), null);
+    }
+
+    /**
+     * speedrun-runs-options (GET /speedrun/runs/options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRunsOptions(Map<String, Object> params) {
+        return speedrunRunsOptions(params, null);
+    }
+
+    /**
+     * speedrun-runs-options (GET /speedrun/runs/options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRunsOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("speedrun-runs-options", params);
+        return client.request("speedrun-runs-options", params, options);
+    }
+
+    /**
+     * speedrun-runs-options (GET /speedrun/runs/options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRunsOptions() {
+        return speedrunRunsOptions(Map.of(), null);
+    }
+
+    /**
+     * speedrun-run (GET /speedrun/runs/{id}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRun(Map<String, Object> params) {
+        return speedrunRun(params, null);
+    }
+
+    /**
+     * speedrun-run (GET /speedrun/runs/{id}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object speedrunRun(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("speedrun-run", params);
+        return client.request("speedrun-run", params, options);
+    }
+
 }

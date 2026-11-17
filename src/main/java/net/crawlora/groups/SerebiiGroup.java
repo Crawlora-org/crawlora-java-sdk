@@ -41,6 +41,37 @@ public final class SerebiiGroup {
     }
 
     /**
+     * serebii-pokemongo-eggs (GET /serebii/pokemongo/eggs).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoEggs(Map<String, Object> params) {
+        return pokemongoEggs(params, null);
+    }
+
+    /**
+     * serebii-pokemongo-eggs (GET /serebii/pokemongo/eggs). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoEggs(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("serebii-pokemongo-eggs", params);
+        return client.request("serebii-pokemongo-eggs", params, options);
+    }
+
+    /**
+     * serebii-pokemongo-eggs (GET /serebii/pokemongo/eggs). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoEggs() {
+        return pokemongoEggs(Map.of(), null);
+    }
+
+    /**
      * serebii-pokemongo-event-categories (GET /serebii/pokemongo/event-categories).
      *
      * @param params operation parameters
@@ -263,6 +294,37 @@ public final class SerebiiGroup {
     public Object pokemongoEventDetailMaxBattleDay(Map<String, Object> params, RequestOptions options) {
         OperationGroup.checkParams("serebii-pokemongo-event-detail-max-battle-day", params);
         return client.request("serebii-pokemongo-event-detail-max-battle-day", params, options);
+    }
+
+    /**
+     * serebii-pokemongo-raid-bosses (GET /serebii/pokemongo/raid-bosses).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoRaidBosses(Map<String, Object> params) {
+        return pokemongoRaidBosses(params, null);
+    }
+
+    /**
+     * serebii-pokemongo-raid-bosses (GET /serebii/pokemongo/raid-bosses). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoRaidBosses(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("serebii-pokemongo-raid-bosses", params);
+        return client.request("serebii-pokemongo-raid-bosses", params, options);
+    }
+
+    /**
+     * serebii-pokemongo-raid-bosses (GET /serebii/pokemongo/raid-bosses). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object pokemongoRaidBosses() {
+        return pokemongoRaidBosses(Map.of(), null);
     }
 
     /**

@@ -103,6 +103,59 @@ public final class WtaGroup {
     }
 
     /**
+     * wta-season-stats-options (GET /wta/season-stats/options).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seasonStatsOptions(Map<String, Object> params) {
+        return seasonStatsOptions(params, null);
+    }
+
+    /**
+     * wta-season-stats-options (GET /wta/season-stats/options). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seasonStatsOptions(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("wta-season-stats-options", params);
+        return client.request("wta-season-stats-options", params, options);
+    }
+
+    /**
+     * wta-season-stats-options (GET /wta/season-stats/options). with no parameters.
+     *
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seasonStatsOptions() {
+        return seasonStatsOptions(Map.of(), null);
+    }
+
+    /**
+     * wta-season-stats (GET /wta/season-stats/{year}/{metric}).
+     *
+     * @param params operation parameters
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seasonStats(Map<String, Object> params) {
+        return seasonStats(params, null);
+    }
+
+    /**
+     * wta-season-stats (GET /wta/season-stats/{year}/{metric}). with explicit request options.
+     *
+     * @param params operation parameters
+     * @param options per-request options, or {@code null} for defaults
+     * @return the parsed JSON response (Map/List/String/Number/Boolean), or an InputStream in stream mode
+     */
+    public Object seasonStats(Map<String, Object> params, RequestOptions options) {
+        OperationGroup.checkParams("wta-season-stats", params);
+        return client.request("wta-season-stats", params, options);
+    }
+
+    /**
      * wta-tournament-seasons (GET /wta/tournament-seasons).
      *
      * @param params operation parameters
