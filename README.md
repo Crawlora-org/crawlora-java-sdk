@@ -12,6 +12,7 @@ JDK's `java.net.http.HttpClient` with a hand-written JSON parser).
 - **Base URL:** `https://api.crawlora.net/api/v1`
 - **Auth:** API key (`x-api-key`) or JWT (`Authorization`)
 - **JDK:** 17+
+- **SDK source version:** `1.52.0` (5,106 operations). Maven Central currently serves `1.51.0`; `1.52.0` is pending there.
 - Operation reference: [`docs/operations.md`](docs/operations.md) · recipes: [`docs/recipes.md`](docs/recipes.md)
 
 ## Install
@@ -24,7 +25,7 @@ Maven:
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-sdk</artifactId>
-  <version>1.50.0</version>
+  <version>1.51.0</version>
 </dependency>
 ```
 
